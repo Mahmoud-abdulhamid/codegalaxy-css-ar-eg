@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "2",
+  "title": "مقدمة في CSS",
+  "course": "CSS",
+  "objectives": [
+    "فهم دور CSS في تصميم صفحات الويب",
+    "التعرف على هيكلية CSS الأساسية",
+    "إدراك أهمية CSS في توفير الوقت والجهد",
+    "تطبيق التنسيقات على عناصر HTML"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_intro.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "ما هي CSS؟",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ. الْيَوْمَ سَنَتَعَرَّفُ عَلَى لُغَةِ CSS، وَهِيَ اللُّغَه الَّتِي نَسْتَخْدِمُهَا لِتَصْمِيمِ وَتَنْسِيقِ صَفَحَاتِ الْوِبّ، لِتَظْهَرَ بِشَكْلٍ جَذَّابٍ وَمُنَظَّمٍ لِلْمُسْتَخْدِمِينَ.",
+        "caption_text": "تعد CSS اللغة الأساسية المستخدمة لتصميم وتنسيق صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS هي اختصار لـ Cascading Style Sheets",
+          "تستخدم للتحكم في مظهر صفحات الويب",
+          "تضيف الألوان والخطوط والتخطيطات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_intro.asp"
+      ]
+    },
+    {
+      "id": "why-css",
+      "title": "لماذا نستخدم CSS؟",
+      "narration": {
+        "spoken_text": "نَحْنُ نَسْتَخْدِم CSS لِتَحْدِيدِ التَّصْمِيمِ وَالْهَيْكَلِ الْعَامِّ لِصَفَحَاتِ الْوِبّ. هَذِهِ اللُّغَه تُمَكِّنُنَا مِنَ التَّحَكُّمِ فِي كَيْفِيَّةِ عَرْضِ الْمُحْتَوَى عَلَى مُخْتَلِفِ الْأَجْهِزَه وَأَحْجَامِ الشَّاشَاتِ بِكُلِّ سُهُولَه وَاحْتِرَافِيَّه.",
+        "caption_text": "تساعد CSS في تحديد التصميم والتخطيط وتكييف المحتوى مع مختلف الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في التصميم والخطوط",
+          "تنسيق التخطيط العام للصفحة",
+          "التوافق مع مختلف أحجام الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_intro.asp"
+      ]
+    },
+    {
+      "id": "css-syntax-1",
+      "title": "هيكلية CSS الأساسية",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ. نَقُومُ بِتَحْدِيد Selector مِثْل body، ثُمَّ نَفْتَحُ أَقْوَاساً مَجْعُودَه لِكِتَابَةِ Property و Value. هُنَا نُغَيِّرُ لَوْنَ الْخَلْفِيَّه إِلَى lightblue.",
+        "caption_text": "تتكون قواعد CSS من Selector وخصائص وقيم داخل أقواس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body\n{\n  background-color: lightblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_intro.asp"
+      ]
+    },
+    {
+      "id": "css-syntax-2",
+      "title": "تنسيق النصوص",
+      "narration": {
+        "spoken_text": "نَسْتَطِيعُ أَيْضاً تَنْسِيقَ الْعَنَاصِرِ مِثْل h1، حَيْثُ نُحَدِّدُ لَوْنَ النَّصِّ بَةِ white وَنَجْعَلُهُ فِي مُنْتَصَفِ الصَّفْحَه بِاسْتِخْدَام text-align center. هَذَا يُعْطِي طَابَعاً جَمَالِيّاً لِلْعَنَاوِينِ.",
+        "caption_text": "يمكن تنسيق العناوين h1 بسهولة عبر تحديد اللون والمحاذاة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1\n{\n  color: white;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_intro.asp"
+      ]
+    },
+    {
+      "id": "css-syntax-3",
+      "title": "تنسيق الفقرات",
+      "narration": {
+        "spoken_text": "أَمَّا بِالنِّسْبَه لِعُنْصُر p، فَنَقُومُ بِتَغْيِيرِ نَوْعِ الْخَطِّ إِلَى verdana وَتَحْدِيدِ حَجْمِهِ بَةِ 20px. هَذِهِ الْخَصَائِصُ تُسَاعِدُ فِي تَحْسِينِ قَابِلِيَّةِ قِرَاءَةِ النُّصُوصِ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "نستخدم font-family و font-size لتنسيق الفقرات النصية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p\n{\n  font-family: verdana;\n  font-size: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_intro.asp"
+      ]
+    },
+    {
+      "id": "efficiency",
+      "title": "كفاءة CSS",
+      "narration": {
+        "spoken_text": "مِنْ أَهَمِّ مُمَيِّزَات CSS أَنَّهَا تُوَفِّرُ الْكَثِيرَ مِنَ الْجُهْدِ. يُمْكِنُنَا حِفْظُ التَّعْرِيفَاتِ فِي مِلَفٍّ خَارِجِيٍّ بِامْتِدَاد css. هَذَا يُمَكِّنُنَا مِنْ تَغْيِيرِ مَظْهَرِ مَوْقِعٍ كَامِلٍ بِتَعْدِيلِ مِلَفٍّ وَاحِدٍ فَقَطْ.",
+        "caption_text": "استخدام ملفات CSS خارجية يسهل إدارة وتحديث تصميم الموقع بالكامل."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "حفظ التنسيقات في ملف .css خارجي",
+          "تغيير مظهر الموقع بالكامل من ملف واحد",
+          "تقليل التكرار في الكود البرمجي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_intro.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا عَلَى أَسَاسِيَّات CSS وَأَهَمِّيَّتِهَا. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ لِتَرَوْا كَيْفَ يَتَغَيَّرُ مَظْهَرُ الصَّفْحَه بِشَكْلٍ فَوْرِيٍّ.",
+        "caption_text": "جربوا الأكواد بأنفسكم لتطوير مهاراتكم في تصميم الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS هي أداة قوية لكل مطور ويب",
+          "مارسوا كتابة الأكواد بانتظام",
+          "راجعوا الرابط في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_intro.asp"
+      ]
+    }
+  ]
+}
