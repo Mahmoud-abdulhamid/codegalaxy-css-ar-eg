@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "4",
+  "title": "CSS Selectors Fundamentals",
+  "course": "CSS",
+  "objectives": [
+    "فهم دور CSS Selectors في تحديد عناصر HTML",
+    "التعرف على element selector لاستهداف العناصر بالاسم",
+    "إتقان استخدام id selector لاستهداف عنصر فريد",
+    "تطبيق class selector لتنسيق مجموعات من العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_selectors.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Selectors",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفَ نَسْتَخْدِم CSS Selectors لِتَحْدِيدِ عَنَاصِر HTML الَّتِي نُرِيدُ تَطْبِيقَ التَّنْسِيقَاتِ عَلَيْهَا. هَذِهِ الْأَدَاه هِيَ الْجِسْرُ الرَّابِطُ بَيْنَ هَيْكَلِ الصَّفْحَه وَمَظْهَرِهَا الْجَمَالِيِّ.",
+        "caption_text": "تستخدم CSS Selectors لتحديد عناصر HTML التي ترغب في تنسيقها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Selectors هي وسيلة لاختيار عناصر HTML",
+          "تسمح لنا بتطبيق أنماط CSS على عناصر محددة",
+          "توجد أنواع متعددة من الـ Selectors الأساسية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors.asp"
+      ]
+    },
+    {
+      "id": "element_selector",
+      "title": "استخدام element selector",
+      "narration": {
+        "spoken_text": "أَبْسَطُ أَنْوَاع Selectors هُو element selector. هَذَا النَّوْعُ يَقُومُ بِاخْتِيَارِ الْعَنَاصِرِ بِنَاءً عَلَى اسْم Tag نَفْسِهِ. لِنُشَاهِدْ مِثَالاً حَيْثُ نَقُومُ بِتَوْسِيطِ كُلِّ فَقْرَه وَتَلْوِينِهَا بِاللَّوْنِ الْأَحْمَرِ.",
+        "caption_text": "يقوم element selector باختيار عناصر HTML بناء على اسم العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p\n{\n  text-align: center;\n  color: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors.asp"
+      ]
+    },
+    {
+      "id": "id_selector",
+      "title": "التعامل مع id selector",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُرِيدُ اسْتِهْدَافَ عُنْصُرٍ وَاحِدٍ فَقَطْ وَبِشَكْلٍ فَرِيدٍ، نَسْتَخْدِم id selector. نَكْتُبُ رَمْز hash مَتْبُوعاً بِقِيمَةِ id. تَذَكَّرْ أَنَّ id يَجِبُ أَنْ يَكُونَ فَرِيداً دَاخِلَ الصَّفْحَه.",
+        "caption_text": "يستخدم id selector لاستهداف عنصر واحد فريد باستخدام خاصية id."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#para1\n{\n  text-align: center;\n  color: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors.asp"
+      ]
+    },
+    {
+      "id": "class_selector",
+      "title": "قوة class selector",
+      "narration": {
+        "spoken_text": "أَمَّا class selector فَيُسْتَخْدَمُ لِتَحْدِيدِ مَجْمُوعَه مِنَ الْعَنَاصِرِ الَّتِي تَشْتَرِكُ فِي نَفْس class. نَكْتُبُ رَمْزَ النُّقْطَه مَتْبُوعاً بِاسْم class. هَذَا يُسَاعِدُنَا فِي تَطْبِيقِ نَفْسِ التَّنْسِيقِ عَلَى عِدَّةِ عَنَاصِرَ بِكُلِّ سُهُولَه.",
+        "caption_text": "يستخدم class selector لاستهداف عناصر متعددة تشترك في نفس الـ class."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".center {\n  text-align: center;\n  color: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors.asp"
+      ]
+    },
+    {
+      "id": "specific_class",
+      "title": "تخصيص class selector",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَخْصِيص class لِعُنْصُرٍ مُعَيَّنٍ فَقَطْ. مِثَالاً، نَكْتُب p.center لِتَطْبِيقِ التَّنْسِيقِ عَلَى فَقَرَاتٍ مُحَدَّدَه فَقَطْ. كَمَا يُمْكِنُ لِلْعُنْصُرِ الْوَاحِدِ أَنْ يَحْمِلَ أَكْثَرَ مِنْ class فِي نَفْسِ الْوَقْتِ.",
+        "caption_text": "يمكن تحديد class لعنصر معين أو دمج أكثر من class للعنصر الواحد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<p class=\"center large\">\n  هذه الفقرة تحمل كلاسين.\n</p>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَرَّفْنَا عَلَى الثَّلَاثَه أَنْوَاعِ الْأَسَاسِيَّه لِلَةِ Selectors. نَنْصَحُكُمْ بِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا التَّأْثِيرَ الْمُبَاشِرَ عَلَى صَفْحَةِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تذكر دائما ممارسة كتابة الـ Selectors لتعزيز مهاراتك في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "element selector للاستهداف العام",
+          "id selector للاستهداف الفريد",
+          "class selector للاستهداف المتعدد",
+          "لا تبدأ أسماء الـ id أو الـ class بأرقام"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors.asp"
+      ]
+    }
+  ]
+}
