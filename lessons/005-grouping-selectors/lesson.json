@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "5",
+  "title": "CSS Grouping and Universal Selectors",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام Universal Selector لاستهداف جميع العناصر",
+    "تعلم تقنية Grouping Selector لتقليل تكرار الكود",
+    "تطبيق التنسيقات بكفاءة عالية في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_selectors_grouping.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Selectors",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي عَنَاصِرِ الْوِبّ بِفَعَالِيَّه عَالِيَه عَبْرَ اسْتِخْدَام Universal Selector و Grouping Selector لِتَنْظِيمِ الْأَكْوَادِ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS. سنتعلم اليوم كيفية التحكم في عناصر الويب بفعالية عالية عبر استخدام Universal Selector و Grouping Selector لتنظيم الأكواد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في عناصر HTML عبر CSS",
+          "استخدام Universal Selector (*)",
+          "استخدام Grouping Selector لتقليل التكرار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors_grouping.asp"
+      ]
+    },
+    {
+      "id": "universal_selector",
+      "title": "شرح Universal Selector",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بَةِ Universal Selector الَّذِي يُرْمَزُ لَهُ بِعَلَامَةِ النَّجْمَه. هَذَا Selector يَقُومُ بِتَحْدِيدِ كُلِّ عَنَاصِر HTML الْمَوْجُودَه فِي الصَّفْحَه دَفْعَه وَاحِدَه، وَهُوَ أَدَاه قَوِيَّه لِتَطْبِيقِ تَنْسِيقَاتٍ عَامَّه.",
+        "caption_text": "نبدأ بـ Universal Selector الذي يرمز له بعلامة النجمة. هذا الـ Selector يقوم بتحديد كل عناصر HTML الموجودة في الصفحة دفعة واحدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "*\n{\n  text-align: center;\n  color: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors_grouping.asp"
+      ]
+    },
+    {
+      "id": "grouping_concept",
+      "title": "مفهوم Grouping Selector",
+      "narration": {
+        "spoken_text": "فِي بَعْضِ الْأَحْيَانِ نَحْتَاجُ لِتَطْبِيقِ نَفْسِ التَّنْسِيقَاتِ عَلَى عَنَاصِرَ مُخْتَلِفَه. بَدَلًا مِنْ تَكْرَارِ الْكُودِ لِكُلِّ عُنْصُرٍ عَلَى حِدَه، نَسْتَخْدِم Grouping Selector لِجَمْعِهَا مَعاً بِاسْتِخْدَامِ الْفَاصِلَه.",
+        "caption_text": "بدلا من تكرار الكود لكل عنصر على حدة، نستخدم Grouping Selector لجمعها معا باستخدام الفاصلة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجنب تكرار الكود",
+          "استخدام الفاصلة (,) للفصل بين الـ Selectors",
+          "تحسين أداء ملفات CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors_grouping.asp"
+      ]
+    },
+    {
+      "id": "code_before",
+      "title": "الكود قبل التجميع",
+      "narration": {
+        "spoken_text": "لَاحِظْ هَذَا الْمِثَالَ، حَيْثُ نَقُومُ بِكِتَابَةِ نَفْسِ التَّنْسِيقَاتِ لَةِ h1 و h2 و p. هَذَا الْأُسْلُوبُ يُؤَدِّي إِلَى زِيَادَةِ حَجْمِ الْكُودِ دُونَ دَاعٍ، وَهُوَ مَا نُسَمِّيهِ بِالْكُودِ غَيْرِ الْمُحَسَّنِ.",
+        "caption_text": "لاحظ هذا المثال، حيث نقوم بكتابة نفس التنسيقات لـ h1 و h2 و p. هذا الأسلوب يؤدي إلى زيادة حجم الكود دون داع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 { text-align: center; color: red; }\nh2 { text-align: center; color: red; }\np { text-align: center; color: red; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors_grouping.asp"
+      ]
+    },
+    {
+      "id": "code_after",
+      "title": "الكود بعد التجميع",
+      "narration": {
+        "spoken_text": "بِاسْتِخْدَام Grouping Selector، نَقُومُ بِفَصْلِ الْعَنَاصِرِ بِفَاصِلَه وَاحِدَه. هَكَذَا نَكْتُبُ التَّنْسِيقَاتِ مَرَّه وَاحِدَه فَقَطْ، مِمَّا يَجْعَلُ الْكُودَ أَكْثَرَ نَظَافَه وَسُهُولَه فِي الصِّيَانَه وَالتَّعْدِيلِ.",
+        "caption_text": "باستخدام Grouping Selector، نقوم بفصل العناصر بفاصلة واحدة. هكذا نكتب التنسيقات مرة واحدة فقط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1, h2, p\n{\n  text-align: center;\n  color: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors_grouping.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِتَجْمِيع Selectors الَّتِي تَشْتَرِكُ فِي نَفْسِ الْخَصَائِصِ. هَذِهِ الْمُمَارَسَه تُسَاعِدُ فِي تَقْلِيلِ حَجْمِ مِلَفِّ CSS، وَتُسَرِّعُ مِنْ عَمَلِيَّةِ تَحْمِيلِ صَفْحَةِ الْوِبّ فِي الْمُتَصَفِّحْ.",
+        "caption_text": "ينصح دائما بتجميع الـ Selectors التي تشترك في نفس الخصائص لتقليل حجم ملف CSS وتسريع تحميل الصفحة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجميع الـ Selectors المشتركة",
+          "تقليل حجم ملفات CSS",
+          "تحسين سرعة تحميل الموقع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors_grouping.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةِ اسْتِخْدَام Universal Selector و Grouping Selector. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَتَمَكَّنُوا مِنْ مَهَارَاتِ التَّنْسِيقِ.",
+        "caption_text": "تعلمنا اليوم كيفية استخدام Universal Selector و Grouping Selector. أدعوكم لتجربة هذه الأكواد بأنفسكم عبر الرابط الموجود في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Universal Selector (*) يستهدف الجميع",
+          "Grouping Selector (,) يجمع العناصر",
+          "كود أنظف وأداء أفضل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_selectors_grouping.asp"
+      ]
+    }
+  ]
+}
