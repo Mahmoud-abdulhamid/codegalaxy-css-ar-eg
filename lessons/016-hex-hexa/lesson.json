@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "16",
+  "title": "CSS HEX and HEXA Colors",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تحديد الألوان باستخدام HEX values",
+    "التعرف على الاختصار المكون من 3 أرقام",
+    "تعلم استخدام HEXA مع قناة الشفافية Alpha channel",
+    "تطبيق الألوان في CSS بشكل احترافي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_colors_hex.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة عن الألوان في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ تَحْدِيدِ الْأَلْوَانِ بِاسْتِخْدَام HEX values، وَهِيَ طَرِيقَه شَائِعَه وَقَوِيَّه لِتَحْدِيدِ الْأَلْوَانِ فِي صَفْحَةِ الْوِبّ بِدِقَّه عَالِيَه.",
+        "caption_text": "تعتبر HEX values من أكثر الطرق شيوعا لتحديد الألوان في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد الألوان باستخدام نظام Hexadecimal",
+          "استخدام الصيغة #RRGGBB",
+          "التحكم في قيم الأحمر والأخضر والأزرق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hex.asp"
+      ]
+    },
+    {
+      "id": "hex_structure",
+      "title": "هيكلية HEX Value",
+      "narration": {
+        "spoken_text": "تَتَكَوَّنُ قِيمَةِ HEX مِنْ هَاشْ تَبَعَهُ سِتَّه أَرْقَامٍ أَوْ حُرُوفٍ. الْقِيمَتَانِ الْأُولَيَانِ لِلْأَحْمَرِ، وَالثَّانِيَتَانِ لِلْأَخْضَرِ، وَالْأَخِيرَتَانِ لِلْأَزْرَقِ. تَتَرَاوَحُ الْقِيمُ بَيْنَ 00 و ff، وَهِيَ تُعَادِلُ 0 إِلَى 255 فِي النِّظَامِ الْعَشْرِيِّ.",
+        "caption_text": "تتكون صيغة HEX من #RRGGBB حيث تمثل كل خانتين لونا أساسيا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم RR: Red (00-ff)",
+          "مفهوم GG: Green (00-ff)",
+          "مفهوم BB: Blue (00-ff)",
+          "مثال: #ff0000 يمثل اللون الأحمر الخالص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hex.asp"
+      ]
+    },
+    {
+      "id": "hex_shorthand",
+      "title": "الاختصار المكون من 3 أرقام",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً اسْتِخْدَامُ اخْتِصَارٍ مُكَوَّنٍ مِنْ ثَلَاثَه أَرْقَامٍ فَقَطْ. هَذَا الِاخْتِصَارُ مَقْبُولٌ عِنْدَمَا تَكُونُ قِيمَةِ كُلِّ لَوْنٍ مُكَرَّرَه، مِثْلَ #ffcc99 الَّتِي يُمْكِنُ كِتَابَتُهَا بِاخْتِصَارٍ كَةِ #fc9.",
+        "caption_text": "الاختصار المكون من 3 أرقام هو صيغة مبسطة لبعض قيم HEX."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "يستخدم عندما تكون قيم R و G و B متطابقة",
+          "مثال: #ff00ff يصبح #f0f",
+          "مثال: #bb5588 يصبح #b58"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hex.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي في CSS",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْيِين background-color لِلْعُنْصُر body، وَتَغْيِيرِ لَوْنِ النَّصِّ فِي h1 و p بِاسْتِخْدَامِ الِاخْتِصَارَاتِ الَّتِي تَعَلَّمْنَاهَا لِتَحْقِيقِ تَصْمِيمٍ جَذَّابٍ لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "تطبيق قيم HEX المختصرة على عناصر HTML."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-color: #fc9;\n}\nh1 {\n  color: #f0f;\n}\np {\n  color: #b58;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hex.asp"
+      ]
+    },
+    {
+      "id": "hexa_value",
+      "title": "مفهوم HEXA Value",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى HEXA. هَذِهِ الصِّيغَه هِيَ امْتِدَادٌ لَةِ HEX مَعَ إِضَافَةِ قَنَاةِ Alpha لِتَحْدِيدِ الشَّفَافِيَّه. الصِّيغَه هِيَ #rrggbbaa، حَيْثُ تَتَحَكَّم aa فِي دَرَجَةِ الشَّفَافِيَّه مِنْ 00 إِلَى ff.",
+        "caption_text": "تضيف HEXA قناة Alpha للتحكم في شفافية اللون."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الصيغة: #rrggbbaa",
+          "aa: Alpha channel للشفافية",
+          "00: شفاف تماما",
+          "ff: غير شفاف تماما"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hex.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَامِ الْأَلْوَانِ، احْرِصْ عَلَى التَّنَاسُقِ. اسْتَخْدِمْ HEX لِلْأَلْوَانِ الثَّابِتَه، وَHEXA عِنْدَمَا تَحْتَاجُ إِلَى تَأْثِيرَاتِ الشَّفَافِيَّه. تَجْرِبَةِ الْأَلْوَانِ هِيَ الْمِفْتَاحُ لِتَصْمِيمٍ احْتِرَافِيٍّ فِي لُغَةِ CSS.",
+        "caption_text": "استخدم HEXA عند الحاجة للشفافية وHEX للألوان الصلبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم أدوات اختيار الألوان عبر الإنترنت",
+          "حافظ على تباين جيد بين النص والخلفية",
+          "جرب قيم Alpha المختلفة للحصول على تأثيرات مميزة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hex.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمِ حَوْل HEX و HEXA. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، لا تنسوا تجربة الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجع مفاهيم HEX و HEXA",
+          "طبق الأمثلة في محرر الأكواد الخاص بك",
+          "استمر في التعلم مع CodeGalaxy"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hex.asp"
+      ]
+    }
+  ]
+}
