@@ -25,13 +25,13 @@
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="mystyle.css">
-</head>
-<body>
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-</body>
+  <head>
+    <link rel="stylesheet" href="mystyle.css">
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+  </body>
 </html>
 ```
 
@@ -43,7 +43,6 @@
 body {
   background-color: lightblue;
 }
-
 h1 {
   color: navy;
   margin-left: 20px;
