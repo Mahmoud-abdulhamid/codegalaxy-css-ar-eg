@@ -26,6 +26,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="mystyle.css">
   </head>
   <body>
