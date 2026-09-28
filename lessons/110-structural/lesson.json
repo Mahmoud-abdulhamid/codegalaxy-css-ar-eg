@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "110",
+  "title": "CSS Structural Pseudo-classes",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية عمل Structural Pseudo-classes في CSS",
+    "التعامل مع :first-child لاستهداف العناصر بناء على ترتيبها",
+    "استخدام :lang() لتنسيق العناصر بناء على اللغة",
+    "تطبيق التنسيقات المتقدمة على هيكل المستند"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_pseudo_classes_structural.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-e46d856db7566d07.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css_pseudo_classes_structural.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Structural Pseudo-classes",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى Structural Pseudo-classes، وَهِيَ أَدَوَاتٌ قَوِيَّه لِاخْتِيَارِ الْعَنَاصِرِ بِنَاءً عَلَى مَوْقِعِهَا دَاخِلَ شَجَرَةِ الْمُسْتَنَدِ.",
+        "caption_text": "تسمح لنا Structural Pseudo-classes باختيار العناصر بناء على موقعها في شجرة المستند."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعتمد على موقع العنصر في هيكل HTML",
+          "تسهل استهداف العناصر دون الحاجة لـ class أو id",
+          "تزيد من مرونة التنسيق في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_structural.asp"
+      ]
+    },
+    {
+      "id": "first_child_concept",
+      "title": "فهم :first-child",
+      "narration": {
+        "spoken_text": "نَبْدَأُ مَعَ :first-child. هَذَا Pseudo-class يَسْتَهْدِفُ الْعُنْصُرَ الَّذِي يَكُونُ الِابْنَ الْأَوَّلَ لِعُنْصُرٍ آخَرَ. لَاحِظْ أَنَّهُ يُطَابِقُ الْعُنْصُرَ فَقَطْ إِذَا كَانَ هُوَ الْأَوَّلَ فِي تَرْتِيبِهِ.",
+        "caption_text": "يستخدم :first-child لاستهداف العنصر الذي يمثل الابن الأول لعنصر أب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p:first-child {\n  color: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_structural.asp"
+      ]
+    },
+    {
+      "id": "first_child_em",
+      "title": "استهداف العناصر المتداخلة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً دَمْج Selectors. مَثَلاً، p em:first-child يَسْتَهْدِفُ أَوَّلَ عُنْصُر em دَاخِلَ أَيِّ p، بَيْنَمَا p:first-child em يَسْتَهْدِفُ كُلَّ عَنَاصِر em الَّتِي تَقَعُ دَاخِلَ عُنْصُر p هُوَ الِابْنُ الْأَوَّلُ.",
+        "caption_text": "يمكن دمج Selectors للتحكم الدقيق في العناصر المتداخلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* استهداف أول em داخل p */\np em:first-child {\n  color: blue;\n}\n/* استهداف em داخل أول p */\np:first-child em {\n  color: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_structural.asp"
+      ]
+    },
+    {
+      "id": "lang_pseudo",
+      "title": "استخدام :lang()",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى :lang(). هَذَا Pseudo-class يُسْتَخْدَمُ لِاخْتِيَارِ الْعَنَاصِرِ الَّتِي تَمْتَلِك Attribute بِاسْم lang وَتَحْتَوِي عَلَى قِيمَه مُحَدَّدَه، وَهَذَا مُفِيدٌ جِدّاً لِتَنْسِيقِ اللُّغَاتِ الْمُخْتَلِفَه.",
+        "caption_text": "يستخدم :lang() لاستهداف العناصر بناء على قيمة Attribute lang."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "q:lang(no) {\n  quotes: \"~\" \"~\";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_structural.asp"
+      ]
+    },
+    {
+      "id": "full_example",
+      "title": "مثال عملي متكامل",
+      "narration": {
+        "spoken_text": "لِنَضَعَ هَذَا فِي مِثَالٍ كَامِلٍ. هُنَا نَقُومُ بِتَعْرِيفِ عَلَامَاتِ الِاقْتِبَاسِ لِعُنْصُر q عِنْدَمَا تَكُونُ اللُّغَه النَّرْوِيجِيَّه، وَهِيَ طَرِيقَه احْتِرَافِيَّه لِتَنْسِيقِ النُّصُوصِ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مثال يوضح استخدام :lang() لتنسيق علامات الاقتباس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      q:lang(no) {\n        quotes: \"~\" \"~\";\n      }\n    </style>\n  </head>\n  <body>\n    <p>Some text <q lang=\"no\">Quote</q></p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_structural.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَيَقُومُ الْمُتَصَفِّحْ بِتَغْيِيرِ شَكْلِ عَلَامَاتِ الِاقْتِبَاسِ تِلْقَائِيّاً لِلْعَنَاصِرِ الَّتِي تَحْمِلُ لُغَه مُحَدَّدَه، مِمَّا يُعْطِي تَحَكُّماً دَقِيقاً فِي تَصْمِيمِ الْمُحْتَوَى.",
+        "caption_text": "تظهر النتيجة في المتصفح بتنسيق مخصص بناء على اللغة."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "معاينة نتيجة استخدام Pseudo-classes"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_structural.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَسْتَخْدِم Structural Pseudo-classes مِثْلَ :first-child وَ :lang() لِتَنْسِيقِ صَفْحَةِ الْوِبّ بِذَكَاءٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُرَاجَعَةِ التَّوْثِيقِ لِتَعَلُّمِ الْمَزِيدِ.",
+        "caption_text": "استخدم Structural Pseudo-classes لتعزيز مرونة وقوة تنسيق صفحات الويب الخاصة بك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم :first-child لاستهداف العناصر الأولى",
+          "استخدم :lang() لتخصيص التنسيق حسب اللغة",
+          "راجع CSS Pseudo-classes Reference للمزيد",
+          "محمود عبدالحميد يتمنى لكم رحلة تعلم ممتعة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_structural.asp"
+      ]
+    }
+  ]
+}
