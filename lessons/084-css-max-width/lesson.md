@@ -57,8 +57,16 @@ div.ex2 {
 المعاينة المرئية توضح الفرق في سلوك العناصر عند تغيير حجم النافذة.
 
 ```html
-<div class="ex1">Fixed Width</div>
-<div class="ex2">Max-Width</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="ex1">Fixed Width</div>
+    <div class="ex2">Max-Width</div>
+  </body>
+</html>
 ```
 
 ## خلاصة الدرس
