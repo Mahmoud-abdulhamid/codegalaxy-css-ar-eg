@@ -83,7 +83,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "h1 { text-align: center; color: red; }\nh2 { text-align: center; color: red; }\np { text-align: center; color: red; }",
+        "code": "h1 {\n  text-align: center; color: red;\n}\nh2 {\n  text-align: center; color: red;\n}\np {\n  text-align: center; color: red;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
