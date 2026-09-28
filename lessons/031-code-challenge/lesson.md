@@ -41,9 +41,17 @@ div {
 يظهر العنصر في المتصفح بإطار أزرق سميك ومحدد بوضوح.
 
 ```html
-<div style="border: 5px solid blue;">
-  هذا عنصر يحتوي على Border
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div style="border: 5px solid blue;">
+      هذا عنصر يحتوي على Border
+    </div>
+  </body>
+</html>
 ```
 
 ## أفضل الممارسات
