@@ -121,7 +121,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "div {\n  background-color: \n  hsla(240, 100%, 50%, 0.3);\n}",
+        "code": "div {\n  background-color: hsla(240, 100%, 50%, 0.3);\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
