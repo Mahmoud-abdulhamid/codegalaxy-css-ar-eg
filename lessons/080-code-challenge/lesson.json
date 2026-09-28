@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "80",
+  "title": "CSS Tables Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تنسيق الجداول باستخدام CSS",
+    "تطبيق خصائص CSS على عناصر table و th و td",
+    "تحسين مظهر الجداول لتكون جذابة وعملية",
+    "حل تحديات البرمجة الخاصة بتنسيق الجداول"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_table.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي الجداول",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَقُومُ الْيَوْمَ بِحَلِّ تَحَدِّي الْجَدَاوِلِ لِتَعْزِيزِ مَهَارَاتِكُمْ فِي تَنْسِيقِ الْعَنَاصِرِ بِاسْتِخْدَام CSS وَجَعْلِ بَيَانَاتِ الْوِبّ تَبْدُو أَكْثَرَ تَنْظِيماً وَجَمَالاً.",
+        "caption_text": "مرحبا بكم في درس تحدي الجداول. سنتعلم اليوم كيفية تنسيق الجداول باستخدام CSS بشكل احترافي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق هيكل الجداول باستخدام CSS",
+          "التحكم في خصائص table و th و td",
+          "تطبيق التحدي البرمجي لتعزيز الفهم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_table.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية للجداول",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ الْجَدَاوِلِ نَحْتَاجُ لِفَهْم Elements مِثْل table و th و td. نَسْتَخْدِم Attribute مِثْل border-collapse لِتَوْحِيدِ الْحُدُودِ، وَنُضِيف padding لِتَوْفِيرِ مَسَافَه دَاخِلَ الْخَلَايَا لِتَبْدُوَ الصَّفْحَه مُرِيحَه لِلْعَيْنِ.",
+        "caption_text": "تعتمد جداول HTML على عناصر table و th و td. نستخدم CSS للتحكم في الحواف والمسافات الداخلية."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "العنصر",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "table",
+            "الحاوية الرئيسية"
+          ],
+          [
+            "th",
+            "خلية العنوان"
+          ],
+          [
+            "td",
+            "خلية البيانات"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_table.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود الأساسي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْكُودِ. نَقُومُ بِتَعْرِيف table وَتَحْدِيد width لَهُ، ثُمَّ نُطَبِّق border عَلَى th و td لِتَحْدِيدِ الْخَلَايَا بِوُضُوحٍ. لَاحِظْ كَيْفَ نَسْتَخْدِم CSS لِتَنْظِيمِ هَذِهِ الْعَنَاصِرِ.",
+        "caption_text": "هيكل الكود الأساسي لتنسيق الجدول باستخدام CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "table {\n  width: 100%;\n  border-collapse: collapse;\n}\nth, td {\n  border: 1px solid black;\n  padding: 8px;\n  text-align: left;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_table.asp"
+      ]
+    },
+    {
+      "id": "styling_details",
+      "title": "تنسيق الخلايا والصفوف",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا إِضَافَةِ background-color لِصُفُوفِ الْجَدْوَلِ لِتَمْيِيزِ الْعَنَاوِينِ. اسْتِخْدَام nth-child يَسْمَحُ لَنَا بِتَلْوِينِ الصُّفُوفِ بِالتَّبَادُلِ، مِمَّا يُسَاعِدُ الْمُسْتَخْدِمَ عَلَى قِرَاءَةِ الْبَيَانَاتِ بِسُهُولَه دَاخِلَ مُتَصَفِّحْ الْوِبّ.",
+        "caption_text": "استخدام خصائص CSS المتقدمة مثل nth-child لتحسين تجربة المستخدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "th {\n  background-color: #f2f2f2;\n}\ntr:nth-child(even) {\n  background-color: #f9f9f9;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_table.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة الجدول في المتصفح",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ التَّنْسِيقَاتِ، سَيَظْهَرُ الْجَدْوَلُ بِشَكْلٍ مُنَظَّمٍ. الْحُدُودُ مُتَّصِلَه، وَالْمَسَافَاتُ دَاخِلَ الْخَلَايَا مُتَوَازِنَه، وَالْأَلْوَانُ تُسَاعِدُ فِي تَمْيِيزِ الْبَيَانَاتِ بِوُضُوحٍ تَامٍّ لِكُلِّ زَائِرٍ لِمَوْقِعِ الْوِبّ.",
+        "caption_text": "النتيجة النهائية للجدول بعد تطبيق تنسيقات CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <table>\n      <tr>\n        <th>الاسم</th>\n        <th>المهنة</th>\n      </tr>\n      <tr>\n        <td>محمود</td>\n        <td>مطور</td>\n      </tr>\n    </table>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "الاسم | المهنة\nمحمود | مطور",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_table.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً أَهَمِّيَّةِ Responsive Design. عِنْدَ تَنْسِيقِ الْجَدَاوِلِ، تَأَكَّدْ أَنَّهَا تَعْمَلُ بِشَكْلٍ جَيِّدٍ عَلَى الشَّاشَاتِ الصَّغِيرَه بِاسْتِخْدَام overflow-x: auto لِتَجَنُّبِ مَشَاكِلِ الْعَرْضِ فِي مُتَصَفِّحَاتُ الْوِبّ.",
+        "caption_text": "أفضل الممارسات لضمان تجاوب الجداول مع مختلف الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام overflow-x: auto للجداول الكبيرة",
+          "تجنب العرض الثابت للعناصر",
+          "اختبار الجدول على Chrome و Firefox"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_table.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "لَقَدْ تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي مَظْهَرِ الْجَدَاوِلِ بِاسْتِخْدَام CSS. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُحَاوَلَةِ حَلِّ التَّحَدِّي الْمَوْجُودِ فِي الرَّابِطِ بِالْوَصْفِ لِتَطْوِيرِ مَهَارَاتِكُمُ الْبَرْمَجِيَّه.",
+        "caption_text": "خلاصة الدرس: استمر في التدريب وحل التحديات البرمجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية أساسيات تنسيق الجداول",
+          "تم شرح كيفية استخدام CSS للتحكم في الخلايا",
+          "شجعنا على حل التحدي البرمجي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_table.asp"
+      ]
+    }
+  ]
+}
