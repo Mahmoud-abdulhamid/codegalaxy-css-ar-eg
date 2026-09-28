@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "66",
+  "title": "CSS Icons with Font Awesome",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام مكتبات الأيقونات في صفحات الويب",
+    "تعلم دمج Font Awesome في مستند HTML",
+    "التعامل مع Elements الخاصة بالأيقونات",
+    "تخصيص الأيقونات باستخدام CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_icons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول استخدام الأيقونات",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ إِضَافَةِ الأيقوناتِ إِلَى صَفْحَةِ الْوِبّ بِاسْتِخْدَامِ مَكْتَبَاتٍ جَاهِزَه مِثْل Font Awesome، وَهِيَ طَرِيقَه سَهْلَه وَاحْتِرَافِيَّه لِتَحْسِينِ تَصْمِيمِ مَوَاقِعِكُمْ.",
+        "caption_text": "مقدمة حول استخدام مكتبات الأيقونات مثل Font Awesome في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الأيقونات تعزز تجربة المستخدم في صفحات الويب",
+          "استخدام مكتبات الأيقونات يوفر الوقت والجهد",
+          "Font Awesome هي واحدة من أشهر المكتبات",
+          "الأيقونات هي متجهات يمكن تخصيصها بـ CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم أساسية للتعامل مع الأيقونات",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ الأيقوناتِ، نَحْتَاجُ إِلَى اسْتِخْدَام Elements مِثْل i أَوْ span. نَقُومُ بِتَحْدِيدِ اسْم class الْخَاصِّ بِالْأَيْقُونَه دَاخِلَ هَذِهِ الْعَنَاصِرِ، وَبِذَلِكَ تَظْهَرُ الْأَيْقُونَه مُبَاشَرَه فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "استخدام عناصر HTML مثل <i> و <span> لإدراج الأيقونات عبر الـ class."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام <i> أو <span> لإدراج الأيقونة",
+          "إضافة اسم الـ class المناسب للأيقونة",
+          "إمكانية التحكم في الحجم واللون عبر CSS",
+          "لا حاجة لتحميل ملفات إضافية عند استخدام الـ CDN"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons.asp"
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "إعداد Font Awesome في الـ head",
+      "narration": {
+        "spoken_text": "لِتَشْغِيل Font Awesome، يَجِبُ عَلَيْنَا إِدْرَاجُ كُود script فِي قِسْم head. هَذَا الْكُودُ يَرْبِطُ صَفْحَتَنَا بِمَكْتَبَةِ الْأَيْقُونَاتِ عَبْرَ الْإِنْتَرْنِت، دُونَ الْحَاجَه إِلَى تَحْمِيلِ أَيِّ مَلَفَاتٍ عَلَى جِهَازِكُمْ.",
+        "caption_text": "إدراج رابط مكتبة Font Awesome داخل قسم <head>."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <script src=\"https://kit.fontawesome.com/a076d05399.js\" crossorigin=\"anonymous\"></script>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons.asp"
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "كتابة كود الأيقونات في الـ body",
+      "narration": {
+        "spoken_text": "الْآنَ نَضَعُ الأيقوناتِ دَاخِلَ قِسْم body. نَسْتَخْدِمُ الْعُنْصُر i مَع class الْمُحَدَّدِ لِكُلِّ أَيْقُونَه، مِثْل fas fa-cloud لِأَيْقُونَةِ السَّحَابَه، أَوْ fa-heart لِأَيْقُونَةِ الْقَلْبِ.",
+        "caption_text": "إضافة الأيقونات داخل قسم <body> باستخدام عنصر <i>."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<body>\n  <i class=\"fas fa-cloud\"></i>\n  <i class=\"fas fa-heart\"></i>\n  <i class=\"fas fa-car\"></i>\n  <i class=\"fas fa-bars\"></i>\n</body>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons.asp"
+      ]
+    },
+    {
+      "id": "full_code",
+      "title": "المستند الكامل",
+      "narration": {
+        "spoken_text": "هَذَا هُوَ الْمُسْتَنَدُ بِالْكَامِلِ. لَاحِظْ كَيْفَ يَبْدَأُ بَةِ دُوكْ تَايْبْ HTML، ثُمَّ قِسْم head الَّذِي يَحْتَوِي عَلَى script، وَبَعْدَهُ قِسْم body الَّذِي يَحْتَوِي عَلَى جَمِيعِ الْعَنَاصِرِ الْمَرْئِيَّه.",
+        "caption_text": "هيكل مستند HTML كامل مع دمج مكتبة Font Awesome."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <script src=\"https://kit.fontawesome.com/a076d05399.js\" crossorigin=\"anonymous\"></script>\n  </head>\n  <body>\n    <i class=\"fas fa-cloud\"></i>\n    <i class=\"fas fa-heart\"></i>\n    <i class=\"fas fa-car\"></i>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons.asp"
+      ]
+    },
+    {
+      "id": "output",
+      "title": "معاينة الأيقونات في المتصفح",
+      "narration": {
+        "spoken_text": "عِنْدَ فَتْحِ هَذَا الْمِلَفِّ فِي أَيِّ وِبّ Browser، سَتَظْهَرُ الأيقوناتُ بِشَكْلٍ جَمِيلٍ وَوَاضِحٍ. هَذِهِ الأيقوناتُ هِيَ مُتَجِهَاتٌ، مِمَّا يَعْنِي أَنَّهَا لَا تَفْقِدُ جَوْدَتَهَا عِنْدَ تَكْبِيرِهَا أَوْ تَصْغِيرِهَا.",
+        "caption_text": "تظهر الأيقونات كرسوم متجهة عالية الجودة في المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "☁  ♥  🚗  ≡",
+        "highlight_lines": [],
+        "output": "☁  ♥  🚗  ≡",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons.asp"
+      ]
+    },
+    {
+      "id": "customization",
+      "title": "تخصيص الأيقونات بـ CSS",
+      "narration": {
+        "spoken_text": "يُمْكِنُكُمْ تَخْصِيصُ الأيقوناتِ بِسُهُولَه بِاسْتِخْدَام CSS. يُمْكِنُكُمْ تَغْيِيرُ الْحَجْمِ بِاسْتِخْدَام font-size، أَوْ تَغْيِيرُ اللَّوْنِ بِاسْتِخْدَام color، وَحَتَّى إِضَافَه ظِلٍّ لَهَا لِتَبْدُوَ أَكْثَرَ حَيَوِيَّه.",
+        "caption_text": "تخصيص الأيقونات باستخدام خصائص CSS مثل اللون والحجم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".fas {\n  font-size: 30px;\n  color: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا كَيْفَ نُضِيفُ الأيقوناتِ بِاسْتِخْدَام Font Awesome. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَزِيَارَةِ مَوْقِع Font Awesome لِاسْتِكْشَافِ الْمَزِيدِ مِنَ الأيقوناتِ الرَّائِعَه لِمَشَارِيعِكُمُ الْقَادِمَه.",
+        "caption_text": "خلاصة: استخدام Font Awesome يسهل إضافة أيقونات احترافية وقابلة للتخصيص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم مكتبات الأيقونات لتعزيز واجهة المستخدم",
+          "اربط المكتبة في الـ <head> عبر الـ CDN",
+          "استخدم <i> لإدراج الأيقونة في الـ <body>",
+          "تحكم في مظهر الأيقونة باستخدام CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons.asp"
+      ]
+    }
+  ]
+}
