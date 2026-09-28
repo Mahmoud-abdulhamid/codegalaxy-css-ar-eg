@@ -1,0 +1,8 @@
+/* استهداف أول em داخل p */
+p em:first-child {
+  color: blue;
+}
+/* استهداف em داخل أول p */
+p:first-child em {
+  color: blue;
+}
