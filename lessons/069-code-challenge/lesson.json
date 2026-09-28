@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "69",
+  "title": "CSS Icons Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية دمج الأيقونات في صفحات الويب",
+    "تطبيق مهارات CSS لتنسيق الأيقونات",
+    "حل تحديات برمجية عملية باستخدام CSS",
+    "تحسين مهارات التصميم المرئي للمواقع"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_icons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي الأيقونات",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَخُوضُ تَحَدِّيَاً بَرْمَجِيَّاً مُمْتِعَاً حَوْلَ كَيْفِيَّةِ التَّعَامُلِ مَعَ الْأَيْقُونَاتِ وَتَنْسِيقِهَا بِاسْتِخْدَامِ خَصَائِص CSS لِتَجْعَلَ صَفْحَةِ الْوِبّ أَكْثَرَ جَاذِبِيَّه.",
+        "caption_text": "مرحبا بكم في تحدي CSS Icons البرمجي لتعزيز مهاراتكم في تنسيق الأيقونات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية الأيقونات في واجهات المستخدم",
+          "استخدام CSS للتحكم في مظهر الأيقونات",
+          "تطبيق عملي على تحدي Icons"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_icons.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم أساسية للأيقونات",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ الْأَيْقُونَاتِ، نَحْتَاجُ إِلَى فَهْمِ كَيْفِيَّةِ التَّعَامُلِ مَع Elements مِثْل i أَوْ span. نَسْتَخْدِمُ خَصَائِصَ مِثْل color لِتَغْيِيرِ اللَّوْنِ، و font-size لِتَغْيِيرِ الْحَجْمِ، و padding لِتَحْدِيدِ الْمَسَافَاتِ.",
+        "caption_text": "نستخدم عناصر HTML مثل i أو span مع خصائص CSS للتحكم الكامل في مظهر الأيقونات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام العناصر i و span للأيقونات",
+          "التحكم في اللون عبر خاصية color",
+          "تعديل الحجم باستخدام font-size",
+          "إضافة مسافات باستخدام padding و margin"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_icons.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود الأساسي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْهَيْكَلِ الْأَسَاسِيِّ لِلصَّفْحَه. نَبْدَأُ بَةِ دُوكْ تَايْبْ html ثُمَّ نُضِيفُ الْعَنَاصِرَ الرَّئِيسِيَّه head و body. هَذَا الْهَيْكَلُ هُوَ الْأَسَاسُ لِأَيِّ مَشْرُوعِ وِبٍّ نَقُومُ بِبِنَائِهِ.",
+        "caption_text": "الهيكل الأساسي لصفحة الويب باستخدام HTML5."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>CSS Icons</title>\n  </head>\n  <body>\n    <i class=\"fa fa-home\"></i>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_icons.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق الأيقونات بـ CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نَقُومُ بِتَطْبِيقِ التَّنْسِيقَاتِ. نَسْتَخْدِمُ مُحَدِّدَ الْفِئَه .fa لِتَطْبِيقِ خَصَائِصَ مِثْل font-size لِتَكْبِيرِ الْأَيْقُونَه، و color لِتَلْوِينِهَا، مِمَّا يَمْنَحُهَا مَظْهَرَاً احْتِرَافِيَّاً دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "استخدام CSS لتنسيق الأيقونات وتغيير ألوانها وأحجامها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".fa {\n  font-size: 30px;\n  color: blue;\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_icons.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ الْأَيْقُونَه فِي الْمُتَصَفِّحْ بِحَجْمٍ كَبِيرٍ وَلَوْنٍ أَزْرَقَ مَعَ مَسَافَاتٍ بَادِئَه حَوْلَهَا. هَذِهِ هِيَ النَّتِيجَه الْمَرْئِيَّه لِتَحَدِّي الْأَيْقُونَاتِ الْبَسِيطِ.",
+        "caption_text": "المعاينة المرئية للأيقونة بعد تطبيق تنسيقات CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!-- النتيجة في المتصفح -->\n<i class=\"fa fa-home\" style=\"font-size:30px; color:blue; padding:10px;\"></i>",
+        "highlight_lines": [],
+        "output": "أيقونة منزل زرقاء بحجم 30 بكسل",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_icons.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ أَفْضَلِ النَّتَائِجِ، احْرِصْ دَائِماً عَلَى اسْتِخْدَام Classes وَاصِفَه لِلْعَنَاصِرِ. كَمَا يُفَضَّلُ تَجْمِيعُ التَّنْسِيقَاتِ فِي مِلَفِّ CSS خَارِجِيٍّ لِتَسْهِيلِ الصِّيَانَه وَتَحْسِينِ أَدَاءِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "نصائح برمجية لتحسين جودة الكود وصيانته."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام ملفات CSS خارجية",
+          "تسمية Classes بشكل واضح",
+          "الحفاظ على نظافة الكود",
+          "اختبار التوافق مع المتصفحات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_icons.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةِ التَّعَامُلِ مَعَ الْأَيْقُونَاتِ وَتَنْسِيقِهَا بَةِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُتَابَعَةِ التَّحَدِّيَاتِ الْقَادِمَه لِتَطْوِيرِ مَهَارَاتِكُمْ فِي تَطْوِيرِ الْوِبّ.",
+        "caption_text": "خلاصة الدرس ودعوة للتطبيق العملي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية أساسيات CSS Icons",
+          "شرح كيفية تنسيق العناصر",
+          "أهمية الممارسة المستمرة",
+          "استعدوا للدرس القادم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_icons.asp"
+      ]
+    }
+  ]
+}
