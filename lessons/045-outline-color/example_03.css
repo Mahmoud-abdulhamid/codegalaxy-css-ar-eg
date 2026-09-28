@@ -1,0 +1,8 @@
+p.ex3 {
+  outline-style: outset;
+  outline-color: green;
+}
+p.ex4 {
+  outline-style: solid;
+  outline-color: invert;
+}
