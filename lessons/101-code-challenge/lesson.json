@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "101",
+  "title": "CSS Inline-block Layout Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم خصائص display: inline-block",
+    "التعرف على كيفية التحكم في تخطيط العناصر",
+    "تطبيق التحديات البرمجية في CSS",
+    "تحسين مهارات التنسيق المرئي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_inline-block.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Inline-block",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ اسْتِخْدَامِ قِيمَةِ inline-block لِتَنْظِيمِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ، وَسَنَقُومُ بِحَلِّ تَحَدٍّ بَرْمَجِيٍّ لِتَثْبِيتِ هَذِهِ الْمَعْلُومَاتِ.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد حول استخدام خاصية inline-block لتنسيق عناصر صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهم دور display: inline-block",
+          "الفرق بين العناصر inline و block",
+          "تطبيق التحديات البرمجية العملية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inline-block.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم Inline-block",
+      "narration": {
+        "spoken_text": "تُعَدُّ قِيمَةِ inline-block خِيَاراً قَوِيّاً، فَهِيَ تَجْمَعُ بَيْنَ خَصَائِصِ الْعَنَاصِر inline، حَيْثُ تَصْطَفُّ جَانِباً، وَخَصَائِص block، حَيْثُ يُمْكِنُكَ التَّحَكُّمُ فِي الْأَبْعَادِ مِثْل width و height بِكُلِّ سُهُولَه.",
+        "caption_text": "تجمع خاصية inline-block بين ميزات العناصر inline والعناصر block في CSS."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوصف",
+          "الاستخدام"
+        ],
+        "rows": [
+          [
+            "inline",
+            "لا تقبل أبعادا",
+            "نصوص"
+          ],
+          [
+            "block",
+            "تأخذ سطرا كاملا",
+            "حاويات"
+          ],
+          [
+            "inline-block",
+            "تجمع الميزتين",
+            "تخطيط مرن"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inline-block.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود التحدي البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيف class بِاسْم box، وَنُعْطِيه display: inline-block. هَذَا يَجْعَلُ الْعَنَاصِرَ تَتَمَوْضَعُ بِجَانِبِ بَعْضِهَا مَعَ الْحِفَاظِ عَلَى الْأَبْعَادِ الْمُحَدَّدَه لَهَا.",
+        "caption_text": "مثال برمجي يوضح كيفية تطبيق display: inline-block على العناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  display: inline-block;\n  width: 100px;\n  height: 100px;\n  background-color: blue;\n  margin: 5px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inline-block.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "لَاحِظْ أَنَّ width و height يُحَدِّدَانِ حَجْمَ الْعُنْصُرِ، بَيْنَمَا margin يُضِيفُ مَسَافَه خَارِجِيَّه. هَذَا التَّرْكِيبُ هُوَ الْأَسَاسُ لِبِنَاءِ شَبَكَاتِ الْعَرْضِ الْبَسِيطَه فِي الْوِبّ.",
+        "caption_text": "شرح تأثير الخصائص width و height و margin عند استخدام inline-block."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "width و height للتحكم في الحجم",
+          "margin لإضافة مسافات بين العناصر",
+          "تجنب تداخل العناصر بفضل inline-block"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inline-block.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَتَظْهَرُ الْعَنَاصِرُ كَمُرَبَّعَاتٍ زَرْقَاءَ مُتَجَاوِرَه عَلَى نَفْسِ السَّطْرِ. هَذَا هُوَ السُّولُوكُ الْمِثَالِيُّ لِتَصْمِيمِ مَعْرِضِ صُوَرٍ أَوْ قَوَائِمِ تَنَقُّلٍ.",
+        "caption_text": "المخرجات المتوقعة: مربعات زرقاء متجاورة في صف واحد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"box\"></div>\n    <div class=\"box\"></div>\n    <div class=\"box\"></div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "■ ■ ■",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inline-block.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَنْتَبِهَ لِلْمَسَافَاتِ الْبَيْضَاءِ بَيْنَ الْعَنَاصِرِ فِي HTML، لِأَنَّهَا قَدْ تُؤَثِّرُ عَلَى التَّمَوْضُعِ. يُمْكِنُكَ اسْتِخْدَام font-size: 0 فِي الْحَاوِيَه الْأَبِ لِحَلِّ هَذِهِ الْمُشْكِلَه تَقْنِيّاً.",
+        "caption_text": "نصيحة تقنية: التعامل مع المسافات البيضاء عند استخدام inline-block."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الانتباه للمسافات البيضاء في HTML",
+          "استخدام font-size: 0 في الأب",
+          "اختبار التخطيط على متصفحات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inline-block.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا تَحَدِّيَ الْيَوْمِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدِيُو، وَلَا تَتَرَدَّدُوا فِي طَرْحِ أَسْئِلَتِكُمْ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم. جربوا الأكواد بأنفسكم وتابعوا الدورة لمزيد من التحديات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا الرابط في الوصف",
+          "طبقوا التحدي عمليا",
+          "استعدوا للدرس القادم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inline-block.asp"
+      ]
+    }
+  ]
+}
