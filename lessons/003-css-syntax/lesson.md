@@ -4,73 +4,53 @@
 
 ## مقدمة في CSS Syntax
 
-تتكون قاعدة CSS من Selector و Declaration block لتحديد شكل عناصر الويب.
+مرحبا بكم في درس CSS Syntax، سنتعلم اليوم كيفية كتابة قواعد CSS لتنسيق عناصر الويب.
 
-- CSS Syntax هي القواعد الأساسية للتنسيق
-- تتكون القاعدة من Selector و Declaration block
-- تستخدم لتحديد مظهر عناصر HTML
+- CSS Syntax هو الأساس لتنسيق صفحات الويب
+- القاعدة تتكون من Selector و Declaration Block
+- فهم هذه القواعد يمنحك تحكما كاملا في التصميم
 
-## مفهوم الـ Selector
+## مكونات قاعدة CSS
 
-الـ Selector هو الجزء الذي يشير إلى عنصر HTML الذي نريد تنسيقه.
+تتكون قاعدة CSS من Selector يحدد العنصر، وDeclaration Block يحتوي على التنسيقات.
 
-- Selector يحدد العنصر المستهدف
-- يتم كتابة اسم العنصر مثل p
-- يتبعه مباشرة Declaration block
+## شرح كود CSS
 
-## شرح الـ Declaration block
-
-يحتوي الـ Declaration block على Declarations محاطة بـ curly braces.
-
-- توضع التنسيقات داخل
-- تتكون من Property و Value
-- يفصل بينهما علامة :
-- تنتهي كل Declaration بـ
-
-## كتابة الكود البرمجي
-
-مثال عملي لتنسيق عناصر p باستخدام CSS.
+نكتب Selector ثم نفتح أقواس، ونضع الخصائص والقيم مفصولة بـ colon ومنتهية بـ semicolon.
 
 ```css
-p {
+p
+{
   color: red;
   text-align: center;
 }
 ```
 
-## تحليل أجزاء الكود
+## تفاصيل Declaration
 
-يجب إنهاء كل Declaration بـ semicolon للفصل بينها.
+تتكون كل Declaration من Property و Value، مما يضمن تنظيم الكود وسهولة صيانته.
 
-- p هو الـ Selector
-- هو الـ Declaration block
-- color و text-align هما الـ Properties
-- red و center هما الـ Values
+## المعاينة المرئية
 
-## المخرجات في المتصفح
-
-تظهر النتيجة في المتصفح بتنسيق اللون الأحمر والمحاذاة المركزية.
+تظهر النتيجة في المتصفح بنص أحمر اللون ومحاذاة في المنتصف.
 
 ```html
-<p style="color: red; text-align: center;">
-  هذا النص سيكون أحمر وفي المنتصف
-</p>
+<p>This is a paragraph.</p>
 ```
 
 ## أفضل الممارسات
 
-التنظيم الجيد للكود يسهل الصيانة والتطوير.
+استخدم semicolon دائما، ونسق الكود بالمسافات البادئة لسهولة القراءة.
 
-- حافظ على ترتيب الكود
-- لا تنس الـ semicolon
-- استخدم الـ Selectors المناسبة
-- تعلم المزيد من الـ Properties
+- لا تنس إغلاق كل Declaration بـ semicolon
+- استخدم الأقواس المجعدة بشكل صحيح
+- نظم الكود بمسافات بادئة واضحة
 
 ## خلاصة الدرس
 
-شكرا لمتابعتكم، جربوا الأكواد بأنفسكم عبر الرابط في الوصف.
+تعلمنا أساسيات CSS Syntax. جربوا الأكواد بأنفسكم عبر الرابط في الوصف.
 
-- تم شرح CSS Syntax
-- تم توضيح الـ Selector والـ Declaration
+- CSS Syntax هو هيكل بناء التنسيقات
+- Selector يحدد العنصر
+- Declaration Block يحدد التنسيق
 - جرب الكود بنفسك عبر الرابط
-- استعد للدرس القادم
