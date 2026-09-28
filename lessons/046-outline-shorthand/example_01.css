@@ -1,8 +1,6 @@
-p.ex1
-{
+p.ex1 {
   outline: dashed;
 }
-p.ex2
-{
+p.ex2 {
   outline: dotted red;
 }
