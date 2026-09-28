@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "113",
+  "title": "CSS Pseudo-elements for Text",
+  "course": "CSS",
+  "objectives": [
+    "Familiarize with CSS Pseudo-elements for text styling",
+    "Apply first-line styles using ::first-line",
+    "Format initial letters using ::first-letter",
+    "Combine Pseudo-elements with HTML classes and multiple rules"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_pseudo_elements_text.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "شرح Introduction to Text Pseudo-elements",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى Pseudo-elements لِتَقْدِيمِ تَسْنِيقَاتٍ مُتَقَدِّمَه لِأَجْزَاءِ النُّصُوصِ مِثْلَ السَّطْرِ الْأَوَّلِ أَوْ الْحَرْفِ الْأَوَّلِ بِدُونِ حَاجَه لِلتَّعْدِيلِ الْمُبَاشِرِ لِلْكُودِ الْمَكْتُوبِ فِي لُغَةِ HTML.",
+        "caption_text": "مرحبا بكم في درس Pseudo-elements المخصصة للنصوص وكيفية تنسيق أجزاء معينة منها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق أجزاء محددة من النصوص",
+          "استخدام Pseudo-elements باحترافية",
+          "التحكم في السطر والحرف الأول"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_text.asp"
+      ]
+    },
+    {
+      "id": "scene_2_first_line",
+      "title": "شرح The ::first-line Pseudo-element",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ لِدِرَاسَةِ أَدَاةِ first-line وَهِي Pseudo-element تُسْتَخْدَمُ لِإِضَافَه تَسْنِيقٍ خَاصٍّ عَلَى السَّطْرِ الْأَوَّلِ لِنَصِّ دَاخِلَ عُنْصُرِ بْلُوكْ. لَاحِظْ أَنَّهَا تَبْلُغُ فَاعِلِيَّتَهَا فَقَطْ عَلَى Block-level Elements مِثْلَ عَنَاصِرِ الْفِقَرَاتِ.",
+        "caption_text": "استخدام ::first-line لإضافة تنسيق خاص على السطر الأول من عناصر block-level."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق السطر الأول من النص",
+          "يعمل حصرا على block-level elements",
+          "يمنح مظهرا جماليا للمقالات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_text.asp"
+      ]
+    },
+    {
+      "id": "scene_3_code_first_line",
+      "title": "شرح Code Example for ::first-line",
+      "narration": {
+        "spoken_text": "شَاهِدْ مَعِي هَذَا الْمِثَالَ الْعَمَلِيَّ لِتَنْسِيقِ جَمِيعِ عَنَاصِرِ الْفِقَرَاتِ بِاسْتِخْدَام first-line. نُحَدِّدُ لَوْنَ الْخَطِّ بِالْأَحْمَرِ وَنَجْعَلُ الْحُرُوفَ ذَاتَ طَابِعٍ صَغِيرٍ وَمُمَيَّزٍ عَبْر small-caps.",
+        "caption_text": "مثال عملي لتطبيق ::first-line على عناصر الفقرات وتغيير لون النص وحجم الخط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p::first-line {\n  color: red;\n  font-variant: small-caps;\n  font-size: 19px;\n}",
+        "highlight_lines": [],
+        "output": "يظهر السطر الأول من الفقرة باللون الأحمر وبحجم تسعة عشر بكسل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_text.asp"
+      ]
+    },
+    {
+      "id": "scene_4_first_letter",
+      "title": "شرح The ::first-letter Pseudo-element",
+      "narration": {
+        "spoken_text": "لِنَتَنَقَّلْ الْآنَ إِلَى أَدَاةِ first-letter الْأُخْرَى والمهمَه جِدّاً لِتَسْنِيقِ الْحَرْفِ الْأَوَّلِ فِي نَصِّ الْعُنْصُرِ. تُتِيحُ لَنَا هَذِهِ التَّقْنِيَه إِبْرَازَ الْحَرْفِ الْأَوَّلِ بِحَجْمِ كَبِيرٍ مِثْل xx-large لِجَذْبِ انْتِبَاهِ الْقَارِئِ.",
+        "caption_text": "استخدام ::first-letter لتنسيق الحرف الأول من النص وإبرازه بشكل مميز."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p::first-letter {\n  color: red;\n  font-size: xx-large;\n}",
+        "highlight_lines": [],
+        "output": "يظهر الحرف الأول من الفقرة بلون أحمر وبحجم كبير جدا.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_text.asp"
+      ]
+    },
+    {
+      "id": "scene_5_classes_combination",
+      "title": "شرح Combining with HTML Classes",
+      "narration": {
+        "spoken_text": "يُمْكِنُكَ دَمْج Pseudo-elements بِسُهُولَه تَامَّه مَع HTML Classes المُخْتَلِفَه. فِي هَذَا الْمِثَالِ، نَسْتَهْدِفُ عَنَاصِرَ الْفِقَرَاتِ الَّتِي تَمْلِكُ الْكْلَاس intro فَقَطْ لِتَطْبِيقِ التَّسْنِيقِ عَلَى حَرْفِهَا الْأَوَّلِ.",
+        "caption_text": "دمج Pseudo-elements مع HTML classes لاستهداف عناصر محددة بدقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.intro::first-letter {\n  color: #ff0000;\n  font-size: 200%;\n}",
+        "highlight_lines": [],
+        "output": "تنسيق الحرف الأول للفقرات التي تحمل فئة intro بلون أحمر وحجم مئتين بالمئة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_text.asp"
+      ]
+    },
+    {
+      "id": "scene_6_multiple_elements",
+      "title": "شرح Multiple Pseudo-elements",
+      "narration": {
+        "spoken_text": "هَلْ تَعْلَمُ أَنَّهُ يُمْكِنُ دَمْجُ عِدَّةِ Pseudo-elements مَعاً فِي نَفْسِ الْعُنْصُرِ؟ نُشَاهِدُ هُنَا كَيْفَ نُنَسِّقُ الْحَرْفَ الْأَوَّلَ بِشَكْلٍ مُسْتَقِلٍّ ثُمَّ نَتَحَكَّمُ فِي بَقِيَّةِ السَّطْرِ الْأَوَّلِ بِلَوْنٍ مُخْتَلِفٍ لِتُحَفِّزَ الْإِبْدَاعَ.",
+        "caption_text": "استخدام عدة Pseudo-elements معا لتخصيص الحرف الأول وبقية السطر الأول في نفس الوقت."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p::first-letter {\n  color: red;\n  font-size: xx-large;\n}\np::first-line {\n  color: blue;\n  font-variant: small-caps;\n}",
+        "highlight_lines": [],
+        "output": "الحرف الأول أحمر وكبير، وبقية السطر الأول أزرق بخط صغير مميز.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_text.asp"
+      ]
+    },
+    {
+      "id": "scene_7_summary",
+      "title": "شرح Conclusion and Best Practices",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَام first-line و first-letter لِتَصْمِيمِ نُصُوصٍ جَذَّابَه فِي لُغَةِ CSS. نَنْصَحُ دَائِماً بِالتَّجْرِبَه العَمَلِيَّه لِهَذِهِ الْأَدَوَاتِ لِتَحْسِينِ الْمَظْهَرِ الْجَمَالِيِّ لِمَوَاقِعِ الْوِبّ.",
+        "caption_text": "خلاصة الدرس وأهمية استخدام Pseudo-elements في تحسين تصميم وتنسيق نصوص صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أدوات قوية لتنسيق النصوص الاحترافية",
+          "إمكانية الدمج مع الفئات البرمجية بسهولة",
+          "راجع الرابط في الوصف لمزيد من التفاصيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_text.asp"
+      ]
+    }
+  ]
+}
