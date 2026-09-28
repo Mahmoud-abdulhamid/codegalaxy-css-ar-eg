@@ -28,7 +28,7 @@ p {
 
 ```css
 p {
-  color: red; 
+  color: red;
   /* تحديد لون النص */
 }
 ```
@@ -51,11 +51,21 @@ p {
 تستخدم HTML تعليقات <!-- --> بينما تستخدم CSS تعليقات /* */.
 
 ```html
-<style>
-p { color: red; /* تعليق CSS */ }
-</style>
-<!-- تعليق HTML -->
-<p>Hello World!</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      p {
+        color: red; /* تعليق CSS */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- تعليق HTML -->
+    <p>Hello World!</p>
+  </body>
+</html>
 ```
 
 ## خلاصة الدرس
