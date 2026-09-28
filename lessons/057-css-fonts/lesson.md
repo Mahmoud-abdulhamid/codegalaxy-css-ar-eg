@@ -37,8 +37,7 @@
 
 ```css
 .p3 {
-  font-family: "Lucida Console", 
-  "Courier New", monospace;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 ```
 
