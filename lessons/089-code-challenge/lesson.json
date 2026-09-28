@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "89",
+  "title": "CSS Position Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية عمل خاصية position في CSS",
+    "تطبيق قيم position المختلفة عمليا",
+    "التحكم في تموضع العناصر داخل صفحة الويب",
+    "حل تحديات البرمجة الخاصة بـ CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_position.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Position",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنُحَلِّلُ تَحَدِّي CSS Position لِفَهْمِ كَيْفِيَّةِ التَّحَكُّمِ فِي مَوَاقِعِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ بِدِقَّه وَاحْتِرَافِيَّه.",
+        "caption_text": "مرحبا بكم في درس تحدي CSS Position لتعلم التحكم في مواقع العناصر داخل صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية position تحدد نوع التموضع للعنصر",
+          "تؤثر هذه الخاصية على تدفق العناصر في الصفحة",
+          "تستخدم مع خصائص الإزاحة مثل top وleft",
+          "تعتبر أساسية لتصميم واجهات الويب المعقدة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "قيم خاصية position",
+      "narration": {
+        "spoken_text": "تَتَضَمَّنُ خَاصِيَّةِ position قِيَماً مُتَعَدِّدَه مِثْل static و relative و absolute و fixed و sticky. كُلُّ قِيمَه مِنْ هَذِهِ الْقِيَمِ تُغَيِّرُ سُلُوكَ الْعُنْصُرِ فِي صَفْحَةِ الْوِبّ تَمَاماً.",
+        "caption_text": "تتضمن خاصية position قيما متعددة مثل static وrelative وabsolute وfixed وsticky."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "الوصف"
+        ],
+        "rows": [
+          [
+            "static",
+            "الوضع الافتراضي للعناصر"
+          ],
+          [
+            "relative",
+            "تموضع بالنسبة لمكانه الأصلي"
+          ],
+          [
+            "absolute",
+            "تموضع بالنسبة لأقرب عنصر أب"
+          ],
+          [
+            "fixed",
+            "تموضع ثابت بالنسبة للنافذة"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "هيكل الكود الأساسي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيد Element بِاسْتِخْدَام Selector، ثُمَّ نُضِيفُ خَاصِيَّةِ position مَعَ الْقِيمَه الْمَطْلُوبَه، وَنُحَدِّدُ الْإِزَاحَه بِاسْتِخْدَام top أَوْ left لِتَحْرِيكِ الْعُنْصُرِ.",
+        "caption_text": "نحدد العنصر باستخدام Selector ثم نطبق خاصية position مع قيم الإزاحة مثل top وleft."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  position: absolute;\n  top: 50px;\n  left: 100px;\n  background-color: blue;\n}",
+        "highlight_lines": [],
+        "output": "العنصر يبتعد 50 بكسل من الأعلى و100 من اليسار",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position.asp"
+      ]
+    },
+    {
+      "id": "detailed_explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَام absolute، يَخْرُجُ الْعُنْصُرُ مِنَ التَّدَفُّقِ الطَّبِيعِيِّ لِلصَّفْحَه. أَمَّا عِنْدَ اسْتِخْدَام relative، فَإِنَّ الْعُنْصُرَ يَبْقَى فِي مَكَانِهِ وَيُمْكِنُ إِزَاحَتُهُ بِنَاءً عَلَى مَوْقِعِهِ الْأَصْلِيِّ دَاخِل Document.",
+        "caption_text": "تؤثر القيم absolute وrelative على تدفق العناصر داخل الـ Document بشكل مختلف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "absolute يزيل العنصر من التدفق الطبيعي",
+          "relative يحافظ على مساحة العنصر الأصلية",
+          "استخدام top وleft يحدد المسافة بدقة",
+          "يجب التأكد من وجود عنصر أب بـ position غير static"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position.asp"
+      ]
+    },
+    {
+      "id": "visual_output",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "فِي هَذِهِ الْمُعَايَنَه، نَرَى كَيْفَ يَتَمَوْضَعُ الْعُنْصُرُ الزَّرْقَاءُ بَعِيداً عَنْ مَكَانِهِ الْأَصْلِيِّ. هَذَا التَّحَكُّمُ الدَّقِيقُ هُوَ مَا نَسْعَى لِتَحْقِيقِهِ فِي تَحَدِّيَات CSS.",
+        "caption_text": "تظهر المعاينة العنصر بعد تطبيق قيم position والإزاحة المحددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"box\">محتوى العنصر</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "مربع أزرق في موقع محدد بدقة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ عَلَيْنَا تَجَنُّبُ الْإِفْرَاطِ فِي اسْتِخْدَام absolute لِأَنَّهُ قَدْ يُؤَدِّي إِلَى تَدَاخُلِ الْعَنَاصِرِ. اسْتَخْدِمْ Flexbox أَوْ Grid لِلتَّخْطِيطِ الْعَامِ، وَاجْعَلْ position لِلْحَالَاتِ الْخَاصَّه فَقَطْ.",
+        "caption_text": "استخدم Flexbox أو Grid للتخطيط العام، واجعل position للحالات الخاصة فقط لتجنب تداخل العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "لا تبالغ في استخدام absolute",
+          "استخدم Flexbox للتخطيط الأساسي",
+          "اختبر التصميم على مختلف أحجام الشاشات",
+          "حافظ على نظافة الكود وتنسيقه"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا مَفَاهِيم position. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتُتْقِنُوا هَذِهِ الْمَهَارَه الْهَامَّه. شُكْراً لِمُتَابَعَتِكُمْ مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "قم بتجربة الأكواد بنفسك عبر الرابط في الوصف لإتقان مهارات CSS Position."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلمنا قيم position المختلفة",
+          "فهمنا كيفية استخدام الإزاحة",
+          "ناقشنا أفضل الممارسات البرمجية",
+          "شجعنا على التطبيق العملي المستمر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position.asp"
+      ]
+    }
+  ]
+}
