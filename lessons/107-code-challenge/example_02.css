@@ -1,0 +1,12 @@
+/* Descendant Selector */
+div p {
+  background-color: yellow;
+}
+/* Child Selector */
+div > p {
+  color: red;
+}
+/* General Sibling Selector */
+h1 ~ p {
+  font-size: 18px;
+}
