@@ -43,8 +43,16 @@ p {
 تظهر النتائج مباشرة في متصفح الويب مثل Chrome أو Edge.
 
 ```html
-<h1>Welcome</h1>
-<p>This is a test.</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>This is a test.</p>
+  </body>
+</html>
 ```
 
 ## أفضل الممارسات البرمجية
