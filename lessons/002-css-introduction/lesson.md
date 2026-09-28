@@ -23,8 +23,7 @@
 تتكون قواعد CSS من Selector وخصائص وقيم داخل أقواس.
 
 ```css
-body
-{
+body {
   background-color: lightblue;
 }
 ```
@@ -34,8 +33,7 @@ body
 يمكن تنسيق العناوين h1 بسهولة عبر تحديد اللون والمحاذاة.
 
 ```css
-h1
-{
+h1 {
   color: white;
   text-align: center;
 }
@@ -46,8 +44,7 @@ h1
 نستخدم font-family و font-size لتنسيق الفقرات النصية.
 
 ```css
-p
-{
+p {
   font-family: verdana;
   font-size: 20px;
 }
