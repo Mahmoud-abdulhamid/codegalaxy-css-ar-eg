@@ -1,0 +1,3 @@
+Container Height: Auto (Corrected)
+Floated Elements: Enclosed
+Layout: Stable and Clean
