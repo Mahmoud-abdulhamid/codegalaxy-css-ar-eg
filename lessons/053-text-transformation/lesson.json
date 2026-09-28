@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "53",
+  "title": "CSS Text Transformation",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام خاصية text-transform للتحكم في حالة الأحرف",
+    "التعرف على قيم uppercase و lowercase و capitalize",
+    "تطبيق التنسيقات دون تغيير المحتوى الأصلي في HTML"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_text_transformation.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Text Transformation",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي حَالَةِ أَحْرُفِ النُّصُوصِ دَاخِلَ صَفْحَةِ الْوِبّ بِاسْتِخْدَامِ خَاصِيَّةِ text-transform الْقَوِيَّه وَالْمُفِيدَه لِتَنْسِيقِ الْوَاجِهَاتِ.",
+        "caption_text": "مرحبا بكم في درس CSS Text Transformation للتحكم في حالة أحرف النصوص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم خاصية text-transform للتحكم في حالة الأحرف",
+          "تغيير مظهر النص دون التأثير على المحتوى الأصلي",
+          "أداة أساسية في تنسيق نصوص صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_transformation.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفاهيم وقيم text-transform",
+      "narration": {
+        "spoken_text": "تُتِيحُ لَنَا هَذِهِ الْخَاصِيَّه تَحْوِيلَ النُّصُوصِ إِلَى حُرُوفٍ كَبِيرَه أَوْ صَغِيرَه، أَوْ حَتَّى جَعْلِ الْحَرْفِ الْأَوَّلِ مِنْ كُلِّ كَلِمَه كَبِيراً، وَكُلُّ ذَلِكَ يَتِمُّ بِشَكْلٍ مَرْئِيٍّ فَقَطْ دُونَ تَغْيِيرِ بَيَانَات HTML الْأَصْلِيَّه.",
+        "caption_text": "تتيح خاصية text-transform تحويل النصوص إلى أحرف كبيرة أو صغيرة أو تنسيق الكلمات."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "uppercase",
+            "تحويل كل الأحرف إلى كبيرة"
+          ],
+          [
+            "lowercase",
+            "تحويل كل الأحرف إلى صغيرة"
+          ],
+          [
+            "capitalize",
+            "تكبير الحرف الأول من كل كلمة"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_transformation.asp"
+      ]
+    },
+    {
+      "id": "code_part1",
+      "title": "تطبيق الكود - الجزء الأول",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِتَطْبِيقِ هَذِهِ الْقِيَمِ. فِي هَذَا الْجُزْءِ، نَقُومُ بِتَعْرِيف Selector لِلْعُنْصُر p مَعَ الْكَلَاس uppercase لِتَحْوِيلِ النَّصِّ إِلَى حُرُوفٍ كَبِيرَه بِاسْتِخْدَام text-transform: uppercase.",
+        "caption_text": "تطبيق قيمة uppercase لتحويل النص إلى أحرف كبيرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.uppercase {\n  text-transform: uppercase;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_transformation.asp"
+      ]
+    },
+    {
+      "id": "code_part2",
+      "title": "تطبيق الكود - الجزء الثاني",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ لِتَطْبِيقِ الْقِيمَتَيْنِ الْأُخْرَيَيْنِ. نَسْتَخْدِم lowercase لِتَحْوِيلِ النَّصِّ إِلَى حُرُوفٍ صَغِيرَه، وَنَسْتَخْدِم capitalize لِتَكْبِيرِ الْحَرْفِ الْأَوَّلِ مِنْ كُلِّ كَلِمَه، وَهَذَا يُعْطِي مَظْهَراً احْتِرَافِيّاً لِلنُّصُوصِ.",
+        "caption_text": "تطبيق قيمتي lowercase و capitalize لتنسيق النصوص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.lowercase {\n  text-transform: lowercase;\n}\n\np.capitalize {\n  text-transform: capitalize;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_transformation.asp"
+      ]
+    },
+    {
+      "id": "output_explanation",
+      "title": "شرح المخرجات المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ عَلَى عَنَاصِر p فِي صَفْحَةِ الْوِبّ، سَيَقُومُ الْمُتَصَفِّحْ بِعَرْضِ النَّصِّ بِالْحَالَه الَّتِي حَدَّدْنَاهَا، مَعَ الْحِفَاظِ عَلَى النَّصِّ الْأَصْلِيِّ كَمَا هُوَ فِي مِلَفِّ HTML.",
+        "caption_text": "المتصفح يعرض النصوص بالتنسيق المطلوب مع الحفاظ على النص الأصلي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "uppercase: يحول النص إلى أحرف كبيرة",
+          "lowercase: يحول النص إلى أحرف صغيرة",
+          "capitalize: يجعل الحرف الأول من كل كلمة كبيرا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_transformation.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنْ أَفْضَلِ الْمُمَارَسَاتِ أَنْ نَسْتَخْدِم text-transform لِأَغْرَاضِ التَّنْسِيقِ فَقَطْ، وَلَيْسَ لِتَغْيِيرِ مَعْنَى النَّصِّ. هَذَا يُسَاعِدُ فِي الْحِفَاظِ عَلَى نَظَافَةِ الْكُودِ وَسُهُولَةِ صِيَانَتِهِ فِي مَشَارِيعِ الْوِبّ.",
+        "caption_text": "استخدم text-transform للتنسيق البصري فقط للحفاظ على جودة الكود."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام الخاصية للتنسيق البصري فقط",
+          "عدم الاعتماد عليها لتغيير محتوى البيانات",
+          "تحسين تجربة المستخدم عبر تنسيق النصوص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_transformation.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُسَيْطِرُ عَلَى مَظْهَرِ النُّصُوصِ بِسُهُولَه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدِيُو لِتَرَوْا النَّتَائِجَ مُبَاشَرَه.",
+        "caption_text": "تعلمنا اليوم التحكم في مظهر النصوص، جربوا الأكواد بأنفسكم عبر الرابط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح خاصية text-transform",
+          "تم استعراض قيم uppercase و lowercase و capitalize",
+          "تم التأكيد على أهمية الفصل بين التنسيق والمحتوى"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_transformation.asp"
+      ]
+    }
+  ]
+}
