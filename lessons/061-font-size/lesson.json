@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "61",
+  "title": "التحكم في حجم الخط باستخدام CSS",
+  "course": "CSS",
+  "objectives": [
+    "فهم خاصية font-size في CSS",
+    "التعرف على الوحدات المطلقة والنسبية",
+    "استخدام px و em و rem و vw",
+    "تطبيق أفضل الممارسات في تصميم الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_font_size.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول font-size",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي حَجْمِ النُّصُوصِ بِاسْتِخْدَامِ خَاصِيَّةِ font-size، وَهِيَ مَهَارَه أَسَاسِيَّه لِتَصْمِيمِ صَفَحَاتِ الْوِبّ بِشَكْلٍ احْتِرَافِيٍّ وَمُنَسَّقٍ.",
+        "caption_text": "تعد خاصية font-size من أهم الخصائص للتحكم في حجم النصوص داخل صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في حجم الخط ضروري لتجربة المستخدم",
+          "يجب استخدام HTML tags المناسبة للعناوين والفقرات",
+          "تتوفر وحدات قياس مطلقة ونسبية للخطوط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_size.asp"
+      ]
+    },
+    {
+      "id": "pixels",
+      "title": "استخدام وحدات px",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِوَحْدَةِ px، وَهِيَ وَحْدَه مُطْلَقَه تَمْنَحُكَ تَحَكُّماً كَامِلاً فِي حَجْمِ النَّصِّ. لَكِنْ يَجِبُ الْحَذَرُ، لِأَنَّهَا قَدْ لَا تَتَكَيَّفُ بِسُهُولَه مَعَ شَاشَاتِ الْأَجْهِزَه الْمُخْتَلِفَه، وَلَا يَسْتَطِيعُ الْمُسْتَخْدِمُ تَغْيِيرَ حَجْمِهَا مِنْ إِعْدَادَاتِ الْمُتَصَفِّحْ.",
+        "caption_text": "تمنح وحدة px تحكما دقيقا ولكنها تفتقر للمرونة في التكيف مع الشاشات المختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 { font-size: 40px; }\nh2 { font-size: 30px; }\np { font-size: 16px; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_size.asp"
+      ]
+    },
+    {
+      "id": "em_unit",
+      "title": "استخدام وحدة em",
+      "narration": {
+        "spoken_text": "تُعَدُّ وَحْدَةِ em وَحْدَه نِسْبِيَّه تَعْتَمِدُ عَلَى حَجْمِ خَطِّ الْعُنْصُرِ الْأَبِ. إِذَا كَانَ الْأَبُ بِحَجْمِ 16px، فَإِنَّ 2.5em تُعَادِلُ 40px. هَذِهِ الْوَحْدَه أَكْثَرُ مُرُونَه لِأَنَّهَا تَسْمَحُ بِتَغْيِيرِ حَجْمِ النَّصِّ عَبْرَ إِعْدَادَاتِ الْمُتَصَفِّحْ.",
+        "caption_text": "وحدة em تعتمد على حجم خط العنصر الأب، مما يجعلها خيارا مرنا للمستخدمين."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body { font-size: 16px; }\nh1 { font-size: 2.5em; }\np { font-size: 1em; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_size.asp"
+      ]
+    },
+    {
+      "id": "rem_unit",
+      "title": "استخدام وحدة rem",
+      "narration": {
+        "spoken_text": "أَمَّا وَحْدَةِ rem فَهِيَ تَعْتَمِدُ عَلَى حَجْمِ خَطِّ الْعُنْصُرِ الْجِذْر html. هَذَا يَجْعَلُهَا مُفِيدَه جِدّاً لِتَصْمِيمِ صَفَحَاتِ وِبٍّ مُتَجَاوِبَه، حَيْثُ يُمْكِنُكَ تَغْيِيرُ حَجْمِ الْخَطِّ لِكَامِلِ الصَّفْحَه بِتَغْيِيرِ قِيمَه وَاحِدَه فِي الْعُنْصُر html.",
+        "caption_text": "تعتبر وحدة rem مثالية للتصاميم المتجاوبة لأنها ترتبط دائما بRoot Element html."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "html { font-size: 16px; }\nh1 { font-size: 2.5rem; }\np { font-size: 1rem; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_size.asp"
+      ]
+    },
+    {
+      "id": "vw_unit",
+      "title": "وحدة vw للمساحات",
+      "narration": {
+        "spoken_text": "أَخِيراً، لَدَيْنَا وَحْدَةِ vw وَهِيَ تَعْنِي viewport width. تُمَثِّلُ هَذِهِ الْوَحْدَه نِسْبَه مِئَوِيَّه مِنْ عَرْضِ نَافِذَةِ الْمُتَصَفِّحْ. عِنْدَ اسْتِخْدَامِهَا، سَيَتَغَيَّرُ حَجْمُ النَّصِّ تِلْقَائِيّاً كُلَّمَا قَامَ الْمُسْتَخْدِمُ بِتَغْيِيرِ حَجْمِ نَافِذَةِ الْمُتَصَفِّحْ.",
+        "caption_text": "وحدة vw تجعل حجم النص يتناسب ديناميكيا مع عرض نافذة المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 { font-size: 10vw; }\np { font-size: 5vw; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_size.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَذَكَّرُوا أَنَّ اخْتِيَارَ وَحْدَةِ الْقِيَاسِ الْمُنَاسِبَه يَعْتَمِدُ عَلَى مُتَطَلَّبَاتِ مَشْرُوعِكُمْ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِنَفْسِكُمْ لِتَرَوْا الْفَرْقَ الْوَاضِحَ فِي تَجَاوُبِ النُّصُوصِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "اختر وحدة القياس المناسبة لمشروعك لضمان أفضل تجربة للمستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "px للتحكم المطلق",
+          "em للنسبية مع الأب",
+          "rem للنسبية مع الجذر",
+          "vw للتجاوب مع عرض الشاشة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_size.asp"
+      ]
+    }
+  ]
+}
