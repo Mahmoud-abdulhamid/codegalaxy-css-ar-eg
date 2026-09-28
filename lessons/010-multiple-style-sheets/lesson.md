@@ -19,7 +19,6 @@
 h1 {
   color: navy;
 }
-
 h1 {
   color: orange;
 }
@@ -30,13 +29,22 @@ h1 {
 إذا تم تعريف النمط الداخلي بعد رابط الملف الخارجي، فسيتم تطبيق النمط الداخلي.
 
 ```html
-<head>
-<link rel="stylesheet" 
-      href="mystyle.css">
-<style>
-h1 { color: orange; }
-</style>
-</head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+      h1 {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>Styled Web Page</p>
+  </body>
+</html>
 ```
 
 ## عكس ترتيب الأنماط
@@ -44,13 +52,22 @@ h1 { color: orange; }
 عند وضع النمط الداخلي قبل الملف الخارجي، سيتم تطبيق نمط الملف الخارجي كونه الأخير.
 
 ```html
-<head>
-<style>
-h1 { color: orange; }
-</style>
-<link rel="stylesheet" 
-      href="mystyle.css">
-</head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      h1 {
+        color: orange;
+      }
+    </style>
+    <link rel="stylesheet" href="mystyle.css">
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>Styled Web Page</p>
+  </body>
+</html>
 ```
 
 ## قواعد Cascading Order
