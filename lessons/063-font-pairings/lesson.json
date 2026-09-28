@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "63",
+  "title": "احتراف تنسيق الخطوط في CSS",
+  "course": "CSS",
+  "objectives": [
+    "فهم قواعد اختيار الخطوط المتناغمة",
+    "التعرف على مفهوم Font Superfamilies",
+    "تطبيق مبدأ التباين في التصميم",
+    "استخدام Google Fonts في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_font_pairings.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تنسيق الخطوط",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِ الْيَوْمِ حَوْل Font Pairings. إِنَّ اخْتِيَارَ الْخُطُوطِ الْمُتَنَاغِمَه أَمْرٌ جَوْهَرِيٌّ لِتَصْمِيمِ صَفْحَه وِبّ احْتِرَافِيَّه. سَنَتَعَلَّمُ الْقَوَاعِدَ الْأَسَاسِيَّه لِتَحْقِيقِ التَّوَازُنِ وَالْجَمَالِ فِي نُصُوصِ مَوْقِعِكُمْ.",
+        "caption_text": "تعد Font Pairings عنصرا أساسيا في تصميم صفحات الويب الاحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الخطوط المتناغمة تحسن تجربة المستخدم",
+          "التصميم الجيد يعتمد على التوازن البصري",
+          "قواعد أساسية لاختيار الخطوط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_pairings.asp"
+      ]
+    },
+    {
+      "id": "rules",
+      "title": "قواعد اختيار الخطوط",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ تَنَاسُقٍ رَائِعٍ، يَجِبُ أَنْ تَتَكَامَلَ الْخُطُوطُ دُونَ أَنْ تَكُونَ مُتَشَابِهَه جِدّاً أَوْ مُخْتَلِفَه لِلْغَايَه. اسْتِخْدَام Font Superfamilies يُعَدُّ خِيَاراً آمِناً، حَيْثُ تَكُونُ الْخُطُوطُ مُصَمَّمَه لِتَعْمَلَ مَعاً بِشَكْلٍ مُتَنَاغِمٍ.",
+        "caption_text": "يجب أن تتكامل الخطوط وتستخدم Font Superfamilies لضمان التناغم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التكامل بين الخطوط",
+          "استخدام Font Superfamilies",
+          "تجنب التشابه المفرط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_pairings.asp"
+      ]
+    },
+    {
+      "id": "contrast",
+      "title": "مبدأ التباين والتراتبية",
+      "narration": {
+        "spoken_text": "التَّبَايُن هُوَ سِرُّ الْجَمَالِ، فَجَمْع Serif مَع Sans Serif يُعَدُّ خِيَاراً كَلَاسِيكِيّاً. أَيْضاً، يَجِبُ أَنْ نَخْتَارَ خَطّاً وَاحِداً لِيَكُونَ هُوَ الْقَائِدَ، وَنُحَدِّدَ التَّرَاتُبِيَّه بِتَغْيِيرِ الْحَجْمِ وَالْوَزْنِ وَاللَّوْنِ.",
+        "caption_text": "التباين بين Serif و Sans Serif يخلق توازنا بصريا قويا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التباين هو المفتاح",
+          "الجمع بين Serif و Sans Serif",
+          "تحديد خط رئيسي للتحكم في التراتبية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_pairings.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي بالكود",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْيِين Verdana لِلنَّصِّ الْعَامِّ فِي body، بَيْنَمَا نَسْتَخْدِم Georgia لِعُنْوَان h1. هَذَا يُحَقِّقُ تَبَايُناً وَاضِحاً وَيَجْعَلُ الْعُنْوَانَ هُوَ الْقَائِدَ فِي الصَّفْحَه.",
+        "caption_text": "تطبيق عملي باستخدام Georgia للعناوين و Verdana للنصوص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-color: black;\n  font-family: Verdana, sans-serif;\n  font-size: 16px;\n  color: gray;\n}\nh1 {\n  font-family: Georgia, serif;\n  font-size: 60px;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "Beautiful Norway (Header in Georgia)\nNorway has a total area... (Text in Verdana)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_pairings.asp"
+      ]
+    },
+    {
+      "id": "google_fonts",
+      "title": "استخدام Google Fonts",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْتُمْ خِيَارَاتٍ أَكْثَرَ، يُمْكِنُكُمُ اسْتِخْدَام Google Fonts. هُنَاكَ أَكْثَرُ مِنْ أَلْفِ خَطٍّ مَجَّانِيٍّ. مِثَالٌ شَائِعٌ هُوَ اسْتِخْدَام Merriweather لِلْعَنَاوِينِ مَع Open Sans لِلنُّصُوصِ، وَهِيَ تَشْكِيلَه جَذَّابَه لِلْقَارِئِ.",
+        "caption_text": "توفر Google Fonts أكثر من 1000 خط مجاني لتنسيق المواقع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Merriweather للعناوين",
+          "Open Sans للنصوص",
+          "أكثر من 1000 خط متاح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_pairings.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "تَذَكَّرُوا دَائِماً أَنْ تُحَافِظُوا عَلَى بَسَاطَةِ التَّصْمِيمِ. لَا تَسْتَخْدِمُوا أَكْثَرَ مِنْ خَطَّيْنِ أَوْ ثَلَاثَه فِي الصَّفْحَه الْوَاحِدَه لِتَجَنُّبِ تَشْتِيتِ انْتِبَاهِ الزَّائِرِ، وَتَأَكَّدُوا مِنْ قَابِلِيَّةِ قِرَاءَةِ النُّصُوصِ عَلَى جَمِيعِ الشَّاشَاتِ.",
+        "caption_text": "حافظ على بساطة التصميم باستخدام عدد محدود من الخطوط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم خطين إلى ثلاثة كحد أقصى",
+          "تأكد من وضوح النصوص",
+          "اختبر الخطوط على مختلف الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_pairings.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا أَهَمِّيَّةِ التَّنَاسُقِ وَالْتَّبَايُنِ فِي اخْتِيَارِ الْخُطُوطِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَمْثِلَه بِنَفْسِكُمْ عَبْرَ رَابِطِ الْمَصْدَرِ الْمَوْجُودِ فِي الْوَصْفِ، وَلَا تَتَرَدَّدُوا فِي اسْتِكْشَافِ مَكْتَبَةِ Google Fonts.",
+        "caption_text": "طبق ما تعلمته اليوم وجرب تنسيقات خطوط جديدة في مشروعك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجع قواعد التناغم والتباين",
+          "جرب أمثلة Google Fonts",
+          "قم بزيارة الرابط في الوصف للتطبيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_pairings.asp"
+      ]
+    }
+  ]
+}
