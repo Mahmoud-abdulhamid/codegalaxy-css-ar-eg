@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "23",
+  "title": "CSS Background Shorthand",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم الـ Shorthand property في CSS",
+    "تعلم كيفية دمج خصائص الـ background في سطر واحد",
+    "التعرف على الترتيب الصحيح للقيم في خاصية background",
+    "إدراك كيفية التعامل مع القيم المفقودة في الـ shorthand"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_background_shorthand.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Shorthand",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ اخْتِصَارِ كُود background بِاسْتِخْدَامِ مَا يُعْرَفُ بَةِ Shorthand property لِتَجْعَلَ مَلَفَّات CSS خَاصَّتَكَ أَكْثَرَ نَظَافَه وَسُرْعَه فِي الْكِتَابَه.",
+        "caption_text": "مرحبا بكم في درس CSS Shorthand لخصائص الخلفية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم خاصية Shorthand لتقليل حجم الكود",
+          "تسمح بدمج عدة خصائص في سطر واحد",
+          "تزيد من كفاءة وقابلية قراءة ملفات CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_shorthand.asp"
+      ]
+    },
+    {
+      "id": "longhand_code",
+      "title": "الطريقة التقليدية لكتابة الخصائص",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ أَوَّلاً إِلَى الطَّرِيقَه التَّقْلِيدِيَّه. نَقُومُ بِكِتَابَةِ كُلِّ خَاصِيَّه عَلَى حِدَه، مِثْل background-color و background-image و background-repeat و background-position. هَذَا الْأُسْلُوبُ يَسْتَهْلِكُ مَسَاحَه كَبِيرَه دَاخِلَ مَلَفِّ التَّنْسِيقِ.",
+        "caption_text": "الطريقة التقليدية لكتابة خصائص الخلفية بشكل منفصل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-color: #ffffff;\n  background-image: url(\"img_tree.png\");\n  background-repeat: no-repeat;\n  background-position: right top;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_shorthand.asp"
+      ]
+    },
+    {
+      "id": "shorthand_concept",
+      "title": "مفهوم الـ Shorthand property",
+      "narration": {
+        "spoken_text": "بَدَلاً مِنْ كِتَابَةِ كُلِّ هَذِهِ الْأَسْطُرِ، نَسْتَطِيعُ اسْتِخْدَامَ خَاصِّيَّةِ background الْوَحِيدَه. هَذِهِ الْخَاصِيَّه تَسْمَحُ لَنَا بِتَجْمِيعِ كُلِّ الْقِيَمِ فِي سَطْرٍ وَاحِدٍ فَقَطْ، مِمَّا يُوَفِّرُ الْوَقْتَ وَيُقَلِّلُ مِنْ تَعْقِيدِ الْكُودِ.",
+        "caption_text": "استخدام خاصية background كـ Shorthand لدمج الخصائص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية background هي shorthand لجميع خصائص الخلفية",
+          "تكتب القيم مفصولة بمسافات",
+          "الترتيب مهم لضمان عمل المتصفح بشكل صحيح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_shorthand.asp"
+      ]
+    },
+    {
+      "id": "shorthand_example",
+      "title": "تطبيق الـ Shorthand",
+      "narration": {
+        "spoken_text": "لِنُحَوِّلِ الْكُودَ السَّابِقَ إِلَى هَذَا الشَّكْلِ الْمُخْتَصَرِ. نَكْتُب background ثُمَّ نَضَعُ الْقِيَمَ بِالتَّرْتِيبِ: اللَّوْنُ، الصُّورَه، التَّكْرَارُ، وَالْمَوْقِعُ. هَذَا الْكُودُ يُؤَدِّي نَفْسَ وَظِيفَةِ الْأَسْطُرِ الْأَرْبَعَه السَّابِقَه تَمَاماً.",
+        "caption_text": "تحويل الخصائص المتعددة إلى سطر واحد باستخدام Shorthand."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background: #ffffff \n  url(\"img_tree.png\") \n  no-repeat \n  right top;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_shorthand.asp"
+      ]
+    },
+    {
+      "id": "missing_values",
+      "title": "التعامل مع القيم المفقودة",
+      "narration": {
+        "spoken_text": "مَاذَا لَوْ لَمْ نَكْتُبْ بَعْضَ الْقِيَمِ؟ لَا تَقْلَقْ، إِذَا تَمَّ حَذْفُ بَعْضِ الْقِيَمِ، سَيَقُومُ الْمُتَصَفِّرُ بِتَعْيِينِهَا إِلَى قِيَمِهَا الِافْتِرَاضِيَّه تِلْقَائِيّاً. هَذَا يَمْنَحُكَ مَرُونَه كَبِيرَه فِي التَّحَكُّمِ بِخَصَائِصِ الْعُنْصُرِ.",
+        "caption_text": "القيم المفقودة تأخذ قيمها الافتراضية تلقائيا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "القيم المفقودة لا تسبب خطأ في الكود",
+          "المتصفح يستخدم القيم الافتراضية للخصائص غير المحددة",
+          "يجب الحذر عند الاعتماد على القيم الافتراضية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_shorthand.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا أَنَّ اسْتِخْدَام background كَةِ Shorthand يُعَدُّ مُمَارَسَه جَيِّدَه لِتَنْظِيمِ الْكُودِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا الْأُسْلُوبِ فِي مَشَارِيعِكُمُ الْقَادِمَه لِتَحْسِينِ أَدَاءِ مَلَفَّات CSS. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: استخدم Shorthand لجعل كود CSS أكثر احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Shorthand يقلل من تكرار الكود",
+          "يجب مراجعة الترتيب الصحيح للقيم",
+          "جرب كتابة أكوادك الخاصة باستخدام هذا الأسلوب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_shorthand.asp"
+      ]
+    }
+  ]
+}
