@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "39",
+  "title": "التحكم في أبعاد العناصر باستخدام CSS",
+  "course": "CSS",
+  "objectives": [
+    "فهم خصائص min-width و max-width",
+    "التعرف على خصائص min-height و max-height",
+    "تعلم كيفية تحسين تجربة المستخدم في النوافذ الصغيرة",
+    "تجنب مشاكل التمرير الأفقي باستخدام max-width"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_height_width_min_max.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول أبعاد العناصر",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي أَبْعَادِ الْعَنَاصِرِ بِدِقَّه، وَذَلِكَ بِاسْتِخْدَامِ خَصَائِص min-width و max-width، بِالْإِضَافَه إِلَى min-height و max-height لِضَمَانِ تَجَاوُبِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس التحكم في أبعاد العناصر باستخدام خصائص min-width و max-width و min-height و max-height."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في الحد الأدنى والأقصى للعرض",
+          "التحكم في الحد الأدنى والأقصى للارتفاع",
+          "تحسين تجربة المستخدم في المتصفحات",
+          "تجنب مشاكل التمرير الأفقي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width_min_max.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم min و max",
+      "narration": {
+        "spoken_text": "تُسَاعِدُنَا خَصَائِص max-width فِي تَحْدِيدِ أَقْصَى عَرْضٍ لِلْعُنْصُرِ، مِمَّا يَمْنَعُهُ مِنَ التَّمَدُّدِ أَكْثَرَ مِنَ الْقِيمَه الْمُحَدَّدَه. هَذَا يُعَالِجُ مُشْكِلَةِ ظُهُورِ شَرِيطِ التَّمْرِيرِ الْأُفُقِيِّ عِنْدَمَا تَكُونُ نَافِذَةِ الْمُتَصَفِّحْ أَصْغَرَ مِنْ عَرْضِ الْعُنْصُرِ.",
+        "caption_text": "تمنع خاصية max-width العنصر من تجاوز عرض معين، مما يحسن من عرض الصفحة في النوافذ الصغيرة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "max-width يحدد الحد الأقصى للعرض",
+          "min-width يحدد الحد الأدنى للعرض",
+          "تجنب ظهور شريط التمرير الأفقي",
+          "تحسين التعامل مع النوافذ الصغيرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width_min_max.asp"
+      ]
+    },
+    {
+      "id": "code1",
+      "title": "مثال على max-width",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ هَذَا الْمِثَالَ. عِنْدَ اسْتِخْدَام max-width بِقِيمَةِ 500px، سَيَتَوَقَّفُ الْعُنْصُرُ عَنِ التَّمَدُّدِ عِنْدَ هَذَا الْحَدِّ. أَمَّا إِذَا اسْتَخْدَمْنَا width فَقَطْ، فَسَيَبْقَى الْعُنْصُرُ ثَابِتاً وَقَدْ يُسَبِّبُ مَشَاكِلَ فِي الشَّاشَاتِ الصَّغِيرَه.",
+        "caption_text": "مقارنة بين استخدام max-width وتحديد width ثابت للعنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".div1 {\n  max-width: 500px;\n  background-color: powderblue;\n}\n.div2 {\n  width: 500px;\n  background-color: powderblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width_min_max.asp"
+      ]
+    },
+    {
+      "id": "code2",
+      "title": "الدمج بين width و max-width",
+      "narration": {
+        "spoken_text": "يُمْكِنُ دَمْجُ الْخَصَائِصِ مَعاً. فِي هَذَا الْمِثَالِ، نَضَع width بِقِيمَةِ 100 لِيَأْخُذَ الْعُنْصُرُ كَامِلَ الْعَرْضِ، مَعَ تَحْدِيد max-width بِقِيمَةِ 900px لِضَمَانِ عَدَمِ تَجَاوُزِ هَذَا الْحَدِّ فِي الشَّاشَاتِ الْكَبِيرَه.",
+        "caption_text": "استخدام width بنسبة 100 مع max-width لضمان مرونة العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".div1 {\n  width: 100%;\n  max-width: 900px;\n  background-color: powderblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width_min_max.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات تقنية",
+      "narration": {
+        "spoken_text": "مُلَاحَظَه هَامَّه: إِذَا اسْتَخْدَمْت width و max-width فِي نَفْسِ الْعُنْصُرِ، وَكَانَتْ قِيمَةِ width أَكْبَرَ مِنْ max-width، فَسَيَتَجَاهَلُ الْمُتَصَفِّحْ قِيمَةِ width وَيَعْتَمِدُ قِيمَةِ max-width. هَذَا يُعْتَبَرُ سُلُوكاً ذَكِيّاً لِضَمَانِ تَجَاوُبِ التَّصْمِيمِ.",
+        "caption_text": "ملاحظة: إذا تعارضت قيمتا width و max-width، فإن الأولوية دائما لـ max-width."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الأولوية لـ max-width عند التعارض",
+          "استخدام القيم المرنة مثل النسبة المئوية",
+          "اختبار التصميم في أحجام شاشات مختلفة",
+          "استخدام min-height للتحكم في الارتفاع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width_min_max.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا عَلَى كَيْفِيَّةِ التَّحَكُّمِ فِي أَبْعَادِ الْعَنَاصِرِ بِاحْتِرَافِيَّه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْخَصَائِصِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا التَّأْثِيرَ الْمُبَاشِرَ عَلَى تَصْمِيمِكُمْ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم. جربوا الأكواد بأنفسكم عبر الرابط في الوصف لتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا خصائص min-height و max-height",
+          "طبقوا الأمثلة في محرر الأكواد",
+          "تابعوا الدورة لمزيد من الدروس المتقدمة",
+          "الرابط متاح في وصف الفيديو"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width_min_max.asp"
+      ]
+    }
+  ]
+}
