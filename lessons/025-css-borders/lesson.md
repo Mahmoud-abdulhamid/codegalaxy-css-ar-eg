@@ -23,10 +23,18 @@
 تطبيق أنماط مختلفة مثل dotted و dashed و solid و double على عناصر الفقرات.
 
 ```css
-p.dotted {border-style: dotted;}
-p.dashed {border-style: dashed;}
-p.solid {border-style: solid;}
-p.double {border-style: double;}
+p.dotted {
+  border-style: dotted;
+}
+p.dashed {
+  border-style: dashed;
+}
+p.solid {
+  border-style: solid;
+}
+p.double {
+  border-style: double;
+}
 ```
 
 ## أنماط حدود إضافية
@@ -34,10 +42,18 @@ p.double {border-style: double;}
 استخدام أنماط groove و ridge و inset و outset لإضافة تأثيرات ثلاثية الأبعاد.
 
 ```css
-p.groove {border-style: groove;}
-p.ridge {border-style: ridge;}
-p.inset {border-style: inset;}
-p.outset {border-style: outset;}
+p.groove {
+  border-style: groove;
+}
+p.ridge {
+  border-style: ridge;
+}
+p.inset {
+  border-style: inset;
+}
+p.outset {
+  border-style: outset;
+}
 ```
 
 ## إخفاء الحدود والدمج
@@ -45,9 +61,15 @@ p.outset {border-style: outset;}
 استخدام none و hidden لإخفاء الحدود، ودمج أنماط مختلفة في خاصية واحدة.
 
 ```css
-p.none {border-style: none;}
-p.hidden {border-style: hidden;}
-p.mix {border-style: dotted dashed solid double;}
+p.none {
+  border-style: none;
+}
+p.hidden {
+  border-style: hidden;
+}
+p.mix {
+  border-style: dotted dashed solid double;
+}
 ```
 
 ## معاينة النتائج
