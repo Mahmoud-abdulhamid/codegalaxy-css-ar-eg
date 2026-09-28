@@ -28,9 +28,7 @@
 
 ```css
 p {
-  font-family: "Times New Roman", 
-               Times, 
-               serif;
+  font-family: "Times New Roman", Times, serif;
 }
 ```
 
