@@ -15,17 +15,22 @@
 يتم ربط الخطوط عبر Tag link في head، ثم استخدام font-family في CSS مع تحديد خط بديل.
 
 ```html
-<head>
-<link rel="stylesheet" 
-  href="https://fonts.googleapis.com/
-  css?family=Sofia">
-<style>
-body {
-  font-family: "Sofia", 
-  sans-serif;
-}
-</style>
-</head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+      body {
+        font-family: "Sofia", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>Styled Web Page</p>
+  </body>
+</html>
 ```
 
 ## استخدام خطوط متعددة
@@ -33,15 +38,25 @@ body {
 يمكن دمج عدة خطوط باستخدام رمز ، مع مراعاة تأثير ذلك على سرعة تحميل الصفحة.
 
 ```html
-<link rel="stylesheet" 
-  href="https://fonts.googleapis.com/
-  css?family=Audiowide|Sofia">
-<style>
-h1.a {font-family: "Audiowide", 
-  sans-serif;}
-h1.b {font-family: "Sofia", 
-  sans-serif;}
-</style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia">
+    <style>
+      h1.a {
+        font-family: "Audiowide", sans-serif;
+      }
+      h1.b {
+        font-family: "Sofia", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="a">Sample (a)</h1>
+    <h1 class="b">Sample (b)</h1>
+  </body>
+</html>
 ```
 
 ## تنسيق الخطوط بـ CSS
@@ -50,10 +65,9 @@ h1.b {font-family: "Sofia",
 
 ```css
 body {
-  font-family: "Sofia", 
-  sans-serif;
+  font-family: "Sofia", sans-serif;
   font-size: 30px;
-  text-shadow: 3px 3px 3px 
+  text-shadow: 3px 3px 3px
   #ababab;
 }
 ```
@@ -63,12 +77,16 @@ body {
 لتفعيل تأثيرات الخط، أضف اسم التأثير للرابط واستخدم class يبدأ بـ font-effect-.
 
 ```html
-<link rel="stylesheet" 
-  href="https://fonts.googleapis.com/
-  css?family=Sofia&effect=fire">
-<h1 class="font-effect-fire">
-  Sofia on Fire
-</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+  </head>
+  <body>
+    <h1 class="font-effect-fire">Sofia on Fire</h1>
+  </body>
+</html>
 ```
 
 ## تأثيرات متعددة
@@ -76,12 +94,16 @@ body {
 يمكن دمج تأثيرات متعددة للخطوط باستخدام رمز في رابط Google API.
 
 ```html
-<link rel="stylesheet" 
-  href="https://fonts.googleapis.com/
-  css?family=Sofia&effect=neon|outline">
-<h1 class="font-effect-neon">
-  Neon Effect
-</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline">
+  </head>
+  <body>
+    <h1 class="font-effect-neon">Neon Effect</h1>
+  </body>
+</html>
 ```
 
 ## خاتمة الدرس
