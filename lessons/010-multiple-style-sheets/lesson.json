@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "10",
+  "title": "Multiple Style Sheets & Cascading Order",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية التعامل مع ملفات CSS المتعددة",
+    "إدراك مفهوم Cascading Order في CSS",
+    "التعرف على أولوية تطبيق الأنماط",
+    "تطبيق Inline styles وتأثيرها على العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_howto_multiple_cascade.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Multiple Style Sheets",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفَ تَتَفَاعَلُ مَلَفَات Style Sheets الْمُتَعَدِّدَه مَعَ بَعْضِهَا، وَمَا هُوَ مَفْهُوم Cascading Order الَّذِي يُحَدِّدُ أَيَّ نَمَطٍ سَيَظْهَرُ عَلَى عَنَاصِرِ الْوِبّ.",
+        "caption_text": "سنتعرف اليوم على كيفية التعامل مع ملفات CSS المتعددة ومفهوم Cascading Order في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعدد ملفات CSS في الصفحة الواحدة",
+          "تأثير ترتيب الملفات على التصميم",
+          "مفهوم Cascading Order في CSS",
+          "أولوية تطبيق الأنماط على العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_multiple_cascade.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "قاعدة الأولوية في CSS",
+      "narration": {
+        "spoken_text": "إِذَا تَمَّ تَعْرِيفُ نَفْسِ الْخَصَائِصِ لِنَفْس Selector فِي مَلَفَاتٍ مُخْتَلِفَه، فَإِنَّ الْمُتَصَفِّحْ يَعْتَمِدُ الْقِيمَه الْأَخِيرَه الَّتِي قَرَأَهَا. هَذَا هُوَ جَوْهَرُ مَفْهُوم Cascading فِي لُغَةِ CSS، حَيْثُ تَتَدَافَعُ الْقِيَمُ لِتَشْكِيلِ نَمَطٍ نِهَائِيٍّ.",
+        "caption_text": "عند تعريف خصائص لنفس العنصر في ملفات مختلفة، يتم اعتماد القيمة الموجودة في الملف الذي تمت قراءته أخيرا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  color: navy;\n}\n\nh1 {\n  color: orange;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_multiple_cascade.asp"
+      ]
+    },
+    {
+      "id": "example_after",
+      "title": "تأثير الترتيب في head",
+      "narration": {
+        "spoken_text": "لَاحِظْ هَذَا الْمِثَالَ، إِذَا تَمَّ تَعْرِيف Internal Style بَعْدَ رَابِط External Style Sheet، فَإِنَّ الْمُتَصَفِّحْ سَيُطَبِّقُ لَوْن orange عَلَى h1، لِأَنَّهُ النَّمَطُ الْأَخِيرُ فِي التَّرْتِيبِ، وَهَذَا يُؤَكِّدُ أَهَمِّيَّةِ مَكَانِ كِتَابَةِ الْكُودِ.",
+        "caption_text": "إذا تم تعريف النمط الداخلي بعد رابط الملف الخارجي، فسيتم تطبيق النمط الداخلي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<head>\n<link rel=\"stylesheet\" \n      href=\"mystyle.css\">\n<style>\nh1 { color: orange; }\n</style>\n</head>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_multiple_cascade.asp"
+      ]
+    },
+    {
+      "id": "example_before",
+      "title": "عكس ترتيب الأنماط",
+      "narration": {
+        "spoken_text": "أَمَّا إِذَا قُمْنَا بِتَعْرِيف Internal Style قَبْلَ رَابِط External Style Sheet، فَسَيَكُونُ لَوْن h1 هُو navy. الْمُتَصَفِّحْ يَقْرَأُ الْأَنْماطَ تِبَاعاً، وَالْأَخِيرُ هُوَ الَّذِي يَفْرِضُ سَيْطَرَتَهُ عَلَى الْعُنْصُرِ فِي هَذِهِ الْحَالَه.",
+        "caption_text": "عند وضع النمط الداخلي قبل الملف الخارجي، سيتم تطبيق نمط الملف الخارجي كونه الأخير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<head>\n<style>\nh1 { color: orange; }\n</style>\n<link rel=\"stylesheet\" \n      href=\"mystyle.css\">\n</head>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_multiple_cascade.asp"
+      ]
+    },
+    {
+      "id": "cascading_order",
+      "title": "قواعد Cascading Order",
+      "narration": {
+        "spoken_text": "تَتَجَمَّعُ كُلُّ الْأَنْماطِ فِي صَفْحَةِ الْوِبّ لِتُكَوِّن Virtual Style Sheet. لِلْأَنْماطِ أَوْلَوِيَّاتٌ مُحَدَّدَه، وَأَعْلَاهَا هُو Inline Style الَّذِي يُكْتَبُ مُبَاشَرَه دَاخِل Element، حَيْثُ يَتَجَاوَزُ أَيَّ أَنْماطٍ أُخْرَى مَوْجُودَه فِي الْمَلَفَاتِ الْخَارِجِيَّه أَوْ الدَّاخِلِيَّه.",
+        "caption_text": "تتجمع الأنماط في ورقة أنماط افتراضية، حيث يمتلك Inline style الأولوية القصوى في التجاوز."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Inline style له الأولوية القصوى",
+          "Internal style يأتي في المرتبة الثانية",
+          "External style يأتي في المرتبة الثالثة",
+          "Browser defaults لها الأولوية الأقل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_multiple_cascade.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَذَكَّرُوا أَنَّ تَرْتِيبَ الْأَنْماطِ هُوَ الْمُفْتَاحُ لِتَحَكُّمٍ دَقِيقٍ فِي تَصْمِيمِ مَوَاقِعِ الْوِبّ. جَرِّبُوا هَذِهِ الْأَكْوادَ بِنَفْسِكُمْ لِتَرَوْا كَيْفَ تَتَغَيَّرُ الْأَلْوَانُ وَالْخَصَائِصُ بِتَغْيِيرِ التَّرْتِيبِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "ترتيب الأنماط هو مفتاح التحكم في التصميم. جربوا الأكواد بأنفسكم لتطبيق المفاهيم التي تعلمناها اليوم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا ترتيب ملفات CSS",
+          "استخدموا Inline style بحذر",
+          "طبقوا الأمثلة في المتصفح",
+          "تابعوا الدورة لمزيد من الاحتراف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_multiple_cascade.asp"
+      ]
+    }
+  ]
+}
