@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "27",
+  "title": "التحكم في ألوان الحدود باستخدام CSS",
+  "course": "CSS",
+  "objectives": [
+    "فهم خاصية border-color للتحكم في ألوان الحدود",
+    "تعلم كيفية تحديد ألوان مختلفة لكل جانب من جوانب العنصر",
+    "استخدام قيم الألوان HEX و RGB و HSL في الحدود"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_border_color.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول border-color",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي أَلْوَانِ الْحُدُودِ لِلْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ border-color، وَهِيَ خَاصِيَّه مُهِمَّه لِتَحْسِينِ الْمَظْهَرِ الْجَمَالِيِّ لِصَفْحَاتِ الْوِبّ.",
+        "caption_text": "تستخدم خاصية border-color لتحديد لون الحدود الأربعة للعنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية border-color تتحكم في ألوان الحدود",
+          "يمكن تطبيقها على الجهات الأربع للعنصر",
+          "ترث الخاصية لون العنصر إذا لم يتم تحديدها"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_color.asp"
+      ]
+    },
+    {
+      "id": "basic_example",
+      "title": "تطبيق ألوان بسيطة على الحدود",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ مِثَالاً بَسِيطاً. نَقُومُ بِتَحْدِيد border-style لِيَكُون solid، ثُمَّ نَضْبُط border-color بِقِيمَه لَوْنِيَّه مُحَدَّدَه مِثْل red أَوْ green أَوْ blue لِتَظْهَرَ الْحُدُودُ بِهَذِهِ الْأَلْوَانِ الْجَذَّابَه.",
+        "caption_text": "تطبيق ألوان مختلفة على عناصر الفقرات باستخدام border-color."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.one {\n  border-style: solid;\n  border-color: red;\n}\np.two {\n  border-style: solid;\n  border-color: green;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_color.asp"
+      ]
+    },
+    {
+      "id": "sides_explanation",
+      "title": "تحديد ألوان لكل جانب",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَحْدِيدُ لَوْنٍ مُخْتَلِفٍ لِكُلِّ جَانِبٍ مِنَ الْحُدُودِ الْأَرْبَعَه. عِنْدَ كِتَابَةِ أَرْبَعِ قِيَمٍ لِخَاصِيَّةِ border-color، فَإِنَّهَا تَتَرَتَّبُ كَالآتِي: الْعُلْوِيّ، ثُمَّ الْأَيْمَن، ثُمَّ السُّفْلِيّ، وَأَخِيراً الْأَيْسَر.",
+        "caption_text": "يمكن تمرير حتى أربع قيم لخاصية border-color لتحديد لون كل جانب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.one {\n  border-style: solid;\n  border-color: red green blue yellow;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_color.asp"
+      ]
+    },
+    {
+      "id": "hex_values",
+      "title": "استخدام قيم HEX",
+      "narration": {
+        "spoken_text": "بِالْإِضَافَه إِلَى أَسْمَاءِ الْأَلْوَانِ، نَسْتَطِيعُ اسْتِخْدَامَ قِيَم HEX لِتَحْدِيدِ الْأَلْوَانِ بِدِقَّه عَالِيَه. هَذِهِ الطَّرِيقَه شَائِعَه جِدّاً فِي تَصْمِيمِ مَوَاقِعِ الْوِبّ لِضَمَانِ تَطَابُقِ الْأَلْوَانِ مَعَ الْهَوِيَّه الْبَصَرِيَّه.",
+        "caption_text": "استخدام قيم HEX لتحديد لون الحدود بدقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.one {\n  border-style: solid;\n  border-color: #ff0000;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_color.asp"
+      ]
+    },
+    {
+      "id": "rgb_values",
+      "title": "استخدام قيم RGB",
+      "narration": {
+        "spoken_text": "كَمَا يُمْكِنُنَا اسْتِخْدَامُ نِظَام RGB لِتَحْدِيدِ الْأَلْوَانِ، وَهُوَ يَعْتَمِدُ عَلَى مِقْدَارِ الْأَحْمَرِ وَالْأَخْضَرِ وَالْأَزْرَقِ. هَذَا النِّظَامُ يُعْطِينَا مَرُونَه كَبِيرَه فِي اخْتِيَارِ دَرَجَاتِ الْأَلْوَانِ الْمُخْتَلِفَه لِلْحُدُودِ.",
+        "caption_text": "استخدام قيم RGB لتحديد لون الحدود."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.one {\n  border-style: solid;\n  border-color: rgb(255, 0, 0);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_color.asp"
+      ]
+    },
+    {
+      "id": "hsl_values",
+      "title": "استخدام قيم HSL",
+      "narration": {
+        "spoken_text": "وَأَخِيراً، يُمْكِنُ اسْتِخْدَامُ نِظَام HSL الَّذِي يَعْتَمِدُ عَلَى دَرَجَةِ اللَّوْنِ وَالتَّشَبُّعِ وَالْإِضَاءَه. هَذِهِ الطُّرُقُ الثَّلَاثَه تُعَدُّ مِنْ أَهَمِّ الْمَهَارَاتِ لِكُلِّ مُطَوِّرِ وِبٍّ مُحْتَرِفٍ.",
+        "caption_text": "استخدام قيم HSL لتحديد لون الحدود."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.one {\n  border-style: solid;\n  border-color: hsl(0, 100%, 50%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_color.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي أَلْوَانِ الْحُدُودِ بِطُرُقٍ مُتَعَدِّدَه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا التَّأْثِيرَ الْمُبَاشِرَ عَلَى صَفْحَاتِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "مارس كتابة الأكواد لتتقن التحكم في ألوان الحدود."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم border-color لتلوين الحدود",
+          "جرب قيم HEX و RGB و HSL",
+          "طبق ألوانا مختلفة لكل جانب",
+          "راجع دروس CSS Colors للمزيد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_color.asp"
+      ]
+    }
+  ]
+}
