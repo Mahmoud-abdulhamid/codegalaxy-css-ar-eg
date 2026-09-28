@@ -4,10 +4,10 @@
   "title": "CSS Syntax",
   "course": "CSS",
   "objectives": [
-    "فهم الهيكل الأساسي لقواعد CSS",
-    "التعرف على Selector و Declaration block",
-    "تعلم كيفية كتابة CSS Properties و Values",
-    "تطبيق التنسيقات على عناصر HTML"
+    "فهم هيكل قواعد CSS",
+    "التعرف على Selector و Declaration Block",
+    "تطبيق الخصائص والقيم في CSS",
+    "كتابة كود CSS منظم وسليم"
   ],
   "sources": [
     "https://www.w3schools.com/css/css_syntax.asp"
@@ -18,15 +18,15 @@
       "id": "intro",
       "title": "مقدمة في CSS Syntax",
       "narration": {
-        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ. سَنَتَعَرَّفُ عَلَى CSS Syntax، وَهِيَ الْقَوَاعِدُ الْأَسَاسِيَّه لِكِتَابَةِ التَّنْسِيقَاتِ. تَتَكَوَّنُ قَاعِدَةِ CSS مِنْ Selector و Declaration block لِتَحْدِيدِ شَكْلِ عَنَاصِرِ الْوِبّ.",
-        "caption_text": "تتكون قاعدة CSS من Selector و Declaration block لتحديد شكل عناصر الويب."
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ كِتَابَةِ قَوَاعِد CSS بِشَكْلٍ صَحِيحٍ لِتَنْسِيقِ عَنَاصِرِ الْوِبّ بِاحْتِرَافِيَّه وَدِقَّه.",
+        "caption_text": "مرحبا بكم في درس CSS Syntax، سنتعلم اليوم كيفية كتابة قواعد CSS لتنسيق عناصر الويب."
       },
       "visual": {
         "type": "bullets",
         "items": [
-          "CSS Syntax هي القواعد الأساسية للتنسيق",
-          "تتكون القاعدة من Selector و Declaration block",
-          "تستخدم لتحديد مظهر عناصر HTML"
+          "CSS Syntax هو الأساس لتنسيق صفحات الويب",
+          "القاعدة تتكون من Selector و Declaration Block",
+          "فهم هذه القواعد يمنحك تحكما كاملا في التصميم"
         ]
       },
       "source_refs": [
@@ -34,18 +34,32 @@
       ]
     },
     {
-      "id": "selector-concept",
-      "title": "مفهوم الـ Selector",
+      "id": "structure",
+      "title": "مكونات قاعدة CSS",
       "narration": {
-        "spoken_text": "Selector هُوَ الْجُزْءُ الَّذِي يُشِيرُ إِلَى عُنْصُر HTML الَّذِي نُرِيدُ تَنْسِيقَهُ. مَثَلاً، إِذَا أَرَدْنَا تَنْسِيقَ كُلِّ فَقْرَه، نَكْتُب p كَةِ Selector فِي بِدَايَةِ الْقَاعِدَه.",
-        "caption_text": "الـ Selector هو الجزء الذي يشير إلى عنصر HTML الذي نريد تنسيقه."
+        "spoken_text": "تَتَكَوَّنُ قَاعِدَةِ CSS مِنْ جُزْأَيْنِ رَئِيسِيَّيْنِ. الْأَوَّلُ هُو Selector الَّذِي يُحَدِّدُ عُنْصُر HTML الْمُرَادَ تَنْسِيقُهُ، وَالثَّانِي هُو Declaration Block الَّذِي يَحْتَوِي عَلَى التَّنْسِيقَاتِ بَيْنَ أَقْوَاسٍ مُجَعَّدَه.",
+        "caption_text": "تتكون قاعدة CSS من Selector يحدد العنصر، وDeclaration Block يحتوي على التنسيقات."
       },
       "visual": {
-        "type": "bullets",
-        "items": [
-          "Selector يحدد العنصر المستهدف",
-          "يتم كتابة اسم العنصر مثل p",
-          "يتبعه مباشرة Declaration block"
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "selector",
+            "label": "Selector",
+            "active": false
+          },
+          {
+            "id": "block",
+            "label": "Declaration Block",
+            "active": false
+          }
+        ],
+        "edges": [
+          {
+            "source": "selector",
+            "target": "block",
+            "label": "يتبعه"
+          }
         ]
       },
       "source_refs": [
@@ -53,37 +67,17 @@
       ]
     },
     {
-      "id": "declaration-block",
-      "title": "شرح الـ Declaration block",
+      "id": "code_example",
+      "title": "شرح كود CSS",
       "narration": {
-        "spoken_text": "يَحْتَوِي Declaration block عَلَى وَاحِدَه أَوْ أَكْثَرَ مِن Declarations، وَتُحَاطُ بَةِ curly braces. كُلُّ Declaration تَتَضَمَّن CSS Property name و Value، يَفْصِلُ بَيْنَهُمَا colon.",
-        "caption_text": "يحتوي الـ Declaration block على Declarations محاطة بـ curly braces."
-      },
-      "visual": {
-        "type": "bullets",
-        "items": [
-          "توضع التنسيقات داخل",
-          "تتكون من Property و Value",
-          "يفصل بينهما علامة :",
-          "تنتهي كل Declaration بـ"
-        ]
-      },
-      "source_refs": [
-        "https://www.w3schools.com/css/css_syntax.asp"
-      ]
-    },
-    {
-      "id": "code-example-1",
-      "title": "كتابة الكود البرمجي",
-      "narration": {
-        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ. نَكْتُب p ثُمَّ نَفْتَح curly braces. دَاخِلَهَا نَضَع color: red لِتَغْيِيرِ لَوْنِ النَّصِّ، و text-align: center لِجَعْلِ النَّصِّ فِي مُنْتَصَفِ الصَّفْحَه.",
-        "caption_text": "مثال عملي لتنسيق عناصر p باستخدام CSS."
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ. نَكْتُب p كَةِ Selector، ثُمَّ نَفْتَحُ أَقْوَاساً مُجَعَّدَه. دَاخِلَهَا نَضَع Property مِثْل color وَقِيمَتَهَا red، وَنَفْصِلُ بَيْنَهُمَا بَةِ colon، وَنَنْهِي كُلَّ Declaration بَةِ semicolon.",
+        "caption_text": "نكتب Selector ثم نفتح أقواس، ونضع الخصائص والقيم مفصولة بـ colon ومنتهية بـ semicolon."
       },
       "visual": {
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "p {\n  color: red;\n  text-align: center;\n}",
+        "code": "p\n{\n  color: red;\n  text-align: center;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
@@ -94,19 +88,35 @@
       ]
     },
     {
-      "id": "code-breakdown",
-      "title": "تحليل أجزاء الكود",
+      "id": "declaration_details",
+      "title": "تفاصيل Declaration",
       "narration": {
-        "spoken_text": "لَاحِظْ أَنَّ كُلَّ سَطْرٍ دَاخِل curly braces يَنْتَهِي بَةِ semicolon. هَذَا ضَرُورِيٌّ لِفَصْل Declarations عَنْ بَعْضِهَا، وَلِكَيْ يَعْرِفَ الْمُتَصَفِّحْ نِهَايَةِ كُلِّ تَنْسِيقٍ.",
-        "caption_text": "يجب إنهاء كل Declaration بـ semicolon للفصل بينها."
+        "spoken_text": "كُلُّ Declaration تَتَكَوَّنُ مِنْ Property و Value. Property هِيَ الصِّفَه الَّتِي نُرِيدُ تَغْيِيرَهَا، و Value هِيَ الْقِيمَه الْمُحَدَّدَه لَهَا. هَذَا التَّنْظِيمُ يَجْعَلُ كَوْد CSS قَابِلاً لِلْقِرَاءَه وَالصِّيَانَه.",
+        "caption_text": "تتكون كل Declaration من Property و Value، مما يضمن تنظيم الكود وسهولة صيانته."
       },
       "visual": {
-        "type": "bullets",
-        "items": [
-          "p هو الـ Selector",
-          "هو الـ Declaration block",
-          "color و text-align هما الـ Properties",
-          "red و center هما الـ Values"
+        "type": "table",
+        "columns": [
+          "الجزء",
+          "الوظيفة",
+          "مثال"
+        ],
+        "rows": [
+          [
+            "Property",
+            "تحديد الخاصية",
+            "color"
+          ],
+          [
+            "Value",
+            "تحديد القيمة",
+            "red"
+          ],
+          [
+            "Separator",
+            "الفصل بينهما",
+            ":"
+          ]
         ]
       },
       "source_refs": [
@@ -114,19 +124,19 @@
       ]
     },
     {
-      "id": "browser-output",
-      "title": "المخرجات في المتصفح",
+      "id": "output_preview",
+      "title": "المعاينة المرئية",
       "narration": {
-        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَيَقُوم وِبّ Browser بِتَحْوِيلِ كُلِّ نَصٍّ دَاخِلَ عُنْصُر p إِلَى اللَّوْنِ الْأَحْمَرِ، وَسَيَظْهَرُ النَّصُّ فِي مُنْتَصَفِ الشَّاشَه تَمَاماً.",
-        "caption_text": "تظهر النتيجة في المتصفح بتنسيق اللون الأحمر والمحاذاة المركزية."
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ عَلَى عُنْصُر p، سَيَظْهَرُ النَّصُّ فِي مُتَصَفِّحْ الْوِبّ بِلَوْنٍ أَحْمَرَ وَسَيَتَمَوْضَعُ فِي مُنْتَصَفِ الصَّفْحَه تَمَاماً كَمَا حَدَّدْنَا فِي الْخَصَائِصِ.",
+        "caption_text": "تظهر النتيجة في المتصفح بنص أحمر اللون ومحاذاة في المنتصف."
       },
       "visual": {
         "type": "code",
         "language": "html",
         "filename": "output.html",
-        "code": "<p style=\"color: red; text-align: center;\">\n  هذا النص سيكون أحمر وفي المنتصف\n</p>",
+        "code": "<p>This is a paragraph.</p>",
         "highlight_lines": [],
-        "output": "هذا النص سيكون أحمر وفي المنتصف",
+        "output": "This is a paragraph. (Centered, Red)",
         "output_status": "illustrative",
         "verification_ref": null
       },
@@ -135,19 +145,18 @@
       ]
     },
     {
-      "id": "best-practices",
+      "id": "best_practices",
       "title": "أفضل الممارسات",
       "narration": {
-        "spoken_text": "مِنْ أَفْضَلِ الْمُمَارَسَاتِ هُوَ تَنْظِيمُ الْكُودِ بِشَكْلٍ مَقْرُوءٍ، وَاسْتِخْدَام semicolons بِدِقَّه. كَمَا أَنَّ تَعَلُّم Selectors و CSS Properties الْمُتَقَدِّمَه سَيَفْتَحُ لَكُمْ آفَاقاً وَاسِعَه فِي تَصْمِيمِ الْوِبّ.",
-        "caption_text": "التنظيم الجيد للكود يسهل الصيانة والتطوير."
+        "spoken_text": "يَجِبُ أَنْ نَحْرِصَ دَائِماً عَلَى اسْتِخْدَام semicolon بَعْدَ كُلِّ Declaration. كَمَا يُفَضَّلُ تَنْسِيقُ الْكُودِ بِاسْتِخْدَامِ الْمَسَافَاتِ الْبَادِئَه لِتَسْهِيلِ قِرَاءَتِهِ وَتَعْدِيلِهِ لاحِقاً.",
+        "caption_text": "استخدم semicolon دائما، ونسق الكود بالمسافات البادئة لسهولة القراءة."
       },
       "visual": {
         "type": "bullets",
         "items": [
-          "حافظ على ترتيب الكود",
-          "لا تنس الـ semicolon",
-          "استخدم الـ Selectors المناسبة",
-          "تعلم المزيد من الـ Properties"
+          "لا تنس إغلاق كل Declaration بـ semicolon",
+          "استخدم الأقواس المجعدة بشكل صحيح",
+          "نظم الكود بمسافات بادئة واضحة"
         ]
       },
       "source_refs": [
@@ -155,19 +164,19 @@
       ]
     },
     {
-      "id": "conclusion",
+      "id": "summary",
       "title": "خلاصة الدرس",
       "narration": {
-        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا الْهَيْكَلَ الْأَسَاسِيَّ لَةِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي الدَّرْسِ الْقَادِمِ.",
-        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ أَنَّ CSS Syntax يَعْتَمِدُ عَلَى Selector و Declaration Block. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتُتْقِنُوا الْمَهَارَه.",
+        "caption_text": "تعلمنا أساسيات CSS Syntax. جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
       },
       "visual": {
         "type": "bullets",
         "items": [
-          "تم شرح CSS Syntax",
-          "تم توضيح الـ Selector والـ Declaration",
-          "جرب الكود بنفسك عبر الرابط",
-          "استعد للدرس القادم"
+          "CSS Syntax هو هيكل بناء التنسيقات",
+          "Selector يحدد العنصر",
+          "Declaration Block يحدد التنسيق",
+          "جرب الكود بنفسك عبر الرابط"
         ]
       },
       "source_refs": [
