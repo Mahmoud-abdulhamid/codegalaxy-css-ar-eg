@@ -104,7 +104,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "h1, h2, p\n{\n  text-align: center;\n  color: red;\n}",
+        "code": "h1, h2, p {\n  text-align: center;\n  color: red;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
