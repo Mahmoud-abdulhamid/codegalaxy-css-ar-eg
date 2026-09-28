@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "97",
+  "title": "CSS float Property",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية عمل خاصية float في CSS",
+    "التحكم في تموضع العناصر داخل الحاويات",
+    "تطبيق float للتحكم في تدفق النصوص حول الصور",
+    "استخدام float لترتيب العناصر بجانب بعضها البعض"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_float.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول خاصية float",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ float، وَهِيَ أَدَاه قَوِيَّه تُحَدِّدُ كَيْفِيَّةِ تَمَوْضُعِ الْعُنْصُرِ دَاخِلَ الْحَاوِيَه، مِمَّا يَسْمَحُ لِلنُّصُوصِ وَالْعَنَاصِرِ بِالِانْسِيَابِ حَوْلَهُ بِسُهُولَه.",
+        "caption_text": "تستخدم خاصية float في CSS لتحديد كيفية تموضع العناصر داخل الحاويات والسماح للنصوص بالالتفاف حولها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية float تتحكم في تدفق العناصر",
+          "تسمح بوضع العناصر يمينا أو يسارا",
+          "تستخدم بكثرة لالتفاف النصوص حول الصور"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float.asp"
+      ]
+    },
+    {
+      "id": "float-right",
+      "title": "استخدام float: right",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نَسْتَخْدِمُ الْقِيمَه right مَعَ خَاصِيَّةِ float، فَإِنَّ الْعُنْصُرَ يَنْجَذِبُ إِلَى الْجَانِبِ الْأَيْمَنِ مِنَ الْحَاوِيَه. هَذَا يُعَدُّ خِيَاراً مِثَالِيّاً إِذَا أَرَدْنَا أَنْ تَظْهَرَ الصُّورَه عَلَى الْيَمِينِ وَيَتَدَفَّقَ النَّصُّ حَوْلَهَا بِشَكْلٍ جَمَالِيٍّ.",
+        "caption_text": "تؤدي القيمة float: right إلى دفع العنصر نحو الجانب الأيمن من الحاوية مع التفاف المحتوى حوله."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  float: right;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float.asp"
+      ]
+    },
+    {
+      "id": "float-left",
+      "title": "استخدام float: left",
+      "narration": {
+        "spoken_text": "بِالْمِثْلِ، يُمْكِنُنَا اسْتِخْدَامُ الْقِيمَه left لِجَعْلِ الْعُنْصُرِ يَنْجَذِبُ إِلَى الْجَانِبِ الْأَيْسَرِ. هَذَا هُوَ التَّصَرُّفُ الشَّائِعُ عِنْدَ تَنْسِيقِ الصُّورِ فِي الْمَقَالَاتِ لِتَكُونَ فِي بِدَايَةِ الْفَقْرَه عَلَى الْيَسَارِ.",
+        "caption_text": "تؤدي القيمة float: left إلى دفع العنصر نحو الجانب الأيسر من الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  float: left;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float.asp"
+      ]
+    },
+    {
+      "id": "float-none",
+      "title": "القيمة الافتراضية float: none",
+      "narration": {
+        "spoken_text": "أَمَّا إِذَا اسْتَخْدَمْنَا الْقِيمَه none، فَإِنَّ الْعُنْصُرَ يَعُودُ إِلَى حَالَتِهِ الطَّبِيعِيَّه دَاخِلَ الْحَاوِيَه. هَذِهِ هِيَ الْقِيمَه الِافْتِرَاضِيَّه لَةِ float، حَيْثُ لَا يَتَأَثَّرُ الْعُنْصُرُ بِأَيِّ تَمَوْضُعٍ خَاصٍّ وَيَظْهَرُ فِي مَكَانِهِ الْأَصْلِيِّ.",
+        "caption_text": "القيمة float: none هي القيمة الافتراضية، حيث يظهر العنصر في مكانه الطبيعي داخل الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  float: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float.asp"
+      ]
+    },
+    {
+      "id": "float-divs",
+      "title": "ترتيب العناصر بجانب بعضها",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةِ float أَيْضاً لِتَخَطِّي سُلُوكِ الْعَنَاصِرِ مِثْل div الَّتِي تَحْتَلُّ سَطْراً كَامِلاً. عِنْدَ إِعْطَاء div خَاصِيَّةِ float: left، يُمْكِنُنَا جَعْلُ عِدَّةِ صَنَادِيقَ تَتَرَتَّبُ بِجَانِبِ بَعْضِهَا بَدَلاً مِنَ التَّرَتُّبِ الرَّأْسِيِّ.",
+        "caption_text": "يمكن استخدام float: left لجعل عناصر div تترتب بجانب بعضها البعض بدلا من أخذ سطر كامل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  float: left;\n  padding: 15px;\n}\n.div1 {\n  background: red;\n}\n.div2 {\n  background: yellow;\n}\n.div3 {\n  background: green;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِاخْتِصَارٍ، خَاصِيَّةِ float أَدَاه مَرِنَه لِتَنْسِيقِ الصَّفَحَاتِ. تَذَكَّرْ أَنَّ الْعَنَاصِرَ الْمُعَوَّمَه تُؤَثِّرُ عَلَى تَدَفُّقِ مَا حَوْلَهَا. جَرِّبُوا هَذِهِ الْأَكْوَادَ بَأَنْفُسِكُمْ لِتَرَوْا كَيْفَ يَتَغَيَّرُ تَخْطِيطُ الصَّفْحَه بِشَكْلٍ مُبَاشِرٍ.",
+        "caption_text": "تعد خاصية float أداة أساسية في CSS للتحكم في التخطيط، جرب تطبيقها بنفسك لفهم تأثيرها على تدفق العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم float: left أو right للتحكم في التموضع",
+          "استخدم float: none لإلغاء التأثير",
+          "تذكر أن float تؤثر على العناصر المجاورة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float.asp"
+      ]
+    }
+  ]
+}
