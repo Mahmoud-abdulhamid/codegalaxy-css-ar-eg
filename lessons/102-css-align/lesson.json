@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "102",
+  "title": "CSS Centering Elements",
+  "course": "CSS",
+  "objectives": [
+    "فهم طرق محاذاة العناصر في CSS",
+    "استخدام Flexbox للمحاذاة الأفقية والعمودية",
+    "تطبيق الخصائص justify-content و align-items",
+    "التعرف على أفضل الممارسات في تصميم الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_align.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في محاذاة العناصر",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ مُحَاذَاةِ الْعَنَاصِرِ أُفُقِيّاً وَعَمُودِيّاً بِاسْتِخْدَامِ تِقْنِيَّاتٍ حَدِيثَه، لِتَجْعَلُوا تَصْمِيمَ صَفْحَةِ الْوِبّ خَاصَّتَكُمْ أَكْثَرَ احْتِرَافِيَّه وَتَنَاسُقاً.",
+        "caption_text": "مرحبا بكم في درس محاذاة العناصر باستخدام CSS. سنتعلم اليوم تقنيات احترافية لمحاذاة العناصر أفقيا وعموديا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "محاذاة العناصر أفقيا وعموديا",
+          "استخدام تقنيات CSS الحديثة",
+          "تحسين مظهر صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align.asp"
+      ]
+    },
+    {
+      "id": "flexbox_concept",
+      "title": "مفهوم Flexbox",
+      "narration": {
+        "spoken_text": "تُعَدُّ تِقْنِيَّةِ Flexbox هِيَ الطَّرِيقَه الْأَحْدَثُ وَالْأَكْثَرُ كَفَاءَه لِمُحَاذَاةِ الْمُحْتَوَى. عِنْدَ تَحْدِيد display: flex لِلْعُنْصُرِ الْأَبِ، نَصْنَعُ بِيئَه مَرِنَه تُسَهِّلُ عَلَيْنَا التَّحَكُّمَ فِي تَوْزِيعِ الْعَنَاصِرِ بِدِقَّه عَالِيَه دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تعد تقنية Flexbox الطريقة الأكثر كفاءة لمحاذاة المحتوى. نستخدم display: flex على العنصر الأب لإنشاء بيئة مرنة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display: flex",
+          "التحكم في توزيع العناصر",
+          "توفير بيئة مرنة للمحتوى"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود المحاذاة باستخدام Flexbox",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْيِين display: flex لِتَفْعِيلِ الْخَاصِّيَّه. ثُمَّ نَسْتَخْدِم justify-content: center لِلْمَحَاذَاه الْأُفُقِيَّه، و align-items: center لِلْمَحَاذَاه الْعَمُودِيَّه، وَبِذَلِكَ يَصِلُ الْعُنْصُرُ إِلَى مُنْتَصَفِ الْحَاوِيَه تَمَاماً.",
+        "caption_text": "هذا الكود يوضح كيفية توسيط عنصر div باستخدام Flexbox عبر الخصائص justify-content و align-items."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align.asp"
+      ]
+    },
+    {
+      "id": "explanation_details",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "خَاصِّيَّةِ justify-content تَتَحَكَّمُ فِي تَوْزِيعِ الْعَنَاصِرِ عَلَى الْمِحْوَرِ الرَّئِيسِيِّ، بَيْنَمَا تَقُوم align-items بِالتَّحَكُّمِ فِي الْمِحْوَرِ الْمُتَعَامِدِ. هَذَا التَّكَامُلُ بَيْنَ الْخَاصِّيَّتَيْنِ هُوَ السِّرُّ وَرَاءَ التَّوَسِيطِ الْمِثَالِيِّ لِأَيِّ Element دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تتحكم justify-content في المحور الرئيسي، بينما تتحكم align-items في المحور المتعامد لتحقيق التوسيط المثالي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "justify-content للمحور الرئيسي",
+          "align-items للمحور المتعامد",
+          "التكامل لتحقيق التوسيط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذَا الْكُودِ، سَتُحَظُونَ أَنَّ الْعُنْصُرَ قَدْ أَصْبَحَ فِي مُنْتَصَفِ الشَّاشَه تَمَاماً. هَذِهِ النَّتِيجَه هِيَ مَا نَسْعَى إِلَيْهِ لِضَمَانِ تَجْرِبَه مُسْتَخْدِمٍ مُمَيَّزَه وَمُتَنَاسِقَه فِي كُلِّ مُتَصَفِّحَاتُ الْوِبّ الْحَدِيثَه.",
+        "caption_text": "تظهر النتيجة توسيط العنصر بدقة في منتصف الحاوية، مما يضمن تناسق التصميم عبر المتصفحات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"center\">\n      <p>I am vertically and horizontally centered.</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "I am vertically and horizontally centered.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "نَنْصَحُ دَائِماً بِاسْتِخْدَام Flexbox كَأَفْضَلِ مُمَارَسَه لِتَوْسِيطِ الْمُحْتَوَى. إِنَّهَا تَقْنِيَّه مَدْعُومَه عَلَى نِطَاقٍ وَاسِعٍ وَتُقَلِّلُ مِنْ كِتَابَةِ الْأَكْوَادِ الْمُعَقَّدَه، مِمَّا يَجْعَلُ صِيَانَةِ مَلَفَّات CSS أَمْراً سَهْلاً وَمُنَظَّماً لِكُلِّ الْمُطَوِّرِينَ.",
+        "caption_text": "تعد Flexbox أفضل ممارسة لتوسيط المحتوى، فهي تدعم المتصفحات وتقلل تعقيد الأكواد وتسهل الصيانة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Flexbox كمعيار",
+          "دعم واسع للمتصفحات",
+          "سهولة صيانة الأكواد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةِ اسْتِخْدَام Flexbox لِتَوْسِيطِ الْعَنَاصِرِ بِكُلِّ سُهُولَه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدِيُو لِتُطَوِّرُوا مَهَارَاتِكُمْ فِي تَصْمِيمِ صَفَحَاتِ الْوِبّ.",
+        "caption_text": "تعلمنا اليوم استخدام Flexbox للتوسيط. جربوا الأكواد بأنفسكم عبر الرابط في الوصف لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة مفاهيم Flexbox",
+          "تطبيق التوسيط الأفقي والعمودي",
+          "تجربة الأكواد عبر الرابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align.asp"
+      ]
+    }
+  ]
+}
