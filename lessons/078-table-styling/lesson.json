@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "78",
+  "title": "CSS Table Styling",
+  "course": "CSS",
+  "objectives": [
+    "تعلم كيفية إضافة padding داخل عناصر الجدول",
+    "استخدام border-bottom لإنشاء فواصل أفقية",
+    "تفعيل تأثير hover على الصفوف",
+    "إنشاء جداول مخططة باستخدام nth-child",
+    "تنسيق ألوان عناصر th"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_table_style.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تنسيق الجداول",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ تَحْسِينِ مَظْهَرِ الْجَدَاوِلِ بِاسْتِخْدَامِ خَصَائِص CSS الْمُتَقَدِّمَه لِتَجْعَلَ بَيَانَاتِ الْوِبّ أَكْثَرَ تَنْظِيماً وَجَاذِبِيَّه لِلْمُسْتَخْدِمِ.",
+        "caption_text": "مرحبا بكم في درس تنسيق الجداول باستخدام CSS لجعل بيانات الويب أكثر احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحسين مظهر الجداول باستخدام CSS",
+          "إضافة مسافات داخلية باستخدام padding",
+          "تنسيق الصفوف والأعمدة بأساليب تفاعلية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_style.asp"
+      ]
+    },
+    {
+      "id": "padding",
+      "title": "إضافة مسافات داخلية",
+      "narration": {
+        "spoken_text": "لِإِضَافَه مَسَافَه بَيْنَ الْحُدُودِ الدَّاخِلِيَّه وَالْمُحْتَوَى، نَسْتَخْدِمُ خَاصِيَّةِ padding عَلَى Elements مِثْل td و th. هَذَا يَمْنَحُ الْجَدْوَلَ مَظْهَراً مُرِيحاً لِلْعَيْنِ وَيَمْنَعُ تَدَاخُلَ النُّصُوصِ مَعَ الْحُدُودِ.",
+        "caption_text": "استخدام خاصية padding على عناصر td و th لإضافة مساحة مريحة حول المحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "th, td {\n  padding: 10px;\n  text-align: left;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_style.asp"
+      ]
+    },
+    {
+      "id": "dividers",
+      "title": "الفواصل الأفقية",
+      "narration": {
+        "spoken_text": "لِإِنْشَاءِ فَوَاصِلَ أُفُقِيَّه بَيْنَ الصُّفُوفِ، نَقُومُ بِتَطْبِيقِ خَاصِيَّةِ border-bottom عَلَى عَنَاصِر td و th. هَذَا التَّقْنِيَه تُسَاعِدُ فِي فَصْلِ الْبَيَانَاتِ بِشَكْلٍ بَصَرِيٍّ وَاضِحٍ وَمُنَظَّمٍ.",
+        "caption_text": "إضافة فواصل أفقية باستخدام خاصية border-bottom لتحسين قراءة بيانات الجدول."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "th, td {\n  border-bottom: 1px solid #ddd;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_style.asp"
+      ]
+    },
+    {
+      "id": "hover",
+      "title": "تأثير التفاعل Hover",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا جَعْلُ الْجَدْوَلِ تَفَاعُلِيّاً بِاسْتِخْدَامِ مُحَدِّد hover عَلَى tr. عِنْدَ تَحْرِيكِ الْمَاوْسِ فَوْقَ أَيِّ صَفٍّ، سَيَتَغَيَّرُ لَوْنُ خَلْفِيَّتِهِ، مِمَّا يُسَهِّلُ عَلَى الْمُسْتَخْدِمِ تَتَبُّعَ الْبَيَانَاتِ الْمَعْرُوضَه.",
+        "caption_text": "تفعيل تأثير hover على الصفوف tr لتغيير لون الخلفية عند تمرير الماوس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "tr:hover {\n  background-color: coral;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_style.asp"
+      ]
+    },
+    {
+      "id": "zebra",
+      "title": "الجداول المخططة",
+      "narration": {
+        "spoken_text": "لِتَصْمِيمِ جَدْوَلٍ مُخَطَّطٍ كَشَكْلِ الْحِمَارِ الْوَحْشِيِّ، نَسْتَخْدِمُ مُحَدِّد nth-child مَعَ قِيمَةِ even. هَذَا يُطَبِّق background-color عَلَى الصُّفُوفِ الزَّوْجِيَّه، مِمَّا يُعْطِي تَبَايُناً لَوْنِيّاً رَائِعاً لِلْبَيَانَاتِ.",
+        "caption_text": "استخدام nth-child(even) لتطبيق لون خلفية مختلف على الصفوف الزوجية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "tr:nth-child(even) {\n  background-color: #f2f2f2;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_style.asp"
+      ]
+    },
+    {
+      "id": "colors",
+      "title": "تنسيق ألوان الرؤوس",
+      "narration": {
+        "spoken_text": "أَخِيراً، يُمْكِنُنَا تَمْيِيزُ رُؤُوسِ الْجَدْوَل th بِتَحْدِيد background-color و color لِلنَّصِّ. هَذَا يُبْرِزُ الْعَنَاوِينَ الرَّئِيسِيَّه وَيَجْعَلُ الْجَدْوَلَ يَبْدُو أَكْثَرَ احْتِرَافِيَّه وَتَنْظِيماً فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تخصيص ألوان الخلفية والنص لعناصر th لإبراز رؤوس الجدول."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "th {\n  background-color: #04AA6D;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_style.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةِ تَحْسِينِ الْجَدَاوِلِ بِاسْتِخْدَام CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْبِيقِهَا فِي مَشَارِيعِكُمُ الْقَادِمَه. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "شكرا لمتابعتكم. جربوا الأكواد بأنفسكم لتطوير مهاراتكم في تصميم الجداول."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام padding و border-bottom",
+          "تطبيق hover و nth-child",
+          "تنسيق الألوان لعناصر th",
+          "ممارسة الأكواد عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_style.asp"
+      ]
+    }
+  ]
+}
