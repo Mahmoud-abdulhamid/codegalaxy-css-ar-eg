@@ -50,9 +50,15 @@ p
 يمكن تحديد class لعنصر معين أو دمج أكثر من class للعنصر الواحد.
 
 ```html
-<p class="center large">
-  هذه الفقرة تحمل كلاسين.
-</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <p class="center large">هذه الفقرة تحمل كلاسين.</p>
+  </body>
+</html>
 ```
 
 ## خلاصة الدرس
