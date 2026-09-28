@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "114",
+  "title": "CSS Pseudo-elements for Content",
+  "course": "CSS",
+  "objectives": [
+    "Learn how to use CSS Pseudo-elements for Content like ::before and ::after",
+    "Insert and style content dynamically using the content property",
+    "Style list markers using the ::marker Pseudo-element",
+    "Customize text selection styles with ::selection",
+    "Style dialog popover viewboxes using ::backdrop"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_pseudo_elements_content.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "شرح Introduction to Pseudo-elements",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى Pseudo-elements كَيْفَ نُسْتَخْدِمُهَا لإِدْرَاجِ الْمُحْتَوَى بِمَهَارَه عَالِيَه دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Pseudo-elements المخصص لإدراج المحتوى وتنسيقه باحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعريف مفصل بـ Pseudo-elements المخصصة للمحتوى",
+          "إدراج عناصر جديدة قبل أو بعد العناصر الأصلية",
+          "تنسيق العلامات والخصائص التفاعلية بسهولة",
+          "التحكم الكامل بتجربة المستخدم على صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_content.asp"
+      ]
+    },
+    {
+      "id": "scene_2_before",
+      "title": "شرح The ::before Pseudo-element",
+      "narration": {
+        "spoken_text": "نَبْدَأُ مَعَ مَوْضِعِ الإِدْرَاجِ الأَوَّلِ بِاسْتِخْدَامِ الْعُنْصُرِ الْمُلْحَق before. هَذَا الْعُنْصُرُ يُمَكِّنُنَا مِنْ إِدْرَاجِ أَيِّ مُحْتَوَى قَبْلَ مُحْتَوَى الْعُنْصُرِ الْمُحَدَّدِ بِدِقَّه تَامَّه.",
+        "caption_text": "يستخدم ::before لإدراج محتوى جديد قبل محتوى العنصر المحدد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h3::before {\n  content: url(smiley.gif);\n}",
+        "highlight_lines": [],
+        "output": "يظهر الرمز أو الصورة المحددة مباشرة قبل نص عنوان h3.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_content.asp"
+      ]
+    },
+    {
+      "id": "scene_3_after",
+      "title": "شرح The ::after Pseudo-element",
+      "narration": {
+        "spoken_text": "وَبِالطَّرِيقَةِ نَفْسِهَا، نَنْتَقِلُ إِلَى الْعُنْصُرِ الْمُلْحَق after. هَذَا الْعُنْصُرُ يَسْمَحُ لَنَا بِإِدْرَاجِ الْمُحْتَوَى بَعْدَ انْتِهَاءِ مُحْتَوَى الْعُنْصُرِ مِثْلَ إِضَافَه صُورَه أَوْ أَيْقُونَه تَعْبِيرِيَّه.",
+        "caption_text": "يستخدم ::after لإدراج المحتوى المخصص بعد نهاية محتوى العنصر المستهدف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h3::after {\n  content: url(smiley.gif);\n}",
+        "highlight_lines": [],
+        "output": "يتم إدراج الصورة أو الرمز بعد نص عنوان h3 تماماً.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_content.asp"
+      ]
+    },
+    {
+      "id": "scene_4_content_property",
+      "title": "شرح The Content Property",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ جَمِيعُ هَذِهِ الْعَنَاصِرِ الْمُلْحَقَه عَلَى خَاصِيَّةِ content الأَسَاسِيَّه. هَذِهِ الْخَاصِيَّه هِيَ الْمَسْؤُولَه عَنْ تَحْدِيدِ مَا سَيَتِمُ إِدْرَاجُهُ سَوَاءٌ كَانَ نَصّاً أَوْ صُورَه أَوْ مَدْخَلاً رَقْمِيّاً.",
+        "caption_text": "خاصية content ضرورية لتحديد نوع ومحتوى العنصر المضاف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد النصوص المكتوبة مباشرة داخل خاصية content",
+          "استدعاء الصور عبر دالة url المخصصة",
+          "توليد عدادات تلقائية وترقيم العناصر بسهولة",
+          "التحكم بالرموز التعبيرية والرموز الخاصة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_content.asp"
+      ]
+    },
+    {
+      "id": "scene_5_marker",
+      "title": "شرح The ::marker Pseudo-element",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ الْآنَ إِلَى عُنْصُر marker لِتَنْسِيقِ عَلَامَاتِ الْقَوَائِمِ وَالنِّقَاطِ المَسْرُودَه. نَسْتَطِيعُ تَغْيِيرَ لَوْنِ العَلَامَه وَحَجْمِ الْخَطِّ بِكُلِّ سُهُولَه بِمَا يُنَاسِبُ تَصْمِيمَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "يستخدم ::marker لتنسيق وتغيير مظهر علامات وقوائم العناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "::marker {\n  color: red;\n  font-size: 23px;\n}",
+        "highlight_lines": [],
+        "output": "تتغير علامات القوائم لتصبح باللون الأحمر وبحجم خط 23 بكسل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_content.asp"
+      ]
+    },
+    {
+      "id": "scene_6_selection",
+      "title": "شرح The ::selection Pseudo-element",
+      "narration": {
+        "spoken_text": "هَذَا الْعُنْصُرُ الرَّائِع selection يُمَكِّنُنَا مِنْ تَصْمِيمِ النَّصِّ الَّذِي يُحَدِّدُهُ الْمُسْتَخْدِمُ بِالفَأْرَه. نَسْتَطِيعُ تَغْيِيرَ لَوْنِ النَّصِّ وَخَلْفِيَّتِهِ لِتَقْدِيمِ تَجْرِبَه مُسْتَخْدِمٍ فَرِيدَه وَجَذَّابَه جِدّاً.",
+        "caption_text": "يستخدم ::selection لتخصيص ألوان النص عند تحديده بواسطة المستخدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "::selection {\n  color: red;\n  background: yellow;\n}",
+        "highlight_lines": [],
+        "output": "يصبح النص المظلل باللون الأحمر مع خلفية صفراء ساطعة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_content.asp"
+      ]
+    },
+    {
+      "id": "scene_7_backdrop",
+      "title": "شرح The ::backdrop Pseudo-element",
+      "narration": {
+        "spoken_text": "أَمَّا الْعُنْصُرُ الأَخِير backdrop فَيُسْتَخْدِمُ لِتَنْسِيقِ الخَلْفِيَّه أَوْ صُنْدُوقِ الْعَرْضِ الْخَلْفِيِّ وَرَاءَ نَوَافِذِ الْحِوَار dialog boxes وَالنَّوَافِذِ المُنْبَثَقَه لِخَلْقِ تَبَايُنٍ بَصْرِيٍّ رَائِعٍ وَوَاضِحٍ.",
+        "caption_text": "يستخدم ::backdrop لتنسيق المساحة الخلفية وراء نوافذ الحوار والعناصر المنبثقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "dialog::backdrop {\n  background-color: lightgreen;\n}",
+        "highlight_lines": [],
+        "output": "تظهر خلفية نافذة الحوار باللون الأخضر الفاتح الجذاب.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_content.asp"
+      ]
+    },
+    {
+      "id": "scene_8_conclusion",
+      "title": "شرح Conclusion and Best Practices",
+      "narration": {
+        "spoken_text": "فِي النِّهَايَه يَا أَصْدِقَائِي، تُعَدُّ هَذِهِ الْعَنَاصِرُ أَدَوَاتٍ قويَه جِدّاً لِتَطْوِيرِ الْوِبّ الْحَدِيثِ. نَدْعُوكُمْ لِتَجْرِبَةِ جَمِيعِ هَذِهِ الأَكْوَادِ بِأَنْفُسِكُمْ وَمُرَاجَعَةِ الْمَصْدَرِ الرَّسْمِيِّ لِمَزِيدٍ مِنَ التَّفَاصِيلِ وَالِابْتِكَارَاتِ البرمجيَه.",
+        "caption_text": "خلاصة الدرس وأهمية تطبيق الممارسات الاحترافية لتصميم صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Pseudo-elements يقلل من الحاجة لتعديل ملفات HTML",
+          "التحكم الكامل بالتصميم التفاعلي للمستخدم",
+          "تحسين المظهر البصري لصفحات الويب باحترافية",
+          "مراجعة المراجع الرسمية للاطلاع على المزيد من الخصائص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements_content.asp"
+      ]
+    }
+  ]
+}
