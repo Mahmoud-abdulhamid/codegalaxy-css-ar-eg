@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "62",
+  "title": "استخدام Google Fonts في CSS",
+  "course": "CSS",
+  "objectives": [
+    "تعلم كيفية ربط Google Fonts بصفحات الويب",
+    "استخدام خاصية font-family مع الخطوط الخارجية",
+    "تطبيق تأثيرات الخطوط المتقدمة",
+    "التعامل مع الخطوط المتعددة بفعالية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_font_google.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Google Fonts",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي. إِذَا كُنْتُمْ تَرْغَبُونَ فِي تَجَاوُزِ الْخُطُوطِ التَّقْلِيدِيَّه فِي صَفْحَةِ الْوِبّ، فَإِنَّ Google Fonts تُوَفِّرُ لَكُمْ أَكْثَرَ مِنْ أَلْفِ خَطٍّ مَجَّانِيٍّ لِتَحْسِينِ تَصْمِيمِ مَوَاقِعِكُمْ بِكُلِّ سُهُولَه وَاحْتِرَافِيَّه.",
+        "caption_text": "توفر Google Fonts أكثر من 1000 خط مجاني لاستخدامها في تصميم صفحات الويب بدلا من الخطوط التقليدية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Google Fonts توفر خطوطا مجانية",
+          "أكثر من 1000 خط للاختيار من بينها",
+          "سهولة الربط والاستخدام في CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_google.asp"
+      ]
+    },
+    {
+      "id": "usage_method",
+      "title": "طريقة ربط الخطوط",
+      "narration": {
+        "spoken_text": "لِاسْتِخْدَامِ هَذِهِ الْخُطُوطِ، نَقُومُ بِإِضَافَةِ رَابِط stylesheet فِي قِسْم head، ثُمَّ نُشِيرُ إِلَى اسْمِ الْخَطِّ دَاخِلَ كُود CSS بِاسْتِخْدَامِ خَاصِيَّةِ font-family مَعَ تَحْدِيدِ خَطٍّ بَدِيلٍ لِتَجَنُّبِ أَيِّ سُلُوكٍ غَيْرِ مُتَوَقَّعٍ.",
+        "caption_text": "يتم ربط الخطوط عبر Tag link في head، ثم استخدام font-family في CSS مع تحديد خط بديل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<head>\n<link rel=\"stylesheet\" \n  href=\"https://fonts.googleapis.com/\n  css?family=Sofia\">\n<style>\nbody {\n  font-family: \"Sofia\", \n  sans-serif;\n}\n</style>\n</head>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_google.asp"
+      ]
+    },
+    {
+      "id": "multiple_fonts",
+      "title": "استخدام خطوط متعددة",
+      "narration": {
+        "spoken_text": "يُمْكِنُكُمْ طَلَبُ أَكْثَرَ مِنْ خَطٍّ فِي نَفْسِ الْوَقْتِ عَنْ طَرِيقِ فَصْلِ أَسْمَاءِ الْخُطُوطِ بِرَمْزِ الْأَنْبُوبِ، لَكِنْ كُونُوا حَذِرِينَ، لِأَنَّ طَلَبَ الْكَثِيرِ مِنَ الْخُطُوطِ قَدْ يُؤَدِّي إِلَى بُطْءِ تَحْمِيلِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "يمكن دمج عدة خطوط باستخدام رمز ، مع مراعاة تأثير ذلك على سرعة تحميل الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "fonts.html",
+        "code": "<link rel=\"stylesheet\" \n  href=\"https://fonts.googleapis.com/\n  css?family=Audiowide|Sofia\">\n<style>\nh1.a {font-family: \"Audiowide\", \n  sans-serif;}\nh1.b {font-family: \"Sofia\", \n  sans-serif;}\n</style>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_google.asp"
+      ]
+    },
+    {
+      "id": "styling_fonts",
+      "title": "تنسيق الخطوط بـ CSS",
+      "narration": {
+        "spoken_text": "بِالطَّبْعِ، يُمْكِنُكُمْ تَطْبِيقُ كَافَّةِ تَأْثِيرَات CSS عَلَى هَذِهِ الْخُطُوطِ، مِثْلَ تَغْيِير font-size أَوْ إِضَافَةِ text-shadow لِجَعْلِ النَّصِّ أَكْثَرَ جَاذِبِيَّه وَتَمَيُّزاً فِي تَصْمِيمِكُمْ.",
+        "caption_text": "يمكنك استخدام خصائص CSS مثل font-size و text-shadow لتنسيق خطوط Google Fonts."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  font-family: \"Sofia\", \n  sans-serif;\n  font-size: 30px;\n  text-shadow: 3px 3px 3px \n  #ababab;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_google.asp"
+      ]
+    },
+    {
+      "id": "font_effects",
+      "title": "تفعيل تأثيرات الخطوط",
+      "narration": {
+        "spoken_text": "تُتِيح Google أَيْضاً تَأْثِيرَاتٍ خَاصَّه. أَضِيفُوا effect= فِي الرَّابِطِ، ثُمَّ اسْتَخْدِمُوا class بِاسْم font-effect- مَتْبُوعاً بِاسْمِ التَّأْثِيرِ عَلَى الْعُنْصُرِ الْمُرَادِ تَطْبِيقُ التَّأْثِيرِ عَلَيْهِ.",
+        "caption_text": "لتفعيل تأثيرات الخط، أضف اسم التأثير للرابط واستخدم class يبدأ بـ font-effect-."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "effects.html",
+        "code": "<link rel=\"stylesheet\" \n  href=\"https://fonts.googleapis.com/\n  css?family=Sofia&effect=fire\">\n<h1 class=\"font-effect-fire\">\n  Sofia on Fire\n</h1>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_google.asp"
+      ]
+    },
+    {
+      "id": "multiple_effects",
+      "title": "تأثيرات متعددة",
+      "narration": {
+        "spoken_text": "لِتَطْبِيقِ تَأْثِيرَاتٍ مُتَعَدِّدَه، افْصِلُوا بَيْنَهَا بِرَمْزِ الْأَنْبُوبِ أَيْضاً. هَذِهِ الطَّرِيقَه تُعْطِي لَمَسَاتٍ إِبْدَاعِيَّه لِعَنَاوِينِكُمْ، مِثْلَ تَأْثِير neon أَوْ outline أَوْ emboss، لِتَجْعَلُوا صَفْحَةِ الْوِبّ أَكْثَرَ حَيَوِيَّه.",
+        "caption_text": "يمكن دمج تأثيرات متعددة للخطوط باستخدام رمز في رابط Google API."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "multi_effects.html",
+        "code": "<link rel=\"stylesheet\" \n  href=\"https://fonts.googleapis.com/\n  css?family=Sofia&effect=neon|outline\">\n<h1 class=\"font-effect-neon\">\n  Neon Effect\n</h1>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_google.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةِ إِدْرَاجِ وَتَنْسِيق Google Fonts بِاحْتِرَافِيَّه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَاسْتِكْشَافِ الْمَزِيدِ مِنَ الْخُطُوطِ لِتَطْوِيرِ مَهَارَاتِكُمْ فِي تَصْمِيمِ الْوِبّ.",
+        "caption_text": "جربوا استخدام Google Fonts في مشاريعكم القادمة لتطوير مهاراتكم في تصميم الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Google Fonts يثري التصميم",
+          "الالتزام بـ fallback font ضروري",
+          "تجنب الإفراط في طلب الخطوط",
+          "استكشاف تأثيرات الخطوط المتاحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_google.asp"
+      ]
+    }
+  ]
+}
