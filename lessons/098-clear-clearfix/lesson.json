@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "98",
+  "title": "CSS clear Property and Clearfix Hack",
+  "course": "CSS",
+  "objectives": [
+    "فهم وظيفة خاصية clear في التحكم بالعناصر المجاورة لـ float",
+    "التعرف على مشكلة overflow في الحاويات التي تحتوي عناصر floated",
+    "تطبيق تقنية Clearfix لحل مشاكل التنسيق بفعالية",
+    "استخدام pseudo-element المسمى after بشكل احترافي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_float_clear.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول خاصية clear",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفَ نَتَحَكَّمُ فِي تَمَوْضُعِ الْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ clear، وَكَيْفَ نُعَالِجُ مَشَاكِلَ التَّدَفُّقِ فِي صَفْحَاتِ الْوِبّ بِاسْتِخْدَامِ تِقْنِيَةِ Clearfix.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد حول خاصية clear وتقنية Clearfix."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية clear تحدد سلوك العناصر المجاورة لـ float",
+          "تمنع العناصر من الالتفاف حول المحتوى العائم",
+          "تقنية Clearfix تحل مشكلة overflow في الحاويات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float_clear.asp"
+      ]
+    },
+    {
+      "id": "clear_property",
+      "title": "فهم خاصية clear",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةِ clear لِتَحْدِيدِ مَا يَجِبُ أَنْ يَحْدُثَ لِلْعُنْصُرِ الْمُجَاوِرِ لِعُنْصُرٍ يَسْتَخْدِم float. هَذِهِ الْخَاصِيَّه تَمْنَعُ الْعَنَاصِرَ مِنَ الِالْتِفَافِ حَوْلَ الْمُحْتَوَى الْعَائِمِ، مِمَّا يُسَاعِدُنَا فِي تَنْظِيمِ تَخْطِيطِ الصَّفْحَه بِشَكْلٍ دَقِيقٍ.",
+        "caption_text": "خاصية clear تمنع العناصر من الالتفاف حول المحتوى العائم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "clear: left يمنع العناصر من الالتفاف على الجانب الأيسر",
+          "clear: right يمنع العناصر من الالتفاف على الجانب الأيمن",
+          "clear: both يمنع العناصر من الالتفاف على كلا الجانبين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float_clear.asp"
+      ]
+    },
+    {
+      "id": "clear_example",
+      "title": "مثال عملي على clear",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ. عِنْدَمَا نَضَع div1 بِخَاصِيَّةِ float: left، فَإِنَّ div2 سَيَتَأَثَّرُ بِذَلِكَ. بِإِضَافَةِ clear: left إِلَى div2، نُجْبِرُهُ عَلَى النُّزُولِ أَسْفَلَ الْعُنْصُرِ الْعَائِمِ بَدَلًا مِنَ التَّمَوْضُعِ بِجَانِبِهِ.",
+        "caption_text": "مثال يوضح كيف تجبر clear العنصر على النزول أسفل العنصر العائم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div1 {\n  float: left;\n}\ndiv2 {\n  clear: left;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float_clear.asp"
+      ]
+    },
+    {
+      "id": "clearfix_problem",
+      "title": "مشكلة overflow في الحاويات",
+      "narration": {
+        "spoken_text": "أَحْيَاناً، إِذَا كَانَ الْعُنْصُرُ الْعَائِمُ أَطْوَلَ مِنَ الْحَاوِيَه الْأُمِّ، فَإِنَّهُ سَيَخْرُجُ عَنْ حُدُودِهَا، وَهَذَا مَا نُسَمِّيه overflow. لِحَلِّ هَذِهِ الْمُشْكِلَه، نَحْتَاجُ إِلَى اسْتِخْدَامِ تِقْنِيَه تُسَمَّى Clearfix.",
+        "caption_text": "مشكلة overflow تحدث عندما يخرج العنصر العائم عن حدود الحاوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "العنصر العائم يخرج عن حدود الحاوية",
+          "الحاوية لا تتعرف على طول العناصر بداخلها",
+          "Clearfix هو الحل البرمجي لهذه المشكلة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float_clear.asp"
+      ]
+    },
+    {
+      "id": "clearfix_code",
+      "title": "تطبيق تقنية Clearfix",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ تِقْنِيَةِ Clearfix عَلَى اسْتِخْدَام pseudo-element الْمُسَمَّى after. نَقُومُ بِإِضَافَةِ content فَارِغٍ، وَتَحْدِيد clear: both، وَتَعْيِين display: table لِضَمَانِ أَنَّ الْحَاوِيَه تَحْتَوِي جَمِيعَ الْعَنَاصِرِ الْعَائِمَه بِدَاخِلِهَا بِشَكْلٍ سَلِيمٍ.",
+        "caption_text": "كود تطبيق Clearfix باستخدام pseudo-element after."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".clearfix::after {\n  content: \"\";\n  clear: both;\n  display: table;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float_clear.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتُحَافِظُ الْحَاوِيَه عَلَى أَبْعَادِهَا الصَّحِيحَه وَتَحْتَوِي كُلَّ الْعَنَاصِرِ بِدَاخِلِهَا. هَذَا يَمْنَعُ تَشَوُّهَ التَّصْمِيمِ وَيَضْمَنُ تَنَاسُقَ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "النتيجة: الحاوية تحتوي العناصر العائمة بشكل صحيح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Container Height: Auto (Corrected)\nFloated Elements: Enclosed\nLayout: Stable and Clean",
+        "highlight_lines": [],
+        "output": "Container Height: Auto (Corrected)\nFloated Elements: Enclosed\nLayout: Stable and Clean",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float_clear.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا أَهَمِّيَّه خَاصِيَّةِ clear فِي التَّحَكُّمِ بِالْعَنَاصِرِ، وَكَيْفِيَّةِ اسْتِخْدَام Clearfix لِتَنْظِيمِ الْحَاوِيَاتِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا النَّتَائِجَ الرَّائِعَه فِي تَصْمِيمِ مَوَاقِعِ الْوِبّ.",
+        "caption_text": "خلاصة: استخدم clear و Clearfix للتحكم في تخطيط صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "clear تمنع الالتفاف حول العناصر العائمة",
+          "Clearfix تحل مشكلة overflow للحاويات",
+          "استخدم pseudo-element after لتطبيق Clearfix",
+          "جرب الأكواد بنفسك من الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_float_clear.asp"
+      ]
+    }
+  ]
+}
