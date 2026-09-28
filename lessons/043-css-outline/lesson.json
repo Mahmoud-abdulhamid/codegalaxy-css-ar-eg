@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "43",
+  "title": "فهم خاصية CSS Outline",
+  "course": "CSS",
+  "objectives": [
+    "التعرف على مفهوم الـ Outline في CSS",
+    "الفرق الجوهري بين الـ Outline والـ Border",
+    "تطبيق خاصية outline-style بأنواعها المختلفة",
+    "فهم كيفية تأثير الـ Outline على عناصر الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_outline.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Outline",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ Outline، وَهِيَ خَطٌّ يُرْسَمُ حَوْلَ الْعَنَاصِرِ خَارِجَ حُدُود Border، وَذَلِكَ لِجَعْلِ الْعُنْصُرِ يَبْرُزُ بِشَكْلٍ وَاضِحٍ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تستخدم خاصية Outline لرسم خط حول العناصر خارج حدود الـ Border لجعلها تبرز بشكل مميز."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Outline يرسم خارج الـ Border",
+          "يستخدم لجعل العناصر تبرز (Stand out)",
+          "لا يؤثر على أبعاد العنصر الكلية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline.asp"
+      ]
+    },
+    {
+      "id": "difference",
+      "title": "الفرق بين Outline و Border",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نُدْرِكَ أَنَّ Outline يَخْتَلِفُ عَن Border. ف Outline يُرْسَمُ خَارِجَ حُدُودِ الْعُنْصُرِ وَقَدْ يَتَدَاخَلُ مَعَ مُحْتَوًى آخَرَ، كَمَا أَنَّهُ لَا يُعَدُّ جُزْءاً مِنْ أَبْعَادِ الْعُنْصُرِ، فَلَا يَتَأَثَّرُ الْعَرْضُ أَوِ الِارْتِفَاعُ بِهِ.",
+        "caption_text": "الفرق الجوهري هو أن الـ Outline لا يشغل مساحة من أبعاد العنصر ولا يؤثر على تخطيط الصفحة."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الموقع",
+          "الأبعاد"
+        ],
+        "rows": [
+          [
+            "Border",
+            "داخل الـ Outline",
+            "تؤثر على الأبعاد"
+          ],
+          [
+            "Outline",
+            "خارج الـ Border",
+            "لا تؤثر على الأبعاد"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline.asp"
+      ]
+    },
+    {
+      "id": "outline-style",
+      "title": "خاصية outline-style",
+      "narration": {
+        "spoken_text": "تُعَدُّ خَاصِيَّةِ outline-style هِيَ الْأَسَاسُ لِتَحْدِيدِ شَكْلِ الْخَطِّ. بِدُونِ ضَبْطِ هَذِهِ الْخَاصِيَّه، لَنْ تَظْهَرَ أَيُّ خَصَائِصَ أُخْرَى لِلَةِ Outline. لَدَيْنَا قِيَمٌ مُتَعَدِّدَه مِثْل dotted، dashed، solid، وَغَيْرِهَا.",
+        "caption_text": "خاصية outline-style هي الخاصية الإجبارية لظهور الـ Outline وتدعم قيما متنوعة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم dotted",
+          "مفهوم dashed",
+          "مفهوم solid",
+          "مفهوم double",
+          "مفهوم groove, ridge, inset, outset"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline.asp"
+      ]
+    },
+    {
+      "id": "code-example-1",
+      "title": "تطبيق عملي للأكواد",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ مِثَالاً عَمَلِيّاً لِكِتَابَةِ هَذِهِ الْخَصَائِصِ فِي CSS. نَقُومُ بِتَحْدِيدِ الْعُنْصُر p ثُمَّ نُضِيفُ لَهُ كِلَاساً مُعَيَّناً، وَنُعَيِّنُ لَه outline-style مُنَاسِباً كَمَا نَرَى فِي هَذَا الْكُودِ الْبَسِيطِ.",
+        "caption_text": "تطبيق قيم مختلفة لخاصية outline-style على عناصر الفقرات p."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.dotted {outline-style: dotted;}\np.dashed {outline-style: dashed;}\np.solid {outline-style: solid;}\np.double {outline-style: double;}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline.asp"
+      ]
+    },
+    {
+      "id": "code-example-2",
+      "title": "استكمال قيم outline-style",
+      "narration": {
+        "spoken_text": "نُكْمِلُ بَقِيَّةِ الْقِيَمِ مِثْل groove و ridge و inset و outset. هَذِهِ الْقِيَمُ تُعْطِي تَأْثِيراً ثُلَاثِيَّ الْأَبْعَادِ، وَيَعْتَمِدُ مَظْهَرُهَا النِّهَائِيُّ بِشَكْلٍ كَبِيرٍ عَلَى قِيمَةِ outline-color الْمُسْتَخْدَمَه.",
+        "caption_text": "تأثيرات ثلاثية الأبعاد تعتمد على لون الـ Outline."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.groove {outline-style: groove;}\np.ridge {outline-style: ridge;}\np.inset {outline-style: inset;}\np.outset {outline-style: outset;}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَذَكَّرُوا أَنَّ Outline أَدَاه قَوِيَّه لِتَمْيِيزِ الْعَنَاصِرِ دُونَ التَّأْثِيرِ عَلَى تَخْطِيطِ الصَّفْحَه. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا التَّأْثِيرَاتِ بِأَعْيُنِكُمْ.",
+        "caption_text": "الـ Outline أداة ممتازة للتركيز البصري دون تغيير أبعاد العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "لا تنس ضبط outline-style",
+          "الـ Outline لا يشغل مساحة",
+          "استخدمه للتركيز على العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline.asp"
+      ]
+    }
+  ]
+}
