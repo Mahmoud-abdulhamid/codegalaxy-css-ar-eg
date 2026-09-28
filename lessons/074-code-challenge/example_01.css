@@ -1,0 +1,8 @@
+ul {
+  list-style-type: square;
+  padding: 20px;
+}
+li {
+  color: darkblue;
+  margin-bottom: 10px;
+}
