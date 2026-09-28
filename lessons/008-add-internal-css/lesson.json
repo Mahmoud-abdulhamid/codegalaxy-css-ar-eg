@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "8",
+  "title": "How To Add Internal CSS",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام Internal CSS",
+    "التعرف على مكان وضع style Element",
+    "تطبيق التنسيقات داخل head",
+    "الربط بين HTML و CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_howto_internal.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Internal CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ إِضَافَةِ Internal CSS، وَهِيَ طَرِيقَه مِثَالِيَّه عِنْدَمَا نَحْتَاجُ إِلَى تَطْبِيقِ تَنْسِيقَاتٍ فَرِيدَه عَلَى صَفْحَةِ HTML وَاحِدَه فَقَطْ.",
+        "caption_text": "مرحبا بكم في درس اليوم حول كيفية إضافة Internal CSS لتنسيق صفحات الويب بشكل فريد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم Internal CSS لتنسيق صفحة HTML واحدة",
+          "توضع التنسيقات داخل style Element",
+          "يتم تعريفها في قسم head"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_internal.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "قواعد استخدام Internal CSS",
+      "narration": {
+        "spoken_text": "لِتَطْبِيقِ هَذِهِ التَّقْنِيَه، نَسْتَخْدِم style Element دَاخِلَ قِسْم head. هَذَا يُسَاعِدُ الْمُتَصَفِّحْ عَلَى فَهْمِ التَّنْسِيقَاتِ قَبْلَ عَرْضِ مُحْتَوَى body، مِمَّا يَجْعَلُ الصَّفْحَه تَبْدُو مُنَسَّقَه بِشَكْلٍ مُتَكَامِلٍ وَمُنَظَّمٍ.",
+        "caption_text": "يتم وضع التنسيقات داخل style Element الموجود في قسم head لضمان تحميلها قبل عرض المحتوى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "يجب وضع style Element داخل head",
+          "تكتب قواعد CSS داخل هذا العنصر",
+          "تؤثر التنسيقات على كامل الصفحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_internal.asp"
+      ]
+    },
+    {
+      "id": "code_part1",
+      "title": "هيكل الكود الأساسي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَبْدَأُ بَةِ دُوكْ تَايْبْ html ثُمَّ نَفْتَح html Element. بَعْدَهَا نَضَعُ قِسْم head وَبِدَاخِلِهِ نَكْتُب style Element لِتَحْدِيدِ التَّنْسِيقَاتِ الْخَاصَّه بَةِ body و h1.",
+        "caption_text": "هيكل الكود يبدأ بـ DOCTYPE html ثم تعريف التنسيقات داخل style Element."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<style>\nbody {\n  background-color: linen;\n}\nh1 {\n  color: maroon;\n  margin-left: 40px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_internal.asp"
+      ]
+    },
+    {
+      "id": "code_part2",
+      "title": "استكمال هيكل الصفحة",
+      "narration": {
+        "spoken_text": "بَعْدَ إِغْلَاق style و head، نَنْتَقِلُ إِلَى body. هُنَا نَضَعُ الْمُحْتَوَى الْمَرْئِيَّ مِثْل h1 و p. لَاحِظْ كَيْفَ تَتَأَثَّرُ هَذِهِ الْعَنَاصِرُ بِالتَّنْسِيقَاتِ الَّتِي كَتَبْنَاهَا فِي الْأَعْلَى.",
+        "caption_text": "نكمل كتابة محتوى الصفحة داخل body ليظهر بالتنسيقات المحددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "</style>\n</head>\n<body>\n<h1>This is a heading</h1>\n<p>This is a paragraph.</p>\n</body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_internal.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "تحليل التنسيقات",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، قُمْنَا بِتَغْيِير background-color لَةِ body إِلَى linen، وَجَعَلْنَا لَوْن h1 هُو maroon مَعَ إِزَاحَه جَانِبِيَّه بِمِقْدَارِ 40px. هَذِهِ هِيَ قُوَّةِ Internal CSS فِي التَّحَكُّمِ بِالْمَظْهَرِ.",
+        "caption_text": "توضيح تأثير التنسيقات على العناصر مثل تغيير لون الخلفية وتنسيق العناوين."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "العنصر",
+          "الخاصية",
+          "القيمة"
+        ],
+        "rows": [
+          [
+            "body",
+            "background-color",
+            "linen"
+          ],
+          [
+            "h1",
+            "color",
+            "maroon"
+          ],
+          [
+            "h1",
+            "margin-left",
+            "40px"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_internal.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ يَا صَدِيقِي أَنَّ Internal CSS مُفِيدَه لِلصَّفَحَاتِ الْمُسْتَقِلَّه. إِذَا كَانَ لَدَيْكَ مَوْقِعٌ كَبِيرٌ، فَقَدْ تَكُون External CSS أَفْضَلَ لِإِدَارَةِ التَّنْسِيقَاتِ بِشَكْلٍ مُوَحَّدٍ فِي جَمِيعِ الصَّفَحَاتِ.",
+        "caption_text": "نصيحة: استخدم Internal CSS للصفحات المنفردة، وفكر في External CSS للمواقع الكبيرة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Internal CSS مثالية للصفحات الفريدة",
+          "تسهل تجربة التنسيقات بسرعة",
+          "تجنب تكرار الكود في صفحات متعددة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_internal.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمَ حَوْل Internal CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا الْكُودِ بِأَنْفُسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "شكرا لمتابعتكم، لا تنسوا تجربة الكود بأنفسكم عبر الرابط المرفق."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجع الكود المكتوب في الدرس",
+          "جرب تغيير القيم والألوان",
+          "تابع الدورة للمزيد من المهارات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_internal.asp"
+      ]
+    }
+  ]
+}
