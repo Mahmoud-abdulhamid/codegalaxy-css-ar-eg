@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "42",
+  "title": "CSS Box Model Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم Box Model في CSS",
+    "التعرف على مكونات العنصر الأساسية",
+    "تطبيق التحديات البرمجية على Box Model",
+    "تحسين مهارات التنسيق في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_boxmodel.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Box Model",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَحَدَّثُ عَنْ أَحَدِ أَهَمِّ مَفَاهِيمِ الْوِبّ، وَهُو Box Model. هَذَا الْمَفْهُومُ هُوَ الْأَسَاسُ لِتَنْسِيقِ أَيِّ Element دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد حول مفهوم Box Model الأساسي في تصميم صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم Box Model هو جوهر تصميم الويب",
+          "يتحكم في أبعاد ومساحات العناصر",
+          "فهم هذا المفهوم يسهل عليك تنسيق الصفحات",
+          "سنقوم بحل تحدي عملي لترسيخ المعلومات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "components",
+      "title": "مكونات Box Model",
+      "narration": {
+        "spoken_text": "كُلُّ Element فِي صَفْحَةِ الْوِبّ يُعْتَبَرُ كَصُنْدُوقٍ. يَتَكَوَّنُ هَذَا الصُّنْدُوقُ مِنْ Content، و Padding، و Border، و Margin. هَذِهِ الْأَرْبَعَه هِيَ الْأَعْمِدَه الرَّئِيسِيَّه لِأَيِّ تَصْمِيمٍ نَقُومُ بِهِ بِاسْتِخْدَام CSS.",
+        "caption_text": "يتكون كل Element في صفحات الويب من أربعة أجزاء رئيسية: Content وPadding وBorder وMargin."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "المكون",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "Content",
+            "المحتوى الفعلي"
+          ],
+          [
+            "Padding",
+            "المساحة الداخلية"
+          ],
+          [
+            "Border",
+            "الإطار الخارجي"
+          ],
+          [
+            "Margin",
+            "المساحة الخارجية"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى كَيْفِيَّةِ كِتَابَةِ هَذِهِ الْخَصَائِصِ. نَسْتَخْدِم Selector لِتَحْدِيدِ الْعُنْصُرِ، ثُمَّ نُضِيفُ الْقِيَمَ لَةِ padding و margin. لَاحِظْ كَيْفَ نُحَدِّدُ الْأَبْعَادَ بِدِقَّه لِضَمَانِ ظُهُورِ الْعُنْصُرِ بِشَكْلٍ صَحِيحٍ.",
+        "caption_text": "نستخدم CSS لتحديد خصائص Box Model مثل padding وmargin وborder لكل Element."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 300px;\n  padding: 20px;\n  border: 5px solid black;\n  margin: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيد width لِلْعُنْصُرِ. بَعْدَهَا، يُضَاف padding دَاخِلَ الْإِطَارِ، وَيُضَاف border حَوْلَ الْمُحْتَوَى. أَمَّا margin، فَهِيَ الْمَسَافَه الْفَاصِلَه بَيْنَ هَذَا الْعُنْصُرِ وَالْعَنَاصِرِ الْأُخْرَى فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "توضيح تأثير كل خاصية: width يحدد العرض، padding للمساحة الداخلية، border للإطار، وmargin للمسافة الخارجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "width يحدد عرض المحتوى",
+          "padding يضيف مساحة داخلية شفافة",
+          "border يحيط بالمحتوى والـ padding",
+          "margin يحدد المسافة خارج الـ border"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "visual_output",
+      "title": "المعاينة المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَنَرَى الْعُنْصُرَ يَتَمَدَّدُ وَيَأْخُذُ مَسَاحَتَهُ الْخَاصَّه. هَذَا التَّحَدِّي يُسَاعِدُنَا عَلَى فَهْمِ كَيْفَ يَتَفَاعَل browser مَعَ هَذِهِ الْقِيَمِ لِعَرْضِ الصَّفْحَه بِشَكْلٍ مُنَسَّقٍ وَجَمِيلٍ.",
+        "caption_text": "تظهر النتيجة النهائية للعنصر بعد تطبيق خصائص Box Model في المتصفح."
+      },
+      "visual": {
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "margin",
+            "label": "Margin",
+            "active": false
+          },
+          {
+            "id": "border",
+            "label": "Border",
+            "active": false
+          },
+          {
+            "id": "padding",
+            "label": "Padding",
+            "active": false
+          },
+          {
+            "id": "content",
+            "label": "Content",
+            "active": false
+          }
+        ],
+        "edges": [
+          {
+            "source": "margin",
+            "target": "border",
+            "label": ""
+          },
+          {
+            "source": "border",
+            "target": "padding",
+            "label": ""
+          },
+          {
+            "source": "padding",
+            "target": "content",
+            "label": ""
+          }
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنْ أَهَمِّ النَّصَائِحِ هِيَ اسْتِخْدَام box-sizing: border-box. هَذِهِ الْخَاصِيَّه تَجْعَلُ الْحِسَابَاتِ أَسْهَلَ، حَيْثُ يَتَضَمَّنُ الْعَرْضُ الْكُلِّيُّ لِلْعُنْصُرِ كُلًّا مِن padding و border، مِمَّا يَمْنَعُ حُدُوثَ مَشَاكِلَ فِي التَّصْمِيمِ.",
+        "caption_text": "استخدام box-sizing: border-box يجعل التحكم في أبعاد العناصر أكثر دقة وسهولة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم box-sizing: border-box دائما",
+          "تحقق من القيم في الـ browser inspector",
+          "جرب تغيير القيم لملاحظة التأثير",
+          "حافظ على تناسق المسافات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَلَّمْنَا أَهَمِّيَّةِ Box Model فِي CSS. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "شكرا لمتابعتكم. لا تنسوا تجربة التحدي البرمجي بأنفسكم عبر الرابط المرفق."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية مكونات Box Model",
+          "شرحنا كيفية تطبيق الخصائص عمليا",
+          "تعرفنا على أفضل الممارسات",
+          "رابط التحدي متاح في وصف الفيديو"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_boxmodel.asp"
+      ]
+    }
+  ]
+}
