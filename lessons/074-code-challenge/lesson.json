@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "74",
+  "title": "CSS Lists Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تنسيق القوائم باستخدام CSS",
+    "تطبيق خصائص list-style-type و list-style-image",
+    "التحكم في مواضع القوائم عبر list-style-position",
+    "حل تحديات برمجية عملية على القوائم"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_list.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي القوائم",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنُكَمِّلُ الْيَوْمَ مَسِيرَتَنَا بِحَلِّ تَحَدِّي الْقَوَائِمِ، حَيْثُ نَخْتَبِرُ مَهَارَاتِنَا فِي تَحْسِينِ مَظْهَرِ الْقَوَائِمِ الْمُرَتَّبَه وَغَيْرِ الْمُرَتَّبَه بِاسْتِخْدَامِ خَصَائِص CSS الْمُتَنَوِّعَه.",
+        "caption_text": "مرحبا بكم في درس تحدي القوائم ضمن دورة CSS، حيث سنقوم بتطبيق مهاراتنا في تنسيق القوائم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهم هيكلية القوائم في HTML",
+          "تطبيق خصائص CSS على ul و ol",
+          "حل تحديات برمجية عملية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_list.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية للقوائم",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ الْقَوَائِمِ، نَعْتَمِدُ عَلَى خَاصِيَّةِ list-style. يُمْكِنُنَا تَغْيِيرُ شَكْلِ الْعَلَامَه بِاسْتِخْدَام list-style-type، أَوْ حَتَّى وَضْعِ صُورَه خَاصَّه بِاسْتِخْدَام list-style-image، مَعَ ضَبْطِ مَوْقِعِهَا بِوَاسِطَةِ list-style-position.",
+        "caption_text": "تعتمد خصائص القوائم في CSS على list-style للتحكم في شكل العلامات وموقعها."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "list-style-type",
+            "تحديد شكل العلامة"
+          ],
+          [
+            "list-style-image",
+            "استخدام صورة كعلامة"
+          ],
+          [
+            "list-style-position",
+            "تحديد موقع العلامة"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_list.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود تنسيق القوائم",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيد ul وَنُعَيِّن list-style-type إِلَى square لِتَغْيِيرِ النُّقَاطِ إِلَى مُرَبَّعَاتٍ، ثُمَّ نُضِيفُ بَعْضَ التَّنْسِيقَاتِ الْإِضَافِيَّه لِتَحْسِينِ الْمَظْهَرِ الْعَامِّ لِلْقَائِمَه دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مثال برمجي لتغيير شكل علامات القائمة إلى مربعات باستخدام CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  list-style-type: square;\n  padding: 20px;\n}\nli {\n  color: darkblue;\n  margin-bottom: 10px;\n}",
+        "highlight_lines": [],
+        "output": "■ Item 1\n■ Item 2",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_list.asp"
+      ]
+    },
+    {
+      "id": "positioning",
+      "title": "التحكم في موقع العلامات",
+      "narration": {
+        "spoken_text": "خَاصِيَّةِ list-style-position تُعَدُّ مُهِمَّه جِدّاً. عِنْدَ ضَبْطِهَا عَلَى inside، تَكُونُ الْعَلَامَه دَاخِلَ كُتْلَةِ النَّصِّ، بَيْنَمَا عِنْدَ ضَبْطِهَا عَلَى outside، تَكُونُ خَارِجَ النَّصِّ، وَهَذَا يُؤَثِّرُ كَثِيراً عَلَى تَنْظِيمِ الْمُحْتَوَى فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "الفرق بين inside و outside في خاصية list-style-position."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "inside: العلامة داخل مساحة النص",
+          "outside: العلامة خارج مساحة النص",
+          "تأثير مباشر على المحاذاة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_list.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، احْرِصُوا دائماً عَلَى اخْتِيَارِ أَنْوَاعِ قَوَائِمَ تَتَنَاسَبُ مَعَ تَصْمِيمِ الْمَوْقِعِ. اسْتِخْدَام shorthand property مِثْل list-style يُسَاعِدُ فِي كِتَابَه كُودٍ أَنْظَفَ وَأَكْثَرَ كَفَاءَه، مِمَّا يُسَهِّلُ صِيَانَةِ الْمَشَارِيعِ الْبَرْمَجِيَّه الْكَبِيرَه.",
+        "caption_text": "استخدام الاختصارات في CSS يجعل الكود أكثر نظافة وكفاءة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* استخدام الاختصار */\nul {\n  list-style: square inside url('icon.png');\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_list.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا التَّحَدِّي، تَعَلَّمْنَا كَيْفَ نَتَحَكَّمُ بِشَكْلٍ كَامِلٍ فِي الْقَوَائِمِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ، وَلَا تَتَرَدَّدُوا فِي طَرْحِ أَسْئِلَتِكُمْ لِنُطَوِّرَ مَهَارَاتِنَا مَعاً فِي هَذِهِ الدَّوْرَه.",
+        "caption_text": "خلاصة الدرس: تعلم التحكم في القوائم وتطبيق التحديات البرمجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية خصائص list-style",
+          "تم شرح الفرق بين المواقع",
+          "تم تقديم أمثلة عملية",
+          "شجعنا على الممارسة المستمرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_list.asp"
+      ]
+    }
+  ]
+}
