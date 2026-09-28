@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "76",
+  "title": "التحكم في أحجام الجداول باستخدام CSS Width و CSS Height",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام خاصية width لتحديد عرض الجدول في CSS",
+    "تطبيق النسب المئوية مثل 100 و 50 لعرض الجدول",
+    "استخدام القيم الثابتة بالبكسل مثل 500px",
+    "الاستفادة من قيمة auto لترك المتصفح يحسب العرض تلقائيا",
+    "التحكم في ارتفاع العناصر الداخلية للجدول مثل th باستخدام خاصية height"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_table_size.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة حول تحكم أحجام الجداول في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ التَّحَحُّمِ فِي أَحْجَامِ الْجَدَاوِلِ مِنْ حَيْثُ الْعَرْضِ وَالِارْتِفَاعِ بِاسْتِخْدَامِ خَاصِّيَّةِ width وَخَاصِّيَّةِ height بِدِقَّه وَاحْتِرَافِيَّه عَالِيَه فِي صَفْحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس التحكم في أحجام الجداول باستخدام خصائص width و height في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في عرض وارتفاع الجداول في CSS",
+          "استخدام خاصية width لتحديد العرض",
+          "استخدام خاصية height لتحديد الارتفاع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_size.asp"
+      ]
+    },
+    {
+      "id": "scene_2_width_percent",
+      "title": "استخدام النسبة المئوية لتحديد العرض",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِخَاصِّيَّةِ width. إِذَا أَرَدْنَا أَنْ يَمْتَدَّ الْجَدْوَلُ عَلَى كَامِلِ الشَّاشَه أَوْ عَرْضِ الصَّفْحَه، فَإِنَّنَا نَسْتَخْدِمُ قِيمَةِ width 100 بالمئَه. أَمَّا إِذَا أَرَدْنَا أَنْ يَشْغَلَ نِصْفَ الصَّفْحَه فَقَطْ، فَنَسْتَخْدِمُ قِيمَةِ width 50 بالمئَه بِكُلِّ سُهُولَه.",
+        "caption_text": "استخدام النسبة المئوية في width لتغطية كامل الشاشة أو نصف الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "table-width.css",
+        "code": "table\n{\n  width: 100%;\n}\ntable\n{\n  width: 50%;\n}",
+        "highlight_lines": [],
+        "output": "Table width set to 100% or 50% of parent container",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_size.asp"
+      ]
+    },
+    {
+      "id": "scene_3_width_fixed",
+      "title": "تحديد عرض ثابت بالبكسل",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى حَالَةِ التَّحْدِيدِ الثَّابِتِ لِلْعَرْضِ. إِذَا كُنْتَ تُرِيدُ جَدْوَلاً بِعَرْضٍ ثَابِتٍ لَا يَتَغَيَّرُ مَحْمِيّاً بِقِيَمٍ مُحَدَّدَه، فَيُمْكِنُكَ اسْتِخْدَامُ قِيمَةِ width 500px لِتَحْقِيقِ هَذِهِ النَّتِيجَه بِدِقَّه تَمَاماً.",
+        "caption_text": "إنشاء جدول بعرض ثابت محدد باستخدام وحدة بكسل مثل 500px."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "fixed-width.css",
+        "code": "table\n{\n  width: 500px;\n}",
+        "highlight_lines": [],
+        "output": "Table width fixed to 500 pixels",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_size.asp"
+      ]
+    },
+    {
+      "id": "scene_4_width_auto",
+      "title": "استخدام القيمة auto للحساب التلقائي",
+      "narration": {
+        "spoken_text": "تَمْنَحُنَا لُغَةِ CSS أَيْضاً مِزَه رَائِعَه لِتَرْكِ الْأَمْرِ لِلْمُتَصَفِّحْ. عِنْدَمَا تَكْتُب width auto فَإِنَّ مُتَصَفِّحْ الْوِبّ سَيَقُومُ بِحِسَابِ الْعَرْضِ الْمُنَاسِبِ تِلْقَائِيّاً بِنَاءً عَلَى مُحْتَوَى الْجَدْوَلِ الدَّاخِلِيِّ.",
+        "caption_text": "استخدام قيمة auto لكي يقوم متصفح الويب بحساب العرض تلقائيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "auto-width.css",
+        "code": "table\n{\n  width: auto;\n}",
+        "highlight_lines": [],
+        "output": "Browser calculates table width automatically based on content",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_size.asp"
+      ]
+    },
+    {
+      "id": "scene_5_table_height",
+      "title": "التحكم في ارتفاع عناصر الجدول باستخدام height",
+      "narration": {
+        "spoken_text": "بَعْدَ أَنْ تَعَرَّفْنَا عَلَى الْعَرْضِ، نَنْتَقِلُ الْآنَ إِلَى خَاصِّيَّةِ height لِلتَّحَحُّمِ فِي الِارْتِفَاعِ. يُمْكِنُنَا تَطْبِيقُ هَذِهِ الْخَاصِّيَّه عَلَى خَلَايَا الرُّؤُوسِ مِثْلَ عُنْصُر th لِتَحْدِيدِ ارْتِفَاعٍ ثَابِتٍ وَلْيَكُنْ سَبْعِينَ بِكْسِلْ.",
+        "caption_text": "استخدام خاصية height لتحديد ارتفاع خلايا رؤوس الجدول مثل عنصر th."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "table-height.css",
+        "code": "th\n{\n  height: 70px;\n}",
+        "highlight_lines": [],
+        "output": "Table header height set to 70 pixels",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_size.asp"
+      ]
+    },
+    {
+      "id": "scene_6_summary_conclusion",
+      "title": "خلاصة أحجام الجداول في CSS",
+      "narration": {
+        "spoken_text": "خُلَاصَةِ دَرْسِنَا الْيَوْمِ يَا أَصْدِقَائِي، أَنَّ التَّحَحُّمَ فِي أَبْعَادِ الْجَدَاوِلِ عَبْر width و height يَمْنَحُ صَفْحَاتِ الْوِبّ تَنْسِيقاً احْتِرَافِيّاً. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِأَنْفُسِكُمْ وَانْتَظِرُونَا فِي الدَّرْسِ الْقَادِمِ مَعَ مَهَارَاتٍ جَدِيدَه.",
+        "caption_text": "خلاصة درس التحكم في أحجام الجداول وخصائص width و height في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام width للنسب المئوية والقيم الثابتة و auto",
+          "استخدام height لتحديد ارتفاع الخلايا والرؤوس",
+          "تحسين المظهر العام لتصميم الجداول"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_size.asp"
+      ]
+    }
+  ]
+}
