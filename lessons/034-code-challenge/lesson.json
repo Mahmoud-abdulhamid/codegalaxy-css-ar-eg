@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "34",
+  "title": "CSS Margins Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية التحكم في المسافات الخارجية باستخدام CSS",
+    "تطبيق خاصية margin على العناصر المختلفة",
+    "التعرف على تأثير الـ Margin على تخطيط صفحة الويب",
+    "حل تحديات برمجية عملية لتعزيز مهارات الـ CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_margin.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي الـ Margins",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنُطَبِّقُ مَا تَعَلَّمْنَاهُ عَنْ خَاصِيَّةِ margin مِنْ خِلَالِ حَلِّ تَحَدٍّ بَرْمَجِيٍّ عَمَلِيٍّ لِتَعْزِيزِ مَهَارَاتِكُمْ فِي تَصْمِيمِ صَفَحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تحدي الـ CSS Margins، حيث سنقوم بتطبيق المفاهيم البرمجية عمليا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على أهمية الـ Margin في CSS",
+          "تطبيق التحدي البرمجي الخاص بالمسافات الخارجية",
+          "تحسين مهارات التنسيق في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_margin.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم الـ Margin في CSS",
+      "narration": {
+        "spoken_text": "خَاصِيَّةِ margin تُسْتَخْدَمُ لِإِنْشَاءِ مَسَافَاتٍ خَارِجِيَّه حَوْل Elements. هَذِهِ الْمَسَافَاتُ تَكُونُ خَارِجَ حُدُودِ الْعُنْصُرِ، وَتُسَاعِدُنَا فِي الْفَصْلِ بَيْنَ الْعَنَاصِرِ الْمُخْتَلِفَه عَلَى صَفْحَةِ الْوِبّ بِشَكْلٍ مُنَظَّمٍ.",
+        "caption_text": "تستخدم خاصية margin لإنشاء مسافات خارجية حول الـ Elements، مما يساعد في تنظيم التخطيط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Margin يقع خارج حدود الـ Element",
+          "يؤثر على المسافة بين العناصر المتجاورة",
+          "يمكن التحكم في كل اتجاه على حدة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_margin.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود التحدي البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيد Selector ثُمَّ نُضِيفُ خَاصِيَّةِ margin بِقِيمَه مُحَدَّدَه ب pixels لِتَحْقِيقِ التَّبَاعُدِ الْمَطْلُوبِ بَيْنَ الْعَنَاصِرِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "نستخدم الـ Selector مع خاصية margin لتحديد المسافات الخارجية المطلوبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  margin: 20px;\n  border: 1px solid black;\n}\n\np {\n  margin-top: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_margin.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للـ Syntax",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَطْبِيق margin بِمِقْدَارِ عِشْرِين pixels عَلَى جَمِيعِ جَوَانِب div. أَمَّا p فَقَدْ حَدَّدْنَا لَه margin-top فَقَطْ لِإِضَافَه مَسَافَه عُلْوِيَّه دَقِيقَه.",
+        "caption_text": "شرح تطبيق الـ margin على الـ div والـ p للتحكم في المسافات بدقة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "margin: 20px يطبق المسافة على جميع الجهات",
+          "margin-top يحدد المسافة العلوية فقط",
+          "استخدام الـ pixels كوحدة قياس أساسية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_margin.asp"
+      ]
+    },
+    {
+      "id": "visual_output",
+      "title": "المعاينة المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ لَنَا صَفْحَةِ الْوِبّ مَسَافَاتٍ وَاضِحَه بَيْنَ الْعَنَاصِرِ. هَذَا التَّبَاعُدُ هُوَ مَا يَمْنَحُ التَّصْمِيمَ مَظْهَراً احْتِرَافِيّاً وَمُرِيحاً لِلْعَيْنِ عِنْدَ التَّصَفُّحْ.",
+        "caption_text": "تظهر المعاينة المرئية المسافات المطبقة التي تمنح التصميم مظهرا احترافيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<div>\n  <p>هذا العنصر يحتوي على margin</p>\n</div>",
+        "highlight_lines": [],
+        "output": "المسافة الخارجية تظهر حول الـ div والـ p",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_margin.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِاسْتِخْدَامِ قِيَمٍ مُتَنَاسِقَه لِلَةِ margin لِلْحِفَاظِ عَلَى تَنَاسُقِ التَّصْمِيمِ. تَجَنَّبُوا الْمُبَالَغَه فِي الْمَسَافَاتِ حَتَّى لَا يَبْدُوَ الْمُحْتَوَى مُشَتَّتاً عَلَى الشَّاشَه.",
+        "caption_text": "أفضل الممارسات: حافظ على تناسق قيم الـ margin لضمان تصميم متوازن."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم قيم margin متناسقة",
+          "اختبر التصميم على مختلف أحجام الشاشات",
+          "تجنب المسافات المفرطة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_margin.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا تَحَدِّيَ الْيَوْمَ. تَعَلَّمْنَا كَيْفَ نُدِيرُ الْمَسَافَاتِ الْخَارِجِيَّه بِاسْتِخْدَام CSS. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ مِنْ خِلَالِ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو.",
+        "caption_text": "خلاصة: لقد أتقنا التحكم في الـ margin. جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية مفاهيم الـ margin",
+          "تم حل التحدي البرمجي بنجاح",
+          "استمروا في الممارسة لتطوير مهاراتكم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_margin.asp"
+      ]
+    }
+  ]
+}
