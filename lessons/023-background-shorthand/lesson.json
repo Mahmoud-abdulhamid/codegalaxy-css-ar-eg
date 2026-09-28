@@ -84,7 +84,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "body {\n  background: #ffffff \n  url(\"img_tree.png\") \n  no-repeat \n  right top;\n}",
+        "code": "body {\n  background: #ffffff\n  url(\"img_tree.png\")\n  no-repeat\n  right top;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
