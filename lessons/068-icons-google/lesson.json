@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "68",
+  "title": "استخدام Google Icons في صفحات الويب",
+  "course": "CSS",
+  "objectives": [
+    "تعلم كيفية دمج Google Icons في صفحات الويب",
+    "فهم كيفية استخدام link Element لربط مكتبة الأيقونات",
+    "التعرف على كيفية عرض الأيقونات باستخدام i Element",
+    "تطبيق عملي على استخدام Material Icons"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_icons_google.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Google Icons",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ إِضَافَةِ Google Icons إِلَى صَفْحَةِ الْوِبّ بِسُهُولَه، دُونَ الْحَاجَه إِلَى تَحْمِيلِ أَيِّ مَلَفَّاتٍ أَوْ إِجْرَاءِ تَنْصِيبٍ مُعَقَّدٍ.",
+        "caption_text": "مرحبا بكم في درس استخدام Google Icons في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Google Icons في صفحات الويب",
+          "لا حاجة لتحميل أو تثبيت أي ملفات",
+          "طريقة سريعة وفعالة لتحسين واجهة المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons_google.asp"
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "إعداد الصفحة وربط المكتبة",
+      "narration": {
+        "spoken_text": "لِاسْتِخْدَامِ هَذِهِ الْأَيْقُونَاتِ، نَحْتَاجُ إِلَى إِضَافَه سَطْرٍ وَاحِدٍ دَاخِلَ قِسْم head فِي مِلَفِّ HTML. هَذَا السَّطْرُ هُو link Element يَقُومُ بِرَبْطِ مِلَفِّ CSS الْخَاصِّ بَةِ Material Icons مِنْ خَوَادِم Google.",
+        "caption_text": "يتم ربط مكتبة Google Icons عبر إضافة link Element داخل قسم head."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\n  </head>\n  <body>\n    <h1>Hello World</h1>\n    <p>Styled Web Page</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons_google.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكلية الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنُلْقِ نَظْرَه عَلَى الْكُودِ الْكَامِلِ. نَبْدَأُ بَةِ دُوكْ تَايْبْ HTML ثُمَّ نُحَدِّدُ قِسْم head لِرَبْطِ الْمَكْتَبَه، وَفِي قِسْم body نَقُومُ بِاسْتِدْعَاءِ الْأَيْقُونَاتِ بِاسْتِخْدَام i Element مَعَ إِسْنَادِ الْكَلَاس material-icons.",
+        "caption_text": "هيكل المستند الكامل وكيفية استدعاء الأيقونات داخل body."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\n  </head>\n  <body>\n    <i class=\"material-icons\">cloud</i>\n    <i class=\"material-icons\">favorite</i>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons_google.asp"
+      ]
+    },
+    {
+      "id": "element_explanation",
+      "title": "شرح i Element",
+      "narration": {
+        "spoken_text": "نُحَدِّدُ الْأَيْقُونَه الْمَطْلُوبَه بِكِتَابَةِ اسْمِهَا بَيْن Start Tag و End Tag لِلْعُنْصُر i. مَثَلاً، كِتَابَةِ cloud تُظْهِرُ أَيْقُونَةِ السَّحَابَه، وَكِتَابَةِ favorite تُظْهِرُ أَيْقُونَةِ الْقَلْبِ، وَهَكَذَا لِبَقِيَّةِ الْأَيْقُونَاتِ.",
+        "caption_text": "يتم تحديد شكل الأيقونة من خلال النص المكتوب داخل i Element."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام i Element لعرض الأيقونة",
+          "إضافة class باسم material-icons",
+          "كتابة اسم الأيقونة كنص داخل العنصر",
+          "سهولة التبديل بين الأيقونات المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons_google.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "المعاينة المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَشْغِيلِ هَذَا الْكُودِ فِي مُتَصَفِّحْ الْوِبّ، سَتَظْهَرُ الْأَيْقُونَاتُ بِشَكْلٍ جَمَالِيٍّ وَوَاضِحٍ. هَذِهِ الطَّرِيقَه تُعْتَبَرُ مِنْ أَفْضَلِ الْمُمَارَسَاتِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ دُونَ زِيَادَةِ حَجْمِ الصَّفْحَه.",
+        "caption_text": "النتيجة المرئية للأيقونات كما تظهر في المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "☁  ❤  📎  💻  🚦",
+        "highlight_lines": [],
+        "output": "☁ ❤ 📎 💻 🚦",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons_google.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات تقنية",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً أَنَّ هَذِهِ الْأَيْقُونَاتِ تَعْتَمِدُ عَلَى اتِّصَالِ الْإِنْتَرْنِت لِجَلْبِ الْمَلَفَّاتِ مِنْ خَوَادِم Google. إِذَا كُنْتَ تَرْغَبُ فِي قَائِمَه كَامِلَه بِكُلِّ الْأَيْقُونَاتِ الْمُتَاحَه، يُمْكِنُكَ زِيَارَةِ Icon Tutorial.",
+        "caption_text": "نصائح هامة حول استخدام مكتبة Google Icons."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تتطلب اتصالا بالإنترنت للعمل",
+          "يمكن الوصول لقائمة الأيقونات عبر Icon Tutorial",
+          "تأكد من كتابة اسم الأيقونة بشكل صحيح",
+          "لا حاجة لتثبيت أي إضافات برمجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons_google.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةِ دَمْج Google Icons بِاسْتِخْدَام link Element، وَكَيْفِيَّةِ عَرْضِهَا بِوَاسِطَةِ i Element. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَاسْتِكْشَافِ الْمَزِيدِ مِنَ الْأَيْقُونَاتِ.",
+        "caption_text": "ملخص سريع لما تم تعلمه في هذا الدرس."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم ربط مكتبة الأيقونات بنجاح",
+          "تم استخدام i Element لعرض الأيقونات",
+          "تم توضيح أهمية Google Icons",
+          "شجعنا على تجربة الأكواد بأنفسكم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_icons_google.asp"
+      ]
+    }
+  ]
+}
