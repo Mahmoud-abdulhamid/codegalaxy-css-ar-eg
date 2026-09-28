@@ -1,0 +1,5 @@
+h1 { text-decoration-style: solid; }
+h2 { text-decoration-style: double; }
+h3 { text-decoration-style: dotted; }
+p.ex1 { text-decoration-style: dashed; }
+p.ex2 { text-decoration-style: wavy; }
