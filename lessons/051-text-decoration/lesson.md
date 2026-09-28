@@ -52,11 +52,11 @@ p {
 
 ```css
 h1 { text-decoration-line: overline;
-text-decoration-color: red; }
+  text-decoration-color: red; }
 h2 { text-decoration-line: line-through;
-text-decoration-color: blue; }
+  text-decoration-color: blue; }
 h3 { text-decoration-line: underline;
-text-decoration-color: green; }
+  text-decoration-color: green; }
 ```
 
 ## أفضل الممارسات
