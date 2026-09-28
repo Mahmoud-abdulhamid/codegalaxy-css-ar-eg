@@ -83,7 +83,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "p\n{\n  color: red;\n  text-align: center;\n}",
+        "code": "p {\n  color: red;\n  text-align: center;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
