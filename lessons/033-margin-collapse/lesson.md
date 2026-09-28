@@ -22,7 +22,6 @@
 h1 {
   margin-bottom: 50px;
 }
-
 h2 {
   margin-top: 20px;
 }
@@ -43,7 +42,7 @@ h2 {
 ```css
 p {
   margin-top: 30px;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 ```
 
