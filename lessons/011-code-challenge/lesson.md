@@ -26,6 +26,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>CSS Challenge</title>
   </head>
   <body>
