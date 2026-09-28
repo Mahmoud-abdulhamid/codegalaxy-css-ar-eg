@@ -104,7 +104,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "h1 { text-decoration-line: overline;\ntext-decoration-color: red; }\nh2 { text-decoration-line: line-through;\ntext-decoration-color: blue; }\nh3 { text-decoration-line: underline;\ntext-decoration-color: green; }",
+        "code": "h1 { text-decoration-line: overline;\n  text-decoration-color: red; }\nh2 { text-decoration-line: line-through;\n  text-decoration-color: blue; }\nh3 { text-decoration-line: underline;\n  text-decoration-color: green; }",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
