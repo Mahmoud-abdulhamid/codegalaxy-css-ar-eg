@@ -29,10 +29,18 @@
 تطبيق قيم مختلفة لخاصية outline-style على عناصر الفقرات p.
 
 ```css
-p.dotted {outline-style: dotted;}
-p.dashed {outline-style: dashed;}
-p.solid {outline-style: solid;}
-p.double {outline-style: double;}
+p.dotted {
+  outline-style: dotted;
+}
+p.dashed {
+  outline-style: dashed;
+}
+p.solid {
+  outline-style: solid;
+}
+p.double {
+  outline-style: double;
+}
 ```
 
 ## استكمال قيم outline-style
@@ -40,10 +48,18 @@ p.double {outline-style: double;}
 تأثيرات ثلاثية الأبعاد تعتمد على لون الـ Outline.
 
 ```css
-p.groove {outline-style: groove;}
-p.ridge {outline-style: ridge;}
-p.inset {outline-style: inset;}
-p.outset {outline-style: outset;}
+p.groove {
+  outline-style: groove;
+}
+p.ridge {
+  outline-style: ridge;
+}
+p.inset {
+  outline-style: inset;
+}
+p.outset {
+  outline-style: outset;
+}
 ```
 
 ## خلاصة الدرس
