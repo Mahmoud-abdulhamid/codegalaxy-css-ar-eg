@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "58",
+  "title": "CSS Web Safe Fonts",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم Web Safe Fonts",
+    "تعلم أهمية استخدام Fallback Fonts",
+    "التعرف على أشهر الخطوط الآمنة للويب",
+    "تطبيق خاصية font-family في CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_font_websafe.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Web Safe Fonts",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى مَفْهُوم وِبّ Safe Fonts، وَهِيَ الْخُطُوطُ الْمُثَبَّتَه افْتِرَاضِيّاً عَلَى مُخْتَلَفِ أَنْظِمَةِ التَّشْغِيلِ وَالْمُتَصَفِّحَاتِ، مِمَّا يَضْمَنُ ظُهُورَ النَّصِّ بِشَكْلٍ مُتَنَاسِقٍ لِجَمِيعِ الْمُسْتَخْدِمِينَ.",
+        "caption_text": "تعد Web Safe Fonts هي الخطوط المثبتة عالميا عبر جميع المتصفحات والأجهزة لضمان اتساق العرض."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الخطوط الآمنة للويب هي خطوط مثبتة مسبقا",
+          "تضمن تجربة مستخدم متسقة عبر المتصفحات",
+          "تجنب مشاكل عدم تحميل الخطوط المخصصة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_websafe.asp"
+      ]
+    },
+    {
+      "id": "fallback_concept",
+      "title": "أهمية Fallback Fonts",
+      "narration": {
+        "spoken_text": "لَا تُوجَدُ خُطُوطٌ آمِنَه بِنِسْبَه مِئَه بِالْمِئَه. لِذَلِكَ، يَجِبُ عَلَيْنَا اسْتِخْدَام Fallback Fonts، وَهِيَ قَائِمَه مِنَ الْخُطُوطِ الْبَدِيلَه. إِذَا لَمْ يَعْثُرِ الْمُتَصَفِّحْ عَلَى الْخَطِّ الْأَوَّلِ، فَإِنَّهُ يَنْتَقِلُ تِلْقَائِيّاً لِتَجْرِبَةِ الْخَطِّ التَّالِي فِي الْقَائِمَه.",
+        "caption_text": "يجب دائما توفير قائمة من الخطوط البديلة Fallback Fonts لضمان عرض النص في حال عدم توفر الخط الأساسي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "لا يوجد خط آمن تماما بنسبة 100",
+          "استخدم قائمة من الخطوط في خاصية font-family",
+          "يجب دائما إنهاء القائمة باسم عائلة خط عامة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_websafe.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق خاصية font-family",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ الْعَمَلِيِّ. نَقُومُ بِتَحْدِيد font-family لِلْعُنْصُر p. نَضَع Tahoma كَخِيَارٍ أَوَّلٍ، ثُمَّ Verdana كَبَدِيلٍ، وَنَنْتَهِي بَةِ sans-serif كَخِيَارٍ عَامٍّ لِيَضْمَنَ الْمُتَصَفِّحْ عَرْضَ النَّصِّ بِشَكْلٍ مُنَاسِبٍ.",
+        "caption_text": "يتم تحديد الخطوط البديلة داخل خاصية font-family في CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  font-family: Tahoma, Verdana, sans-serif;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_websafe.asp"
+      ]
+    },
+    {
+      "id": "common_fonts",
+      "title": "أشهر الخطوط الآمنة للويب",
+      "narration": {
+        "spoken_text": "تَتَضَمَّنُ قَائِمَةِ الْخُطُوطِ الْآمِنَه خِيَارَاتٍ مِثْل Arial، وَVerdana، وَTahoma، وَTrebuchet MS. كَمَا نَجِدُ خُطُوطاً بِنَمَط serif مِثْل Times New Roman وَGeorgia، وَخُطُوطاً بِنَمَط monospace مِثْل Courier New.",
+        "caption_text": "تتنوع الخطوط الآمنة بين sans-serif وserif وmonospace لتناسب مختلف التصاميم."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "اسم الخط",
+          "النوع",
+          "الاستخدام"
+        ],
+        "rows": [
+          [
+            "Arial",
+            "sans-serif",
+            "شائع جدا"
+          ],
+          [
+            "Times New Roman",
+            "serif",
+            "رسمي"
+          ],
+          [
+            "Courier New",
+            "monospace",
+            "برمجي"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_websafe.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "قَبْلَ نَشْرِ مَوْقِعِ الْوِبّ، تَأَكَّدْ دَائِماً مِنْ مُعَايَنَةِ الْخُطُوطِ عَلَى مُخْتَلَفِ الْمُتَصَفِّحَاتِ وَالْأَجْهِزَه. تَذَكَّرْ أَنَّ اسْتِخْدَام Fallback Fonts هُوَ إِجْرَاءٌ هَنْدَسِيٌّ ضَرُورِيٌّ لِتَجَنُّبِ ظُهُورِ النُّصُوصِ بِشَكْلٍ غَيْرِ مَقْصُودٍ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "اختبر دائما مظهر الخطوط على أجهزة مختلفة قبل النشر النهائي للموقع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبر الموقع على متصفحات متعددة",
+          "تحقق من مظهر الخط على الأجهزة المحمولة",
+          "لا تعتمد على خط واحد فقط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_websafe.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا أَهَمِّيَّةِ اخْتِيَارِ خُطُوطٍ آمِنَه لِلْوِبّ وَكَيْفِيَّةِ تَنْظِيمِ قَائِمَةِ الْخُطُوطِ الْبَدِيلَه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا التَّأْثِيرَ الْمُبَاشِرَ عَلَى صَفَحَاتِكُمْ.",
+        "caption_text": "استخدم الخطوط الآمنة والبديلة لضمان تجربة مستخدم احترافية ومستقرة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الخطوط الآمنة تضمن استقرار التصميم",
+          "الخطوط البديلة تحمي من أخطاء العرض",
+          "جرب الأكواد بنفسك عبر الرابط المرفق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_websafe.asp"
+      ]
+    }
+  ]
+}
