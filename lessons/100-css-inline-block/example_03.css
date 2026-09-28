@@ -1,0 +1,11 @@
+.nav {
+  background-color: lightgray;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  display: inline-block;
+  font-size: 18px;
+  padding: 15px;
+}
