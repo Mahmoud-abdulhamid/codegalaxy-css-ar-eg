@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "30",
+  "title": "CSS Rounded Borders",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام خاصية border-radius",
+    "التعرف على كيفية تطبيق حواف دائرية للعناصر",
+    "تطبيق خصائص border المتقدمة",
+    "تحسين المظهر الجمالي لعناصر الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_border_rounded.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Rounded Borders",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ إِضَافَه لَمْسَه جَمَالِيَّه لِعَنَاصِرِ الْوِبّ مِنْ خِلَالِ تَحْوِيلِ الْحَوَافِ الْحَادَّه إِلَى حَوَافٍ دَائِرِيَّه بِاسْتِخْدَامِ خَاصِيَّةِ border-radius.",
+        "caption_text": "مرحبا بكم في درس CSS Rounded Borders، سنتعلم اليوم كيفية إضافة لمسة جمالية لعناصر الويب باستخدام خاصية border-radius."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم خاصية border-radius لإضافة حواف دائرية",
+          "تغيير مظهر العناصر من الزوايا الحادة إلى الدائرية",
+          "تحسين تجربة المستخدم من خلال التصميم المرن"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_rounded.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم border-radius",
+      "narration": {
+        "spoken_text": "تُعَدُّ خَاصِيَّةِ border-radius مِنْ أَهَمِّ الْخَصَائِصِ فِي CSS. هِيَ تَسْمَحُ لَنَا بِتَحْدِيدِ مِقْدَارِ انْحِنَاءِ الزَّوَايَا لِأَيِّ Element. كُلَّمَا زَادَتْ قِيمَةِ pixel، زَادَ انْحِنَاءُ الْحَافَه وَأَصْبَحَ الشَّكْلُ أَكْثَرَ دَائِرِيَّه.",
+        "caption_text": "تعد خاصية border-radius من أهم الخصائص في CSS، فهي تسمح لنا بتحديد مقدار انحناء الزوايا لأي Element، وكلما زادت قيمة الـ pixel زاد انحناء الحافة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تتحكم border-radius في انحناء زوايا العناصر",
+          "تقبل القيم بوحدات القياس مثل px أو em",
+          "تؤثر على مظهر الـ border والـ background"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_rounded.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق الكود العملي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ الْعَمَلِيِّ. نَقُومُ بِتَحْدِيد selector وَهُو p، ثُمَّ نَضَعُ خَاصِيَّةِ border لِتَحْدِيدِ سُمْكِ وَلَوْنِ الْإِطَارِ، وَنُضِيف border-radius بِقِيمَةِ خَمْسَةِ بيكسل لِجَعْلِ الزَّوَايَا مُنْحَنِيَه بِشَكْلٍ بَسِيطٍ.",
+        "caption_text": "في هذا المثال نستخدم selector من نوع p، مع تحديد border بسمك 2px ولون أحمر، ثم نطبق border-radius بقيمة 5px."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  border: 2px solid red;\n  border-radius: 5px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_rounded.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِاسْتِخْدَام border-style و border-width و border-color ضِمْنَ خَاصِيَّةِ border الْمُخْتَصَرَه. بَعْدَهَا، قَامَتْ border-radius بِتَطْبِيقِ الِانْحِنَاءِ عَلَى الزَّوَايَا الْأَرْبَعِ لِلْعُنْصُرِ بِنَفْسِ الْمِقْدَارِ الْمُحَدَّدِ.",
+        "caption_text": "استخدمنا خاصية border المختصرة لتحديد النمط والسمك واللون، ثم قامت border-radius بتطبيق الانحناء على الزوايا الأربع للعنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "border: 2px solid red يحدد الإطار",
+          "border-radius: 5px يطبق الانحناء",
+          "يمكن التحكم في كل زاوية على حدة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_rounded.asp"
+      ]
+    },
+    {
+      "id": "more_examples",
+      "title": "تنوع الخصائص",
+      "narration": {
+        "spoken_text": "يُمْكِنُكُمْ أَيْضاً التَّحَكُّمُ فِي كُلِّ جَانِبٍ مِنَ الْإِطَارِ بِشَكْلٍ مُنْفَصِلٍ، مِثْل border-bottom أَوْ border-left. هَذَا يُعْطِي مَرُونَه كَبِيرَه فِي التَّصْمِيمِ، حَيْثُ يُمْكِنُكُمْ تَحْدِيدُ لَوْنٍ أَوْ سُمْكٍ مُخْتَلِفٍ لِكُلِّ جَانِبٍ مِنَ الْعُنْصُرِ.",
+        "caption_text": "يمكنكم التحكم في كل جانب من الإطار بشكل منفصل مثل border-bottom أو border-left، مما يعطي مرونة كبيرة في التصميم وتحديد خصائص مختلفة لكل جانب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام border-bottom للتحكم في الإطار السفلي",
+          "استخدام border-left للتحكم في الإطار الأيسر",
+          "إمكانية تخصيص لون كل جانب على حدة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_rounded.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا أَنَّ border-radius هِيَ الْأَدَاه الْمِثَالِيَّه لِتَنْعِيمِ زَوَايَا الْعَنَاصِرِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَغْيِيرِ الْقِيَمِ لِمُشَاهَدَةِ النَّتَائِجِ الْمُخْتَلِفَه. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا أن border-radius هي الأداة المثالية لتنعيم زوايا العناصر، ندعوكم لتجربة الأكواد وتغيير القيم لمشاهدة النتائج المختلفة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "border-radius تضيف لمسة عصرية",
+          "التجربة العملية هي مفتاح الإتقان",
+          "راجعوا الروابط في الوصف لمزيد من التفاصيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_rounded.asp"
+      ]
+    }
+  ]
+}
