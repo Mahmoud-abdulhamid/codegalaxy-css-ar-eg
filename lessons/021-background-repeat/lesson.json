@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "21",
+  "title": "CSS Background Image Repeat",
+  "course": "CSS",
+  "objectives": [
+    "فهم خاصية background-repeat للتحكم في تكرار الصور",
+    "تعلم كيفية استخدام قيم repeat-x و repeat-y",
+    "التعامل مع خاصية no-repeat لمنع تكرار الخلفية",
+    "التحكم في موضع الصورة باستخدام background-position"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_background_repeat.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول تكرار الخلفية",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي تَكْرَارِ صُوَرِ الْخَلْفِيَّه بِاسْتِخْدَامِ خَاصِيَّةِ background-repeat، وَكَيْفَ نَضْبِطُ مَوْضِعَهَا لِتَبْدُوَ صَفْحَةِ الْوِبّ بِشَكْلٍ احْتِرَافِيٍّ وَمُنَسَّقٍ.",
+        "caption_text": "نتعرف اليوم على كيفية التحكم في تكرار صور الخلفية باستخدام خاصية background-repeat في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في تكرار صور الخلفية",
+          "استخدام قيم repeat-x و repeat-y",
+          "منع تكرار الخلفية باستخدام no-repeat",
+          "تحديد موضع الخلفية عبر background-position"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_repeat.asp"
+      ]
+    },
+    {
+      "id": "default_behavior",
+      "title": "السلوك الافتراضي للخلفية",
+      "narration": {
+        "spoken_text": "بِشَكْلٍ افْتِرَاضِيٍّ، تَقُومُ لُغَةِ CSS بِتَكْرَارِ صُورَةِ الْخَلْفِيَّه أُفُقِيّاً وَعَمُودِيّاً حَتَّى تَمْلَأَ الْعُنْصُرَ بِالْكَامِلِ. لَكِنْ فِي بَعْضِ الْحَالَاتِ، قَدْ يَبْدُو هَذَا التَّكْرَارُ غَيْرَ مُنَاسِبٍ لِتَصْمِيمِ صَفْحَةِ الْوِبّ، لِذَا نَحْتَاجُ لِتَعْدِيلِ هَذَا السُّلُوكِ.",
+        "caption_text": "تتكرر صور الخلفية افتراضيا بشكل أفقي وعمودي، وقد نحتاج أحيانا لتغيير هذا السلوك."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-image: url(\"gradient_bg.png\");\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_repeat.asp"
+      ]
+    },
+    {
+      "id": "repeat_x_y",
+      "title": "التحكم في اتجاه التكرار",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ اتِّجَاهِ التَّكْرَارِ، نَسْتَخْدِمُ قِيَم repeat-x لِلتَّكْرَارِ الْأُفُقِيِّ فَقَطْ، أَوْ repeat-y لِلتَّكْرَارِ الْعَمُودِيِّ فَقَطْ. هَذِهِ الْخَاصِيَّه تُسَاعِدُنَا فِي الْحِفَاظِ عَلَى جَمَالِيَّةِ التَّصْمِيمِ دُونَ تَشْوِيهِ الصُّورَه بِتَكْرَارِهَا فِي كُلِّ الاتِّجَاهَاتِ.",
+        "caption_text": "نستخدم repeat-x للتكرار الأفقي و repeat-y للتكرار العمودي للتحكم في مظهر الخلفية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-image: url(\"gradient_bg.png\");\n  background-repeat: repeat-x;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_repeat.asp"
+      ]
+    },
+    {
+      "id": "no_repeat",
+      "title": "منع تكرار الخلفية",
+      "narration": {
+        "spoken_text": "إِذَا كُنَّا نُرِيدُ عَرْضَ صُورَةِ الْخَلْفِيَّه مَرَّه وَاحِدَه فَقَطْ دُونَ أَيِّ تَكْرَارٍ، نَسْتَخْدِمُ الْقِيمَه no-repeat. هَذَا الْإِجْرَاءُ ضَرُورِيٌّ عِنْدَمَا نَسْتَخْدِمُ صُورَه كَبِيرَه أَوْ شِعَاراً لَا يَنْبَغِي أَنْ يَتَكَرَّرَ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "نستخدم القيمة no-repeat لعرض صورة الخلفية مرة واحدة فقط داخل العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-image: url(\"img_tree.png\");\n  background-repeat: no-repeat;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_repeat.asp"
+      ]
+    },
+    {
+      "id": "background_position",
+      "title": "تحديد موضع الخلفية",
+      "narration": {
+        "spoken_text": "بَعْدَ مَنْعِ التَّكْرَارِ، قَدْ نَحْتَاجُ لِتَحْدِيدِ مَوْضِعِ الصُّورَه. نَسْتَخْدِمُ خَاصِيَّةِ background-position لِذَلِكَ. افْتِرَاضِيّاً، تَبْدَأُ الصُّورَه مِنَ الزَّاوِيَه الْيُسْرَى الْعُلْوِيَّه، لَكِنْ يُمْكِنُنَا تَغْيِيرُ ذَلِكَ إِلَى أَيِّ مَوْضِعٍ نُرِيدُهُ مِثْل right top.",
+        "caption_text": "تستخدم خاصية background-position لتحديد نقطة بداية ظهور صورة الخلفية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-image: url(\"img_tree.png\");\n  background-repeat: no-repeat;\n  background-position: right top;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_repeat.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا أَهَمِّيَّةِ التَّحَكُّمِ فِي خَصَائِصِ الْخَلْفِيَّه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا كَيْفَ تُؤَثِّرُ هَذِهِ الْخَصَائِصُ عَلَى تَصْمِيمِ صَفْحَاتِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "قم بتجربة هذه الخصائص بنفسك لتحسين تصميم صفحات الويب الخاصة بك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "background-repeat للتحكم في التكرار",
+          "repeat-x و repeat-y للاتجاهات",
+          "no-repeat لمنع التكرار",
+          "background-position لتحديد الموقع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_repeat.asp"
+      ]
+    }
+  ]
+}
