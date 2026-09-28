@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "86",
+  "title": "CSS position Property",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية التحكم في مواضع العناصر باستخدام CSS",
+    "التعرف على قيمة static الافتراضية",
+    "تعلم كيفية استخدام position: relative",
+    "التعامل مع خصائص top و left و right و bottom"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_position.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Positioning",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِ الْيَوْمِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي مَوَاضِعِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ بِاسْتِخْدَامِ خَاصِيَّةِ position، وَكَيْفَ نُعَدِّلُ عَلَى التَّدَفُّقِ الطَّبِيعِيِّ لِلْمُسْتَنَدِ.",
+        "caption_text": "تستخدم CSS positioning للتحكم في أماكن العناصر داخل صفحة الويب وتجاوز التدفق الطبيعي للمستند."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في أماكن العناصر",
+          "تجاوز التدفق الطبيعي للمستند",
+          "استخدام خاصية position"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_position.asp"
+      ]
+    },
+    {
+      "id": "position-property",
+      "title": "فهم خاصية position",
+      "narration": {
+        "spoken_text": "تُحَدِّدُ خَاصِيَّةِ position نَوْعَ التَّمَوْضُعِ لِلْعُنْصُرِ. بَعْدَ تَحْدِيدِ النَّوْعِ، نَسْتَخْدِمُ خَصَائِص top و bottom و left و right لِتَحْدِيدِ الْمَوْقِعِ النِّهَائِيِّ لِلْعُنْصُرِ بِدِقَّه عَالِيَه.",
+        "caption_text": "تحدد خاصية position نوع التموضع، وتستخدم الخصائص top و bottom و left و right لتحديد الموقع النهائي."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "top",
+            "المسافة من الأعلى"
+          ],
+          [
+            "left",
+            "المسافة من اليسار"
+          ],
+          [
+            "right",
+            "المسافة من اليمين"
+          ],
+          [
+            "bottom",
+            "المسافة من الأسفل"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_position.asp"
+      ]
+    },
+    {
+      "id": "static-position",
+      "title": "التموضع الافتراضي static",
+      "narration": {
+        "spoken_text": "تَكُونُ جَمِيعُ عَنَاصِر HTML فِي الْوَضْع static بِشَكْلٍ افْتِرَاضِيٍّ. هَذِهِ الْعَنَاصِرُ لَا تَتَأَثَّرُ بِخَصَائِصِ التَّمَوْضُعِ مِثْل top أَوْ left، بَلْ تَتْبَعُ التَّدَفُّقَ الطَّبِيعِيَّ لِلصَّفْحَه.",
+        "caption_text": "العناصر ذات position: static تتبع التدفق الطبيعي للصفحة ولا تتأثر بخصائص التموضع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.static {\n  position: static;\n  border: 3px solid #73AD21;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_position.asp"
+      ]
+    },
+    {
+      "id": "relative-position",
+      "title": "التموضع النسبي relative",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَام position: relative، يَتَمَوْضَعُ الْعُنْصُرُ نِسْبَه إِلَى مَوْقِعِهِ الْأَصْلِيِّ. عِنْدَ تَغْيِيرِ خَصَائِصِ التَّمَوْضُعِ، يَبْتَعِدُ الْعُنْصُرُ عَنْ مَكَانِهِ، لَكِنَّ بَاقِيَ الْمُحْتَوَى لَا يَتَأَثَّرُ بِهَذَا الْفَرَاغِ.",
+        "caption_text": "يتموضع العنصر relative نسبة لموقعه الأصلي، ولا يتم تعديل العناصر الأخرى لملء الفراغ الناتج."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.relative {\n  position: relative;\n  left: 30px;\n  border: 3px solid #73AD21;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_position.asp"
+      ]
+    },
+    {
+      "id": "visual-output",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "لَاحِظْ فِي هَذِهِ الْمُعَايَنَه كَيْفَ يَبْدُو الْعُنْصُرُ عِنْدَ تَطْبِيق position: relative مَعَ إِزَاحَه بِمِقْدَارِ ثَلَاثِينَ بيكسل مِنَ الْيَسَارِ، مُقَارَنَه بِالْعُنْصُرِ الَّذِي يَعْمَلُ بِالْوَضْع static.",
+        "caption_text": "تظهر المعاينة إزاحة العنصر relative بمقدار 30px عن موقعه الطبيعي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"static\">Static Element</div>\n    <div class=\"relative\">Relative Element</div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Static Element\n  Relative Element (shifted 30px)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_position.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَتَذَكَّرَ أَنَّ التَّمَوْضُعَ الْعَشْوَائِيَّ قَدْ يُؤَدِّي إِلَى تَدَاخُلِ الْعَنَاصِرِ. اسْتَخْدِمْ position: relative بِحَذَرٍ لِتَجَنُّبِ مَشَاكِلِ التَّخْطِيطِ فِي الشَّاشَاتِ الْمُخْتَلِفَه.",
+        "caption_text": "استخدم position: relative بحذر لتجنب تداخل العناصر والحفاظ على استقرار التخطيط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجنب التداخل غير المقصود",
+          "اختبار التخطيط على شاشات مختلفة",
+          "استخدام relative كمرجع للعناصر المطلقة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_position.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ أَنَّ position هِيَ الْأَدَاه الْأَسَاسِيَّه لِتَحْدِيدِ مَوَاقِعِ الْعَنَاصِرِ. جَرِّبُوا الْآنَ تَطْبِيقَ هَذِهِ الْأَكْوَادِ بِأَنْفُسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا النَّتَائِجَ مُبَاشَرَه.",
+        "caption_text": "تعلمنا أساسيات position. جرب الأكواد بنفسك عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "static هو الوضع الافتراضي",
+          "relative يحافظ على مساحة العنصر",
+          "استخدم top, left, right, bottom للتحريك"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_position.asp"
+      ]
+    }
+  ]
+}
