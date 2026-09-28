@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "96",
+  "title": "CSS Overflow Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "Test understanding of CSS overflow property",
+    "Solve coding challenges related to overflowing content",
+    "Apply overflow visible hidden scroll and auto values",
+    "Manage element box dimensions and clipping effectively"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_overflow.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة تحدي Overflow",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي العَمَلِيِّ لِقِسْم CSS. سَنَخْتَبِرُ فَهْمَكُمْ لِكَيْفِيَّةِ التَّحَكُّمِ فِي المُحْتَوَى الخَارِجِ عَنْ حُدُودِ العُنْصُرِ بِاسْتِخْدَامِ خَاصِّيَّةِ overflow.",
+        "caption_text": "مرحبا بكم في هذا التحدي العملي لقسم CSS لاختبار فهمكم لخاصية overflow."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار الفهم العملي لخصائص CSS",
+          "التعامل مع المحتوى الخارج عن الحاويات",
+          "تطبيق قيم overflow المختلفة",
+          "تحسين المظهر العام لتصميم صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_overflow.asp"
+      ]
+    },
+    {
+      "id": "scene_concept",
+      "title": "مفاهيم خصائص Overflow الأساسية",
+      "narration": {
+        "spoken_text": "تُحَدِّدُ خَاصِّيَّةِ overflow كَيْفِيَّةِ التَّعَامُلِ مَعَ المُحْتَوَى الَّذِي يَتَجَاوَزُ أَبْعَادَ العُنْصُرِ المُحَدَّدَه. لَدَيْنَا خِيَارَاتٌ مُتَعَدِّدَه مِثْل hidden و scroll و auto لِلتَّحْكُمِ التَّامِّ.",
+        "caption_text": "تحدد خاصية overflow كيفية التعامل مع المحتوى الذي يتجاوز أبعاد العنصر المحددة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "القيمة visible لعرض المحتوى المتجاوز خارج الحدود",
+          "القيمة hidden لإخفاء المحتوى الزائد تماما",
+          "القيمة scroll لإضافة أشرطة تمرير دائما",
+          "القيمة auto لإضافة أشرطة التمرير عند الحاجة فقط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_overflow.asp"
+      ]
+    },
+    {
+      "id": "scene_code_setup",
+      "title": "كتابة كود التحدي العملي",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ الْآنَ إِلَى كِتَابَةِ الكُودِ العَمَلِيِّ لِلتَّحَدِّي. سَنُنْشِئُ عُنْصُر div مَعَ تَحْدِيدِ العَرْضِ وَالطُّولِ، ثُمَّ نُطَبِّقُ خَاصِّيَّةِ overflow لِمُعَالَجَةِ النَّصِّ الزَّائِدِ بِدِقَّه.",
+        "caption_text": "سننشئ عنصر div مع تحديد العرض والطول ثم نطبق خاصية overflow لمعالجة النص الزائد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".challenge-box {\n  width: 200px;\n  height: 100px;\n  border: 2px solid black;\n  overflow: auto;\n}",
+        "highlight_lines": [
+          5
+        ],
+        "output": "يظهر صندوق محتوى مع أشرطة تمرير تلقائية عند تجاوز النص.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_overflow.asp"
+      ]
+    },
+    {
+      "id": "scene_code_details",
+      "title": "تحليل أجزاء الكود بالتفصيل",
+      "narration": {
+        "spoken_text": "فِي هَذَا الكُودِ، قُمْنَا بِتَحْدِيد width بِقِيمَةِ مِائَتَيْ بِكْسِلْ و height بِمِائَةِ بِكْسِلْ. اسْتِخْدَام overflow بِقِيمَةِ auto يَعْنِي ظُهُورَ أَشْرِطَةِ التَّمْرِيرِ فَقَطْ عِنْدَ زِيَادَةِ الحَجْمِ.",
+        "caption_text": "استخدام overflow بقيمة auto يعني ظهور أشرطة التمرير فقط عند زيادة حجم المحتوى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد عرض الصندوق بدقة عبر width",
+          "تحديد ارتفاع الصندوق عبر height",
+          "استخدام border لتوضيح حدود العنصر",
+          "تطبيق overflow لإدارة التمرير الذكي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_overflow.asp"
+      ]
+    },
+    {
+      "id": "scene_html_integration",
+      "title": "دمج CSS مع عنصر HTML",
+      "narration": {
+        "spoken_text": "نَقُومُ الْآنَ بِرَبْطِ تَ نْسِيقَات CSS هَذِهِ مَعَ بِنْيَةِ HTML الدَّاخِلِيَّه لِعَرْضِ نَصٍّ طَوِيلٍ يَخْتَبِرُ كَفَاءَةِ الصُّنْدُوقِ فِي التَّعَامُلِ مَعَ الفَائِضِ بِشَكْلٍ سَلِيمٍ.",
+        "caption_text": "نربط تنسيقات CSS مع بنية HTML لعرض نص طويل يختبر كفاءة الصندوق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"challenge-box\">\n      هذا النص طويل جداً وسوف يتجاوز أبعاد الصندوق المحددة، مما يستدعي استخدام خاصية overflow للتحكم فيه.\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [
+          1,
+          2,
+          3
+        ],
+        "output": "النص الطويل محصور داخل الصندوق مع إمكانية التمرير.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_overflow.asp"
+      ]
+    },
+    {
+      "id": "scene_output_review",
+      "title": "معاينة المخرجات في المتصفح",
+      "narration": {
+        "spoken_text": "عِنْدَ فَتْحِ الصَّفْحَه فِي مُتَصَفِّحْ الْوِبّ، تُرَى النَّتِيجَه وَاضِحَه. الصُّنْدُوقُ يَحْتَفِظُ بِأَبْعَادِهِ الثَّابِتَه، وَيَسْمَحُ لِلْمُسْتَخْدِمِ بِالتَّمْرِيرِ لِرُؤْيَه بَقِيَّةِ النَّصِّ بِسُهُولَه وَيُسْرٍ.",
+        "caption_text": "الصندوق يحتفظ بأبعاده الثابتة ويسمح للمستخدم بالتمرير لرؤية بقية النص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ثبات أابعاد العنصر وعدم تمدده عشوائيا",
+          "ظهور أشرطة التمرير الأفقية والعمودية عند الحاجة",
+          "تجربة مستخدم متميزة ومنظمة في صفحات الويب",
+          "توافق تام مع مختلف أنواع المتصفحات الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_overflow.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية لخاصية Overflow",
+      "narration": {
+        "spoken_text": "مِنْ أَفْضَلِ المُمَارَسَاتِ عِنْدَ اسْتِعْمَال overflow التَّأَكُّدُ مِنْ تَحْدِيدِ الأَبْعَادِ بِوُضُوحٍ، مِثْلَ العَرْضِ وَالِارْتِفَاعِ، لِتَفَادِي تَدَاخُلِ العَنَاصِرِ وَالحِفَاظِ عَلَى تَنْسِيقِ التَّصْمِيمِ.",
+        "caption_text": "من أفضل الممارسات التأكد من تحديد الأبعاد بوضوح لتفادي تداخل العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد الارتفاع والعرض بدقة للصناديق",
+          "اختبار تجاوب التصميم مع الشاشات المختلفة",
+          "استخدام overflow-x و overflow-y للتحكم المستقل",
+          "مراجعة إمكانية الوصول وسهولة التمرير"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_overflow.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة التحدي والخطوات القادمة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ إِتْمَامِ تَحَدِّي overflow وَتَطْبِيقِهِ عَمَلِيّاً. نَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَدِ بِأَنْفُسِكُمْ وَمُتَابَعَةِ الدَّوْرَه لِاحْتِرَافِ تَ نْسِيقَات CSS.",
+        "caption_text": "تعرفنا على كيفية إتمام تحدي overflow وتطبيقه عمليا لمزيد من الاحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص شامل لمفهوم overflow وإدارته",
+          "أهمية تطبيق التحديات العملية للترسيخ",
+          "دعوة لتجربة الأكواد البرمجية بأنفسكم",
+          "متابعة الدروس القادمة في دورة CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_overflow.asp"
+      ]
+    }
+  ]
+}
