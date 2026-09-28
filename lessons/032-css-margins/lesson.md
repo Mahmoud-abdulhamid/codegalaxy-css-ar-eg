@@ -40,8 +40,8 @@ p {
 ```css
 p {
   margin: 25px 50px 75px; /* 3 قيم */
-  margin: 25px 50px;      /* قيمتان */
-  margin: 25px;           /* قيمة واحدة */
+  margin: 25px 50px; /* قيمتان */
+  margin: 25px; /* قيمة واحدة */
 }
 ```
 
