@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "7",
+  "title": "طرق إضافة CSS إلى صفحات الويب",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية ربط ملفات CSS الخارجية بصفحات HTML",
+    "التعرف على هيكل ملفات CSS المستقلة",
+    "تطبيق التنسيقات باستخدام External CSS",
+    "تجنب الأخطاء الشائعة في كتابة قيم الخصائص"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_howto.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول إضافة CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. عِنْدَمَا يَقْرَأ وِبّ Browser مِلَفَّ التَّنْسِيقَاتِ، فَإِنَّهُ يُهَيْكِلُ صَفْحَةِ HTML بِنَاءً عَلَى هَذِهِ التَّعْلِيمَاتِ. هُنَاكَ ثَلَاثُ طُرُقٍ لِإِدْرَاجِ التَّنْسِيقَاتِ.",
+        "caption_text": "عندما يقرأ Web Browser ملف التنسيقات، فإنه يهيكل صفحة HTML بناء على هذه التعليمات. هناك ثلاث طرق لإدراج التنسيقات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم CSS لتنسيق صفحات الويب",
+          "يقرأ Web Browser ملفات التنسيق لتشكيل الصفحة",
+          "توجد ثلاث طرق لإضافة CSS إلى HTML"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto.asp"
+      ]
+    },
+    {
+      "id": "external_css",
+      "title": "مفهوم External CSS",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بَةِ External CSS. هَذِهِ الطَّرِيقَه تُمَكِّنُكَ مِنْ تَغْيِيرِ مَظْهَرِ مَوْقِع وِبّ بِكَامِلِهِ عَبْرَ تَعْدِيلِ مِلَفٍّ وَاحِدٍ فَقَطْ. يَجِبُ رَبْطُ كُلِّ صَفْحَةِ HTML بِهَذَا الْمِلَفِّ دَاخِلَ عُنْصُر link فِي قِسْم head.",
+        "caption_text": "باستخدام External CSS يمكنك تغيير مظهر موقع الويب بالكامل عبر تعديل ملف واحد فقط. يجب ربط كل صفحة HTML بهذا الملف داخل عنصر link في قسم head."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تغيير مظهر الموقع بالكامل من ملف واحد",
+          "يتم الربط باستخدام عنصر <link>",
+          "يجب وضع عنصر <link> داخل قسم <head>"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "كود ربط ملف CSS",
+      "narration": {
+        "spoken_text": "لَاحِظْ هَذَا الْمِثَالَ. نَسْتَخْدِمُ دُوكْ تَايْبْ HTML لِتَعْرِيفِ نَوْعِ الْمُسْتَنَدِ. دَاخِلَ قِسْم head، نَكْتُب link مَع Attributes rel و href لِتَحْدِيدِ مَسَارِ مِلَفِّ mystyle.css. هَذَا يَرْبِطُ التَّنْسِيقَاتِ بِالصَّفْحَه بِشَكْلٍ مُبَاشِرٍ.",
+        "caption_text": "نستخدم <!DOCTYPE html> لتعريف نوع المستند. داخل قسم <head> نكتب <link> مع Attributes rel و href لتحديد مسار ملف mystyle.css."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<link rel=\"stylesheet\" href=\"mystyle.css\">\n</head>\n<body>\n<h1>This is a heading</h1>\n<p>This is a paragraph.</p>\n</body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto.asp"
+      ]
+    },
+    {
+      "id": "mystyle_file",
+      "title": "محتوى ملف mystyle.css",
+      "narration": {
+        "spoken_text": "مِلَفُّ CSS يَجِبُ أَنْ يُحْفَظَ بِامْتِدَادِ .css وَلَا يَحْتَوِي عَلَى أَيِّ HTML Tags. هُنَا نُحَدِّدُ لَوْنَ خَلْفِيَّةِ body وَتَنْسِيقَات h1. تَذَكَّرْ أَلَّا تَضَعَ مَسَافَه بَيْنَ الْقِيمَه وَالْوَحْدَه مِثْلَ 20px.",
+        "caption_text": "ملف CSS يجب أن يحفظ بامتداد .css ولا يحتوي على أي HTML Tags. هنا نحدد لون خلفية <body> وتنسيقات <h1>. تذكر ألا تضع مسافة بين القيمة والوحدة مثل 20px."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "mystyle.css",
+        "code": "body {\n  background-color: lightblue;\n}\n\nh1 {\n  color: navy;\n  margin-left: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنَ الضَّرُورِيِّ الِانْتِبَاهُ لِلتَّفَاصِيلِ. عِنْدَ كِتَابَةِ Property Value، لَا تَضَعْ مَسَافَه بَيْنَ الرَّقْمِ وَالْوَحْدَه. مِثَالٌ خَاطِئٌ هُوَ 20 px، وَالصَّوَابُ هُوَ 20px. هَذَا يَضْمَنُ عَمَلَ التَّنْسِيقَاتِ بِشَكْلٍ صَحِيحٍ دَاخِل وِبّ Browser.",
+        "caption_text": "من الضروري الانتباه للتفاصيل. عند كتابة Property Value، لا تضع مسافة بين الرقم والوحدة. مثال خاطئ هو 20 px، والصواب هو 20px."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الحالة",
+          "القيمة"
+        ],
+        "rows": [
+          [
+            "خاطئ",
+            "margin-left: 20 px"
+          ],
+          [
+            "صحيح",
+            "margin-left: 20px"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةِ رَبْطِ مِلَفَّات CSS خَارِجِيّاً بِصَفْحَةِ HTML. هَذِهِ الطَّرِيقَه هِيَ الْأَفْضَلُ لِإِدَارَةِ مَوَاقِع وِبّ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو.",
+        "caption_text": "تعلمنا اليوم كيفية ربط ملفات CSS خارجيا بصفحة HTML. هذه الطريقة هي الأفضل لإدارة مواقع الويب. أدعوكم لتجربة هذه الأكواد بأنفسكم عبر الرابط الموجود في وصف الفيديو."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام External CSS يسهل صيانة الموقع",
+          "يتم الربط عبر عنصر <link> في <head>",
+          "تأكد من عدم وجود مسافات بين القيم والوحدات",
+          "قم بزيارة الرابط في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto.asp"
+      ]
+    }
+  ]
+}
