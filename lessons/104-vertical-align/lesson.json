@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "104",
+  "title": "CSS Vertical Align Techniques",
+  "course": "CSS",
+  "objectives": [
+    "Understand vertical centering in CSS",
+    "Implement centering using Flexbox",
+    "Implement centering using CSS Grid",
+    "Use absolute positioning with transforms for centering"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_align_vertical.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في المحاذاة الرأسية",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ ضَبْطِ الْمُحَاذَاه الرَّأْسِيَّه لِلْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ، وَهِيَ مَهَارَه أَسَاسِيَّه لِتَصْمِيمِ وَاجِهَاتٍ جَذَّابَه وَمُتَنَاسِقَه بِاسْتِخْدَامِ تِقْنِيَاتٍ حَدِيثَه.",
+        "caption_text": "مرحبا بكم في درس المحاذاة الرأسية باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "المحاذاة الرأسية ضرورية لتصميم الويب",
+          "استخدام تقنيات Flexbox و Grid",
+          "استخدام Positioning و Transform"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_vertical.asp"
+      ]
+    },
+    {
+      "id": "flexbox-concept",
+      "title": "المحاذاة باستخدام Flexbox",
+      "narration": {
+        "spoken_text": "تُعَدُّ تِقْنِيَةِ Flexbox مِنْ أَقْوَى الطُّرُقِ لِتَوْسِيطِ الْعَنَاصِرِ. عِنْدَ ضَبْط display إِلَى flex، نَسْتَخْدِم justify-content لِلْمِحَاذَاه الْأُفُقِيَّه و align-items لِلْمِحَاذَاه الرَّأْسِيَّه بِقِيمَةِ center.",
+        "caption_text": "استخدام Flexbox لتوسيط العناصر أفقيا ورأسيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 200px;\n  border: 3px solid green;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_vertical.asp"
+      ]
+    },
+    {
+      "id": "grid-concept",
+      "title": "المحاذاة باستخدام CSS Grid",
+      "narration": {
+        "spoken_text": "بِالْمِثْلِ، نَسْتَخْدِم CSS Grid لِتَحْقِيقِ نَفْسِ النَّتِيجَه بِسُهُولَه بَالِغَه. عِنْدَ اسْتِخْدَام display: grid، نَقُومُ بِتَعْيِينِ خَاصِيَّةِ place-items إِلَى center، وَهَذَا يُؤَدِّي لِتَوْسِيطِ الْعُنْصُرِ فِي كِلَا الْمِحْوَرَيْنِ.",
+        "caption_text": "استخدام CSS Grid مع خاصية place-items للتوسيط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".center {\n  display: grid;\n  place-items: center;\n  height: 200px;\n  border: 3px solid green;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_vertical.asp"
+      ]
+    },
+    {
+      "id": "position-transform",
+      "title": "المحاذاة باستخدام Absolute و Transform",
+      "narration": {
+        "spoken_text": "فِي حَالَةِ الْعَنَاصِرِ ذَاتِ الْأَبْعَادِ الْمُتَغَيِّرَه، نَسْتَخْدِم position: absolute مَع top و left بِقِيمَةِ 50، ثُمَّ نَسْتَخْدِم transform: translate لِإِزَاحَةِ الْعُنْصُرِ بِنِسْبَةِ 50 لِلْخَلْفِ لِضَمَانِ التَّوَسُّطِ الدَّقِيقِ.",
+        "caption_text": "استخدام position و transform لتوسيط العناصر ديناميكيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container p {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_vertical.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "تُظْهِرُ هَذِهِ الْأَكْوَادُ الْعُنْصُرَ فِي مُنْتَصَفِ الْحَاوِيَه تَمَاماً. سَوَاءً اسْتَخْدَمْت Flexbox أَوْ Grid، سَتَحْصُلُ عَلَى نَتِيجَه مِثَالِيَّه لِتَصْمِيمِ الْوِبّ الْعَصْرِيِّ.",
+        "caption_text": "النتيجة النهائية: العنصر يظهر في مركز الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"center\">\n      <p>I am centered!</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "I am centered!",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_vertical.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "نَصِيحَتِي لَكُمْ هِيَ تَفْضِيل Flexbox و Grid لِأَنَّهُمَا أَكْثَرُ كَفَاءَه وَأَقَلُّ تَعْقِيداً. اسْتَخْدِمُوا position: absolute فَقَطْ عِنْدَ الضَّرُورَه الْقُصْوَى أَوْ فِي الْحَالَاتِ الْخَاصَّه.",
+        "caption_text": "توصية: استخدم Flexbox و Grid كخيار أول."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox و Grid هما المعيار الحديث",
+          "تجنب استخدام Absolute إلا للضرورة",
+          "اختبر التصميم على مختلف أحجام الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_vertical.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ ثَلَاثَ طُرُقٍ لِتَوْسِيطِ الْعَنَاصِرِ رَأْسِيّاً. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَتْقِنُوا هَذِهِ الْمَهَارَاتِ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية Flexbox",
+          "تمت تغطية CSS Grid",
+          "تمت تغطية Transform",
+          "راجع الرابط في الوصف للتطبيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_vertical.asp"
+      ]
+    }
+  ]
+}
