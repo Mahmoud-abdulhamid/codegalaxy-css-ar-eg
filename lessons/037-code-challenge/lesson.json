@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "37",
+  "title": "CSS Padding Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية التحكم في المساحات الداخلية باستخدام padding",
+    "تطبيق خصائص CSS على العناصر بشكل عملي",
+    "التعرف على تأثير padding على أبعاد العنصر",
+    "حل تحديات البرمجة الخاصة بـ CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_padding.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي Padding",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنُطَبِّقُ مَا تَعَلَّمْنَاهُ حَوْلَ خَاصِيَّةِ padding مِنْ خِلَالِ حَلِّ تَحَدٍّ بَرْمَجِيٍّ عَمَلِيٍّ لِتَعْزِيزِ مَهَارَاتِكُمْ فِي تَصْمِيمِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS. اليوم سنطبق ما تعلمناه حول خاصية padding من خلال حل تحد برمجي عملي لتعزيز مهاراتكم في تصميم الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة مفهوم padding في CSS",
+          "تطبيق التحدي البرمجي لـ CSS Padding",
+          "تحسين مهارات التحكم في المساحات داخل العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_padding.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم padding الأساسي",
+      "narration": {
+        "spoken_text": "خَاصِيَّةِ padding تُسْتَخْدَمُ لِإِنْشَاءِ مَسَاحَه دَاخِلِيَّه حَوْلَ الْمُحْتَوَى دَاخِلَ الْعُنْصُرِ. هَذِهِ الْمَسَاحَه تَظْهَرُ بَيْنَ الْمُحْتَوَى وَالْحُدُودِ، وَتُؤَثِّرُ مُبَاشَرَه عَلَى الشَّكْلِ الْعَامِّ لِلْعُنْصُرِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "خاصية padding تستخدم لإنشاء مساحة داخلية حول المحتوى داخل العنصر. هذه المساحة تظهر بين المحتوى والحدود، وتؤثر مباشرة على الشكل العام للعنصر في صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "padding يضيف مساحة داخل حدود العنصر",
+          "يمكن تحديد قيم مختلفة لكل جانب",
+          "يؤثر padding على الحجم الكلي للعنصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_padding.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كتابة كود padding",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ الْعُنْصُرِ ثُمَّ نَكْتُبُ خَاصِيَّةِ padding مَعَ قِيمَه ب pixels. هَذَا يُؤَدِّي إِلَى زِيَادَةِ الْمَسَاحَه دَاخِلَ الْعُنْصُرِ بِشَكْلٍ مُتَسَاوٍ مِنْ جَمِيعِ الْجَوَانِبِ.",
+        "caption_text": "لننظر إلى هذا الكود. نقوم بتحديد العنصر ثم نكتب خاصية padding مع قيمة بالـ pixels. هذا يؤدي إلى زيادة المساحة داخل العنصر بشكل متساو من جميع الجوانب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  padding: 20px;\n  background-color: lightblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_padding.asp"
+      ]
+    },
+    {
+      "id": "detailed_explanation",
+      "title": "تحليل الخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، قِيمَةِ padding بِعِشْرِين pixels تَعْنِي أَنَّ الْمُتَصَفِّحْ سَيُضِيفُ هَذِهِ الْمَسَاحَه دَاخِلَ الْحُدُودِ. إِذَا اسْتَخْدَمْنَا padding-top أَوْ padding-left، يُمْكِنُنَا التَّحَكُّمُ فِي كُلِّ جَانِبٍ عَلَى حِدَه.",
+        "caption_text": "في هذا المثال، قيمة padding بعشرين pixels تعني أن المتصفح سيضيف هذه المساحة داخل الحدود. إذا استخدمنا padding-top أو padding-left، يمكننا التحكم في كل جانب على حدة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "padding: 20px يطبق المساحة على الجوانب الأربعة",
+          "padding-top للتحكم في المساحة العلوية",
+          "padding-left للتحكم في المساحة اليسرى"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_padding.asp"
+      ]
+    },
+    {
+      "id": "visual_output",
+      "title": "المعاينة في المتصفح",
+      "narration": {
+        "spoken_text": "عِنْدَ فَتْحِ هَذَا الْكُودِ فِي وِبّ Browser مِثْل Chrome، سَتَرَى أَنَّ الْمُحْتَوَى لَمْ يَعُدْ مُلْتَصِقاً بِالْحُدُودِ. هَذَا هُوَ الْهَدَفُ مِنْ خَاصِيَّةِ padding لِتَحْسِينِ التَّجْرِبَه الْبَصَرِيَّه لِلْمُسْتَخْدِمِ.",
+        "caption_text": "عند فتح هذا الكود في Web Browser مثل Chrome، سترى أن المحتوى لم يعد ملتصقا بالحدود. هذا هو الهدف من خاصية padding لتحسين التجربة البصرية للمستخدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<div style=\"padding: 20px; background: blue;\">\n  هذا النص داخل العنصر\n</div>",
+        "highlight_lines": [],
+        "output": "مربع أزرق يحتوي على نص بمسافة داخلية 20 بكسل",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_padding.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنْ أَفْضَلِ الْمُمَارَسَاتِ هِيَ اسْتِخْدَام box-sizing: border-box لِضَمَانِ أَنَّ padding لَا يُؤَدِّي إِلَى تَغْيِيرِ الْعَرْضِ الْكُلِّيِّ لِلْعُنْصُرِ بِشَكْلٍ غَيْرِ مَقْصُودٍ. هَذَا يُسَهِّلُ التَّحَكُّمَ فِي التَّصْمِيمِ.",
+        "caption_text": "من أفضل الممارسات هي استخدام box-sizing: border-box لضمان أن padding لا يؤدي إلى تغيير العرض الكلي للعنصر بشكل غير مقصود. هذا يسهل التحكم في التصميم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام box-sizing: border-box",
+          "تجنب القيم الكبيرة جدا لـ padding",
+          "اختبار التصميم في متصفحات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_padding.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا هَذَا التَّحَدِّيَ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ مِنْ دَوْرَةِ CSS.",
+        "caption_text": "بهذا نكون قد أتممنا هذا التحدي. أدعوكم لتجربة الأكواد بأنفسكم عبر الرابط الموجود في الوصف. شكرا لمتابعتكم، وإلى اللقاء في درس قادم من دورة CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح خاصية padding",
+          "تم تطبيق تحدي برمجي عملي",
+          "تذكروا مراجعة الروابط في الوصف للتطبيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_padding.asp"
+      ]
+    }
+  ]
+}
