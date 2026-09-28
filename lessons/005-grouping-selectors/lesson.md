@@ -51,8 +51,7 @@ p {
 باستخدام Grouping Selector، نقوم بفصل العناصر بفاصلة واحدة. هكذا نكتب التنسيقات مرة واحدة فقط.
 
 ```css
-h1, h2, p
-{
+h1, h2, p {
   text-align: center;
   color: red;
 }
