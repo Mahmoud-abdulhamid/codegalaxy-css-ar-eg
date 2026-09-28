@@ -42,9 +42,17 @@ div {
 عند فتح هذا الكود في Web Browser مثل Chrome، سترى أن المحتوى لم يعد ملتصقا بالحدود. هذا هو الهدف من خاصية padding لتحسين التجربة البصرية للمستخدم.
 
 ```html
-<div style="padding: 20px; background: blue;">
-  هذا النص داخل العنصر
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div style="padding: 20px; background: blue;">
+      هذا النص داخل العنصر
+    </div>
+  </body>
+</html>
 ```
 
 ## أفضل الممارسات
