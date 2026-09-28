@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "109",
+  "title": "CSS Interactive Pseudo-classes",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية عمل Interactive Pseudo-classes",
+    "تطبيق :hover و :focus على العناصر",
+    "التعامل مع حالات الروابط المختلفة",
+    "دمج Pseudo-classes مع HTML Classes"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_pseudo_classes_interactive.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Interactive Pseudo-classes",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى Interactive Pseudo-classes، وَهِيَ أَدَوَاتٌ قَوِيَّه تُطَبِّقُ التَّنْسِيقَاتِ بِنَاءً عَلَى تَفَاعُلِ الْمُسْتَخْدِمِ مَعَ عَنَاصِرِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تسمح Interactive Pseudo-classes بتطبيق تنسيقات CSS بناء على تفاعل المستخدم مع عناصر صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم لتغيير المظهر عند التفاعل",
+          "تعتمد على حالة العنصر",
+          "تضيف تجربة مستخدم تفاعلية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_interactive.asp"
+      ]
+    },
+    {
+      "id": "links-states",
+      "title": "تنسيق حالات الروابط",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ الروابط، نَسْتَخْدِم Pseudo-classes مِثْل a:link و a:visited. لَاحِظْ أَنَّ التَّرْتِيبَ مُهِمٌّ جِدّاً، حَيْثُ يَجِبُ أَنْ يَأْتِي a:hover بَعْد a:link و a:visited، وَيَأْتِي a:active بَعْد a:hover لِيَعْمَلَ التَّنْسِيقُ بِشَكْلٍ صَحِيحٍ.",
+        "caption_text": "يجب مراعاة ترتيب Pseudo-classes عند تنسيق الروابط لضمان عملها بشكل صحيح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a:link {\n  color: #FF0000;\n}\na:visited {\n  color: #00FF00;\n}\na:hover {\n  color: #FF00FF;\n}\na:active {\n  color: #0000FF;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_interactive.asp"
+      ]
+    },
+    {
+      "id": "hover-div",
+      "title": "استخدام :hover مع div",
+      "narration": {
+        "spoken_text": "لَا يَقْتَصِرُ :hover عَلَى الروابط فَقَطْ، بَلْ يُمْكِنُ تَطْبِيقُهُ عَلَى أَيِّ Element مِثْل div. عِنْدَمَا يَمُرُّ مُؤَشِّرُ الْفَأْرَه فَوْقَ الْعُنْصُرِ، يَتَغَيَّرُ لَوْنُ الْخَلْفِيَّه كَمَا نَرَى فِي هَذَا الْكُودِ.",
+        "caption_text": "يمكن استخدام :hover مع عناصر مثل div لتغيير خصائصها عند مرور مؤشر الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div:hover {\n  background-color: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_interactive.asp"
+      ]
+    },
+    {
+      "id": "focus-input",
+      "title": "استخدام :focus مع input",
+      "narration": {
+        "spoken_text": "أَمَّا عِنْدَ التَّعَامُلِ مَعَ حُقُولِ الْإِدْخَالِ، فَنَسْتَخْدِمُ :focus. هَذَا التَّنْسِيقُ يَظْهَرُ فَقَطْ عِنْدَمَا يَقُومُ الْمُسْتَخْدِمُ بِالنَّقْرِ دَاخِلَ حَقْل input، مِمَّا يُعْطِي تَنْبِيهاً بَصَرِيّاً وَاضِحاً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "يستخدم :focus لتنسيق حقل input عند النقر عليه أو التركيز فيه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input:focus {\n  background-color: yellow;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_interactive.asp"
+      ]
+    },
+    {
+      "id": "combine-classes",
+      "title": "دمج Pseudo-classes مع HTML Classes",
+      "narration": {
+        "spoken_text": "يُمْكِنُ دَمْج Pseudo-classes مَع HTML Classes بِسُهُولَه. فِي هَذَا الْمِثَالِ، نَقُومُ بِتَطْبِيقِ :hover عَلَى الروابط الَّتِي تَمْتَلِك class بِاسْم highlight فَقَطْ، مِمَّا يَمْنَحُنَا تَحَكُّماً دَقِيقاً فِي التَّنْسِيقَاتِ.",
+        "caption_text": "يمكن دمج Pseudo-classes مع HTML Classes لتخصيص عناصر معينة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a.highlight:hover {\n  color: #ff0000;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_interactive.asp"
+      ]
+    },
+    {
+      "id": "tooltip-example",
+      "title": "إنشاء Tooltip بسيط",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ مِثَالاً مُتَقَدِّمَاً: عِنْدَ الْمُرُورِ بِالْفَأْرَه فَوْق div، نُظْهِرُ عُنْصُر p كَأَنَّه Tooltip. نَبْدَأُ بِإِخْفَاء p بِاسْتِخْدَام display: none، ثُمَّ نُظْهِرُهُ عِنْدَ حُدُوثِ :hover عَلَى الْعُنْصُرِ الْأَبِ.",
+        "caption_text": "يمكن إنشاء Tooltip بسيط بإخفاء عنصر p وإظهاره عند تمرير الفأرة فوق العنصر الأب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  display: none; background-color: yellow;\n}\ndiv:hover p {\n  display: block;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_interactive.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةِ إِضَافَةِ التَّفَاعُلِيَّه لِصَفْحَاتِ الْوِبّ بِاسْتِخْدَام CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "تعلمنا كيفية إضافة التفاعلية لصفحات الويب باستخدام CSS. جرب الأكواد بنفسك!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام :hover و :focus",
+          "ترتيب الروابط الصحيح",
+          "دمج Classes مع Pseudo-classes",
+          "إنشاء تأثيرات تفاعلية مثل Tooltip"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes_interactive.asp"
+      ]
+    }
+  ]
+}
