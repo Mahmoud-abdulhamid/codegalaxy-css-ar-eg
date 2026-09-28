@@ -26,6 +26,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <style>
       body {
         background-color: linen;
@@ -34,6 +35,13 @@
         color: maroon;
         margin-left: 40px;
       }
+    </style>
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
 ```
 
 ## استكمال هيكل الصفحة
@@ -41,12 +49,24 @@
 نكمل كتابة محتوى الصفحة داخل body ليظهر بالتنسيقات المحددة.
 
 ```html
-</style>
-</head>
-<body>
-  <h1>This is a heading</h1>
-  <p>This is a paragraph.</p>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      body {
+        background-color: linen;
+      }
+      h1 {
+        color: maroon;
+        margin-left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+  </body>
 </html>
 ```
 
