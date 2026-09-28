@@ -37,9 +37,9 @@ body {
 
 ```css
 body {
-  background: #ffffff 
-  url("img_tree.png") 
-  no-repeat 
+  background: #ffffff
+  url("img_tree.png")
+  no-repeat
   right top;
 }
 ```
