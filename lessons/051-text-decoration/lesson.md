@@ -24,10 +24,18 @@
 تطبيق قيم مختلفة لخاصية text-decoration-line على عناصر HTML متنوعة.
 
 ```css
-h1 { text-decoration-line: overline; }
-h2 { text-decoration-line: line-through; }
-h3 { text-decoration-line: underline; }
-p { text-decoration-line: overline underline; }
+h1 {
+  text-decoration-line: overline;
+}
+h2 {
+  text-decoration-line: line-through;
+}
+h3 {
+  text-decoration-line: underline;
+}
+p {
+  text-decoration-line: overline underline;
+}
 ```
 
 ## تلوين خطوط التزيين
@@ -44,11 +52,11 @@ p { text-decoration-line: overline underline; }
 
 ```css
 h1 { text-decoration-line: overline;
-  text-decoration-color: red; }
+text-decoration-color: red; }
 h2 { text-decoration-line: line-through;
-  text-decoration-color: blue; }
+text-decoration-color: blue; }
 h3 { text-decoration-line: underline;
-  text-decoration-color: green; }
+text-decoration-color: green; }
 ```
 
 ## أفضل الممارسات
