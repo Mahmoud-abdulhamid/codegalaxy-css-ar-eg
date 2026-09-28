@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "88",
+  "title": "CSS Sticky Positioning",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية عمل position: sticky في CSS",
+    "التعرف على الفرق بين sticky و fixed",
+    "تطبيق الخصائص اللازمة لتفعيل التموضع اللاصق",
+    "استخدام top و left للتحكم في العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_positioning_sticky.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول position: sticky",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ position: sticky، وَهِيَ تَقْنِيَه ذَكِيَّه تَجْعَلُ الْعُنْصُرَ يَتَبَدَّلُ بَيْنَ التَّمَوْضُع relative و fixed بِنَاءً عَلَى مَوْقِعِ التَّمْرِيرِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تسمح خاصية position: sticky للعنصر بالتبديل بين التموضع relative و fixed بناء على التمرير."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم position: sticky للتحكم في سلوك العناصر أثناء التمرير",
+          "يعمل العنصر كـ relative حتى يصل إلى نقطة معينة",
+          "يتحول العنصر إلى fixed عند الوصول إلى تلك النقطة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_sticky.asp"
+      ]
+    },
+    {
+      "id": "rules",
+      "title": "قواعد استخدام sticky",
+      "narration": {
+        "spoken_text": "لِكَيْ تَعْمَلَ خَاصِيَّةِ sticky بِشَكْلٍ صَحِيحٍ، يَجِبُ عَلَيْنَا تَحْدِيدُ وَاحِدَه عَلَى الْأَقَلِّ مِنْ خَصَائِصِ التَّمَوْضُعِ مِثْل top أَوْ right أَوْ bottom أَوْ left. بِدُونِ هَذِهِ الْخَصَائِصِ، لَنْ يَتَفَعَّلَ التَّأْثِيرُ الْمَطْلُوبُ.",
+        "caption_text": "يجب تحديد خاصية واحدة على الأقل من top أو right أو bottom أو left ليعمل sticky."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "top",
+            "تحديد المسافة من الأعلى"
+          ],
+          [
+            "left",
+            "تحديد المسافة من اليسار"
+          ],
+          [
+            "bottom",
+            "تحديد المسافة من الأسفل"
+          ],
+          [
+            "right",
+            "تحديد المسافة من اليمين"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_sticky.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود تطبيق sticky",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْيِين position: sticky لِلْعُنْصُر div، ثُمَّ نُحَدِّد top: 0. هَذَا يَعْنِي أَنَّ الْعُنْصُرَ سَيَلْتَصِقُ فِي أَعْلَى صَفْحَةِ الْوِبّ عِنْدَمَا يَصِلُ إِلَيْهَا أَثْنَاءَ التَّمْرِيرِ.",
+        "caption_text": "مثال برمجي يوضح كيفية تطبيق position: sticky على عنصر div."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.sticky {\n  position: sticky;\n  top: 0;\n  background-color: green;\n  border: 2px solid #4CAF50;\n}",
+        "highlight_lines": [],
+        "output": "العنصر يلتصق بالأعلى عند التمرير",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_sticky.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيد background-color لِتَمْيِيزِ الْعُنْصُرِ، وَاسْتَخْدَمْنَا border لِإِضَافَه إِطَارٍ. الْأَهَمُّ هُو top: 0، لِأَنَّهُ يُخْبِرُ الْمُتَصَفِّحْ أَنْ يَبْدَأَ الْتِصَاقَ الْعُنْصُرِ حِينَ يَصِلُ إِلَى الْحَافَّه الْعُلْوِيَّه.",
+        "caption_text": "شرح تفصيلي لخصائص CSS المستخدمة في مثال sticky."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "position: sticky: تفعيل التموضع اللاصق",
+          "top: 0: نقطة الالتصاق عند الوصول لأعلى الصفحة",
+          "background-color: green: لون خلفية العنصر",
+          "border: 2px solid #4CAF50: إضافة إطار جمالي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_sticky.asp"
+      ]
+    },
+    {
+      "id": "sticky_vs_fixed",
+      "title": "الفرق بين sticky و fixed",
+      "narration": {
+        "spoken_text": "يَخْتَلِف sticky عَنْ fixed فِي أَنَّ الْعُنْصُرَ اللاصِقَ يَظَلُّ جُزْءاً مِنَ التَّدَفُّقِ الطَّبِيعِيِّ لِلصَّفْحَه حَتَّى يَصِلَ إِلَى نُقْطَةِ الِالْتِصَاقِ، بَيْنَمَا fixed يَخْرُجُ تَمَاماً عَنِ التَّدَفُّقِ وَيَبْقَى ثَابِتاً فِي مَكَانِهِ بِشَكْلٍ دَائِمٍ.",
+        "caption_text": "الفرق الجوهري بين التموضع sticky والتموضع fixed."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "السلوك"
+        ],
+        "rows": [
+          [
+            "sticky",
+            "يتصرف كـ relative ثم يتحول لـ fixed"
+          ],
+          [
+            "fixed",
+            "ثابت دائما خارج تدفق الصفحة"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_sticky.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ بِاسْتِخْدَام sticky لِلْعَنَاوِينِ الرَّئِيسِيَّه أَوْ شَرِيطِ التَّنَقُّلِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ. تَأَكَّدْ دَائِماً مِنْ اخْتِبَارِ الْكُودِ عَلَى مُتَصَفِّحَاتُ مُخْتَلِفَه لِضَمَانِ التَّوَافُقِيَّه الْكَامِلَه لِعَنَاصِرِ الْوِبّ.",
+        "caption_text": "أفضل الممارسات لاستخدام sticky في تصميم واجهات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم sticky للعناوين الجانبية",
+          "مثالي لأشرطة التنقل العلوية",
+          "اختبر التوافقية مع المتصفحات",
+          "لا تنس تحديد خاصية top أو left"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_sticky.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا كَيْفَ نُضِيفُ تَفَاعُلِيَّه لِصَفْحَاتِ الْوِبّ بِاسْتِخْدَام position: sticky. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا الْكُودِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ الْمُبْهِرَه. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: تعلم كيفية استخدام position: sticky لإضافة تفاعلية لصفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح مفهوم position: sticky",
+          "تم توضيح متطلبات التفعيل",
+          "تمت المقارنة بين sticky و fixed",
+          "تم تقديم نصائح عملية للتطبيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_sticky.asp"
+      ]
+    }
+  ]
+}
