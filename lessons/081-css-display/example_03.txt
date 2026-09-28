@@ -1,0 +1,3 @@
+Block Element (New Line)
+Inline Element (Same Line)
+Hidden Element (Not Visible)
