@@ -1,0 +1,6 @@
+p:hover {
+  background-color: yellow;
+}
+li:nth-child(2) {
+  color: red;
+}
