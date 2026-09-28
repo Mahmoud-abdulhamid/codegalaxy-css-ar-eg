@@ -23,6 +23,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <style>
       body {
         font-family: Arial;
@@ -52,7 +53,15 @@ h1 {
 هكذا يظهر النص في المتصفح بعد تطبيق قواعد CSS المحددة.
 
 ```html
-<h1>CSS Fonts</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>CSS Fonts</h1>
+  </body>
+</html>
 ```
 
 ## أفضل الممارسات
