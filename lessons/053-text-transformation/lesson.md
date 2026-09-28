@@ -32,7 +32,6 @@ p.uppercase {
 p.lowercase {
   text-transform: lowercase;
 }
-
 p.capitalize {
   text-transform: capitalize;
 }
