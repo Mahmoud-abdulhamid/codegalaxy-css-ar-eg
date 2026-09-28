@@ -63,8 +63,12 @@
         "type": "code",
         "language": "html",
         "filename": "index.html",
-        "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <h1 style=\"color:blue;text-align:center;\">\n      This is a heading</h1>",
-        "highlight_lines": [],
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <h1 style=\"color:blue;text-align:center;\">This is a heading</h1>\n    <p style=\"color:red;\">This is a paragraph.</p>\n  </body>\n</html>",
+        "highlight_lines": [
+          1,
+          2,
+          6
+        ],
         "output": null,
         "output_status": "not_applicable",
         "verification_ref": null
@@ -84,8 +88,11 @@
         "type": "code",
         "language": "html",
         "filename": "index.html",
-        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <p style=\"color:red;\">\n      This is a paragraph.</p>\n    </body>\n  </html>",
-        "highlight_lines": [],
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <h1 style=\"color:blue;text-align:center;\">This is a heading</h1>\n    <p style=\"color:red;\">This is a paragraph.</p>\n  </body>\n</html>",
+        "highlight_lines": [
+          6,
+          9
+        ],
         "output": null,
         "output_status": "not_applicable",
         "verification_ref": null
