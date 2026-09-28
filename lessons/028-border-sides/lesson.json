@@ -143,7 +143,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "/* أربع قيم */\np { border-style: dotted solid double dashed; }\n/* ثلاث قيم */\np { border-style: dotted solid double; }",
+        "code": "/* أربع قيم */\np {\n  border-style: dotted solid double dashed;\n}\n/* ثلاث قيم */\np {\n  border-style: dotted solid double;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
