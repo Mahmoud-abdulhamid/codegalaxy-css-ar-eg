@@ -101,7 +101,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "p.ex1 { outline-width: thin; }\np.ex2 { outline-width: medium; }\np.ex3 { outline-width: thick; }\np.ex4 { outline-width: 8px; }",
+        "code": "p.ex1 {\n  outline-width: thin;\n}\np.ex2 {\n  outline-width: medium;\n}\np.ex3 {\n  outline-width: thick;\n}\np.ex4 {\n  outline-width: 8px;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
