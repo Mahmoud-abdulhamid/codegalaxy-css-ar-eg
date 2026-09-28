@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "85",
+  "title": "CSS max-width Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية التحكم في عرض العناصر باستخدام max-width",
+    "تطبيق خاصية max-width لمنع تمدد العناصر بشكل غير مرغوب",
+    "حل تحديات برمجية عملية باستخدام CSS",
+    "تحسين تجربة المستخدم في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_max-width.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS max-width",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ التَّحَكُّمِ فِي الْحَدِّ الْأَقْصَى لِعَرْضِ الْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ max-width، وَهِيَ مَهَارَه أَسَاسِيَّه لِتَصْمِيمِ صَفَحَاتِ وِبٍّ مُتَجَاوِبَه.",
+        "caption_text": "مرحبا بكم في درس التحكم في عرض العناصر باستخدام خاصية max-width في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية max-width تحدد أقصى عرض للعنصر",
+          "تمنع العناصر من تجاوز حجم معين",
+          "تعتبر جزءا حيويا من Responsive Web Design",
+          "تساعد في تحسين مظهر النصوص داخل الحاويات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_max-width.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم max-width",
+      "narration": {
+        "spoken_text": "خَاصِيَّةِ max-width تُعَدُّ أَدَاه قَوِيَّه لِتَحْدِيدِ الْحَدِّ الْأَقْصَى لِلْعَرْضِ. عِنْدَمَا نُعَيِّنُ قِيمَه لَهَا، لَنْ يَتَجَاوَزَ الْعُنْصُرُ هَذَا الْعَرْضَ حَتَّى لَوْ كَانَتْ مِسَاحَةِ الشَّاشَه أَوْسَعَ، مِمَّا يَجْعَلُ التَّصْمِيمَ أَكْثَرَ انْضِبَاطاً.",
+        "caption_text": "خاصية max-width تمنع العناصر من التمدد لأكثر من القيمة المحددة لها."
+      },
+      "visual": {
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "1",
+            "label": "Container",
+            "active": false
+          },
+          {
+            "id": "2",
+            "label": "max-width: 500px",
+            "active": false
+          },
+          {
+            "id": "3",
+            "label": "Content",
+            "active": false
+          }
+        ],
+        "edges": [
+          {
+            "source": "1",
+            "target": "2",
+            "label": ""
+          },
+          {
+            "source": "2",
+            "target": "3",
+            "label": ""
+          }
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_max-width.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق الكود العملي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيف div وَنُعْطِيهِ خَاصِيَّةِ max-width بِقِيمَةِ 500px. هَذَا يَضْمَنُ أَنَّ الْعُنْصُرَ سَيَبْقَى مُتَمَرْكِزاً وَمُنَظَّماً دَاخِلَ أَيِّ شَاشَه.",
+        "caption_text": "تطبيق خاصية max-width على عنصر div لضبط عرضه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 100%;\n  max-width: 500px;\n  margin: auto;\n  background: lightblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_max-width.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، اسْتَخْدَمْنَا width: 100 لِيَأْخُذَ الْعُنْصُرُ كَامِلَ الْمِسَاحَه الْمُتَاحَه، لَكِنَّ max-width: 500px تَقُومُ بِقَصِّ هَذَا التَّمَدُّدِ عِنْدَ وُصُولِهِ لِخَمْسِمِائَه بِكْسِلٍ، و margin: auto لِتَوْسِيطِ الْعُنْصُرِ.",
+        "caption_text": "شرح وظيفة كل سطر في الكود لضمان استجابة العنصر."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "width: 100",
+            "يأخذ كامل العرض المتاح"
+          ],
+          [
+            "max-width",
+            "يحدد الحد الأقصى للعرض"
+          ],
+          [
+            "margin: auto",
+            "توسيط العنصر أفقيا"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_max-width.asp"
+      ]
+    },
+    {
+      "id": "output",
+      "title": "المعاينة المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَشْغِيلِ هَذَا الْكُودِ فِي مُتَصَفِّحْ الْوِبّ، سَتَرَى أَنَّ الْعُنْصُرَ يَتَمَدَّدُ مَعَ الشَّاشَه الصَّغِيرَه، وَلَكِنْ عِنْدَ تَجَاوُزِ 500px، يَتَوَقَّفُ عَنِ التَّمَدُّدِ وَيَبْقَى فِي الْمُنْتَصَفِ.",
+        "caption_text": "نتيجة تطبيق الكود: العنصر يتوقف عن التمدد عند 500 بكسل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div style=\"max-width: 500px; margin: auto;\">\n      هذا النص داخل حاوية محدودة العرض.\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "هذا النص داخل حاوية محدودة العرض.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_max-width.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنْ أَفْضَلِ الْمُمَارَسَاتِ هِيَ دَمْج max-width مَعَ خَاصِيَّةِ width: 100 لِضَمَانِ أَنَّ الْعُنْصُرَ لَنْ يَخْرُجَ عَنْ حُدُودِ الشَّاشَاتِ الصَّغِيرَه، وَهَذَا يُعَدُّ مِنْ أَهَمِّ قَوَاعِدِ التَّصْمِيمِ الْحَدِيثِ.",
+        "caption_text": "استخدام max-width مع width: 100 يضمن تجاوبا مثاليا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم دائما max-width مع width: 100",
+          "اختبر التصميم على أحجام شاشات مختلفة",
+          "تجنب استخدام قيم ثابتة كبيرة للعرض",
+          "استخدم وحدات قياس مرنة مثل أو rem"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_max-width.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا أَهَمِّيَّةِ max-width فِي ضَبْطِ عَرْضِ الْعَنَاصِرِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا الْكُودِ بِأَنْفُسِكُمْ وَمُحَاوَلَةِ حَلِّ التَّحَدِّيَاتِ الْمَوْجُودَه فِي الرَّابِطِ الْمُدْرَجِ بِالْوَصْفِ.",
+        "caption_text": "خلاصة: خاصية max-width هي مفتاحك لتصميم صفحات ويب متجاوبة ومنظمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية مفهوم max-width",
+          "تم شرح كيفية تطبيق الكود عمليا",
+          "تم توضيح أهمية التوسيط باستخدام margin",
+          "شجعنا على الممارسة العملية عبر الرابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_max-width.asp"
+      ]
+    }
+  ]
+}
