@@ -20,11 +20,11 @@
 
 ```css
 p.one { border-style: solid;
-border-width: 5px; }
+  border-width: 5px; }
 p.two { border-style: solid;
-border-width: medium; }
+  border-width: medium; }
 p.three { border-style: dotted;
-border-width: 2px; }
+  border-width: 2px; }
 ```
 
 ## تكملة أمثلة border-width
@@ -33,7 +33,7 @@ border-width: 2px; }
 
 ```css
 p.four { border-style: dotted;
-border-width: thick; }
+  border-width: thick; }
 ```
 
 ## تحديد سمك كل جانب على حدة
