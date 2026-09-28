@@ -23,12 +23,10 @@
 تطبيق أنماط مختلفة للخاصية outline مثل dashed و dotted red و solid.
 
 ```css
-p.ex1
-{
+p.ex1 {
   outline: dashed;
 }
-p.ex2
-{
+p.ex2 {
   outline: dotted red;
 }
 ```
@@ -38,12 +36,10 @@ p.ex2
 متابعة الأمثلة لاستخدام ألوان وأنساق متقدمة مثل thick ridge pink.
 
 ```css
-p.ex3
-{
+p.ex3 {
   outline: 7px solid yellow;
 }
-p.ex4
-{
+p.ex4 {
   outline: thick ridge pink;
 }
 ```
