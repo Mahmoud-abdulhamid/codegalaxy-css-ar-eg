@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "18",
+  "title": "CSS Colors Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تطبيق الألوان في CSS",
+    "التعرف على تحديات البرمجة في CSS",
+    "تطبيق مهارات الألوان في تصميم الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_colors.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحديات CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَخُوضُ تَحَدِّي CSS Colors Code Challenge لِاخْتِبَارِ مَهَارَاتِكُمْ فِي تَنْسِيقِ أَلْوَانِ صَفْحَاتِ الْوِبّ بِشَكْلٍ احْتِرَافِيٍّ وَمُبْتَكَرٍ.",
+        "caption_text": "مرحبا بكم في درس تحدي الألوان في CSS. سنقوم اليوم باختبار مهاراتكم في تنسيق الألوان داخل صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية الألوان في تصميم واجهات المستخدم",
+          "استعراض تحدي CSS Colors Code Challenge",
+          "كيفية البدء في حل التحديات البرمجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_colors.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم الألوان الأساسية",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ نَتَائِجَ رَائِعَه فِي CSS، يَجِبُ أَنْ نَفْهَمَ كَيْفِيَّةِ تَعْرِيفِ الْأَلْوَانِ. نَسْتَخْدِمُ خَاصِّيَّةِ color لِلنُّصُوصِ، و background-color لِلْخَلْفِيَّاتِ، وَذَلِكَ بِاسْتِخْدَامِ قِيَمٍ مِثْل Hex، RGB، أَوْ HSL.",
+        "caption_text": "تعتمد الألوان في CSS على خصائص مثل color و background-color، مع دعم قيم متنوعة مثل Hex و RGB و HSL."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام خاصية color للنصوص",
+          "استخدام خاصية background-color للخلفيات",
+          "تنوع القيم: Hex, RGB, HSL"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_colors.asp"
+      ]
+    },
+    {
+      "id": "code_setup",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْكُودِ. نَقُومُ بِتَحْدِيد Selector، ثُمَّ نَفْتَحُ الأَقْوَاسَ الْمُجَعَّدَه لِكِتَابَةِ الْخَصَائِصِ. هَذَا الْهَيْكَلُ هُوَ الْأَسَاسُ لِتَطْبِيقِ أَيِّ تَحَدٍّ بَرْمَجِيٍّ فِي CSS.",
+        "caption_text": "يبدأ كود CSS بتحديد العنصر عبر Selector ثم كتابة الخصائص داخل الأقواس المجعدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-color: #f0f0f0;\n}\nh1 {\n  color: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_colors.asp"
+      ]
+    },
+    {
+      "id": "challenge_logic",
+      "title": "منطق حل التحدي",
+      "narration": {
+        "spoken_text": "فِي هَذَا التَّحَدِّي، يُطْلَبُ مِنْكُمْ تَطْبِيقُ أَلْوَانٍ مُحَدَّدَه عَلَى عَنَاصِرَ مُعَيَّنَه. رَكِّزُوا عَلَى قِرَاءَةِ الْمَطْلُوبِ بِدِقَّه، ثُمَّ اخْتَارُوا الْقِيمَه الصَّحِيحَه لِتَحْقِيقِ النَّتِيجَه الْمَرْجُوَّه فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "يتطلب التحدي تطبيق ألوان محددة على عناصر معينة، لذا يجب قراءة المتطلبات بدقة لاختيار القيم الصحيحة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قراءة متطلبات التحدي بتركيز",
+          "اختيار نظام الألوان المناسب",
+          "تطبيق التنسيق على العناصر المستهدفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_colors.asp"
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "تطبيق عملي للألوان",
+      "narration": {
+        "spoken_text": "لِنُطَبِّقْ مِثَالاً عَمَلِيّاً. نَقُومُ بِتَغْيِيرِ لَوْنِ الْخَلْفِيَّه لِعُنْصُر div، وَتَغْيِيرِ لَوْنِ النَّصِّ لِعُنْصُر p. هَذِهِ الْمُمَارَسَه تُعَزِّزُ فَهْمَكُمْ لِكَيْفِيَّةِ تَفَاعُلِ الْأَلْوَانِ مَعَ بَعْضِهَا.",
+        "caption_text": "تطبيق عملي لتغيير لون خلفية div ولون نص p لتعزيز فهم تفاعل الألوان."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  background-color: hsl(0, 100%, 50%);\n}\np {\n  color: rgb(255, 255, 255);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_colors.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "عِنْدَ الْعَمَلِ عَلَى الْأَلْوَانِ، احْرِصُوا عَلَى التَّبَايُنِ الْجَيِّدِ بَيْنَ النَّصِّ وَالْخَلْفِيَّه لِضَمَانِ سُهُولَةِ الْقِرَاءَه. اسْتَخْدِمُوا أَدَوَاتِ الْمُتَصَفِّحْ لِتَجْرِبَةِ الْأَلْوَانِ مُبَاشَرَه قَبْلَ اعْتِمَادِهَا فِي الْكُودِ.",
+        "caption_text": "من أفضل الممارسات ضمان تباين جيد بين النص والخلفية واستخدام أدوات المتصفح لتجربة الألوان."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ضمان التباين العالي للنصوص",
+          "استخدام أدوات المطور في المتصفح",
+          "اختبار الألوان على شاشات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_colors.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ وَصَلْنَا إِلَى نِهَايَةِ هَذَا التَّحَدِّي. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ، وَلَا تَتَرَدَّدُوا فِي طَرْحِ أَسْئِلَتِكُمْ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "وصلنا لنهاية التحدي. جربوا الأكواد بأنفسكم عبر الرابط في الوصف، ولا تترددوا في طرح الأسئلة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة ما تم تعلمه اليوم",
+          "دعوة لتطبيق التحدي عمليا",
+          "شكر المتابعين على اهتمامهم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_colors.asp"
+      ]
+    }
+  ]
+}
