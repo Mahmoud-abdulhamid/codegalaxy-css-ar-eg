@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "81",
+  "title": "CSS display Property",
+  "course": "CSS",
+  "objectives": [
+    "فهم أهمية خاصية display في التحكم بتخطيط عناصر الويب",
+    "التمييز بين Block-level Elements و Inline Elements",
+    "تعلم كيفية تغيير السلوك الافتراضي للعناصر باستخدام CSS",
+    "التعرف على قيم display الشائعة مثل none و flex و grid"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_display.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول خاصية display",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَرَّفُ عَلَى خَاصِيَّةِ display، وَهِيَ أَدَاه جَوْهَرِيَّه لِلتَّحَكُّمِ فِي تَخْطِيطِ صَفْحَةِ الْوِبّ، حَيْثُ تُحَدِّدُ كَيْفِيَّةِ عَرْضِ الْعَنَاصِرِ عَلَى الشَّاشَه.",
+        "caption_text": "تعد خاصية display من أهم خصائص CSS للتحكم في تخطيط عناصر الويب وتحديد سلوك عرضها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية display تتحكم في تخطيط العناصر",
+          "تحدد ما إذا كان العنصر Block أو Inline",
+          "لكل عنصر HTML قيمة عرض افتراضية",
+          "يمكن تغيير السلوك الافتراضي باستخدام CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display.asp"
+      ]
+    },
+    {
+      "id": "block_inline",
+      "title": "الفرق بين Block و Inline",
+      "narration": {
+        "spoken_text": "تَنْقَسِمُ الْعَنَاصِرُ إِلَى نَوْعَيْنِ رَئِيسِيَّيْنِ. الْعَنَاصِرُ مِنْ نَوْع Block تَبْدَأُ دَائِماً فِي سَطْرٍ جَدِيدٍ وَتَأْخُذُ الْعَرْضَ الْكَامِلَ. أَمَّا الْعَنَاصِرُ مِنْ نَوْع Inline فَلَا تَبْدَأُ فِي سَطْرٍ جَدِيدٍ وَتَأْخُذُ مَسَاحَه بِقَدْرِ مُحْتَوَاهَا فَقَطْ.",
+        "caption_text": "تتميز عناصر Block بالبدء في سطر جديد، بينما تظهر عناصر Inline بجانب بعضها."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "نوع العنصر",
+          "السطر",
+          "العرض"
+        ],
+        "rows": [
+          [
+            "Block",
+            "سطر جديد",
+            "كامل العرض"
+          ],
+          [
+            "Inline",
+            "نفس السطر",
+            "بقدر المحتوى"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "تغيير السلوك الافتراضي",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَغْيِيرُ هَذَا السُّلُوكِ بِاسْتِخْدَام CSS. لَاحِظْ هَذَا الْكُودَ حَيْثُ نُحَوِّلُ الْعَنَاصِرَ لِتَأْخُذَ شَكْل inline أَوْ block. هَذَا يُسَاعِدُنَا فِي بِنَاءِ قَوَائِمَ أُفُقِيَّه أَوْ تَخْطِيطَاتٍ مُخْتَلِفَه لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "يمكن استخدام display لتغيير السلوك الافتراضي للعناصر لتحقيق تخطيطات مخصصة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "li {\n  display: inline;\n}\nspan {\n  display: block;\n}\na {\n  display: block;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display.asp"
+      ]
+    },
+    {
+      "id": "advanced_values",
+      "title": "قيم إضافية لخاصية display",
+      "narration": {
+        "spoken_text": "هُنَاكَ قِيَمٌ أُخْرَى قَوِيَّه لِخَاصِيَّةِ display. مِثْل none لِإِخْفَاءِ الْعُنْصُرِ تَمَاماً، و inline-block لِلْجَمْعِ بَيْنَ مِيزَاتِ النَّوْعَيْنِ، بِالْإِضَافَه إِلَى flex و grid لِتَصْمِيمِ تَخْطِيطَاتٍ مُتَقَدِّمَه وَمَرِنَه.",
+        "caption_text": "توفر CSS قيما متقدمة مثل flex و grid للتحكم الكامل في تخطيط الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.ex1 {\n  display: none;\n}\np.ex2 {\n  display: inline;\n}\np.ex3 {\n  display: block;\n}\np.ex4 {\n  display: inline-block;\n}\np.ex5 {\n  display: flex;\n}\np.ex6 {\n  display: grid;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْقِيَمِ، سَتُحَظُّ تَغَيُّراً مُبَاشِراً فِي مَوْقِعِ الْعَنَاصِرِ. الْعُنْصُرُ الَّذِي يَأْخُذ display: block سَيَحْتَلُّ سَطْراً مُسْتَقِلّاً، بَيْنَمَا الْعُنْصُرُ الَّذِي يَأْخُذ display: none سَيَخْتَفِي تَمَاماً مِنَ الصَّفْحَه.",
+        "caption_text": "تؤثر قيم display بشكل مباشر على كيفية ظهور العناصر وتوزيعها في المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Block Element (New Line)\nInline Element (Same Line)\nHidden Element (Not Visible)",
+        "highlight_lines": [],
+        "output": "Block Element (New Line)\nInline Element (Same Line)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هامة",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ أَنَّ تَغْيِير display لَا يُغَيِّرُ نَوْعَ الْعُنْصُرِ نَفْسَهُ، بَلْ يُغَيِّرُ طَرِيقَةِ عَرْضِهِ فَقَطْ. لَا تَقُمْ بِوَضْعِ عَنَاصِر block دَاخِلَ عَنَاصِر inline، لِأَنَّ هَذَا يُخَالِفُ مَعَايِيرَ الْوِبّ الْقِيَاسِيَّه.",
+        "caption_text": "يجب الالتزام بمعايير الويب عند تغيير قيم display وعدم وضع عناصر block داخل inline."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تغيير display لا يغير نوع العنصر",
+          "احذر من وضع Block داخل Inline",
+          "استخدم flex و grid للتخطيط الحديث",
+          "اختبر دائما مخرجاتك في المتصفح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا أَهَمِّيَّةِ display فِي التَّحَكُّمِ بِتَخْطِيطِ الْعَنَاصِرِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدِيُو لِتَرَوْا النَّتَائِجَ بِأَعْيُنِكُمْ. مَعَ تَحِيَّاتِي، مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "شكرا لمتابعتكم. جربوا الأكواد بأنفسكم لتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلمنا الفرق بين Block و Inline",
+          "تعلمنا كيفية تغيير السلوك الافتراضي",
+          "تعرفنا على قيم متقدمة مثل flex و grid",
+          "رابط المصدر متاح في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display.asp"
+      ]
+    }
+  ]
+}
