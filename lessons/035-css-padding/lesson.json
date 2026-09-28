@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "35",
+  "title": "CSS Padding",
+  "course": "CSS",
+  "objectives": [
+    "فهم دور الـ padding في تصميم صفحات الويب",
+    "التحكم في المساحات لكل جانب من جوانب الـ Element",
+    "استخدام الـ shorthand property لتقليل حجم الكود",
+    "تطبيق أفضل الممارسات في توزيع المساحات"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_padding.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Padding",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ اسْتِخْدَام padding لِتَوْلِيدِ مَسَاحَاتٍ فَرَاغِيَّه حَوْلَ مُحْتَوَى Element، وَذَلِكَ دَاخِلَ أَيِّ حُدُودٍ مُعَرَّفَه لَهُ.",
+        "caption_text": "تستخدم خصائص CSS padding لإنشاء مساحة حول محتوى العنصر داخل الحدود."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ padding يولد مساحة داخل الـ border",
+          "يوفر تحكما كاملا في جوانب الـ Element الأربعة",
+          "يساعد في تحسين المظهر البصري وتجربة المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding.asp"
+      ]
+    },
+    {
+      "id": "individual_sides",
+      "title": "تحديد الـ padding لكل جانب",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَحْدِيدُ مَسَاحَه مُخْتَلِفَه لِكُلِّ جَانِبٍ بِاسْتِخْدَام padding-top، و padding-right، و padding-bottom، و padding-left. لَاحِظْ أَنَّهُ لَا يُسْمَحُ بِاسْتِخْدَامِ قِيَمٍ سَالِبَه فِي هَذِهِ الْخَصَائِصِ.",
+        "caption_text": "يمكن تحديد مساحة padding لكل جانب على حدة باستخدام خصائص محددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  padding-top: 50px;\n  padding-right: 30px;\n  padding-bottom: 50px;\n  padding-left: 80px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding.asp"
+      ]
+    },
+    {
+      "id": "shorthand_intro",
+      "title": "خاصية الـ Shorthand",
+      "narration": {
+        "spoken_text": "لِاخْتِصَارِ الْكُودِ، نَسْتَخْدِمُ خَاصِيَّةِ padding كَةِ shorthand property. هَذِهِ الْخَاصِيَّه تَسْمَحُ لَنَا بِتَحْدِيدِ جَمِيعِ الْجَوَانِبِ فِي سَطْرٍ وَاحِدٍ فَقَطْ، مِمَّا يَجْعَلُ الْكُودَ أَكْثَرَ نَظَافَه وَسُهُولَه فِي الْقِرَاءَه.",
+        "caption_text": "خاصية padding هي shorthand لتعيين جميع جوانب المساحة في إعلان واحد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تختصر أربعة أسطر في سطر واحد",
+          "تتبع ترتيبا معينا للجوانب",
+          "تزيد من كفاءة صيانة ملفات الـ CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding.asp"
+      ]
+    },
+    {
+      "id": "shorthand_four",
+      "title": "أربع قيم للـ Shorthand",
+      "narration": {
+        "spoken_text": "إِذَا اسْتَخْدَمْنَا أَرْبَعَ قِيَمٍ مَع padding، فَإِنَّ التَّرْتِيبَ يَكُونُ: الْأَعْلَى، ثُمَّ الْيَمِينِ، ثُمَّ الْأَسْفَلِ، ثُمَّ الْيَسَارِ. هَذَا التَّرْتِيبُ يَضْمَنُ تَحَكُّماً دَقِيقاً فِي كُلِّ جَانِبٍ عَلَى حِدَه.",
+        "caption_text": "عند استخدام أربع قيم: padding: top right bottom left"
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  padding: 25px 50px 75px 100px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding.asp"
+      ]
+    },
+    {
+      "id": "shorthand_three",
+      "title": "ثلاث قيم للـ Shorthand",
+      "narration": {
+        "spoken_text": "فِي حَالَةِ اسْتِخْدَامِ ثَلَاثِ قِيَمٍ، تَكُونُ الْقِيمَه الْأُولَى لِلْأَعْلَى، وَالثَّانِيَه لِلْيَمِينِ وَالْيَسَارِ مَعاً، وَالثَّالِثَه لِلْأَسْفَلِ. هَذَا يُسَاعِدُ فِي تَوْحِيدِ الْجَوَانِبِ الْأُفُقِيَّه بِسُهُولَه.",
+        "caption_text": "عند استخدام ثلاث قيم: padding: top (right & left) bottom"
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  padding: 25px 50px 75px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding.asp"
+      ]
+    },
+    {
+      "id": "shorthand_two",
+      "title": "قيمتان للـ Shorthand",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نَضَعُ قِيمَتَيْنِ فَقَطْ، تَكُونُ الْقِيمَه الْأُولَى لِلْأَعْلَى وَالْأَسْفَلِ، وَالثَّانِيَه لِلْيَمِينِ وَالْيَسَارِ. هَذَا النَّمَطُ شَائِعٌ جِدّاً لِتَوْزِيعِ الْمَسَاحَاتِ بِشَكْلٍ مُتَنَاظِرٍ.",
+        "caption_text": "عند استخدام قيمتين: padding: (top & bottom) (right & left)"
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  padding: 25px 50px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding.asp"
+      ]
+    },
+    {
+      "id": "shorthand_one",
+      "title": "قيمة واحدة للـ Shorthand",
+      "narration": {
+        "spoken_text": "أَخِيراً، إِذَا اسْتَخْدَمْنَا قِيمَه وَاحِدَه، فَإِنَّهَا تُطَبَّقُ عَلَى الْجَوَانِبِ الْأَرْبَعَه بِالتَّسَاوِي. هَذِهِ أَبْسَطُ طَرِيقَه لِإِضَافَه مَسَاحَه مُتَسَاوِيَه حَوْلَ الْمُحْتَوَى.",
+        "caption_text": "عند استخدام قيمة واحدة: padding: all sides"
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  padding: 25px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَتَحَكَّمُ فِي مَسَاحَات padding لِتَحْسِينِ تَصْمِيمِ الْوِبّ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِنَفْسِكُمْ لِتَرَوْا التَّأْثِيرَ الْمُبَاشِرَ عَلَى الْعَنَاصِرِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "لقد تعلمتم كيفية التحكم في padding لتحسين تصميم صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام الخصائص الفردية للتحكم الدقيق",
+          "استخدام الـ shorthand لتقليل الكود",
+          "تذكر دائما أن الـ padding لا يقبل قيما سالبة",
+          "مارسوا التطبيق العملي عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding.asp"
+      ]
+    }
+  ]
+}
