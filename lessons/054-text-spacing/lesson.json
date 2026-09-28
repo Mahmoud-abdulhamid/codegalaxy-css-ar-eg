@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "54",
+  "title": "CSS Text Spacing Properties",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية التحكم في تباعد النصوص باستخدام CSS",
+    "التعرف على خصائص text-indent و letter-spacing",
+    "إتقان استخدام line-height و word-spacing",
+    "التحكم في تدفق النصوص عبر خاصية white-space"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_text_spacing.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تباعد النصوص",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ التَّحَكُّمِ فِي تَبَاعُدِ النُّصُوصِ لِتَحْسِينِ مَظْهَرِ صَفْحَةِ الْوِبّ، وَجَعْلِ الْمُحْتَوَى أَكْثَرَ قَابِلِيَّه لِلْقِرَاءَه وَتَنْظِيماً بِاسْتِخْدَامِ خَصَائِصَ مُتَعَدِّدَه.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتعلم كيفية التحكم في تباعد النصوص وتحسين مظهر صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في تباعد الأسطر والكلمات",
+          "تنسيق المسافات بين الحروف",
+          "ضبط إزاحة الفقرات",
+          "التحكم في تدفق النصوص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_spacing.asp"
+      ]
+    },
+    {
+      "id": "text-indent",
+      "title": "خاصية text-indent",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِخَاصِيَّةِ text-indent، وَهِيَ تُسْتَخْدَمُ لِتَحْدِيدِ مَسَافَةِ الْإِزَاحَه لِلسَّطْرِ الْأَوَّلِ فِي الْفِقْرَه. يُمْكِنُكَ اسْتِخْدَامُ قِيَمٍ مُوجَبَه أَوْ سَالِبَه، حَيْثُ تُؤَدِّي الْقِيَمُ السَّالِبَه إِلَى إِزَاحَةِ السَّطْرِ نَحْوَ الْيَسَارِ.",
+        "caption_text": "تستخدم خاصية text-indent لتحديد إزاحة السطر الأول من الفقرة، وتدعم القيم السالبة والموجبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  text-indent: 50px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_spacing.asp"
+      ]
+    },
+    {
+      "id": "letter-spacing",
+      "title": "خاصية letter-spacing",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ الْمَسَافَه بَيْنَ الْحُرُوفِ فِي النَّصِّ، نَسْتَخْدِمُ خَاصِيَّةِ letter-spacing. هَذِهِ الْخَاصِيَّه تَسْمَحُ لَكَ بِزِيَادَه أَوْ تَقْلِيلِ التَّبَاعُدِ بَيْنَ الْحُرُوفِ، وَيُمْكِنُكَ أَيْضاً اسْتِخْدَامُ قِيَمٍ سَالِبَه لِتَقَارُبِ الْحُرُوفِ بِشَكْلٍ أَكْبَرَ.",
+        "caption_text": "تتحكم خاصية letter-spacing في المسافة بين الحروف، وتدعم القيم السالبة لتقارب الحروف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  letter-spacing: 5px;\n}\nh2 {\n  letter-spacing: -2px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_spacing.asp"
+      ]
+    },
+    {
+      "id": "line-height",
+      "title": "خاصية line-height",
+      "narration": {
+        "spoken_text": "أَمَّا خَاصِيَّةِ line-height فَهِيَ الْمَسْؤُولَه عَنِ الْمَسَافَه بَيْنَ الْأَسْطُرِ فِي النَّصِّ. لَاحِظْ أَنَّ هَذِهِ الْخَاصِيَّه لَا تَقْبَلُ الْقِيَمَ السَّالِبَه، وَتُسَاعِدُ كَثِيراً فِي جَعْلِ النُّصُوصِ الطَّوِيلَه مَرِيحَه لِلْعَيْنِ عِنْدَ الْقِرَاءَه.",
+        "caption_text": "تستخدم خاصية line-height لتحديد المسافة بين الأسطر، وهي لا تقبل القيم السالبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.small {\n  line-height: 0.8;\n}\np.big {\n  line-height: 1.8;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_spacing.asp"
+      ]
+    },
+    {
+      "id": "word-spacing",
+      "title": "خاصية word-spacing",
+      "narration": {
+        "spoken_text": "لِلتَّحَكُّمِ فِي الْمَسَافَه بَيْنَ الْكَلِمَاتِ، نَسْتَخْدِمُ خَاصِيَّةِ word-spacing. هَذِهِ الْخَاصِيَّه تُعْطِيكَ مَرُونَه كَبِيرَه فِي تَنْسِيقِ الْجُمَلِ، وَتَدْعَمُ الْقِيَمَ السَّالِبَه أَيْضاً لِتَقْلِيلِ الْمَسَافَاتِ بَيْنَ الْكَلِمَاتِ بِحَسَبِ تَصْمِيمِكَ.",
+        "caption_text": "تتحكم خاصية word-spacing في المسافة بين الكلمات، وتدعم القيم السالبة والموجبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.one {\n  word-spacing: 10px;\n}\np.two {\n  word-spacing: -2px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_spacing.asp"
+      ]
+    },
+    {
+      "id": "white-space",
+      "title": "خاصية white-space",
+      "narration": {
+        "spoken_text": "أَخِيراً، خَاصِيَّةِ white-space تُحَدِّدُ كَيْفِيَّةِ التَّعَامُلِ مَعَ الْمَسَافَاتِ الْبَيْضَاءِ دَاخِلَ الْعُنْصُرِ. عَلَى سَبِيلِ الْمِثَالِ، يُمْكِنُكَ اسْتِخْدَامُ قِيمَةِ nowrap لِمَنْعِ النَّصِّ مِنَ الِانْتِقَالِ إِلَى سَطْرٍ جَدِيدٍ دَاخِلَ الْعُنْصُرِ.",
+        "caption_text": "تحدد خاصية white-space كيفية معالجة المسافات البيضاء، وتستخدم nowrap لمنع التفاف النص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  white-space: nowrap;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_spacing.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ غَطَّيْنَا أَهَمَّ خَصَائِص CSS لِتَنْسِيقِ تَبَاعُدِ النُّصُوصِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْخَصَائِصِ بِنَفْسِكُمْ لِتَرَوْا تَأْثِيرَهَا الْمُبَاشِرَ عَلَى تَصَامِيمِكُمْ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا اليوم كيفية استخدام خصائص CSS للتحكم في تباعد النصوص. جربوا هذه الخصائص بأنفسكم لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "text-indent للإزاحة",
+          "letter-spacing للحروف",
+          "line-height للأسطر",
+          "word-spacing للكلمات",
+          "white-space للتدفق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_spacing.asp"
+      ]
+    }
+  ]
+}
