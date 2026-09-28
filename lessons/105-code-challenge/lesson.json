@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "105",
+  "title": "CSS Alignment Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم تقنيات محاذاة العناصر في CSS",
+    "تطبيق خصائص Alignment بشكل عملي",
+    "التعامل مع تحديات التنسيق في صفحات الويب",
+    "تحسين مهارات التحكم في تخطيط العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_align.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي المحاذاة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنُجْرِي تَحَدِّيَاً عَمَلِيَّاً لِاخْتِبَارِ مَهَارَاتِكُمْ فِي مُحَاذَاةِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ، وَهُوَ جُزْءٌ أَسَاسِيٌّ لِتَصْمِيمِ وَاجِهَاتٍ احْتِرَافِيَّه.",
+        "caption_text": "نبدأ اليوم تحدي CSS Alignment لاختبار مهاراتكم في محاذاة العناصر داخل صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية المحاذاة في تصميم واجهات الويب",
+          "استخدام CSS للتحكم في مواقع العناصر",
+          "تحدي عملي لتطبيق مفاهيم Alignment"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_align.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم المحاذاة الأساسية",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ مُحَاذَاه دَقِيقَه، نَعْتَمِدُ عَلَى خَصَائِصَ مِثْل text-align لِلنُّصُوصِ، و margin لِلْعَنَاصِرِ، بِالْإِضَافَه إِلَى تَقْنِيَات Flexbox و Grid الَّتِي تُعَدُّ الْأَدَاه الْأَقْوَى فِي CSS الْحَدِيثِ لِتَنْظِيمِ الْعَنَاصِرِ بِكُلِّ سُهُولَه.",
+        "caption_text": "تعتمد المحاذاة في CSS على خصائص مثل text-align وmargin وتقنيات متقدمة مثل Flexbox وGrid."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام text-align للنصوص",
+          "استخدام margin: auto للعناصر",
+          "قوة Flexbox في التوزيع",
+          "مرونة CSS Grid في التخطيط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_align.asp"
+      ]
+    },
+    {
+      "id": "code_setup",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْهَيْكَلِ الْأَسَاسِيِّ لِلصَّفْحَه. نَحْتَاجُ إِلَى دُوكْ تَايْبْ HTML وَعُنْصُر html، ثُمَّ نُضِيفُ قِسْم head لِتَعْرِيفِ التَّنْسِيقَاتِ دَاخِل style، وَقِسْم body لِوَضْعِ الْعَنَاصِرِ الَّتِي سَنَقُومُ بِمُحَاذَاتِهَا.",
+        "caption_text": "نبدأ بهيكل HTML الأساسي مع إضافة قسم style لتطبيق قواعد CSS المطلوبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      .container {\n        text-align: center;\n        border: 1px solid black;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <h1>CSS Alignment</h1>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_align.asp"
+      ]
+    },
+    {
+      "id": "alignment_logic",
+      "title": "تطبيق خصائص المحاذاة",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْجُزْءِ، نَقُومُ بِتَطْبِيقِ خَاصِّيَّةِ text-align بِقِيمَةِ center عَلَى الْحَاوِيَه. هَذَا يُؤَدِّي إِلَى مُحَاذَاةِ كُلِّ الْمُحْتَوَى الدَّاخِلِيِّ فِي مُنْتَصَفِ الصَّفْحَه، وَهُوَ حَلٌّ بَسِيطٌ وَفَعَّالٌ لِلنُّصُوصِ وَالْعَنَاصِرِ الْمُضَمَّنَه.",
+        "caption_text": "تطبيق خاصية text-align: center يجعل المحتوى يظهر في منتصف الحاوية بشكل مباشر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  text-align: center;\n  padding: 20px;\n  background-color: #f1f1f1;\n}\nh1 {\n  color: darkblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_align.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ التَّنْسِيقَاتِ، سَتُعْرَضُ الْعَنَاصِرُ فِي مُنْتَصَفِ الشَّاشَه. لَاحِظْ كَيْفَ أَدَّتْ خَاصِّيَّةِ text-align إِلَى تَغْيِيرِ مَوْقِعِ الْعُنْصُر h1 دَاخِلَ الْحَاوِيَه، مِمَّا يُعْطِي مَظْهَرَاً مُنَظَّمَاً وَمُتَوَازِنَاً لِلصَّفْحَه.",
+        "caption_text": "تظهر النتيجة النهائية مع تمركز العنوان داخل الحاوية بفضل قواعد CSS المطبقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "---------------------------\n|      CSS Alignment      |\n---------------------------",
+        "highlight_lines": [],
+        "output": "CSS Alignment (Centered)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_align.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "عِنْدَ الْعَمَلِ عَلَى الْمُحَاذَاه، يُفَضَّلُ دَائِمَاً اسْتِخْدَام Flexbox لِأَنَّهُ يُوَفِّرُ تَحَكُّمَاً أَكْبَرَ فِي الْمِحْوَرَيْنِ الْأُفُقِيِّ وَالرَّأْسِيِّ. تَأَكَّدْ مِنْ تَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكَ لِتَفْهَمَ كَيْفَ تَتَفَاعَلُ الْخَصَائِصُ مَعَ بَعْضِهَا فِي مُخْتَلِفِ الشَّاشَاتِ.",
+        "caption_text": "استخدم Flexbox للتحكم الكامل في المحاذاة، وجرب الأكواد بنفسك لتعزيز فهمك التقني."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تفضيل Flexbox للمشاريع الحديثة",
+          "اختبار التجاوب مع مختلف الشاشات",
+          "استخدام أدوات المطور في Web Browser",
+          "الممارسة المستمرة لتثبيت المعلومات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_align.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا تَحَدِّيَ الْمُحَاذَاه. أَدْعُوكُمْ لِزِيَارَةِ الرَّابِطِ فِي الْوَصْفِ لِتَجْرِبَةِ الْمَزِيدِ مِنَ التَّحَدِّيَاتِ. شُكْرَاً لِمُتَابَعَتِكُمْ، وَأَلْقَاكُمْ فِي الدَّرْسِ الْقَادِمِ لِاسْتِكْمَالِ رِحْلَتِنَا فِي تَعَلُّم CSS مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "شكرا لمتابعتكم. زوروا الرابط في الوصف لتجربة المزيد من التحديات البرمجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم إتمام تحدي المحاذاة بنجاح",
+          "استمروا في ممارسة كتابة الأكواد",
+          "تابعوا الدروس القادمة في الدورة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_align.asp"
+      ]
+    }
+  ]
+}
