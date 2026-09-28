@@ -1,4 +1,12 @@
-p.groove {outline-style: groove;}
-p.ridge {outline-style: ridge;}
-p.inset {outline-style: inset;}
-p.outset {outline-style: outset;}
+p.groove {
+  outline-style: groove;
+}
+p.ridge {
+  outline-style: ridge;
+}
+p.inset {
+  outline-style: inset;
+}
+p.outset {
+  outline-style: outset;
+}
