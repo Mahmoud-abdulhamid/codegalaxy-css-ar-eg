@@ -118,7 +118,7 @@
         "type": "code",
         "language": "html",
         "filename": "index.html",
-        "code": "<h1>Welcome</h1>\n<p>This is a test.</p>",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <h1>Welcome</h1>\n    <p>This is a test.</p>\n  </body>\n</html>",
         "highlight_lines": [],
         "output": "Welcome (centered, blue)\nThis is a test. (20px)",
         "output_status": "illustrative",
