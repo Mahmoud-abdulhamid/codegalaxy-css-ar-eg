@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "107",
+  "title": "تحدي استخدام CSS Combinators",
+  "course": "CSS",
+  "objectives": [
+    "فهم أنواع CSS Combinators الأربعة بشكل عميق",
+    "تطبيق Descendant Selector وChild Selector عمليا",
+    "استخدام Adjacent Sibling وGeneral Sibling بشكل صحيح",
+    "حل تحديات الكود البرمجية في CSS بكفاءة عالية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_combinators.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة تحدي CSS Combinators",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْعَمَلِيِّ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَطْبِيقِ التَّحَدِّيَاتِ البرمجيَه الخاصَه بَةِ CSS Combinators وَكَيْفَ نُحَدِّدُ الْعَنَاصِرَ بدقَه دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تحدي CSS Combinators وتطبيق المفاهيم البرمجية عمليا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار الفهم الحقيقي لـ CSS Combinators",
+          "تطبيق الأكواد عبر تحديات عملية تفاعلية",
+          "التحكم الكامل في تنسيق عناصر صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_types",
+      "title": "أنواع Combinators في لغة CSS",
+      "narration": {
+        "spoken_text": "تَنْقَسِم Combinators فِي لُغَةِ CSS إِلَى أَرْبَعَه أَنْوَاعٍ رَئِيسِيَّه تَتَحَكَّمُ فِي الْعَلَاقَاتِ بَيْن Elements. لَاحِظْ هَذَا الْجَدْوَالَ الَّذِي يُبَيِّنُ كُلَّ رَمْزٍ وَوَظِيفَتَهُ بِدِقَّه تَامَّه لِفَهْمِ التَّحَدِّي.",
+        "caption_text": "جدول يوضح أنواع CSS Combinators الأربعة والرموز الخاصة بكل منها."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "النوع",
+          "الرمز",
+          "الوظيفة الأساسية"
+        ],
+        "rows": [
+          [
+            "Descendant",
+            "مسافة (أو مفصول بمسافة)",
+            "يستهدف جميع العناصر الفرعية داخل العنصر الأب"
+          ],
+          [
+            "Child",
+            ">",
+            "يستهدف الأبناء المباشرين فقط للعنصر الأب"
+          ],
+          [
+            "Adjacent Sibling",
+            "+",
+            "يستهدف العنصر التالي المباشر الشقيق تماما"
+          ],
+          [
+            "General Sibling",
+            "",
+            "يستهدف جميع العناصر الشقيقة اللاحقة في نفس المستوى"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_code_start",
+      "title": "كتابة هيكل تحدي CSS Combinators",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى كِتَابَةِ الْأَكْوَادِ الأَسَاسِيَّه لِحِلِّ التَّحَدِّي. نَقُومُ بِإِنْشَاءِ عُنْصَر div يَحْتَوِي عَلَى فِقَرَاتٍ و Tags مُخْتَلِفَه لِنُطَبِّقَ عَلَيْهَا قَوَاعِدَ التَّنْسِيقِ بدقَه.",
+        "caption_text": "إنشاء الهيكل البرمجي الأولي لتطبيق تحدي Combinators في ملف CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "challenge.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <h1>العنوان الرئيسي</h1>\n      <p>هذه الفقرة الأولى داخل الحاوية.</p>\n      <div>\n        <p>هذه الفقرة داخل عنصر فرعي متداخل.</p>\n      </div>\n      <p>هذه الفقرة شقيقة لاحقة للفقرة الأولى.</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "output": "Container with heading, nested paragraphs, and sibling elements.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_explanation",
+      "title": "شرح قواعد الكود والتنسيق",
+      "narration": {
+        "spoken_text": "لِنُحَلِّلْ كَيْفَ تَعْمَلُ التَّنْسِيقَاتُ مَع Combinators. اِسْتِخْدَامُ (div p) يَتَحَكَّمُ فِي الْأَبْنَاءِ الْمُبَاشِرِينَ فَقَطْ، بَيْنَمَا اِسْتِخْدَامُ الرَّمْزِ () يُطَبِّقُ التَّنْسِيقَ عَلَى General Sibling الشَّقِيقِ اللَّاحِقِ بَدِقَّه.",
+        "caption_text": "تفصيل عمل Child Selector باستخدام (>) وGeneral Sibling باستخدام ()."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام div > p لاستهداف الأبناء المباشرين فقط",
+          "استخدام div p لاستهداف جميع العناصر الفرعية متضمنة المتداخلة",
+          "استخدام div p لاستهداف العناصر الشقيقة اللاحقة بـ General Sibling",
+          "التحكم الدقيق في CSS لتجنب تداخل التنسيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_code_solution",
+      "title": "تطبيق حل التحدي البرمجي",
+      "narration": {
+        "spoken_text": "هَذَا هُوَ كُود CSS النِّهَائِيُّ لِحِلِّ التَّحَدِّي. نُطَبِّقُ فِيه Descendant Selector وَChild Selector و Sibling Combinators لِلْحُصُولِ عَلَى النَّتِيجَه الْمَطْلُوبَه بِاِكْمَالِ التَّحَدِّي بِنَجَاحٍ.",
+        "caption_text": "كود CSS النهائي لحل تحدي Combinators وتطبيق قواعد التنسيق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* Descendant Selector */\ndiv p {\n  background-color: yellow;\n}\n/* Child Selector */\ndiv > p {\n  color: red;\n}\n/* General Sibling Selector */\nh1 ~ p {\n  font-size: 18px;\n}",
+        "highlight_lines": [
+          2,
+          3,
+          7,
+          8,
+          12
+        ],
+        "output": "Paragraphs styled according to descendant, child, and sibling rules.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "عِنْدَ كِتَابَةِ أَكْوَاد CSS، احْرِصْ دَائِماً عَلَى اِخْتِيَار Combinator الْمُنَاسِبِ لِتَفَادِي تَأْثِيرَاتٍ غَيْرِ مَقْصُودَه عَلَى بَقِيَّةِ عَنَاصِرِ صَفْحَةِ الْوِبّ وَلِضْمَانِ أَدَاءٍ عَالٍ وَسَرِيعٍ.",
+        "caption_text": "أفضل الممارسات البرمجية عند التعامل مع CSS Combinators."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم Child Selector لتحديد الأبناء المباشرين بدقة",
+          "تجنب المبالغة في تعقيد Descendant Selectors الكبيرة",
+          "اختبر الكود جيدا في المتصفح للتأكد من صحة النتائج",
+          "الحفاظ على نظافة ملفات CSS وقابليتها للصيانة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس ودعوة للمتابعة",
+      "narration": {
+        "spoken_text": "إِلَى هُنَا يَا أَصْدِقَائِي نَكُونُ قَدْ أَتْمَمْنَا شَرْحَ وَحَلَّ تَحَدِّي CSS Combinators بِنَجَاحٍ كَامِلٍ. نَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِأَنْفُسِكُمْ عَبْرَ الرَّابِطِ الْمُرَفَّقِ فِي الْوَصْفِ.",
+        "caption_text": "خلاصة درس CSS Combinators ودعوة لتطبيق الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية كافة أنواع Combinators في لغة CSS",
+          "تطبيق عملي لتحدي W3Schools بنجاح تامة",
+          "استمروا في ممارسة البرمجة وتطوير مهاراتكم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_combinators.asp"
+      ]
+    }
+  ]
+}
