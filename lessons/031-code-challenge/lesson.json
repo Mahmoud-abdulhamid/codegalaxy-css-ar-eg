@@ -122,7 +122,7 @@
         "type": "code",
         "language": "html",
         "filename": "index.html",
-        "code": "<div style=\"border: 5px solid blue;\">\n  هذا عنصر يحتوي على Border\n</div>",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div style=\"border: 5px solid blue;\">\n      هذا عنصر يحتوي على Border\n    </div>\n  </body>\n</html>",
         "highlight_lines": [],
         "output": "إطار أزرق يحيط بالنص",
         "output_status": "illustrative",
