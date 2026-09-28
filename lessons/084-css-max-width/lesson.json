@@ -123,7 +123,7 @@
         "type": "code",
         "language": "html",
         "filename": "output.html",
-        "code": "<div class=\"ex1\">Fixed Width</div>\n<div class=\"ex2\">Max-Width</div>",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"ex1\">Fixed Width</div>\n    <div class=\"ex2\">Max-Width</div>\n  </body>\n</html>",
         "highlight_lines": [],
         "output": "ex1: يظل ثابت العرض (500px)\nex2: يتقلص حسب عرض الشاشة",
         "output_status": "illustrative",
