@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "75",
+  "title": "CSS Tables Styling",
+  "course": "CSS",
+  "objectives": [
+    "تنسيق جداول الويب باستخدام CSS",
+    "إضافة الحدود لـ table و th و td",
+    "استخدام property المسمى border-collapse لدمج الحدود",
+    "تطبيق padding والمسافات بين الخلايا"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_table.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة تنسيق الجداول",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَحْسِينِ وَتَنْسِيقِ جَدَاوِلِ الْوِبّ بِاسْتِخْدَامِ مَخْتَلِف Properties لِتَبْدُوَ أَكْثَرَ احْتِرَافِيَّه.",
+        "caption_text": "مرحبا بكم في درس تنسيق جداول الويب باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحسين جداول الويب باستخدام CSS",
+          "تطبيق خصائص التنسيق المختلفة",
+          "جعل الجداول أكثر احترافية ووضوحا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "إضافة الحدود للجداول",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ عَرْضِ وَشَكْلِ وَلَوْنِ الْحُدُودِ، نَسْتَخْدِم border property. فِي الْمِثَالِ التَّالِي نُطَبِّق border بِمَقَاسِ وَاحِدِ بِكْسِلٍ وَصِيغَةِ solid لِعَنَاصِر table و th و td.",
+        "caption_text": "تستخدم border property لتحديد حدود عناصر table و th و td."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "table, th, td {\n  border: 1px solid;\n}",
+        "highlight_lines": [],
+        "output": "يظهر الجدول بحدود مفصولة لكل عنصر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تلوين حدود الجداول",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَحْدِيدُ لَوْنٍ مُعَيَّنٍ لِلْحُدُودِ. فِي هَذَا الْمِثَالِ نَكْتُب border بِمَقَاسِ وَاحِدِ بِكْسِلٍ مَعَ لَوْنٍ أَخْضَرَ لِيَظْهَرَ الْجَدْوَلُ بلمسَه جماليَه واضحَه.",
+        "caption_text": "يمكن تحديد لون مخصص للحدود مثل اللون الأخضر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "table, th, td {\n  border: 1px solid green;\n}",
+        "highlight_lines": [],
+        "output": "يظهر الجدول بحدود خضراء لكل عنصر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "فهم الحدود المزدوجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيق border عَلَى table و th و td مَعاً، سَتُلَاحِظُ ظُهُورَ حُدُودٍ مُزْدَوِجَه؛ لِأَنَّ كُلَّ عُنْصُرٍ لَهُ حُدُودُهُ الْمُسْتَقِلَّه عَنِ الْآخَرِ.",
+        "caption_text": "تظهر الحدود المزدوجة لأن كل عنصر يمتلك حدودا مستقلة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ظهور حدود مزدوجة افتراضيا",
+          "استقلال حدود عناصر الجدول",
+          "الحاجة لدمج الحدود لشكل أفضل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "دمج الحدود باستخدام Collapse",
+      "narration": {
+        "spoken_text": "لِإِزَالَةِ الْحُدُودِ الْمُزْدَوِجَه وَدَمْجِهَا فِي حَدٍّ وَاحِدٍ، نَسْتَخْدِم border-collapse property مَعَ قِيمَةِ collapse فِي عُنْصُر table.",
+        "caption_text": "تستخدم border-collapse لدمج حدود الجدول في حد واحد مفرد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "table {\n  border-collapse: collapse;\n}",
+        "highlight_lines": [],
+        "output": "يظهر الجدول بحدود مدمجة وأنيقة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "إضافة المسافات الداخلية Padding",
+      "narration": {
+        "spoken_text": "لِلتَّحَكُّمِ فِي الْمَسَافَه بَيْنَ الْحَدِّ وَالْمُحْتَوَى دَاخِلَ الْخَلِيَّه، نَسْتَخْدِم padding property عَلَى عَنَاصِر td و th لِجَعْلِ النَّصِّ أَوْضَحَ.",
+        "caption_text": "تستخدم padding property للتحكم بالمسافة بين المحتوى والحدود."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "th, td {\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": "مساحة داخلية إضافية حول النصوص في الخلايا",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "المسافات بين الخلايا Border Spacing",
+      "narration": {
+        "spoken_text": "إِذَا كَانَتِ الْحُدُودُ مُنَفْصِلَه، يُمْكِنُكَ تَحْدِيدُ الْمَسَافَه بَيْنَ الْخَلَايَا الْمُتَجَاوِرَه بِاسْتِخْدَام border-spacing property عِنْدَمَا تَكُونُ قِيمَةِ border-collapse هِي separate.",
+        "caption_text": "تحدد border-spacing المسافة بين الخلايا المتجاورة عند الفصل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "table {\n  border-collapse: separate;\n  border-spacing: 15px;\n}",
+        "highlight_lines": [],
+        "output": "مسافات واضحة وفاصلة بين خلايا الجدول",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس والتطبيقات",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةِ تَحْسِينِ جَدَاوِلِ الْوِبّ بِاسْتِخْدَام border و border-collapse و padding. تَدَرَّبُوا عَلَى هَذِهِ الْأَكْوَادِ وَتَابِعُوا الدُّرُوسَ الْقَادِمَه مَعَ الْمُدَرِّبِ مَحْمُودْ عَبْدِالْحَمِيدْ.",
+        "caption_text": "خلاصة تنسيق الجداول واستخدام الخصائص المختلفة باحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام border لتحديد الحدود والألوان",
+          "دمج الحدود عبر border-collapse",
+          "التحكم بالمسافات باستخدام padding و border-spacing"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table.asp"
+      ]
+    }
+  ]
+}
