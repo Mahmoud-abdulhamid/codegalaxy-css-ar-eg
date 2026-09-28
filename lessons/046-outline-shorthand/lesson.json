@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "46",
+  "title": "CSS Outline Shorthand",
+  "course": "CSS",
+  "objectives": [
+    "فهم الخاصية المختصرة outline وكيفية كتابتها",
+    "تحديد القيم المختلفة للخصائص الفردية في سطر واحد",
+    "دمج outline مع border-radius لعمل زوايا دائرية",
+    "تطبيق أمثلة عملية متقدمة ومحترفة للتصميم"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_outline_shorthand.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة حول Outline Shorthand",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْمُمَيِّزِ مِنْ دَوْرَةِ تَنْسِيقِ الْمَوَاقِعِ بِالْعَرَبِيَّه. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاسِيَّةِ outline وَكَيْفِيَّةِ اسْتِخْدَامِهَا بِطَرِيقَه مُخْتَصَرَه وَذَكِيَّه لِتَوْفِيرِ الْوَقْتِ.",
+        "caption_text": "نتعرف اليوم على الخاصية المختصرة outline وكيفية استخدامها بكفاءة عالية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "شرح الخاصية المختصرة outline في CSS",
+          "توفير الوقت والجهد في كتابة الأكواد",
+          "تحديد عدة خصائص في سطر برمجي واحد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_shorthand.asp"
+      ]
+    },
+    {
+      "id": "scene_rules",
+      "title": "قواعد القيم والترتيب",
+      "narration": {
+        "spoken_text": "يُمْكِنُكَ تَحْدِيدُ قِيمَه وَاحِدَه أَوْ قِيمَتَيْنِ أَوْ ثَلَاثِ قِيَمٍ مِنْ خَصَائِصِ الْإِطَارِ الخَارِجِيِّ. لَاحِظْ أَنَّ تَرْتِيبَ هَذِهِ الْقِيَمِ لَا يُمَثِّلُ أَيَّ مُشْكِلَه وَلَا يُؤَثِّرُ عَلَى الظُّهُورِ إِطْلَاقاً.",
+        "caption_text": "يمكن تحديد قيمة أو قيمتين أو ثلاث للخاصية ولا يشترط ترتيب معين للقيم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد قيمة واحدة أو قيمتين أو ثلاث",
+          "ترتيب القيم غير مهم نهائيا",
+          "التحكم الكامل في شكل العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_shorthand.asp"
+      ]
+    },
+    {
+      "id": "scene_code_1",
+      "title": "أمثلة على outline مختصرا",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ الْبَرْمَجِيِّ الْأَوَّلِ، نَرَى كَيْفَ نُطَبِّق outline بِأَشْكَالٍ مُتَنَوِّعَه مِثْل dashed الْخَطِّيِّ أَوْ dotted red أَوْ حَتَّى 7px solid yellow لِإِبْرَازِ العَنَاصِرِ بِوُضُوحٍ.",
+        "caption_text": "تطبيق أنماط مختلفة للخاصية outline مثل dashed و dotted red و solid."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "outline_examples.css",
+        "code": "p.ex1\n{\n  outline: dashed;\n}\np.ex2\n{\n  outline: dotted red;\n}\n",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_shorthand.asp"
+      ]
+    },
+    {
+      "id": "scene_code_2",
+      "title": "استكمال أمثلة outline",
+      "narration": {
+        "spoken_text": "نُتَابِعُ بَقِيَّةِ الْأَمْثِلَه الْعَمَلِيَّه حَيْثُ نَسْتَخْدِمُ سُمُوكاً كَبِيرَه مِثْلَ 7px solid yellow أَوْ أَنْمَاطاً مُتَقَدِّمَه مِثْل thick ridge pink بِكُلِّ سُهُولَه ويسرٍ.",
+        "caption_text": "متابعة الأمثلة لاستخدام ألوان وأنساق متقدمة مثل thick ridge pink."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "outline_examples_2.css",
+        "code": "p.ex3\n{\n  outline: 7px solid yellow;\n}\np.ex4\n{\n  outline: thick ridge pink;\n}\n",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_shorthand.asp"
+      ]
+    },
+    {
+      "id": "scene_rounded_intro",
+      "title": "الزوايا الدائرية مع outline",
+      "narration": {
+        "spoken_text": "هَلْ تَعْلَمُ أَنَّ الْإِطَارَ الخَارِجِيَّ يُمْكِنُ أَنْ يَأْخُذَ زَوَايَا دَائِرِيَّه أَيْضاً؟ نَسْتَخْدِمُ هُنَا خَاسِيَّةِ border-radius الشَّهِيرَه لِإِضَافَه تَقَوّسَاتٍ جَمِيلَه وَجَذَّابَه لِأَيِّ عُنْصُرٍ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "يمكن دمج الإطار الخارجي مع الخاصية border-radius لعمل زوايا دائرية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إضافة زوايا دائرية للإطارات الخارجية",
+          "استخدام الخاصية border-radius بفعالية",
+          "تحسين المظهر الجمالي لعناصر الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_shorthand.asp"
+      ]
+    },
+    {
+      "id": "scene_rounded_code_1",
+      "title": "تطبيق border-radius مع outline",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ مَعاً إِلَى هَذَا الْكُودِ الْعَمَلِيِّ حَيْثُ نَدْمُج outline مَع border-radius بِقِيَمٍ مُخْتَلِفَه مِثْلَ 8px وَ 5px لِتَقْدِيمِ تَصْمِيمَاتٍ رَائِعَه لِلْمُسْتَخْدِمِينَ.",
+        "caption_text": "دمج الخاصية outline مع border-radius للحصول على تصميمات مميزة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "rounded_outline.css",
+        "code": "p.ex1 {\n  outline: dashed;\n  border-radius: 8px;\n}\np.ex2 {\n  outline: dotted red;\n  border-radius: 5px;\n}\n",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_shorthand.asp"
+      ]
+    },
+    {
+      "id": "scene_rounded_code_2",
+      "title": "أمثلة إضافية للزوايا الدائرية",
+      "narration": {
+        "spoken_text": "نُكْمِلُ الْأَمْثِلَه مَع p.ex5 حَيْثُ نَسْتَخْدِم outline مِنْ نَوْع thick solid green مَعَ قِيمَةِ border-radius تُسَاوِي 10px لِتَحْقِيقِ أَعْلَى دَرَجَاتِ التَّنْسِيقِ الِاحْتِرَافِيِّ.",
+        "caption_text": "تطبيق مثال إضافي مع إطار سميك أخضر وزوايا دائرية بمقدار 10px."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "rounded_outline_2.css",
+        "code": "p.ex5 {\n  outline: thick solid green;\n  border-radius: 10px;\n}\n",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_shorthand.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس والدعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا الْيَوْمَ، تَعَلَّمْنَا كَيْفَ نَسْتَخْدِمُ الخَاسِيَّه الْمُخْتَصَرَه outline لِضَبْطِ الْإِطَارِ الخَارِجِيِّ بِسُهُولَه، وَكَيْفَ نَدْمُجُهَا مَع border-radius. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِأَنْفُسِكُمْ وَتَابِعُونَا فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "خلاصة استخدام outline المختصرة ودمجها مع الزوايا الدائرية لتصميم جذاب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختصار كتابة خصائص outline في سطر واحد",
+          "دمج الإطارات الخارجية مع الزوايا الدائرية",
+          "تدرب على الأكواد لتعزيز مهاراتك البرمجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_shorthand.asp"
+      ]
+    }
+  ]
+}
