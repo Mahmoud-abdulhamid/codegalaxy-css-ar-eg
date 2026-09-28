@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "112",
+  "title": "CSS Pseudo-elements",
+  "course": "CSS",
+  "objectives": [
+    "فهم ماهية الـ Pseudo-elements في CSS",
+    "تعلم كيفية استخدام الـ Syntax الصحيح للـ Pseudo-elements",
+    "التمييز بين الـ Text Pseudo-elements والـ Content Pseudo-elements",
+    "تطبيق الـ Pseudo-elements لتنسيق أجزاء محددة من العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_pseudo_elements.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Pseudo-elements",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى مَفْهُومٍ قَوِيٍّ وَمُهِمٍّ يُسَمَّى Pseudo-elements، وَهُوَ كَلِمَه مَحْجُوزَه تُضَافُ إِلَى Selector لِتَنْسِيقِ جُزْءٍ مُحَدَّدٍ مِنْ الْعُنْصُرِ.",
+        "caption_text": "مرحبا بكم في درس CSS Pseudo-elements، وهي كلمات محجوزة تضاف إلى Selector لتنسيق أجزاء محددة من العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Pseudo-elements هي أدوات قوية في CSS",
+          "تستخدم لتنسيق أجزاء محددة من الـ Element",
+          "تضيف مرونة عالية في التحكم بالتصميم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements.asp"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "قواعد كتابة الـ Pseudo-elements",
+      "narration": {
+        "spoken_text": "لِكِتَابَةِ Pseudo-elements بِشَكْلٍ صَحِيحٍ، نَسْتَخْدِمُ نُقْطَتَيْنِ مُتَتَالِيَتَيْنِ هُمَا double colon، يَلِيهِمَا اسْم Pseudo-element. هَذِهِ هِيَ الطَّرِيقَه الْمِعْيَارِيَّه لِتَحْدِيدِ الْجُزْءِ الْمُرَادِ تَنْسِيقُهُ دَاخِل CSS Properties.",
+        "caption_text": "تستخدم الـ Pseudo-elements النقطتين المتتاليتين (::) متبوعة باسم الـ Pseudo-element لتحديد التنسيق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "selector::pseudo-element-name {\n  CSS properties\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements.asp"
+      ]
+    },
+    {
+      "id": "text_elements",
+      "title": "التعامل مع الـ Text Pseudo-elements",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَم Text Pseudo-elements لِتَنْسِيقِ أَجْزَاءٍ مُحَدَّدَه مِنْ مُحْتَوَى النَّصِّ. هَذَا يَمْنَحُنَا قُدْرَه عَلَى التَّحَكُّمِ فِي مَظْهَرِ الْحُرُوفِ الْأُولَى أَوْ الْأَسْطُرِ الْأُولَى دَاخِلَ الْفِقْرَاتِ بِكُلِّ سُهُولَه وَدِقَّه.",
+        "caption_text": "تستخدم الـ Text Pseudo-elements لتنسيق أجزاء محددة من محتوى النص داخل العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق الحرف الأول من الفقرة",
+          "تنسيق السطر الأول من النص",
+          "تغيير مظهر النصوص المحددة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements.asp"
+      ]
+    },
+    {
+      "id": "content_elements",
+      "title": "الـ Content Pseudo-elements",
+      "narration": {
+        "spoken_text": "أَمَّا Content Pseudo-elements، فَهِيَ تُسْتَخْدَمُ لِإِدْرَاجِ أَوْ تَنْسِيقِ مُحْتَوَى مُوَلَّدٍ. هَذِهِ الْأَدَوَاتُ تَسْمَحُ لَنَا بِإِضَافَةِ عَنَاصِرَ جَدِيدَه إِلَى صَفْحَةِ الْوِبّ دُونَ الْحَاجَه لِتَعْدِيلِ كُود HTML الْأَصْلِيِّ.",
+        "caption_text": "تسمح الـ Content Pseudo-elements بإدراج محتوى جديد أو تنسيقه برمجيا دون تعديل HTML."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إدراج محتوى قبل العنصر",
+          "إدراج محتوى بعد العنصر",
+          "توليد عناصر مرئية إضافية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "مثال عملي على الـ Pseudo-elements",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ الْعَمَلِيِّ. نَقُومُ بِتَنْسِيقِ الْحَرْفِ الْأَوَّلِ مِنْ الْفِقْرَه بِاسْتِخْدَام first-letter، وَإِضَافَةِ مُحْتَوَى قَبْلَ الْعُنْصُرِ بِاسْتِخْدَام before. هَذِهِ التَّقْنِيَاتُ تُعَزِّزُ مِنْ جَمَالِيَّةِ تَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مثال عملي يوضح استخدام ::first-letter لتنسيق الحرف الأول و ::before لإضافة محتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p::first-letter {\n  font-size: 200%;\n  color: red;\n}\nh1::before {\n  content: \"★ \";\n  color: gold;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ الْفِقْرَه بِحَرْفٍ أَوَّلٍ كَبِيرٍ وَمُلَوَّنٍ، وَسَيَظْهَرُ النَّجْمُ قَبْلَ عُنْصُر h1. هَذِهِ هِيَ الْقُوَّه الْحَقِيقِيَّه لَةِ CSS فِي التَّحَكُّمِ بِالتَّفَاصِيلِ الصَّغِيرَه لِعَنَاصِرِ الْوِبّ.",
+        "caption_text": "تظهر النتيجة بتنسيق الحرف الأول من الفقرة وإضافة رمز النجمة قبل عنوان h1."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "★ Heading Title\n\nLorem ipsum dolor sit amet...",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ عَلَيْنَا دَائِماً اسْتِخْدَامُ النُّقْطَتَيْنِ الْمُزْدَوَجَتَيْنِ :: لِلتَّمْيِيزِ بَيْن Pseudo-elements و Pseudo-classes. هَذَا يُسَاعِدُ الْمُتَصَفِّحْ عَلَى فَهْمِ الْكُودِ بِشَكْلٍ أَفْضَلَ وَيَضْمَنُ التَّوَافُقِيَّه مَعَ مَعَايِير CSS الْحَدِيثَه.",
+        "caption_text": "استخدم دائما :: للـ Pseudo-elements لضمان التوافقية والتمييز عن الـ Pseudo-classes."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام :: للـ Pseudo-elements",
+          "استخدام : للـ Pseudo-classes",
+          "الالتزام بمعايير CSS3 الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةِ اسْتِخْدَام Pseudo-elements لِإِضَافَه لَمَسَاتٍ جَمَالِيَّه وَتَنْسِيقَاتٍ دَقِيقَه. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُرَاجَعَةِ الْمَرْجِعِ الشَّامِلِ لَةِ CSS Pseudo-elements.",
+        "caption_text": "تعلمنا اليوم استخدام Pseudo-elements لتنسيق العناصر بدقة. جربوا الأكواد وراجعوا المرجع الشامل."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Pseudo-elements أداة أساسية للمصمم",
+          "راجعوا المرجع الشامل في الرابط المرفق",
+          "استمروا في التدريب العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_elements.asp"
+      ]
+    }
+  ]
+}
