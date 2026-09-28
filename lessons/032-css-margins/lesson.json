@@ -86,7 +86,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "p {\n  margin: 25px 50px 75px; /* 3 قيم */\n  margin: 25px 50px;      /* قيمتان */\n  margin: 25px;           /* قيمة واحدة */\n}",
+        "code": "p {\n  margin: 25px 50px 75px; /* 3 قيم */\n  margin: 25px 50px; /* قيمتان */\n  margin: 25px; /* قيمة واحدة */\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
