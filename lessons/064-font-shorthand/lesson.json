@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "64",
+  "title": "CSS Font Shorthand Property",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام خاصية font المختصرة",
+    "تعلم ترتيب القيم داخل خاصية font",
+    "التعرف على القيم الإجبارية والاختيارية",
+    "تحسين كفاءة الكود البرمجي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_font_shorthand.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Font Shorthand",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ اخْتِصَارِ كُودِ الْخُطُوطِ بِاسْتِخْدَامِ خَاصِيَّةِ font، وَهِيَ طَرِيقَه احْتِرَافِيَّه لِتَقْلِيلِ حَجْمِ الْكُودِ وَجَعْلِهِ أَكْثَرَ تَنْظِيماً.",
+        "caption_text": "تعد خاصية font وسيلة فعالة لاختصار كتابة خصائص الخطوط المتعددة في إعلان واحد داخل CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية font هي shorthand property",
+          "تسمح بدمج خصائص الخط في سطر واحد",
+          "تساعد في كتابة كود أنظف وأسرع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_shorthand.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للخاصية",
+      "narration": {
+        "spoken_text": "لِكَيْ نَسْتَخْدِمَ خَاصِيَّةِ font بِشَكْلٍ صَحِيحٍ، يَجِبُ أَنْ نَعْرِفَ أَنَّ هُنَاكَ قِيَماً إِجْبَارِيَّه وَأُخْرَى اخْتِيَارِيَّه. الْقِيَمُ الْإِجْبَارِيَّه هِي font-size و font-family، وَيَجِبُ أَنْ تَأْتِيَ فِي نِهَايَةِ الْقِيمَه.",
+        "caption_text": "يجب دائما تحديد font-size و font-family كقيم أساسية عند استخدام خاصية font."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "القيم الإجبارية: font-size و font-family",
+          "القيم الاختيارية: font-style, font-variant, font-weight",
+          "يجب ترتيب القيم وفق معايير CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_shorthand.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "مثال بسيط على font",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ الْبَسِيطِ. نَقُومُ هُنَا بِتَحْدِيدِ حَجْمِ الْخَطِّ 20px وَنَوْعِ الْخَطِّ Arial. هَذَا الِاخْتِصَارُ يُغْنِينَا عَنْ كِتَابَةِ كُلِّ خَاصِيَّه عَلَى حِدَه.",
+        "caption_text": "تطبيق بسيط لخاصية font مع تحديد الحجم ونوع الخط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.a {\n  font: 20px Arial, sans-serif;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_shorthand.asp"
+      ]
+    },
+    {
+      "id": "code_example_2",
+      "title": "إضافة خصائص الوزن والنمط",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نُضِيفُ خَصَائِصَ إِضَافِيَّه مِثْل italic لِلنَّمَطِ و bold لِلْوَزْنِ. لَاحِظْ كَيْفَ نَرْتِبُ الْقِيَمَ قَبْلَ الْحَجْمِ وَنَوْعِ الْخَطِّ لِضَمَانِ عَمَلِ الْكُودِ بِشَكْلٍ صَحِيحٍ.",
+        "caption_text": "يمكن إضافة خصائص مثل italic و bold قبل تحديد الحجم والنوع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.b {\n  font: italic bold 16px Arial, sans-serif;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_shorthand.asp"
+      ]
+    },
+    {
+      "id": "code_example_3",
+      "title": "استخدام line-height مع font",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً إِدْرَاجُ خَاصِيَّةِ line-height بِاسْتِخْدَامِ شَرْطَه مَائِلَه بَعْدَ الْحَجْمِ. هَذَا الْمِثَالُ يُوَضِّحُ كَيْفَ نَضُمُّ كُلَّ هَذِهِ الْخَصَائِصِ فِي سَطْرٍ وَاحِدٍ لِتَحْقِيقِ تَصْمِيمٍ احْتِرَافِيٍّ.",
+        "caption_text": "استخدام الرمز / لدمج line-height مع font-size."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.c {\n  font: italic small-caps bold 15px/30px Georgia, serif;\n}",
+        "highlight_lines": [],
+        "output": "نص مائل، بحجم 15 بكسل، وارتفاع سطر 30 بكسل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_shorthand.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، تَذَكَّرُوا دَائِماً أَنَّ التَّرْتِيبَ مُهِمٌّ جِدّاً. إِذَا لَمْ تَضَعْ الْقِيَمَ بِالتَّرْتِيبِ الصَّحِيحِ، قَدْ لَا يَعْمَلُ الْكُودُ كَمَا هُوَ مُتَوَقَّعٌ. الْتَزِمْ بِالْقَوَاعِدِ لِتَجَنُّبِ الْأَخْطَاءِ.",
+        "caption_text": "الالتزام بترتيب القيم هو مفتاح نجاح خاصية font."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "font-size و font-family هما الأهم",
+          "استخدم / لربط line-height",
+          "راجع دائما التوثيق الرسمي لـ CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_shorthand.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا كَيْفَ نَخْتَصِرُ كُودَ الْخُطُوطِ بِكُلِّ سُهُولَه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "مارس كتابة الأكواد بنفسك لتتقن استخدام خاصية font."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية خاصية font المختصرة",
+          "شرحنا ترتيب القيم والخصائص",
+          "شجعنا على التطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_shorthand.asp"
+      ]
+    }
+  ]
+}
