@@ -27,6 +27,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>CSS Icons</title>
   </head>
   <body>
@@ -52,8 +53,16 @@
 المعاينة المرئية للأيقونة بعد تطبيق تنسيقات CSS.
 
 ```html
-<!-- النتيجة في المتصفح -->
-<i class="fa fa-home" style="font-size:30px; color:blue; padding:10px;"></i>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <!-- النتيجة في المتصفح -->
+    <i class="fa fa-home" style="font-size:30px; color:blue; padding:10px;"></i>
+  </body>
+</html>
 ```
 
 ## أفضل الممارسات
