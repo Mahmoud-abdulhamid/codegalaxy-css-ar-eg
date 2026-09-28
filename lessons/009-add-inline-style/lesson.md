@@ -25,9 +25,9 @@
 ```html
 <!DOCTYPE html>
 <html>
-<body>
-<h1 style="color:blue;text-align:center;">
-This is a heading</h1>
+  <body>
+    <h1 style="color:blue;text-align:center;">
+      This is a heading</h1>
 ```
 
 ## استكمال الكود البرمجي
@@ -35,10 +35,16 @@ This is a heading</h1>
 نكمل الآن بإضافة p وتطبيق style attribute عليها لتغيير اللون إلى red. هكذا نكون قد طبقنا التنسيق بشكل مباشر على كل Element على حدة.
 
 ```html
-<p style="color:red;">
-This is a paragraph.</p>
-</body>
-</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <p style="color:red;">
+      This is a paragraph.</p>
+    </body>
+  </html>
 ```
 
 ## ملاحظات هندسية هامة
