@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "82",
+  "title": "إخفاء العناصر باستخدام CSS",
+  "course": "CSS",
+  "objectives": [
+    "فهم الفرق بين display: none و visibility: hidden",
+    "التحكم في ظهور العناصر باستخدام JavaScript",
+    "تطبيق تقنيات التبديل بين الإخفاء والإظهار"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_display_hide.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول إخفاء العناصر",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ إِخْفَاءِ الْعَنَاصِرِ فِي صَفْحَةِ الْوِبّ، وَالْفَرْقَ الْجَوْهَرِيَّ بَيْنَ اسْتِخْدَام display: none و visibility: hidden لِتَحْقِيقِ تَفَاعُلِيَّه أَفْضَلَ فِي مَوَاقِعِكُمْ.",
+        "caption_text": "سنتعلم اليوم كيفية إخفاء العناصر في صفحة الويب والفرق بين display: none و visibility: hidden."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إخفاء العناصر هو جزء أساسي من تصميم واجهات الويب",
+          "استخدام CSS للتحكم في ظهور العناصر",
+          "دمج JavaScript لإضافة تفاعلية ديناميكية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display_hide.asp"
+      ]
+    },
+    {
+      "id": "display_none",
+      "title": "استخدام display: none",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَام display: none، فَإِنَّ الْعُنْصُرَ يُحْذَفُ تَمَاماً مِنْ تَدَفُّقِ الْمُسْتَنَدِ وَلَا يَشْغَلُ أَيَّ مَسَاحَه. هَذِهِ الطَّرِيقَه هِيَ الْأَكْثَرُ شُيُوعاً عِنْدَ التَّعَامُلِ مَع JavaScript لِإِظْهَارِ أَوْ إِخْفَاءِ الْعَنَاصِرِ دُونَ حَذْفِهَا مِن DOM.",
+        "caption_text": "خاصية display: none تزيل العنصر تماما من تدفق المستند ولا تترك له أي مساحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#panel {\n  display: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display_hide.asp"
+      ]
+    },
+    {
+      "id": "js_interaction",
+      "title": "التفاعل مع JavaScript",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَغْيِيرُ قِيمَةِ display إِلَى block بِاسْتِخْدَام JavaScript لِإِظْهَارِ الْعُنْصُرِ عِنْدَ حُدُوثِ حَدَثٍ مُعَيَّنٍ كَالنَّقْرِ. لَاحِظْ كَيْفَ نَقُومُ بِتَعْدِيلِ الْخَصَائِصِ بَرْمَجِيّاً لِتَحْقِيقِ هَذَا التَّبْدِيلِ.",
+        "caption_text": "استخدام JavaScript لتغيير قيمة display إلى block عند النقر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "javascript",
+        "filename": "script.js",
+        "code": "function myFunction() {\n  document.getElementById(\"panel\")\n  .style.display = \"block\";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display_hide.asp"
+      ]
+    },
+    {
+      "id": "toggle_logic",
+      "title": "منطق التبديل بين الإخفاء والإظهار",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ تَبْدِيلٍ بَيْنَ الْحَالَتَيْنِ، نَسْتَخْدِمُ جُمْلَةِ if الشَّرْطِيَّه. نَفْحَصُ قِيمَةِ display الْحَالِيَّه، فَإِذَا كَانَت none نُحَوِّلُهَا إِلَى block، وَإِلَّا نُعِيدُهَا إِلَى none، وَهَكَذَا نَتَحَكَّمُ فِي ظُهُورِ الْعُنْصُرِ بِسُهُولَه.",
+        "caption_text": "استخدام جملة if للتبديل بين حالتي الإخفاء والإظهار."
+      },
+      "visual": {
+        "type": "code",
+        "language": "javascript",
+        "filename": "script.js",
+        "code": "var x = document.getElementById(\"panel\");\nif (x.style.display === \"none\") {\n  x.style.display = \"block\";\n} else {\n  x.style.display = \"none\";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display_hide.asp"
+      ]
+    },
+    {
+      "id": "visibility_hidden",
+      "title": "الفرق مع visibility: hidden",
+      "narration": {
+        "spoken_text": "عَلَى عَكْس display: none، فَإِنَّ visibility: hidden تُخْفِي الْعُنْصُرَ لَكِنَّهُ يَبْقَى شَاغِلاً لِنَفْسِ الْمَسَاحَه فِي الصَّفْحَه. كَأَنَّهُ مَوْجُودٌ وَلَكِنَّهُ غَيْرُ مَرْئِيٍّ لِلْمُسْتَخْدِمِ، وَهَذَا يُؤَثِّرُ عَلَى تَخْطِيطِ الصَّفْحَه.",
+        "caption_text": "خاصية visibility: hidden تخفي العنصر مع الاحتفاظ بمساحته في الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1.hidden {\n  visibility: hidden;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display_hide.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، اسْتَخْدِمْ display: none إِذَا أَرَدْتَ إِزَالَةِ الْعُنْصُرِ تَمَاماً مِنَ التَّخْطِيطِ، وَاسْتَخْدِمْ visibility: hidden إِذَا أَرَدْتَ إِخْفَاءَهُ مَعَ الْحِفَاظِ عَلَى مَكَانِهِ. جَرِّبُوا هَذِهِ الْأَكْوَادَ وَطَبِّقُوهَا فِي مَشَارِيعِكُمُ الْقَادِمَه.",
+        "caption_text": "خلاصة: اختر display: none للإزالة التامة، وvisibility: hidden للحفاظ على المساحة."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "التأثير",
+          "المساحة"
+        ],
+        "rows": [
+          [
+            "display: none",
+            "إخفاء تام",
+            "لا توجد"
+          ],
+          [
+            "visibility: hidden",
+            "إخفاء مرئي",
+            "محجوزة"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_display_hide.asp"
+      ]
+    }
+  ]
+}
