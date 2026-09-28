@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "13",
+  "title": "تجنب أخطاء CSS الشائعة",
+  "course": "CSS",
+  "objectives": [
+    "فهم أسباب الأخطاء الشائعة في CSS",
+    "تعلم كيفية التعامل مع الفواصل المنقوطة المفقودة",
+    "تجنب استخدام أسماء Properties غير صحيحة",
+    "التعامل مع القيم غير الصالحة ونسيان الأقواس"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_errors.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول أخطاء CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفَ نَتَجَنَّبُ الْأَخْطَاءَ الشَّائِعَه فِي كِتَابَةِ كُود CSS، وَالَّتِي قَدْ تُؤَدِّي إِلَى سُلُوكٍ غَيْرِ مُتَوَقَّعٍ أَوْ عَدَمِ تَطْبِيقِ التَّنْسِيقَاتِ بِشَكْلٍ صَحِيحٍ.",
+        "caption_text": "مرحبا بكم في درس تجنب أخطاء CSS الشائعة التي قد تؤدي إلى سلوك غير متوقع في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الأخطاء البرمجية تؤدي لسلوك غير متوقع",
+          "فهم الأخطاء يساعد في كتابة كود احترافي",
+          "تجنب الأخطاء يضمن تطبيق التنسيقات بدقة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_errors.asp"
+      ]
+    },
+    {
+      "id": "semicolon",
+      "title": "مشكلة الفواصل المنقوطة",
+      "narration": {
+        "spoken_text": "أَحَدُ أَكْثَرِ الْأَخْطَاءِ شُيُوعاً هُوَ نِسْيَان Semicolon فِي نِهَايَةِ Property Declaration. هَذَا الْخَطَأُ قَدْ يَتَسَبَّبُ فِي كَسْرِ قَاعِدَةِ التَّنْسِيقِ بِالْكَامِلِ، لِذَا احْرِصْ دَائِماً عَلَى إِنْهَاءِ كُلِّ سَطْرٍ بِفَاصِلَه مَنْقُوطَه.",
+        "caption_text": "نسيان Semicolon في نهاية Property Declaration يؤدي إلى كسر قاعدة التنسيق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bad {\n  color: red\n  background-color: yellow;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_errors.asp"
+      ]
+    },
+    {
+      "id": "invalid_property",
+      "title": "أسماء الخصائص غير الصحيحة",
+      "narration": {
+        "spoken_text": "عِنْدَمَا تَسْتَخْدِمُ اسْم Property غَيْرَ مَوْجُودٍ، سَيَقُوم وِبّ Browser بِتَجَاهُلِ هَذَا السَّطْرِ تَمَاماً. تَأَكَّدْ مِنْ كِتَابَةِ أَسْمَاءِ الْخَصَائِصِ بِشَكْلٍ صَحِيحٍ لِتَجَنُّبِ هَذِهِ الْمُشْكِلَه فِي مَشْرُوعِكَ.",
+        "caption_text": "المتصفح يتجاهل أي Property غير موجودة، لذا يجب التأكد من صحة الأسماء."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bad {\n  colr: blue;\n  font-size: 16px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_errors.asp"
+      ]
+    },
+    {
+      "id": "invalid_values",
+      "title": "القيم غير الصالحة",
+      "narration": {
+        "spoken_text": "حَتَّى لَوْ كَانَت Property صَحِيحَه، فَإِنَّ اسْتِخْدَامَ قِيمَه غَيْرِ صَالِحَه سَيُؤَدِّي إِلَى تَجَاهُلِ السَّطْرِ أَيْضاً. مِثَالُ ذَلِكَ إِعْطَاءُ قِيمَه سَالِبَه لِخَاصِيَّةِ Width، فَهَذَا غَيْرُ مَنْطِقِيٍّ لِلْمُتَصَفِّحْ.",
+        "caption_text": "القيم غير الصالحة تؤدي إلى تجاهل السطر البرمجي من قبل المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bad {\n  width: -100px;\n  color: green;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_errors.asp"
+      ]
+    },
+    {
+      "id": "braces",
+      "title": "الأقواس غير المغلقة",
+      "narration": {
+        "spoken_text": "نِسْيَانُ إِغْلَاق Braces قَدْ يُؤَدِّي إِلَى تَجَاهُلِ قَاعِدَةِ التَّنْسِيقِ بِأَكْمَلِهَا. تَأَكَّدْ دَائِماً مِنْ وُجُودِ قَوْسِ الْإِغْلَاقِ بَعْدَ كُلِّ مَجْمُوعَه مِنَ التَّنْسِيقَاتِ لِضَمَانِ عَمَلِ الْكُودِ بِشَكْلٍ سَلِيمٍ.",
+        "caption_text": "عدم إغلاق الأقواس Braces يؤدي إلى تجاهل قاعدة التنسيق بالكامل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bad {\n  padding: 20px;\n  margin: 10px;",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_errors.asp"
+      ]
+    },
+    {
+      "id": "typos",
+      "title": "الأخطاء المطبعية",
+      "narration": {
+        "spoken_text": "أَخِيراً، الْأَخْطَاءُ الْمَطْبَعِيَّه مِثْلَ وُجُودِ نُقْطَتَيْنِ إِضَافِيَّتَيْنِ أَوْ أَقْوَاسٍ فِي مَكَانٍ خَاطِئٍ تُؤَدِّي لِكَسْرِ الْقَوَاعِدِ. رَاجِعْ كُودَكَ بِدِقَّه لِتَجَنُّبِ هَذِهِ الْأَخْطَاءِ الْبَسِيطَه وَالْمُؤَثِّرَه.",
+        "caption_text": "الأخطاء المطبعية مثل تكرار النقطتين تؤدي إلى كسر قواعد CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bad {\n  color:: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_errors.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى أَهَمِّ الْأَخْطَاءِ فِي CSS، مِثْلَ نِسْيَان Semicolon، وَاسْتِخْدَامِ قِيَمٍ أَوْ أَسْمَاء Property خَاطِئَه. نَصِيحَتِي لَكُمْ هِيَ الْمُرَاجَعَه الدَّقِيقَه لِتَجَنُّبِ هَذِهِ الْمَشَاكِلِ.",
+        "caption_text": "تجنب الأخطاء الشائعة يضمن استقرار وتنسيق صفحات الويب بشكل احترافي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم Semicolon دائما",
+          "تحقق من أسماء الخصائص",
+          "تأكد من صحة القيم",
+          "أغلق الأقواس دائما"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_errors.asp"
+      ]
+    }
+  ]
+}
