@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "38",
+  "title": "CSS Height and Width",
+  "course": "CSS",
+  "objectives": [
+    "فهم خصائص height و width في CSS",
+    "التعرف على القيم المختلفة مثل بكسل والنسب المئوية",
+    "تطبيق الخصائص على عناصر div",
+    "معرفة أن الخصائص لا تشمل الهوامش والحواف"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_height_width.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن CSS Height and Width",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَصَائِص height و width لِتَحْدِيدِ أَبْعَادِ الْعَنَاصِرِ بِدِقَّه فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Height and Width لتحديد أبعاد عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم لغة CSS لتنسيق صفحات الويب",
+          "نحدد الطول والعرض باستخدام height و width",
+          "نتعلم التحكم الكامل في أبعاد العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "القواعد الأساسية للأبعاد",
+      "narration": {
+        "spoken_text": "خَصَائِص height و width تُسْتَخْدَمُ لِتَحْدِيدِ ارْتِفَاعِ وَعَرْضِ أَيِّ element. لَاحِظْ جَيِّداً أَنَّ هَذِهِ الْقِيَمَ لَا تَشْمَل padding أَوْ borders أَوْ margins إِطْلَاقاً فِي الْحِسَابِ.",
+        "caption_text": "تحدد خصائص height و width أبعاد العنصر الداخلية بعيدا عن الحواف والهوامش."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "height يحدد ارتفاع العنصر",
+          "width يحدد عرض العنصر",
+          "لا تتضمن المساحات الداخلية والحواف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كتابة الكود البرمجي الأول",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نُطَبِّق height بِقِيمَةِ مِئَتَيْ بِكْسِلْ، و width بِقِيمَةِ خَمْسِينَ فِي الْمِئَه عَلَى عُنْصُر div، مَعَ تَحْدِيد background-color بِاللَّوْن powderblue.",
+        "caption_text": "تطبيق خصائص الارتفاع والعرض مع لون خلفية على عنصر div."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  height: 200px;\n  width: 50%;\n  background-color: powderblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "شرح تفصيلي للقيم",
+      "narration": {
+        "spoken_text": "يُمْكِنُ أَنْ تَتَحَكَّمَ بِالْقِيَمِ بِاسْتِخْدَام pixels مِثْلَ مِئَةِ بِكْسِلْ، أَوْ بِاسْتِخْدَامِ النِّسَبِ الْمِئْوِيَّه لِتَكُونَ صَفْحَةِ الْوِبّ مَرِنَه وَمُتَجَاوِبَه مَعَ مُخْتَلِفِ شَاشَاتِ الأجهزَه.",
+        "caption_text": "استخدام وحدات القياس المختلفة مثل البكسل والنسب المئوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "وحدة px للبكسل الثابت",
+          "وحدة للنسب المئوية المرنة",
+          "تحسين تجربة التجاوب مع الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "مثال برمجي ثاني",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ إِلَى مِثَالٍ آخَرَ لِتَحْدِيدِ أَبْعَاد div مُخْتَلِفَه. نَكْتُب height بِمِئَةِ بِكْسِلْ، و width بِخَمْسِ مِئَةِ بِكْسِلْ، مَعَ الْحِفَاظِ عَلَى نَفْسِ لَوْنِ الْخَلْفِيَّه powderblue.",
+        "caption_text": "مثال آخر لتحديد ارتفاع ثابت وعرض ثابت لعنصر div."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  height: 100px;\n  width: 500px;\n  background-color: powderblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "فهم الصندوق الداخلي",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً يَا صَدِيقِي أَنَّ هَذِهِ الْخَصَائِصَ تَضْبُطُ الْمِنْطَقَه الْمَوْجُودَه دَاخِل padding و border و margin، وَهَذَا هُوَ السَّبَبُ فِي تَصْمِيمِ وَتَحْدِيدِ الْأَبْعَادِ بِدِقَّه.",
+        "caption_text": "الخصائص تحدد مساحة المنطقة الواقعة داخل الحواف والهوامش."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التركيز على المساحة الداخلية للعنصر",
+          "التحكم الكامل في تصميم المكونات",
+          "تجنب الأخطاء الشائعة في تنسيق الأبعاد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "مِنْ أَفْضَلِ الْمُمَارَسَاتِ عِنْدَ تَصْمِيمِ صَفْحَاتِ الْوِبّ هُوَ اسْتِخْدَامُ النِّسَبِ الْمِئْوِيَّه لِلْعَرْضِ لِتَتَوَافَقَ مَعَ شَاشَاتِ الْهَوَاتِفِ وَالْحَوَاسِيبِ، مِمَّا يَمْنَحُ الْمُسْتَخْدِمَ تَجْرِبَةِ تَصَفُّحْ رائعَه.",
+        "caption_text": "استخدام النسب المئوية لتحقيق مرونة أعلى في التصميم المتجاوب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام النسبة المئوية للمرونة",
+          "مراعاة حجم الشاشات المختلفة",
+          "كتابة كود نظيف ومنظم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَرَّفْنَا الْيَوْمَ عَلَى كَيْفِيَّةِ اسْتِخْدَام height و width لِضَبْطِ أَبْعَادِ الْعَنَاصِرِ بِسُهُولَه. نَنْتَظِرُكُمْ فِي الدَّرْسِ الْقَادِمِ لِمُوَاصَلَةِ رِحْلَتِنَا الْمُمْتِعَه مَعَ مَهَارَات CSS.",
+        "caption_text": "خلاصة استخدام خصائص الأبعاد في CSS ودعوة للدروس القادمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص شامل لخصائص الأبعاد",
+          "أهمية تطبيق الأمثلة بشكل عملي",
+          "انتظرونا في الدرس القادم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_height_width.asp"
+      ]
+    }
+  ]
+}
