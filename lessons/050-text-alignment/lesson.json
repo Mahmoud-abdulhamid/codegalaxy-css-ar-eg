@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "50",
+  "title": "CSS Text Alignment and Direction",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية التحكم في محاذاة النصوص أفقيا باستخدام text-align",
+    "التعرف على خاصية text-align-last للتحكم في السطر الأخير",
+    "إتقان المحاذاة الرأسية للعناصر باستخدام vertical-align",
+    "ضبط اتجاه الكتابة في صفحات الويب باستخدام direction"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_text_align.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في محاذاة النصوص",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي مُحَاذَاةِ النُّصُوصِ وَاتِّجَاهِهَا دَاخِلَ صَفْحَةِ الْوِبّ، وَهِيَ مَهَارَه أَسَاسِيَّه لِتَنْسِيقِ الْمُحْتَوَى بِشَكْلٍ احْتِرَافِيٍّ وَجَذَّابٍ لِلْمُسْتَخْدِمِينَ.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد حول التحكم في محاذاة النصوص واتجاهها داخل صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في المحاذاة الأفقية للنصوص",
+          "ضبط محاذاة السطر الأخير من الفقرة",
+          "تنسيق المحاذاة الرأسية للعناصر",
+          "تحديد اتجاه الكتابة في المستند"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_align.asp"
+      ]
+    },
+    {
+      "id": "text-align",
+      "title": "المحاذاة الأفقية باستخدام text-align",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةِ text-align لِتَحْدِيدِ الْمُحَاذَاه الْأُفُقِيَّه لِلنَّصِّ. يُمْكِنُكَ ضَبْطُهَا عَلَى الْقِيَم left أَوْ right أَوْ center، أَوْ حَتَّى justify لِتَجْعَلَ الْهَوَامِشَ مُتَسَاوِيَه مِنْ الْجَانِبَيْنِ مِثْلَ الصُّحُفِ وَالْمَجَلَّاتِ.",
+        "caption_text": "تستخدم خاصية text-align لتحديد المحاذاة الأفقية للنص، وتدعم قيم مثل left وright وcenter وjustify."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 { text-align: center; }\nh2 { text-align: left; }\nh3 { text-align: right; }\ndiv { text-align: justify; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_align.asp"
+      ]
+    },
+    {
+      "id": "text-align-last",
+      "title": "التحكم في السطر الأخير",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ كَيْفِيَّةِ مُحَاذَاةِ السَّطْرِ الْأَخِيرِ مِنْ النَّصِّ، نَسْتَخْدِمُ خَاصِيَّةِ text-align-last. هَذِهِ الْخَاصِيَّه تُعْطِينَا مَزِيداً مِنَ التَّحَكُّمِ فِي تَصْمِيمِ الْفِقَرَاتِ، حَيْثُ يُمْكِنُ مُحَاذَاةِ السَّطْرِ الْأَخِيرِ بِمُفْرَدِهِ بِشَكْلٍ مُخْتَلِفٍ عَنْ بَقِيَّةِ النَّصِّ.",
+        "caption_text": "تسمح خاصية text-align-last بالتحكم في محاذاة السطر الأخير من الفقرة بشكل مستقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.a { text-align-last: right; }\np.b { text-align-last: center; }\np.c { text-align-last: justify; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_align.asp"
+      ]
+    },
+    {
+      "id": "vertical-align",
+      "title": "المحاذاة الرأسية للعناصر",
+      "narration": {
+        "spoken_text": "أَمَّا لِلْمَحَاذَاه الرَّأْسِيَّه، فَنَسْتَخْدِمُ خَاصِيَّةِ vertical-align. هَذِهِ الْخَاصِيَّه مُهِمَّه جِدّاً عِنْدَ التَّعَامُلِ مَعَ الصُّوَرِ دَاخِلَ النُّصُوصِ، حَيْثُ يُمْكِنُكَ ضَبْطُهَا عَلَى baseline أَوْ text-top أَوْ sub أَوْ super لِتَحْقِيقِ التَّنَاسُقِ الْمَطْلُوبِ.",
+        "caption_text": "تستخدم خاصية vertical-align لضبط المحاذاة الرأسية للعناصر مثل الصور داخل النصوص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img.a { vertical-align: baseline; }\nimg.b { vertical-align: text-top; }\nimg.d { vertical-align: sub; }\nimg.e { vertical-align: super; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_align.asp"
+      ]
+    },
+    {
+      "id": "text-direction",
+      "title": "ضبط اتجاه الكتابة",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ اتِّجَاهِ الْكِتَابَه، نَسْتَخْدِمُ خَاصِيَّةِ direction. وَلِضَمَانِ دَعْمِ لُغَاتٍ مُتَعَدِّدَه فِي نَفْسِ الْمُسْتَنَدِ، نَسْتَخْدِمُهَا مَعَ خَاصِيَّةِ unicode-bidi. هَذَا يُسَاعِدُ فِي تَجَاوُزِ الْإِعْدَادَاتِ التِّلْقَائِيَّه لِلْمُتَصَفِّحْ وَفَرْضِ اتِّجَاهٍ مُعَيَّنٍ.",
+        "caption_text": "تستخدم خاصية direction مع unicode-bidi للتحكم في اتجاه الكتابة داخل عناصر الويب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  direction: rtl;\n  unicode-bidi: bidi-override;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_align.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا عَلَى أَهَمِّ خَصَائِصِ التَّحَكُّمِ فِي النُّصُوصِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا التَّأْثِيرَ الْمُبَاشِرَ عَلَى صَفْحَاتِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا اليوم كيفية التحكم في محاذاة النصوص واتجاهها. جربوا الأكواد بأنفسكم لتعزيز مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام text-align للمحاذاة الأفقية",
+          "استخدام text-align-last للسطر الأخير",
+          "استخدام vertical-align للمحاذاة الرأسية",
+          "استخدام direction لضبط اتجاه النص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_align.asp"
+      ]
+    }
+  ]
+}
