@@ -25,15 +25,15 @@
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body {
-  background-color: linen;
-}
-h1 {
-  color: maroon;
-  margin-left: 40px;
-}
+  <head>
+    <style>
+      body {
+        background-color: linen;
+      }
+      h1 {
+        color: maroon;
+        margin-left: 40px;
+      }
 ```
 
 ## استكمال هيكل الصفحة
@@ -44,8 +44,8 @@ h1 {
 </style>
 </head>
 <body>
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
 </body>
 </html>
 ```
