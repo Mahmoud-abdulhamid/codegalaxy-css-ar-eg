@@ -103,7 +103,7 @@
         "type": "code",
         "language": "html",
         "filename": "index.html",
-        "code": "<div style=\"padding: 20px; background: blue;\">\n  هذا النص داخل العنصر\n</div>",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div style=\"padding: 20px; background: blue;\">\n      هذا النص داخل العنصر\n    </div>\n  </body>\n</html>",
         "highlight_lines": [],
         "output": "مربع أزرق يحتوي على نص بمسافة داخلية 20 بكسل",
         "output_status": "illustrative",
