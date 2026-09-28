@@ -42,8 +42,7 @@ p {
 
 ```css
 div {
-  background-color: 
-  hsla(240, 100%, 50%, 0.3);
+  background-color: hsla(240, 100%, 50%, 0.3);
 }
 ```
 
