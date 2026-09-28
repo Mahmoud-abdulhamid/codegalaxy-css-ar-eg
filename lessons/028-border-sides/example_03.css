@@ -1,0 +1,4 @@
+/* أربع قيم */
+p { border-style: dotted solid double dashed; }
+/* ثلاث قيم */
+p { border-style: dotted solid double; }
