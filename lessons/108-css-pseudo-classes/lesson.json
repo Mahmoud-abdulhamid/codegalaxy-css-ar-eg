@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "108",
+  "title": "CSS Pseudo-classes",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم CSS Pseudo-classes",
+    "تعلم كيفية استخدام الـ Syntax الخاص بها",
+    "التمييز بين Interactive و Structural Pseudo-classes",
+    "تطبيق التنسيقات على حالات العناصر الخاصة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_pseudo_classes.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Pseudo-classes",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى مَفْهُوم CSS Pseudo-classes، وَهِيَ كَلِمَاتٌ مَحْجُوزَه تُضَافُ إِلَى Selector لِتَحْدِيدِ تَصْمِيمٍ خَاصٍّ لِحَالَه مُعَيَّنَه مِنَ الْعُنْصُرِ.",
+        "caption_text": "تستخدم CSS Pseudo-classes لتحديد تنسيق خاص لعنصر في حالة معينة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Pseudo-classes هي كلمات مفتاحية تضاف للـ Selector",
+          "تستخدم لتعريف نمط خاص لحالة معينة من الـ Element",
+          "تزيد من تفاعلية صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes.asp"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "قواعد كتابة الـ Syntax",
+      "narration": {
+        "spoken_text": "لِكِتَابَةِ Pseudo-classes نَسْتَخْدِمُ نُقْطَه رَأْسِيَّه وَاحِدَه تَلِيهَا اسْم Pseudo-class. لَاحِظْ هَذَا الْهَيْكَلَ الْبَرْمَجِيَّ، حَيْثُ نَضَع Selector ثُمَّ النُّقْطَه الرَّأْسِيَّه وَبَعْدَهَا الْحَالَه الْمَطْلُوبَه لِتَطْبِيق CSS properties.",
+        "caption_text": "تكتب الـ Pseudo-classes باستخدام النقطة الرأسية (:) متبوعة باسم الحالة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "selector:pseudo-class-name {\n  CSS properties\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes.asp"
+      ]
+    },
+    {
+      "id": "interactive",
+      "title": "الـ Interactive Pseudo-classes",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَم Interactive Pseudo-classes لِتَطْبِيقِ تَصْمِيمٍ يَعْتَمِدُ عَلَى تَفَاعُلِ الْمُسْتَخْدِمِ مَعَ الْعُنْصُرِ، مِثْلَ حَالَةِ حَرَكَةِ الْمَاوْسِ فَوْقَ الْعُنْصُرِ، وَهِيَ تُعَدُّ مِنْ أَكْثَر Pseudo-classes شُيُوعاً فِي تَصْمِيمِ مَوَاقِعِ الْوِبّ.",
+        "caption_text": "تطبق الـ Interactive Pseudo-classes التنسيقات بناء على تفاعل المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعتمد على تفاعل المستخدم (User Interaction)",
+          "تغير مظهر العنصر عند تمرير الماوس",
+          "تستخدم بكثرة في الروابط والأزرار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes.asp"
+      ]
+    },
+    {
+      "id": "structural",
+      "title": "الـ Structural Pseudo-classes",
+      "narration": {
+        "spoken_text": "أَمَّا Structural Pseudo-classes فَهِيَ تَقُومُ بِاخْتِيَارِ الْعَنَاصِرِ بِنَاءً عَلَى مَوْقِعِهَا دَاخِلَ شَجَرَةِ الْمُسْتَنَدِ، أَيْ دَاخِل Document tree، وَهَذَا يُسَاعِدُنَا فِي تَنْسِيقِ الْعَنَاصِرِ بِدِقَّه دُونَ الْحَاجَه إِلَى إِضَافَةِ Class خَارِجِيٍّ لِكُلِّ عُنْصُرٍ.",
+        "caption_text": "تختار الـ Structural Pseudo-classes العناصر بناء على موقعها في الـ Document tree."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحدد العناصر بناء على موقعها في الـ Document tree",
+          "تسهل تنسيق القوائم والجداول",
+          "لا تتطلب إضافة Class إضافي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes.asp"
+      ]
+    },
+    {
+      "id": "example",
+      "title": "مثال عملي على الـ Pseudo-classes",
+      "narration": {
+        "spoken_text": "لِنُطَبِّقْ مِثَالاً بَسِيطاً حَيْثُ نَجْعَلُ لَوْنَ الرَّابِطِ يَتَغَيَّرُ عِنْدَ تَحْرِيكِ الْمَاوْسِ فَوْقَهُ بِاسْتِخْدَام Pseudo-class الْمَعْرُوفَه بَةِ hover. هَذَا الْكُودُ يَجْعَلُ التَّفَاعُلَ مَعَ الْعُنْصُرِ أَكْثَرَ وُضُوحاً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "استخدام hover لتغيير لون الرابط عند تمرير الماوس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a:hover {\n  color: red;\n  font-weight: bold;\n}",
+        "highlight_lines": [],
+        "output": "Mouse Over Me -> (يتحول للون الأحمر)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ عَلَيْنَا أَنْ نَتَذَكَّرَ أَنَّ Pseudo-classes أَدَاه قَوِيَّه لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ. احْرِصْ دَائِماً عَلَى تَرْتِيب Pseudo-classes بِشَكْلٍ صَحِيحٍ لِتَجَنُّبِ تَدَاخُلِ التَّنْسِيقَاتِ وَضَمَانِ عَمَلِهَا كَمَا هُوَ مُخَطَّطٌ لَهَا.",
+        "caption_text": "نصائح هامة لاستخدام الـ Pseudo-classes بفعالية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم الـ Pseudo-classes لتحسين تجربة المستخدم",
+          "تأكد من ترتيب التنسيقات لتجنب التعارض",
+          "راجع دائما الـ CSS Pseudo-classes Reference"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا أَنَّ Pseudo-classes تُعَرِّفُ حَالَاتٍ خَاصَّه لِلْعَنَاصِرِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَزِيَارَةِ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ لِلِاطِّلَاعِ عَلَى الْقَائِمَه الْكَامِلَه لِكُلِّ Pseudo-classes الْمُتَاحَه.",
+        "caption_text": "تعلمنا اليوم كيفية استخدام الـ Pseudo-classes لتطوير صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Pseudo-classes تزيد من مرونة الـ CSS",
+          "تغطي حالات تفاعلية وهيكلية",
+          "قم بزيارة المرجع الرسمي لمزيد من التفاصيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_pseudo_classes.asp"
+      ]
+    }
+  ]
+}
