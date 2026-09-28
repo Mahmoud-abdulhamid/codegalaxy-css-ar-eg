@@ -1,0 +1,16 @@
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+}
+.gray-box {
+  position: absolute;
+  z-index: 3;
+  background: lightgray;
+}
+.green-box {
+  position: absolute;
+  z-index: 2;
+  background: lightgreen;
+}
