@@ -76,7 +76,7 @@
         "type": "code",
         "language": "html",
         "filename": "index.html",
-        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      .box {\n        display: block;\n      }\n      .hidden {\n        display: none;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"box\">Element 1</div>\n    <div class=\"hidden\">Hidden</div>\n  </body>\n</html>",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      .box {\n        display: block;\n      }\n      .hidden {\n        display: none;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"box\">Element 1</div>\n    <div class=\"hidden\">Hidden</div>\n  </body>\n</html>",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
