@@ -107,7 +107,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": ".bad {\n  padding: 20px;\n  margin: 10px;",
+        "code": ".bad {\n  padding: 20px;\n  margin: 10px;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
