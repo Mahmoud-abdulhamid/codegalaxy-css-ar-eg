@@ -95,7 +95,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "p {\n  font-family: \"Times New Roman\",\n  Times, serif;\n}",
+        "code": "p {\n  font-family: \"Times New Roman\", Times, serif;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
