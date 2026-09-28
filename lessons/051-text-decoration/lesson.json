@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "51",
+  "title": "CSS Text Decoration",
+  "course": "CSS",
+  "objectives": [
+    "فهم خاصية text-decoration للتحكم في خطوط النصوص",
+    "استخدام text-decoration-line لتحديد نوع الخط",
+    "تطبيق ألوان مخصصة للخطوط باستخدام text-decoration-color",
+    "التعرف على أفضل الممارسات عند تزيين النصوص"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_text_decoration.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Text Decoration",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي مَظْهَرِ خُطُوطِ التَّزْيِينِ عَلَى النُّصُوصِ بِاسْتِخْدَامِ خَاصِيَّةِ text-decoration، وَهِيَ خَاصِيَّه مُهِمَّه لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تستخدم خاصية text-decoration للتحكم في مظهر خطوط التزيين على النصوص في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في مظهر خطوط التزيين",
+          "استخدام خاصية shorthand",
+          "تحسين جمالية النصوص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration.asp"
+      ]
+    },
+    {
+      "id": "line-property",
+      "title": "خاصية text-decoration-line",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ نَوْعِ الْخَطِّ نَسْتَخْدِم text-decoration-line. يُمْكِنُنَا اخْتِيَارُ قِيَمٍ مِثْل overline لِلْخَطِّ الْعُلْوِيِّ، أَوْ underline لِلتَّسْطِيرِ، أَوْ line-through لِشَطْبِ النَّصِّ. كَمَا يُمْكِنُ دَمْجُ أَكْثَرَ مِنْ قِيمَه مَعاً لِتَصْمِيمٍ أَكْثَرَ تَمَيُّزاً.",
+        "caption_text": "تحدد خاصية text-decoration-line نوع الخط المضاف للنص مثل overline أو underline أو line-through."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "overline: خط علوي",
+          "underline: تسطير",
+          "line-through: خط شطب",
+          "دمج قيم متعددة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration.asp"
+      ]
+    },
+    {
+      "id": "code-example-1",
+      "title": "تطبيق عملي لأنواع الخطوط",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ هَذَا الْمِثَالَ الْعَمَلِيَّ. نَقُومُ بِتَطْبِيقِ قِيَمٍ مُخْتَلِفَه عَلَى Elements مِثْل h1 و h2 و h3 و p. لَاحِظْ كَيْفَ نَكْتُبُ الْخَاصِيَّه دَاخِلَ كُلِّ Selector لِتَحْقِيقِ التَّأْثِيرِ الْمَطْلُوبِ بِكُلِّ سُهُولَه.",
+        "caption_text": "تطبيق قيم مختلفة لخاصية text-decoration-line على عناصر HTML متنوعة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 { text-decoration-line: overline; }\nh2 { text-decoration-line: line-through; }\nh3 { text-decoration-line: underline; }\np { text-decoration-line: overline underline; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration.asp"
+      ]
+    },
+    {
+      "id": "color-property",
+      "title": "تلوين خطوط التزيين",
+      "narration": {
+        "spoken_text": "بَعْدَ تَحْدِيدِ نَوْعِ الْخَطِّ، نَسْتَطِيعُ تَغْيِيرَ لَوْنِهِ بِاسْتِخْدَام text-decoration-color. هَذِهِ الْخَاصِيَّه تَمْنَحُكَ حُرِّيَّه كَبِيرَه فِي تَنْسِيقِ التَّصْمِيمِ لِيَتَنَاسَبَ مَعَ هُوِيَّةِ مَوْقِعِ الْوِبّ الْخَاصِّ بِكَ بِشَكْلٍ احْتِرَافِيٍّ وَجَذَّابٍ.",
+        "caption_text": "تستخدم خاصية text-decoration-color لتحديد لون خط التزيين المضاف للنص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تخصيص لون الخط",
+          "دعم الألوان القياسية",
+          "تعزيز التباين البصري"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration.asp"
+      ]
+    },
+    {
+      "id": "code-example-2",
+      "title": "مثال على تلوين الخطوط",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، نَقُومُ بِدَمْج text-decoration-line مَع text-decoration-color. لَاحِظْ كَيْفَ نُحَدِّدُ لَوْناً مُخْتَلِفاً لِكُلِّ عُنْصُرٍ، مِمَّا يُعْطِي تَفَاعُلاً بَصَرِيّاً رَائِعاً عِنْدَ عَرْضِ الصَّفْحَه فِي مُتَصَفِّحْ الْوِبّ.",
+        "caption_text": "دمج خاصية اللون مع نوع الخط لتنسيق النصوص بشكل متقدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 { text-decoration-line: overline;\n  text-decoration-color: red; }\nh2 { text-decoration-line: line-through;\n  text-decoration-color: blue; }\nh3 { text-decoration-line: underline;\n  text-decoration-color: green; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مُلَاحَظَه هَامَّه يَا أَصْدِقَائِي: لَا يُنْصَحُ بِتَسْطِيرِ النُّصُوصِ الَّتِي لَيْسَتْ روابط، لِأَنَّ ذَلِكَ قَدْ يُسَبِّبُ ارْتِبَاكاً لِلْقَارِئِ الَّذِي يَعْتَقِدُ أَنَّهَا روابط قَابِلَه لِلنَّقْرِ. احْرِصْ دَائِماً عَلَى تَصْمِيمٍ وَاضِحٍ وَمُفِيدٍ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "نصيحة: تجنب تسطير النصوص التي ليست روابط لتفادي إرباك المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجنب التسطير لغير الروابط",
+          "الحفاظ على وضوح التصميم",
+          "تحسين تجربة المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي خُطُوطِ التَّزْيِينِ بِاسْتِخْدَام CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ مَع CodeGalaxy.",
+        "caption_text": "شكرا لمتابعتكم. جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة الخصائص المشروحة",
+          "تجربة الأكواد عمليا",
+          "استمرار التعلم مع CodeGalaxy"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration.asp"
+      ]
+    }
+  ]
+}
