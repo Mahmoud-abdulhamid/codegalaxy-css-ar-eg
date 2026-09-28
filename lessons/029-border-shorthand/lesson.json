@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "29",
+  "title": "CSS Shorthand Border Property",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام خاصية border المختصرة",
+    "تعلم دمج خصائص الحدود في سطر واحد",
+    "تطبيق الحدود على جوانب محددة من العنصر",
+    "تحسين كفاءة الكود البرمجي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_border_shorthand.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Shorthand",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفَ نَخْتَصِرُ كِتَابَةِ خَصَائِصِ الْحُدُود border بِاسْتِخْدَام Shorthand Property لِتَجْعَلَ كُودَكَ أَكْثَرَ نَظَافَه وَسُرْعَه فِي الْأَدَاءِ.",
+        "caption_text": "مرحبا بكم في درس CSS Shorthand Border Property، سنتعلم اليوم اختصار خصائص الحدود."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعامل مع الحدود في CSS",
+          "مشكلة تعدد الخصائص للحدود",
+          "مفهوم Shorthand Property",
+          "تحسين جودة الكود البرمجي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_shorthand.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم Shorthand Property",
+      "narration": {
+        "spoken_text": "بَدَلَ أَنْ نَكْتُب border-width و border-style و border-color فِي أَسْطُرٍ مُتَعَدِّدَه، نَسْتَطِيعُ جَمْعَهَا جَمِيعاً فِي خَاصِيَّه وَاحِدَه تُسَمَّى border. هَذَا يُوَفِّرُ الْوَقْتَ وَيُقَلِّلُ مِنْ حَجْمِ مِلَفِّ CSS.",
+        "caption_text": "بدلا من كتابة خصائص الحدود بشكل منفصل، نستخدم border لدمجها في سطر واحد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "border-width: سماكة الحد",
+          "border-style: نمط الحد",
+          "border-color: لون الحد",
+          "دمج الكل في border"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_shorthand.asp"
+      ]
+    },
+    {
+      "id": "code_shorthand",
+      "title": "تطبيق خاصية border",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ. نَقُومُ بِتَحْدِيدِ الْعُنْصُر p، ثُمَّ نَكْتُب border مَتْبُوعَه بَةِ 5px لِلْعَرْضِ، ثُمَّ solid لِلنَّمَطِ، وَأَخِيراً red لِلَّوْنِ. هَذَا السَّطْرُ يُغْنِينَا عَنْ كِتَابَةِ ثَلَاثَه أَسْطُرٍ مُنْفَصِلَه.",
+        "caption_text": "مثال على استخدام خاصية border المختصرة لتحديد السماكة والنمط واللون."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  border: 5px solid red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_shorthand.asp"
+      ]
+    },
+    {
+      "id": "left_border",
+      "title": "تحديد جانب واحد",
+      "narration": {
+        "spoken_text": "أَحْيَاناً نَحْتَاجُ لِتَطْبِيقِ الْحُدُودِ عَلَى جَانِبٍ وَاحِدٍ فَقَطْ. نَسْتَخْدِمُ هُنَا border-left لِتَحْدِيدِ حَدٍّ عَلَى الْيَسَارِ فَقَطْ، مَعَ نَفْسِ التَّرْتِيبِ لِلسَّمَاكَه وَالنَّمَطِ وَاللَّوْنِ.",
+        "caption_text": "يمكننا أيضا تطبيق الحدود على جانب واحد فقط باستخدام border-left."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  border-left: 6px solid red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_shorthand.asp"
+      ]
+    },
+    {
+      "id": "bottom_border",
+      "title": "تحديد الحافة السفلية",
+      "narration": {
+        "spoken_text": "وَبِالْمِثْلِ، يُمْكِنُنَا اسْتِخْدَام border-bottom لِإِضَافَه حَدٍّ فِي الْأَسْفَلِ فَقَطْ. هَذِهِ الطَّرِيقَه تُعْطِينَا تَحَكُّماً دَقِيقاً فِي تَصْمِيمِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "استخدام border-bottom لإضافة حد في الأسفل فقط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  border-bottom: 6px solid red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_shorthand.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً أَنَّ تَرْتِيبَ الْقِيَمِ فِي Shorthand Property مُهِمٌّ لِضَمَانِ عَمَلِ الْكُودِ بِشَكْلٍ صَحِيحٍ. اسْتَخْدِمْ هَذِهِ الْخَصَائِصَ لِتَجْعَلَ مِلَفَّات CSS خَفِيفَه وَسَهْلَةِ الْقِرَاءَه لِزُمَلَائِكَ الْمُطَوِّرِينَ.",
+        "caption_text": "نصائح برمجية: الترتيب الصحيح للقيم يحسن من قراءة الكود وكفاءته."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التزم بالترتيب الصحيح للقيم",
+          "استخدم الاختصارات لتقليل حجم الكود",
+          "حافظ على تناسق التصميم",
+          "اختبر الكود في مختلف المتصفحات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_shorthand.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نَسْتَخْدِم border كَخَاصِيَّه مُخْتَصَرَه، وَكَيْفَ نُطَبِّقُهَا عَلَى جَوَانِبَ مُحَدَّدَه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو.",
+        "caption_text": "خلاصة: تعلمنا اختصار الحدود وتطبيقها على جوانب محددة. جرب الأكواد بنفسك!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية border المختصرة",
+          "تم شرح border-left و border-bottom",
+          "أهمية الكود النظيف",
+          "رابط المصدر متاح في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_shorthand.asp"
+      ]
+    }
+  ]
+}
