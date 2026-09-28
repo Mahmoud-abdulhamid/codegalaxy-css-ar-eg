@@ -32,8 +32,7 @@
 مثال عملي لتنسيق عناصر p باستخدام CSS.
 
 ```css
-p
-{
+p {
   color: red;
   text-align: center;
 }
