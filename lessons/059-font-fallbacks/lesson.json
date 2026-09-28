@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "59",
+  "title": "CSS Font Fallbacks",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم Font Fallbacks في CSS",
+    "التعرف على الـ 5 Generic Font Families",
+    "تعلم كيفية كتابة خاصية font-family بشكل احترافي",
+    "تجنب مشاكل عرض الخطوط في متصفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_font_fallbacks.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Font Fallbacks",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ ضَمَانِ ظُهُورِ النُّصُوصِ بِشَكْلٍ مُتَنَاسِقٍ عَلَى كُلِّ أَنْظِمَةِ التَّشْغِيلِ وَالْمُتَصَفِّحَاتِ بِاسْتِخْدَامِ مَفْهُوم Font Fallbacks.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد حول مفهوم Font Fallbacks لضمان توافق الخطوط عبر المتصفحات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في الخطوط عبر CSS",
+          "أهمية Font Fallbacks في تصميم الويب",
+          "ضمان تجربة مستخدم متسقة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_fallbacks.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "ما هو الـ Font Fallback",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُحَدِّدُ خَطّاً لِعُنْصُرٍ مَا، قَدْ لَا يَكُونُ هَذَا الْخَطُّ مُثَبَّتاً عَلَى جِهَازِ الْمُسْتَخْدِمِ. هُنَا يَأْتِي دَوْر Font Fallbacks، حَيْثُ نُقَدِّمُ قَائِمَه مِنَ الْخُطُوطِ الْبَدِيلَه لِيَخْتَارَ الْمُتَصَفِّحْ الْخَطَّ الْمُتَاحَ.",
+        "caption_text": "يعمل Font Fallback كخطة بديلة للمتصفح في حال عدم توفر الخط الأساسي على جهاز المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد قائمة خطوط في font-family",
+          "المتصفح يختار أول خط متاح",
+          "تجنب ظهور خطوط غير مرغوبة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_fallbacks.asp"
+      ]
+    },
+    {
+      "id": "generic_families",
+      "title": "الـ 5 Generic Font Families",
+      "narration": {
+        "spoken_text": "تَنْقَسِمُ الْخُطُوطُ إِلَى خَمْسِ عَائِلَاتٍ رَئِيسِيَّه تُسَمَّى Generic Font Families. هَذِهِ الْعَائِلَاتُ هِي Serif و Sans-serif و Monospace و Cursive و Fantasy، وَهِيَ تَضْمَنُ أَنَّ الْمُتَصَفِّحْ سَيَعْرِضُ نَوْعاً مُشَابِهاً لِلْخَطِّ الْمَطْلُوبِ.",
+        "caption_text": "تعتمد CSS على 5 عائلات خطوط عامة لضمان استبدال الخطوط بشكل منطقي وجمالي."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "العائلة",
+          "الوصف"
+        ],
+        "rows": [
+          [
+            "Serif",
+            "خطوط ذات زوائد"
+          ],
+          [
+            "Sans-serif",
+            "خطوط بسيطة"
+          ],
+          [
+            "Monospace",
+            "خطوط ثابتة العرض"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_fallbacks.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كتابة الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ الْخَطِّ الرَّئِيسِيِّ، ثُمَّ نُضِيفُ خُطُوطاً بَدِيلَه، وَفِي النِّهَايَه نَضَع Generic Font Family لِضَمَانِ أَقْرَبِ نَتِيجَه مُمْكِنَه لِتَصْمِيمِنَا.",
+        "caption_text": "مثال عملي لكتابة خاصية font-family مع توفير خيارات بديلة للمتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  font-family: \"Times New Roman\", \n               Times, \n               serif;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_fallbacks.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، سَيُحَاوِلُ الْمُتَصَفِّحْ أَوَّلاً عَرْض Times New Roman. إِذَا لَمْ يَجِدْهُ، سَيَبْحَثُ عَنْ Times. إِذَا لَمْ يَجِدْهُ أَيْضاً، سَيَسْتَخْدِمُ أَيَّ خَطٍّ مِنَ الْعَائِلَه serif الْمُتَاحِ عَلَى نِظَامِ التَّشْغِيلِ.",
+        "caption_text": "يتبع المتصفح ترتيب الخطوط في القائمة حتى يجد الخط المتاح للعرض."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الترتيب مهم جدا",
+          "الخطوط المحددة بين علامتي تنصيص",
+          "الخط العام في نهاية القائمة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_fallbacks.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِإِضَافَةِ Generic Font Family فِي نِهَايَةِ الْقَائِمَه. كَمَا يُمْكِنُكُمْ تَجْرِبَةِ Google Fonts لِلْحُصُولِ عَلَى خِيَارَاتٍ أَكْثَرَ تَنَوُّعاً وَجَمَالاً لِمَوَاقِعِكُمُ الْإِلِكْتُرُونِيَّه.",
+        "caption_text": "استخدم دائما Generic Font Family كخيار أخير، واستكشف Google Fonts لخيارات تصميمية أوسع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دائما أضف Generic Font Family",
+          "استخدم Google Fonts للخطوط المخصصة",
+          "اختبر التصميم على متصفحات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_fallbacks.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ أَهَمِّيَّةِ Font Fallbacks فِي تَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا التَّأْثِيرَ مُبَاشَرَه.",
+        "caption_text": "شكرا لمتابعتكم، لا تنسوا تجربة الأكواد بأنفسكم عبر الرابط المرفق."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة مفهوم Font Fallbacks",
+          "تطبيق العائلات العامة",
+          "تجربة الأكواد عبر الرابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_font_fallbacks.asp"
+      ]
+    }
+  ]
+}
