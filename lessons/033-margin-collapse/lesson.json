@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "33",
+  "title": "CSS Margin Collapse",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم Margin Collapse في CSS",
+    "التعرف على كيفية دمج الهوامش الرأسية",
+    "تطبيق قواعد Margin Collapse على العناصر",
+    "التمييز بين الهوامش الرأسية والأفقية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_margin_collapse.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Margin Collapse",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى مَفْهُوم Margin Collapse، وَهُوَ ظَاهِرَه تَدْمُجُ فِيهَا الْهَوَامِشُ الرَّأْسِيَّه لِتُصْبِحَ هَامِشاً وَاحِداً بَدَلاً مِنْ هَامِشَيْنِ مُنْفَصِلَيْنِ.",
+        "caption_text": "مفهوم Margin Collapse هو ظاهرة دمج الهوامش الرأسية لعنصرين متجاورين في هامش واحد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Margin Collapse يحدث للهوامش الرأسية فقط",
+          "يتم دمج الهامشين في هامش واحد يساوي الأكبر بينهما",
+          "لا يؤثر هذا المفهوم على الهوامش الأفقية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_margin_collapse.asp"
+      ]
+    },
+    {
+      "id": "rules",
+      "title": "قواعد دمج الهوامش",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً أَنَّ Margin Collapse يَحْدُثُ فَقَطْ مَع Top Margin و Bottom Margin. هَذِهِ الظَّاهِرَه لَا تَنْتَقِلُ أَبَداً إِلَى Left Margin أَوْ Right Margin، فَهِيَ خَاصَّه بِالْمَسَافَاتِ الْعَمُودِيَّه بَيْنَ الْعَنَاصِرِ فَقَطْ.",
+        "caption_text": "قاعدة ذهبية: Margin Collapse يقتصر على الهوامش الرأسية (Top و Bottom) ولا يشمل الهوامش الأفقية."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "نوع الهامش",
+          "قابل للدمج",
+          "ملاحظة"
+        ],
+        "rows": [
+          [
+            "Top Margin",
+            "نعم",
+            "يحدث دمج"
+          ],
+          [
+            "Bottom Margin",
+            "نعم",
+            "يحدث دمج"
+          ],
+          [
+            "Left/Right",
+            "لا",
+            "لا يحدث دمج"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_margin_collapse.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "مثال عملي على h1 و h2",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ. عِنْدَمَا نَضَع Bottom Margin بِقِيمَةِ 50px لِعُنْصُر h1، و Top Margin بِقِيمَةِ 20px لِعُنْصُر h2، فَإِنَّ الْمَسَافَه بَيْنَهُمَا لَنْ تَكُونَ 70px، بَلْ سَتَكُونُ 50px فَقَطْ.",
+        "caption_text": "في هذا المثال، يتم دمج الهوامش لتكون النتيجة هي القيمة الأكبر (50px) بدلا من مجموع الهامشين."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  margin-bottom: 50px;\n}\n\nh2 {\n  margin-top: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_margin_collapse.asp"
+      ]
+    },
+    {
+      "id": "explanation_1",
+      "title": "تحليل النتيجة",
+      "narration": {
+        "spoken_text": "كَمَا رَأَيْتُمْ، بَدَلاً مِنْ جَمْعِ الْقِيمَتَيْنِ، يَقُومُ مُتَصَفِّحْ الْوِبّ بِاخْتِيَارِ الْقِيمَه الْأَكْبَرِ. هَذَا هُوَ جَوْهَر Margin Collapse، حَيْثُ يَتِمُّ تَقْلِيصُ الْمَسَافَاتِ غَيْرِ الضَّرُورِيَّه بَيْنَ الْعَنَاصِرِ لِتَحْسِينِ التَّنْسِيقِ الْعَامِّ لِلصَّفْحَه.",
+        "caption_text": "المتصفح يختار القيمة الأكبر بين الهامشين المتجاورين لضمان عدم تضاعف المسافات بشكل غير مقصود."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "المسافة المتوقعة: 70px",
+          "المسافة الفعلية: 50px",
+          "السبب: Margin Collapse يختار القيمة الأكبر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_margin_collapse.asp"
+      ]
+    },
+    {
+      "id": "code_example_2",
+      "title": "مثال على عناصر p",
+      "narration": {
+        "spoken_text": "لِنَأْخُذْ مِثَالاً آخَرَ مَعَ عَنَاصِر p. إِذَا كَانَ لِكُلِّ عُنْصُر Top Margin و Bottom Margin بِقِيمَةِ 30px، فَإِنَّ الْمَسَافَه بَيْنَ عُنْصُرَيْنِ مُتَتَالِيَيْنِ سَتَكُونُ 30px فَقَطْ، وَلَيْسَ 60px.",
+        "caption_text": "تطبيق Margin Collapse على عناصر الفقرات p حيث يتم دمج الهوامش المتجاورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  margin-top: 30px;\n  margin-bottom: 30px; \n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_margin_collapse.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ عَلَى الْمُطَوِّرِ أَنْ يَكُونَ عَلَى دِرَايَه بِهَذِهِ الظَّاهِرَه عِنْدَ تَصْمِيمِ التَّخْطِيطَاتِ. إِذَا كُنْتُمْ تَرْغَبُونَ فِي مَسَافَه مُحَدَّدَه بَيْنَ الْعَنَاصِرِ، فَيَجِبُ حِسَابُ ذَلِكَ مَعَ الْأَخْذِ فِي الِاعْتِبَارِ أَنَّ الْهَوَامِشَ قَدْ تَنْدَمِجُ تِلْقَائِيّاً.",
+        "caption_text": "يجب مراعاة سلوك Margin Collapse عند تحديد المسافات بين العناصر لتجنب نتائج غير متوقعة في التصميم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خطط للمسافات مع مراعاة دمج الهوامش",
+          "استخدم Padding كبديل إذا كنت لا تريد دمج الهوامش",
+          "اختبر التصميم في Web Browser للتأكد من المسافات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_margin_collapse.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، تَعَلَّمْنَا أَنَّ Margin Collapse هُوَ سُلُوكٌ طَبِيعِيٌّ فِي CSS لِتَنْظِيمِ الْمَسَافَاتِ الرَّأْسِيَّه. نَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا النَّتَائِجَ بِأَعْيُنِكُمْ.",
+        "caption_text": "Margin Collapse هو جزء أساسي من نموذج الصندوق في CSS. جرب الأكواد بنفسك لتتقن التحكم في المسافات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Margin Collapse يدمج الهوامش الرأسية",
+          "يتم اختيار القيمة الأكبر دائما",
+          "لا يؤثر على الهوامش الأفقية",
+          "مهم جدا لتنسيق صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_margin_collapse.asp"
+      ]
+    }
+  ]
+}
