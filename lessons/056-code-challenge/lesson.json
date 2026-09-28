@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "56",
+  "title": "CSS Text Styling Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تطبيق خصائص CSS على النصوص",
+    "التعامل مع تحديات تنسيق النصوص في صفحات الويب",
+    "تطبيق مهارات CSS في بيئة عملية",
+    "تحسين مظهر النصوص باستخدام خصائص CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_text.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحديات CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَخُوضُ تَحَدِّي Text لِاخْتِبَارِ مَهَارَاتِكُمْ فِي تَنْسِيقِ النُّصُوصِ بِاسْتِخْدَامِ خَصَائِص CSS الْمُخْتَلِفَه لِتَحْسِينِ مَظْهَرِ صَفْحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تحدي CSS Text لاختبار مهاراتكم في تنسيق النصوص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة خصائص CSS للنصوص",
+          "تطبيق التحدي العملي",
+          "تحسين تجربة المستخدم عبر النصوص",
+          "تعزيز مهارات البرمجة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_text.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية لتنسيق النصوص",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ النُّصُوصِ نَعْتَمِدُ عَلَى خَصَائِصَ مِثْل color و font-size و text-align. هَذِهِ الْخَصَائِصُ تُعْطِينَا تَحَكُّماً كَامِلاً فِي شَكْلِ النَّصِّ وَمَوْقِعِهِ دَاخِلَ أَيِّ Element فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تعتمد تنسيقات النصوص على خصائص مثل color و font-size و text-align للتحكم الكامل في العناصر."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "color",
+            "تغيير لون النص"
+          ],
+          [
+            "font-size",
+            "تحديد حجم الخط"
+          ],
+          [
+            "text-align",
+            "محاذاة النص"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_text.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكلية الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ كُود CSS بَسِيطٍ. نَقُومُ بِتَحْدِيد Selector ثُمَّ نَفْتَحُ الأَقْوَاسَ الْمُجَعَّدَه لِكِتَابَةِ الْخَصَائِصِ. لَاحِظْ كَيْفَ نُغْلِقُ كُلَّ سَطْرٍ بِفَاصِلَه مَنْقُوطَه لِضَمَانِ عَمَلِ الْكُودِ بِشَكْلٍ صَحِيحٍ.",
+        "caption_text": "نبدأ بكتابة كود CSS عبر تحديد Selector وتطبيق الخصائص داخل الأقواس المجعدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  color: blue;\n  text-align: center;\n}\np {\n  font-size: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_text.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَغْيِيرِ لَوْن h1 إِلَى الْأَزْرَقِ وَجَعَلْنَا النَّصَّ فِي الْمُنْتَصَفِ. أَمَّا بَالنِّسْبَه لَةِ p فَقَدْ حَدَّدْنَا حَجْمَ الْخَطِّ بِعِشْرِينَ بيكسل لِيَظْهَرَ بِشَكْلٍ وَاضِحٍ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "شرح الخصائص: تغيير لون h1 ومحاذاته، وتحديد حجم الخط لعنصر p."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "color: blue يغير لون النص",
+          "text-align: center يوسط النص",
+          "font-size: 20px يحدد حجم الخط",
+          "استخدام الفاصلة المنقوطة ضروري"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_text.asp"
+      ]
+    },
+    {
+      "id": "browser_output",
+      "title": "المعاينة في متصفح الويب",
+      "narration": {
+        "spoken_text": "عِنْدَ فَتْحِ هَذَا الْكُودِ فِي أَيِّ وِبّ Browser مِثْل Chrome أَوْ Edge، سَتَرَى التَّأْثِيرَاتِ مُبَاشَرَه. النَّصُّ سَيَظْهَرُ بِاللَّوْنِ الْأَزْرَقِ وَفِي الْمُنْتَصَفِ، مِمَّا يُعْطِي جَمَالِيَّه لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "تظهر النتائج مباشرة في متصفح الويب مثل Chrome أو Edge."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<h1>Welcome</h1>\n<p>This is a test.</p>",
+        "highlight_lines": [],
+        "output": "Welcome (centered, blue)\nThis is a test. (20px)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_text.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِتَنْظِيمِ كُود CSS فِي مِلَفٍّ خَارِجِيٍّ. هَذَا يُسَاعِدُ فِي صِيَانَةِ الْمَوْقِعِ وَيَجْعَلُ الْكُودَ أَكْثَرَ قَابِلِيَّه لِلْقِرَاءَه وَالتَّعْدِيلِ فِي الْمُسْتَقْبَلِ بِكُلِّ سُهُولَه.",
+        "caption_text": "أفضل الممارسات: تنظيم كود CSS في ملف خارجي لسهولة الصيانة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام ملفات CSS خارجية",
+          "كتابة كود نظيف ومنظم",
+          "استخدام التعليقات لتوضيح الكود",
+          "اختبار التنسيق في متصفحات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_text.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُطَبِّقُ خَصَائِص CSS عَلَى النُّصُوصِ. أَدْعُوكُمْ لِتَجْرِبَةِ التَّحَدِّيَاتِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَطْوِيرِ مَهَارَاتِكُمْ.",
+        "caption_text": "خلاصة: تعلم تطبيق خصائص CSS. جرب التحديات عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت مراجعة خصائص النصوص",
+          "تم تطبيق كود عملي",
+          "تم عرض النتائج في المتصفح",
+          "شجعنا على الممارسة المستمرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_text.asp"
+      ]
+    }
+  ]
+}
