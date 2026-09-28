@@ -31,10 +31,18 @@ p {
 تطبيق سماكات مختلفة باستخدام الكلاسات ex1 إلى ex4.
 
 ```css
-p.ex1 { outline-width: thin; }
-p.ex2 { outline-width: medium; }
-p.ex3 { outline-width: thick; }
-p.ex4 { outline-width: 8px; }
+p.ex1 {
+  outline-width: thin;
+}
+p.ex2 {
+  outline-width: medium;
+}
+p.ex3 {
+  outline-width: thick;
+}
+p.ex4 {
+  outline-width: 8px;
+}
 ```
 
 ## تحليل النتائج
