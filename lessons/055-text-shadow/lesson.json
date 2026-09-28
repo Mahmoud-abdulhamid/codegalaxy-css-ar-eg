@@ -107,7 +107,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "h1 {\n  text-shadow: 0 0 3px #ff0000,\n               0 0 5px #0000ff;\n}",
+        "code": "h1 {\n  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
