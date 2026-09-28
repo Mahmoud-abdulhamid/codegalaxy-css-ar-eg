@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "9",
+  "title": "How To Add Inline CSS",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم Inline CSS وكيفية استخدامه",
+    "تعلم كيفية إضافة style attribute للعناصر",
+    "التعرف على الفرق بين التنسيق المباشر والملفات الخارجية",
+    "تطبيق التنسيقات على عناصر HTML"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_howto_inline.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Inline CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ إِضَافَةِ Inline CSS، وَهُوَ أُسْلُوبٌ يُسْتَخْدَمُ لِتَطْبِيقِ تَصْمِيمٍ فَرِيدٍ عَلَى Element وَاحِدٍ فَقَطْ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS. سنتعلم اليوم كيفية إضافة Inline CSS لتطبيق تصميم فريد على Element واحد داخل صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Inline CSS يستخدم لتنسيق عنصر واحد",
+          "يتم إضافته مباشرة داخل Element",
+          "يستخدم style attribute لتطبيق الخصائص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_inline.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "قواعد استخدام Inline CSS",
+      "narration": {
+        "spoken_text": "لِاسْتِخْدَامِ هَذَا الْأُسْلُوبِ، نَقُومُ بِإِضَافَةِ style attribute إِلَى Element الْمَعْنِيِّ. هَذَا attribute يُمْكِنُ أَنْ يَحْتَوِيَ عَلَى أَيِّ CSS property نُرِيدُهَا، مِثْلَ تَغْيِيرِ اللَّوْنِ أَوْ مُحَاذَاةِ النَّصِّ بِشَكْلٍ مُبَاشِرٍ.",
+        "caption_text": "لاستخدام هذا الأسلوب، نقوم بإضافة style attribute إلى الـ Element المعني. هذا الـ attribute يمكن أن يحتوي على أي CSS property نريدها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "نستخدم style attribute داخل الـ Start Tag",
+          "يمكن إضافة أي CSS property داخل الـ attribute",
+          "يؤثر التنسيق فقط على الـ Element الذي يحتوي عليه"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_inline.asp"
+      ]
+    },
+    {
+      "id": "code_part1",
+      "title": "كتابة الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ. نَبْدَأُ بَةِ دُوكْ تَايْبْ HTML ثُمَّ نَفْتَح body. نَقُومُ بِتَنْسِيق h1 بِاسْتِخْدَام style attribute، حَيْثُ نُحَدِّدُ اللَّوْنَ بَةِ blue وَنَضْبِط text-align عَلَى center لِتَكُونَ الْعُنْوَانُ فِي الْمُنْتَصَفِ.",
+        "caption_text": "لننظر إلى هذا المثال. نبدأ بـ DOCTYPE HTML ثم نفتح الـ body. نقوم بتنسيق h1 باستخدام style attribute لتحديد اللون والمحاذاة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n<body>\n<h1 style=\"color:blue;text-align:center;\">\nThis is a heading</h1>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_inline.asp"
+      ]
+    },
+    {
+      "id": "code_part2",
+      "title": "استكمال الكود البرمجي",
+      "narration": {
+        "spoken_text": "نُكْمِلُ الْآنَ بِإِضَافَةِ p وَتَطْبِيق style attribute عَلَيْهَا لِتَغْيِيرِ اللَّوْنِ إِلَى red. بَعْدَ ذَلِكَ نُغْلِق body و html. هَكَذَا نَكُونُ قَدْ طَبَّقْنَا التَّنْسِيقَ بِشَكْلٍ مُبَاشِرٍ عَلَى كُلِّ Element عَلَى حِدَه.",
+        "caption_text": "نكمل الآن بإضافة p وتطبيق style attribute عليها لتغيير اللون إلى red. هكذا نكون قد طبقنا التنسيق بشكل مباشر على كل Element على حدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<p style=\"color:red;\">\nThis is a paragraph.</p>\n</body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_inline.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هندسية هامة",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَعْلَمَ أَنَّ Inline CSS يَفْقِدُ الْكَثِيرَ مِنْ مُمَيِّزَات style sheet، لِأَنَّهُ يَقُومُ بِخَلْطِ الْمُحْتَوَى مَعَ التَّقْدِيمِ. لِذَلِكَ، نَنْصَحُ بِاسْتِخْدَامِ هَذِهِ الطَّرِيقَه بِحَذَرٍ شَدِيدٍ وَفِي حَالَاتٍ ضَيِّقَه جِدّاً.",
+        "caption_text": "يجب أن نعلم أن Inline CSS يفقد الكثير من مميزات الـ style sheet، لأنه يقوم بخلط المحتوى مع التقديم. ننصح باستخدام هذه الطريقة بحذر شديد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "يقلل من قابلية إعادة استخدام الكود",
+          "يخلط المحتوى مع التنسيق",
+          "يستخدم فقط عند الضرورة القصوى"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_inline.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا كَيْفَ نُضِيفُ التَّنْسِيقَاتِ مُبَاشَرَه دَاخِل Elements. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا النَّتَائِجَ بِأَعْيُنِكُمْ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "في ختام درسنا، تعلمنا كيف نضيف التنسيقات مباشرة داخل الـ Elements. أدعوكم لتجربة هذه الأكواد بأنفسكم عبر الرابط الموجود في وصف الفيديو."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح مفهوم Inline CSS",
+          "تم تطبيق style attribute عمليا",
+          "تم التنبيه على أفضل الممارسات البرمجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_howto_inline.asp"
+      ]
+    }
+  ]
+}
