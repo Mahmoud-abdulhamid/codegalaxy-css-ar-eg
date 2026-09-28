@@ -1,0 +1,9 @@
+p::before {
+  content: "مرحباً: ";
+  color: red;
+  font-weight: bold;
+}
+p::after {
+  content: "!";
+  color: blue;
+}
