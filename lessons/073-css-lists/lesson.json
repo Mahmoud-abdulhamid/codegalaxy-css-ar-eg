@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "73",
+  "title": "تنسيق القوائم باستخدام CSS",
+  "course": "CSS",
+  "objectives": [
+    "التحكم في شكل علامات القوائم باستخدام list-style-type",
+    "استبدال علامات القوائم بصور مخصصة عبر list-style-image",
+    "ضبط موقع العلامات داخل أو خارج القائمة",
+    "استخدام الخاصية المختصرة list-style"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_list.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تنسيق القوائم",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ تَحْسِينِ مَظْهَرِ الْقَوَائِمِ فِي صَفْحَةِ الْوِبّ، سَوَاءٌ كَانَتْ unordered lists أَوْ ordered lists، بِاسْتِخْدَامِ خَصَائِص CSS الْمُتَعَدِّدَه لِتَجْعَلَهَا أَكْثَرَ جَاذِبِيَّه.",
+        "caption_text": "تعد القوائم جزءا أساسيا من صفحات الويب، وتوفر CSS أدوات قوية للتحكم في مظهرها وتنسيقها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهم أنواع القوائم في HTML",
+          "تطبيق خصائص CSS على <ul> و <ol>",
+          "التحكم في الـ markers والـ layout"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_list.asp"
+      ]
+    },
+    {
+      "id": "list-style-type",
+      "title": "تغيير شكل علامات القائمة",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ الْخَاصِيَّه list-style-type لِتَحْدِيدِ شَكْلِ الْعَلَامَه بِجَانِبِ كُلِّ عُنْصُرٍ. يُمْكِنُنَا اخْتِيَارُ قِيَمٍ مِثْل circle أَوْ square لِلْقَوَائِمِ غَيْرِ الْمُرَتَّبَه، أَوْ قِيَمٍ مِثْل upper-roman لِلْقَوَائِمِ الْمُرَتَّبَه.",
+        "caption_text": "تسمح الخاصية list-style-type بتغيير شكل الـ marker الخاص بكل عنصر في القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul.a {\n  list-style-type: circle;\n}\nul.b {\n  list-style-type: disc;\n}\nul.c {\n  list-style-type: square;\n}\nol.d {\n  list-style-type: upper-roman;\n}\nol.g {\n  list-style-type: decimal;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_list.asp"
+      ]
+    },
+    {
+      "id": "list-style-image",
+      "title": "استخدام الصور كعلامات للقائمة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً اسْتِبْدَالُ الْعَلَامَاتِ التَّقْلِيدِيَّه بِصُورَه مخصصَه بِاسْتِخْدَام list-style-image. مِنَ الْأَفْضَلِ دَائِماً تَحْدِيد list-style-type كَخِيَارٍ احْتِيَاطِيٍّ فِي حَالَةِ عَدَمِ تَوَفُّرِ الصُّورَه لِأَيِّ سَبَبٍ.",
+        "caption_text": "يمكن استخدام الصور كعلامات للقائمة عبر list-style-image مع توفير خيار احتياطي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  list-style-image: url('sqpurple.gif');\n  list-style-type: square;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_list.asp"
+      ]
+    },
+    {
+      "id": "list-style-position",
+      "title": "التحكم في موقع العلامات",
+      "narration": {
+        "spoken_text": "تُحَدِّد list-style-position مَوْقِعَ الْعَلَامَه. عِنْدَ اسْتِخْدَام outside، تَكُونُ الْعَلَامَه خَارِجَ نِطَاقِ الْعُنْصُرِ، وَهُوَ الْوَضْعُ الِافْتِرَاضِيُّ. أَمَّا inside، فَتَجْعَلُ الْعَلَامَه جُزْءاً مِنْ مُحْتَوَى الْعُنْصُرِ نَفْسِهِ.",
+        "caption_text": "تتحكم الخاصية list-style-position في تموضع الـ bullet points بالنسبة لعنصر القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul.a {\n  list-style-position: outside;\n}\nul.b {\n  list-style-position: inside;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_list.asp"
+      ]
+    },
+    {
+      "id": "remove-markers",
+      "title": "إزالة علامات القائمة",
+      "narration": {
+        "spoken_text": "لِإِزَالَةِ الْعَلَامَاتِ تَمَاماً، نَسْتَخْدِم list-style-type: none. لَا تَنْسَ أَنَّ الْقَوَائِمَ لَهَا margin و padding افْتِرَاضِيٌّ، لِذَا يَنْبَغِي ضَبْطُهُمَا إِلَى صِفْرٍ لِتَحْقِيقِ تَصْمِيمٍ نَظِيفٍ.",
+        "caption_text": "لإزالة العلامات تماما، نستخدم list-style-type: none مع تصفير الهوامش."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_list.asp"
+      ]
+    },
+    {
+      "id": "shorthand",
+      "title": "الخاصية المختصرة list-style",
+      "narration": {
+        "spoken_text": "بَدَلاً مِنْ كِتَابَةِ كُلِّ خَاصِيَّه عَلَى حِدَه، يُمْكِنُنَا اسْتِخْدَام list-style كَخَاصِيَّه مُخْتَصَرَه لِضَبْطِ كُلِّ إِعْدَادَاتِ الْقَائِمَه فِي سَطْرٍ وَاحِدٍ، مِمَّا يُسَاعِدُ فِي تَنْظِيمِ الْكُودِ وَجَعْلِهِ أَكْثَرَ كَفَاءَه.",
+        "caption_text": "تسمح الخاصية المختصرة list-style بضبط جميع خصائص القائمة في إعلان واحد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  list-style: square inside url('sqpurple.gif');\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_list.asp"
+      ]
+    },
+    {
+      "id": "styling-with-colors",
+      "title": "تنسيق القوائم بالألوان",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا إِضَافَه لَمَسَاتٍ جَمَالِيَّه بِاسْتِخْدَامِ الْأَلْوَانِ وَالْهَوَامِشِ. تَذَكَّرْ أَنَّ التَّنْسِيقَاتِ عَلَى ul أَوْ ol تُؤَثِّرُ عَلَى الْقَائِمَه كَكُلٍّ، بَيْنَمَا التَّنْسِيقَاتُ عَلَى li تُؤَثِّرُ عَلَى كُلِّ عُنْصُرٍ عَلَى حِدَه.",
+        "caption_text": "يمكن تحسين مظهر القوائم باستخدام الألوان والـ padding والـ margin."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ol {\n  background: salmon;\n  padding: 20px;\n}\nol li {\n  background: mistyrose;\n  color: darkred;\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_list.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَتَحَكَّمُ فِي مَظْهَرِ الْقَوَائِمِ بِاسْتِخْدَام CSS. جَرِّبُوا هَذِهِ الْخَصَائِصَ فِي مَشَارِيعِكُمْ لِتَحْقِيقِ تَصَامِيمَ احْتِرَافِيَّه. لِمَزِيدٍ مِنَ التَّفَاصِيلِ، يُمْكِنُكُمْ زِيَارَةِ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو.",
+        "caption_text": "لقد غطينا اليوم أهم خصائص CSS لتنسيق القوائم. استمروا في التطبيق العملي!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "list-style-type للتحكم في الـ markers",
+          "list-style-image للصور المخصصة",
+          "list-style-position للموقع",
+          "list-style للاختصار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_list.asp"
+      ]
+    }
+  ]
+}
