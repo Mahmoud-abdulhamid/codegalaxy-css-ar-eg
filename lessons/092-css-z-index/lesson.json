@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "92",
+  "title": "CSS z-index Property",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام خاصية z-index للتحكم بترتيب العناصر المتداخلة في صفحة الويب",
+    "التعرف على أهمية الشروط المطلوبة لعمل خاصية z-index على العناصر الموضحة",
+    "تطبيق قيم موجبة وسالبة لترتيب العناصر فوق أو تحت بعضها البعض"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_z-index.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-8953837da9243f23.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css_z-index.asp"
+    },
+    {
+      "id": "html_example_2",
+      "path": "assets/html-b6ca0c3f030fcc74.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css_z-index.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro_zindex",
+      "title": "مقدمة حول خاصية z-index",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاسِيَّةِ z-index وَكَيْفَ نَتَحَكَّمُ بِتَرْتِيبِ تَكْدِسِ الْعَنَاصِرِ الْمُتَدَاخِلَه فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتعلم خاصية z-index."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحدد خاصية z-index ترتيب التكدس للعناصر الموضحة",
+          "تتحكم في أي عنصر يظهر في المقدمة أو الخلفية",
+          "تتعامل مع العناصر المتداخلة التي تتبنى خصائص الموقع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_z-index.asp"
+      ]
+    },
+    {
+      "id": "stack_order_concept",
+      "title": "مفهوم ترتيب التكدس",
+      "narration": {
+        "spoken_text": "عِنْدَمَا تَتَدَاخَلُ الْعَنَاصِرُ الْمُتَّصِلَه بِالْمَوْقِعِ عَلَى صَفْحَةِ الْوِبّ، يُمْكِنُ أَنْ يَحْمِلَ كُلُّ عُنْصُرٍ قِيمَه تَرْتِيبٍ مُوجَبَه أَوْ سَالِبَه تُحَدِّدُ ظُهُورَهُ بِالنِّسْبَه لِلْعَنَاصِرِ الْأُخْرَى.",
+        "caption_text": "العناصر المتداخلة يمكن أن تحمل قيما موجبة أو سالبة للتحكم بالظهور."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "العناصر الموضحة قد تتقاطع وتتداخل في المساحة",
+          "القيم الأكبر تظهر دائما في المقدمة فوق القيم الأقل",
+          "القيم السالبة تضع العنصر خلف النصوص أو العناصر الأخرى"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_z-index.asp"
+      ]
+    },
+    {
+      "id": "prerequisites_code",
+      "title": "الشروط الأساسية للعمل",
+      "narration": {
+        "spoken_text": "لَاحِظْ هَذَا التَّمْرِينَ، فَإِنَّ خَاسِيَّةِ z-index لَا تَعْمَلُ إِلَّا عَلَى الْعَنَاصِرِ الْمُعَيَّنَه بِمِثْل position absolute أَوْ relative أَوْ fixed أَوْ sticky وَكَذَلِك flex items.",
+        "caption_text": "خاصية z-index تعمل حصريا على العناصر الموضحة وflex items."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  z-index: -1;\n}",
+        "highlight_lines": [],
+        "output": "يتم وضع الصورة خلف النص مباشرة بسبب قيمة z-index السالبة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_z-index.asp"
+      ]
+    },
+    {
+      "id": "complex_example_html",
+      "title": "مثال متقدم لصناديق متعددة",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى مِثَالٍ أَكْثَرَ تَقَدُّماً يَتَضَمَّنُ عِدَّةِ عَنَاصِر div تَتَحَكَّمُ بِهَا خَاسِيَّةِ z-index بِقِيَمٍ مُخْتَلِفَه لِتَحْدِيدِ التَّرْتِيبِ الدَّقِيقِ لَهَا.",
+        "caption_text": "مثال متقدم يوضح تأثير قيم z-index المختلفة على عدة صناديق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"black-box\">Black box</div>\n      <div class=\"gray-box\">Gray box</div>\n      <div class=\"green-box\">Green box</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Container containing three boxes with different z-index values.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_z-index.asp"
+      ]
+    },
+    {
+      "id": "complex_example_css",
+      "title": "تنسيق الصناديق بخصائص CSS",
+      "narration": {
+        "spoken_text": "فِي هَذَا الكود نُحَدِّدُ تَنْسِيقَات CSS لِلطَّبَقَاتِ. نُعْطِي الصُّنْدُوقَ الْأَسْوَد z-index بِقِيمَه وَاحِدٍ، وَالصُّنْدُوقَ الرِّمَادِيَّ بِقِيمَه ثَلَاثَه، وَالصُّنْدُوقَ الْأَخْضَرَ بِقِيمَةِ اثْنَيْنِ.",
+        "caption_text": "تنسيق الصناديق في CSS مع تحديد قيم z-index لكل صندوق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".black-box {\n  position: relative;\n  z-index: 1;\n  border: 2px solid black;\n  height: 100px;\n}\n.gray-box {\n  position: absolute;\n  z-index: 3;\n  background: lightgray;\n}\n.green-box {\n  position: absolute;\n  z-index: 2;\n  background: lightgreen;\n}",
+        "highlight_lines": [],
+        "output": "Gray box appears on top, followed by green box, then black box.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_z-index.asp"
+      ]
+    },
+    {
+      "id": "visual_result_scene",
+      "title": "معاينة النتيجة المرئية",
+      "narration": {
+        "spoken_text": "نُشَاهِدُ الْآنَ النَّتِيجَه النِّهَائِيَّه لِلتَّنْسِيقِ بَعْدَ تَطْبِيقِ الْقِيَمِ. الصُّنْدُوقُ الرِّمَادِيُّ يَظْهَرُ أَعْلَى الْجَمِيعِ لِأَنَّ لَهُ أَعْلَى قِيمَةِ z-index.",
+        "caption_text": "معاينة النتيجة المرئية للصناديق المكدسة وفق قيم z-index."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "Rendered output of z-index example showing stacked boxes"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_z-index.asp"
+      ]
+    },
+    {
+      "id": "without_zindex_scene",
+      "title": "سلوك العناصر بدون z-index",
+      "narration": {
+        "spoken_text": "مَاذَا يَحْدُثُ إِذَا لَمْ نَحُدْدْ خَاسِيَّةِ z-index؟ تَتَرَتَّبُ الْعَنَاصِرُ تِلْقَائِيّاً حَسَبَ تَرْتِيبِ كِتَابَتِهَا فِي مَصْدَر HTML وَيَظْهَرُ الْعُنْصُرُ الْأَخِيرُ فِي الْمُقَدِّمَه.",
+        "caption_text": "بدون z-index تترتب العناصر حسب تسلسلها في مصدر HTML."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_2",
+        "alt": "Rendered output without z-index showing default stacking"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_z-index.asp"
+      ]
+    },
+    {
+      "id": "conclusion_scene",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا بِالتَّفْصِيلِ عَلَى آلِيَّةِ تَرْكِيبِ وَتَرْتِيبِ الْعَنَاصِرِ بِاسْتِخْدَام z-index فِي CSS مَعَ الْمُدَرِّبِ مَحْمُودْ عَبْدُالْحَمِيدْ. نَنْتَظِرُكُمْ فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "خلاصة استخدام z-index للتحكم الكامل بطبقات وعناصر صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية z-index أداة قوية للتحكم بالطبقات",
+          "تتطلب عناصر موضحة لتأثيرها الفعال",
+          "ترتب العناصر حسب الأرقام الموجبة والسالبة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_z-index.asp"
+      ]
+    }
+  ]
+}
