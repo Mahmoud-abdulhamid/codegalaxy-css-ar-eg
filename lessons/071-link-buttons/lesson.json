@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "71",
+  "title": "CSS Link Buttons",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تحويل الروابط إلى أزرار باستخدام CSS",
+    "التعرف على استخدام Pseudo-classes مثل :link و :visited و :hover",
+    "تطبيق خصائص CSS للتحكم في مظهر الروابط",
+    "إنشاء تصاميم تفاعلية وجذابة لروابط الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_link_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Link Buttons",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ تَحْوِيلِ الرَّوَابِطِ الْعَادِيَّه إِلَى أَزْرَارٍ جَذَّابَه بِاسْتِخْدَامِ خَصَائِص CSS، لِتُصْبِحَ صَفْحَةِ الْوِبّ أَكْثَرَ تَفَاعُلِيَّه وَأَنَاقَه لِلْمُسْتَخْدِمِ.",
+        "caption_text": "مرحبا بكم في درس CSS Link Buttons. سنتعلم اليوم كيفية تحويل الروابط العادية إلى أزرار جذابة باستخدام خصائص CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحويل الروابط إلى أزرار احترافية",
+          "تحسين تجربة المستخدم في صفحات الويب",
+          "استخدام CSS للتحكم في مظهر العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_link_buttons.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية",
+      "narration": {
+        "spoken_text": "لِتَحْوِيلِ الرَّوَابِطِ إِلَى أَزْرَارٍ، نَعْتَمِدُ عَلَى مَجْمُوعَه مِن Properties مِثْل background-color و padding. كَمَا نَسْتَخْدِم Pseudo-classes مِثْلَ :link وَ :visited لِتَحْدِيدِ حَالَةِ الرَّابِطِ، وَ :hover لِإِضَافَه تَأْثِيرٍ عِنْدَ مُرُورِ فَأْرَةِ الْحَاسُوبِ.",
+        "caption_text": "نعتمد على خصائص مثل background-color و padding، ونستخدم Pseudo-classes مثل :link و :visited و :hover للتحكم في حالات الرابط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام background-color لتلوين الزر",
+          "استخدام padding لتحديد أبعاد الزر",
+          "استخدام :hover لإضافة تأثيرات تفاعلية",
+          "استخدام text-decoration: none لإزالة تسطير الرابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_link_buttons.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "تطبيق الكود الأول",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَعْيِين background-color لِلرَّابِطِ، وَنُحَدِّد padding مُنَاسِباً لِجَعْلِهِ يَبْدُو كَزِرٍّ. نَسْتَخْدِم display: inline-block لِضَمَانِ عَرْضِهِ بِشَكْلٍ صَحِيحٍ، وَنُزِيلُ التَّسْطِيرَ بِاسْتِخْدَام text-decoration: none.",
+        "caption_text": "تطبيق الكود الأول: نستخدم background-color و padding مع display: inline-block لتحويل الرابط إلى شكل زر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a:link, a:visited {\n  background-color: #f44336;\n  color: white;\n  padding: 14px 25px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n}\na:hover, a:active {\n  background-color: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_link_buttons.asp"
+      ]
+    },
+    {
+      "id": "code_example_2",
+      "title": "تطبيق الكود الثاني",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً إِضَافَه حُدُودٍ لِلزِّرِّ بِاسْتِخْدَامِ خَاصِيَّةِ border. لَاحِظْ كَيْفَ نُغَيِّرُ الْأَلْوَانَ عِنْدَ حَالَه :hover لِتَكُونَ التَّجْرِبَه أَكْثَرَ تَفَاعُلِيَّه. هَذَا الْأُسْلُوبُ يَمْنَحُ الرَّابِطَ مَظْهَرَاً عَصْرِيّاً وَمُمَيَّزَاً.",
+        "caption_text": "تطبيق الكود الثاني: إضافة حدود للزر باستخدام border وتغيير الألوان عند حالة :hover."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a:link, a:visited {\n  background-color: white;\n  color: black;\n  border: 2px solid green;\n  padding: 10px 20px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n}\na:hover, a:active {\n  background-color: green;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_link_buttons.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَظْهَرُ الرَّابِطُ فِي الْمُتَصَفِّحْ كَمُرَبَّعٍ مُلَوَّنٍ يَعْمَلُ كَزِرٍّ. عِنْدَ تَحْرِيكِ الْفَأْرَه فَوْقَهُ، سَيَتَغَيَّرُ لَوْنُ الْخَلْفِيَّه بِسَلَاسَه، مِمَّا يُعْطِي تَغْذِيَه رَاجِعَه بَصَرِيَّه لِلْمُسْتَخْدِمِ.",
+        "caption_text": "معاينة المخرجات: يظهر الرابط كزر تفاعلي يتغير لونه عند مرور الفأرة فوقه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <a href=\"#\">هذا زر رابط</a>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "هذا زر رابط (يظهر كمربع ملون)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_link_buttons.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "لِضَمَانِ جَوْدَةِ التَّصْمِيمِ، احْرِصْ دَائِماً عَلَى تَوْفِيرِ تَبَايُنٍ كَافٍ بَيْنَ لَوْنِ النَّصِّ وَلَوْنِ الْخَلْفِيَّه. كَمَا يُفَضَّلُ اسْتِخْدَام transition لِجَعْلِ تَغَيُّرِ الْأَلْوَانِ أَكْثَرَ نُعُومَه وَجَمَالِيَّه فِي تَصَامِيمِ الْوِبّ.",
+        "caption_text": "أفضل الممارسات: تأكد من التباين اللوني واستخدم transition لجعل التغييرات أكثر سلاسة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام تباين ألوان عال لسهولة القراءة",
+          "إضافة خاصية transition لتأثيرات ناعمة",
+          "الحفاظ على اتساق التصميم في كامل الموقع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_link_buttons.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمِ حَوْل CSS Link Buttons. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْأَحْجَامِ لِتَبْتَكِرُوا تَصَامِيمَكُمُ الْخَاصَّه. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خاتمة: جربوا الأكواد بأنفسكم وابتكروا تصاميمكم الخاصة. شكرا لمتابعتكم وإلى اللقاء في الدرس القادم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا الأمثلة في موقع W3Schools",
+          "جربوا تغيير القيم في الكود",
+          "استمروا في ممارسة CSS يوميا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_link_buttons.asp"
+      ]
+    }
+  ]
+}
