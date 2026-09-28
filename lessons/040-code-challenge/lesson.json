@@ -104,7 +104,7 @@
         "type": "code",
         "language": "html",
         "filename": "index.html",
-        "code": "<!-- العنصر بعد التنسيق -->\n<div style=\"width:200px; height:100px;\">\n  محتوى العنصر\n</div>",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- العنصر بعد التنسيق -->\n    <div style=\"width:200px; height:100px;\">\n      محتوى العنصر\n    </div>\n  </body>\n</html>",
         "highlight_lines": [],
         "output": "مربع أزرق بعرض 200 بكسل وارتفاع 100 بكسل",
         "output_status": "illustrative",
