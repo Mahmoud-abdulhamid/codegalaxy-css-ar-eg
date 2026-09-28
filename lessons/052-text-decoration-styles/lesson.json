@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "52",
+  "title": "تنسيق خطوط الزينة في CSS",
+  "course": "CSS",
+  "objectives": [
+    "التحكم في نمط خط الزينة باستخدام text-decoration-style",
+    "تعديل سمك خط الزينة عبر text-decoration-thickness",
+    "استخدام خاصية الاختصار text-decoration",
+    "إزالة التسطير من الروابط باستخدام text-decoration: none"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_text_decoration_styles.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول تنسيق خطوط الزينة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي خُطُوطِ الزِّينَه لِلنُّصُوصِ، وَكَيْفَ نُضِيفُ لَمَسَاتٍ جَمَالِيَّه احْتِرَافِيَّه لِتَصَامِيمِ الْوِبّ بِاسْتِخْدَامِ خَصَائِصَ مُتَقَدِّمَه.",
+        "caption_text": "مرحبا بكم في درس تنسيق خطوط الزينة باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في نمط خط الزينة",
+          "تعديل سمك الخط",
+          "استخدام خاصية الاختصار",
+          "إزالة التسطير من الروابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration_styles.asp"
+      ]
+    },
+    {
+      "id": "style_property",
+      "title": "التحكم في نمط خط الزينة",
+      "narration": {
+        "spoken_text": "نَبْدَأُ مَعَ خَاصِيَّةِ text-decoration-style، وَهِيَ تُحَدِّدُ شَكْلَ الْخَطِّ، مِثْل solid أَوْ double أَوْ dotted أَوْ dashed أَوْ wavy. هَذِهِ الْخَاصِيَّه تُعْطِي مَظْهَراً مُتَمَيِّزاً لِلنُّصُوصِ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تستخدم خاصية text-decoration-style لتحديد نمط خط الزينة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 { text-decoration-style: solid; }\nh2 { text-decoration-style: double; }\nh3 { text-decoration-style: dotted; }\np.ex1 { text-decoration-style: dashed; }\np.ex2 { text-decoration-style: wavy; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration_styles.asp"
+      ]
+    },
+    {
+      "id": "thickness_property",
+      "title": "تعديل سمك خط الزينة",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ سُمْكِ الْخَطِّ، نَسْتَخْدِمُ خَاصِيَّةِ text-decoration-thickness. يُمْكِنُكَ تَعْيِينُ قِيمَه بَةِ px أَوْ نِسْبَه مِئَوِيَّه، أَوْ تَرْكِهَا auto. هَذَا يَمْنَحُكَ تَحَكُّماً دَقِيقاً فِي مَدَى بُرُوزِ الْخَطِّ تَحْتَ النَّصِّ.",
+        "caption_text": "تستخدم خاصية text-decoration-thickness للتحكم في سمك الخط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "thickness.css",
+        "code": "h1 { text-decoration-thickness: auto; }\nh2 { text-decoration-thickness: 5px; }\nh3 { text-decoration-thickness: 25%; }\np { text-decoration-thickness: 5px; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration_styles.asp"
+      ]
+    },
+    {
+      "id": "shorthand_property",
+      "title": "خاصية الاختصار text-decoration",
+      "narration": {
+        "spoken_text": "بَدَلاً مِنْ كِتَابَةِ كُلِّ خَاصِيَّه عَلَى حِدَه، نَسْتَخْدِمُ خَاصِيَّةِ الِاخْتِصَار text-decoration. هِيَ تَجْمَعُ بَيْن line و color و style و thickness فِي سَطْرٍ وَاحِدٍ، مِمَّا يَجْعَلُ الْكُودَ أَكْثَرَ نَظَافَه وَسُرْعَه فِي الْكِتَابَه.",
+        "caption_text": "خاصية الاختصار text-decoration تجمع كافة خصائص الزينة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "shorthand.css",
+        "code": "h1 { text-decoration: underline; }\nh2 { text-decoration: underline red; }\nh3 { text-decoration: underline red double; }\np { text-decoration: underline red double 5px; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration_styles.asp"
+      ]
+    },
+    {
+      "id": "links_tip",
+      "title": "إزالة التسطير من الروابط",
+      "narration": {
+        "spoken_text": "فِي الْعَادَه، تَظْهَرُ جَمِيعُ الرَّوَابِطِ فِي HTML بِتَسْطِيرٍ افْتِرَاضِيٍّ. لِإِزَالَةِ هَذَا التَّسْطِيرِ، نَسْتَخْدِمُ خَاصِيَّةِ text-decoration مَعَ الْقِيمَه none. هَذَا أَمْرٌ شَائِعٌ جِدّاً فِي تَصَامِيمِ الْوِبّ الْعَصْرِيَّه لِتَحْسِينِ الْمَظْهَرِ.",
+        "caption_text": "استخدم text-decoration: none لإزالة التسطير من الروابط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "links.css",
+        "code": "a {\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration_styles.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ غَطَّيْنَا كَيْفِيَّةِ التَّحَكُّمِ فِي خُطُوطِ الزِّينَه بِشَكْلٍ كَامِلٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْخَصَائِصِ بِنَفْسِكُمْ لِتَرَوْا التَّأْثِيرَاتِ الْمُخْتَلِفَه عَلَى نُصُوصِكُمْ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعنا text-decoration-style",
+          "طبقنا text-decoration-thickness",
+          "استخدمنا خاصية الاختصار",
+          "تعلمنا إزالة التسطير من الروابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_text_decoration_styles.asp"
+      ]
+    }
+  ]
+}
