@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "28",
+  "title": "CSS Border Sides",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية التحكم في جوانب الـ border بشكل منفصل",
+    "استخدام الخصائص الفردية مثل border-top-style",
+    "تعلم استخدام الاختصار border-style مع قيم متعددة",
+    "تطبيق مفاهيم الـ border على الـ width والـ color"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_border_sides.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Border Sides",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي جَوَانِب border بِشَكْلٍ مُسْتَقِلٍّ لِكُلِّ جَانِبٍ، وَهِيَ مَهَارَه أَسَاسِيَّه لِتَصْمِيمِ وَاجِهَاتِ الْوِبّ بِاحْتِرَافِيَّه.",
+        "caption_text": "مرحبا بكم في درس التحكم في جوانب الـ border بشكل مستقل باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في كل جانب من جوانب الـ border على حدة",
+          "استخدام الخصائص الفردية لكل اتجاه",
+          "تطبيق الاختصارات لتنظيم الكود",
+          "تطبيق المفاهيم على الـ width والـ color"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_sides.asp"
+      ]
+    },
+    {
+      "id": "individual_properties",
+      "title": "الخصائص الفردية للـ border",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا فِي CSS تَحْدِيدُ نَمَط border لِكُلِّ جَانِبٍ عَلَى حِدَه بِاسْتِخْدَامِ خَصَائِصَ مِثْل border-top-style و border-right-style و border-bottom-style و border-left-style لِتَحْقِيقِ تَصْمِيمٍ دَقِيقٍ.",
+        "caption_text": "نستخدم الخصائص الفردية للتحكم في كل جانب من جوانب الـ border."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "border-top-style",
+            "تحديد نمط الجانب العلوي"
+          ],
+          [
+            "border-right-style",
+            "تحديد نمط الجانب الأيمن"
+          ],
+          [
+            "border-bottom-style",
+            "تحديد نمط الجانب السفلي"
+          ],
+          [
+            "border-left-style",
+            "تحديد نمط الجانب الأيسر"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_sides.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "تطبيق الخصائص الفردية",
+      "narration": {
+        "spoken_text": "لِنُلَاحِظْ هَذَا الْكُودَ، حَيْثُ نَقُومُ بِتَحْدِيدِ نَمَطٍ مُخْتَلِفٍ لِكُلِّ جَانِبٍ. نَسْتَخْدِم dotted لِلْأَعْلَى وَالسُّفْلِيِّ، و solid لِلْجَانِبَيْنِ الْأَيْمَنِ وَالْأَيْسَرِ، مِمَّا يُعْطِي تَفَاصِيلَ جَمَالِيَّه لِلْعُنْصُرِ.",
+        "caption_text": "مثال برمجي يوضح استخدام الخصائص الفردية للـ border."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  border-top-style: dotted;\n  border-right-style: solid;\n  border-bottom-style: dotted;\n  border-left-style: solid;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_sides.asp"
+      ]
+    },
+    {
+      "id": "shorthand_concept",
+      "title": "مفهوم الاختصار في border-style",
+      "narration": {
+        "spoken_text": "بَدَلًا مِنَ الْكِتَابَه الطَّوِيلَه، يُمْكِنُنَا اسْتِخْدَامُ خَاصِيَّةِ border-style كَاخْتِصَارٍ. هَذِهِ الْخَاصِيَّه تَقْبَلُ مِنْ قِيمَه وَاحِدَه إِلَى أَرْبَعِ قِيَمٍ لِتَحْدِيدِ الْجَوَانِبِ بِالتَّرْتِيبِ: الْأَعْلَى، الْأَيْمَنُ، السُّفْلِيُّ، ثُمَّ الْأَيْسَرُ.",
+        "caption_text": "استخدام border-style كاختصار لتحديد أنماط الجوانب الأربعة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قيمة واحدة: تطبق على جميع الجوانب",
+          "قيمتان: الأولى للأعلى والأسفل، الثانية لليمين واليسار",
+          "ثلاث قيم: الأعلى، اليمين واليسار، ثم الأسفل",
+          "أربع قيم: الأعلى، اليمين، الأسفل، ثم اليسار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_sides.asp"
+      ]
+    },
+    {
+      "id": "code_example_2",
+      "title": "أمثلة على قيم border-style",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَرَى كَيْفَ نُحَدِّدُ قِيمَتَيْنِ فَقَطْ لَةِ border-style. الْقِيمَه الْأُولَى dotted تُطَبَّقُ عَلَى الْأَعْلَى وَالسُّفْلِيِّ، وَالْقِيمَه الثَّانِيَه solid تُطَبَّقُ عَلَى الْجَانِبَيْنِ الْأَيْمَنِ وَالْأَيْسَرِ.",
+        "caption_text": "مثال يوضح استخدام قيمتين داخل خاصية border-style."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  border-style: dotted solid;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_sides.asp"
+      ]
+    },
+    {
+      "id": "advanced_shorthand",
+      "title": "تعدد القيم في الاختصارات",
+      "narration": {
+        "spoken_text": "تَعْمَلُ هَذِهِ الْقَاعِدَه أَيْضاً مَعَ خَصَائِص border-width و border-color. يُمْكِنُكَ تَمْرِيرُ أَرْبَعِ قِيَمٍ لِتَحْقِيقِ تَصْمِيمٍ مُعَقَّدٍ بِسُهُولَه، مِمَّا يُوَفِّرُ وَقْتاً كَبِيراً فِي كِتَابَةِ الْكُودِ.",
+        "caption_text": "تطبيق مفهوم تعدد القيم على خصائص العرض واللون للـ border."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* أربع قيم */\np { border-style: dotted solid double dashed; }\n/* ثلاث قيم */\np { border-style: dotted solid double; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_sides.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ أَنَّ التَّحَكُّمَ فِي جَوَانِب border يُمْكِنُ أَنْ يَكُونَ فَرْدِيّاً أَوْ بِاسْتِخْدَامِ الِاخْتِصَارَاتِ. جَرِّبُوا هَذِهِ الْأَكْوَادَ فِي مَشَارِيعِكُمُ الْخَاصَّه لِتَرَوْا النَّتَائِجَ الْمُبْهِرَه. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: التحكم في جوانب الـ border يمنحك مرونة عالية في التصميم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم الخصائص الفردية للدقة العالية",
+          "استخدم الاختصارات لتقليل حجم الكود",
+          "تذكر ترتيب القيم: الأعلى، اليمين، الأسفل، اليسار",
+          "طبق نفس المنطق على border-width و border-color"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border_sides.asp"
+      ]
+    }
+  ]
+}
