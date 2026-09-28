@@ -16,11 +16,21 @@
 تستخدم خاصية text-decoration-style لتحديد نمط خط الزينة.
 
 ```css
-h1 { text-decoration-style: solid; }
-h2 { text-decoration-style: double; }
-h3 { text-decoration-style: dotted; }
-p.ex1 { text-decoration-style: dashed; }
-p.ex2 { text-decoration-style: wavy; }
+h1 {
+  text-decoration-style: solid;
+}
+h2 {
+  text-decoration-style: double;
+}
+h3 {
+  text-decoration-style: dotted;
+}
+p.ex1 {
+  text-decoration-style: dashed;
+}
+p.ex2 {
+  text-decoration-style: wavy;
+}
 ```
 
 ## تعديل سمك خط الزينة
@@ -28,10 +38,18 @@ p.ex2 { text-decoration-style: wavy; }
 تستخدم خاصية text-decoration-thickness للتحكم في سمك الخط.
 
 ```css
-h1 { text-decoration-thickness: auto; }
-h2 { text-decoration-thickness: 5px; }
-h3 { text-decoration-thickness: 25%; }
-p { text-decoration-thickness: 5px; }
+h1 {
+  text-decoration-thickness: auto;
+}
+h2 {
+  text-decoration-thickness: 5px;
+}
+h3 {
+  text-decoration-thickness: 25%;
+}
+p {
+  text-decoration-thickness: 5px;
+}
 ```
 
 ## خاصية الاختصار text-decoration
@@ -39,10 +57,18 @@ p { text-decoration-thickness: 5px; }
 خاصية الاختصار text-decoration تجمع كافة خصائص الزينة.
 
 ```css
-h1 { text-decoration: underline; }
-h2 { text-decoration: underline red; }
-h3 { text-decoration: underline red double; }
-p { text-decoration: underline red double 5px; }
+h1 {
+  text-decoration: underline;
+}
+h2 {
+  text-decoration: underline red;
+}
+h3 {
+  text-decoration: underline red double;
+}
+p {
+  text-decoration: underline red double 5px;
+}
 ```
 
 ## إزالة التسطير من الروابط
