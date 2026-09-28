@@ -15,9 +15,15 @@
 تمنح وحدة px تحكما دقيقا ولكنها تفتقر للمرونة في التكيف مع الشاشات المختلفة.
 
 ```css
-h1 { font-size: 40px; }
-h2 { font-size: 30px; }
-p { font-size: 16px; }
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+p {
+  font-size: 16px;
+}
 ```
 
 ## استخدام وحدة em
@@ -25,9 +31,15 @@ p { font-size: 16px; }
 وحدة em تعتمد على حجم خط العنصر الأب، مما يجعلها خيارا مرنا للمستخدمين.
 
 ```css
-body { font-size: 16px; }
-h1 { font-size: 2.5em; }
-p { font-size: 1em; }
+body {
+  font-size: 16px;
+}
+h1 {
+  font-size: 2.5em;
+}
+p {
+  font-size: 1em;
+}
 ```
 
 ## استخدام وحدة rem
@@ -35,9 +47,15 @@ p { font-size: 1em; }
 تعتبر وحدة rem مثالية للتصاميم المتجاوبة لأنها ترتبط دائما بRoot Element html.
 
 ```css
-html { font-size: 16px; }
-h1 { font-size: 2.5rem; }
-p { font-size: 1rem; }
+html {
+  font-size: 16px;
+}
+h1 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1rem;
+}
 ```
 
 ## وحدة vw للمساحات
@@ -45,8 +63,12 @@ p { font-size: 1rem; }
 وحدة vw تجعل حجم النص يتناسب ديناميكيا مع عرض نافذة المتصفح.
 
 ```css
-h1 { font-size: 10vw; }
-p { font-size: 5vw; }
+h1 {
+  font-size: 10vw;
+}
+p {
+  font-size: 5vw;
+}
 ```
 
 ## خلاصة الدرس
