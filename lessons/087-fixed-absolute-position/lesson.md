@@ -60,10 +60,18 @@ div.absolute {
 تظهر العناصر في المتصفح بناء على قيم position المحددة.
 
 ```html
-<div class="relative">
-  <div class="absolute">Absolute Element</div>
-</div>
-<div class="fixed">Fixed Element</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="relative">
+      <div class="absolute">Absolute Element</div>
+    </div>
+    <div class="fixed">Fixed Element</div>
+  </body>
+</html>
 ```
 
 ## أفضل الممارسات
