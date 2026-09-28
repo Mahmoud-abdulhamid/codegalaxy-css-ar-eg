@@ -84,7 +84,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": ".p3 {\n  font-family: \"Lucida Console\", \n  \"Courier New\", monospace;\n}",
+        "code": ".p3 {\n  font-family: \"Lucida Console\", \"Courier New\", monospace;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
