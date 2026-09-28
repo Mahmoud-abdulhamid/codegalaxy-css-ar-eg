@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "106",
+  "title": "شرح CSS Combinators بالتفصيل",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم CSS Combinators وكيفية تحديد العناصر بدقة",
+    "التعرف على Descendant Combinator واستخدام المسافة بين selectors",
+    "التعرف على Child Combinator باستخدام الرمز > لاختيار الأبناء المباشرين",
+    "التعرف على Next Sibling Combinator باستخدام الرمز + لاختيار الأخ المباشر التالي",
+    "التعرف على Subsequent-sibling Combinator باستخدام الرمز لاختيار جميع الإخوة اللاحقين"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_combinators.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن CSS Combinators",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى CSS Combinators، وَهِيَ أَدَوَاتٌ تُحَدِّدُ الْعَلَاقَه بَيْن selectors بَدِيقَه وَاحْتِرَافِيَّه لِتَحْسِينِ تَنْسِيقَاتِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تعرف على مفهوم CSS Combinators وكيفية تحديد العناصر بدقة في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحدد CSS Combinators العلاقة بين selectors",
+          "تساعد في إنشاء تخصيصات دقيقة للعناصر",
+          "تتضمن أربعة أنواع رئيسية في CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "شرح Descendant Combinator",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِالنَّوْعِ الْأَوَّلِ وَهُو Descendant Combinator. يُعَبَّرُ عَنْهُ بِوَاسِطَه مَسَافَه فَارِغَه بَيْن selectors، وَهُوَ يَقْتَفِي أَثَرَ وَيُحَدِّدُ جَمِيعَ الْعَنَاصِرِ التابعَه بِمَا فِيهَا الْأَبْنَاءُ وَالْأَحْفَادُ ضِمْنَ عُنْصُرٍ مُحَدَّدٍ.",
+        "caption_text": "يستخدم Descendant Combinator مسافة فارغة لاختيار جميع العناصر التابعة داخل العنصر الأب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "div p {\n  background-color: yellow;\n}",
+        "highlight_lines": [],
+        "output": "يتم تطبيق خلفية صفراء على جميع عناصر p الموجودة داخل div.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "شرح Child Combinator",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى النَّوْعِ الثَّانِي وَهُو Child Combinator. نَسْتَخْدِمُ فِيهِ رَمْزَ أَكْبَرَ مِنْ، أَي الرَّمْزَ ، لِتَحْدِيدِ الْأَبْنَاءِ الْمُبَاشِرِينَ فَقَطْ لِعُنْصُرِ الْأَبِ، دُونَ شُمُولِ الْأَحْفَادِ الْأَبْعَدِ.",
+        "caption_text": "يستخدم Child Combinator الرمز > لاختيار العناصر التي تعتبر أبناء مباشرين فقط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "div > p {\n  background-color: yellow;\n}",
+        "highlight_lines": [],
+        "output": "يتم تلوين عناصر p المباشرة فقط داخل div باللون الأصفر.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "شرح Next Sibling Combinator",
+      "narration": {
+        "spoken_text": "ثَالِثاً، لَدَيْنَا Next Sibling Combinator. نَسْتَخْدِمُ رَمْزَ الْجَمْعِ، أَي الرَّمْز plus، لِاخْتِيَارِ عُنْصُرٍ وَاحِدٍ يَقَعُ مُبَاشَرَه بَعْدَ عُنْصُرٍ آخَرَ، بِشَرْطِ أَنْ يَشْتَرِكَا فِي نَفْسِ الْأَبِ.",
+        "caption_text": "يستخدم Next Sibling Combinator الرمز + لاختيار العنصر التالي مباشرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "div + p {\n  background-color: yellow;\n}",
+        "highlight_lines": [],
+        "output": "يتم تنسيق أول عنصر p ياتي مباشرة بعد div بنفس المستوى.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "شرح Subsequent-sibling Combinator",
+      "narration": {
+        "spoken_text": "رَابِعاً، نَتَعَرَّفُ عَلَى Subsequent-sibling Combinator. نَسْتَخْدِمُ رَمْزَ التِيلْدَا، أَي الرَّمْز tilde، لِتَحْدِيدِ وَاخْتِيَارِ كَافَّةِ الْعَنَاصِرِ التَّالِيَه الَّتِي تَقَعُ بَعْدَ عُنْصُرٍ مُحَدَّدٍ وَتَشْتَرِكُ مَعَهُ فِي نَفْسِ الْأَبِ.",
+        "caption_text": "يستخدم Subsequent-sibling Combinator الرمز لاختيار جميع العناصر اللاحقة ضمن نفس الأب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "div ~ p {\n  background-color: yellow;\n}",
+        "highlight_lines": [],
+        "output": "يتم تطبيق التنسيق على كل عناصر p اللاحقة لعنصر div المشتركة في الأب.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "جدول مقارنة Combinators",
+      "narration": {
+        "spoken_text": "لِنُلَخِّصَ الأَنْوَعَ الأَرْبَعَه فِي جَدْوَلٍ سَرِيعٍ يُمَيِّزُ بَيْنَ الرُّمُوزِ الْمُسْتَخْدَمَه، مِنْ مَسَافَه بَسِيطَه إِلَى رَمْزِ أَكْبَرَ مِنْ وَالْجَمْعِ وَالتِّيلْدَا لِضَمَانِ الِاسْتِخْدَامِ السَّلِيمِ فِي الْمَشَارِيعِ البرمجيَه.",
+        "caption_text": "جدول يوضح ملخص الرموز المستخدمة في CSS Combinators ووظيفة كل منها."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "النوع",
+          "الرمز",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "Descendant",
+            "مسافة",
+            "اختيار كل التابعين"
+          ],
+          [
+            "Child",
+            ">",
+            "اختيار الأبناء المباشرين"
+          ],
+          [
+            "Next Sibling",
+            "+",
+            "اختيار الأخ التالي مباشرة"
+          ],
+          [
+            "Subsequent Sibling",
+            "",
+            "اختيار كل الإخوة اللاحقين"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_combinators.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَرَّفْنَا بِالتَّفْصِيلِ عَلَى كَيْفِيَّةِ اسْتِخْدَام CSS Combinators بِأَنْوَاعِهَا الْأَرْبَعَه، لِتَكُونُوا قَادِرِينَ عَلَى كِتَابَةِ مِلَفَّات CSS مُتَقَدِّمَه وَدَقِيقَه.",
+        "caption_text": "ملخص شامل لأنواع CSS Combinators وأهمية استخدامها في تنسيق صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم Descendant uses space",
+          "مفهوم Child uses > symbol",
+          "مفهوم Next sibling uses + symbol",
+          "مفهوم Subsequent sibling uses symbol"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_combinators.asp"
+      ]
+    }
+  ]
+}
