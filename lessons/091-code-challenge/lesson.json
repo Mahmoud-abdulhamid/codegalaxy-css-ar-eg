@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "91",
+  "title": "CSS Position Offsets Mastery",
+  "course": "CSS",
+  "objectives": [
+    "Understand CSS position property",
+    "Master top, bottom, left, and right offsets",
+    "Learn to control element placement",
+    "Apply positioning in real-world layouts"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_position_offset.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Position Offsets",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ التَّحَكُّمِ فِي مَوْقِعِ الْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ position وَالْإِزَاحَاتِ الْمَعْرُوفَه بَةِ Offsets لِتَصْمِيمِ صَفَحَاتِ الْوِبّ بِدِقَّه عَالِيَه.",
+        "caption_text": "مرحبا بكم في درس CSS Position Offsets للتحكم في أماكن العناصر بدقة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهم خاصية position في CSS",
+          "استخدام top و bottom و left و right",
+          "التحكم الكامل في تموضع العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position_offset.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم التموضع الأساسية",
+      "narration": {
+        "spoken_text": "لِتَحْرِيكِ الْعَنَاصِرِ، نَحْتَاجُ أَوَّلاً لِتَحْدِيدِ قِيمَةِ position مِثْل relative أَوْ absolute. بَعْدَهَا نَسْتَخْدِم Offset Properties مِثْل top و left لِتَحْدِيدِ الْمَسَافَه عَنْ حَافَّةِ الْحَاوِيَه.",
+        "caption_text": "نستخدم قيم position مثل relative و absolute مع خصائص الإزاحة للتحكم في مكان العنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "position: relative يغير مكان العنصر بالنسبة لمكانه الأصلي",
+          "position: absolute يغير مكانه بالنسبة لأقرب عنصر أب غير ثابت",
+          "استخدام top, bottom, left, right للضبط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position_offset.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي على الكود",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ هَذَا الْكُودَ. نَقُومُ بِتَحْدِيد position: absolute لِلْعُنْصُرِ، ثُمَّ نُعْطِيه top: 50px و left: 30px لِيَتَحَرَّكَ بِالضَّبْطِ فِي هَذِهِ الْإِحْدَاثِيَّاتِ دَاخِلَ الصَّفْحَه.",
+        "caption_text": "مثال برمجي يوضح استخدام position absolute مع قيم الإزاحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  position: absolute;\n  top: 50px;\n  left: 30px;\n  background-color: blue;\n  width: 100px;\n  height: 100px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position_offset.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "خَاصِيَّةِ top تُحَدِّدُ الْمَسَافَه مِنَ الْأَعْلَى، و left مِنَ الْيَسَارِ. إِذَا اسْتَخْدَمْنَا قيمَه سَالِبَه، سَيَتَحَرَّكُ الْعُنْصُرُ فِي الِاتِّجَاهِ الْمُعَاكِسِ، وَهَذَا يُعْطِينَا مَرُونَه كَبِيرَه فِي التَّصْمِيمِ.",
+        "caption_text": "تسمح قيم الإزاحة الموجبة والسالبة بالتحكم الدقيق في تموضع العناصر."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة",
+          "مثال"
+        ],
+        "rows": [
+          [
+            "top",
+            "الإزاحة العلوية",
+            "20px"
+          ],
+          [
+            "left",
+            "الإزاحة اليسارية",
+            "10px"
+          ],
+          [
+            "bottom",
+            "الإزاحة السفلية",
+            "5px"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position_offset.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَيَظْهَرُ الْعُنْصُرُ مُزَاحاً عَنِ الزَّاوِيَه الْعُلْيَا لِلصَّفْحَه بِمِقْدَارِ خَمْسِينَ بيكسل مِنَ الْأَعْلَى وَثَلَاثِينَ بيكسل مِنَ الْيَسَارِ، كَمَا نَرَى فِي هَذِهِ الْمُعَايَنَه.",
+        "caption_text": "نتيجة تنفيذ الكود: العنصر يظهر في الموقع المحدد بالإزاحات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "preview.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"box\">\n      محتوى العنصر\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Box element positioned at 50px top, 30px left",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position_offset.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَحْذَرَ عِنْدَ اسْتِخْدَام position: absolute، لِأَنَّهَا تُخْرِجُ الْعُنْصُرَ مِنْ تَدَفُّقِ الصَّفْحَه الطَّبِيعِيِّ. دَائِماً تَأَكَّدْ مِنْ ضَبْط position: relative لِلْعُنْصُرِ الْأَبِ لِضَمَانِ دِقَّةِ التَّمَوْضُعِ.",
+        "caption_text": "نصيحة: استخدم position relative للأب عند استخدام absolute للابن."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجنب الإفراط في استخدام absolute",
+          "استخدم relative للأب لاحتواء الابن",
+          "اختبر التصميم على أحجام شاشات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position_offset.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نَسْتَخْدِم Offsets لِتَحْرِيكِ الْعَنَاصِرِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتُتْقِنُوا هَذِهِ الْمَهَارَه.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية position و offsets",
+          "شرحنا الفرق بين relative و absolute",
+          "رابط التحدي متاح في المصادر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_position_offset.asp"
+      ]
+    }
+  ]
+}
