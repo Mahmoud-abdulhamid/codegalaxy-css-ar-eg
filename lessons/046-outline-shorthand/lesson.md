@@ -31,7 +31,6 @@ p.ex2
 {
   outline: dotted red;
 }
-
 ```
 
 ## استكمال أمثلة outline
@@ -47,7 +46,6 @@ p.ex4
 {
   outline: thick ridge pink;
 }
-
 ```
 
 ## الزوايا الدائرية مع outline
@@ -71,7 +69,6 @@ p.ex2 {
   outline: dotted red;
   border-radius: 5px;
 }
-
 ```
 
 ## أمثلة إضافية للزوايا الدائرية
@@ -83,7 +80,6 @@ p.ex5 {
   outline: thick solid green;
   border-radius: 10px;
 }
-
 ```
 
 ## خلاصة الدرس والدعوة للتجربة
