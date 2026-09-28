@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "48",
+  "title": "CSS Outline Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام خاصية outline في CSS",
+    "التمييز بين outline و border في تصميم الويب",
+    "تطبيق التحديات البرمجية لتحسين مهارات التنسيق",
+    "التعرف على خصائص outline-offset و outline-style"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_outline.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Outline",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ اسْتِخْدَامِ خَاصِيَّةِ outline فِي تَصْمِيمِ صَفَحَاتِ الْوِبّ، وَسَنَقُومُ بِحَلِّ تَحَدٍّ بَرْمَجِيٍّ لِتَعْزِيزِ مَهَارَاتِكُمْ فِي هَذَا الْمَجَالِ.",
+        "caption_text": "مرحبا بكم في درس CSS Outline. سنتعلم اليوم كيفية استخدام خاصية outline في تصميم صفحات الويب من خلال حل تحدي برمجي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية outline تستخدم لإضافة خط حول العناصر",
+          "تختلف عن border في أنها لا تشغل مساحة",
+          "تعتبر أداة هامة لتحسين تجربة المستخدم",
+          "سنقوم بحل تحدي عملي لتطبيق هذه المفاهيم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_outline.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفاهيم اساسية حول Outline",
+      "narration": {
+        "spoken_text": "خَاصِيَّةِ outline تُشْبِه border، لَكِنَّهَا لَا تُؤَثِّرُ عَلَى أَبْعَادِ الْعُنْصُرِ. نَسْتَخْدِمُهَا لِتَحْدِيدِ الْعَنَاصِرِ بِشَكْلٍ بَارِزٍ، وَيُمْكِنُنَا التَّحَكُّمُ فِي style و width و color، كَمَا يُمْكِنُنَا إِضَافَه مَسَافَه بَيْنَ الْخَطِّ وَالْعُنْصُرِ بِاسْتِخْدَام outline-offset.",
+        "caption_text": "خاصية outline تشبه border لكنها لا تؤثر على أبعاد العنصر. نستخدمها لتحديد العناصر بوضوح مع التحكم في style و width و color و outline-offset."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "outline-style: تحدد نمط الخط مثل solid أو dashed",
+          "outline-width: تحدد سمك الخط",
+          "outline-color: تحدد لون الخط",
+          "outline-offset: تضيف مسافة بين الخط والعنصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_outline.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كتابة كود CSS Outline",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ الْبَسِيطِ. نَقُومُ بِتَطْبِيق outline عَلَى عُنْصُر div. نُحَدِّدُ النَّمَطَ بِصِيغَةِ solid، وَاللَّوْنَ بِالْأَحْمَرِ، مَعَ ضَبْطِ الْعَرْضِ لِيَكُونَ خَمْسَةِ بيكسل. هَذَا يُعْطِي تَحْدِيداً وَاضِحاً لِلْعُنْصُرِ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تطبيق خاصية outline على عنصر div باستخدام النمط solid واللون الأحمر وعرض 5px."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  outline-style: solid;\n  outline-color: red;\n  outline-width: 5px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_outline.asp"
+      ]
+    },
+    {
+      "id": "offset_explanation",
+      "title": "شرح خاصية outline-offset",
+      "narration": {
+        "spoken_text": "مِنَ الْمُمَيَّزَاتِ الرَّائِعَه هِي outline-offset. هَذِهِ الْخَاصِيَّه تَسْمَحُ لَنَا بِإِبْعَادِ الْخَطِّ عَنْ حَافَّةِ الْعُنْصُرِ. لَاحِظْ كَيْفَ نَكْتُبُهَا فِي الْكُودِ لِإِضَافَه مَسَافَه بَيْنَ الْخَطِّ وَالْعُنْصُرِ، مِمَّا يُعْطِي تَصْمِيماً جَمَالِيّاً أَكْثَرَ احْتِرَافِيَّه لِعَنَاصِرِ الْوِبّ.",
+        "caption_text": "استخدام outline-offset لإضافة مسافة بين الخط وحافة العنصر لتحسين المظهر الجمالي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  outline: 2px solid blue;\n  outline-offset: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_outline.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "افضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَتَذَكَّرَ أَنَّ outline لَا تَأْخُذُ مَسَاحَه فِي الصَّفْحَه، لِذَا قَدْ تَتَدَاخَلُ مَعَ عَنَاصِرَ أُخْرَى إِذَا لَمْ نَحْذَرْ. اسْتَخْدِمْهَا بِحِكْمَه لِتَحْسِينِ إِمْكَانِيَّةِ الْوُصُولِ وَتَحْدِيدِ الْعَنَاصِرِ الَّتِي يَتَفَاعَلُ مَعَهَا الْمُسْتَخْدِمُ.",
+        "caption_text": "نصائح هامة: خاصية outline لا تشغل مساحة، لذا يجب الانتباه لتداخلها مع العناصر الأخرى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "لا تسبب إزاحة للعناصر المجاورة",
+          "مفيدة جدا لتحسين إمكانية الوصول Accessibility",
+          "تجنب استخدامها بشكل مفرط يشتت الانتباه",
+          "تأكد من تناسق الألوان مع تصميم الموقع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_outline.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمِ حَوْل CSS Outline. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُحَاوَلَةِ حَلِّ التَّحَدِّيَاتِ الْمَوْجُودَه فِي الرَّابِطِ الْمُدْرَجِ فِي الْوَصْفِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم. ندعوكم لتجربة الأكواد وحل التحديات البرمجية المتاحة في الرابط المرفق."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قم بزيارة الرابط في الوصف لحل التحدي",
+          "طبق ما تعلمته على مشاريعك الخاصة",
+          "استمر في الممارسة لتطوير مهاراتك",
+          "محمود عبدالحميد يتمنى لكم التوفيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_outline.asp"
+      ]
+    }
+  ]
+}
