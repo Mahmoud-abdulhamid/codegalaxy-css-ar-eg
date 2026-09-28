@@ -25,9 +25,15 @@ body {
 يمكن تخصيص ألوان خلفية مختلفة لكل عنصر HTML على حدة.
 
 ```css
-h1 { background-color: green; }
-div { background-color: lightblue; }
-p { background-color: yellow; }
+h1 {
+  background-color: green;
+}
+div {
+  background-color: lightblue;
+}
+p {
+  background-color: yellow;
+}
 ```
 
 ## فهم خاصية opacity
