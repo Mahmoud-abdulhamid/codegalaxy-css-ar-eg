@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "36",
+  "title": "CSS Padding and box-sizing",
+  "course": "CSS",
+  "objectives": [
+    "فهم تأثير الـ padding على عرض الـ element",
+    "التعرف على مشكلة الـ box model التقليدية",
+    "استخدام خاصية box-sizing للتحكم في أبعاد العناصر",
+    "تطبيق قيمة border-box لضمان ثبات العرض"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_padding_box-sizing.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول الـ box model",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفَ تُؤَثِّرُ خَاصِيَّةِ padding عَلَى الْعَرْضِ الْكُلِّيِّ لِلْعُنْصُرِ، وَكَيْفَ نَتَحَكَّمُ فِي ذَلِكَ بِاسْتِخْدَامِ خَاصِيَّةِ box-sizing لِتَجَنُّبِ النَّتَائِجِ غَيْرِ الْمَقْصُودَه فِي تَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد حول تأثير الـ padding على عرض العناصر وكيفية استخدام box-sizing للتحكم في أبعادها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهم كيفية حساب عرض الـ element",
+          "تأثير الـ padding على الـ box model",
+          "حل مشكلة زيادة العرض غير المتوقعة",
+          "استخدام box-sizing للتحكم الدقيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "problem_explanation",
+      "title": "مشكلة الـ padding مع الـ width",
+      "narration": {
+        "spoken_text": "فِي CSS، خَاصِيَّةِ width تُحَدِّدُ عَرْضَ مَنْطِقَةِ الْمُحْتَوَى. لَكِنْ إِذَا أَضَفْت padding، فَإِنَّهُ يُضَافُ إِلَى الْعَرْضِ الْكُلِّيِّ لِلْعُنْصُرِ. هَذَا يَعْنِي أَنَّ الْعُنْصُرَ سَيَكُونُ أَعْرَضَ مِمَّا حَدَّدْتَهُ، وَهَذَا غَالِباً مَا يَكُونُ أَمْراً غَيْرَ مُرَادٍ فِي التَّصْمِيمِ.",
+        "caption_text": "تؤدي إضافة الـ padding إلى زيادة العرض الكلي للعنصر، مما قد يؤدي إلى نتائج غير مرغوبة في التصميم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "width تحدد منطقة المحتوى فقط",
+          "الـ padding يضاف إلى العرض الكلي",
+          "النتيجة: عرض العنصر يصبح أكبر من المحدد",
+          "هذا السلوك جزء من الـ box model"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "مثال على زيادة العرض",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ. لَدَيْنَا div بِعَرْضِ 300px و padding بِقِيمَةِ 25px مِنْ كُلِّ جَانِبٍ. الْعَرْضُ الْفِعْلِيُّ لِلْعُنْصُرِ سَيُصْبِحُ 350px، لِأَنَّنَا نَجْمَعُ الْعَرْضَ الْأَصْلِيَّ مَع padding الْأَيْمَنِ وَالْأَيْسَرِ.",
+        "caption_text": "في هذا المثال، يصبح العرض الفعلي للـ div هو 350px بدلا من 300px بسبب الـ padding."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 300px;\n  padding: 25px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "box_sizing_concept",
+      "title": "استخدام خاصية box-sizing",
+      "narration": {
+        "spoken_text": "لِحَلِّ هَذِهِ الْمُشْكِلَه، نَسْتَخْدِمُ خَاصِيَّةِ box-sizing. عِنْدَمَا نَضْبُطُهَا عَلَى border-box، فَإِنَّ الْمُتَصَفِّحْ يَحْسِب padding و border ضِمْنَ الْعَرْضِ الْمُحَدَّدِ، وَلَيْسَ كَإِضَافَه خَارِجِيَّه. هَذَا يَجْعَلُ التَّصْمِيمَ أَكْثَرَ ثَبَاتاً وَسُهُولَه.",
+        "caption_text": "خاصية box-sizing بقيمة border-box تجعل الـ padding والـ border جزءا من العرض الكلي المحدد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "box-sizing تتحكم في حساب الأبعاد",
+          "القيمة border-box هي الحل الأمثل",
+          "تحافظ على العرض المحدد 300px",
+          "يقلل مساحة المحتوى عند زيادة الـ padding"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "code_example_2",
+      "title": "تطبيق box-sizing: border-box",
+      "narration": {
+        "spoken_text": "الْآنَ، بَعْدَ إِضَافَةِ box-sizing: border-box، سَيَحْتَفِظ div بِعَرْضِهِ الثَّابِتِ 300px مَهْمَا كَانَتْ قِيمَةِ padding. هَذِهِ هِيَ الطَّرِيقَه الْأَفْضَلُ لِضَمَانِ دِقَّةِ التَّصْمِيمِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "باستخدام box-sizing: border-box، يظل العرض ثابتا عند 300px مهما تغيرت قيمة الـ padding."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 300px;\n  padding: 25px;\n  box-sizing: border-box;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، تَعَلَّمْنَا أَنَّ padding يُؤَثِّرُ عَلَى الْعَرْضِ الْكُلِّيِّ لِلْعُنْصُرِ، وَأَنَّ اسْتِخْدَام box-sizing: border-box هُوَ الْمِعْيَارُ الْأَفْضَلُ لِتَجَنُّبِ هَذِهِ الْمَشَاكِلِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا النَّتَائِجَ مُبَاشَرَه.",
+        "caption_text": "تذكر دائما استخدام box-sizing: border-box للتحكم الدقيق في أبعاد عناصرك وتجنب مشاكل الـ box model."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ padding يغير العرض الكلي افتراضيا",
+          "استخدم box-sizing: border-box دائما",
+          "حافظ على ثبات أبعاد العناصر",
+          "جرب الكود بنفسك عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_padding_box-sizing.asp"
+      ]
+    }
+  ]
+}
