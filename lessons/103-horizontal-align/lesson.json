@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "103",
+  "title": "CSS Horizontal Alignment Techniques",
+  "course": "CSS",
+  "objectives": [
+    "Understand how to center block-level elements using margin auto",
+    "Learn to center text content with text-align",
+    "Master image alignment techniques",
+    "Explore positioning and float for horizontal alignment"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_align_horizontal.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في محاذاة العناصر أفقيا",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ ضَبْطِ الْمُحَاذَاه الْأُفُقِيَّه لِلْعَنَاصِرِ بِمُخْتَلَفِ أَنْوَاعِهَا، وَهِيَ مَهَارَه أَسَاسِيَّه لِتَنْسِيقِ صَفْحَاتِ الْوِبّ بِشَكْلٍ احْتِرَافِيٍّ وَمُنَظَّمٍ.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد حول تقنيات المحاذاة الأفقية للعناصر في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعدد طرق المحاذاة حسب نوع العنصر",
+          "استخدام margin و text-align",
+          "التحكم في المواقع باستخدام position و float"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_horizontal.asp"
+      ]
+    },
+    {
+      "id": "block-elements",
+      "title": "محاذاة العناصر من نوع Block",
+      "narration": {
+        "spoken_text": "لِمُحَاذَاه عُنْصُرٍ مِنْ نَوْع block-level مِثْل div، نَسْتَخْدِمُ الْخَاصِّيَّه margin بِقِيمَةِ auto. يَجِبُ أَنْ نُحَدِّدَ أَيْضاً width لِلْعُنْصُرِ لِمَنْعِهِ مِنَ التَّمَدُّدِ لِكَامِلِ عَرْضِ الْحَاوِيَه، وَإِلَّا لَنْ نَرَى أَيَّ تَأْثِيرٍ لِلْمُحَاذَاه.",
+        "caption_text": "نستخدم margin: auto مع تحديد width لعناصر block-level لضمان توسيطها أفقيا داخل الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".center {\n  margin: auto;\n  width: 50%;\n  border: 3px solid green;\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_horizontal.asp"
+      ]
+    },
+    {
+      "id": "text-align",
+      "title": "توسيط النصوص داخل العناصر",
+      "narration": {
+        "spoken_text": "أَمَّا إِذَا أَرَدْنَا تَوَسِيطَ النُّصُوصِ دَاخِلَ عُنْصُرٍ، فَنَسْتَخْدِمُ الْخَاصِّيَّه text-align بِقِيمَةِ center. هَذِهِ الْخَاصِّيَّه تُؤَثِّرُ عَلَى الْمُحْتَوَى النَّصِّيِّ دَاخِلَ الْعُنْصُرِ وَلَيْسَ عَلَى الْعُنْصُرِ نَفْسِهِ، وَهِيَ طَرِيقَه بَسِيطَه وَفَعَّالَه جِدّاً.",
+        "caption_text": "تستخدم الخاصية text-align: center لتوسيط النصوص داخل العناصر الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_horizontal.asp"
+      ]
+    },
+    {
+      "id": "image-align",
+      "title": "محاذاة الصور",
+      "narration": {
+        "spoken_text": "لِمُحَاذَاةِ الصُّورِ، نَحْتَاجُ أَوَّلاً لِتَحْوِيلِ الْعُنْصُر img إِلَى block عَنْ طَرِيق display: block، ثُمَّ نَضْبِط margin-left و margin-right عَلَى auto. بِهَذِهِ الطَّرِيقَه، سَتَتَمَرْكَزُ الصُّورَه فِي مُنْتَصَفِ الْحَاوِيَه بِسُهُولَه.",
+        "caption_text": "لتوسيط الصور، يجب تحويلها إلى block ثم استخدام margin-left و margin-right بقيمة auto."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 40%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_horizontal.asp"
+      ]
+    },
+    {
+      "id": "position-absolute",
+      "title": "المحاذاة باستخدام position",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً اسْتِخْدَام position: absolute لِمُحَاذَاةِ الْعَنَاصِرِ إِلَى الْيَمِينِ أَوْ الْيَسَارِ. لَاحِظْ أَنَّ الْعَنَاصِرَ الْمُعَرَّفَه بِهَذِهِ الطَّرِيقَه تَخْرُجُ عَنِ التَّدَفُّقِ الطَّبِيعِيِّ لِلصَّفْحَه، وَقَدْ تَتَدَاخَلُ مَعَ عَنَاصِرَ أُخْرَى، لِذَا يَجِبُ اسْتِخْدَامُهَا بِحَذَرٍ.",
+        "caption_text": "استخدام position: absolute يتيح وضع العناصر في أماكن محددة، لكنه يخرجها من التدفق الطبيعي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".right {\n  position: absolute;\n  right: 0px;\n  width: 300px;\n  border: 3px solid green;\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_horizontal.asp"
+      ]
+    },
+    {
+      "id": "float-align",
+      "title": "المحاذاة باستخدام float",
+      "narration": {
+        "spoken_text": "الطَّرِيقَه الْأَخِيرَه هِيَ اسْتِخْدَامُ الْخَاصِّيَّه float. عِنْدَ ضَبْط float عَلَى right، سَيَنْزَاحُ الْعُنْصُرُ إِلَى جِهَةِ الْيَمِينِ. هَذِهِ الطَّرِيقَه كَانَتْ شَائِعَه جِدّاً فِي تَصْمِيمِ التَّخْطِيطَاتِ قَبْلَ ظُهُورِ تَقْنِيَاتٍ أَحْدَثَ مِثْل Flexbox.",
+        "caption_text": "تستخدم الخاصية float: right لإزاحة العناصر إلى جهة اليمين داخل الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".right {\n  float: right;\n  width: 300px;\n  border: 3px solid green;\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_horizontal.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَرَّفْنَا الْيَوْمَ عَلَى طُرُقٍ مُتَعَدِّدَه لِلْمُحَاذَاه الْأُفُقِيَّه فِي CSS. اخْتَرِ الطَّرِيقَه الْمُنَاسِبَه لِكُلِّ حَالَه، وَجَرِّبِ الْأَكْوَادَ بِنَفْسِكَ لِتَرَى النَّتَائِجَ. شُكْراً لِمُتَابَعَتِكُمْ، وَأَلْقَاكُمْ فِي الدَّرْسِ الْقَادِمِ مَعَ مَهَارَاتٍ جَدِيدَه.",
+        "caption_text": "تعلمنا اليوم طرقا متنوعة للمحاذاة الأفقية. جربوا هذه الأكواد بأنفسكم لتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم margin: auto للعناصر block",
+          "استخدم text-align للنصوص",
+          "استخدم display: block للصور",
+          "استخدم position و float للتحكم المتقدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_align_horizontal.asp"
+      ]
+    }
+  ]
+}
