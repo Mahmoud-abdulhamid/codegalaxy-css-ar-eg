@@ -35,9 +35,15 @@
 لاحظ هذا المثال، حيث نقوم بكتابة نفس التنسيقات لـ h1 و h2 و p. هذا الأسلوب يؤدي إلى زيادة حجم الكود دون داع.
 
 ```css
-h1 { text-align: center; color: red; }
-h2 { text-align: center; color: red; }
-p { text-align: center; color: red; }
+h1 {
+  text-align: center; color: red;
+}
+h2 {
+  text-align: center; color: red;
+}
+p {
+  text-align: center; color: red;
+}
 ```
 
 ## الكود بعد التجميع
