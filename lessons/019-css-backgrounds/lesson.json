@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "19",
+  "title": "CSS Backgrounds and Transparency",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام background-color لتلوين العناصر",
+    "التعرف على خاصية opacity للتحكم في الشفافية",
+    "تعلم استخدام RGBA لتحديد شفافية الخلفية دون التأثير على المحتوى"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_background.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Backgrounds",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ إِضَافَةِ تَأْثِيرَاتِ الْخَلْفِيَّه لِلْعَنَاصِرِ بِاسْتِخْدَامِ خَصَائِص CSS الْمُتَنَوِّعَه لِتَحْسِينِ مَظْهَرِ صَفْحَاتِ الْوِبّ.",
+        "caption_text": "تستخدم خصائص CSS Backgrounds لإضافة تأثيرات بصرية جذابة لعناصر صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في ألوان الخلفية باستخدام background-color",
+          "ضبط الشفافية باستخدام خاصية opacity",
+          "استخدام قيم RGBA للتحكم الدقيق في شفافية الخلفية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background.asp"
+      ]
+    },
+    {
+      "id": "background-color",
+      "title": "استخدام background-color",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ لَوْنِ خَلْفِيَّه أَيِّ عُنْصُرٍ، نَسْتَخْدِمُ خَاصِيَّةِ background-color. لَاحِظْ هَذَا الْكُودَ لِتَطْبِيقِ لَوْنٍ عَلَى عُنْصُر body، حَيْثُ نُحَدِّدُ الْقِيمَه lightblue لِتَظْهَرَ كَخَلْفِيَّه لِلصَّفْحَه بِالْكَامِلِ.",
+        "caption_text": "تحدد خاصية background-color اللون الخاص بخلفية العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-color: lightblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background.asp"
+      ]
+    },
+    {
+      "id": "multiple-elements",
+      "title": "تطبيق الألوان على عناصر مختلفة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَطْبِيقُ أَلْوَانٍ مُخْتَلِفَه عَلَى عَنَاصِرَ مُتَعَدِّدَه مِثْل h1 و p و div. كُلُّ عُنْصُرٍ يُمْكِنُهُ امْتِلَاكُ خَلْفِيَّه مُسْتَقِلَّه تُمَيِّزُهُ عَنْ بَقِيَّةِ الْعَنَاصِرِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "يمكن تخصيص ألوان خلفية مختلفة لكل عنصر HTML على حدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 { background-color: green; }\ndiv { background-color: lightblue; }\np { background-color: yellow; }",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background.asp"
+      ]
+    },
+    {
+      "id": "opacity-concept",
+      "title": "فهم خاصية opacity",
+      "narration": {
+        "spoken_text": "خَاصِيَّةِ opacity تَسْمَحُ لَنَا بِتَحْدِيدِ شَفَافِيَّةِ الْعُنْصُرِ بِقِيمَه تَتَرَاوَحُ بَيْنَ صِفْرٍ وَوَاحِدٍ. كُلَّمَا قَلَّتِ الْقِيمَه، زَادَتْ شَفَافِيَّةِ الْعُنْصُرِ وَمَا بِدَاخِلِهِ مِنْ نُصُوصٍ أَوْ عَنَاصِرَ أُخْرَى.",
+        "caption_text": "تتحكم خاصية opacity في شفافية العنصر بالكامل بما في ذلك محتوياته."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  background-color: green;\n  opacity: 0.3;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background.asp"
+      ]
+    },
+    {
+      "id": "rgba-transparency",
+      "title": "الشفافية باستخدام RGBA",
+      "narration": {
+        "spoken_text": "لِتَجَنُّبِ شَفَافِيَّةِ النُّصُوصِ دَاخِلَ الْعُنْصُرِ، نَسْتَخْدِمُ قِيمَةِ RGBA. هَذِهِ الطَّرِيقَه تُتِيحُ لَنَا تَحْدِيدَ شَفَافِيَّةِ الْخَلْفِيَّه فَقَطْ دُونَ التَّأْثِيرِ عَلَى وُضُوحِ النَّصِّ الْمَوْجُودِ دَاخِلَ الْعُنْصُرِ.",
+        "caption_text": "تسمح قيم RGBA بضبط شفافية الخلفية فقط دون التأثير على شفافية النص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  background: rgba(0, 128, 0, 0.3);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، تَذَكَّرُوا أَنَّ اسْتِخْدَام opacity يُؤَثِّرُ عَلَى كُلِّ مَا بِدَاخِلِ الْعُنْصُرِ، بَيْنَمَا RGBA هِيَ الْخِيَارُ الْأَفْضَلُ لِتَصْمِيمِ خَلْفِيَّاتٍ شَفَّافَه مَعَ الْحِفَاظِ عَلَى قَابِلِيَّةِ قِرَاءَةِ النُّصُوصِ بِوُضُوحٍ.",
+        "caption_text": "استخدم RGBA بدلا من opacity عندما ترغب في شفافية الخلفية فقط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "opacity تؤثر على العنصر وجميع أبنائه",
+          "RGBA توفر تحكما مستقلا لشفافية اللون",
+          "استخدم CSS Color Values لاختيار الألوان المناسبة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمِ حَوْلَ خَلْفِيَّات CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا التَّأْثِيرَاتِ بِأَعْيُنِكُمْ.",
+        "caption_text": "جرب الأكواد بنفسك لتطوير مهاراتك في تصميم صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجع توثيق CSS Backgrounds",
+          "طبق الأمثلة في محرر الأكواد",
+          "استمر في التعلم مع CodeGalaxy"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background.asp"
+      ]
+    }
+  ]
+}
