@@ -22,6 +22,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>CSS Links</title>
   </head>
   <body>
@@ -52,9 +53,15 @@ a:hover {
 النتيجة النهائية هي زر تفاعلي يتغير لونه عند التفاعل معه.
 
 ```html
-<a href="#" style="background: blue; color: white; padding: 10px;">
-  رابط تفاعلي
-</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <a href="#" style="background: blue; color: white; padding: 10px;">رابط تفاعلي</a>
+  </body>
+</html>
 ```
 
 ## أفضل الممارسات
