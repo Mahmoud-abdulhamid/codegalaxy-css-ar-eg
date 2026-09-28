@@ -64,7 +64,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "h1 { background-color: green; }\ndiv { background-color: lightblue; }\np { background-color: yellow; }",
+        "code": "h1 {\n  background-color: green;\n}\ndiv {\n  background-color: lightblue;\n}\np {\n  background-color: yellow;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
