@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "77",
+  "title": "CSS Table Alignment",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية محاذاة المحتوى أفقيا داخل عناصر الجداول في HTML",
+    "استخدام property واسمها text-align لمحاذاة النصوص داخل th و td",
+    "التعرف على المحاذاة الرأسية باستخدام vertical-align وتحديد الارتفاع"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_table_align.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة محاذاة الجداول في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS لِتَعَلُّمِ مُحَاذَاةِ مُحْتَوَى الْجَدَاوِلِ. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَنْسِيقِ الْحَرَكَاتِ الْأُفُقِيَّه وَالرَّأْسِيَّه لِلْعَنَاصِرِ دَاخِلَ الْجَدَاوِلِ.",
+        "caption_text": "مرحبا بكم في درس محاذاة محتوى الجداول باستخدام خصائص CSS المختلفة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على محاذاة الجداول في CSS",
+          "فهم خصائص المحاذاة الأفقية والرأسية",
+          "تطبيق القواعد على عناصر th و td"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_align.asp"
+      ]
+    },
+    {
+      "id": "scene_2_horizontal_alignment",
+      "title": "المحاذاة الأفقية باستخدام text-align",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِالْمُحَاذَاه الْأُفُقِيَّه حَيْثُ نَسْتَخْدِم property وَاسْمُهَا text-align لِتَحْدِيدِ اتِّجَاهِ النَّصِّ فِي th أَوْ td. وَبِالشَّكْلِ الِافْتِرَاضِيِّ، يَكُونُ مُحْتَوَى th فِي الْوَسَطِ بَيْنَمَا مُحْتَوَى td يَكُونُ إِلَى الْيَسَارِ.",
+        "caption_text": "تستخدم خاصية text-align لتحديد المحاذاة الأفقية للنصوص في عناصر th أو td."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام property باسم text-align",
+          "المحتوى الافتراضي لـ th في المنتصف",
+          "المحتوى الافتراضي لـ td نحو اليسار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_align.asp"
+      ]
+    },
+    {
+      "id": "scene_3_center_align_code",
+      "title": "توسيط محتوى td بالعرض",
+      "narration": {
+        "spoken_text": "لِتَوْسِيطِ مُحْتَوَى عَنَاصِر td بَدَلًا مِنَ الْيَسَارِ، نَكْتُبُ الْكُودَ التَّالِي لِجْعِلِ النَّصِّ فِي الْمُنْتَصَفِ تَمَاماً دَاخِلَ جَدَاوِلِ الْوِبّ، عَبْرَ إِسْنَادِ قِيمَةِ center.",
+        "caption_text": "نستخدم text-align: center لتوسيط محتوى عناصر td أفقيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "td\n{\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": "يظهر النص داخل خلايا td في منتصف الجدول أفقياً.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_align.asp"
+      ]
+    },
+    {
+      "id": "scene_4_left_align_th",
+      "title": "جعل محاذاة th إلى اليسار",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْنَا فَرْضَ مُحَاذَاةِ النَّصِّ فِي عَنَاصِر th إِلَى الْيَسَارِ، نَسْتَخْدِم text-align مَعَ قِيمَةِ left؛ لِتَغْيِيرِ السُّلُوكِ الِافْتِرَاضِيِّ الَّذِي يَجْعَلُهَا مَرْكَزِيَّه دَائِماً.",
+        "caption_text": "يمكننا إجبار عناصر th على المحاذاة نحو اليسار باستخدام text-align: left."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "th\n{\n  text-align: left;\n}",
+        "highlight_lines": [],
+        "output": "تظهر عناوين الجدول في th محاذاة نحو اليسار تماماً.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_align.asp"
+      ]
+    },
+    {
+      "id": "scene_5_vertical_alignment_intro",
+      "title": "المحاذاة الرأسية باستخدام vertical-align",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى الْمُحَاذَاه الرَّأْسِيَّه عَبْرَ اسْتِخْدَام property وَاسْمُهَا vertical-align. هَذِهِ الْخَاصِّيَّه تَضْبِطُ تَمَوْضُعَ النَّصِّ رَأْسِيّاً مِثْل top أَوْ bottom أَوْ middle فِي الْجَدَاوِلِ.",
+        "caption_text": "تتحكم خاصية vertical-align بالمحاذاة الرأسية للنصوص مثل أعلى أو أسفل أو منتصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم بالمحاذاة الرأسية عبر vertical-align",
+          "القيم المتاحة تشمل top و bottom و middle",
+          "الوضع الافتراضي للمحاذاة الرأسية هو middle"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_align.asp"
+      ]
+    },
+    {
+      "id": "scene_6_vertical_align_code",
+      "title": "تطبيق vertical-align bottom",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نُحَدِّدُ ارْتِفَاعَ الخليَه بِخَمْسِين pixels ثُمَّ نَسْتَخْدِم vertical-align مَعَ قِيمَةِ bottom؛ لِيَسْتَقِرَّ النَّصُّ فِي أَسْفَلِ الخليَه بَدَلَ التَّمَوْضُعِ الْوَسَطِيِّ الِافْتِرَاضِيِّ.",
+        "caption_text": "نحدد ارتفاع الخلايا ونطبق vertical-align: bottom لجعل النص في أسفل الخلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "td\n{\n  height: 50px;\n  vertical-align: bottom;\n}",
+        "highlight_lines": [],
+        "output": "يستقر النص في أسفل خلايا الجدول بناءً على الارتفاع المحدد.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_align.asp"
+      ]
+    },
+    {
+      "id": "scene_7_summary_and_outro",
+      "title": "خلاصة درس محاذاة الجداول",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةِ التَّحَكُّمِ التَّامِّ بِالْمُحَاذَاه الأفقيَه والرأسيَه لِعَنَاصِرِ الْجَدَاوِلِ بِاسْتِخْدَام text-align وَvertical-align. نَتَمَنَّى لَكُمُ التَّوْفِيقَ وَنَنْتَظِرُكُمْ فِي الدَّرْسِ الْقَادِمِ مَعَ مُمَارَسَةِ الْمَزِيدِ مِنَ الْأَكْوَادِ.",
+        "caption_text": "خلاصة شاملة لخصائص المحاذاة الأفقية والرأسية في جداول CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام text-align للمحاذاة الأفقية",
+          "استخدام vertical-align للمحاذاة الرأسية",
+          "تخصيص العرض والارتفاع لخلايا الجدول"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_align.asp"
+      ]
+    }
+  ]
+}
