@@ -26,7 +26,6 @@
 p.normal {
   font-style: normal;
 }
-
 p.italic {
   font-style: italic;
 }
@@ -48,7 +47,6 @@ p.italic {
 p.thick {
   font-weight: bold;
 }
-
 p.thicker {
   font-weight: 900;
 }
@@ -70,7 +68,6 @@ p.thicker {
 p.normal {
   font-variant: normal;
 }
-
 p.small {
   font-variant: small-caps;
 }
