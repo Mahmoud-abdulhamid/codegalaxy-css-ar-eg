@@ -24,12 +24,16 @@
 نستخدم خاصية background-color لتغيير لون خلفية العناصر مثل h1 و p.
 
 ```html
-<h1 style="background-color:DodgerBlue;">
-  Hello World
-</h1>
-<p style="background-color:Tomato;">
-  Lorem ipsum...
-</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1 style="background-color:DodgerBlue;">Hello World</h1>
+    <p style="background-color:Tomato;">Lorem ipsum...</p>
+  </body>
+</html>
 ```
 
 ## تغيير لون النصوص
@@ -37,13 +41,17 @@
 تستخدم خاصية color لتغيير لون النصوص داخل العناصر المختلفة.
 
 ```html
-<h1 style="color:Tomato;">Hello</h1>
-<p style="color:DodgerBlue;">
-  Lorem ipsum...
-</p>
-<p style="color:MediumSeaGreen;">
-  Ut wisi enim...
-</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1 style="color:Tomato;">Hello</h1>
+    <p style="color:DodgerBlue;">Lorem ipsum...</p>
+    <p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+  </body>
+</html>
 ```
 
 ## تلوين الحدود
@@ -51,12 +59,16 @@
 يمكن تلوين حدود العناصر باستخدام خاصية border مع تحديد السمك والنوع واللون.
 
 ```html
-<h1 style="border:2px solid Tomato;">
-  Hello World
-</h1>
-<h1 style="border:2px solid DodgerBlue;">
-  Hello World
-</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1 style="border:2px solid Tomato;">Hello World</h1>
+    <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+  </body>
+</html>
 ```
 
 ## قيم الألوان المتقدمة
