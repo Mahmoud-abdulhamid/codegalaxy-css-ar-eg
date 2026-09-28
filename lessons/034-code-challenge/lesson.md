@@ -27,7 +27,6 @@ div {
   margin: 20px;
   border: 1px solid black;
 }
-
 p {
   margin-top: 10px;
 }
@@ -46,9 +45,17 @@ p {
 تظهر المعاينة المرئية المسافات المطبقة التي تمنح التصميم مظهرا احترافيا.
 
 ```html
-<div>
-  <p>هذا العنصر يحتوي على margin</p>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div>
+      <p>هذا العنصر يحتوي على margin</p>
+    </div>
+  </body>
+</html>
 ```
 
 ## أفضل الممارسات
