@@ -15,8 +15,7 @@
 يقوم element selector باختيار عناصر HTML بناء على اسم العنصر.
 
 ```css
-p
-{
+p {
   text-align: center;
   color: red;
 }
@@ -27,8 +26,7 @@ p
 يستخدم id selector لاستهداف عنصر واحد فريد باستخدام خاصية id.
 
 ```css
-#para1
-{
+#para1 {
   text-align: center;
   color: red;
 }
