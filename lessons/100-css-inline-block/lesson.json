@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "100",
+  "title": "CSS display inline-block",
+  "course": "CSS",
+  "objectives": [
+    "Understand the features of CSS display inline-block property",
+    "Compare inline, block, and inline-block behaviors",
+    "Build a horizontal navigation menu using CSS",
+    "Apply width, height, and margin properties correctly"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_inline-block.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن CSS display inline-block",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ display inline-block وَكَيْفَ تَدْمُجُ بَيْنَ خَصَائِص inline و block لِتَحْكُمٍ أَقْوَى فِي تَصْمِيمِ صَفَحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد حول خاصية CSS display inline-block وكيفية دمج ميزات العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دورة تطوير الويب الاحترافية",
+          "فهم خصائص CSS display",
+          "الدمج بين inline و block"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inline-block.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "مفهوم inline-block الأساسي",
+      "narration": {
+        "spoken_text": "عُنْصُرٌ يَمْتَلِك display inline-block يَظْهَرُ عَلَى نَفْسِ السَّطْرِ مِثْلَ عناصر inline. وَلَكِنَّهُ يُمَكِّنُنَا مِنْ تَحْدِيد width و height و margin-top و margin-bottom تَمَاماً مِثْلَ عناصر block.",
+        "caption_text": "يظهر عنصر inline-block على نفس السطر مع السماح بتعديل العرض والارتفاع والهوامش."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الظهور على نفس السطر الأفقي",
+          "إمكانية تعيين العرض والارتفاع",
+          "التحكم الكامل في الهوامش العلوية والسفلية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inline-block.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "مثال مقارنة العرض والسلوك البرمجي",
+      "narration": {
+        "spoken_text": "لَاحِظْ مَعِي فِي هَذَا الكود كَيْفَ نُطَبِّق display inline عَلَى span.a وَdisplay inline-block عَلَى span.b وَdisplay block عَلَى span.c لِنَرَى الفروق الواضحَه في التنسيق.",
+        "caption_text": "شرح الكود البرمجي لمقارنة سلوك inline و inline-block و block."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "span.a {\n  display: inline;\n  padding: 5px;\n  border: 2px solid red;\n}\nspan.b {\n  display: inline-block;\n  width: 100px;\n  height: 35px;\n  padding: 5px;\n  border: 2px solid red;\n}",
+        "highlight_lines": [],
+        "output": "يظهر العنصر أ على السطر بمرونة، بينما يلتزم العنصر ب بأبعاده المحددة مع بقائه أفقياً.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inline-block.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "استكمال كود العنصر الثالث block",
+      "narration": {
+        "spoken_text": "نُتَابِعُ فِي الكود مَع span.c حَيْثُ نَسْتَخْدِم display block مَعَ تَحْدِيد width و height لِيُوَضِّحَ الْفَرْقَ الْجَوْهَرِيَّ فِي الانتقال لِسَطْرٍ جَدِيدٍ وَشَغْلِ الْعَرْضِ كَامِلاً.",
+        "caption_text": "توضيح العنصر الثالث باستخدام display block."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "span.c {\n  display: block;\n  width: 100px;\n  height: 35px;\n  padding: 5px;\n  border: 2px solid red;\n}",
+        "highlight_lines": [],
+        "output": "ينتقل العنصر ج إلى سطر جديد بالكامل نظراً لخصائص block.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inline-block.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "بناء قائمة التنقل الأفقية",
+      "narration": {
+        "spoken_text": "مِنْ أَهْمِ الِاسْتِخْدَامَاتِ العَمَلِيَّه لِخَاصِيَّةِ display inline-block هُوَ بِنَاءُ قَائِمَه تَنَقُّلٍ أُفُقِيَّهsetHorizontal Navigation Menu لِعَرْضِ عناصر القائمَه بجوار بعضها.",
+        "caption_text": "استخدام display inline-block لإنشاء قائمة تنقل أفقية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحويل القوائم الرأسية إلى أفقية",
+          "تنظيم الروابط في الموقع الإلكتروني",
+          "استخدام list-style-type و padding"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inline-block.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "كود قائمة التنقل الأفقية",
+      "narration": {
+        "spoken_text": "نَكْتُبُ الْآنَ كود CSS لِتَنْسِيقِ الْقَائِمَه nav وَتَبْسِيطِ عناصر li بِاسْتِخْدَام display inline-block لِضَمَانِ ظُهُورِهِمَا أَفْقِيّاً بِشَكْلٍ جَمَالِيٍّ رَائِعٍ.",
+        "caption_text": "كود CSS لإنشاء قائمة التنقل الأفقية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "nav.css",
+        "code": ".nav {\n  background-color: lightgray;\n  list-style-type: none;\n  padding: 0;\n  margin: 0;\n}\n.nav li {\n  display: inline-block;\n  font-size: 18px;\n  padding: 15px;\n}",
+        "highlight_lines": [],
+        "output": "تظهر عناصر القائمة أفقياً بخلفية رمادية فاتحة وهوامش منسقة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inline-block.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "أفضل الممارسات والنصائح الهندسية",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَام display inline-block، انْتَبِهْ دَائِماً إلى المسافات الفارغَه بين العناصر في ملف HTML، حَيْثُ قَدْ تُؤَثِّرُ على التنسيق الأُفُقِيِّ، وَيُمْكِنُ مُعَالَجَتُهَا بِطُرُق CSS المختلفَه.",
+        "caption_text": "أفضل الممارسات للتعامل مع المسافات بين عناصر inline-block."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الإنتباه لمسافات الفراغات بين Tags",
+          "التحكم الدقيق في التخطيط والتصميم",
+          "اختبار التجاوب على مختلف الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inline-block.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس ودعوة للتطبيق",
+      "narration": {
+        "spoken_text": "إِلَى هُنَا يَا أَصْدِقَائِي نَكُونُ قَدْ أَتْمَمْنَا شَرْحَ خَاصِيَّةِ display inline-block بِالتَّفْصِيلِ. نَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَدِ بِأَنْفُسِكُمْ مِنْ خِلَالِ الرَّابِطِ فِي الْوَصْفِ مَعَ الْمُدَرِّبِ مَحْمُودِ عَبْدِالْحَمِيدِ.",
+        "caption_text": "خلاصة الدرس ودعوة لتجربة الأكواد البرمجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص شامل لقوة inline-block",
+          "تطبيق عملي لتصميم القوائم",
+          "تابعوا دورة CSS على CodeGalaxy"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inline-block.asp"
+      ]
+    }
+  ]
+}
