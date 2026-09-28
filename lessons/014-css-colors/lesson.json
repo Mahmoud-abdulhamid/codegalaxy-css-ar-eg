@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "14",
+  "title": "CSS Colors",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تحديد الألوان في CSS",
+    "استخدام أسماء الألوان القياسية",
+    "تطبيق الألوان على الخلفيات والنصوص والحدود",
+    "التعرف على قيم الألوان المتقدمة مثل RGB و HEX"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_colors.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Colors",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ إِضَافَةِ الْأَلْوَانِ إِلَى صَفَحَاتِ الْوِبّ. تُعَدُّ الْأَلْوَانُ عُنْصُراً جَوْهَرِيّاً فِي تَصْمِيمِ وَتَجْمِيلِ الْمُحْتَوَى لِتَجْذِبَ انْتِبَاهَ الْمُسْتَخْدِمِ بِشَكْلٍ احْتِرَافِيٍّ وَمُمَيَّزٍ.",
+        "caption_text": "تعد الألوان عنصرا جوهريا في تصميم وتجميل محتوى صفحات الويب وجذب انتباه المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد الألوان باستخدام الأسماء",
+          "استخدام قيم RGB و HEX و HSL",
+          "تطبيق الألوان على الخلفيات والنصوص",
+          "التحكم في شفافية الألوان"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors.asp"
+      ]
+    },
+    {
+      "id": "color-names",
+      "title": "استخدام أسماء الألوان",
+      "narration": {
+        "spoken_text": "تُوَفِّرُ لُغَةِ CSS مِئَه وَأَرْبَعِينَ اسْماً قِيَاسِيّاً لِلْأَلْوَانِ يُمْكِنُ اسْتِخْدَامُهَا مُبَاشَرَه. هَذِهِ الطَّرِيقَه هِيَ الْأَبْسَطُ لِتَحْدِيدِ لَوْنٍ مُعَيَّنٍ دَاخِلَ خَصَائِص CSS مِثْل background-color أَوْ color أَوْ border.",
+        "caption_text": "توفر لغة CSS مئة وأربعين اسما قياسيا للألوان يمكن استخدامها مباشرة في خصائص CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام أسماء الألوان مثل Tomato و DodgerBlue",
+          "سهولة القراءة والفهم للمطورين",
+          "دعم كامل في جميع متصفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors.asp"
+      ]
+    },
+    {
+      "id": "background-color",
+      "title": "تطبيق لون الخلفية",
+      "narration": {
+        "spoken_text": "لِتَطْبِيقِ لَوْنٍ عَلَى خَلْفِيَّه عُنْصُرٍ مَا، نَسْتَخْدِمُ خَاصِيَّةِ background-color. لَاحِظْ مَعِي هَذَا الْكُودَ حَيْثُ نَقُومُ بِتَحْدِيدِ لَوْنٍ لِعُنْصُر h1 وَعُنْصُر p بِاسْتِخْدَامِ قِيمَةِ style مُبَاشَرَه دَاخِل Tag.",
+        "caption_text": "نستخدم خاصية background-color لتغيير لون خلفية العناصر مثل h1 و p."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<h1 style=\"background-color:DodgerBlue;\">\n  Hello World\n</h1>\n<p style=\"background-color:Tomato;\">\n  Lorem ipsum...\n</p>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors.asp"
+      ]
+    },
+    {
+      "id": "text-color",
+      "title": "تغيير لون النصوص",
+      "narration": {
+        "spoken_text": "لِتَغْيِيرِ لَوْنِ النَّصِّ نَفْسِهِ، نَسْتَخْدِمُ خَاصِيَّةِ color. هَذِهِ الْخَاصِيَّه تُؤَثِّرُ عَلَى لَوْنِ الْخُطُوطِ دَاخِلَ الْعَنَاصِرِ، وَيُمْكِنُكَ مُلَاحَظَه كَيْفَ نَقُومُ بِتَغْيِيرِ أَلْوَانِ عِدَّةِ عَنَاصِرَ بِاسْتِخْدَامِ قِيَمٍ مُخْتَلِفَه لِتَحْسِينِ التَّبَايُنِ.",
+        "caption_text": "تستخدم خاصية color لتغيير لون النصوص داخل العناصر المختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<h1 style=\"color:Tomato;\">Hello</h1>\n<p style=\"color:DodgerBlue;\">\n  Lorem ipsum...\n</p>\n<p style=\"color:MediumSeaGreen;\">\n  Ut wisi enim...\n</p>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors.asp"
+      ]
+    },
+    {
+      "id": "border-color",
+      "title": "تلوين الحدود",
+      "narration": {
+        "spoken_text": "يُمْكِنُ أَيْضاً تَلْوِينُ حُدُودِ الْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ border. نَحْنُ نُحَدِّدُ سُمْكَ الْحَدِّ، وَنَوْعَهُ، ثُمَّ اللَّوْنَ. هَذَا يُضِيفُ لَمْسَه جَمَالِيَّه وَيُسَاعِدُ فِي تَقْسِيمِ الْمُحْتَوَى بِشَكْلٍ بَصَرِيٍّ وَاضِحٍ.",
+        "caption_text": "يمكن تلوين حدود العناصر باستخدام خاصية border مع تحديد السمك والنوع واللون."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<h1 style=\"border:2px solid Tomato;\">\n  Hello World\n</h1>\n<h1 style=\"border:2px solid DodgerBlue;\">\n  Hello World\n</h1>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors.asp"
+      ]
+    },
+    {
+      "id": "advanced-values",
+      "title": "قيم الألوان المتقدمة",
+      "narration": {
+        "spoken_text": "بِجَانِبِ الْأَسْمَاءِ، نَسْتَخْدِمُ قِيَم RGB و HEX و HSL. هَذِهِ الْقِيَمُ تُعْطِينَا دِقَّه أَكْبَرَ فِي اخْتِيَارِ دَرَجَاتِ الْأَلْوَانِ، كَمَا نَسْتَخْدِم RGBA و HSLA لِإِضَافَةِ الشَّفَافِيَّه إِلَى الْعَنَاصِرِ بِسُهُولَه.",
+        "caption_text": "استخدام قيم RGB و HEX و HSL يمنح دقة أكبر، بينما توفر RGBA و HSLA تحكما في الشفافية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "background-color: rgb(255, 99, 71);\nbackground-color: #ff6347;\nbackground-color: hsl(9, 100%, 64%);\nbackground-color: rgba(255, 99, 71, 0.5);",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُضِيفُ الْحَيَاه إِلَى صَفَحَاتِنَا بِاسْتِخْدَامِ الْأَلْوَانِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَاسْتِكْشَافِ الْمَزِيدِ مِنَ الدَّرَجَاتِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "تعلمنا كيفية إضافة الحياة لصفحات الويب باستخدام الألوان. جربوا الأكواد بأنفسكم لاستكشاف المزيد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام أسماء الألوان للسهولة",
+          "استخدام RGB و HEX للدقة",
+          "استخدام RGBA للشفافية",
+          "تطبيق الألوان على الخلفية والنص والحدود"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors.asp"
+      ]
+    }
+  ]
+}
