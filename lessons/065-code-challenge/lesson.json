@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "65",
+  "title": "CSS Fonts Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تطبيق خصائص الخطوط في CSS",
+    "التعامل مع تحديات البرمجة في CSS",
+    "تطبيق Font Family و Font Size و Font Weight",
+    "تحسين مظهر النصوص في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_font.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحديات CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَخُوضُ تَحَدِّيَاً عَمَلِيّاً حَوْل Font Properties لِاخْتِبَارِ مَهَارَاتِكُمْ فِي تَحْسِينِ مَظْهَرِ النُّصُوصِ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تحدي CSS للخطوط. سنقوم اليوم باختبار مهاراتكم في تطبيق خصائص الخطوط المختلفة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحدي عملي لتطبيق CSS",
+          "التركيز على خصائص الخطوط",
+          "تحسين تجربة المستخدم عبر النصوص",
+          "تطبيق عملي مباشر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_font.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية للخطوط",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ نَتَائِجَ رَائِعَه، نَحْتَاجُ لِفَهْمِ خَصَائِصَ مِثْل font-family لِتَحْدِيدِ نَوْعِ الْخَطِّ، و font-size لِتَحْدِيدِ الْحَجْمِ، و font-weight لِتَحْدِيدِ سُمْكِ الْخَطِّ. هَذِهِ الْخَصَائِصُ تُعَدُّ حَجَرَ الزَّاوِيَه فِي تَصْمِيمِ الْوِبّ.",
+        "caption_text": "تعتمد خصائص الخطوط على font-family و font-size و font-weight للتحكم الكامل في شكل النص."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة",
+          "مثال"
+        ],
+        "rows": [
+          [
+            "font-family",
+            "نوع الخط",
+            "Arial"
+          ],
+          [
+            "font-size",
+            "حجم الخط",
+            "20px"
+          ],
+          [
+            "font-weight",
+            "سمك الخط",
+            "bold"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_font.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْكُودِ. نَحْتَاجُ إِلَى دُوكْ تَايْبْ HTML، ثُمَّ نُضِيفُ قِسْم head لِتَنْسِيقَات CSS، وَقِسْم body لِكِتَابَةِ الْعَنَاصِرِ. لَاحِظْ كَيْفَ نَقُومُ بِرَبْطِ التَّنْسِيقَاتِ بِالْعَنَاصِرِ بِدِقَّه.",
+        "caption_text": "هيكل مستند HTML الأساسي مع قسم head لتضمين قواعد CSS وقسم body للمحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        font-family: Arial;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>CSS Fonts</h1>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_font.asp"
+      ]
+    },
+    {
+      "id": "applying_styles",
+      "title": "تطبيق التنسيقات",
+      "narration": {
+        "spoken_text": "الْآنَ نَقُومُ بِتَطْبِيقِ التَّنْسِيقَاتِ عَلَى الْعُنْصُر h1. نُحَدِّدُ الْخَطَّ وَالْحَجْمَ. هَذِهِ الْخُطْوَه تُظْهِرُ قُوَّةِ CSS فِي التَّحَكُّمِ بِالْعَنَاصِرِ بِشَكْلٍ مُنْفَصِلٍ وَمُنَظَّمٍ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تطبيق قواعد CSS على عنصر h1 لتغيير خصائص الخط بشكل مباشر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  font-family: Verdana;\n  font-size: 30px;\n  font-weight: bold;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_font.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "بَعْدَ كِتَابَةِ هَذِهِ الْأَكْوَادِ، سَيَظْهَرُ النَّصُّ فِي الْمُتَصَفِّحْ بِشَكْلٍ جَمَالِيٍّ وَمُنَسَّقٍ. هَذِهِ هِيَ النَّتِيجَه الْمُتَوَقَّعَه لِتَطْبِيقِ خَصَائِصِ الْخَطِّ الَّتِي تَعَلَّمْنَاهَا فِي هَذَا التَّحَدِّي.",
+        "caption_text": "هكذا يظهر النص في المتصفح بعد تطبيق قواعد CSS المحددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<h1>CSS Fonts</h1>",
+        "highlight_lines": [],
+        "output": "CSS Fonts (بخط Verdana وحجم 30px)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_font.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، احْرِصُوا دَائِماً عَلَى اخْتِيَارِ خُطُوطٍ مَقْرُوءَه وَمُنَاسِبَه لِتَصْمِيمِ الْوِبّ. اسْتِخْدَامُ الْقِيَمِ الْمُنَاسِبَه لَةِ font-size يُسَاعِدُ فِي تَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ وَيَجْعَلُ الصَّفْحَه أَكْثَرَ احْتِرَافِيَّه.",
+        "caption_text": "نصائح هامة: اختر خطوطا واضحة، واستخدم أحجاما متناسبة لتحسين تجربة المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم خطوطا آمنة للويب",
+          "حافظ على تباين جيد للنصوص",
+          "جرب أحجاما مختلفة للخطوط",
+          "اختبر التصميم على متصفحات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_font.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُوَظِّفُ خَصَائِص CSS لِتَنْسِيقِ الْخُطُوطِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ لِتُطَوِّرُوا مَهَارَاتِكُمْ أَكْثَرَ.",
+        "caption_text": "لقد تعلمنا أساسيات تنسيق الخطوط في CSS. جرب الأكواد بنفسك عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية font-family و font-size",
+          "تم شرح كيفية تطبيق التنسيق",
+          "تم عرض المخرجات المتوقعة",
+          "شجعنا على الممارسة المستمرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_font.asp"
+      ]
+    }
+  ]
+}
