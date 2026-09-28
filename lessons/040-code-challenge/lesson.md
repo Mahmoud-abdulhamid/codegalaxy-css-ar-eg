@@ -47,10 +47,18 @@ div {
 تظهر النتيجة النهائية للعنصر بناء على القيم المعطاة في CSS.
 
 ```html
-<!-- العنصر بعد التنسيق -->
-<div style="width:200px; height:100px;">
-  محتوى العنصر
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <!-- العنصر بعد التنسيق -->
+    <div style="width:200px; height:100px;">
+      محتوى العنصر
+    </div>
+  </body>
+</html>
 ```
 
 ## أفضل الممارسات
