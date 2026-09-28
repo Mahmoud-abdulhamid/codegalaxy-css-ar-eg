@@ -23,8 +23,7 @@
 نستخدم text-align: center لتوسيط محتوى عناصر td أفقيا.
 
 ```css
-td
-{
+td {
   text-align: center;
 }
 ```
@@ -34,8 +33,7 @@ td
 يمكننا إجبار عناصر th على المحاذاة نحو اليسار باستخدام text-align: left.
 
 ```css
-th
-{
+th {
   text-align: left;
 }
 ```
@@ -53,8 +51,7 @@ th
 نحدد ارتفاع الخلايا ونطبق vertical-align: bottom لجعل النص في أسفل الخلية.
 
 ```css
-td
-{
+td {
   height: 50px;
   vertical-align: bottom;
 }
