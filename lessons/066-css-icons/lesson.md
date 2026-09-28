@@ -41,12 +41,18 @@
 إضافة الأيقونات داخل قسم <body> باستخدام عنصر <i>.
 
 ```html
-<body>
-  <i class="fas fa-cloud"></i>
-  <i class="fas fa-heart"></i>
-  <i class="fas fa-car"></i>
-  <i class="fas fa-bars"></i>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <i class="fas fa-cloud"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-bars"></i>
+  </body>
+</html>
 ```
 
 ## المستند الكامل
@@ -57,6 +63,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   </head>
   <body>
