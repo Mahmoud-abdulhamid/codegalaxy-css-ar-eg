@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "11",
+  "title": "CSS How To Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم طرق إضافة CSS إلى صفحات الويب",
+    "تطبيق المهارات المكتسبة في تحدي برمجي عملي",
+    "التعرف على كيفية الربط بين HTML و CSS",
+    "تحسين مهارات التنسيق البرمجي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_howto.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَقُومُ بِتَطْبِيقِ مَا تَعَلَّمْنَاهُ سَابِقاً حَوْلَ كَيْفِيَّةِ إِضَافَةِ CSS إِلَى صَفْحَةِ الْوِبّ، مِنْ خِلَالِ خَوْضِ تَحَدٍّ بَرْمَجِيٍّ مُشَوِّقٍ لِاخْتِبَارِ مَهَارَاتِكُمْ.",
+        "caption_text": "مرحبا بكم في درس تحدي CSS العملي لاختبار مهاراتكم في تنسيق صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة طرق إضافة CSS",
+          "تطبيق التحدي البرمجي",
+          "تعزيز الفهم العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_howto.asp"
+      ]
+    },
+    {
+      "id": "methods",
+      "title": "طرق إضافة CSS",
+      "narration": {
+        "spoken_text": "تَذَكَّرُوا أَنَّهُ يُمْكِنُنَا إِضَافَةِ CSS بِثَلَاثِ طُرُقٍ رَئِيسِيَّه: External CSS، و Internal CSS، و Inline CSS. كُلُّ طَرِيقَه لَهَا حَالَه اسْتِخْدَامٍ خَاصَّه، وَفَهْمُ الْفَرْقِ بَيْنَهَا هُوَ الْأَسَاسُ لِتَجَاوُزِ هَذَا التَّحَدِّي بِنَجَاحٍ.",
+        "caption_text": "تتعدد طرق إضافة CSS إلى صفحات الويب بين External و Internal و Inline CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "External CSS باستخدام ملف خارجي",
+          "Internal CSS داخل قسم head",
+          "Inline CSS داخل العناصر مباشرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_howto.asp"
+      ]
+    },
+    {
+      "id": "challenge_setup",
+      "title": "هيكل التحدي البرمجي",
+      "narration": {
+        "spoken_text": "فِي هَذَا التَّحَدِّي، سَنَقُومُ بِتَعْدِيلِ مَلَفِّ HTML لِتَطْبِيقِ التَّنْسِيقَاتِ الْمَطْلُوبَه. لَاحِظُوا كَيْفَ نَسْتَخْدِمُ دُوكْ تَايْبْ HTML لِتَعْرِيفِ نَوْعِ الْمُسْتَنَدِ، وَكَيْفَ نُضِيفُ التَّنْسِيقَاتِ دَاخِلَ الْعَنَاصِرِ لِتَحْقِيقِ النَّتِيجَه الْمَرْجُوَّه بِشَكْلٍ صَحِيحٍ.",
+        "caption_text": "نبدأ التحدي بتجهيز هيكل HTML والتركيز على كيفية دمج CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<title>CSS Challenge</title>\n</head>\n<body>\n<h1>Hello World</h1>\n</body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_howto.asp"
+      ]
+    },
+    {
+      "id": "applying_css",
+      "title": "تطبيق التنسيق",
+      "narration": {
+        "spoken_text": "الْآنَ نَقُومُ بِإِضَافَةِ التَّنْسِيقِ لِعُنْصُر h1. سَنَسْتَخْدِمُ خَاصِيَّةِ color لِتَغْيِيرِ لَوْنِ النَّصِّ. هَذِهِ الْخُطْوَه تُعَدُّ جُزْءاً أَسَاسِيّاً مِنْ حَلِّ التَّحَدِّي، حَيْثُ نَتَأَكَّدُ مِنْ أَنَّ Selector يَقُومُ بِاسْتِهْدَافِ الْعُنْصُرِ الْمَقْصُودِ بِدِقَّه.",
+        "caption_text": "تطبيق تنسيق CSS على عنصر h1 باستخدام خاصية color."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  color: blue;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_howto.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنْ أَفْضَلِ الْمُمَارَسَاتِ هِيَ فَصْلُ كُود CSS عَنْ HTML فِي مَلَفٍّ خَارِجِيٍّ. هَذَا يُسَاعِدُ فِي تَنْظِيمِ الْمَشْرُوعِ وَتَسْهِيلِ صِيَانَتِهِ، كَمَا أَنَّهُ يُحَسِّنُ مِنْ أَدَاءِ صَفْحَةِ الْوِبّ عِنْدَ تَحْمِيلِهَا فِي وِبّ Browser.",
+        "caption_text": "يعد فصل CSS في ملف خارجي من أفضل الممارسات البرمجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام ملفات CSS خارجية",
+          "تنظيم الكود وتنسيقه",
+          "تحسين سرعة تحميل الصفحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_howto.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة التحدي",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا هَذَا التَّحَدِّي الْبَرْمَجِيَّ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو، وَلَا تَتَرَدَّدُوا فِي طَرْحِ أَيِّ أَسْئِلَه تَتَعَلَّقُ بِهَذِهِ الْمَفَاهِيمِ. إِلَى اللِّقَاءِ فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا التحدي عبر الرابط",
+          "طبقوا الأكواد عمليا",
+          "استعدوا للدرس القادم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_howto.asp"
+      ]
+    }
+  ]
+}
