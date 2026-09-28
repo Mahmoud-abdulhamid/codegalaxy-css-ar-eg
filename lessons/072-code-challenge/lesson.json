@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "72",
+  "title": "CSS Links Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تنسيق الروابط باستخدام CSS",
+    "تطبيق Pseudo-classes على عناصر a",
+    "التعامل مع حالات الروابط المختلفة",
+    "تحويل الروابط إلى أزرار احترافية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_link.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي الروابط",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي الْعَمَلِيِّ لِتَنْسِيقِ الرَّوَابِطِ بِاسْتِخْدَام CSS. سَنَتَعَلَّمُ كَيْفَ نُحَوِّلُ الرَّوَابِطَ التَّقْلِيدِيَّه إِلَى عَنَاصِرَ تَفَاعُلِيَّه جَذَّابَه تُحَسِّنُ مِنْ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في تحدي CSS لتنسيق الروابط وتحويلها إلى عناصر تفاعلية جذابة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الروابط هي حجر الأساس في تصفح الويب",
+          "تنسيق الروابط يعزز من تجربة المستخدم",
+          "سنقوم بتطبيق تحدي عملي على عناصر a"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_link.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم الروابط في CSS",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ الرَّوَابِطِ، نَعْتَمِدُ عَلَى Pseudo-classes مِثْل link و visited و hover و active. هَذِهِ الْحَالَاتُ تَسْمَحُ لَنَا بِتَغْيِيرِ مَظْهَرِ الرَّابِطِ بِنَاءً عَلَى تَفَاعُلِ الْمُسْتَخْدِمِ مَعَهُ بِشَكْلٍ دِينَامِيكِيٍّ وَسَلِسٍ.",
+        "caption_text": "نستخدم Pseudo-classes للتحكم في مظهر الروابط بناء على حالاتها المختلفة."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "Pseudo-class",
+          "الوصف"
+        ],
+        "rows": [
+          [
+            ":link",
+            "الرابط غير المزار"
+          ],
+          [
+            ":visited",
+            "الرابط المزار"
+          ],
+          [
+            ":hover",
+            "عند مرور الفأرة"
+          ],
+          [
+            ":active",
+            "أثناء الضغط"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_link.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود الأساسي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْهَيْكَلِ الْأَسَاسِيِّ لِصَفْحَةِ الْوِبّ. نَحْتَاجُ إِلَى دُوكْ تَايْبْ HTML وَعُنْصُر html و head و body. هَذَا التَّنْظِيمُ يَضْمَنُ أَنَّ الْمُتَصَفِّحْ يَقْرَأُ الْأَكْوَادَ بِشَكْلٍ صَحِيحٍ وَيَعْرِضُهَا كَمَا نُرِيدُ.",
+        "caption_text": "الهيكل الأساسي للمستند يضمن توافقية الصفحة مع المتصفحات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>CSS Links</title>\n  </head>\n  <body>\n    <a href=\"#\">رابط تجريبي</a>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_link.asp"
+      ]
+    },
+    {
+      "id": "styling_links",
+      "title": "تطبيق تنسيقات CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نُضِيفُ التَّنْسِيقَاتِ. نُزِيلُ خَطَّ التَّحْتِيِّ بِاسْتِخْدَام text-decoration: none، وَنُحَدِّدُ لَوْنَ الْخَلْفِيَّه وَالْحَوَافَ لِنَجْعَلَ الرَّابِطَ يَبْدُو كَزِرٍّ. لَاحِظْ كَيْفَ نَسْتَخْدِم padding لِتَوْسِيعِ مِسَاحَةِ الزِّرِّ.",
+        "caption_text": "نستخدم CSS لتحويل الروابط إلى أزرار من خلال تعديل الخصائص البصرية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a {\n  text-decoration: none;\n  background-color: blue;\n  color: white;\n  padding: 10px 20px;\n  border-radius: 5px;\n}\na:hover {\n  background-color: darkblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_link.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَظْهَرُ الرَّابِطُ فِي الْمُتَصَفِّحْ كَزِرٍّ أزرقَ أَنِيقٍ. عِنْدَ تَمْرِيرِ الفأرَه عَلَيْهِ، سَيَتَغَيَّرُ لَوْنُ الْخَلْفِيَّه إِلَى الْأَزْرَقِ الدَّاكِنِ، مِمَّا يُعْطِي تَغْذِيَه بَصَرِيَّه فَوْرِيَّه لِلْمُسْتَخْدِمِ.",
+        "caption_text": "النتيجة النهائية هي زر تفاعلي يتغير لونه عند التفاعل معه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<a href=\"#\" style=\"background: blue; color: white; padding: 10px;\">\n  رابط تفاعلي\n</a>",
+        "highlight_lines": [],
+        "output": "رابط تفاعلي (يظهر كزر أزرق)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_link.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَهْتَمَّ بِإِمْكَانِيَّةِ الْوُصُولِ. تَأَكَّدْ دَائِماً مِنْ وُجُودِ تَبَايُنٍ كَافٍ فِي الْأَلْوَانِ بَيْنَ النَّصِّ وَالْخَلْفِيَّه، وَاسْتَخْدِمْ outline لِتَحْدِيدِ الرَّابِطِ عِنْدَ التَّنَقُّلِ بِاسْتِخْدَامِ لَوْحَةِ الْمَفَاتِيحِ.",
+        "caption_text": "أفضل الممارسات تشمل مراعاة تباين الألوان وتسهيل الوصول عبر لوحة المفاتيح."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم تباين ألوان عال",
+          "لا تعتمد على اللون فقط للتمييز",
+          "أضف تأثيرات واضحة عند الـ hover",
+          "تأكد من سهولة النقر على الأزرار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_link.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُطَوِّعُ الرَّوَابِطَ بِاسْتِخْدَام CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِ مَهَارَاتِكُمْ. لَا تَتَرَدَّدُوا فِي زِيَارَةِ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ لِإِكْمَالِ التَّحَدِّي.",
+        "caption_text": "شكرا لمتابعتكم، استمروا في ممارسة كتابة الأكواد وتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح حالات الروابط",
+          "تم تطبيق تنسيق الأزرار",
+          "تمت مناقشة أفضل الممارسات",
+          "ابدأ التحدي الآن عبر الرابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_link.asp"
+      ]
+    }
+  ]
+}
