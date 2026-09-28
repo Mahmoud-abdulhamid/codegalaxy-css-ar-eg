@@ -1,0 +1,4 @@
+/* استخدام الاختصار */
+ul {
+  list-style: square inside url('icon.png');
+}
