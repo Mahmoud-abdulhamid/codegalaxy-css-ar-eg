@@ -1,0 +1,6 @@
+div {
+  margin-left: 100px;
+}
+p.ex1 {
+  margin-left: inherit;
+}
