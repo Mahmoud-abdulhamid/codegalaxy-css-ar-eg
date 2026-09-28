@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "99",
+  "title": "CSS Float Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية عمل خاصية float في CSS",
+    "تطبيق التحديات البرمجية للتحكم في تخطيط العناصر",
+    "التعرف على تأثيرات float على تدفق العناصر في الصفحة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_float.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Float",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنُعَالِجُ تَحَدِّي CSS Float، وَهِيَ خَاصِيَّه مُهِمَّه لِتَحْدِيدِ مَوْقِعِ الْعَنَاصِرِ وَجَعْلِ النُّصُوصِ تَلْتَفُّ حَوْلَهَا بِشَكْلٍ احْتِرَافِيٍّ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Float حيث سنتعلم كيفية التحكم في تخطيط العناصر باستخدام خاصية float."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية float تسمح للعناصر بالانزياح لليمين أو اليسار",
+          "تستخدم لإنشاء تخطيطات مرنة في صفحات الويب",
+          "تؤثر على تدفق العناصر المحيطة بها"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_float.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفاهيم أساسية حول Float",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُطَبِّق float عَلَى Element، فَإِنَّهُ يَخْرُجُ مِنْ تَدَفُّقِ الصَّفْحَه الطَّبِيعِيِّ. يُمْكِنُكَ اسْتِخْدَامُ الْقِيَم left أَوْ right لِتَحْدِيدِ اتِّجَاهِ الْعُنْصُرِ، مِمَّا يَمْنَحُكَ تَحَكُّماً كَامِلاً فِي تَوْزِيعِ الْمُحْتَوَى.",
+        "caption_text": "خاصية float تخرج العنصر من التدفق الطبيعي وتسمح له بالتموضع جهة اليمين أو اليسار."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "float: left لتحريك العنصر لليسار",
+          "float: right لتحريك العنصر لليمين",
+          "float: none هي القيمة الافتراضية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_float.asp"
+      ]
+    },
+    {
+      "id": "code-example",
+      "title": "كود CSS Float",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيد div وَنُعْطِيهِ خَاصِيَّةِ float لِيَظْهَرَ بِجَانِبِ النَّصِّ. هَذَا الْأُسْلُوبُ يُسَاعِدُ فِي بِنَاءِ تَخْطِيطَاتٍ مُتَعَدِّدَةِ الْأَعْمِدَه بِسُهُولَه.",
+        "caption_text": "مثال برمجي يوضح كيفية تطبيق float على عنصر div للتحكم في موقعه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  float: left;\n  width: 50%;\n  background-color: #f1f1f1;\n  padding: 20px;\n}",
+        "highlight_lines": [],
+        "output": "العنصر يطفو لليسار ويشغل نصف عرض الحاوية",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_float.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيد class بِاسْم box. خَاصِيَّةِ float: left تَجْعَلُ الْعُنْصُرَ يَنْزَاحُ لِلْجِهَه الْيُسْرَى، بَيْنَمَا width: 50 تَضْمَنُ أَنَّ الْعُنْصُرَ يَأْخُذُ نِصْفَ مَسَاحَةِ الْحَاوِيَه الْأَبِ.",
+        "caption_text": "شرح خصائص الكود: float للتموضع، وwidth لتحديد العرض، وpadding للمساحة الداخلية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "float: left يوجه العنصر لليسار",
+          "width: 50 يحدد عرض العنصر",
+          "padding يضيف مسافة داخلية للعنصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_float.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَتَرَى أَنَّ الْعُنْصُرَ قَدْ أَصْبَحَ فِي الْجَانِبِ الْأَيْسَرِ، وَيُمْكِنُ لِلْعَنَاصِرِ الْأُخْرَى أَنْ تَمْلَأَ الْمَسَاحَه الْمُتَبَقِّيَه فِي الْجَانِبِ الْآخَرِ، وَهَذَا هُوَ جَوْهَرُ اسْتِخْدَام float.",
+        "caption_text": "المعاينة تظهر العنصر محاذيا لليسار مع ترك مساحة لبقية المحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"box\">\n      هذا محتوى يطفو لليسار\n    </div>\n    <p>نص إضافي يظهر بجانب العنصر</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "العنصر يطفو لليسار والنص يلتف حوله",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_float.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَتَذَكَّرَ دَائِماً اسْتِخْدَام clear بَعْدَ الْعَنَاصِرِ الَّتِي تَسْتَخْدِم float لِتَجَنُّبِ مَشَاكِلِ التَّدَفُّقِ. هَذِهِ مُمَارَسَه هَنْدَسِيَّه ضَرُورِيَّه لِضَمَانِ اسْتِقْرَارِ تَخْطِيطِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "استخدم خاصية clear لتنظيف التدفق بعد العناصر التي تستخدم float."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم clear: both لإيقاف تأثير float",
+          "تأكد من إغلاق الحاويات بشكل صحيح",
+          "استخدم Flexbox كبديل حديث لـ float"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_float.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نَسْتَخْدِم float لِتَنْظِيمِ الْعَنَاصِرِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ لِتُتْقِنُوا هَذِهِ الْمَهَارَه الْأَسَاسِيَّه فِي CSS.",
+        "caption_text": "تعلمنا اليوم أساسيات float. جربوا الأكواد بأنفسكم لتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "float أداة قوية للتحكم في التخطيط",
+          "الممارسة العملية هي مفتاح الإتقان",
+          "راجع الرابط في الوصف لمزيد من التحديات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_float.asp"
+      ]
+    }
+  ]
+}
