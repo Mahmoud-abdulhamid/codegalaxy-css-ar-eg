@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "12",
+  "title": "CSS Comments",
+  "course": "CSS",
+  "objectives": [
+    "فهم أهمية استخدام Comments في ملفات CSS",
+    "تعلم كيفية كتابة التعليقات ذات السطر الواحد والمتعددة الأسطر",
+    "التعرف على كيفية تعطيل أجزاء من الكود مؤقتا",
+    "التمييز بين تعليقات HTML وتعليقات CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_comments.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Comments",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ كِتَابَةِ Comments دَاخِلَ مِلَفَّات CSS. هَذِهِ التَّعْلِيقَاتُ تُسَاعِدُنَا فِي شَرْحِ الْكُودِ وَتَنْظِيمِهِ لِتَسْهِيلِ عَمَلِيَّةِ التَّعْدِيلِ مُسْتَقْبَلاً.",
+        "caption_text": "تستخدم Comments لشرح كود CSS وتسهيل صيانته وتعديله لاحقا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تساعد Comments في توثيق الكود البرمجي",
+          "تسهل عملية فهم الكود عند العودة إليه لاحقا",
+          "تجاهل تام من قبل Web Browser",
+          "تستخدم لتعطيل أجزاء من الكود مؤقتا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_comments.asp"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "بناء جملة التعليقات",
+      "narration": {
+        "spoken_text": "لِكِتَابَه تَعْلِيقٍ فِي CSS، نَبْدَأُ بِالرَّمْز slash مَتْبُوعاً بَةِ asterisk، وَنُنْهِي التَّعْلِيقَ بَةِ asterisk مَتْبُوعاً بَةِ slash. هَذِهِ التَّعْلِيقَاتُ لَا تَظْهَرُ فِي نَتِيجَةِ الْعَرْضِ عَلَى صَفْحَةِ الْوِبّ، بَلْ هِيَ لِلْمُطَوِّرِ فَقَطْ.",
+        "caption_text": "يبدأ تعليق CSS بالرمز /* وينتهي بالرمز */."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* هذا تعليق سطر واحد */\np {\n  color: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_comments.asp"
+      ]
+    },
+    {
+      "id": "inline_comments",
+      "title": "التعليقات داخل الأسطر",
+      "narration": {
+        "spoken_text": "يُمْكِنُكُمْ وَضْعُ التَّعْلِيقَاتِ فِي أَيِّ مَكَانٍ، حَتَّى فِي مُنْتَصَفِ سَطْرِ الْكُودِ. هَذَا يُسَاعِدُ فِي تَوْضِيحِ وَظِيفَةِ كُلِّ Attribute بِشَكْلٍ دَقِيقٍ دَاخِل Element، وَيُسَهِّلُ عَلَى زُمَلَائِكُمْ فَهْمَ الْقِيَمِ الْمُسْتَخْدَمَه.",
+        "caption_text": "يمكن وضع التعليقات في أي مكان داخل الكود، حتى في منتصف السطر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  color: red; \n  /* تحديد لون النص */\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_comments.asp"
+      ]
+    },
+    {
+      "id": "multi_line",
+      "title": "التعليقات متعددة الأسطر",
+      "narration": {
+        "spoken_text": "لَا تَقْتَصِرُ التَّعْلِيقَاتُ عَلَى سَطْرٍ وَاحِدٍ، بَلْ يُمْكِنُهَا أَنْ تَمْتَدَّ لِعِدَّه أَسْطُرٍ. هَذَا مُفِيدٌ جِدّاً عِنْدَ كِتَابَه شُرُوحَاتٍ طَوِيلَه أَوْ عِنْدَ تَعْطِيلِ كُتْلَه بَرْمَجِيَّه كَامِلَه لِأَغْرَاضِ التَّجْرِبَه و Debugging.",
+        "caption_text": "يمكن للتعليقات أن تمتد عبر عدة أسطر لتغطية شروحات مفصلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* هذا تعليق\n   يمتد لعدة أسطر\n   في ملف الـ CSS */\np {\n  color: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_comments.asp"
+      ]
+    },
+    {
+      "id": "html_css_mix",
+      "title": "الدمج بين HTML و CSS",
+      "narration": {
+        "spoken_text": "تَذَكَّرُوا أَنَّ تَعْلِيقَات HTML تَخْتَلِفُ عَنْ CSS. فِي HTML نَسْتَخْدِم syntax exclamation mark مَع dash dash. فِي هَذَا الْمِثَالِ، نَجْمَعُ بَيْن HTML Comments و CSS Comments لِتَنْظِيمِ الصَّفْحَه.",
+        "caption_text": "تستخدم HTML تعليقات <!-- --> بينما تستخدم CSS تعليقات /* */."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<style>\np { color: red; /* تعليق CSS */ }\n</style>\n<!-- تعليق HTML -->\n<p>Hello World!</p>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_comments.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِاخْتِصَارٍ، التَّعْلِيقَاتُ أَدَاه قَوِيَّه لِكُلِّ مُطَوِّرِ وِبّ. احْرِصُوا عَلَى اسْتِخْدَامِهَا بِشَكْلٍ مُنَظَّمٍ لِتَجْعَلُوا كُودَكُمْ أَكْثَرَ قَابِلِيَّه لِلْقِرَاءَه وَالصِّيَانَه. جَرِّبُوا كِتَابَةِ التَّعْلِيقَاتِ فِي مَشَارِيعِكُمْ الْقَادِمَه، وَشُكْراً لِمُتَابَعَتِكُمْ مَعِي، مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "استخدم التعليقات بانتظام لجعل الكود أكثر احترافية وسهولة في الصيانة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Comments تبدأ بـ /* وتنتهي بـ */",
+          "HTML Comments تبدأ بـ <!-- وتنتهي بـ -->",
+          "التعليقات لا تظهر في Web Browser",
+          "استخدم التعليقات لتوثيق الكود وتعطيله مؤقتا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_comments.asp"
+      ]
+    }
+  ]
+}
