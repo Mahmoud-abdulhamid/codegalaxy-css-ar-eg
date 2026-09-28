@@ -25,9 +25,14 @@
 ```html
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
   <body>
-    <h1 style="color:blue;text-align:center;">
-      This is a heading</h1>
+    <h1 style="color:blue;text-align:center;">This is a heading</h1>
+    <p style="color:red;">This is a paragraph.</p>
+  </body>
+</html>
 ```
 
 ## استكمال الكود البرمجي
@@ -41,10 +46,10 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <p style="color:red;">
-      This is a paragraph.</p>
-    </body>
-  </html>
+    <h1 style="color:blue;text-align:center;">This is a heading</h1>
+    <p style="color:red;">This is a paragraph.</p>
+  </body>
+</html>
 ```
 
 ## ملاحظات هندسية هامة
