@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "25",
+  "title": "CSS Borders",
+  "course": "CSS",
+  "objectives": [
+    "فهم خصائص CSS Borders للتحكم في حدود العناصر",
+    "التعرف على خاصية border-style وتأثيراتها المختلفة",
+    "تطبيق قيم متعددة لخاصية border-style",
+    "تعلم كيفية دمج أنماط حدود مختلفة في عنصر واحد"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_border.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Borders",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ اسْتِخْدَام CSS Borders لِتَحْدِيدِ نَمَطِ وَعَرْضِ وَلَوْنِ حُدُودِ أَيِّ Element فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تسمح خصائص CSS Borders بتحديد نمط وعرض ولون حدود العناصر في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في حدود العناصر",
+          "تحديد النمط والعرض واللون",
+          "تحسين المظهر المرئي للعناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border.asp"
+      ]
+    },
+    {
+      "id": "border-style-concept",
+      "title": "خاصية border-style",
+      "narration": {
+        "spoken_text": "تُعَدُّ خَاصِيَّةِ border-style هِيَ الْأَسَاسُ لِظُهُورِ الْحُدُودِ. بِدُونِ تَعْيِينِ هَذِهِ الْخَاصِيَّه، لَنْ تَظْهَرَ أَيُّ خَصَائِصَ أُخْرَى لِلْحُدُودِ. يُمْكِنُكَ اسْتِخْدَامُ قِيمَه وَاحِدَه أَوْ أَرْبَعِ قِيَمٍ لِتَحْدِيدِ جَوَانِبِ الْحُدُودِ الْأَرْبَعَه.",
+        "caption_text": "خاصية border-style ضرورية لظهور الحدود، ويمكنها استقبال من قيمة واحدة إلى أربع قيم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "border-style هي الخاصية الأساسية",
+          "بدونها لا تعمل خصائص الحدود الأخرى",
+          "تدعم من قيمة واحدة إلى أربع قيم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border.asp"
+      ]
+    },
+    {
+      "id": "code-example-1",
+      "title": "تطبيق أنماط الحدود",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ بَعْضَ الْأَمْثِلَه الْعَمَلِيَّه. نَسْتَخْدِمُ هُنَا p.dotted لِتَحْدِيدِ حُدُودٍ مَنْقُوطَه، و p.dashed لِلْحُدُودِ الْمُتَقَطِّعَه، و p.solid لِلْحُدُودِ الْمُتَّصِلَه، و p.double لِلْحُدُودِ الْمُزْدَوِجَه.",
+        "caption_text": "تطبيق أنماط مختلفة مثل dotted و dashed و solid و double على عناصر الفقرات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.dotted {border-style: dotted;}\np.dashed {border-style: dashed;}\np.solid {border-style: solid;}\np.double {border-style: double;}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border.asp"
+      ]
+    },
+    {
+      "id": "code-example-2",
+      "title": "أنماط حدود إضافية",
+      "narration": {
+        "spoken_text": "نُكْمِلُ مَعَ أَنْمَاطٍ أُخْرَى مِثْل groove و ridge و inset و outset. هَذِهِ الْأَنْمَاطُ تَعْتَمِدُ فِي تَأْثِيرِهَا عَلَى لَوْنِ الْحُدُودِ الْمُخْتَارِ لِتُعْطِيَ مَظْهَراً ثُلَاثِيَّ الْأَبْعَادِ.",
+        "caption_text": "استخدام أنماط groove و ridge و inset و outset لإضافة تأثيرات ثلاثية الأبعاد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.groove {border-style: groove;}\np.ridge {border-style: ridge;}\np.inset {border-style: inset;}\np.outset {border-style: outset;}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border.asp"
+      ]
+    },
+    {
+      "id": "code-example-3",
+      "title": "إخفاء الحدود والدمج",
+      "narration": {
+        "spoken_text": "يُمْكِنُكَ أَيْضاً إِخْفَاءُ الْحُدُودِ بِاسْتِخْدَام none أَوْ hidden. كَمَا يُمْكِنُكَ دَمْجُ أَنْوَاعٍ مُخْتَلِفَه فِي سَطْرٍ وَاحِدٍ مِثْل p.mix، حَيْثُ نُحَدِّدُ أَرْبَعَه أَنْمَاطٍ لِكُلِّ جَانِبٍ عَلَى حِدَه.",
+        "caption_text": "استخدام none و hidden لإخفاء الحدود، ودمج أنماط مختلفة في خاصية واحدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.none {border-style: none;}\np.hidden {border-style: hidden;}\np.mix {border-style: dotted dashed solid double;}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border.asp"
+      ]
+    },
+    {
+      "id": "visual-output",
+      "title": "معاينة النتائج",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَرَى فِي مُتَصَفِّحْ الْوِبّ كُلَّ نَمَطٍ عَلَى حِدَه. تَذَكَّرْ أَنَّ الْحُدُودَ تُضِيفُ لَمْسَه جَمَالِيَّه وَتُنَظِّمُ الْمُحْتَوَى بِشَكْلٍ احْتِرَافِيٍّ دَاخِلَ صَفْحَتِكَ.",
+        "caption_text": "تظهر النتائج في المتصفح كأنماط حدود متنوعة تعزز من تنظيم وتنسيق المحتوى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنوع الأنماط يعزز تجربة المستخدم",
+          "الحدود تساعد في تقسيم المحتوى",
+          "تأثيرات احترافية بخصائص بسيطة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "مُلَاحَظَه هَامَّه يَا أَصْدِقَائِي: لَنْ تَعْمَلَ خَصَائِصُ الْحُدُودِ الْأُخْرَى مِثْلَ الْعَرْضِ أَوِ اللَّوْنِ إِذَا لَمْ تَقُمْ بِتَعْيِين border-style أَوَّلاً. احْرِصْ دَائِماً عَلَى ضَبْطِ هَذِهِ الْخَاصِيَّه لِضَمَانِ ظُهُورِ التَّأْثِيرَاتِ.",
+        "caption_text": "تنبيه: لن تظهر خصائص العرض أو اللون ما لم يتم تحديد border-style أولا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "border-style هي الشرط الأساسي",
+          "تأكد من ترتيب الخصائص",
+          "جرب دمج الأنماط المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي حُدُودِ الْعَنَاصِرِ بِاسْتِخْدَام CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا التَّأْثِيرَاتِ بِأَعْيُنِكُمْ.",
+        "caption_text": "تعلمنا التحكم في الحدود، ندعوكم لتجربة الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية كافة أنماط الحدود",
+          "شرح كيفية دمج القيم",
+          "أهمية ترتيب الخصائص",
+          "رابط التجربة متاح في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_border.asp"
+      ]
+    }
+  ]
+}
