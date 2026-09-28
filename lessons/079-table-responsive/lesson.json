@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "79",
+  "title": "CSS Responsive Tables",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية جعل الجداول متجاوبة مع أحجام الشاشات المختلفة",
+    "استخدام خاصية overflow-x للتحكم في التمرير الأفقي",
+    "تطبيق حاوية div لاحتواء عنصر table",
+    "تحسين تجربة المستخدم في تصفح البيانات على الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_table_responsive.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول الجداول المتجاوبة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ جَعْلِ الْجَدَاوِل Responsive، بِحَيْثُ تَعْرِضُ شَرِيطَ تَمْرِيرٍ أُفُقِيٍّ عِنْدَمَا تَكُونُ الشَّاشَه صَغِيرَه جِدّاً لِعَرْضِ كَامِلِ الْمُحْتَوَى.",
+        "caption_text": "مقدمة حول كيفية جعل الجداول Responsive في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الجداول المتجاوبة تحسن تجربة المستخدم",
+          "تظهر شريط تمرير أفقي عند ضيق الشاشة",
+          "تمنع تداخل البيانات أو خروجها عن الإطار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_responsive.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "المفهوم الأساسي للحل",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ هَذِهِ الْخَاصِيَّه، نَقُومُ بِوَضْعِ عُنْصُر table دَاخِلَ حَاوِيَه مِنْ نَوْع div. بَعْدَ ذَلِكَ نَقُومُ بِتَعْيِينِ خَاصِيَّةِ overflow-x إِلَى الْقِيمَه auto لِهَذِهِ الْحَاوِيَه.",
+        "caption_text": "نستخدم حاوية div مع خاصية overflow-x للتحكم في التمرير."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تغليف عنصر table داخل div",
+          "استخدام خاصية overflow-x: auto",
+          "تفعيل التمرير الأفقي التلقائي عند الحاجة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_responsive.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق الكود البرمجي",
+      "narration": {
+        "spoken_text": "لَاحِظْ مَعِي هَذَا الْكُودَ. نَقُومُ بِتَعْرِيفِ كَلَاسٍ بِاسْم tablecontainer، وَنُعْطِيهِ خَاصِيَّةِ overflow-x بِقِيمَةِ auto. هَذَا يَضْمَنُ ظُهُورَ شَرِيطِ التَّمْرِيرِ فَقَطْ عِنْدَ ضَرُورَةِ ذَلِكَ.",
+        "caption_text": "كود CSS لتفعيل التمرير الأفقي للحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.tablecontainer {\n  overflow-x: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_responsive.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكلة HTML المطلوبة",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ يَكُونَ هَيْكَل HTML مُنَظَّماً. نَضَعُ الْجَدْوَلَ دَاخِل div بِالْكَلَاس tablecontainer. هَذَا التَّغْلِيفُ هُوَ الْمِفْتَاحُ لِجَعْلِ الْجَدْوَلِ يَتَصَرَّفُ بِشَكْلٍ مُتَجَاوِبٍ دَاخِلَ مُتَصَفِّحْ الْوِبّ.",
+        "caption_text": "هيكلة HTML الصحيحة لتغليف الجدول."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"tablecontainer\">\n      <table>\n        <tr>\n          <th>الاسم</th>\n          <th>البيانات</th>\n        </tr>\n      </table>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_responsive.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَصْغِيرِ نَافِذَةِ الْمُتَصَفِّحْ، سَتَرَى أَنَّ الْجَدْوَلَ لَا يَنْكَسِرُ، بَلْ يَظْهَرُ شَرِيطُ تَمْرِيرٍ سُفْلِيٍّ يُمَكِّنُ الْمُسْتَخْدِمَ مِنَ التَّنَقُّلِ بَيْنَ أَعْمِدَةِ الْجَدْوَلِ بِسُهُولَه وَيُسْرٍ.",
+        "caption_text": "المعاينة المرئية للجدول المتجاوب مع شريط التمرير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[ الاسم ] [ البيانات ]\n[  ...  ] [  ...  ]\n---------------------\n[  <-- Scroll -->   ]",
+        "highlight_lines": [],
+        "output": "يظهر شريط تمرير أفقي عند ضيق الشاشة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_responsive.asp"
+      ]
+    },
+    {
+      "id": "notes",
+      "title": "ملاحظات تقنية هامة",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ تَعْلَمَ أَنَّهُ فِي أَنْظِمَةِ OS X Lion عَلَى أجهزَةِ Mac، قَدْ تَكُونُ أَشْرِطَةِ التَّمْرِيرِ مَخْفِيَّه افْتِرَاضِيّاً، وَلَا تَظْهَرُ إِلَّا عِنْدَ بَدْءِ التَّمْرِيرِ، حَتَّى مَعَ ضَبْطِ خَاصِيَّةِ overflow.",
+        "caption_text": "ملاحظة حول سلوك أشرطة التمرير في نظام OS X."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أشرطة التمرير قد تكون مخفية في Mac",
+          "تظهر فقط عند التفاعل مع المحتوى",
+          "هذا سلوك نظام التشغيل وليس خطأ في الكود"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_responsive.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةِ جَعْلِ الْجَدَاوِلِ مُتَجَاوِبَه بِاسْتِخْدَام CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا الْكُودِ بِنَفْسِكُمْ وَتَطْوِيرِ جَدَاوِلَ أَكْثَرَ تَعْقِيداً وَأَنَاقَه. شُكْراً لِمُتَابَعَتِكُمْ.",
+        "caption_text": "خلاصة الدرس: الجداول المتجاوبة ضرورية لتصميم الويب الحديث."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام div كحاوية للجدول",
+          "تطبيق overflow-x: auto",
+          "تحسين تجربة المستخدم على الأجهزة المحمولة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_table_responsive.asp"
+      ]
+    }
+  ]
+}
