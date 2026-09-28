@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "22",
+  "title": "CSS background-attachment Property",
+  "course": "CSS",
+  "objectives": [
+    "Understand the purpose of background-attachment",
+    "Learn to use the fixed value for background images",
+    "Learn to use the scroll value for background images",
+    "Master background positioning and repetition"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_background_attachment.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول background-attachment",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ background-attachment، وَهِيَ خَاصِيَّه مُهِمَّه تُحَدِّدُ مَا إِذَا كَانَتْ صُورَةِ الْخَلْفِيَّه سَتَتَحَرَّكُ مَعَ صَفْحَةِ الْوِبّ أَمْ سَتَبْقَى ثَابِتَه فِي مَكَانِهَا.",
+        "caption_text": "تتحكم خاصية background-attachment في سلوك حركة صورة الخلفية عند التمرير في صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد حركة الخلفية أثناء التمرير",
+          "التحكم في ثبات الصورة أو حركتها",
+          "تعزيز تجربة المستخدم البصرية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_attachment.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القيم الأساسية للخاصية",
+      "narration": {
+        "spoken_text": "تَمْتَلِكُ هَذِهِ الْخَاصِيَّه قِيمَتَيْنِ رَئِيسِيَّتَيْنِ. الْقِيمَه fixed تَجْعَلُ الصُّورَه ثَابِتَه لَا تَتَحَرَّكُ مَعَ بَقِيَّةِ الصَّفْحَه، بَيْنَمَا الْقِيمَه scroll تَجْعَلُ الصُّورَه تَتَحَرَّكُ مَعَ مُحْتَوَى الصَّفْحَه عِنْدَ التَّمْرِيرِ، وَهِيَ الْقِيمَه الِافْتِرَاضِيَّه فِي مُتَصَفِّحَاتُ الْوِبّ.",
+        "caption_text": "القيم المتاحة هي fixed للثبات و scroll للحركة مع محتوى الصفحة."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "الوصف"
+        ],
+        "rows": [
+          [
+            "fixed",
+            "الصورة ثابتة لا تتحرك"
+          ],
+          [
+            "scroll",
+            "الصورة تتحرك مع الصفحة"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_attachment.asp"
+      ]
+    },
+    {
+      "id": "code_fixed",
+      "title": "تطبيق القيمة fixed",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيد background-image لِتَعْيِينِ مَسَارِ الصُّورَه، ثُمَّ نَضْبِط background-repeat عَلَى no-repeat لِعَدَمِ تَكْرَارِهَا، وَنُحَدِّد background-position فِي الزَّاوِيَه الْيُمْنَى الْعُلْوِيَّه، وَأَخِيراً نَضْبِط background-attachment عَلَى fixed.",
+        "caption_text": "استخدام القيمة fixed لتثبيت صورة الخلفية في مكانها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-image: url(\"img_tree.png\");\n  background-repeat: no-repeat;\n  background-position: right top;\n  background-attachment: fixed;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_attachment.asp"
+      ]
+    },
+    {
+      "id": "code_scroll",
+      "title": "تطبيق القيمة scroll",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَغْيِيرِ الْقِيمَه إِلَى scroll. هَذَا يَعْنِي أَنَّ الصُّورَه سَتَتَحَرَّكُ مَعَ بَقِيَّةِ مُحْتَوَى الصَّفْحَه عِنْدَ التَّمْرِيرِ لِلْأَسْفَلِ أَوْ لِلْأَعْلَى. هَذَا هُوَ السُّلُوكُ الطَّبِيعِيُّ الَّذِي نَرَاهُ فِي مُعْظَمِ مَوَاقِعِ الْوِبّ.",
+        "caption_text": "استخدام القيمة scroll لجعل الخلفية تتحرك مع الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-image: url(\"img_tree.png\");\n  background-repeat: no-repeat;\n  background-position: right top;\n  background-attachment: scroll;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_attachment.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَام background-attachment، تَأَكَّدْ مِنْ أَنَّ الصُّورَه مُنَاسِبَه لِلْحَجْمِ. إِذَا كَانَتِ الصُّورَه صَغِيرَه جِدّاً، قَدْ لَا تَظْهَرُ بِشَكْلٍ جَمَالِيٍّ عِنْدَ التَّثْبِيتِ. أَيْضاً، تَجَنَّبْ اسْتِخْدَامَ صُوَرٍ كَبِيرَةِ الْحَجْمِ لِتَحْسِينِ أَدَاءِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "نصائح لتحسين الأداء وتجربة المستخدم عند استخدام صور الخلفية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام صور محسنة الحجم",
+          "اختيار صور ذات دقة مناسبة",
+          "اختبار التوافق مع مختلف الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_attachment.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِاخْتِصَارٍ، تُعَدُّ خَاصِيَّةِ background-attachment أَدَاه قَوِيَّه لِلتَّحَكُّمِ فِي تَفَاعُلِ الْخَلْفِيَّه مَعَ حَرَكَةِ الْمُسْتَخْدِمِ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِنَفْسِكُمْ لِتَرَوْا الْفَرْقَ الْوَاضِحَ بَيْنَ الْقِيمَتَيْنِ. شُكْراً لِمُتَابَعَتِكُمْ، وَنَلْتَقِي فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "تعلمنا اليوم كيفية التحكم في ثبات وحركة خلفية الصفحة باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الخاصية تتحكم في ثبات الخلفية",
+          "القيمة fixed تمنع التمرير",
+          "القيمة scroll تسمح بالتمرير",
+          "تطبيق عملي عبر CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_background_attachment.asp"
+      ]
+    }
+  ]
+}
