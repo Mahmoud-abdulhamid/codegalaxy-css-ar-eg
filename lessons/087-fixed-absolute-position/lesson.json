@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "87",
+  "title": "CSS Fixed and Absolute Positioning",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية عمل position: fixed في صفحات الويب",
+    "التعرف على الفرق بين position: absolute و position: relative",
+    "تطبيق الخصائص top و right و bottom و left للتحكم في المواقع",
+    "إدراك تأثير العناصر على تدفق المستند الطبيعي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_positioning_fixed_absolute.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحديد المواقع",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي مَوَاقِعِ الْعَنَاصِرِ بِاسْتِخْدَام position: fixed و position: absolute لِتَصْمِيمِ وَاجِهَاتٍ احْتِرَافِيَّه.",
+        "caption_text": "سنتعلم اليوم كيفية التحكم في مواقع العناصر باستخدام position: fixed و position: absolute."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم الدقيق في أماكن العناصر",
+          "فهم position: fixed للثبات أثناء التمرير",
+          "فهم position: absolute بالنسبة للأب",
+          "تأثير التموضع على تدفق الصفحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_fixed_absolute.asp"
+      ]
+    },
+    {
+      "id": "fixed-position",
+      "title": "شرح position: fixed",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَام position: fixed، يَبْقَى الْعُنْصُرُ ثَابِتاً فِي مَكَانِهِ بِالنِّسْبَه لِلَةِ viewport، حَتَّى عِنْدَ تَمْرِيرِ الصَّفْحَه. هَذَا الْعُنْصُرُ لَا يَتْرُكُ فَرَاغاً فِي مَكَانِهِ الْأَصْلِيِّ فِي الصَّفْحَه.",
+        "caption_text": "العنصر الذي يستخدم position: fixed يبقى ثابتا في مكانه بالنسبة للـ viewport حتى عند التمرير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.fixed {\n  position: fixed;\n  bottom: 0;\n  right: 0;\n  width: 300px;\n  border: 3px solid #73AD21;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_fixed_absolute.asp"
+      ]
+    },
+    {
+      "id": "absolute-position",
+      "title": "شرح position: absolute",
+      "narration": {
+        "spoken_text": "أَمَّا position: absolute فَيَجْعَلُ الْعُنْصُرَ يَتَمَوْضَعُ بِالنِّسْبَه لِأَقْرَبِ عُنْصُرٍ أَبٍ لَهُ لَيْس static. إِذَا لَمْ يُوجَدْ أَبٌ مُتَمَوْضِعٌ، فَإِنَّهُ يَعْتَمِدُ عَلَى body وَيَتَحَرَّكُ مَعَ تَمْرِيرِ الصَّفْحَه.",
+        "caption_text": "يتموضع العنصر absolute بالنسبة لأقرب أب له يمتلك position غير static."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.relative {\n  position: relative;\n  width: 400px;\n  height: 200px;\n  border: 3px solid green;\n}\ndiv.absolute {\n  position: absolute;\n  top: 80px;\n  right: 0;\n  width: 200px;\n  height: 100px;\n  border: 3px solid red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_fixed_absolute.asp"
+      ]
+    },
+    {
+      "id": "flow-impact",
+      "title": "تأثير التموضع على التدفق",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَعْلَمَ أَنَّ الْعَنَاصِرَ الْمُتَمَوْضِعَه بَةِ absolute تُحْذَفُ مِنْ تَدَفُّقِ الْمُسْتَنَدِ الطَّبِيعِيِّ، مِمَّا يَعْنِي أَنَّهَا قَدْ تَتَدَاخَلُ مَعَ عَنَاصِرَ أُخْرَى فِي الصَّفْحَه، لِذَا يَجِبُ الْحَذَرُ عِنْدَ اسْتِخْدَامِهَا.",
+        "caption_text": "العناصر ذات position: absolute تخرج من تدفق المستند الطبيعي وقد تتداخل مع عناصر أخرى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "العنصر يخرج من التدفق الطبيعي",
+          "إمكانية التداخل مع عناصر أخرى",
+          "يستخدم top و right و bottom و left للتحكم",
+          "يجب تحديد position للأب للتحكم الدقيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_fixed_absolute.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "فِي هَذِهِ الْمُعَايَنَه، نَرَى كَيْفَ يَظْهَرُ الْعُنْصُرُ الثَّابِتُ فِي الزَّاوِيَه السُّفْلِيَّه الْيُمْنَى، بَيْنَمَا يَتَمَوْضَعُ الْعُنْصُرُ الْمُطْلَقُ دَاخِلَ الْإِطَارِ الْأَخْضَرِ بِدِقَّه وَفْقاً لِلْإِحْدَاثِيَّاتِ الَّتِي حَدَّدْنَاهَا.",
+        "caption_text": "تظهر العناصر في المتصفح بناء على قيم position المحددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<div class=\"relative\">\n  <div class=\"absolute\">Absolute Element</div>\n</div>\n<div class=\"fixed\">Fixed Element</div>",
+        "highlight_lines": [],
+        "output": "Fixed Element (Bottom Right)\nAbsolute Element (Inside Relative Box)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_fixed_absolute.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "نَصِيحَه لَكُمْ يَا أَصْدِقَائِي، اسْتَخْدِمُوا position: fixed لِلْقَوَائِمِ الْعُلْوِيَّه أَوِ الْأَزْرَارِ الثَّابِتَه، وَاسْتَخْدِمُوا position: absolute بِحَذَرٍ مَعَ الْأَبَوَاتِ الْمُتَمَوْضِعَه لِتَجَنُّبِ مَشَاكِلِ التَّدَاخُلِ فِي التَّصْمِيمِ.",
+        "caption_text": "استخدم position: fixed للقوائم الثابتة، وكن حذرا مع position: absolute لتجنب التداخل."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم fixed للقوائم الثابتة",
+          "استخدم relative للأب لاحتواء absolute",
+          "اختبر التصميم على شاشات مختلفة",
+          "تجنب الإفراط في استخدام absolute"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_fixed_absolute.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمِ حَوْل position: fixed و absolute. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا التَّأْثِيرَ بِأَعْيُنِكُمْ.",
+        "caption_text": "قم بتجربة الأكواد بنفسك عبر الرابط في الوصف لتطوير مهاراتك في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح position: fixed",
+          "تم شرح position: absolute",
+          "تم توضيح الفرق بينهما",
+          "راجع الرابط في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_positioning_fixed_absolute.asp"
+      ]
+    }
+  ]
+}
