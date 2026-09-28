@@ -1,4 +1,12 @@
-img.a { vertical-align: baseline; }
-img.b { vertical-align: text-top; }
-img.d { vertical-align: sub; }
-img.e { vertical-align: super; }
+img.a {
+  vertical-align: baseline;
+}
+img.b {
+  vertical-align: text-top;
+}
+img.d {
+  vertical-align: sub;
+}
+img.e {
+  vertical-align: super;
+}
