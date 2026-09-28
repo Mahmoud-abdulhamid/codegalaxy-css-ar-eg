@@ -65,7 +65,7 @@
         "type": "code",
         "language": "html",
         "filename": "index.html",
-        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\n  </head>\n  <body>\n    <i class=\"material-icons\">cloud</i>\n    <i class=\"material-icons\">favorite</i>\n  </body>\n</html>",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\n  </head>\n  <body>\n    <i class=\"material-icons\">cloud</i>\n    <i class=\"material-icons\">favorite</i>\n  </body>\n</html>",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
