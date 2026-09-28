@@ -96,7 +96,7 @@
         "type": "code",
         "language": "css",
         "filename": "style.css",
-        "code": "p.lowercase {\n  text-transform: lowercase;\n}\n\np.capitalize {\n  text-transform: capitalize;\n}",
+        "code": "p.lowercase {\n  text-transform: lowercase;\n}\np.capitalize {\n  text-transform: capitalize;\n}",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
