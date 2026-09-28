@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "45",
+  "title": "CSS Outline Color",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام property المسمى outline-color لتحديد لون الإطار الخارجي في CSS",
+    "استخدام الألوان بالأسماء المباشرة مثل red وgreen",
+    "تطبيق قيم الألوان المختلفة مثل HEX وRGB وHSL داخل عناصر الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_outline_color.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن خصائص Outline Color في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ اسْتِخْدَام outline-color لِتَحْدِيدِ لَوْنِ الإِطَارِ الْخَارِجِيِّ لِعَنَاصِرِ الصَّفْحَه بِكُلِّ سُهُولَه.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتعلم استخدام outline-color وتحديد لون الإطار الخارجي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على خصائص outline-color في CSS",
+          "تحديد لون الإطار الخارجي للعناصر بدقة",
+          "تطبيق تنسيقات متقدمة على صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_color.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "القواعد الأساسية لإطارات عناصر الويب",
+      "narration": {
+        "spoken_text": "لِنَحْوِ التَّمْيِيزِ بَيْنَ الحَدِّ الدَّاخِلِيِّ والإِطَارِ الخَارِجِيِّ، نَسْتَخْدِمُ العَنَاصِرَ مِثْل p مَعَ خصائص border و padding لِتَوْضِيحِ الشَّكْلِ العَامِّ قَبْلَ تَطْبِيق outline-color.",
+        "caption_text": "استخدام border و padding مع الفقرات لتوضيح الفرق بين الحدود والإطارات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  border: 1px solid black;\n  padding: 5px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_color.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "أمثلة الألوان المباشرة مع Outline Style",
+      "narration": {
+        "spoken_text": "نَسْتَطِيعُ تَطْبِيقَ قِيَمٍ مُخْتَلِفَه مِثْل solid red أَوْ dotted blue أَوْ outset green، حَيْثُ نُحَدِّدُ لون الإِطَارِ مَعَ نمطه المفضل بِبَسَاطَه تَامَّه.",
+        "caption_text": "تطبيق أنواع وألوان مختلفة للإطار الخارجي باستخدام outline-style وoutline-color."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.ex1 {\n  outline-style: solid;\n  outline-color: red;\n}\np.ex2 {\n  outline-style: dotted;\n  outline-color: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_color.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "المزيد من أنماط الألوان المباشرة",
+      "narration": {
+        "spoken_text": "نُتَابِعُ بَقِيَّةِ الأَمْثِلَه مِثْل outset green و solid invert لِعَرْضِ كَيْفِيَّةِ تَبَادُلِ الأَلْوَانِ تِلْقَائِيّاً بِحَسَبِ خَفْيَه خَلْفِيَّةِ العُنْصُرِ لِلْحُصُولِ عَلَى أَفْضَلِ مَظْهَرٍ.",
+        "caption_text": "تطبيق أنماط إضافية مثل outset green و solid invert."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.ex3 {\n  outline-style: outset;\n  outline-color: green;\n}\np.ex4 {\n  outline-style: solid;\n  outline-color: invert;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_color.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "استخدام قيم HEX لتحديد الألوان",
+      "narration": {
+        "spoken_text": "إِلَى جَانِبِ الأَسْمَاءِ المُبَاشَرَه، يُمْكِنُنَا اسْتِخْدَامُ قِيَم hexadecimal المعروفَه بِاسْم HEX مِثْل ff0000 لِتَحْدِيدِ اللَّوْنِ الأَحْمَرِ بِدِقَّه عَالِيَه دَاخِلَ صفحَةِ الْوِبّ.",
+        "caption_text": "تحديد لون الإطار الخارجي باستخدام قيم HEX مثل #ff0000."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.ex1 {\n  outline-style: solid;\n  outline-color: #ff0000;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_color.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "استخدام قيم RGB لتحديد الألوان",
+      "narration": {
+        "spoken_text": "كَمَا نَسْتَطِيعُ أَيْضاً اسْتِخْدَامَ دَالَّةِ rgb لِتَحْدِيدِ شِدَّةِ الأَلْوَانِ الأَحْمَرِ والأَخْضَرِ والأَزْرَقِ، مِثْلَ كتابَةِ rgb لِلْوُصُولِ إِلَى التَّنْسِيقِ المَطْلُوبِ بِكُلِّ مَرُونَه دَاخِلَ التَّصْمِيمِ.",
+        "caption_text": "استخدام دالة RGB لتحديد الألوان مثل rgb(255, 0, 0)."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.ex1 {\n  outline-style: solid;\n  outline-color: rgb(255, 0, 0);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_color.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "استخدام قيم HSL لتحديد الألوان",
+      "narration": {
+        "spoken_text": "وَأَخِيراً نَسْتَخْدِمُ تَنْسِيق hsl القَائِمَ عَلَى دَرَجَةِ اللِّوْنِ وَالإِشْبَاعِ وَالإِضَاءَه، مِثْل hsl لِتَحْدِيدِ الأَلْوَانِ بِاحْتِرَافِيَّه عَالِيَه فِي مَشَارِيعِ تَصْمِيمِ صَفَحَاتِ الْوِبّ.",
+        "caption_text": "استخدام قيم HSL لتحديد ألوان الإطار الخارجي باحترافية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.ex1 {\n  outline-style: solid;\n  outline-color: hsl(0, 100%, 50%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_color.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس وأفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةِ اسْتِخْدَام outline-color بِأَسْمَاءِ الأَلْوَانِ وَقِيَم HEX وَRGB وَHSL لِتَكْوِينِ تَصْمِيمَاتِ وِبٍّ جَذَّابَه وَمُنَاسَمَه لِكُلِّ المَنَصَّاتِ.",
+        "caption_text": "خلاصة استخدام خصائص outline-color وقيم الألوان المختلفة في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام الأسماء المباشرة للألوان في outlines",
+          "تطبيق قيم HEX وRGB وHSL المرنة",
+          "مراجعة دورة CSS Colors لمزيد من التفاصيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_outline_color.asp"
+      ]
+    }
+  ]
+}
