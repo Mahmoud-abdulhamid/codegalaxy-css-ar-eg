@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "6",
+  "title": "CSS Selectors Grouping Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تجميع الـ Selectors في CSS",
+    "تطبيق التجميع على الـ Elements مثل h1 و p",
+    "تحسين كفاءة الكود البرمجي",
+    "حل تحديات CSS البرمجية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_selectors.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تجميع الـ Selectors",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةِ تَجْمِيع Selectors لِتَقْلِيلِ تَكْرَارِ الْكُودِ، وَهِيَ مَهَارَه أَسَاسِيَّه لِكُلِّ مُطَوِّرِ وِبٍّ مُحْتَرِفٍ.",
+        "caption_text": "مرحبا بكم في درس تجميع الـ Selectors في CSS لتحسين كفاءة الكود."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجميع الـ Selectors يقلل من تكرار الكود",
+          "يتم فصل الـ Selectors باستخدام الفاصلة",
+          "طريقة فعالة لتطبيق نفس الـ Styles على عناصر مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_selectors.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم الـ Grouping Selectors",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُرِيدُ تَطْبِيقَ نَفْسِ الْخَصَائِصِ عَلَى عَنَاصِرَ مُخْتَلِفَه، نَقُومُ بِكِتَابَةِ Selector ثُمَّ نَضَعُ فَاصِلَه بَيْنَ كُلِّ عُنْصُرٍ وَالْآخَرِ. هَذَا يُسَاعِدُنَا فِي الْحِفَاظِ عَلَى نَظَافَةِ الْكُودِ وَسُرْعَةِ الْأَدَاءِ.",
+        "caption_text": "نستخدم الفاصلة لتجميع الـ Selectors وتطبيق نفس الـ Styles بكفاءة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام الفاصلة (,) للفصل بين الـ Selectors",
+          "تطبيق الـ Styles داخل أقواس المجموعة",
+          "مثال: h1, p color: blue"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_selectors.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كتابة الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ الْعَمَلِيِّ. نَقُومُ بِتَجْمِيع h1 و p لِتَطْبِيقِ لَوْنٍ مُوَحَّدٍ عَلَيْهِمَا. لَاحِظْ كَيْفَ نَكْتُب Selectors بِشَكْلٍ مُنَظَّمٍ وَمُحْتَرِفٍ دَاخِلَ مِلَفِّ CSS.",
+        "caption_text": "تجميع الـ h1 والـ p لتطبيق نفس الـ Styles."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1, p {\n  text-align: center;\n  color: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_selectors.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "تحليل أجزاء الكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيد h1 و p مَعاً. الْفَاصِلَه هِيَ الْمُفْتَاحُ هُنَا. بَعْدَ ذَلِكَ، نَفْتَحُ أَقْوَاسَ الْمَجْمُوعَه لِكِتَابَةِ Declarations مِثْل text-align و color لِتَنْفِيذِ التَّأْثِيرِ عَلَى كِلَا الْعُنْصُرَيْنِ.",
+        "caption_text": "شرح تفصيلي لكيفية عمل الـ Grouping Selectors في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "h1, p: الـ Selectors المجمعة",
+          "text-align: center: محاذاة النص للمنتصف",
+          "color: red: تغيير لون النص إلى الأحمر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_selectors.asp"
+      ]
+    },
+    {
+      "id": "browser_output",
+      "title": "المخرجات في المتصفح",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَيَقُومُ وِبّ Browser بِتَنْسِيقِ كُلِّ عَنَاصِر h1 و p فِي صَفْحَةِ الْوِبّ بِالْلَّوْنِ الْأَحْمَرِ وَتَوْسِيطِهَا. هَذَا يُوَفِّرُ عَلَيْنَا كِتَابَةِ نَفْسِ الْكُودِ مَرَّتَيْنِ.",
+        "caption_text": "تظهر النتيجة في المتصفح بتنسيق موحد للعناصر المجمعة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<h1>هذا عنوان</h1>\n<p>هذه فقرة نصية.</p>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_selectors.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، احْرِصُوا دَائِماً عَلَى تَجْمِيع Selectors الْمُتَشَابِهَه فِي Styles. هَذَا لَا يُقَلِّلُ مِنْ حَجْمِ مِلَفِّ CSS فَقَطْ، بَلْ يَجْعَلُ صِيَانَةِ الْكُودِ أَمْراً سَهْلًا وَمُنَظَّماً لِأَيِّ مَشْرُوعِ وِبٍّ.",
+        "caption_text": "أفضل الممارسات لتنظيم الكود البرمجي في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجميع الـ Selectors يقلل حجم ملف الـ CSS",
+          "يسهل عملية التعديل والتطوير مستقبلا",
+          "يقلل من احتمالية حدوث أخطاء في التنسيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_selectors.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةِ تَجْمِيع Selectors بِاسْتِخْدَامِ الْفَاصِلَه. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا التَّحَدِّي بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "خلاصة الدرس: تجميع الـ Selectors مهارة أساسية لبرمجة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام الفاصلة لتجميع الـ Selectors",
+          "تطبيق الـ Styles بكفاءة عالية",
+          "قم بزيارة الرابط في الوصف لحل التحدي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_selectors.asp"
+      ]
+    }
+  ]
+}
