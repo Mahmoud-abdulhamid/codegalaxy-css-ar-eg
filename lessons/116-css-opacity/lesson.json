@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "116",
+  "title": "التحكم في شفافية العناصر باستخدام CSS",
+  "course": "CSS",
+  "objectives": [
+    "فهم خاصية opacity للتحكم في شفافية العناصر",
+    "استخدام خاصية opacity مع :hover لإنشاء تأثيرات تفاعلية",
+    "التعرف على مشكلة وراثة الشفافية في العناصر الأبناء",
+    "استخدام RGBA كبديل احترافي للتحكم في شفافية الخلفية فقط"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_image_transparency.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-da0671127c9be4e0.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_image_transparency.asp",
+      "source_url": "https://www.w3schools.com/css/css_image_transparency.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول خاصية opacity",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي شَفَافِيَّةِ الْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ opacity، وَهِيَ أَدَاه قَوِيَّه لِتَحْسِينِ التَّصْمِيمِ الْبَصَرِيِّ لِصَفْحَاتِ الْوِبّ.",
+        "caption_text": "تعد خاصية opacity من أهم الخصائص في CSS للتحكم في درجة شفافية العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية opacity تحدد درجة الشفافية",
+          "تتراوح القيم من 0.0 إلى 1.0",
+          "القيمة 1.0 تعني عنصر غير شفاف تماما",
+          "القيمة 0.0 تعني عنصر شفاف كليا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "basic_usage",
+      "title": "تطبيق خاصية opacity على الصور",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِتَطْبِيقِ هَذِهِ الْخَاصِيَّه عَلَى الصُّوَرِ. عِنْدَ كِتَابَةِ img opacity: 0.5 ، سَتَظْهَرُ الصُّورَه بِنِصْفِ شَفَافِيَّتِهَا الْأَصْلِيَّه، مِمَّا يُضِيفُ لَمْسَه جَمَالِيَّه لِتَصْمِيمِ مَوْقِعِ الْوِبّ.",
+        "caption_text": "تطبيق بسيط لخاصية opacity على عنصر img لجعل الصورة شبه شفافة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  opacity: 0.5;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "hover_effect",
+      "title": "تأثير الشفافية مع :hover",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً دَمْجُ خَاصِيَّةِ opacity مَعَ :hover لِتَغْيِيرِ الشَّفَافِيَّه عِنْدَ مُرُورِ مُؤَشِّرِ الْفَأْرَه. هَذَا يُعْطِي تَفَاعُلِيَّه رَائِعَه لِلْمُسْتَخْدِمِ، حَيْثُ تَتَغَيَّرُ الصُّورَه مِنْ شَفَافَه إِلَى وَاضِحَه تَمَاماً.",
+        "caption_text": "استخدام :hover لتغيير الشفافية عند مرور الفأرة فوق العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  opacity: 0.5;\n}\nimg:hover {\n  opacity: 1.0;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "inheritance_issue",
+      "title": "مشكلة وراثة الشفافية",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَام opacity مَعَ حَاوِيَةِ div، سَتَرِثُ جَمِيعُ الْعَنَاصِرِ الْأَبْنَاءِ دَرَجَةِ الشَّفَافِيَّه نَفْسَهَا. هَذَا قَدْ يَجْعَلُ النَّصَّ دَاخِلَ الصُّنْدُوقِ صَعْبَ الْقِرَاءَه، وَهُوَ أَمْرٌ يَجِبُ تَجَنُّبُهُ فِي التَّصْمِيمِ الْأِحْتِرَافِيِّ.",
+        "caption_text": "تنبيه: خاصية opacity تجعل العناصر الأبناء شفافة أيضا مما يؤثر على وضوح النصوص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  opacity: 0.3;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "rgba_solution",
+      "title": "الحل الاحترافي باستخدام RGBA",
+      "narration": {
+        "spoken_text": "لِتَجَنُّبِ مُشْكِلَةِ الْوِرَاثَه، نَسْتَخْدِم background-color مَعَ قِيمَةِ RGBA. هَذِهِ الطَّرِيقَه تَسْمَحُ لَنَا بِتَحْدِيدِ الشَّفَافِيَّه لِلْخَلْفِيَّه فَقَطْ دُونَ التَّأْثِيرِ عَلَى النُّصُوصِ أَوْ الْعَنَاصِرِ الْأُخْرَى دَاخِلَ الصُّنْدُوقِ.",
+        "caption_text": "استخدام RGBA للتحكم في شفافية الخلفية دون التأثير على محتوى العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  background: rgba(4, 170, 109, 0.3);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "full_example",
+      "title": "مثال عملي متكامل",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَرَى كَيْفَ نُصَمِّمُ صُنْدُوقاً شَفَّافاً بِاسْتِخْدَام RGBA. هَذَا الْكُودُ يُوَضِّحُ كَيْفِيَّةِ تَنْسِيقِ الْخَلْفِيَّه وَالنَّصِّ بِشَكْلٍ مُنْفَصِلٍ لِضَمَانِ أَعْلَى دَرَجَاتِ الْوُضُوحِ وَالْجَمَالِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "مثال كامل يوضح كيفية بناء صندوق شفاف يحتوي على نص واضح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      div.transbox {\n        background-color: rgba(255, 255, 255, 0.6);\n        border: 1px solid black;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"background\">\n      <div class=\"transbox\">\n        <p>This is some text.</p>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا عَلَى طُرُقِ التَّحَكُّمِ فِي الشَّفَافِيَّه. تَذَكَّرُوا أَنَّ opacity تُؤَثِّرُ عَلَى الْعُنْصُرِ بِالْكَامِلِ، بَيْنَمَا RGBA هِيَ الْخِيَارُ الْأَفْضَلُ لِلْخَلْفِيَّاتِ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بَأَنْفُسِكُمْ وَطَوِّرُوا مَهَارَاتِكُمْ فِي CSS.",
+        "caption_text": "خلاصة: استخدم opacity للشفافية العامة، وRGBA للشفافية المخصصة للخلفيات."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "معاينة الصندوق الشفاف"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_transparency.asp"
+      ]
+    }
+  ]
+}
