@@ -53,9 +53,13 @@ p {
 
 ```css
 /* أربع قيم */
-p { border-style: dotted solid double dashed; }
+p {
+  border-style: dotted solid double dashed;
+}
 /* ثلاث قيم */
-p { border-style: dotted solid double; }
+p {
+  border-style: dotted solid double;
+}
 ```
 
 ## خلاصة الدرس
