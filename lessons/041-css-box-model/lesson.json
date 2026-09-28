@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "41",
+  "title": "CSS Box Model",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم CSS Box Model",
+    "التعرف على أجزاء الـ Box Model الأربعة",
+    "تعلم كيفية حساب العرض والارتفاع الكلي للعنصر",
+    "التمييز بين الـ content والـ padding والـ border والـ margin"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_boxmodel.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Box Model",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى مَفْهُومٍ جَوْهَرِيٍّ فِي تَصْمِيمِ صَفَحَاتِ الْوِبّ، وَهُو CSS Box Model. هَذَا الْمَفْهُومُ هُوَ الْأَسَاسُ لِكُلِّ التَّنْسِيقَاتِ و layout.",
+        "caption_text": "مرحبا بكم في درس CSS Box Model، المفهوم الأساسي لتصميم وتنسيق صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ CSS Box Model هو الأساس في تصميم الـ layout",
+          "كل HTML element في الصفحة يعامل كأنه صندوق",
+          "يساعدنا هذا النموذج في التحكم في المسافات والحدود"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "components",
+      "title": "أجزاء الـ Box Model",
+      "narration": {
+        "spoken_text": "كُلُّ صُنْدُوقٍ فِي Box Model يَتَكَوَّنُ مِنْ أَرْبَعَه أَجْزَاءٍ رَئِيسِيَّه. نَبْدَأُ مِنَ الدَّاخِلِ ب content، ثُمَّ نَجِد padding، بَعْدَهَا border، وَأَخِيراً margin الَّذِي يُحِيطُ بِالْعُنْصُرِ مِنْ خَارِجِهِ.",
+        "caption_text": "يتكون الـ Box Model من أربعة أجزاء: content، padding، border، و margin."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "content: المحتوى الفعلي مثل النصوص أو الصور",
+          "padding: المساحة الشفافة حول المحتوى",
+          "border: الإطار الذي يحيط بالـ padding والمحتوى",
+          "margin: المساحة الخارجية الفاصلة بين العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي على الـ Box Model",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيد width لِلْعُنْصُرِ، ثُمَّ نُضِيف border بِقِيمَةِ خَمْسَةِ عَشَرَ بيكسل، و padding بِخَمْسِينَ بيكسل، و margin بِعِشْرِينَ بيكسل. هَذِهِ الْخَصَائِصُ تُحَدِّدُ كَيْفِيَّةِ ظُهُورِ الْعُنْصُرِ عَلَى الشَّاشَه.",
+        "caption_text": "مثال برمجي يوضح استخدام خصائص الـ Box Model في CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 300px;\n  border: 15px solid green;\n  padding: 50px;\n  margin: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "calculation",
+      "title": "حساب العرض والارتفاع",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُحَدِّد width و height لِعُنْصُرٍ مَا، فَإِنَّنَا نُحَدِّدُ مَقَاسَات content فَقَطْ. لِحِسَابِ الْعَرْضِ الْكُلِّيِّ، يَجِبُ أَنْ نَجْمَعَ الْعَرْضَ مَع padding و border مِنَ الْجَانِبَيْنِ لِضَمَانِ دِقَّةِ التَّصْمِيمِ.",
+        "caption_text": "يجب إضافة الـ padding والـ border عند حساب العرض والارتفاع الكلي للعنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم Total width = width + left padding + right padding + left border + right border",
+          "مفهوم Total height = height + top padding + bottom padding + top border + bottom border",
+          "الـ margin لا يحسب ضمن حجم العنصر الفعلي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "detailed_example",
+      "title": "مثال حسابي دقيق",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، لَدَيْنَا عُنْصُرٌ بِعَرْضِ ثَلَاثِمِائَه وَعِشْرِينَ بيكسل. عِنْدَ إِضَافَةِ padding و border، يَصِلُ الْعَرْضُ الْكُلِّيُّ إِلَى ثَلَاثِمِائَه وَخَمْسِينَ بيكسل. هَذِهِ الْحِسَابَاتُ ضَرُورِيَّه لِتَجَنُّبِ مَشَاكِلِ التَّصْمِيمِ فِي مُخْتَلِف browsers.",
+        "caption_text": "مثال يوضح كيفية حساب العرض الكلي للعنصر بدقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 320px;\n  height: 50px;\n  padding: 10px;\n  border: 5px solid gray;\n  margin: 0;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_boxmodel.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، تَعَلَّمْنَا أَنَّ Box Model هُوَ الْمِفْتَاحُ لِفَهْمِ كَيْفِيَّةِ تَمَوْضُعِ الْعَنَاصِرِ. تَذَكَّرُوا دَائِماً أَنَّ margin خَارِجُ الْحِسَابَاتِ الْفِعْلِيَّه لِحَجْمِ الْعُنْصُرِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا النَّتَائِجَ مُبَاشَرَه.",
+        "caption_text": "الـ Box Model هو مفتاح التحكم في تخطيط صفحات الويب. جرب الأكواد بنفسك!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Box Model يحدد مساحة العنصر",
+          "احرص على حساب الـ padding والـ border بدقة",
+          "الـ margin يؤثر على المساحة الكلية حول العنصر",
+          "مارس كتابة الأكواد لتعزيز فهمك"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_boxmodel.asp"
+      ]
+    }
+  ]
+}
