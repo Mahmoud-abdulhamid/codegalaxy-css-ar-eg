@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "17",
+  "title": "CSS HSL and HSLA Colors",
+  "course": "CSS",
+  "objectives": [
+    "فهم نظام الألوان HSL في CSS",
+    "التعرف على مكونات Hue و Saturation و Lightness",
+    "تعلم كيفية إنشاء درجات الرمادي",
+    "استخدام HSLA مع قناة Alpha للتحكم في الشفافية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_colors_hsl.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول نظام الألوان HSL",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى نِظَامِ الْأَلْوَان HSL، وَهُوَ طَرِيقَه احْتِرَافِيَّه لِتَحْدِيدِ الْأَلْوَانِ فِي صَفْحَاتِ الْوِبّ بِاسْتِخْدَامِ دَرَجَةِ اللَّوْنِ وَالتَّشَبُّعِ وَالْإِضَاءَه.",
+        "caption_text": "نظام الألوان HSL يوفر طريقة مرنة لتحديد الألوان في صفحات الويب عبر ثلاث قيم أساسية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "HSL اختصار لـ Hue و Saturation و Lightness",
+          "يوفر تحكما دقيقا في خصائص اللون",
+          "يستخدم في CSS لتنسيق العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hsl.asp"
+      ]
+    },
+    {
+      "id": "hsl_components",
+      "title": "مكونات نظام HSL",
+      "narration": {
+        "spoken_text": "يَتَكَوَّن HSL مِنْ ثَلَاثِ قِيَمٍ. Hue هِيَ دَرَجَه عَلَى عَجَلَةِ الْأَلْوَانِ مِنْ صِفْرٍ إِلَى ثَلَاثِمِائَه وَسِتِّينَ. Saturation هِيَ نِسْبَه مِئَوِيَّه لِتَحْدِيدِ كَثَافَةِ اللَّوْنِ، بَيْنَمَا Lightness تُحَدِّدُ مِقْدَارَ الضَّوْءِ فِي اللَّوْنِ.",
+        "caption_text": "تتكون صيغة hsl(hue, saturation, lightness) من ثلاث قيم رئيسية للتحكم في اللون."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "المكون",
+          "الوصف",
+          "النطاق"
+        ],
+        "rows": [
+          [
+            "Hue",
+            "درجة اللون",
+            "0-360"
+          ],
+          [
+            "Saturation",
+            "كثافة اللون",
+            "0-100"
+          ],
+          [
+            "Lightness",
+            "إضاءة اللون",
+            "0-100"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hsl.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كتابة كود HSL",
+      "narration": {
+        "spoken_text": "لِنُطَبِّقْ ذَلِكَ عَمَلِيّاً. نَكْتُبُ الْقِيمَه دَاخِلَ خَاصِّيَّةِ color. لَاحِظْ أَنَّ صِفْرَ دَرَجَه هُوَ الْأَحْمَرُ، وَمِائَه وَعِشْرُونَ هُوَ الْأَخْضَرُ، وَمِائَتَانِ وَأَرْبَعُونَ هُوَ الْأَزْرَقُ. هَذِهِ الْقِيَمُ تُعْطِي تَحَكُّماً كَامِلاً فِي التَّصْمِيمِ.",
+        "caption_text": "مثال على استخدام HSL في CSS لتحديد لون النص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  color: hsl(0, 100%, 50%);\n}\np {\n  color: hsl(120, 100%, 50%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hsl.asp"
+      ]
+    },
+    {
+      "id": "shades_of_gray",
+      "title": "درجات الرمادي",
+      "narration": {
+        "spoken_text": "لِلْحُصُولِ عَلَى دَرَجَاتِ الرَّمَادِيِّ، نَضْبُط Hue و Saturation عَلَى صِفْرٍ. بَعْدَ ذَلِكَ، نَقُومُ بِتَغْيِيرِ قِيمَةِ Lightness مِنْ صِفْرٍ إِلَى مِائَه بِالْمِائَه لِلْحُصُولِ عَلَى دَرَجَاتٍ مُخْتَلِفَه بَيْنَ الْأَسْوَدِ وَالْأَبْيَضِ.",
+        "caption_text": "يمكن إنشاء درجات الرمادي عبر ضبط Hue و Saturation على 0 وتغيير Lightness."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم Hue = 0",
+          "مفهوم Saturation = 0",
+          "Lightness = 0 (أسود)",
+          "Lightness = 100 (أبيض)"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hsl.asp"
+      ]
+    },
+    {
+      "id": "hsla_value",
+      "title": "نظام HSLA والشفافية",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى HSLA، وَهُوَ امْتِدَادٌ لَةِ HSL مَعَ قَنَاةِ Alpha. هَذِهِ الْقَنَاه تَسْمَحُ لَنَا بِتَحْدِيدِ شَفَافِيَّةِ اللَّوْنِ بِقِيمَه تَتَرَاوَحُ بَيْنَ صِفْرٍ فَاصِلَه صِفْرٍ وَوَاحِدٍ فَاصِلَه صِفْرٍ.",
+        "caption_text": "نظام HSLA يضيف قناة Alpha للتحكم في شفافية العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  background-color: \n  hsla(240, 100%, 50%, 0.3);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hsl.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةِ اسْتِخْدَام HSL و HSLA فِي CSS. هَذِهِ الْأَنْظِمَه تُعَدُّ أَدَاه قَوِيَّه لِكُلِّ مُطَوِّرِ وِبٍّ يُرِيدُ التَّحَكُّمَ فِي الْأَلْوَانِ بِدِقَّه. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِنَفْسِكُمْ لِتَرَوْا النَّتَائِجَ الرَّائِعَه.",
+        "caption_text": "نظام HSL و HSLA أدوات أساسية لتصميم واجهات ويب احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "HSL يسهل فهم الألوان",
+          "HSLA يضيف الشفافية",
+          "تطبيقات عملية واسعة في CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_hsl.asp"
+      ]
+    }
+  ]
+}
