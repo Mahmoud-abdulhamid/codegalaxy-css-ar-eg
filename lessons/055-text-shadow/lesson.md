@@ -48,8 +48,7 @@ h1 {
 
 ```css
 h1 {
-  text-shadow: 0 0 3px #ff0000,
-               0 0 5px #0000ff;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
 }
 ```
 
