@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "24",
+  "title": "CSS Backgrounds Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية تطبيق خصائص Background في CSS",
+    "التعامل مع تحديات تنسيق خلفيات عناصر الويب",
+    "تطبيق المهارات المكتسبة في تصميم واجهات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_background.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي CSS Backgrounds",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَخُوضُ تَحَدِّي CSS Backgrounds لِتَطْبِيقِ مَهَارَاتِنَا فِي تَصْمِيمِ خَلْفِيَّاتِ عَنَاصِرِ الْوِبّ بِشَكْلٍ احْتِرَافِيٍّ وَمُبْتَكَرٍ.",
+        "caption_text": "مرحبا بكم في درس تحدي CSS Backgrounds لتطبيق مهارات تصميم خلفيات عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على خصائص Background في CSS",
+          "تطبيق التحديات البرمجية لتعزيز الفهم",
+          "تحسين مظهر صفحات الويب عبر الخلفيات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_background.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية للخلفيات",
+      "narration": {
+        "spoken_text": "تُعَدُّ خَصَائِص Background جُزْءاً أَسَاسِيّاً فِي CSS. نَسْتَخْدِم background-color لِتَلْوِينِ الْخَلْفِيَّه، و background-image لِإِدْرَاجِ صُوَرٍ، و background-repeat لِلتَّحَكُّمِ فِي تَكْرَارِ الصُّورَه دَاخِلَ أَيِّ Element.",
+        "caption_text": "تعد خصائص Background أساسية في CSS مثل background-color و background-image و background-repeat."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "background-color: تحديد لون الخلفية",
+          "background-image: إضافة صورة للخلفية",
+          "background-repeat: التحكم في تكرار الصورة",
+          "background-position: تحديد موقع الصورة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_background.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "كتابة كود الخلفية",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْكُودِ. نَقُومُ بِتَحْدِيد Selector مِثْل body، ثُمَّ نَضَعُ خَصَائِص Background دَاخِلَ أَقْوَاسِ التَّنْسِيقِ. هَذِهِ الْخُطْوَه تُعَدُّ حَجَرَ الْأَسَاسِ لِتَحْسِينِ مَظْهَرِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "نبدأ بتحديد Selector مثل body وتطبيق خصائص Background داخل أقواس التنسيق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-color: lightblue;\n  background-image: url('bg.jpg');\n  background-repeat: no-repeat;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_background.asp"
+      ]
+    },
+    {
+      "id": "code_explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَعْيِين background-color لِتَكُون lightblue، وَاسْتَخْدَمْنَا background-image لِجَلْبِ صُورَه. أَمَّا background-repeat فَقَدْ ضَبَطْنَاهَا عَلَى no-repeat لِضَمَانِ عَدَمِ تَكْرَارِ الصُّورَه فِي الْخَلْفِيَّه.",
+        "caption_text": "شرح الخصائص: background-color للون، background-image للصورة، و background-repeat لمنع التكرار."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "background-color: يحدد لون خلفية العنصر",
+          "url('bg.jpg'): مسار الصورة المستخدمة",
+          "no-repeat: يمنع تكرار الصورة في الصفحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_background.asp"
+      ]
+    },
+    {
+      "id": "shorthand_concept",
+      "title": "استخدام Background Shorthand",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا اخْتِصَارُ جَمِيعِ هَذِهِ الْخَصَائِصِ فِي سَطْرٍ وَاحِدٍ بِاسْتِخْدَامِ خَاصِيَّةِ background. هَذَا يُسَاعِدُ فِي جَعْلِ الْكُودِ أَكْثَرَ نَظَافَه وَسُرْعَه فِي الْقِرَاءَه وَالتَّنْفِيذِ دَاخِلَ مِلَفَّات CSS.",
+        "caption_text": "يمكن اختصار خصائص الخلفية في سطر واحد باستخدام خاصية background لجعل الكود أكثر نظافة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background: lightblue url('bg.jpg') no-repeat;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_background.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "عِنْدَ الْعَمَلِ عَلَى خَلْفِيَّاتِ الْوِبّ، احْرِصْ دَائِماً عَلَى اخْتِيَارِ صُوَرٍ مُنَاسِبَةِ الْحَجْمِ لِتَحْسِينِ أَدَاءِ الصَّفْحَه. كَمَا يُفَضَّلُ تَحْدِيد background-color كَخِيَارٍ احْتِيَاطِيٍّ فِي حَالَةِ عَدَمِ تَحْمِيلِ الصُّورَه.",
+        "caption_text": "أفضل الممارسات: اختيار صور مناسبة الحجم وتحديد لون خلفية احتياطي لضمان تجربة مستخدم جيدة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحسين حجم الصور لسرعة التحميل",
+          "توفير لون احتياطي background-color",
+          "استخدام Shorthand لتنظيم الكود"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_background.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا تَحَدِّيَ الْخَلْفِيَّاتِ. تَعَلَّمْنَا كَيْفِيَّةِ التَّحَكُّمِ فِي الْأَلْوَانِ وَالصُّورِ وَاخْتِصَارِ الْأَكْوَادِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو.",
+        "caption_text": "خلاصة: تعلمنا التحكم في الخلفيات واختصار الأكواد. جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية خصائص Background",
+          "تم شرح استخدام Shorthand",
+          "تم التأكيد على أفضل الممارسات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_background.asp"
+      ]
+    }
+  ]
+}
