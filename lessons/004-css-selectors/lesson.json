@@ -107,7 +107,7 @@
         "type": "code",
         "language": "html",
         "filename": "index.html",
-        "code": "<p class=\"center large\">\n  هذه الفقرة تحمل كلاسين.\n</p>",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <p class=\"center large\">هذه الفقرة تحمل كلاسين.</p>\n  </body>\n</html>",
         "highlight_lines": [],
         "output": null,
         "output_status": "not_applicable",
