@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "341",
+  "title": "How TO - Change Background on Scroll",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تغيير خلفية صفحة الويب أثناء التمرير باستخدام CSS",
+    "تطبيق خصائص background-image و background-size و background-position",
+    "استخدام خاصية position: fixed لتثبيت النصوص والفلتر في المنتصف",
+    "التحكم في الشفافية والألوان باستخدام rgba و box-sizing"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة الدرس وأهمية تغيير الخلفية عند التمرير",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَغْيِيرِ خَلْفِيَّةِ صَفْحَةِ الْوِبّ أَوْ الثِّيِمِ عِنْدَ التَّمْرِيرِ اسْتِجَابَةً لِحَرَكَةِ الْمُسْتَخْدِمِ بِشَكْلٍ احْتِرَافِيٍّ وَجَذَّابٍ.",
+        "caption_text": "مرحبا بكم في درس جديد حول كيفية تغيير صور الخلفية عند التمرير باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم كيفية تغيير صور الخلفية عند التمرير",
+          "تحسين تجربة المستخدم عبر تأثيرات بصرية متقدمة",
+          "استخدام خصائص CSS الحديثة لتصميم سلس"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp"
+      ]
+    },
+    {
+      "id": "scene_html_structure",
+      "title": "بنية HTML لصفحة التمرير والخلفيات المتعددة",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بَبِنْيَةِ HTML الْخَاصَّةِ بِالْمُسْتَنَدِ. نُشَئُّ عِدَّةَ عَنَاصِرَ مِنْ نَوْعِ div مَعَ أَصْنَافٍ مُخْتَلِفَةِ مِثْلَ bg-image وَ img1 حَتَّى img6، بالإضافَةِ إِلَى عنصرِ نَصٍّ رَئِيسِيٍّ يَحْمِلُ الصِّنْفَ bg-text.",
+        "caption_text": "نكتب عناصر HTML المتعددة مع أصناف لربط كل قسم بصورة خلفية مستقلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"bg-image img1\"></div>\n    <div class=\"bg-image img2\"></div>\n    <div class=\"bg-image img3\"></div>\n    <div class=\"bg-image img4\"></div>\n    <div class=\"bg-image img5\"></div>\n    <div class=\"bg-image img6\"></div>\n    <div class=\"bg-text\">TEXT</div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عناصر DIV متتالية تحتل الشاشة لتكوين مساحة تمرير طويلة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp"
+      ]
+    },
+    {
+      "id": "scene_css_base_styles",
+      "title": "إعدادات الهيكل الأساسي وخصائص Box Sizing",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الآنَ لِكِتَابَةِ قَوَاعِدِ CSS. نَحْدِدُ لِكُلٍّ مِنْ tag ال body وَ html ارْتِفَاعَ مِئَةِ بِالْمِئَةِ مَعَ إلْغَاءِ الْهَوَامِشِ، وَنَسْتَخْدِمُ selector ال star لِتَفْعِيلِ box-sizing وَتَوَافُقِيَّةِ العناصِرِ.",
+        "caption_text": "نضبط ارتفاع الصفحة الكامل ونلغي الهوامش ونفعل خاصية box-sizing للجميع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body, html {\n  height: 100%;\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n}\n* {\n  box-sizing: border-box;\n}",
+        "highlight_lines": [],
+        "output": "إزالة الهوامش الافتراضية وضبط المعيار الأساسي للصفحة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp"
+      ]
+    },
+    {
+      "id": "scene_css_bg_image",
+      "title": "تنسيق صنف الخلفيات وضبط الأبعاد والتموضع",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْقِسْمِ، نُعَرِّفُ صِنْفَ ال bg-image بِارْتِفَاعِ خَمْسِينَ بِالْمِئَةِ لِضَمَانِ تَقْسِيمِ الشَّاشَةِ، مَعَ ضَبْطِ background-position لِتَكُونَ فِي ال center، وَعدمِ التَّكْرَارِ عَبْرَ background-repeat، والتغطيَةِ الْكَامِلَةِ عَبْرَ background-size.",
+        "caption_text": "نحدد خصائص الأبعاد والموضع والتغطية لصنف الخلفيات المشترك."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bg-image {\n  height: 50%;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}",
+        "highlight_lines": [],
+        "output": "خلفيات مرنة تتوسط الشاشة وتغطي المساحة بكفاءة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp"
+      ]
+    },
+    {
+      "id": "scene_css_individual_images",
+      "title": "تخصيص صور الخلفيات الفردية للأصناف المختلفة",
+      "narration": {
+        "spoken_text": "نُخَصِّصُ كُلَّ عُنْصُرٍ بِصُورَةٍ مُسْتَقِلَّةٍ عَبْرَ أَصْنَافِ ال img1 حَتَّى img6، مُسْتَخْدِمِينَ دَالَّةَ url لِجَلْبِ الرَّوَابِطِ الْخَاصَّةِ بِكُلِّ صُورَةٍ مِثْلَ الثُّلُوجِ وَالطَّبِيعَةِ وَالْغَابَاتِ.",
+        "caption_text": "نربط كل صنف من img1 إلى img6 بصورة خلفية مميزة عبر url."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".img1 {\n  background-image: url(\"img_snow.jpg\");\n}\n.img2 {\n  background-image: url(\"img_girl.jpg\");\n}\n.img3 {\n  background-image: url(\"img_lights.jpg\");\n}\n.img4 {\n  background-image: url(\"img_nature.jpg\");\n}\n.img5 {\n  background-image: url(\"img_forest.jpg\");\n}\n.img6 {\n  background-image: url(\"img_woods.jpg\");\n}",
+        "highlight_lines": [],
+        "output": "تغيير صور الخلفية تلقائياً عند التمرير بين العناصر.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp"
+      ]
+    },
+    {
+      "id": "scene_css_bg_text",
+      "title": "تنسيق النصوص الثابتة وتطبيق الشفافية والتحويلات",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إلَى صِنْفِ ال bg-text لِوَضْعِ النَّصِّ فِي مُنْتَصَفِ الشَّاشَةِ. نَسْتَخْدِمُ position الثَّابِتَ fixed، مَعَ خَاصِيَّةِ transform وَدَالَّةِ translate لِضَمَانِ التَّوَسُطِ التَّامِّ، وَتَوْفِيرِ لَوْنِ خَلْفِيَّةٍ شَفَّافٍ بَوَاسِطَةِ rgba.",
+        "caption_text": "نثبت النص في منتصف الشاشة ونضيف خلفية شبه شفافة وتوسيطا دقيقا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bg-text {\n  background-color: rgba(0,0,0, 0.4);\n  color: white;\n  font-weight: bold;\n  font-size: 80px;\n  border: 10px solid #f1f1f1;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 2;\n  width: 300px;\n  padding: 20px;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": "صندوق نصي ثابت وبارز في منتصف الشاشة فوق الخلفيات المتحركة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس ودعوة للتجربة العملية",
+      "narration": {
+        "spoken_text": "فِي الْخِتَامِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ دَمْجِ الْخَلْفِيَّاتِ الْمُتَعَدِّدَةِ مَعَ التَّمْرِيرِ وَالتَّثْبِيتِ بِوَاسِطَةِ position: fixed وَ rgba. نَنْصَحُكُمْ بِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِمُنَفْرِدِكُمْ وَتَطْبِيقِهَا فِي مَشَارِيعِكُمُ الْقَادِمَةِ.",
+        "caption_text": "ملخص شامل لدرس تغيير الخلفيات عند التمرير ودعوة لتطبيق الأكواد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام خلفيات متعددة تتغير عند التمرير",
+          "تثبيت العناصر والنصوص بالخاصية fixed",
+          "التحكم في الشفافية والمظهر الاحترافي للموقع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp"
+      ]
+    }
+  ]
+}
