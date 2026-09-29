@@ -3,6 +3,8 @@
   "lesson_id": "67",
   "title": "استخدام Bootstrap Icons في صفحات الويب",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية دمج Bootstrap Icons في صفحات الويب",
     "التعرف على طريقة استخدام Element من نوع i",
