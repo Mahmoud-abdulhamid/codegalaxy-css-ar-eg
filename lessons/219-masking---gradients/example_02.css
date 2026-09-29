@@ -1,0 +1,7 @@
+.mask1 {
+  max-width: 600px;
+  height: 400px;
+  background: url(img_5terre.jpg) no-repeat;
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
+}
