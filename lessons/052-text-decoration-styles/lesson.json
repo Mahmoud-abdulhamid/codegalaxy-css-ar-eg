@@ -3,6 +3,8 @@
   "lesson_id": "52",
   "title": "تنسيق خطوط الزينة في CSS",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "التحكم في نمط خط الزينة باستخدام text-decoration-style",
     "تعديل سمك خط الزينة عبر text-decoration-thickness",
