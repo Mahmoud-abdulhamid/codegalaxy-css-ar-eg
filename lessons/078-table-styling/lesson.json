@@ -3,6 +3,8 @@
   "lesson_id": "78",
   "title": "CSS Table Styling",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "تعلم كيفية إضافة padding داخل عناصر الجدول",
     "استخدام border-bottom لإنشاء فواصل أفقية",
