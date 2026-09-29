@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "189",
+  "title": "CSS3D Transforms - 3D Cube",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء مكعب ثلاثي الأبعاد باستخدام HTML",
+    "تطبيق خصائص perspective و transform-style في CSS",
+    "تحريك الأوجه الستة في الفضاء ثلاثي الأبعاد",
+    "إنشاء حركية دوران مستمرة باستخدام keyframes"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-8b953fa6465cd718.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css3_3dtransforms_cube.asp",
+      "source_url": "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة حول بناء المكعب ثلاثي الأبعاد",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ بِنَاءِ مُكَعَّبٍ ثُلَاثِيِّ الْأَبْعَادِ يَدُورُ بِشَكْلٍ مُسْتَمِرٍّ دَاخِلِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد حول بناء مكعب ثلاثي الأبعاد متحرك باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء جسم ثلاثي الأبعاد كلاسيكي في CSS",
+          "استخدام التحولات والفضاء الثلاثي",
+          "ربط عناصر HTML بخصائص التنسيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+      ]
+    },
+    {
+      "id": "scene_html_structure",
+      "title": "الهيكل الأساسي باستخدام HTML",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوْلاً بِبِنَاءِ الْهَيْكَلِ الْأَسَاسِيِّ لِلصَّفْحَةِ عَبْرَ عناصر HTML. نَسْتَخْدِمُ عنصر container لِاحْتِوَاءِ الْفَضَاءِ الثُّلَاثِيِّ، وَعنصر cube لِلْجِسْمِ الرَّئِيسِيِّ، مَعَ سِتَّةِ عناصر face مُسْتَقِلَّةٍ لِلْأَوْجُهِ السِّتَّةِ.",
+        "caption_text": "الهيكل الأساسي يتكون من حاوية رئيسية ومكعب يضم ستة أوجه منفصلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"cube\">\n        <div class=\"face front\">front</div>\n        <div class=\"face back\">back</div>\n        <div class=\"face right\">right</div>\n        <div class=\"face left\">left</div>\n        <div class=\"face top\">top</div>\n        <div class=\"face bottom\">bottom</div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+      ]
+    },
+    {
+      "id": "scene_container_styling",
+      "title": "تنسيق الحاوية وإعداد المنظور",
+      "narration": {
+        "spoken_text": "فِي لُغَةِ CSS، نُعَرِّفُ الخَصَائِصَ الْأَسَاسِيَّةَ لِ container، مِثْلَ العَرْضِ وَالطُّولِ، وَإِضَافَةِ خَاصِيَّةِ perspective بِقِيمَةِ سِتِّمِائَةِ بِيكْسِلْ لِإِنْشَاءِ عُمُقِ الرُّؤْيَةِ الثُّلَاثِيَّةِ.",
+        "caption_text": "نحدد أبعاد الحاوية ونطبق خاصية perspective لخلق شعور بالعمق الثلاثي الأبعاد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  width: 200px;\n  height: 200px;\n  margin: 100px auto;\n  perspective: 600px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+      ]
+    },
+    {
+      "id": "scene_cube_transform_style",
+      "title": "إعداد المكعب والحفاظ على الفضاء",
+      "narration": {
+        "spoken_text": "يَعْمَلُ عنصر cube دَاخِلَ الفَضَاءِ. نَسْتَخْدِمُ خَاصِيَّةَ transform-style بَقِيمَةِ preserve-3d وَهِيَ غَايَةٌ فِي الأَهَمِّيَّةِ لِأَنَّهَا تُجْبِرُ العَنَاصِرَ الفَرْعِيَّةَ عَلَى البَقَاءِ فِي الْفَضَاءِ الثُّلَاثِيِّ.",
+        "caption_text": "خاصية transform-style بقيمة preserve-3d ضرورية لمنع تسطيح الأوجه في فضاء ثنائي الأبعاد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".cube {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  transform-style: preserve-3d;\n  animation: spin 12s infinite linear;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+      ]
+    },
+    {
+      "id": "scene_face_styling",
+      "title": "التنسيق الأساسي لأوجه المكعب",
+      "narration": {
+        "spoken_text": "نُضِيفُ الآنَ التَّنْسِيقَاتِ الأَسَاسِيَّةَ لِجَمِيعِ أَوْجُهِ المكعب سَوَاءً بِاسْتِخْدَامِ position absolute أَوْ خَلْفِيَّةٍ حَمْرَاءَ شَفَّافَةٍ لِمُشَاهَدَةِ العُمُقِ بِوُضُوحٍ.",
+        "caption_text": "نطبق تنسيقات موحدة للأوجه الستة مع تحديد الموقع المطلق والخلفية الشفافة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".face {\n  position: absolute;\n  width: 200px;\n  height: 200px;\n  border: 2px solid white;\n  line-height: 200px;\n  text-align: center;\n  font-size: 24px;\n  font-weight: bold;\n  color: white;\n  background: rgba(255, 0, 0, 0.5);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+      ]
+    },
+    {
+      "id": "scene_positioning_faces",
+      "title": "توزيع الأوجه في الفضاء الثلاثي",
+      "narration": {
+        "spoken_text": "لِتَوْزِيعِ الأَوْجُهِ السِّتَّةِ فِي الفَضَاءِ، نَسْتَخْدِمُ دوَالَّ rotateY وَ rotateX مَعَ الإِزَاحَةِ بِعُمْقِ مِئَةِ بِيكْسِلْ عبر translateZ لِتَكْوِينِ الشَّكْلِ الهَنْدَسِيِّ الصَّحِيحِ.",
+        "caption_text": "نستخدم دوال الدوران والإزاحة translateZ لوضع كل وجه في مكانه الصحيح من المكعب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".front {\n  transform: rotateY( 0deg) translateZ(100px);\n}\n.back {\n  transform: rotateY(180deg) translateZ(100px);\n}\n.left {\n  transform: rotateY( -90deg) translateZ(100px);\n}\n.right {\n  transform: rotateY( 90deg) translateZ(100px);\n}\n.top {\n  transform: rotateX( 90deg) translateZ(100px);\n}\n.bottom {\n  transform: rotateX( -90deg) translateZ(100px);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+      ]
+    },
+    {
+      "id": "scene_keyframes_animation",
+      "title": "إنشاء حركة الدوران المستمرة",
+      "narration": {
+        "spoken_text": "فِي النِّهَايَةِ، نُصَمِّمُ حَرَكَةَ spin العَبْرَ keyframes لِإِنْشَاءِ دَوْرَانٍ كَامِلٍ بِزَاوِيَةِ ثَلَاثِمِائَةٍ وَسِتِّينَ دَرَجَةً حَوْلَ مِحْوَرَيْ إكس وَوَايْ بِشَكْلٍ مُسْتَمِرٍّ لا يَتَوَقَّفُ.",
+        "caption_text": "ننشئ حركة keyframes لتنفيذ دوران مستمر للمكعب في كافة الاتجاهات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@keyframes spin {\n  from {\n    transform: rotateX(0deg) rotateY(0deg);\n  }\n  to {\n    transform: rotateX(360deg) rotateY(360deg);\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+      ]
+    },
+    {
+      "id": "scene_preview",
+      "title": "معاينة المكعب ثلاثي الأبعاد",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ النِّهَائِيَّةُ لِلْمُكَعَّبِ الثُّلَاثِيِّ الأَبْعَادِ عِنْدَ تَنْفِيذِ كَافَةِ تَنْسِيقَاتِ CSS وَعَرْضِهَا دَاخِلَ متصفح الويب بِكُلِّ جَوْدَةٍ وَاكْتِمَالٍ.",
+        "caption_text": "نتيجة المعاينة المرئية للمكعب ثلاثي الأبعاد أثناء الدوران المستمر في متصفح الويب."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "Rotating 3D Cube Preview"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+      ]
+    },
+    {
+      "id": "scene_outro",
+      "title": "خلاصة ودعوة للمتابعة",
+      "narration": {
+        "spoken_text": "تَعَرَّفْنَا اليَوْمَ عَلَى الطَّرِيقَةِ الِاحْتِرَافِيَّةِ لِبِنَاءِ أَجْسَامٍ ثُلَاثِيَّةِ الأَبْعَادِ بِاسْتِخْدَامِ CSS. نَرَاكُمْ فِي الدَّرْسِ القَادِمِ مَعَ مَوَاضِيعَ أشمل في عالم تطوير الويب.",
+        "caption_text": "إلى اللقاء في الدرس القادم لمزيد من إبداعات تنسيق الصفحات وتطوير الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتقان خاصية perspective والعمق",
+          "فهم تحولات rotateX و rotateY",
+          "تطبيق حركات keyframes الاحترافية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cube.asp"
+      ]
+    }
+  ]
+}
