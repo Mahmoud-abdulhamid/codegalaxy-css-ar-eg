@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "272",
+  "title": "مقدمة في Responsive Web Design",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم Responsive Web Design",
+    "التعرف على أهمية التجاوب مع مختلف الشاشات",
+    "تطبيق التحديات البرمجية الأساسية في CSS",
+    "التعرف على هيكلية صفحات الويب المتجاوبة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_rwd_intro.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مفهوم Responsive Web Design",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى مَفْهُومِ Responsive Web Design، وَهُوَ تَقْنِيَةٌ تَجْعَلُ صَفْحَاتِ الْوِبّ تَتَكَيَّفُ مَعَ كُلِّ أَحْجَامِ الشَّاشَاتِ بِشَكْلٍ آليٍّ وَمُحْتَرِفٍ.",
+        "caption_text": "مفهوم Responsive Web Design هو تقنية تجعل صفحات الويب تتكيف مع كل أحجام الشاشات بشكل آلي ومحترف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Responsive Web Design يضمن تجربة مستخدم ممتازة",
+          "التكيف مع شاشات الهواتف والأجهزة اللوحية والحواسيب",
+          "استخدام CSS للتحكم في تخطيط العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "basics",
+      "title": "القواعد الأساسية للتصميم المتجاوب",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ تَصْمِيمٍ مُتَجَاوِبٍ، نَحْتَاجُ إِلَى فَهْمِ كَيْفِيَّةِ تَعَامُلِ الْمُتَصَفِّحِ مَعَ ال Elements. يَعْتَمِدُ ذَلِكَ عَلَى ضَبْطِ ال Viewport وَاسْتِخْدَامِ قَوَاعِدِ CSS لِتَغْيِيرِ التَّخْطِيطِ بِنَاءً عَلَى عَرْضِ الشَّاشَةِ.",
+        "caption_text": "يعتمد التصميم المتجاوب على ضبط Viewport واستخدام قواعد CSS لتغيير التخطيط بناء على عرض الشاشة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Meta Tag لضبط Viewport",
+          "تغيير أحجام العناصر باستخدام النسب المئوية",
+          "استخدام Media Queries للتحكم في التنسيقات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل المستند الأساسي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْهَيْكَلِ الْأَسَاسِيِّ لِصَفْحَةِ HTML. نَبْدَأُ بِ DOCTYPE HTML، ثُمَّ نُضِيفُ ال head وَال body. هَذَا الْهَيْكَلُ هُوَ الْأَسَاسُ لِأَيِّ صَفْحَةِ وِبٍّ تُرِيدُ أَنْ تَكُونَ مُتَجَاوِبَةً.",
+        "caption_text": "هيكل المستند الأساسي يبدأ بـ DOCTYPE HTML ثم head و body."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width\">\n    <title>Responsive Page</title>\n  </head>\n  <body>\n    <h1>Welcome</h1>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تطبيق التنسيقات المتجاوبة",
+      "narration": {
+        "spoken_text": "الْآنَ نُضِيفُ كُودَ CSS لِجَعْلِ الْعَنَاصِرِ مَرِنَةً. نَسْتَخْدِمُ خَاصِيَّةَ width بِقِيمَةِ مِئَةٍ بِالْمِئَةِ لِتَتَمَدَّدَ الْعَنَاصِرُ مَعَ حَجْمِ الشَّاشَةِ، مِمَّا يَمْنَعُ ظُهُورَ شَرِيطِ التَّمْرِيرِ الْأُفُقِيِّ.",
+        "caption_text": "نستخدم خاصية width بقيمة 100 لجعل العناصر مرنة وتتمدد مع حجم الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  margin: 0;\n  padding: 20px;\n}\n.container {\n  width: 100%;\n  max-width: 800px;\n  margin: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة في المتصفح",
+      "narration": {
+        "spoken_text": "عِنْدَ فَتْحِ هَذَا الْكُودِ فِي الْمُتَصَفِّحِ، سَتُلَاحِظُ أَنَّ الْعُنْصُرَ يَتَكَيَّفُ تِلْقَائِيّاً. إِذَا قُمْتَ بِتَصْغِيرِ نَافِذَةِ الْمُتَصَفِّحِ، سَتَرَى أَنَّ الْمُحْتَوَى يُحَافِظُ عَلَى تَنَاسُقِهِ دُونَ أَيِّ مَشَاكِلَ فِي الْعَرْضِ.",
+        "caption_text": "عند فتح الكود في المتصفح، ستلاحظ أن العنصر يتكيف تلقائيا مع حجم النافذة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Browser View:\n+-----------------------+\n| Welcome               |\n| [Responsive Content]  |\n+-----------------------+",
+        "highlight_lines": [],
+        "output": "Responsive content adapts to screen width.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ أَفْضَلِ نَتَائِجَ، احْرِصْ دَائِماً عَلَى اسْتِخْدَامِ وَحَدَاتِ قِيَاسٍ نِسْبِيَّةٍ مِثْلَ ال percentage وَال viewport units. تَجَنَّبْ تَعْرِيفَ الْعَرْضِ بِال pixels لِلْعَنَاصِرِ الرَّئِيسِيَّةِ لِضَمَانِ مَرُونَةِ التَّصْمِيمِ.",
+        "caption_text": "استخدم وحدات قياس نسبية مثل percentage و viewport units وتجنب العرض الثابت بالـ pixels."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم Relative Units بدلا من Fixed Units",
+          "اختبر التصميم على أحجام شاشات مختلفة",
+          "حافظ على بساطة التخطيط في الشاشات الصغيرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا أَهَمِّيَّةَ Responsive Web Design وَكَيْفِيَّةَ بِنَاءِ هَيْكَلٍ مَرِنٍ بِاسْتِخْدَامِ HTML وَ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُتَابَعَةِ التَّحَدِّيَاتِ لِتَطْوِيرِ مَهَارَاتِكُمْ.",
+        "caption_text": "تعلمنا أهمية Responsive Web Design وكيفية بناء هيكل مرن باستخدام HTML و CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التصميم المتجاوب ضرورة لكل مطور وب",
+          "HTML و CSS هما الأدوات الأساسية",
+          "الممارسة المستمرة هي مفتاح الاحتراف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_intro.asp"
+      ]
+    }
+  ]
+}
