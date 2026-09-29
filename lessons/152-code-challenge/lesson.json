@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "152",
+  "title": "CSS Math Functions Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the power of CSS Math Functions",
+    "Learn to use calc() for dynamic layouts",
+    "Master min(), max(), and clamp() functions",
+    "Apply mathematical logic to responsive design"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_math_functions.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Math Functions",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفَ نَسْتَخْدِمُ Math Functions لِجَعْلِ تَصَامِيمِ الْوِبّ أَكْثَرَ مَرُونَةً وَذَكَاءً بِاسْتِخْدَامِ قِيَمٍ دِينَامِيكِيَّةٍ بَدَلَ الْقِيَمِ الثَّابِتَةِ.",
+        "caption_text": "مقدمة حول استخدام Math Functions في CSS لجعل تصاميم الويب أكثر مرونة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Math Functions توفر تحكما دقيقا في القيم",
+          "تساعد في بناء تصاميم متجاوبة Responsive Design",
+          "تغنينا عن استخدام JavaScript في بعض العمليات الحسابية البسيطة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_math_functions.asp"
+      ]
+    },
+    {
+      "id": "calc-function",
+      "title": "استخدام الدالة calc",
+      "narration": {
+        "spoken_text": "تُعَدُّ الدَّالَّةُ calc أَهَمَّ أَدَاةٍ لِلْحِسَابَاتِ. نَسْتَخْدِمُهَا لِجَمْعِ أَوْ طَرْحِ أَوْ ضَرْبِ أَوْ قِسْمَةِ الْقِيَمِ. لَاحِظْ كَيْفَ نُحَدِّدُ عَرْضَ الْعُنْصُرِ بِطَرِيقَةٍ دِينَامِيكِيَّةٍ تَعْتَمِدُ عَلَى نِسْبَةٍ مِئَوِيَّةٍ مَعَ طَرْحِ بَعْضِ الْبِيكْسِلَاتِ.",
+        "caption_text": "شرح الدالة calc وكيفية دمج وحدات قياس مختلفة مثل النسبة المئوية والبيكسل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  width: calc(100% - 50px);\n  padding: 10px;\n  margin: 5px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_math_functions.asp"
+      ]
+    },
+    {
+      "id": "min-max-functions",
+      "title": "الدوال min و max",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى min وَ max. الدَّالَّةُ min تَخْتَارُ الْقِيمَةَ الْأَصْغَرَ بَيْنَ عِدَّةِ خِيَارَاتٍ، بَيْنَمَا max تَخْتَارُ الْقِيمَةَ الْأَكْبَرَ. هَذِهِ الدَّوَالُ ضَرُورِيَّةٌ لِتَحْدِيدِ حُدُودٍ دُنْيَا وَعُلْيَا لِعَرْضِ الْعَنَاصِرِ.",
+        "caption_text": "استخدام min و max لتحديد نطاق القيم المسموح بها للعناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  width: max(300px, 50%);\n  height: min(200px, 10vh);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_math_functions.asp"
+      ]
+    },
+    {
+      "id": "clamp-function",
+      "title": "قوة الدالة clamp",
+      "narration": {
+        "spoken_text": "الدَّالَّةُ clamp هِيَ الْأَقْوَى، حَيْثُ تَجْمَعُ بَيْنَ الْحَدِّ الْأَدْنَى وَالْقِيمَةِ الْمُفَضَّلَةِ وَالْحَدِّ الْأَعْلَى. هِيَ تُسَاعِدُنَا فِي ضَبْطِ حَجْمِ الْخَطِّ أَوْ عَرْضِ الْعُنْصُرِ بِشَكْلٍ مِثَالِيٍّ دَاخِلَ نِطَاقٍ مُحَدَّدٍ.",
+        "caption_text": "شرح الدالة clamp التي تجمع بين الحد الأدنى والأقصى والقيمة المفضلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  font-size: clamp(1rem, 2.5vw, 3rem);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_math_functions.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة النتائج",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الدَّوَالِ، سَتَلَاحِظُ أَنَّ الْعَنَاصِرَ تَتَكَيَّفُ تِلْقَائِيّاً مَعَ حَجْمِ الشَّاشَةِ. هَذَا يَعْنِي أَنَّ تَصْمِيمَ الْوِبّ سَيَبْدُو رَائِعاً عَلَى كُلِّ الْأَجْهِزَةِ دُونَ الْحَاجَةِ لِكِتَابَةِ Media Queries كَثِيرَةٍ.",
+        "caption_text": "تأثير استخدام Math Functions على استجابة العناصر في المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <h1>Responsive Layout</h1>\n      <p>Math functions make this easy!</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Responsive Layout\nMath functions make this easy!",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_math_functions.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، تَذَكَّرُوا دَائِماً أَنْ تَضَعُوا مَسَافَاتٍ حَوْلَ عَمَلِيَّاتِ الْجَمْعِ وَالطَّرْحِ دَاخِلَ calc لِضَمَانِ عَمَلِهَا بِشَكْلٍ صَحِيحٍ. كَمَا يُفَضَّلُ اخْتِبَارُ التَّصْمِيمِ عَلَى مُتَصَفِّحَاتٍ مُخْتَلِفَةٍ مِثْلَ Chrome وَ Firefox.",
+        "caption_text": "نصائح تقنية عند استخدام Math Functions لضمان توافق الكود."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم مسافات حول علامات + و - في calc",
+          "اختبر الكود في Chrome و Edge و Firefox",
+          "استخدم وحدات قياس متوافقة مثل rem و vw و"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_math_functions.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ Math Functions لِتَحْسِينِ أَدَاءِ وَمَرُونَةِ مَوَاقِعِ الْوِبّ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ الْمُبْهِرَةِ.",
+        "caption_text": "خلاصة الدرس ودعوة للممارسة العملية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلمنا calc و min و max و clamp",
+          "فهمنا أهمية القيم الديناميكية في CSS",
+          "شجعنا على الممارسة المستمرة عبر الرابط المرفق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_math_functions.asp"
+      ]
+    }
+  ]
+}
