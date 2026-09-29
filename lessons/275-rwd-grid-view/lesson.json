@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "275",
+  "title": "بناء شبكة عرض مرنة Responsive Grid View",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم Grid-View في تصميم صفحات الويب",
+    "التعرف على خاصية box-sizing وتأثيرها على العناصر",
+    "بناء هيكل HTML لشبكة عرض متكاملة",
+    "تطبيق تنسيقات CSS لإنشاء Grid-View احترافي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_rwd_grid.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-e8fdade0b0149fb5.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_rwd_grid.asp",
+      "source_url": "https://www.w3schools.com/css/css_rwd_grid.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Grid-View",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ بِنَاءِ Grid-View لِتَصْمِيمِ صَفْحَاتِ الْوِبّ. هَذَا النَّمُوذَجُ يَقُومُ عَلَى تَقْسِيمِ الصَّفْحَةِ إِلَى Rows وَ Columns لِتَكُونَ مَرِنَةً وَمُتَجَاوِبَةً مَعَ أَحْجَامِ الشَّاشَاتِ الْمُخْتَلِفَةِ.",
+        "caption_text": "مفهوم Grid-View هو تقسيم صفحة الويب إلى صفوف وأعمدة لبناء تصميم مرن ومتجاوب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Grid-View يقسم الصفحة إلى Rows و Columns",
+          "التصميم المرن يتغير حجمه مع نافذة Web Browser",
+          "يستخدم عادة 6 أو 12 عمودا في التصميم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "box-sizing",
+      "title": "ضبط خاصية box-sizing",
+      "narration": {
+        "spoken_text": "قَبْلَ الْبَدْءِ، يَجِبُ أَنْ نَضْبِطَ خَاصِيَّة box-sizing عَلَى border-box لِجَمِيعِ الْعَنَاصِرِ. هَذَا يَضْمَنُ أَنَّ ال padding وَ ال border يَدْخُلَانِ ضِمْنَ الْحِسَابِ الْكُلِّيِّ لِعَرْضِ وَارْتِفَاعِ الْعُنْصُرِ بِشَكْلٍ دَقِيقٍ.",
+        "caption_text": "استخدام box-sizing بقيمة border-box يضمن دقة حساب أبعاد العناصر في التصميم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "* {\n  box-sizing: border-box;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "html-structure",
+      "title": "هيكل الـ HTML للشبكة",
+      "narration": {
+        "spoken_text": "لِنَقُمْ بِإِنْشَاءِ حَاوِيَة grid-container تَحْتَوِي عَلَى خَمْسَةِ عَنَاصِرَ رَئِيسِيَّةٍ: header وَ menu وَ content وَ facts وَ footer. هَذَا التَّقْسِيمُ يُسَهِّلُ عَلَيْنَا تَنْظِيمَ الْمُحْتَوَى دَاخِلَ الشَّبَكَةِ بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "ننشئ حاوية grid-container تضم العناصر الأساسية للصفحة مثل الترويسة والقائمة والمحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"grid-container\">\n      <div class=\"header\"><h1>Chania</h1></div>\n      <div class=\"menu\">...</div>\n      <div class=\"content\">...</div>\n      <div class=\"facts\">...</div>\n      <div class=\"footer\">...</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "css-grid",
+      "title": "تنسيق الشبكة باستخدام CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نَسْتَخْدِمُ display: grid عَلَى ال grid-container. نُحَدِّدُ grid-template-areas لِتَرْتِيبِ الْعَنَاصِرِ، وَنُضِيفُ gap لِتَرْكِ مَسَافَاتٍ بَيْنَ الْخَلَايَا. هَذَا الْكُودُ يُعْطِي شَكْلًا مُنَظَّماً وَجَذَّاباً لِلصَّفْحَةِ.",
+        "caption_text": "تنسيق CSS باستخدام Grid Layout لتحديد أماكن العناصر وتوزيع المسافات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".grid-container {\n  display: grid;\n  grid-template-areas:\n  'header'\n  'menu'\n  'main'\n  'facts'\n  'footer';\n  gap: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "styling-items",
+      "title": "تنسيق العناصر الفردية",
+      "narration": {
+        "spoken_text": "نَقُومُ بِتَعْيِينِ grid-area لِكُلِّ عُنْصُرٍ لِيُطَابِقَ مَا حَدَّدْنَاهُ فِي ال grid-template-areas. نُضِيفُ أَلْوَاناً وَتَنْسِيقَاتٍ لِل header وَ menu وَ footer لِتَحْسِينِ الْمَظْهَرِ الْعَامِّ لِلصَّفْحَةِ.",
+        "caption_text": "ربط العناصر بـ grid-area وتطبيق الألوان والتنسيقات الجمالية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".header {\n  grid-area: header; background-color: purple;\n}\n.menu {\n  grid-area: menu;\n}\n.content {\n  grid-area: main;\n}\n.footer {\n  grid-area: footer; background-color: #0099cc;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ النِّهَائِيَّةُ لِلْكُودِ. لَاحِظْ كَيْفَ تَتَرَتَّبُ الْعَنَاصِرُ بِشَكْلٍ عَمُودِيٍّ دَاخِلَ الشَّبَكَةِ. هَذَا التَّصْمِيمُ هُوَ الْأَسَاسُ لِتَطْوِيرِ مَوَاقِعَ وِبٍّ أَكْثَرَ تَعْقِيداً وَتَجَاوُباً فِي الْمُسْتَقْبَلِ.",
+        "caption_text": "شكل الصفحة النهائي بعد تطبيق تنسيقات Grid Layout."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "معاينة تصميم الشبكة"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ أَسَاسِيَّاتِ بِنَاءِ Grid-View. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ box-sizing وَتَنْظِيمِ الْعَنَاصِرِ بِاسْتِخْدَامِ grid-template-areas. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِهَا.",
+        "caption_text": "خلاصة: استخدام Grid Layout يسهل بناء تصاميم مرنة ومنظمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم box-sizing: border-box دائما",
+          "استخدم grid-template-areas لتخطيط الصفحة",
+          "جرب تغيير الألوان والأحجام لتطوير مهاراتك"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_grid.asp"
+      ]
+    }
+  ]
+}
