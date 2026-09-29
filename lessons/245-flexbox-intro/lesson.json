@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "245",
+  "title": "تعلم CSS Flexbox لبناء صفحات وب مرنة ومتجاوبة",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم CSS Flexbox وموديل التخطيط المرن",
+    "الفرق بين Flexbox في اتجاه واحد و CSS Grid في اتجاهين",
+    "تطبيق خصائص display flex على Flex Container",
+    "توزيع العناصر داخل الـ Flex Container بطريقة مرنة وسهلة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_flexbox.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-99361abf37c60690.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css3_flexbox.asp",
+      "source_url": "https://www.w3schools.com/css/css3_flexbox.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro_flexbox",
+      "title": "مقدمة عن CSS Flexbox",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى تَقْنِيَةِ CSS Flexbox وَكَيْفَ تُسَهِّلُ عَلَيْنَا بِنَاءَ تَصْمِيمَاتٍ مَرِنَةٍ وَمُتَجَاوِبَةٍ لِلْوِبّ بِكُلِّ سُهُولَةٍ ودُونَ حَاجَةٍ لِل float.",
+        "caption_text": "مرحبا بكم في درس جديد حول تقنية CSS Flexbox وكيفية بناء تصاميم مرنة ومجاوبة للويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم لغة CSS لبناء وتنسيق صفحات الويب",
+          "تقنية Flexbox هي اختصار لـ Flexible Box Layout",
+          "تتيح تصميم واجهات مرنة ومتجاوبة بدون استخدام float أو positioning"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox.asp"
+      ]
+    },
+    {
+      "id": "flexbox_definition",
+      "title": "مفهوم التخطيط المرن",
+      "narration": {
+        "spoken_text": "تُعْتَبَرُ تَقْنِيَةُ Flexbox نَمُوذَجَ تَخْطِيطٍ مُتَطَوِّرٍ لِتَرْتِيبِ الْعَنَاصِرِ سَوَاءٌ أَكَانَتْ بِالشَّكْلِ الأُفُقِيِّ أَوْ العَمُودِيِّ دَاخِلَ أيِّ حَاوِيَةٍ بِطَرِيقَةٍ مَرِنَةٍ تُسَاعِدُ المُطَوِّرِينَ عَلَى إدَارَةِ الفَرَاغَاتِ بَيْنَ الْعَنَاصِرِ بِكفاءة عَالِيَةٍ.",
+        "caption_text": "تعتبر تقنية Flexbox نموذج تخطيط متطور لترتيب العناصر أفقيا أو عموديا داخل الحاوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ترتيب العناصر أفقيا أو عموديا داخل الحاوية",
+          "توزيع المساحات والفراغات بمرونة تامة",
+          "تحقيق استجابة كاملة لمختلف أحجام الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox.asp"
+      ]
+    },
+    {
+      "id": "flexbox_vs_grid",
+      "title": "الفرق بين Flexbox و CSS Grid",
+      "narration": {
+        "spoken_text": "مِنَ المُهِمِّ أَنْ نُمَيِّزَ بَيْنَ Flexbox وَ CSS Grid. تَقْنِيَةُ Flexbox مُخَصَّصَةٌ لِلتَّخْطِيطِ ذِي البُعْدِ الوَاحِدِ إمَّا في صُفُوفٍ أَوْ أَعْمِدَةٍ، بَيْنَمَا تُسْتَخْدَمُ CSS Grid لِلتَّخْطِيطِ ذِي البُعْدَيْنِ مَعاً لِلصُّفُوفِ وَالأَعْمِدَةِ.",
+        "caption_text": "تقنية Flexbox مخصصة للتخطيط ذي البعد الواحد صفوف أو أعمدة، بينما CSS Grid للبعدين معا."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الميزة",
+          "CSS Flexbox",
+          "CSS Grid"
+        ],
+        "rows": [
+          [
+            "الأبعاد",
+            "أبعاد أحادية البعد (أفقية أو عمودية)",
+            "أبعاد ثنائية البعد (صفوف وأعمدة معا)"
+          ],
+          [
+            "الاستخدام الأساسي",
+            "توزيع عناصر داخل حاوية بمرونة",
+            "بناء الهياكل والشبكات المعقدة للصفحات"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox.asp"
+      ]
+    },
+    {
+      "id": "flexbox_components",
+      "title": "مكونات نظام Flexbox",
+      "narration": {
+        "spoken_text": "يَتَكَوَّنُ أَيُّ نِظَامِ Flexbox أَوْ مَجْمُوعَةِ عَنَاصِرَ مَرِنَةٍ دَائِماً مِنْ جُزْءَيْنِ رَئِيسِيَّيْنِ: الفليكس كونتينر أَوْ الحَاوِيَةُ الرَّئِيسِيَّةُ، وَالعَنَاصِرُ الفَرْدِيَّةُ دَاخِلَهَا وَالَّتِي تُسَمَّى فليكس آيتِمْزْ أَوْ العَنَاصِرُ المَرِنَةُ.",
+        "caption_text": "يتكون نظام Flexbox من حاوية رئيسية Flex Container وعناصر فرعية Flex Items."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flex Container: الحاوية الأب التي تحمل خاصية display flex",
+          "Flex Items: العناصر الابنة التي يتم ترتيبها بداخل الحاوية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "كتابة كود الـ HTML و CSS لـ Flexbox",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ الآنَ مِثَالاً عَمَلِيّاً مُتَكامِلاً. نَقُومُ بِإِنْشَاءِ عُنْصِرِ div يَحْمِلُ كلاس كونتينر دَاخِلَ قِسْمِ body، ثُمَّ نُطَبِّقُ خَاصِيَّةَ display flex دَاخِلَ قِسْمِ style لِتَفْعِيلِ النِّظَامِ وَتَنْسِيقِ العناصِرِ بِألوان مُخْتَلِفَةٍ.",
+        "caption_text": "نكتب كود HTML مع تنسيقات CSS داخل قسم style لتفعيل وتطبيق نموذج Flexbox."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      .container {\n        display: flex;\n        background-color: DodgerBlue;\n      }\n      .container div {\n        background-color: #f1f1f1;\n        margin: 10px;\n        padding: 20px;\n        font-size: 30px;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <div>Item 1</div>\n      <div>Item 2</div>\n      <div>Item 3</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [
+          4,
+          5,
+          14
+        ],
+        "output": "عرض 3 عناصر أفقية متجاورة داخل صندوق أزرق خلفيته DodgerBlue",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox.asp"
+      ]
+    },
+    {
+      "id": "visual_output_scene",
+      "title": "معاينة المخرجات المرنة في المتصفح",
+      "narration": {
+        "spoken_text": "تُظْهِرُ لَنَا هَذِهِ الصُّورَةُ كَيْفَ يَتِمُّ تَرْتِيبُ العَنَاصِرِ الثَّلَاثَةِ أفقياً بِشَكْلٍ تِلْقَائِيٍّ بِمَجَرَّدِ إضَافَةِ خَاصِيَّةِ display flex لِلْحَاوِيَةِ، مِمَّا يُوَفِّرُ عَلَيْنَا كِتَابَةَ كُودٍ مُعَقَّدٍ لِلْمُحَاذَاةِ.",
+        "caption_text": "توضح معاينة المتصفح ترتيب العناصر أفقيا وبانتظام داخل الحاوية الزرقاء."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "معاينة كود Flexbox في متصفح الويب"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox.asp"
+      ]
+    },
+    {
+      "id": "best_practices_summary",
+      "title": "خلاصة وأفضل الممارسات",
+      "narration": {
+        "spoken_text": "فِي الخِتَامِ يَا أَصْدِقَائِي، تُعَدُّ تَقْنِيَةُ Flexbox الأَدَاةَ الأَسَاسِيَّةَ لِكُلِّ مُطَوِّرِ وِبٍّ لِبِنَاءِ تَقْسِيمَاتِ صَفَحَاتٍ سَرِيعَةٍ ومَرِنَةٍ دُونَ عَنَاءِ التَّعَامُلِ مَعَ ال float. نَدْعُوكُمْ لِلتَّجْرِبَةِ العَمَلِيَّةِ وَمُتَابَعَةِ الدُّرُوسِ القَادِمَةِ.",
+        "caption_text": "تعتبر تقنية Flexbox الأداة الأساسية للمطورين لبناء صفحات ويب سريعة ومرنة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox يوفر الوقت والجهد في تنسيق الصفحات",
+          "لا يحتاج إلى استخدام float أو positioning للعناصر",
+          "تابع معنا الدروس القادمة لاحتراف خصائص Flexbox المتقدمة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox.asp"
+      ]
+    }
+  ]
+}
