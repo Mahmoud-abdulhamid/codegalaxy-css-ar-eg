@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "313",
+  "title": "بناء قائمة فرعية احترافية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء قائمة تنقل فرعية Subnav",
+    "استخدام CSS للتحكم في ظهور العناصر عند التفاعل",
+    "تنسيق القوائم المنسدلة باستخدام Absolute Positioning",
+    "تطبيق تقنيات Hover لتعزيز تجربة المستخدم"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_subnav.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول القوائم الفرعية",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ قَائِمَةِ تَنَقُّلٍ فَرْعِيَّةٍ Subnav احْتِرَافِيَّةٍ تَظْهَرُ عِنْدَ تَحْرِيكِ الْمَاوْسِ فَوْقَ الْعَنَاصِرِ، وَهِيَ مَهَارَةٌ أَسَاسِيَّةٌ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "تعلم كيفية إنشاء قائمة تنقل فرعية Subnav احترافية باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "القوائم الفرعية تعزز تنظيم محتوى الموقع",
+          "نستخدم CSS للتحكم في التفاعل والظهور",
+          "تعتمد الفكرة على حاوية رئيسية وعناصر منسدلة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_subnav.asp"
+      ]
+    },
+    {
+      "id": "structure",
+      "title": "الهيكل البرمجي للقائمة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكْلَاسِ navbar لِضَمِّ الْقَائِمَةِ، وَدَاخِلَهَا نَضَعُ div بِكْلَاسِ subnav لِكُلِّ قِسْمٍ فَرْعِيٍّ. نَسْتَخْدِمُ button لِفَتْحِ الْقَائِمَةِ، وَ div بِكْلَاسِ subnav-content لِاحْتِوَاءِ الرَّوَابِطِ الْفَرْعِيَّةِ.",
+        "caption_text": "الهيكل البرمجي يستخدم div كحاويات و button للتفاعل مع القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"navbar\">\n      <a href=\"#home\">Home</a>\n      <div class=\"subnav\">\n        <button class=\"subnavbtn\">About</button>\n        <div class=\"subnav-content\">\n          <a href=\"#company\">Company</a>\n          <a href=\"#team\">Team</a>\n        </div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_subnav.asp"
+      ]
+    },
+    {
+      "id": "navbar_css",
+      "title": "تنسيق القائمة الرئيسية",
+      "narration": {
+        "spoken_text": "فِي CSS، نَقُومُ بِتَنْسِيقِ navbar بِخَاصِيَّةِ overflow: hidden لِإِدَارَةِ الْعَنَاصِرِ، وَنُعْطِيهَا لَوْنَ خَلْفِيَّةٍ مُنَاسِبٍ. الرَّوَابِطُ دَاخِلَ navbar تَحْتَاجُ إِلَى float: left لِتَصْطَفَّ بِجَانِبِ بَعْضِهَا، مَعَ ضَبْطِ padding وَ text-decoration.",
+        "caption_text": "تنسيق القائمة الرئيسية باستخدام float و padding لترتيب الروابط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar {\n  overflow: hidden;\n  background-color: #333;\n}\n.navbar a {\n  float: left;\n  padding: 14px 16px;\n  text-decoration: none;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_subnav.asp"
+      ]
+    },
+    {
+      "id": "subnav_logic",
+      "title": "منطق القائمة المنسدلة",
+      "narration": {
+        "spoken_text": "الْآنَ نَأْتِي لِلْجُزْءِ الْأَهَمِّ. نَضْبِطُ subnav-content عَلَى display: none لِإِخْفَائِهَا، وَنُعْطِيهَا position: absolute لِتَظْهَرَ فَوْقَ الْمُحْتَوَى. عِنْدَ حُدُوثِ hover عَلَى subnav، نُغَيِّرُ display إِلَى block لِتَظْهَرَ الْقَائِمَةُ فَوْراً.",
+        "caption_text": "استخدام display: none و absolute positioning للتحكم في ظهور القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".subnav-content {\n  display: none;\n  position: absolute;\n  left: 0;\n  background-color: red;\n  width: 100%;\n}\n.subnav:hover .subnav-content {\n  display: block;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_subnav.asp"
+      ]
+    },
+    {
+      "id": "hover_effects",
+      "title": "تأثيرات التفاعل",
+      "narration": {
+        "spoken_text": "لِتَحْسِينِ التَّفَاعُلِ، نُضِيفُ تَأْثِيرَ hover عَلَى الرَّوَابِطِ وَالْأَزْرَارِ. نُغَيِّرُ background-color إِلَى الْأَحْمَرِ عِنْدَ التَّحْرِيكِ، مِمَّا يُعْطِي تَغْذِيَةً رَاجِعَةً بَصَرِيَّةً لِلْمُسْتَخْدِمِ تُؤَكِّدُ أَنَّ الْعُنْصُرَ قَابِلٌ لِلنَّقْرِ أَوْ التَّفَاعُلِ.",
+        "caption_text": "إضافة تأثيرات hover لتحسين تجربة المستخدم البصرية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar a:hover, .subnav:hover .subnavbtn {\n  background-color: red;\n}\n.subnav-content a:hover {\n  background-color: #eee;\n  color: black;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_subnav.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ بَنَيْنَا قَائِمَةً فَرْعِيَّةً بَسِيطَةً وَفَعَّالَةً. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ التَّنْظِيمِ فِي HTML وَاسْتِخْدَامِ الْخَصَائِصِ الصَّحِيحَةِ فِي CSS لِضَمَانِ عَمَلِ الْقَوَائِمِ بِشَكْلٍ مُتَجَاوِبٍ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بَأَنْفُسِكُمْ وَطَوِّرُوهَا.",
+        "caption_text": "خلاصة الدرس: أهمية التنظيم البرمجي وتطبيق CSS بشكل صحيح."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم div كحاوية للعناصر",
+          "تحكم في الظهور عبر display: none و block",
+          "استخدم absolute positioning للمواقع الدقيقة",
+          "طبق hover لتعزيز التفاعل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_subnav.asp"
+      ]
+    }
+  ]
+}
