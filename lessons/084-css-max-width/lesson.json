@@ -3,6 +3,8 @@
   "lesson_id": "84",
   "title": "CSS max-width Property",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم وظيفة خاصية max-width في CSS",
     "الفرق بين width و max-width",
