@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "168",
+  "title": "التحكم في الألوان والشفافية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام RGBA و HEXA و HSLA",
+    "التعرف على خاصية opacity في CSS",
+    "الفرق بين الشفافية في الألوان والشفافية في العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_colors.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في ألوان CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةَ التَّحَكُّمِ فِي الْأَلْوَانِ وَالشَّفَافِيَّةِ بِاحْتِرَافِيَّةٍ، مِنْ خِلَالِ اسْتِخْدَامِ قِيَمِ RGBA وَ HEXA وَ HSLA، بِالْإِضَافَةِ إِلَى خَاصِيَّةِ opacity.",
+        "caption_text": "مرحبا بكم في درس التحكم في الألوان والشفافية باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دعم CSS لأكثر من 140 اسما للألوان",
+          "استخدام قيم RGB و HEX و HSL",
+          "إضافة قناة الشفافية alpha channel"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_colors.asp"
+      ]
+    },
+    {
+      "id": "rgba_colors",
+      "title": "فهم قيم RGBA",
+      "narration": {
+        "spoken_text": "تُعَدُّ قِيَمُ RGBA امْتِدَاداً لِقِيَمِ RGB، حَيْثُ نُضِيفُ قَنَاةَ alpha لِتَحْدِيدِ الشَّفَافِيَّةِ. تَتَرَاوَحُ قِيمَةُ alpha بَيْنَ 0.0 لِلشَّفَافِيَّةِ الْكَامِلَةِ، وَ 1.0 لِعَدَمِ الشَّفَافِيَّةِ، مِمَّا يَمْنَحُنَا تَحَكُّماً دَقِيقاً فِي مَظْهَرِ الْعَنَاصِرِ.",
+        "caption_text": "تستخدم قيم RGBA لتحديد الشفافية عبر قناة alpha."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#p1 {\n  background-color: rgba(255, 0, 0, 0.3);\n}\n#p2 {\n  background-color: rgba(0, 255, 0, 0.3);\n}\n#p3 {\n  background-color: rgba(0, 0, 255, 0.3);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_colors.asp"
+      ]
+    },
+    {
+      "id": "hexa_colors",
+      "title": "استخدام قيم HEXA",
+      "narration": {
+        "spoken_text": "بِالْمِثْلِ، تُوَفِّرُ لَنَا HEXA إِمْكَانِيَّةَ إِضَافَةِ الشَّفَافِيَّةِ إِلَى أَلْوَانِ HEX. نَسْتَخْدِمُ التَّنْسِيقَ rrggbbaa، حَيْثُ تَتَرَاوَحُ قِيمَةُ alpha بَيْنَ 00 وَ FF. مَثَلاً، الْقِيمَةُ 80 تَعْنِي شَفَافِيَّةً بِنِسْبَةِ خَمْسِينَ بِالْمِائَةِ.",
+        "caption_text": "تسمح قيم HEXA بإضافة الشفافية مباشرة في كود اللون."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التنسيق: #rrggbbaa",
+          "00 تعني شفافية كاملة",
+          "FF تعني غير شفاف إطلاقا",
+          "80 تعني شفافية 50"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_colors.asp"
+      ]
+    },
+    {
+      "id": "hsla_colors",
+      "title": "التعامل مع HSLA",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى HSLA، وَهِيَ امْتِدَادٌ لِ HSL. نُحَدِّدُ دَرَجَةَ اللَّوْنِ hue، وَالتَّشَبُّعَ saturation، وَالْإِضَاءَةَ lightness، ثُمَّ نُضِيفُ قِيمَةَ alpha. هَذَا النَّمُوذَجُ مِثَالِيٌّ لِتَصْمِيمِ أَلْوَانٍ مُتَنَاغِمَةٍ مَعَ دَرَجَاتِ شَفَافِيَّةٍ مُخْتَلِفَةٍ.",
+        "caption_text": "نموذج HSLA يجمع بين تدرج اللون والتشبع والإضاءة مع الشفافية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#p1 {\n  background-color: hsla(120, 100%, 50%, 0.3);\n}\n#p2 {\n  background-color: hsla(120, 100%, 75%, 0.3);\n}\n#p3 {\n  background-color: hsla(120, 100%, 25%, 0.3);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_colors.asp"
+      ]
+    },
+    {
+      "id": "opacity_property",
+      "title": "خاصية opacity",
+      "narration": {
+        "spoken_text": "خَاصِيَّةُ opacity تَخْتَلِفُ عَمَّا سَبَقَ؛ فَهِيَ تُطَبِّقُ الشَّفَافِيَّةَ عَلَى الْعُنْصُرِ بِالْكَامِلِ، بِمَا فِي ذَلِكَ النَّصُّ وَالْخَلْفِيَّةُ. يَنْبَغِي الْحَذَرُ عِنْدَ اسْتِخْدَامِهَا لِأَنَّهَا قَدْ تُؤَثِّرُ عَلَى قَابِلِيَّةِ قِرَاءَةِ الْمُحْتَوَى دَاخِلَ الْعُنْصُرِ.",
+        "caption_text": "خاصية opacity تؤثر على العنصر بالكامل بما فيه النص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#p1 {\n  background-color: rgb(255,0,0); opacity: 0.6;\n}\n#p2 {\n  background-color: rgb(0,255,0); opacity: 0.6;\n}",
+        "highlight_lines": [],
+        "output": "عناصر ملونة بشفافية 60% للنص والخلفية",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_colors.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا أَنَّ هُنَاكَ طُرُقاً مُتَعَدِّدَةً لِإِضَافَةِ الشَّفَافِيَّةِ. اسْتَخْدِمْ RGBA أَوْ HSLA إِذَا كُنْتَ تُرِيدُ شَفَافِيَّةَ الْخَلْفِيَّةِ فَقَطْ، وَاسْتَخْدِمْ opacity إِذَا كُنْتَ تُرِيدُ شَفَافِيَّةَ الْعُنْصُرِ بِأَكْمَلِهِ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِنَفْسِكُمْ.",
+        "caption_text": "خلاصة: اختر الطريقة المناسبة للشفافية بناء على احتياجك التصميمي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "RGBA/HSLA للتحكم في لون الخلفية فقط",
+          "opacity للتحكم في العنصر بالكامل",
+          "تذكر دائما تجربة الأكواد في المتصفح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_colors.asp"
+      ]
+    }
+  ]
+}
