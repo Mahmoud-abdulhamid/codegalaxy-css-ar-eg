@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "145",
+  "title": "CSS Inheritance Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the concept of CSS Inheritance",
+    "Identify which CSS properties are inherited by default",
+    "Apply CSS rules to parent Elements and observe child behavior",
+    "Solve the CSS Inheritance challenge effectively"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_inheritance.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Inheritance",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ مَفْهُومَ Inheritance أَوْ التَّوَرُثِ فِي لُغَةِ CSS، وَهُوَ مَبْدَأٌ أَسَاسِيٌّ يَجْعَلُ الْعَنَاصِرَ الْأَبْنَاءَ تَرِثُ بَعْضَ الْخَصَائِصِ مِنْ الْعَنَاصِرِ الْآبَاءِ.",
+        "caption_text": "مرحبا بكم في درس CSS Inheritance. سنتعرف اليوم على مفهوم التورث وكيفية انتقال الخصائص من العناصر الآباء إلى الأبناء."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم Inheritance في CSS",
+          "كيفية انتقال الخصائص بين العناصر",
+          "أهمية فهم التورث في تصميم صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inheritance.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "قواعد التورث في CSS",
+      "narration": {
+        "spoken_text": "فِي CSS، بَعْضُ الْخَصَائِصِ مِثْلَ color وَ font-family تَرِثُهَا الْعَنَاصِرُ تِلْقَائِيّاً. لَكِنْ خَصَائِصَ أُخْرَى مِثْلَ border أَوْ margin لَا تَرِثُهَا الْعَنَاصِرُ. هَذَا التَّمْيِيزُ ضَرُورِيٌّ لِتَحَكُّمٍ دَقِيقٍ فِي تَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تنتقل خصائص مثل color و font-family تلقائيا، بينما لا تورث خصائص مثل border أو margin في CSS."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "هل تورث؟",
+          "مثال"
+        ],
+        "rows": [
+          [
+            "color",
+            "نعم",
+            "نعم"
+          ],
+          [
+            "font-family",
+            "نعم",
+            "نعم"
+          ],
+          [
+            "border",
+            "لا",
+            "لا"
+          ],
+          [
+            "margin",
+            "لا",
+            "لا"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inheritance.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي على Inheritance",
+      "narration": {
+        "spoken_text": "لِنُعَايِنْ هَذَا الْكُودَ. عِنْدَمَا نُحَدِّدُ color لِلْعُنْصُرِ body، فَإِنَّ جَمِيعَ الْعَنَاصِرِ دَاخِلَهُ مِثْلَ h1 وَ p سَتَرِثُ هَذَا اللَّوْنَ تِلْقَائِيّاً، مَا لَمْ نَقُمْ بِتَغْيِيرِهِ بِشَكْلٍ مُبَاشِرٍ عَلَى الْعُنْصُرِ نَفْسِهِ.",
+        "caption_text": "عند تحديد لون للنص في body، ترث العناصر الداخلية مثل h1 و p هذا اللون تلقائيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  color: blue;\n  font-family: Arial;\n}\nh1 {\n  /* يرث اللون من body */\n}\np {\n  /* يرث اللون من body */\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inheritance.asp"
+      ]
+    },
+    {
+      "id": "output_view",
+      "title": "معاينة النتائج",
+      "narration": {
+        "spoken_text": "فِي هَذِهِ النَّتِيجَةِ، نَرَى أَنَّ الْعُنْصُرَ h1 وَالْعُنْصُرَ p كِلَاهُمَا يَظْهَرَانِ بِاللَّوْنِ الْأَزْرَقِ. هَذَا يُؤَكِّدُ أَنَّ خَاصِّيَّةَ color قَدْ تَمَّ تَوْرِيثُهَا بِنَجَاحٍ مِنْ الْعُنْصُرِ الْأَبِ body إِلَى الْعَنَاصِرِ الْأَبْنَاءِ.",
+        "caption_text": "يظهر النص باللون الأزرق في المتصفح، مما يثبت نجاح عملية التورث للخاصية color."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <h1>عنوان الصفحة</h1>\n    <p>هذا نص فقرة يرث اللون.</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عنوان الصفحة (أزرق)\nهذا نص فقرة يرث اللون (أزرق)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inheritance.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ عَلَيْنَا الْحَذَرَ عِنْدَ الاعْتِمَادِ عَلَى التَّوَرُثِ. يُفَضَّلُ تَحْدِيدُ الْخَصَائِصِ الْعَامَّةِ فِي body، ثُمَّ تَخْصِيصُ الْعَنَاصِرِ الْفَرْدِيَّةِ عِنْدَ الْحَاجَةِ. هَذَا يُسَاعِدُ فِي الْحِفَاظِ عَلَى نَظَافَةِ الْكُودِ وَسُهُولَةِ صِيَانَتِهِ.",
+        "caption_text": "استخدم التورث للخصائص العامة، وقم بتخصيص العناصر الفردية عند الحاجة لضمان كود نظيف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "حدد الخصائص العامة في body",
+          "استخدم التورث لتقليل تكرار الكود",
+          "خصص العناصر الفردية عند الحاجة",
+          "اختبر التورث دائما في المتصفح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inheritance.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا التَّحَدِّيَ. تَعَلَّمْنَا كَيْفَ تَعْمَلُ خَاصِّيَّةُ Inheritance فِي CSS، وَكَيْفَ نُطَبِّقُهَا لِتَحْسِينِ كُودِ صَفْحَةِ الْوِبّ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو.",
+        "caption_text": "لقد تعلمنا أساسيات التورث في CSS. جربوا الأكواد بأنفسكم عبر الرابط المرفق في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهم التورث في CSS",
+          "الفرق بين الخصائص الموروثة وغير الموروثة",
+          "تطبيق التورث في المشاريع الحقيقية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_inheritance.asp"
+      ]
+    }
+  ]
+}
