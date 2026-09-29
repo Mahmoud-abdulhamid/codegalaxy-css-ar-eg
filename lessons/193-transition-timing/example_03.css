@@ -1,0 +1,3 @@
+button {
+  transition: background-color 1s ease-out, transform 1s ease-out;
+}
