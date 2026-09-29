@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "175",
+  "title": "CSS Shadow Effects",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام خاصية text-shadow في CSS",
+    "التحكم في الإزاحة الأفقية والعمودية للظلال",
+    "إضافة تأثيرات التمويه والألوان للظلال",
+    "إنشاء تأثيرات نيون متعددة الطبقات",
+    "استخدام الظلال لإنشاء حدود نصية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_shadows.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تأثيرات الظلال",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِضَافَةِ لَمَسَاتٍ جَمَالِيَّةٍ لِلنُّصُوصِ بِاسْتِخْدَامِ خَاصِيَّةِ text-shadow، وَهِيَ تَقْنِيَّةٌ قَوِيَّةٌ لِتَحْسِينِ تَصْمِيمِ وَاجِهَاتِ الْوِبّ.",
+        "caption_text": "تسمح خاصية text-shadow بإضافة تأثيرات ظل احترافية للنصوص في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية text-shadow تمنح النصوص عمقا بصريا",
+          "يمكن التحكم في اتجاه الظل ولونه ودرجة التمويه",
+          "تستخدم لتحسين تجربة المستخدم في واجهات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "basic_syntax",
+      "title": "القواعد الأساسية لخاصية text-shadow",
+      "narration": {
+        "spoken_text": "تَعْمَلُ خَاصِيَّةُ text-shadow مِنْ خِلَالِ تَحْدِيدِ الْإِزَاحَةِ الْأُفُقِيَّةِ ثُمَّ الْعَمُودِيَّةِ. لَاحِظْ أَنَّنَا نَسْتَخْدِمُ قِيَمَ الطُّولِ مِثْلَ px لِتَحْدِيدِ مَوْقِعِ الظِّلِّ بِدِقَّةٍ، وَيُمْكِنُنَا إِضَافَةُ لَوْنٍ لِتَخْصِيصِ الْمَظْهَرِ.",
+        "caption_text": "تتطلب خاصية text-shadow تحديد الإزاحة الأفقية والعمودية كقيم أساسية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  text-shadow: 2px 2px red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "blur_effect",
+      "title": "إضافة التمويه للظلال",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الظِّلِّ أَكْثَرَ نَعُومَةً، نُضِيفُ قِيمَةً ثَالِثَةً تُمَثِّلُ نِصْفَ قُطْرِ التَّمْوِيهِ. كُلَّمَا زَادَتْ هَذِهِ الْقِيمَةُ، أَصْبَحَ الظِّلُّ أَكْثَرَ تَشَتُّتاً وَتَلَاشِياً، مِمَّا يُعْطِي طَابَعاً وَاقِعِيّاً لِلنَّصِّ.",
+        "caption_text": "القيمة الثالثة في text-shadow تحدد درجة التمويه (blur) للظل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  text-shadow: 2px 2px 5px red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "neon_glow",
+      "title": "تأثيرات النيون المتوهجة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا ابْتِكَارُ تَأْثِيرِ نِيُونٍ رَائِعٍ عَبْرَ ضَبْطِ الْإِزَاحَةِ عَلَى صِفْرٍ وَتَكْبِيرِ قِيمَةِ التَّمْوِيهِ. هَذَا يُؤَدِّي إِلَى انْتِشَارِ اللَّوْنِ حَوْلَ الْحُرُوفِ بِشَكْلٍ مُتَوَهِّجٍ وَجَذَّابٍ لِلْعَيْنِ.",
+        "caption_text": "لإنشاء تأثير نيون، نضبط الإزاحة على صفر ونزيد قيمة التمويه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  text-shadow: 0 0 3px #ff0000;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "multiple_shadows",
+      "title": "استخدام ظلال متعددة",
+      "narration": {
+        "spoken_text": "لَا نَقْتَصِرُ عَلَى ظِلٍّ وَاحِدٍ، بَلْ يُمْكِنُنَا دَمْجُ عِدَّةِ ظِلَالٍ بِفَصْلِهَا بِفَاصِلَةٍ. هَذَا يُسَاعِدُ فِي بِنَاءِ تَأْثِيرَاتٍ مُعَقَّدَةٍ مِثْلَ الْإِضَاءَةِ الْمُتَدَاخِلَةِ لِتَصْمِيمَاتٍ عَصْرِيَّةٍ.",
+        "caption_text": "يمكن دمج عدة ظلال في خاصية واحدة باستخدام الفاصلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "border_effect",
+      "title": "إنشاء حدود نصية بالظلال",
+      "narration": {
+        "spoken_text": "أَخِيراً، يُمْكِنُ اسْتِخْدَامُ text-shadow لِتَشْكِيلِ حُدُودٍ حَوْلَ النَّصِّ عَبْرَ تَكْرَارِ الظِّلِّ فِي اتِّجَاهَاتٍ مُخْتَلِفَةٍ. هَذِهِ حِيلَةٌ ذَكِيَّةٌ لِإِبْرَازِ النُّصُوصِ دُونَ الْحَاجَةِ لِخَصَائِصِ الْحُدُودِ التَّقْلِيدِيَّةِ.",
+        "caption_text": "يمكن محاكاة حدود النص باستخدام عدة ظلال دقيقة الاتجاه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  color: coral;\n  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;\n}",
+        "highlight_lines": [],
+        "output": "نص بلون مرجاني مع حدود سوداء واضحة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نُضِيفُ حَيَاةً لِلنُّصُوصِ بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَغْيِيرِ الْقِيَمِ لِلْوُصُولِ إِلَى نَتَائِجَ إِبْدَاعِيَّةٍ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "جرب تغيير قيم الإزاحة واللون والتمويه للحصول على تأثيرات فريدة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم text-shadow لإضافة عمق للنصوص",
+          "جرب دمج الظلال للحصول على تأثيرات نيون",
+          "استخدم الظلال لإنشاء حدود نصية مبتكرة",
+          "راجع الرابط في الوصف لمزيد من الأمثلة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows.asp"
+      ]
+    }
+  ]
+}
