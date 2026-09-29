@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "269",
+  "title": "CSS supports Rule",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام supports للتحقق من دعم المتصفح للخصائص",
+    "تعلم كتابة Fallback Styles لضمان توافق التصميم",
+    "استخدام العوامل المنطقية مثل not و and و or",
+    "تطبيق تقنيات التصميم المتجاوب مع CSS Grid و Flexbox"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_supports_rule.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول supports",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى قَاعِدَةِ supports، وَهِيَ أَدَاةٌ قَوِيَّةٌ لِلتَّحَقُّقِ مِنْ دَعْمِ مُتَصَفِّحِ الْوِبّ لِخَصَائِصِ CSS مُعَيَّنَةٍ، مِمَّا يَمْنَحُنَا تَحَكُّماً أَفْضَلَ فِي التَّصْمِيمِ.",
+        "caption_text": "تسمح قاعدة supports بالتحقق من دعم المتصفح لخصائص CSS وتوفير بدائل عند عدم الدعم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحقق من دعم المتصفح لخصائص CSS",
+          "تطبيق Fallback Styles للمتصفحات القديمة",
+          "تحسين تجربة المستخدم عبر التوافقية",
+          "استخدام منطق برمجي داخل ملفات CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "الصيغة الأساسية لـ supports",
+      "narration": {
+        "spoken_text": "لِكِتَابَةِ هَذِهِ الْقَاعِدَةِ، نَسْتَخْدِمُ بِنْيَةً بَسِيطَةً تَعْتَمِدُ عَلَى كِتَابَةِ الْخَاصِّيَّةِ وَالْقِيمَةِ دَاخِلَ أَقْوَاسٍ. إِذَا كَانَ الْمُتَصَفِّحُ يَدْعَمُ هَذِهِ الْخَاصِّيَّةَ، فَسَيَتِمُّ تَنْفِيذُ الْأَكْوَادِ الْمَوْجُودَةِ دَاخِلَ الْأَقْوَاسِ الْمُتَعَرِّجَةِ.",
+        "caption_text": "تعتمد الصيغة على التحقق من (property: value) داخل أقواس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@supports (display: grid) {\n  .container {\n    display: grid;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "flexbox_example",
+      "title": "تطبيق عملي مع Flexbox",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَوْفِيرِ تَنْسِيقٍ بَدِيلٍ لِلْمُتَصَفِّحَاتِ الَّتِي لَا تَدْعَمُ Flexbox. نَضَعُ التَّنْسِيقَ الْعَامَّ خَارِجَ supports، ثُمَّ نُعِيدُ تَعْرِيفَهُ دَاخِلَ الْقَاعِدَةِ لِلْمُتَصَفِّحَاتِ الْحَدِيثَةِ.",
+        "caption_text": "توفير تنسيق بديل باستخدام float للمتصفحات التي لا تدعم flex."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  float: left;\n  width: 100%;\n}\n@supports (display: flex) {\n  .container {\n    display: flex;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "grid_example",
+      "title": "استخدام Grid مع Fallback",
+      "narration": {
+        "spoken_text": "نَفْسُ الْمَبْدَأِ يَنْطَبِقُ عَلَى CSS Grid. نُحَدِّدُ تَنْسِيقَ table كَبَدِيلٍ، ثُمَّ نَسْتَخْدِمُ supports لِتَفْعِيلِ خَصَائِصِ grid لِلْمُتَصَفِّحَاتِ الَّتِي تَدْعَمُهَا، مِمَّا يَضْمَنُ ظُهُورَ الْمُحْتَوَى بِشَكْلٍ سَلِيمٍ فِي كُلِّ الْأَحْوَالِ.",
+        "caption_text": "استخدام display: table كبديل عند عدم دعم grid."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: table;\n  width: 90%;\n}\n@supports (display: grid) {\n  .container {\n    display: grid;\n    grid-gap: 10px;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "negation",
+      "title": "استخدام المعامل not",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً اسْتِخْدَامُ الْمُعَامِلِ not لِتَطْبِيقِ تَنْسِيقَاتٍ خَاصَّةٍ فَقَطْ عِنْدَمَا لَا يَدْعَمُ الْمُتَصَفِّحُ مِيزَةً مُعَيَّنَةً، مِثْلَ إِظْهَارِ رِسَالَةِ تَحْذِيرٍ لِلْمُسْتَخْدِمِ بِأَنَّ الْمُتَصَفِّحَ قَدِيمٌ.",
+        "caption_text": "استخدام not لتطبيق أنماط عند عدم دعم الميزة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@supports not (display: grid) {\n  .warning {\n    background-color: pink;\n    border: 1px solid red;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "combining",
+      "title": "دمج الشروط",
+      "narration": {
+        "spoken_text": "لَا تَقْتَصِرُ الْقَاعِدَةُ عَلَى شَرْطٍ وَاحِدٍ، بَلْ يُمْكِنُكَ دَمْجُ عِدَّةِ شُرُوطٍ بِاسْتِخْدَامِ and أَوْ or. هَذَا يُسَاعِدُ فِي بِنَاءِ تَصْمِيمَاتٍ مُعَقَّدَةٍ تَعْمَلُ بِكَفَاءَةٍ عَالِيَةٍ فِي مُخْتَلَفِ بِيئَاتِ الْوِبّ.",
+        "caption_text": "يمكن دمج الشروط باستخدام and و or."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@supports (display: grid) and (gap: 10px) {\n  .container {\n    display: grid;\n    gap: 10px;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ تَوْفِيرِ تَنْسِيقَاتٍ بَدِيلَةٍ خَارِجَ supports لِلْمُتَصَفِّحَاتِ الْقَدِيمَةِ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِأَنْفُسِكُمْ لِتَرَوْا كَيْفَ يَتَفَاعَلُ الْمُتَصَفِّحُ مَعَ خَصَائِصِ CSS.",
+        "caption_text": "دائما وفر بدائل للمتصفحات القديمة خارج قاعدة supports."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم supports للتحقق من الميزات",
+          "وفر دائما Fallback Styles",
+          "استخدم not و and للتحكم الدقيق",
+          "اختبر التصميم في متصفحات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_supports_rule.asp"
+      ]
+    }
+  ]
+}
