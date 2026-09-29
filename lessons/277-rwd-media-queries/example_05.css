@@ -1,0 +1,10 @@
+@media screen and (max-width: 600px) {
+  #div1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  #div1 {
+    font-size: 80px;
+  }
+}
