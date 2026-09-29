@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "345",
+  "title": "Responsive Images with CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the concept of responsive images in CSS",
+    "Learn to use width and height properties for scaling",
+    "Implement max-width to prevent image overflow",
+    "Master responsive design techniques for web layouts"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_responsive.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول الصور المتجاوبة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ جَعْلِ الصُّوَرِ Responsive بِحَيْثُ تَتَكَيَّفُ تِلْقَائِيّاً مَعَ أَحْجَامِ الشَّاشَاتِ الْمُخْتَلِفَةِ لِتُحَسِّنَ تَجْرِبَةَ الْمُسْتَخْدِمِ عَلَى الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس اليوم حول كيفية إنشاء صور متجاوبة باستخدام CSS لتناسب مختلف أحجام الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الصور المتجاوبة تتكيف تلقائيا مع حجم الشاشة",
+          "تحسين تجربة المستخدم عبر مختلف الأجهزة",
+          "استخدام خصائص CSS للتحكم في أبعاد الصور"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_responsive.asp"
+      ]
+    },
+    {
+      "id": "basic_scaling",
+      "title": "التحكم في أبعاد الصور",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الصُّورَةِ تَتَمَدَّدُ وَتَنْكَمِشُ مَعَ تَغَيُّرِ حَجْمِ الشَّاشَةِ، نَقُومُ بِضَبْطِ خَاصِيَّةِ width إِلَى مِئَةٍ بِالْمِئَةِ، وَخَاصِيَّةِ height إِلَى auto. هَذَا يَضْمَنُ الْحِفَاظَ عَلَى نِسْبَةِ الْأَبْعَادِ الْأَصْلِيَّةِ لِلصُّورَةِ.",
+        "caption_text": "لجعل الصورة تتمدد وتنكمش، نضبط خاصية width إلى 100 وخاصية height إلى auto."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".responsive {\n  width: 100%;\n  height: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_responsive.asp"
+      ]
+    },
+    {
+      "id": "max_width_concept",
+      "title": "استخدام خاصية max-width",
+      "narration": {
+        "spoken_text": "أَحْيَاناً نُرِيدُ أَنْ تَنْكَمِشَ الصُّورَةُ عِنْدَ صِغَرِ الشَّاشَةِ، لَكِنْ لَا نُرِيدُهَا أَنْ تَتَجَاوَزَ حَجْمَهَا الْأَصْلِيَّ عِنْدَ تَكْبِيرِ الشَّاشَةِ. لِهَذَا الْغَرَضِ، نَسْتَخْدِمُ خَاصِيَّةَ max-width بِقِيمَةِ مِئَةٍ بِالْمِئَةِ.",
+        "caption_text": "استخدام max-width: 100 يمنع الصورة من أن تصبح أكبر من حجمها الأصلي مع السماح لها بالانكماش."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".responsive {\n  max-width: 100%;\n  height: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_responsive.asp"
+      ]
+    },
+    {
+      "id": "fixed_max_size",
+      "title": "تحديد أقصى حجم للصورة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَقْيِيدُ الصُّورَةِ بِحَجْمٍ أَقْصَى مُحَدَّدٍ بِال pixels. فِي هَذَا الْمِثَالِ، نَضْبُطُ max-width إِلَى أَرْبَعِمِئَةِ pixel، مِمَّا يَمْنَعُ الصُّورَةَ مِنَ التَّمَدُّدِ أَكْثَرَ مِنْ ذَلِكَ حَتَّى لَوْ كَانَتِ الشَّاشَةُ كَبِيرَةً.",
+        "caption_text": "يمكن تحديد حجم أقصى للصورة باستخدام قيمة ثابتة مثل 400px مع خاصية max-width."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".responsive {\n  width: 100%;\n  max-width: 400px;\n  height: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_responsive.asp"
+      ]
+    },
+    {
+      "id": "html_implementation",
+      "title": "تطبيق الكود في HTML",
+      "narration": {
+        "spoken_text": "لِتَطْبِيقِ هَذِهِ التَّنْسِيقَاتِ، نَقُومُ بِإِضَافَةِ ال class الْمُسَمَّى responsive إِلَى عُنْصُرِ img فِي مِلَفِّ ال HTML. هَذَا يَرْبِطُ التَّنْسِيقَاتِ الَّتِي كَتَبْنَاهَا فِي CSS بِالصُّورَةِ الْمَعْرُوضَةِ.",
+        "caption_text": "يتم ربط تنسيقات CSS بالعنصر عبر إضافة class إلى Tag img في ملف HTML."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <img src=\"nature.jpg\" alt=\"Nature\" class=\"responsive\">\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_responsive.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ فَتْحِ هَذِهِ الصَّفْحَةِ فِي ال Web Browser، سَتُحَافِظُ الصُّورَةُ عَلَى تَوَازُنِهَا. عِنْدَ تَغْيِيرِ حَجْمِ النَّافِذَةِ، سَتُحَدِّثُ الصُّورَةُ أَبْعَادَهَا تِلْقَائِيّاً بِنَاءً عَلَى الْقَوَاعِدِ الَّتِي حَدَّدْنَاهَا فِي مِلَفِّ ال CSS.",
+        "caption_text": "تظهر الصورة متجاوبة وتغير أبعادها تلقائيا عند تغيير حجم نافذة المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Browser Window Resized:\n- Image width: 100%\n- Image height: auto\n- Aspect ratio: Maintained",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_responsive.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، تَعَلَّمْنَا أَهَمِّيَّةَ ال Responsive Images فِي تَصْمِيمِ الْوِبّ. اسْتَخْدِمُوا width وَ max-width بِحِكْمَةٍ لِضَمَانِ ظُهُورِ الصُّوَرِ بِشَكْلٍ مِثَالِيٍّ عَلَى كُلِّ الْأَجْهِزَةِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: استخدام width و max-width يضمن تجربة عرض مثالية للصور عبر مختلف الأجهزة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم width: 100 للتمدد الكامل",
+          "استخدم max-width: 100 لمنع التكبير الزائد",
+          "دائما اضبط height: auto للحفاظ على التناسب",
+          "جرب الأكواد بنفسك عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_responsive.asp"
+      ]
+    }
+  ]
+}
