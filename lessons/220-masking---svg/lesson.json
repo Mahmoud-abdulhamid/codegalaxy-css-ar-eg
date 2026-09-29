@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "220",
+  "title": "CSS SVG Mask Layers",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام mask element في SVG",
+    "تطبيق أقنعة دائرية وبيضوية على الصور",
+    "استخدام polygon لإنشاء أقنعة مضلعة ومثلثات",
+    "التحكم في شفافية الصور باستخدام CSS و SVG"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_masking_svg.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-f523a24a5e9fb379.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css3_masking_svg.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تقنية Masking",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ اسْتِخْدَامِ mask element لِتَطْبِيقِ أَقْنِعَةٍ إِبْدَاعِيَّةٍ عَلَى صُوَرِ الْوِبّ بِاسْتِخْدَامِ SVG، مِمَّا يَمْنَحُ تَصَامِيمَكُمْ مَظْهَراً احْتِرَافِيّاً وَمُمَيَّزاً.",
+        "caption_text": "مرحبا بكم في درس CSS SVG Mask Layers، سنتعلم اليوم كيفية تطبيق أقنعة إبداعية على صور الويب باستخدام SVG."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تقنية Masking تسمح بإخفاء أجزاء من العنصر",
+          "نستخدم SVG mask لتحديد شكل القناع",
+          "يمكن تطبيق القناع على أي صورة باستخدام CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_svg.asp"
+      ]
+    },
+    {
+      "id": "circle_mask",
+      "title": "إنشاء قناع دائري",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِأَبْسَطِ الْأَشْكَالِ وَهُوَ الدَّائِرَةُ. نَسْتَخْدِمُ circle element دَاخِلَ mask لِتَحْدِيدِ مِسَاحَةِ الظُّهُورِ. لَاحِظْ أَنَّ خَاصِّيَّةَ fill بِاللَّوْنِ الْأَبْيَضِ هِيَ مَا يَجْعَلُ الْجُزْءَ ظَاهِراً فِي الصُّورَةِ.",
+        "caption_text": "نستخدم circle element داخل mask لتحديد مساحة الظهور، حيث اللون الأبيض يحدد الجزء المرئي من الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "circle_mask.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <svg width=\"600\" height=\"400\">\n      <mask id=\"svgmask1\">\n        <circle r=\"150\" cx=\"200\" cy=\"200\" fill=\"#ffffff\" />\n      </mask>\n      <image xlink:href=\"img.jpg\" mask=\"url(#svgmask1)\"></image>\n    </svg>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_svg.asp"
+      ]
+    },
+    {
+      "id": "ellipse_mask",
+      "title": "استخدام Ellipse للقناع",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْنَا شَكْلاً بَيْضَوِيّاً، نَسْتَخْدِمُ ellipse element. نُحَدِّدُ نِصْفَ الْقُطْرِ الْأُفُقِيِّ rx وَالرَّأْسِيِّ ry لِلْحُصُولِ عَلَى الشَّكْلِ الْمَطْلُوبِ. هَذِهِ الطَّرِيقَةُ تُعْطِي مَرُونَةً كَبِيرَةً فِي تَشْكِيلِ حُدُودِ الصُّورَةِ.",
+        "caption_text": "نستخدم ellipse element مع خصائص rx و ry للتحكم في أبعاد القناع البيضوي وتشكيل حدود الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "ellipse_mask.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <mask id=\"svgmask1\">\n      <ellipse cx=\"220\" cy=\"150\" rx=\"200\" ry=\"100\" fill=\"#ffffff\" />\n    </mask>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_svg.asp"
+      ]
+    },
+    {
+      "id": "polygon_mask",
+      "title": "الأقنعة المضلعة والمثلثات",
+      "narration": {
+        "spoken_text": "لِلْأَشْكَالِ الْهَنْدَسِيَّةِ الْمُعَقَّدَةِ، نَسْتَخْدِمُ polygon element. هَذَا الْعُنْصُرُ يُمَكِّنُنَا مِنْ رَسْمِ مُثَلَّثَاتٍ أَوْ نُجُومٍ عَبْرَ تَحْدِيدِ إِحْدَاثِيَّاتِ النِّقَاطِ فِي خَاصِّيَّةِ points، مِمَّا يَمْنَحُ تَصْمِيمَكُمْ طَابَعاً فَرِيداً وَعَصْرِيّاً.",
+        "caption_text": "يستخدم polygon element لرسم أشكال هندسية معقدة مثل المثلثات والنجوم عبر تحديد إحداثيات النقاط في خاصية points."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "polygon_mask.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <mask id=\"svgmask1\">\n      <polygon fill=\"#ffffff\" points=\"200 0, 400 400, 0 400\"></polygon>\n    </mask>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_svg.asp"
+      ]
+    },
+    {
+      "id": "multiple_shapes",
+      "title": "دمج أشكال متعددة",
+      "narration": {
+        "spoken_text": "لَا نَقْتَصِرُ عَلَى شَكْلٍ وَاحِدٍ، بَلْ يُمْكِنُنَا دَمْجُ عِدَّةِ دَوَائِرَ أَوْ أَشْكَالٍ دَاخِلَ mask وَاحِدٍ. هَذَا يُؤَدِّي إِلَى تَأْثِيرَاتٍ بَصَرِيَّةٍ مُتَعَدِّدَةِ الطَّبَقَاتِ عَلَى نَفْسِ الصُّورَةِ، وَهُوَ أَمْرٌ رَائِعٌ لِتَصَامِيمِ الْوِبّ الْحَدِيثَةِ.",
+        "caption_text": "يمكن دمج عدة أشكال داخل mask واحد لإنشاء تأثيرات بصرية متعددة الطبقات على الصورة الواحدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "multi_mask.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <mask id=\"svgmask1\">\n      <circle fill=\"#ffffff\" cx=\"75\" cy=\"75\" r=\"75\"></circle>\n      <circle fill=\"#ffffff\" cx=\"80\" cy=\"260\" r=\"75\"></circle>\n    </mask>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_svg.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَذَكَّرُوا أَنَّ دَمْجَ SVG مَعَ CSS يَفْتَحُ آفَاقاً وَاسِعَةً لِلْإِبْدَاعِ. جَرِّبُوا تَغْيِيرَ الْإِحْدَاثِيَّاتِ وَالْأَشْكَالِ بِنَفْسِكُمْ لِتَرَوْا النَّتَائِجَ الْمُذْهِلَةَ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "دمج SVG مع CSS يفتح آفاقا واسعة للإبداع. جربوا تغيير الإحداثيات والأشكال بأنفسكم لرؤية النتائج المذهلة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام mask يضيف لمسة احترافية",
+          "SVG يوفر دقة عالية في الأشكال",
+          "تطبيق mask عبر CSS سهل وفعال",
+          "استمروا في التجربة والتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_svg.asp"
+      ]
+    }
+  ]
+}
