@@ -1,0 +1,2 @@
+Image 1: Black and White (Grayscale)
+Image 2: Blurred Effect (5px)
