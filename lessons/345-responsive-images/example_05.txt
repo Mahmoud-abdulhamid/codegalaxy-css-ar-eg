@@ -1,0 +1,4 @@
+Browser Window Resized:
+- Image width: 100%
+- Image height: auto
+- Aspect ratio: Maintained
