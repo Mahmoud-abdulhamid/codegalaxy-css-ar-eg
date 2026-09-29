@@ -1,0 +1,5 @@
+div {
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: lightblue;
+}
