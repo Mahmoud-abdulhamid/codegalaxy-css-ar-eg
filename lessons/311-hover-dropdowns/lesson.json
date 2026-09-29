@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "311",
+  "title": "بناء قائمة Dropdown تفاعلية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء قائمة Dropdown تظهر عند تمرير الفأرة",
+    "استخدام خاصية position مع absolute و relative",
+    "التحكم في ظهور العناصر باستخدام خاصية display",
+    "تطبيق تأثيرات بصرية باستخدام box-shadow و hover"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_dropdown.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Dropdown",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ قَائِمَةِ Dropdown تَفَاعُلِيَّةٍ تَظْهَرُ عِنْدَ تَحْرِيكِ الْفَأْرَةِ فَوْقَ عُنْصُرٍ مُعَيَّنٍ، وَهِيَ مَهَارَةٌ أَسَاسِيَّةٌ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "سنتعلم اليوم كيفية بناء قائمة Dropdown تفاعلية تظهر عند تحريك الفأرة فوق عنصر معين."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قائمة Dropdown هي قائمة قابلة للتبديل",
+          "تسمح للمستخدم باختيار قيمة من قائمة محددة",
+          "تعتمد على CSS للتحكم في الظهور والإخفاء"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML للقائمة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكْلَاسِ dropdown كَحَاوِيَةٍ رَئِيسِيَّةٍ، وَبِدَاخِلِهَا نَضَعُ button لِفَتْحِ الْقَائِمَةِ، ثُمَّ div آخَرَ بِكْلَاسِ dropdown-content يَحْتَوِي عَلَى رَوَابِطِ الْقَائِمَةِ.",
+        "caption_text": "نستخدم div كحاوية رئيسية تحتوي على زر الفتح ومحتوى القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"dropdown\">\n      <button class=\"dropbtn\">Dropdown</button>\n      <div class=\"dropdown-content\">\n        <a href=\"#\">Link 1</a>\n        <a href=\"#\">Link 2</a>\n        <a href=\"#\">Link 3</a>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown.asp"
+      ]
+    },
+    {
+      "id": "css_styling_1",
+      "title": "تنسيق الزر والحاوية",
+      "narration": {
+        "spoken_text": "نُعْطِي الزِّرَّ dropbtn تَنْسِيقَاتٍ جَمَالِيَّةً، وَالْأَهَمُّ هُوَ ضَبْطُ dropdown عَلَى position: relative؛ لِأَنَّ هَذَا يَسْمَحُ لَنَا بِتَحْدِيدِ مَوْقِعِ الْمُحْتَوِيَاتِ بِدِقَّةٍ بِاسْتِخْدَامِ position: absolute.",
+        "caption_text": "نستخدم position: relative للحاوية لضمان تموضع القائمة بشكل صحيح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropbtn {\n  background-color: #04AA6D;\n  color: white;\n  padding: 16px;\n  font-size: 16px;\n  border: none;\n}\n.dropdown {\n  position: relative;\n  display: inline-block;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown.asp"
+      ]
+    },
+    {
+      "id": "css_styling_2",
+      "title": "إخفاء وإظهار المحتوى",
+      "narration": {
+        "spoken_text": "نَضْبِطُ dropdown-content عَلَى display: none لِإِخْفَائِهِ افْتِرَاضِيّاً. عِنْدَ اسْتِخْدَامِ hover عَلَى dropdown، نُغَيِّرُ الْقِيمَةَ إِلَى display: block لِإِظْهَارِ الْقَائِمَةِ فَوْرَ تَحْرِيكِ الْفَأْرَةِ.",
+        "caption_text": "يتم إخفاء القائمة افتراضيا وإظهارها عند تمرير الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropdown-content {\n  display: none;\n  position: absolute;\n  background-color: #f1f1f1;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n  z-index: 1;\n}\n.dropdown:hover .dropdown-content {\n  display: block;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown.asp"
+      ]
+    },
+    {
+      "id": "links_styling",
+      "title": "تنسيق الروابط",
+      "narration": {
+        "spoken_text": "نَقُومُ بِتَنْسِيقِ الرَّوَابِطِ دَاخِلَ dropdown-content لِتَظْهَرَ بِشَكْلٍ مُنَظَّمٍ، وَنُضِيفُ تَأْثِيرَ hover لِتَغْيِيرِ لَوْنِ الْخَلْفِيَّةِ عِنْدَ التَّحْرِيكِ، مِمَّا يُعْطِي تَفَاعُلِيَّةً أَكْثَرَ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "تنسيق الروابط داخل القائمة مع إضافة تأثير عند التمرير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropdown-content a {\n  color: black;\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n}\n.dropdown-content a:hover {\n  background-color: #ddd;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً اسْتِخْدَامَ z-index لِضَمَانِ ظُهُورِ الْقَائِمَةِ أَمَامَ الْعَنَاصِرِ الْأُخْرَى. كَمَا يُمْكِنُكَ ضَبْطُ width إِلَى 100 إِذَا أَرَدْتَ أَنْ تَكُونَ الْقَائِمَةُ بِنَفْسِ عَرْضِ الزِّرِّ.",
+        "caption_text": "استخدم z-index للتحكم في طبقات العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم box-shadow لإعطاء مظهر البطاقة",
+          "استخدم z-index لترتيب العناصر فوق بعضها",
+          "يمكنك تغيير min-width حسب الحاجة",
+          "استخدم overflow: auto للتمرير في الشاشات الصغيرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ قَائِمَةِ Dropdown احْتِرَافِيَّةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ وَتَعْدِيلِهَا لِتُنَاسِبَ مَشَارِيعَكُمْ الْخَاصَّةَ. لَا تَتَرَدَّدُوا فِي زِيَارَةِ الرَّابِطِ الْمُوَضَّحِ لِلْمَزِيدِ مِنَ التَّفَاصِيلِ.",
+        "caption_text": "لقد قمنا ببناء قائمة Dropdown احترافية. جربوا الأكواد بأنفسكم!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا الكود كاملا في المصدر",
+          "جربوا تغيير الألوان والأحجام",
+          "طبقوا المفهوم في مشاريعكم",
+          "تابعوا الدروس القادمة للمزيد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown.asp"
+      ]
+    }
+  ]
+}
