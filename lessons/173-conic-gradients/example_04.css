@@ -1,0 +1,4 @@
+#grad {
+  background-image: conic-gradient(red, yellow, green, blue, black);
+  border-radius: 50%;
+}
