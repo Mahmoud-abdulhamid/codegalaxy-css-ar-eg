@@ -1,0 +1,3 @@
+Element 1: Rounded corners (25px)
+Element 2: Oval shape (70px/30px)
+Element 3: Circular shape (50%)
