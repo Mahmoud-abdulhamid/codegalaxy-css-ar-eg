@@ -1,0 +1,6 @@
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.btn:hover, .dropdown:hover .btn {
+  background-color: #0b7dda;
+}
