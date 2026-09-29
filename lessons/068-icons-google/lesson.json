@@ -3,6 +3,8 @@
   "lesson_id": "68",
   "title": "استخدام Google Icons في صفحات الويب",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "تعلم كيفية دمج Google Icons في صفحات الويب",
     "فهم كيفية استخدام link Element لربط مكتبة الأيقونات",
