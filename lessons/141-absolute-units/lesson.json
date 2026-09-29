@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "141",
+  "title": "CSS Absolute Units",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم ماهية Absolute Units في CSS",
+    "التعرف على وحدة px واستخداماتها",
+    "تجنب استخدام Absolute Units في التصميم المتجاوب",
+    "تطبيق font-size باستخدام px"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_units_absolute.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Absolute Units",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَرَّفُ عَلَى Absolute Units، وَهِيَ وَحَدَاتُ قِيَاسٍ ثَابِتَةٌ لَا تَتَغَيَّرُ مَهْمَا تَغَيَّرَ حَجْمُ الشَّاشَةِ، وَتُعَدُّ px الْأَكْثَرَ شُيُوعاً بَيْنَهَا.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد حول Absolute Units، وهي وحدات قياس ثابتة لا تتغير بتغير حجم الشاشة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Absolute Units هي وحدات قياس ثابتة",
+          "لا تتغير بتغير حجم الشاشة",
+          "وحدة px هي الأكثر استخداما",
+          "تستخدم غالبا في الطباعة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units_absolute.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم px في التصميم",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَامِ px لِتَحْدِيدِ font-size، فَإِنَّكَ تَمْتَلِكُ تَحَكُّماً كَامِلاً فِي حَجْمِ النَّصِّ. لَكِنْ يَجِبُ الْحَذَرُ، لِأَنَّ هَذِهِ الْوَحَدَاتِ قَدْ لَا تَتَجَاوَبُ بِشَكْلٍ جَيِّدٍ مَعَ مُخْتَلَفِ الشَّاشَاتِ.",
+        "caption_text": "استخدام px يمنحك تحكما كاملا في حجم النص، لكنه قد يواجه صعوبة في التجاوب مع مختلف أحجام الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "px تمنح تحكما دقيقا في حجم النص",
+          "لا تتجاوب بشكل جيد مع الشاشات المختلفة",
+          "لا يمكن للمستخدم تعديل حجم النص عبر المتصفح",
+          "يمكن للمستخدم استخدام أداة zoom"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units_absolute.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي باستخدام px",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ font-size لِعَنَاصِرِ h1 وَ h2 وَ p بِاسْتِخْدَامِ px. لَاحِظْ أَنَّهُ لَا يَجُوزُ وُجُودُ مَسَافَةٍ بَيْنَ الرَّقْمِ وَالْوَحْدَةِ.",
+        "caption_text": "تطبيق عملي لتحديد حجم الخط باستخدام px. تذكر أنه لا يجب ترك مسافة بين الرقم والوحدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  font-size: 40px;\n}\nh2 {\n  font-size: 30px;\n}\np {\n  font-size: 17px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units_absolute.asp"
+      ]
+    },
+    {
+      "id": "code_explanation",
+      "title": "شرح تفصيلي للكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَعْيِينِ 40px لِ h1، وَ30px لِ h2، وَ17px لِ p. هَذِهِ الْقِيَمُ سَتَظْهَرُ بِحَجْمٍ ثَابِتٍ تَمَاماً فِي جَمِيعِ الْمُتَصَفِّحَاتِ وَعَلَى كُلِّ الْأَجْهِزَةِ.",
+        "caption_text": "شرح القيم المستخدمة في الكود: 40px لـ h1، و30px لـ h2، و17px لـ p، مما يضمن ثبات الحجم في كل مكان."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "العنصر",
+          "الخاصية",
+          "القيمة"
+        ],
+        "rows": [
+          [
+            "h1",
+            "font-size",
+            "40px"
+          ],
+          [
+            "h2",
+            "font-size",
+            "30px"
+          ],
+          [
+            "p",
+            "font-size",
+            "17px"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units_absolute.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَرَى أَنَّ الْعَنَاصِرَ تَحْتَفِظُ بِأَحْجَامِهَا الثَّابِتَةِ. هَذَا هُوَ الْمَطْلُوبُ عِنْدَمَا نَسْتَخْدِمُ Absolute Units فِي تَصْمِيمِ الْوِبّ.",
+        "caption_text": "هكذا تظهر العناصر في المتصفح بأحجام ثابتة ومحددة بدقة عند استخدام وحدات px."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <h1>Header 1</h1>\n    <h2>Header 2</h2>\n    <p>This is a paragraph.</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Header 1 (40px)\nHeader 2 (30px)\nThis is a paragraph (17px)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units_absolute.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنْ أَجْلِ تَصْمِيمٍ أَفْضَلَ وَأَكْثَرَ تَجَاوُباً، يُنْصَحُ بِاسْتِخْدَامِ Relative Units مِثْلَ em أَوْ rem بَدَلاً مِنَ الْوَحَدَاتِ الثَّابِتَةِ، لِأَنَّهَا تَتَكَيَّفُ مَعَ إِعْدَادَاتِ الْمُسْتَخْدِمِ وَأَحْجَامِ الشَّاشَاتِ.",
+        "caption_text": "نصيحة: استخدم Relative Units مثل em أو rem بدلا من Absolute Units لتحسين تجاوب الموقع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم Relative Units للتصميم المتجاوب",
+          "جرب استخدام em و rem",
+          "تجنب px في التصاميم التي تتطلب مرونة",
+          "استخدم Absolute Units فقط للطباعة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units_absolute.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا أَنَّ Absolute Units ثَابِتَةٌ وَلَا تَتَغَيَّرُ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِأَنْفُسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو، وَلَا تَتَرَدَّدُوا فِي طَرْحِ أَسْئِلَتِكُمْ.",
+        "caption_text": "خلاصة: Absolute Units ثابتة ولا تتغير. جرب الأكواد بنفسك عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Absolute Units ثابتة وغير مرنة",
+          "px هي الوحدة الأكثر استخداما",
+          "استخدم Relative Units للمواقع المتجاوبة",
+          "راجع الرابط في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units_absolute.asp"
+      ]
+    }
+  ]
+}
