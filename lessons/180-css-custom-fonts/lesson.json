@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "180",
+  "title": "CSS Custom Fonts",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام font-face لتحميل خطوط مخصصة",
+    "التعرف على صيغ الخطوط المختلفة مثل WOFF و TTF",
+    "تطبيق الخطوط المخصصة على عناصر HTML",
+    "إدارة أوزان الخطوط المختلفة مثل Bold"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_fonts.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Custom Fonts",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ اسْتِخْدَامِ Custom Fonts فِي صَفْحَةِ الْوِبّ بِاسْتِخْدَامِ قَاعِدَةِ font-face، لِتَجْعَلَ مَوْقِعَكَ مُمَيَّزاً بِخُطُوطٍ خَارِجِيَّةٍ دُونَ الْحَاجَةِ لِتَثْبِيتِهَا عَلَى جِهَازِ الْمُسْتَخْدِمِ.",
+        "caption_text": "مرحبا بكم في درس CSS Custom Fonts. سنتعلم كيفية استخدام font-face لتحميل خطوط مخصصة في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام font-face لتحميل خطوط مخصصة",
+          "لا يشترط وجود الخط على جهاز المستخدم",
+          "يتم تحميل ملف الخط تلقائيا من الخادم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "formats",
+      "title": "صيغ الخطوط الشائعة",
+      "narration": {
+        "spoken_text": "تَتَعَدَّدُ صِيَغُ الْخُطُوطِ، وَأَهَمُّهَا WOFF وَ WOFF2 الْمُحَسَّنَةُ لِأَدَاءِ الْوِبّ. بَيْنَمَا تُسْتَخْدَمُ TTF وَ OTF لِأَنْظِمَةِ التَّشْغِيلِ الْمَكْتَبِيَّةِ، لَكِنَّهَا لَيْسَتْ بِالْكِفَاءَةِ ذَاتِهَا لِتَصَفُّحِ الْوِبّ.",
+        "caption_text": "تعد صيغ WOFF و WOFF2 هي الأفضل والأكثر توافقا مع متصفحات الويب الحديثة."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الصيغة",
+          "الاستخدام",
+          "المميزات"
+        ],
+        "rows": [
+          [
+            "WOFF/WOFF2",
+            "Web",
+            "حجم صغير"
+          ],
+          [
+            "TTF/OTF",
+            "Desktop",
+            "جودة عالية"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تعريف الخط باستخدام font-face",
+      "narration": {
+        "spoken_text": "لِتَعْرِيفِ خَطٍّ جَدِيدٍ، نَسْتَخْدِمُ قَاعِدَةَ font-face. نُحَدِّدُ اسْمَ الْخَطِّ بِوَاسِطَةِ font-family، ثُمَّ نُشِيرُ إِلَى مَسَارِ مِلَفِّ الْخَطِّ فِي الْخَادِمِ عَبْرَ src. بَعْدَ ذَلِكَ، نَقُومُ بِتَطْبِيقِ هَذَا الِاسْمِ عَلَى أَيِّ Element فِي HTML.",
+        "caption_text": "يتم تعريف الخط عبر font-face وتحديد المسار باستخدام src، ثم استخدامه في CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@font-face {\n  font-family: myFont;\n  src: url(sansation_light.woff);\n}\np {\n  font-family: myFont;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "bold_font",
+      "title": "إضافة أوزان الخطوط",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْتَ إِضَافَةَ نُسْخَةٍ عَرِيضَةٍ أَوْ Bold لِلْخَطِّ، يَنْبَغِي عَلَيْكَ إِضَافَةُ قَاعِدَةِ font-face أُخْرَى لِنَفْسِ الِاسْمِ مَعَ تَحْدِيدِ font-weight بِقِيمَةِ bold، وَرَبْطِهَا بِمِلَفِّ الْخَطِّ الْعَرِيضِ.",
+        "caption_text": "لإضافة وزن Bold، نستخدم font-face إضافية مع تحديد font-weight."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@font-face {\n  font-family: myFont;\n  src: url(sansation_bold.woff);\n  font-weight: bold;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَقُومُ مُتَصَفِّحُ الْوِبّ بِتَحْمِيلِ مِلَفَّاتِ الْخَطِّ وَعَرْضِ النُّصُوصِ بِالشَّكْلِ الْمَطْلُوبِ. لَاحِظْ كَيْفَ يَتَمُّ تَنْسِيقُ الْفِقْرَاتِ بِاسْتِخْدَامِ الْخَطِّ الْمُخَصَّصِ الَّذِي قُمْنَا بِتَعْرِيفِهِ.",
+        "caption_text": "يظهر النص في المتصفح بالخط المخصص الذي قمنا بتحميله عبر CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة في المتصفح -->\n    <p>هذا نص يستخدم خطاً مخصصاً</p>\n    <p style=\"font-weight: bold;\">هذا نص عريض بنفس الخط</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "هذا نص يستخدم خطاً مخصصاً\nهذا نص عريض بنفس الخط",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "نصائح تقنية",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً أَنَّ اسْتِخْدَامَ صِيَغِ WOFF2 هُوَ الْأَفْضَلُ لِتَقْلِيلِ حَجْمِ الْمِلَفَّاتِ وَتَحْسِينِ سُرْعَةِ تَحْمِيلِ الصَّفْحَةِ. يُمْكِنُكَ تَعْرِيفُ عِدَّةِ قَوَاعِدِ font-face لِنَفْسِ الْخَطِّ لِتَغْطِيَةِ أَوْزَانٍ مُخْتَلِفَةٍ.",
+        "caption_text": "استخدم WOFF2 لتحسين الأداء، ويمكنك تعريف عدة أوزان لنفس الخط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم WOFF2 لتقليل حجم الملفات",
+          "تأكد من صحة مسار ملف الخط في src",
+          "يمكن تعريف عدة أوزان لنفس font-family"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا أَهَمِّيَّةَ font-face فِي تَحْسِينِ تَصْمِيمِ مَوَاقِعِ الْوِبّ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ مِنْ خِلَالِ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ.",
+        "caption_text": "تعلمنا اليوم كيفية استخدام font-face. جربوا الأكواد بأنفسكم من الرابط المرفق."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية font-face بالكامل",
+          "شرح صيغ الخطوط WOFF و TTF",
+          "تطبيق عملي على الخطوط العادية والعريضة",
+          "رابط المصدر متاح في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_fonts.asp"
+      ]
+    }
+  ]
+}
