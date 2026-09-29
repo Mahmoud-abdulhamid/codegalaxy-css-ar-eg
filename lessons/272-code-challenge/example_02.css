@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
