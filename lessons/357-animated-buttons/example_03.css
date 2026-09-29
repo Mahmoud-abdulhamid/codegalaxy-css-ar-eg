@@ -1,0 +1,9 @@
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+.ripple:after {
+  content: '';
+  position: absolute;
+  background: #f1f1f1;
+}
