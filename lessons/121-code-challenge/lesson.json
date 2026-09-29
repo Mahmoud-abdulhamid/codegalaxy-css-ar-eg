@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "121",
+  "title": "CSS Navbar Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "اختبار الفهم العملي لمهارات تنسيق Navbar باستخدام CSS",
+    "تطبيق خصائص العرض والتصميم على قوائم الروابط",
+    "فهم كيفية تحويل القوائم العمودية إلى قوائم أفقية",
+    "تنسيق العناصر التفاعلية وروابط التنقل في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_navbar.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة تحدي Navbar",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْعَمَلِيِّ مِنْ دَوْرَةِ CSS. سَنَقُومُ الْيَوْمَ بِتَحَدِّي بَرْمَجِيٍّ مُمْتِعٍ لِتَطْبِيقِ مَهَارَاتِنَا فِي بِنَاءِ وتنسيق Navbar بِاحْتِرَافِيَّه عَالِيَه لِصَفَحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد لاختبار مهارات تنسيق Navbar باستخدام CSS وبناء قوائم التنقل."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار المهارات العملية في لغة CSS",
+          "بناء وتصميم عناصر Navbar باحترافية",
+          "تطبيق القواعد لتنسيق روابط الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_navbar.asp"
+      ]
+    },
+    {
+      "id": "scene_concepts",
+      "title": "أساسيات تصميم Navbar",
+      "narration": {
+        "spoken_text": "لِإِنْشَاء Navbar نَاجِحٍ، نَحْتَاجُ إِلَى اسْتِخْدَامِ عناصر HTML مِثْل ul و li و a، ثُمَّ نُطَبِّقُ قَوَاعِد CSS لِإِزَالَةِ النِّقَاطِ الافتراضيَه، وَتَحْدِيدِ الْأَلْوَانِ، وَالْمَسَافَاتِ الدَّاخِلِيَّه وَالْخَارِجِيَّه بِدِقَّه تَمَامَه.",
+        "caption_text": "نحتاج إلى استخدام عناصر HTML المناسبة وتطبيق قواعد CSS لإزالة النقاط وتنسيق الروابط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام عناصر ul و li و a للبنية",
+          "إزالة الرموز النقطية الافتراضية للقوائم",
+          "تنسيق الألوان والمسافات الداخلية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_navbar.asp"
+      ]
+    },
+    {
+      "id": "scene_code_html",
+      "title": "هيكل HTML للقائمة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ هَيْكَل HTML الخاص بَةِ Navbar، حَيْثُ نَسْتَخْدِمُ عُنْصَر ul كَحَاضِنٍ رَئِيسِيٍّ، وَتَحْتَهُ مجموعَه مِنْ عَنَاصِر li الَّتِي تَحْمِلُ دَاخِلَهَا رَوَابِط a الخاصَه بالتنقل بين صفحات الْوِبّ.",
+        "caption_text": "نكتب هيكل HTML باستخدام عنصر ul وحاضن الروابط ليتم تنسيقها لاحقا بواسطة CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <ul class=\"navbar\">\n      <li><a href=\"#home\">Home</a></li>\n      <li><a href=\"#news\">News</a></li>\n      <li><a href=\"#contact\">Contact</a></li>\n      <li><a href=\"#about\">About</a></li>\n    </ul>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_navbar.asp"
+      ]
+    },
+    {
+      "id": "scene_code_css_base",
+      "title": "تنسيق القائمة الأساسي",
+      "narration": {
+        "spoken_text": "الْآنَ نُطَبِّقُ تَوَاجُد CSS الْأَوَّلِيَّ عَلَى الْقَائِمَه، فَنَقُومُ بِإِزَالَةِ list-style-type، وتصفير الحوامش margin و padding الخاصَه بالعنصر ul، لضمان مظهر نظيف وخالٍ من الفراغات غير المطلوبَه.",
+        "caption_text": "نطبق قواعد CSS الأولية لإزالة النقاط وتصفير الحوامش الخاصة بعنصر ul."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul.navbar {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n  background-color: #333;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_navbar.asp"
+      ]
+    },
+    {
+      "id": "scene_code_css_horizontal",
+      "title": "جعل القائمة أفقية",
+      "narration": {
+        "spoken_text": "لِتَحْوِيلِ الْقَائِمَه مِنَ الشَّكْلِ العَمُودِيِّ الِاعْتِيَادِيِّ إِلَى شَكْلٍ أُفُقِيٍّ صَحِيحٍ، نَسْتَخْدِمُ خاصيَةِ float: left على عناصر li، أو نَسْتَعْمِلُ تَقْنِيَةِ flexbox الحديثَه لتوزيع العناصر بسلاسَه تامَه في Navbar.",
+        "caption_text": "نستخدم خاصية float: left أو flexbox على عناصر li لتحويل القائمة إلى الشكل الأفقي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul.navbar li {\n  float: left;\n}\nul.navbar li a {\n  display: block;\n  color: white;\n  text-align: center;\n  padding: 14px 16px;\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": "Home | News | Contact | About",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_navbar.asp"
+      ]
+    },
+    {
+      "id": "scene_code_css_hover",
+      "title": "تنسيق تأثيرات Hover",
+      "narration": {
+        "spoken_text": "لإضافَه تفاعليَّةِ جذابَه عند تحريك مؤشر الفأرَه، نقوم بتطبيق مؤشر hover على الروابط لتغيير لون الخلفيَه، مما يُعطي للمستخدم انطباعاً بوجود استجابَه فوريَه عند التفاعل مع أزرار Navbar.",
+        "caption_text": "نضيف تأثيرات hover لتغيير لون الخلفية عند مرور مؤشر الفأرة على الروابط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul.navbar li a:hover {\n  background-color: #111;\n}",
+        "highlight_lines": [],
+        "output": "Background color changes on hover",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_navbar.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات الهندسية",
+      "narration": {
+        "spoken_text": "من أفضل الممارسات عند بناء Navbar التأكد من تجاوبها مع أحجام الشاشات المختلفَه، واستخدام الألوان المناسبَه التي تضمن تباينًا عاليًا لسهولَةِ القراءَه، والتحقق من كود CSS عبر أدوات الْمُتَصَفِّحْ.",
+        "caption_text": "نراعي أفضل الممارسات مثل التجاوب وتباين الألوان لضمان تجربة مستخدم ممتازة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ضمان تجاوب Navbar مع مختلف الشاشات",
+          "اختيار ألوان ذات تباين عالي للقراءة",
+          "استخدام أدوات المطورين لفحص الأكواد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_navbar.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس والدعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ حَلِّ تَحَدِّي Navbar بِاستخدام CSS وتحويل القوائم إلى الشكل الأفقي التفاعلي. نلتقي في الدرس القادم مع المزيد من المهارات المتقدمَه.",
+        "caption_text": "خلاصة الدرس: تعلمنا تنسيق وتحدي Navbar بنجاح. ندعوكم لتجربة الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص حل تحدي Navbar بـ CSS",
+          "أهمية استخدام float و hover",
+          "تابعوا الدورة لتطوير مهاراتكم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_navbar.asp"
+      ]
+    }
+  ]
+}
