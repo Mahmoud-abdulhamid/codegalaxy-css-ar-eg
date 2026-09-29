@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "248",
+  "title": "التحكم في محاذاة العناصر باستخدام justify-content",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم دور خاصية justify-content في Flexbox",
+    "التعرف على القيم الأساسية للمحاذاة الأفقية",
+    "تطبيق قيم التوزيع الفراغي بين العناصر",
+    "التحكم في تموضع العناصر داخل الـ container"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_flexbox_container_justify.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول justify-content",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ justify-content الَّتِي تُسَاعِدُنَا فِي ضَبْطِ مَحَاذَاةِ الْعَنَاصِرِ دَاخِلَ ال flex-container عَلَى الْمِحْوَرِ الرَّئِيسِيِّ أَوْ مَا يُعْرَفُ بِ main-axis.",
+        "caption_text": "تستخدم خاصية justify-content لتحديد محاذاة العناصر داخل flex-container على المحور الرئيسي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تتحكم justify-content في المحاذاة الأفقية",
+          "تعمل هذه الخاصية ضمن بيئة Flexbox",
+          "تؤثر على توزيع العناصر داخل الـ container"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_justify.asp"
+      ]
+    },
+    {
+      "id": "basic_code",
+      "title": "الهيكل البرمجي الأساسي",
+      "narration": {
+        "spoken_text": "لِتَفْعِيلِ هَذِهِ الْخَاصِيَّةِ، نَحْتَاجُ أَوَّلاً إِلَى تَعْرِيفِ display: flex لِلْحَاوِيَةِ. بَعْدَهَا نَقُومُ بِتَحْدِيدِ قِيمَةِ justify-content، وَفِي هَذَا الْمِثَالِ نَسْتَخْدِمُ قِيمَةَ center لِجَعْلِ الْعَنَاصِرِ فِي مُنْتَصَفِ الْحَاوِيَةِ تَمَاماً.",
+        "caption_text": "يجب ضبط display على flex أولا ثم استخدام justify-content للتحكم في التموضع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  justify-content: center;\n}",
+        "highlight_lines": [],
+        "output": "العناصر تظهر في منتصف الحاوية أفقياً",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_justify.asp"
+      ]
+    },
+    {
+      "id": "start_end",
+      "title": "المحاذاة عند البداية والنهاية",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً اسْتِخْدَامُ قِيمَةِ flex-start وَهِيَ الْقِيمَةُ الِافْتِرَاضِيَّةُ، لِتَكُونَ الْعَنَاصِرُ فِي بِدَايَةِ الْحَاوِيَةِ. أَمَّا إِذَا اسْتَخْدَمْنَا flex-end، فَسَتَنْتَقِلُ جَمِيعُ الْعَنَاصِرِ إِلَى نِهَايَةِ الْحَاوِيَةِ بِسُهُولَةٍ.",
+        "caption_text": "تستخدم flex-start للمحاذاة عند البداية، وflex-end للمحاذاة عند نهاية الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  justify-content: flex-end;\n}",
+        "highlight_lines": [],
+        "output": "العناصر تظهر في نهاية الحاوية",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_justify.asp"
+      ]
+    },
+    {
+      "id": "space_around",
+      "title": "توزيع الفراغات حول العناصر",
+      "narration": {
+        "spoken_text": "لِتَوْزِيعِ الْمَسَافَاتِ بِشَكْلٍ ذَكِيٍّ، نَسْتَخْدِمُ space-around، الَّتِي تَضَعُ مَسَافَةً قَبْلَ وَبَيْنَ وَبَعْدَ الْعَنَاصِرِ. هَذَا يُعْطِي مَظْهَراً مُتَوَازِناً لِتَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "قيمة space-around توزع الفراغات حول العناصر بالتساوي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  justify-content: space-around;\n}",
+        "highlight_lines": [],
+        "output": "فراغات متساوية حول كل عنصر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_justify.asp"
+      ]
+    },
+    {
+      "id": "space_between",
+      "title": "المسافات بين العناصر",
+      "narration": {
+        "spoken_text": "أَمَّا قِيمَةُ space-between فَهِيَ تَقُومُ بِتَوْزِيعِ الْعَنَاصِرِ بِحَيْثُ يَكُونُ الْعُنْصُرُ الْأَوَّلُ فِي الْبِدَايَةِ وَالْأَخِيرُ فِي النِّهَايَةِ، مَعَ تَوَزِيعِ الْمَسَافَاتِ فَقَطْ بَيْنَ الْعَنَاصِرِ.",
+        "caption_text": "قيمة space-between تضع العنصر الأول في البداية والأخير في النهاية مع فراغات بينية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  justify-content: space-between;\n}",
+        "highlight_lines": [],
+        "output": "العنصر الأول والآخر على الأطراف",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_justify.asp"
+      ]
+    },
+    {
+      "id": "space_evenly",
+      "title": "التوزيع المتساوي تماما",
+      "narration": {
+        "spoken_text": "وَأَخِيراً، لَدَيْنَا قِيمَةُ space-evenly، وَهِيَ تَضْمَنُ أَنْ تَكُونَ جَمِيعُ الْمَسَافَاتِ بَيْنَ الْعَنَاصِرِ وَعَلَى الْأَطْرَافِ مُتَسَاوِيَةً تَمَاماً، مِمَّا يَمْنَحُ تَصْمِيمَكَ دِقَّةً وَتَنَاسُقاً عَالِيَيْنِ.",
+        "caption_text": "قيمة space-evenly تضمن توزيعا متساويا تماما للفراغات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  justify-content: space-evenly;\n}",
+        "highlight_lines": [],
+        "output": "فراغات متساوية تماماً بين العناصر والأطراف",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_justify.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَتَحَكَّمُ فِي مَحَاذَاةِ الْعَنَاصِرِ بِاسْتِخْدَامِ justify-content. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْقِيَمِ بِنَفْسِكُمْ لِتَرَوْا تَأْثِيرَهَا الْمُبَاشِرَ عَلَى تَصْمِيمِ صَفْحَةِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعد justify-content أداة قوية ومرنة للتحكم في توزيع العناصر داخل Flexbox."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "center: للمنتصف",
+          "flex-start: للبداية",
+          "flex-end: للنهاية",
+          "space-between/around/evenly: للتوزيع الفراغي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_justify.asp"
+      ]
+    }
+  ]
+}
