@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "308",
+  "title": "تصميم Navigation Bar بعرض متساو باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء Navigation Bar احترافي ومتساوي العرض",
+    "توزيع عناصر الـ Links بنسب مئوية دقيقة داخل الـ CSS",
+    "إضافة تأثيرات التفاعل hover والصفحة النشطة active",
+    "جعل القائمة متجاوبة Responsiveness للشاشات الصغيرة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ Navigation Bar يَتَمَيَّزُ بِعَرْضٍ مُتَسَاوٍ لِجَمِيعِ ال Navigation Links بَطْرِيقَةٍ احْتِرَافِيَّةٍ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتعلم تصميم Navigation Bar بعرض متساو."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم تصميم Navigation Bar احترافي",
+          "توزيع الـ Links بعروض متساوية",
+          "بناء واجهات وب متجاوبة وعصرية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "هيكل الـ HTML للقائمة",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوْلاً بِكِتَابَةِ هَيْكَلِ HTML لِلْقَائِمَةِ. نَسْتَخْدِمُ عُنْصَرَ div يَحْمِلُ ال Class المسمى navbar، وَدَاخِلَهُ نَضَعُ عَنَاصِرَ a لِلرَّوَابِطِ مِثْلَ Home وَ Search وَ Contact وَ Login.",
+        "caption_text": "نبدأ بكتابة هيكل HTML لعنصر div الرئيسي مع روابط التنقل داخله."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- The navigation menu -->\n    <div class=\"navbar\">\n      <a class=\"active\" href=\"#\">Home</a>\n      <a href=\"#\">Search</a>\n      <a href=\"#\">Contact</a>\n      <a href=\"#\">Login</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Navigation menu with Home, Search, Contact, Login links.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق حاوية الـ Navbar",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى لُغَةِ CSS لِتَنْسِيقِ الْحَاوِيَةِ الرَّئِيسِيَّةِ navbar. نُحَدِّدُ العَرْضِ بِقِيمَةِ مِئَةِ في المائة، ونختار لَوْنَ خَلْفِيَّةٍ رَادِكَالِيٍّ رَادِئٍ، مَعَ اسْتِخْدَامِ overflow بَقِيمَةِ auto لِضَمَانِ التَّحْكُمِ السَّلِيمِ.",
+        "caption_text": "تنسيق حاوية الـ navbar بعرض كامل ولون خلفية مناسب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* Style the navigation menu */\n.navbar {\n  width: 100%;\n  background-color: #555;\n  overflow: auto;\n}",
+        "highlight_lines": [],
+        "output": "Navbar container styled with background and width.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تنسيق الروابط والعرض المتساو",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ العَرْضِ المُتَسَاوِي، نُحَدِّدُ خَاصِّيَّةَ width لِلرَّوَابِطِ بِنِسْبَةِ خَمْسَةٍ وَعِشْرِينَ في المائة لِأَرْبَعَةِ عَنَاصِرَ. كَمَا نَسْتَخْدِمُ float لِلْيَسَارِ، وَتَحْدِيدِ التَّمْوِضُعِ النصِّي في الوسط بِوَاسِطَةِ text-align.",
+        "caption_text": "تحديد عرض الروابط بنسبة 25 بالمائة لكل عنصر لضمان المساواة التامة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* Navigation links */\n.navbar a {\n  float: left;\n  padding: 12px;\n  color: white;\n  text-decoration: none;\n  font-size: 17px;\n  width: 25%;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": "Links floated left with 25% width each and centered text.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تأثيرات التفاعل hover والصفحة النشطة active",
+      "narration": {
+        "spoken_text": "لإِضَافَةِ تَفَاعُلٍ جَمِيلٍ عِنْدَ مُرُورِ المُرُورِ بالفَأْرَةِ، نَسْتَخْدِمُ pseudo-class المسمى hover لِتَغْيِيرِ لَوْنِ الخَلْفِيَّةِ إِلَى الأَسْوَدِ. كَمَا نُحَدِّدُ لَوْناً مُخْتَصّاً لِلرَّابِطِ النَّشِيطِ active بِلَوْنٍ أَخْضَرَ مُمَيَّزٍ.",
+        "caption_text": "إضافة تأثيرات hover وتحديد لون الرابط النشط active."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* Add a background color on mouse-over */\n.navbar a:hover {\n  background-color: #000;\n}\n/* Style the current/active link */\n.navbar a.active {\n  background-color: #04AA6D;\n}",
+        "highlight_lines": [],
+        "output": "Background changes on hover and active state.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "جعل القائمة متجاوبة Responsive",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ التَّجَاوُبِ مَعَ الشَّاشَاتِ الصَّغِيرَةِ، نَسْتَخْدِمُ media query عِنْدَ عَرْضٍ أَقَلَّ مِنْ خَمْسِمِائةِ بِيكْسِلٍ، حَيْثُ نُغَيِّرُ width إِلَى مِئَةِ في المائة لِتَظْهَرَ العَنَاصِرُ فَوْقَ بَعْضِهَا.",
+        "caption_text": "استخدام media query لتعديل القائمة على الشاشات التي تقل عن 500 بيكسل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 500px) {\n  .navbar a {\n    float: none;\n    display: block;\n    width: 100%;\n    text-align: left;\n  }\n}",
+        "highlight_lines": [],
+        "output": "Links stack vertically on screens smaller than 500px.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ Navigation Bar احْتِرَافِيٍّ بِعَرْضٍ مُتَسَاوٍ لِلرَّوَابِطِ، مَعَ إِضَافَةِ التَّوَافُقِيَّةِ التَّامَّةِ مَعَ مُخْتَلَفِ الأَجْهِزَةِ وَالشَّاشَاتِ. نَسْصَحُكُمْ بِتَجْرِيبِ الأَكْوادِ بِنَفْسِكُمْ.",
+        "caption_text": "خلاصة الدرس ودعوة لتجربة الأكواد وتطبيقها بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توزيع عادل للروابط بنسبة مئوية دقيقة",
+          "تفعيل تفاعل hover و active بسهولة",
+          "ضمان تجاوب الواجهة مع الهواتف الذكية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp"
+      ]
+    }
+  ]
+}
