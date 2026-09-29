@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "177",
+  "title": "CSS Shadows Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار الفهم العميق لخصائص Shadows في لغة CSS",
+    "تطبيق خصائص box-shadow و text-shadow على عناصر الويب",
+    "حل تحديات البرمجة العملية لتنسيق الظلال باحترافية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_shadows.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة تحدي الظلال في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي الْعَمَلِيِّ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَخَصَّصُ الْيَوْمَ فِي اخْتِبَارِ مَهَارَاتِنَا فِي بِنَاءِ وَتَنْسِيقِ Shadows لِلْعَنَاصِرِ وَالنُّصُوصِ بِاحْتِرَافِيَّةٍ عَالِيَةٍ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في هذا التحدي العملي لاختبار مهارات تصميم وتنسيق Shadows في لغة CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار المهارات العملية في لغة CSS",
+          "تطبيق خصائص Shadows باحترافية",
+          "تحسين المظهر البصري لعناصر الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "فهم خصائص box-shadow و text-shadow",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ الشَّادُوزْ فِي لُغَةِ CSS عَلَى خَاصِّيَتَيْنِ أَسَاسِيَّتَيْنِ. خَاصِّيَّةُ box-shadow تُضِيفُ الظِّلَّ حَوْلَ الإِيلِمِنْتِ، بَيْنَمَا خَاصِّيَّةُ text-shadow تَخَصُّ نُصُوصَ الْوِبّ لِإِعْطَائِهِمْ عُمْقاً بَصَرِيّاً رَائِعاً.",
+        "caption_text": "تعتمد خصائص الظلال على خاصية box-shadow للعناصر وخاصية text-shadow للنصوص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية box-shadow لتنسيق حدود العناصر",
+          "خاصية text-shadow لتنسيق النصوص وإبرازها",
+          "تحديد القيم مثل المسافة واللون والتمويه"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كتابة كود التحدي الأول",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ الآنَ إِلَى كِتَابَةِ كُودِ CSS لِتَطْبِيقِ هَذَا التَّحَدِّي. نَقُومُ بِإِنْشَاءِ Selector لِعُنْصِرِ div وَنَكْتُبُ دَاخِلَهُ قِيَمَ box-shadow بِالشَّكْلِ الصَّحِيحِ لِلْوُصُولِ إِلَى النَّتِيجَةِ الْمَطْلُوبَةِ.",
+        "caption_text": "كتابة كود CSS لتطبيق خاصية box-shadow على عنصر الـ div داخل صفحة الويب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": ".box {\n  width: 200px;\n  height: 100px;\n  background-color: #3498db;\n  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);\n}",
+        "highlight_lines": [
+          5
+        ],
+        "output": "يظهر عنصر الصندوق مع ظل متدرج وناعم يبرزه عن خلفية الصفحة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تنسيق النصوص باستخدام text-shadow",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْجُزْءِ مِنَ التَّحَدِّي، نَتَعَرَّفُ عَلَى طَرِيقَةِ تَنْسِيقِ التَّايْتِلْ أَوْ نُصُوصِ الْوِبّ. نَسْتَخْدِمُ text-shadow مَعَ تَحْدِيدِ الإِزَاحَةِ الأُفُقِيَّةِ وَالْعَمُودِيَّةِ وَلَوْنِ الظِّلِّ لِإِظْهَارِ النَّصِّ بِجَوْدَةٍ عَالِيَةٍ.",
+        "caption_text": "استخدام خاصية text-shadow لتنسيق نصوص الويب وإضافة عمق بصري جذاب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": "h1 {\n  font-size: 40px;\n  color: #2c3e50;\n  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);\n}",
+        "highlight_lines": [
+          4
+        ],
+        "output": "يظهر العنوان مع ظل خلف الحروف يمنحه مظهراً ثلاثي الأبعاد.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "مراجعة مخرجات الكود والمعاينة",
+      "narration": {
+        "spoken_text": "نُصْبِحُ الْآنَ قَادِرِينَ عَلَى مُعَايَنَةِ التَّنْفِيذِ الْعَمَلِيِّ فِي مَتْصَفِحِ الْوِبّ. يُظْهِرُ الْمَتْصَفِحُ العَنَاصِرَ بِالتَّنْسِيقَاتِ الدَّقِيقَةِ التَّي كَتَبْنَاهَا، مِمَّا يُؤَكِّدُ نَجَاحَنَا فِي حَزْمَةِ التَّحَدِّي هَذِهِ.",
+        "caption_text": "معاينة المخرجات البرمجية في المتصفح والتأكد من تطابق النتائج مع متطلبات التحدي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحقق من ظهور الظلال بشكل متناسق",
+          "اختبار تجاوب الأكواد في المتصفحات المختلفة",
+          "ضمان خلو الأكواد من الأخطاء البرمجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "أفضل الممارسات البرمجية للظلال",
+      "narration": {
+        "spoken_text": "لِلْحُصُولِ عَلَى أَفْضَلِ نَتِيجَةٍ عِنْدَ اسْتِخْدَامِ Shadows دَاخِلِ مَشَارِيعِ الْوِبّ، يَجِبُ الاعْتِمَادُ عَلَى قِيَمِ شَفَّافِيَةٍ مُنَاسِبَةٍ وَالأَلْوَانِ الهَادِئَةِ لِتَفَادِي إِهْدَارِ تَصْمِيمِ الْوَاجِهَاتِ الرَّقْمِيَّةِ.",
+        "caption_text": "أفضل الممارسات لاستخدام الظلال في CSS للحفاظ على واجهات مستخدم احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام قيم شفافية rgba للظلال الطبيعية",
+          "تجتناب المبالغة في حجم الظلال",
+          "توحيد اتجاه مصادر الإضاءة في التصميم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_shadows.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة تحدي Shadows في CSS",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ أَتْمَمْنَا تَحَدِّي Shadows فِي لُغَةِ CSS بِنَجَاحٍ كَامِلٍ. أَتْمَنَى أَنْ تَقُومُوا بِتَجْرِيبِ هَذِهِ الأَكْوادِ بِأَنْفُسِكُمْ مِنْ خِلَالِ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو.",
+        "caption_text": "خلاصة الدرس ودعوة لتجربة الأكواد بأنفسكم عبر الرابط المرفق في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتمام تحدي Shadows بنجاح تام",
+          "فهم خصائص box-shadow و text-shadow",
+          "تابعونا للمزيد من التحديات البرمجية الممتعة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_shadows.asp"
+      ]
+    }
+  ]
+}
