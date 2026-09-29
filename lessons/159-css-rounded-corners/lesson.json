@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "159",
+  "title": "CSS Rounded Corners",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام خاصية border-radius",
+    "التحكم في زوايا العناصر بشكل فردي",
+    "إنشاء أشكال دائرية وبيضاوية باستخدام CSS",
+    "تطبيق القيم المختصرة للخصائص"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_borders.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Rounded Corners",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ زَوَايَا مُسْتَدِيرَةٍ لِلْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ border-radius، وَهِيَ إِحْدَى أَهَمِّ الْخَصَائِصِ لِتَحْسِينِ الْمَظْهَرِ الْجَمَالِيِّ لِصَفْحَاتِ الْوِبّ.",
+        "caption_text": "تستخدم خاصية border-radius في CSS لإضافة زوايا مستديرة للعناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية border-radius تضيف لمسة عصرية للعناصر",
+          "يمكن تطبيقها على العناصر التي تحتوي على background-color",
+          "تعمل أيضا مع العناصر التي تمتلك border أو background-image"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_borders.asp"
+      ]
+    },
+    {
+      "id": "basic_code",
+      "title": "الكود الأساسي لخاصية border-radius",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ هَذَا الْكُودَ الْأَوَّلَ. نَقُومُ بِتَحْدِيدِ قِيمَةِ 25px لِخَاصِيَّةِ border-radius، مِمَّا يُؤَدِّي إِلَى اسْتِدَارَةِ جَمِيعِ زَوَايَا الْعُنْصُرِ بِشَكْلٍ مُتَسَاوٍ، مَعَ ضَبْطِ الْأَبْعَادِ وَالْخَلْفِيَّةِ لِتَظْهَرَ النَّتِيجَةُ بِشَكْلٍ وَاضِحٍ.",
+        "caption_text": "تطبيق border-radius بقيمة ثابتة على جميع الزوايا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  border-radius: 25px;\n  background-color: #73AD21;\n  padding: 20px;\n  width: 200px;\n  height: 150px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_borders.asp"
+      ]
+    },
+    {
+      "id": "specify_corners",
+      "title": "تحديد كل زاوية على حدة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا التَّحَكُّمُ فِي كُلِّ زَاوِيَةٍ بِشَكْلٍ مُنْفَصِلٍ عَبْرَ إِعْطَاءِ أَرْبَعِ قِيَمٍ لِخَاصِيَّةِ border-radius. الْقِيمَةُ الْأُولَى لِلزَّاوِيَةِ الْعُلْيَا الْيُسْرَى، وَتَتَتَابَعُ الْقِيَمُ مَعَ عَقَارِبِ السَّاعَةِ لِتَشْمَلَ بَقِيَّةَ الزَّوَايَا.",
+        "caption_text": "يمكن تحديد قيم مختلفة لكل زاوية باستخدام أربع قيم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  border-radius: 15px 50px 30px 5px;\n  background: #04AA6D;\n  width: 200px;\n  height: 150px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_borders.asp"
+      ]
+    },
+    {
+      "id": "shorthand_rules",
+      "title": "قواعد القيم المختصرة",
+      "narration": {
+        "spoken_text": "إِذَا اسْتَخْدَمْتَ ثَلَاثَ قِيَمٍ، فَالثَّانِيَةُ تُطَبَّقُ عَلَى الزَّاوِيَتَيْنِ الْيُمْنَى الْعُلْيَا وَالْيُسْرَى السُّفْلَى. وَإِذَا اسْتَخْدَمْتَ قِيمَتَيْنِ، فَالْأُولَى لِلزَّاوِيَتَيْنِ الْمُتَقَابِلَتَيْنِ قُطْرِيّاً، وَالثَّانِيَةُ لِلزَّاوِيَتَيْنِ الْأُخْرَيَيْنِ.",
+        "caption_text": "قواعد توزيع القيم عند استخدام أقل من أربع قيم."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "عدد القيم",
+          "التطبيق",
+          "مثال"
+        ],
+        "rows": [
+          [
+            "4 قيم",
+            "كل زاوية مستقلة",
+            "15px 50px 30px 5px"
+          ],
+          [
+            "3 قيم",
+            "الوسطى للجانبين",
+            "15px 50px 30px"
+          ],
+          [
+            "2 قيمة",
+            "قطريا",
+            "15px 50px"
+          ],
+          [
+            "1 قيمة",
+            "الكل متساو",
+            "15px"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_borders.asp"
+      ]
+    },
+    {
+      "id": "elliptical_shapes",
+      "title": "الأشكال البيضاوية والدائرية",
+      "narration": {
+        "spoken_text": "لِإِنْشَاءِ زَوَايَا بَيْضَاوِيَّةٍ، نَسْتَخْدِمُ الشَّرْطَةَ الْمَائِلَةَ لِفَصْلِ الْقِيمَتَيْنِ الْأُفُقِيَّةِ وَالرَّأْسِيَّةِ. وَلِتَحْوِيلِ الْعُنْصُرِ إِلَى شَكْلٍ دَائِرِيٍّ كَامِلٍ، نَضْبِطُ الْقِيمَةَ عَلَى 50 لِكُلِّ زَاوِيَةٍ.",
+        "caption_text": "استخدام النسبة المئوية لإنشاء أشكال دائرية وبيضاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#circle {\n  border-radius: 50%;\n  background: #04AA6D;\n  width: 200px;\n  height: 200px;\n}\n#oval {\n  border-radius: 70px / 30px;\n  background: #04AA6D;\n  width: 200px;\n  height: 150px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_borders.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ فِي مُتَصَفِّحِ الْوِبّ، سَتَرَى الْعَنَاصِرَ بِزَوَايَا مُسْتَدِيرَةٍ أَوْ دَائِرِيَّةٍ حَسَبَ الْقِيَمِ الْمُعْطَاةِ. هَذِهِ التَّقْنِيَةُ تُعْطِي تَصْمِيماً بَصَرِيّاً مُرِيحاً وَجَذَّاباً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "النتيجة المرئية للعناصر بعد تطبيق border-radius."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Element 1: Rounded corners (25px)\nElement 2: Oval shape (70px/30px)\nElement 3: Circular shape (50%)",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_borders.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا أَنَّ border-radius هِيَ خَاصِيَّةٌ قَوِيَّةٌ لِتَحْسِينِ تَصْمِيمِ الْعَنَاصِرِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ مِنْ خِلَالِ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَتَمَكَّنُوا مِنَ الْمَهَارَةِ.",
+        "caption_text": "تذكر دائما تجربة الأكواد لتعزيز مهاراتك في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "border-radius تدعم من قيمة واحدة إلى أربع قيم",
+          "استخدام الشرطة المائلة / للقيم البيضاوية",
+          "النسبة المئوية 50 تنشئ دوائر مثالية",
+          "راجع الرابط في الوصف لمزيد من الأمثلة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_borders.asp"
+      ]
+    }
+  ]
+}
