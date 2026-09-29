@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "306",
+  "title": "تصميم قائمة تنقل في الـ Web مع أزرار محاذاة لليمين",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء navigation bar احترافية في الـ Web",
+    "تطبيق محاذاة العناصر جهة اليمين باستخدام خاصية float",
+    "تنسيق روابط الـ Links وتأثيرات الـ hover والحالة النشطة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_topnav_right.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة الدرس وأهمية تصميم Navigation Bar",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ navigation bar إحْتِرَافِيَّةٍ تَحْتَوِي عَلَى روابط مُحَاذَاةٍ لِلْيَسَارِ وَأُخْرَى لِلْيَمِينِ لِتَحْسِينِ تَجْمِيلِ وَتَنْظِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتعلم تصميم navigation bar احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم تصميم navigation bar متقدمة في الـ Web",
+          "إدارة توزيع الروابط بين اليمين واليسار",
+          "تحسين تجربة المستخدم عبر واجهات منظمة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_right.asp"
+      ]
+    },
+    {
+      "id": "scene_2_html_structure",
+      "title": "بناء هيكل الـ HTML الخاص بالقائمة",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوْلاً بِكِتَابَةِ هَيْكَلِ HTML لِصَفْحَةِ الْوِبّ. نَسْتَخْدِمُ element مِنْ نَوْعِ div لِإِنْشَاءِ الحاويات، ثُمَّ نُضِيفُ روابط داخلية a لِكُلٍّ مِنْ home وَ news وَ contact.",
+        "caption_text": "نبدأ ببناء هيكل HTML الخاص بالقائمة وعناصر الروابط الداخلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"topnav\">\n      <a class=\"active\" href=\"#home\">Home</a>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home  News  Contact",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_right.asp"
+      ]
+    },
+    {
+      "id": "scene_3_right_aligned_html",
+      "title": "إضافة الحاوية اليمنى للروابط",
+      "narration": {
+        "spoken_text": "لِوَضْعِ بَعْضِ الرَّوَابِطِ عِنْدَ الْجِهَةِ الْمُقَابِلَةِ يُمْنَى، نُقِيمُ div دَاخِلِيّاً يَحْمِلُ class يُسَمَّى topnav-right، وَنَضَعُ دَاخِلَهُ روابط search وَ about لِتُدَارَ بِمُحَاذَاةٍ مُمَيِّزَةٍ.",
+        "caption_text": "نضيف حاوية داخلية لتجميع الروابط التي ستظهر في الجهة اليمنى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"topnav\">\n      <a class=\"active\" href=\"#home\">Home</a>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n      <div class=\"topnav-right\">\n        <a href=\"#search\">Search</a>\n        <a href=\"#about\">About</a>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home News Contact | Search About",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_right.asp"
+      ]
+    },
+    {
+      "id": "scene_4_css_topnav_base",
+      "title": "تنسيق الحاوية الرئيسية في الـ CSS",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى لُغَةِ CSS لِتَنْسِيقِ الْحَاوِيَةِ الرَّئِيسِيَّةِ topnav. نُعْطِيهَا لَوْنَ خَلْفِيَّةٍ دَاكِنَاسِ background-color وَنُفَعِّلُ overflow لِإِخْفَاءِ العناصِرِ الزَّائِدَةِ بِدِقَّةٍ.",
+        "caption_text": "نقوم بتنسيق الحاوية الرئيسية بوضع لون خلفية داكن وإدارة الـ overflow."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav {\n  background-color: #333;\n  overflow: hidden;\n}",
+        "highlight_lines": [],
+        "output": "Dark background container",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_right.asp"
+      ]
+    },
+    {
+      "id": "scene_5_css_links_styling",
+      "title": "تنسيق الروابط وتوزيعها بـ float",
+      "narration": {
+        "spoken_text": "نُوَصِّلُ التَّنْسِيقَ إِلَى روابط القائمة a بِتَحْدِيدِ float عَلَى الْيَسَارِ left، وَضَبْطِ الْحَوَاشِي الداخلية padding وَلَوْنِ النَّصِّ لِيَبْدُوَ بِمَظْهَرٍ جَذَّابٍ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "ننسق روابط القائمة بتحديد الطفو لليسار وتطبيق الحواشی المناسبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav a {\n  float: left;\n  color: #f2f2f2;\n  text-align: center;\n  padding: 14px 16px;\n  text-decoration: none;\n  font-size: 17px;\n}",
+        "highlight_lines": [],
+        "output": "Links aligned to the left with padding",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_right.asp"
+      ]
+    },
+    {
+      "id": "scene_6_hover_and_active",
+      "title": "تأثيرات الـ hover والحالة النشطة",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ تَفَاعُلِيَّةٍ أَفْضَلَ، نَسْتَخْدِمُ a:hover لِتَغْيِيرِ أَلْوَانِ الْخَلْفِيَّةِ عِنْدَ مُرُورِ الْمُؤَشِّرِ، وَنَسْتَخْدِمُ a.active لِتَحْدِيدِ لَوْنِ العُنْصُرِ النَّشِطِ بِلَوْنٍ أَخْضَرَ مُمَيِّزٍ.",
+        "caption_text": "نضيف تأثيرات hover وتحديد لون العنصر النشط active لتعزيز التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav a:hover {\n  background-color: #ddd;\n  color: black;\n}\n.topnav a.active {\n  background-color: #04AA6D;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "Interactive hover and active states",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_right.asp"
+      ]
+    },
+    {
+      "id": "scene_7_topnav_right",
+      "title": "إتمام محاذاة القسم الأيمن في الـ CSS",
+      "narration": {
+        "spoken_text": "أَمَّا العُنْصُرُ الْأَخِيرُ وَهُوَ topnav-right، فَنُطَبِّقُ عَلَيْهِ خَاصِّيَّةَ float: right؛ لِتُدْفَعَ جَمِيعُ الرَّوَابِعِ التَّابِعَةِ لَهُ تِلْقَائِيّاً إِلَى الْجِهَةِ الْيُمْنَى لِلتَّصْمِيمِ.",
+        "caption_text": "نطبق خاصية float على الحاوية الفرعية لضمان محاذاة عناصرها لليمين."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav-right {\n  float: right;\n}",
+        "highlight_lines": [],
+        "output": "Right aligned section in navbar",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_right.asp"
+      ]
+    },
+    {
+      "id": "scene_8_conclusion",
+      "title": "خلاصة الدرس ودعوة للتجربة العملية",
+      "narration": {
+        "spoken_text": "بِهَذَا تَعَلَّمْنَا كَيْفِيَّةَ تَقْسِيمِ navigation bar بِاحْتِرَافِيَّةٍ بَيْنَ يَسَارِ وَيَمِينِ الصَّفْحَةِ. تَرَقَّبُوا الدُّرُوسَ الْقَادِمَةَ وَتَأَكَّدُوا مِنْ تَجْرِبَةِ الْأَكْوَدِ بِمُفْرَدِكُمْ عَبْرَ الرَّابِطِ فِي الْوَصْفِ.",
+        "caption_text": "خلاصة الدرس حول تنظيم الروابط في القائمة ودعوة للتجربة العملية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتقان استخدام float في تنظيم الـ Navigation Bars",
+          "فصل الروابط بين الجهتين اليمنى واليسرا بكفاءة",
+          "تطبيق أفضل الممارسات في تصميم الـ Web"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_right.asp"
+      ]
+    }
+  ]
+}
