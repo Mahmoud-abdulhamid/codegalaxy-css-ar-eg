@@ -3,6 +3,8 @@
   "lesson_id": "82",
   "title": "إخفاء العناصر باستخدام CSS",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم الفرق بين display: none و visibility: hidden",
     "التحكم في ظهور العناصر باستخدام JavaScript",
