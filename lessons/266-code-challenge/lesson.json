@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "266",
+  "title": "CSS Grid Items Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية التعامل مع Grid Items في CSS",
+    "تطبيق مفاهيم التخطيط الشبكي عمليا",
+    "التحكم في ترتيب وموضع العناصر داخل Grid Container"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_grid_item.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي Grid Items",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي الْعَمَلِيِّ لِتَطْوِيرِ مَهَارَاتِكُمْ فِي CSS. سَنُرَكِّزُ الْيَوْمَ عَلَى كَيْفِيَّةِ التَّحَكُّمِ فِي Grid Items دَاخِلَ صَفْحَةِ الْوِبّ، وَهِيَ مَهَارَةٌ أَسَاسِيَّةٌ لِكُلِّ مُطَوِّرٍ مُحْتَرِفٍ.",
+        "caption_text": "مرحبا بكم في تحدي CSS Grid Items العملي لتطوير مهارات تصميم وتخطيط صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة مفاهيم CSS Grid",
+          "تطبيق تحدي Grid Items",
+          "تحسين مهارات التخطيط المرن"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_item.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية لـ Grid Items",
+      "narration": {
+        "spoken_text": "لِكَيْ نُتْقِنَ التَّعَامُلَ مَعَ Grid Items، يَجِبُ أَنْ نَفْهَمَ أَنَّ أَيَّ Element يَكُونُ مُبَاشَرَةً دَاخِلَ Grid Container يُصْبِحُ Grid Item. يُمْكِنُنَا التَّحَكُّمُ فِي مَوْضِعِهِ وَحَجْمِهِ بِاسْتِخْدَامِ Attributes مُتَعَدِّدَةٍ.",
+        "caption_text": "تتحول العناصر الموجودة داخل Grid Container تلقائيا إلى Grid Items قابلة للتحكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Grid Container هو الحاوية الرئيسية",
+          "Grid Items هي العناصر المباشرة داخل الحاوية",
+          "استخدام خصائص CSS للتحكم في التموضع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_item.asp"
+      ]
+    },
+    {
+      "id": "code_setup",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْهَيْكَلِ الْأَسَاسِيِّ. نَحْتَاجُ إِلَى DOCTYPE HTML ثُمَّ نُعَرِّفُ ال Container فِي قِسْمِ body. نَسْتَخْدِمُ display: grid لِتَفْعِيلِ هَذِهِ الْخَاصِيَّةِ الْقَوِيَّةِ فِي CSS.",
+        "caption_text": "نبدأ بتعريف الحاوية وتفعيل خاصية display: grid لتجهيز بيئة العمل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".grid-container {\n  display: grid;\n  grid-template-columns: auto auto auto;\n  background-color: #2196F3;\n  padding: 10px;\n}\n.grid-item {\n  background-color: rgba(255, 255, 255, 0.8);\n  border: 1px solid rgba(0, 0, 0, 0.8);\n  padding: 20px;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_item.asp"
+      ]
+    },
+    {
+      "id": "item_properties",
+      "title": "التحكم في Grid Items",
+      "narration": {
+        "spoken_text": "الْآنَ نَضْبِطُ خَصَائِصَ ال Grid Items. يُمْكِنُنَا تَحْدِيدُ grid-column وَ grid-row لِتَغْيِيرِ مَسَاحَةِ الْعُنْصُرِ. هَذِهِ الْأَدَوَاتُ تَمْنَحُنَا مَرُونَةً كَبِيرَةً فِي تَصْمِيمِ وَاجِهَاتِ الْوِبّ الْعَصْرِيَّةِ.",
+        "caption_text": "استخدام خصائص grid-column و grid-row للتحكم في أبعاد وموقع العناصر داخل الشبكة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  grid-column: 1 / span 2;\n}\n.item2 {\n  grid-row: 1 / span 2;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_item.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَتَرَى الْعَنَاصِرَ مُرَتَّبَةً بِدِقَّةٍ دَاخِلَ الشَّبَكَةِ. الْمُتَصَفِّحُ يَقُومُ بِتَرْجَمَةِ هَذِهِ ال Tags إِلَى تَخْطِيطٍ مَرْئِيٍّ مُنَظَّمٍ يَتَجَاوَبُ مَعَ مَسَاحَةِ الشَّاشَةِ.",
+        "caption_text": "تظهر العناصر داخل المتصفح مرتبة وفقا للشبكة المحددة في كود CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"grid-container\">\n      <div class=\"grid-item item1\">1</div>\n      <div class=\"grid-item\">2</div>\n      <div class=\"grid-item item2\">3</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "1 1\n2 3\n2 3",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_item.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، احْرِصُوا دَائِماً عَلَى اسْتِخْدَامِ قِيَمٍ مُنَاسِبَةٍ لِ grid-gap لِتَوْفِيرِ مَسَافَاتٍ بَيْنَ الْعَنَاصِرِ. التَّنْظِيمُ الْجَيِّدُ لِلْكُودِ يَجْعَلُ صِيَانَةَ مَوَاقِعِ الْوِبّ أَمْراً سَهْلًا وَمُتْقَناً.",
+        "caption_text": "استخدام grid-gap لتحسين التباعد بين العناصر وضمان كود نظيف وقابل للصيانة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم grid-gap للتحكم في المسافات",
+          "حافظ على تسمية واضحة للـ Classes",
+          "اختبر التجاوب في مختلف المتصفحات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_item.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُدِيرُ Grid Items بِكِفَايَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ لِتَعْمِيقِ فَهْمِكُمْ. شُكْراً لِمُتَابَعَتِكُمْ مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "تعلمنا إدارة Grid Items بفعالية. جرب الأكواد بنفسك عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية مفاهيم Grid Items",
+          "شرحنا كيفية تطبيق الكود عمليا",
+          "نوصي بالتطبيق المستمر للوصول للاحتراف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_item.asp"
+      ]
+    }
+  ]
+}
