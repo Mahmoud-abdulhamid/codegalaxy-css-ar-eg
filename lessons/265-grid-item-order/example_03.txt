@@ -1,0 +1,7 @@
+Visual Layout Order:
+[Item 3] (order: 1)
+[Item 4] (order: 2)
+[Item 1] (order: 3)
+[Item 5] (order: 4)
+[Item 6] (order: 5)
+[Item 2] (order: 6)
