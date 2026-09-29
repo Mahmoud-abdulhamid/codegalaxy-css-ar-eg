@@ -1,0 +1,5 @@
+/* تحسين التركيز */
+button:focus {
+  outline: 3px solid #005fcc;
+  background-color: #eef;
+}
