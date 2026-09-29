@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "207",
+  "title": "CSS Image Modal Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء Image Modal باستخدام CSS",
+    "التحكم في ظهور وإخفاء العناصر باستخدام display property",
+    "تطبيق تقنيات التموضع Positioning في صفحات الويب",
+    "تحسين تجربة المستخدم عبر التفاعل مع الصور"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_imagemodal.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Image Modal",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ Image Modal احْتِرَافِيٍّ، وَهُوَ عُنْصُرٌ يَعْرِضُ الصُّورَةَ بِحَجْمِهَا الْكَامِلِ عِنْدَ النَّقْرِ عَلَيْهَا، مِمَّا يُحَسِّنُ تَجْرِبَةَ الْمُسْتَخْدِمِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد. سنتعلم اليوم كيفية بناء Image Modal احترافي لعرض الصور بحجمها الكامل عند النقر عليها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعريف الـ Image Modal في صفحات الويب",
+          "أهمية التفاعل مع الصور لتحسين تجربة المستخدم",
+          "استخدام CSS للتحكم في ظهور العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagemodal.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية للـ Modal",
+      "narration": {
+        "spoken_text": "لِتَنْفِيذِ هَذَا التَّحَدِّي، نَحْتَاجُ إِلَى فَهْمِ خَاصِيَّةِ display، وَتَقْنِيَاتِ ال Positioning مِثْلَ fixed لِتَثْبِيتِ الْعُنْصَرِ فَوْقَ الْمُحْتَوَى، وَتَحْدِيدِ z-index لِضَمَانِ ظُهُورِ ال Modal فِي الْمُقَدِّمَةِ دَائِماً.",
+        "caption_text": "نحتاج لفهم خاصية display وتقنيات الـ Positioning مثل fixed لتثبيت الـ Modal فوق المحتوى مع استخدام z-index."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display: none لإخفاء الـ Modal",
+          "استخدام position: fixed لتغطية الشاشة",
+          "استخدام z-index للتحكم في طبقات العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagemodal.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكلة الكود الأساسي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْهَيْكَلِ الْأَسَاسِيِّ لِلصَّفْحَةِ. نَسْتَخْدِمُ div لِتَمْثِيلِ ال Modal، وَنَضَعُ دَاخِلَهُ عُنْصَرَ img لِلصُّورَةِ، وَعُنْصَرَ span لِإِغْلَاقِ النَّافِذَةِ. هَذَا التَّرْتِيبُ يَضْمَنُ سُهُولَةَ التَّحَكُّمِ بِوَاسِطَةِ CSS.",
+        "caption_text": "نستخدم div لتمثيل الـ Modal، ونضع داخله img للصورة و span للإغلاق لضمان سهولة التحكم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div id=\"myModal\" class=\"modal\">\n      <span class=\"close\">&times;</span>\n      <img class=\"modal-content\" id=\"img01\">\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagemodal.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق الـ Modal باستخدام CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نَقُومُ بِتَنْسِيقِ ال Modal. نَضْبُطُ الْخَاصِيَّةَ display عَلَى none فِي الْبِدَايَةِ، وَنُحَدِّدُ position بِقِيمَةِ fixed، مَعَ تَعْيِينِ width وَ height لِتَغْطِيَةِ كَامِلِ الشَّاشَةِ، وَخَلْفِيَّةٍ شَفَّافَةٍ لِتَبْدُوَ النَّافِذَةُ جَذَّابَةً.",
+        "caption_text": "نضبط display على none، ونحدد position بقيمة fixed مع تعيين الأبعاد لتغطية الشاشة بخلفية شفافة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".modal {\n  display: none;\n  position: fixed;\n  z-index: 1;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0,0,0,0.9);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagemodal.asp"
+      ]
+    },
+    {
+      "id": "interaction",
+      "title": "تفعيل التفاعل",
+      "narration": {
+        "spoken_text": "لِتَفْعِيلِ التَّفَاعُلِ، نَحْتَاجُ لِتَغْيِيرِ قِيمَةِ display إِلَى block عِنْدَ النَّقْرِ. يُمْكِنُنَا اسْتِخْدَامُ JavaScript بَسِيطَةٍ لِتَحْقِيقِ ذَلِكَ، حَيْثُ نَقُومُ بِتَغْيِيرِ ال style لِلْعُنْصَرِ بِنَاءً عَلَى حَدَثِ النَّقْرِ.",
+        "caption_text": "نغير قيمة display إلى block عند النقر باستخدام JavaScript بسيطة لتغيير الـ style للعنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "javascript",
+        "filename": "script.js",
+        "code": "modal.style.display = \"block\";\nmodalImg.src = this.src;\n// للإغلاق\nmodal.style.display = \"none\";",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagemodal.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، تَذَكَّرُوا دَائِماً ضَبْطَ z-index بِشَكْلٍ صَحِيحٍ لِتَجَنُّبِ تَدَاخُلِ الْعَنَاصِرِ. كَمَا يُفَضَّلُ إِضَافَةُ تَأْثِيرِ transition لِجَعْلِ ظُهُورِ ال Modal أَكْثَرَ نَعُومَةً وَجَمَالاً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "تذكروا ضبط z-index لتجنب تداخل العناصر، وأضيفوا transition لجعل ظهور الـ Modal أكثر نعومة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام z-index بحذر",
+          "إضافة transition لتأثيرات سلسة",
+          "اختبار التجاوب مع مختلف الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagemodal.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا تَحَدِّيَ ال Image Modal. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ وَتَطْوِيرِهِ. شُكْراً لِمُتَابَعَتِكُمْ، وَأَنَا مَحْمُودُ عَبْدِ الْحَمِيدِ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "أتممنا تحدي الـ Image Modal. أدعوكم لتجربة الكود وتطويره. شكرا لمتابعتكم، وإلى اللقاء في درس قادم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا الكود كاملا من الرابط",
+          "طبقوا التحدي بأنفسكم",
+          "استعدوا للدرس القادم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagemodal.asp"
+      ]
+    }
+  ]
+}
