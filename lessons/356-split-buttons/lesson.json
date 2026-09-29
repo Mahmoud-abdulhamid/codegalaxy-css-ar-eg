@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "356",
+  "title": "تصميم Split Button باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم هيكلية Split Button",
+    "استخدام CSS لتنسيق القوائم المنسدلة",
+    "التحكم في ظهور العناصر عند الـ hover",
+    "تطبيق تقنيات التموضع باستخدام position"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_button_split.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Split Button",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ Split Button احْتِرَافِيٍّ، وَهُوَ زِرٌّ يَتَكَوَّنُ مِنْ جُزْءٍ رَئِيسِيٍّ وَقَائِمَةٍ مُنْسَدِلَةٍ تَعْمَلُ عِنْدَ التَّفَاعُلِ مَعَ أَيُّقُونَةٍ مُحَدَّدَةٍ.",
+        "caption_text": "تعلم كيفية إنشاء Split Button احترافي باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Split Button يجمع بين الزر والقائمة المنسدلة",
+          "يعتمد على التفاعل مع الـ mouse hover",
+          "يستخدم CSS للتحكم في التموضع والمظهر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_split.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للـ Split Button",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِالْهَيْكَلِ فِي HTML. نَحْتَاجُ إِلَى Element مِنَ النَّوْعِ div لِيَكُونَ حَاوِيَةً لِلزِّرِّ وَالْقَائِمَةِ. نَسْتَخْدِمُ كَذَلِكَ كَلَاسَاتٍ مِثْلَ btn وَ dropdown لِتَنْظِيمِ الْعَنَاصِرِ وَتَطْبِيقِ التَّنْسِيقَاتِ.",
+        "caption_text": "استخدام div كحاوية رئيسية لتنظيم الزر والقائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"dropdown\">\n      <button class=\"btn\">Button</button>\n      <button class=\"btn\" style=\"border-left:1px solid navy\">\n        <i class=\"fa fa-caret-down\"></i>\n      </button>\n      <div class=\"dropdown-content\">\n        <a href=\"#\">Link 1</a>\n        <a href=\"#\">Link 2</a>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_split.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق الزر والقائمة",
+      "narration": {
+        "spoken_text": "فِي CSS، نَقُومُ بِتَنْسِيقِ الْكَلَاسِ btn بِتَحْدِيدِ background-color وَ padding. أَمَّا الْقَائِمَةُ dropdown-content فَنَضْبِطُ display عَلَى none لِإِخْفَائِهَا افْتِرَاضِيّاً، وَنَجْعَلُ position بِقِيمَةِ absolute لِتَتَمَوْضَعَ بِدِقَّةٍ.",
+        "caption_text": "تنسيق الزر وإخفاء القائمة المنسدلة افتراضيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn {\n  background-color: #2196F3; color: white; padding: 16px;\n}\n.dropdown {\n  position: absolute; display: inline-block;\n}\n.dropdown-content {\n  display: none; position: absolute; background-color: #f1f1f1;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_split.asp"
+      ]
+    },
+    {
+      "id": "hover_effect",
+      "title": "تفعيل القائمة عند الـ Hover",
+      "narration": {
+        "spoken_text": "لِإِظْهَارِ الْقَائِمَةِ عِنْدَ تَحْرِيكِ الْفَأْرَةِ، نَسْتَخْدِمُ مُحَدِّدَ hover عَلَى الْحَاوِيَةِ dropdown. عِنْدَ حُدُوثِ ذَلِكَ، نُغَيِّرُ display لِلْكَلَاسِ dropdown-content إِلَى block لِيَظْهَرَ الْمُحْتَوَى أَمَامَ الْمُسْتَخْدِمِ.",
+        "caption_text": "استخدام hover لإظهار القائمة المنسدلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropdown:hover .dropdown-content {\n  display: block;\n}\n.btn:hover, .dropdown:hover .btn {\n  background-color: #0b7dda;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_split.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَحْصُلُ عَلَى زِرٍّ مُنْقَسِمٍ. عِنْدَ تَحْرِيكِ الْفَأْرَةِ فَوْقَ الْأَيْقُونَةِ، سَتَنْسَدِلُ الْقَائِمَةُ بِسَلَاسَةٍ، مِمَّا يُعْطِي تَجْرِبَةَ مُسْتَخْدِمٍ مُمَيَّزَةً وَمُتَفَاعِلَةً فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "النتيجة النهائية: قائمة منسدلة تظهر عند التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[ Button ] [ v ]\n----------------\n| Link 1       |\n| Link 2       |\n----------------",
+        "highlight_lines": [],
+        "output": "تظهر القائمة عند الـ hover فوق الأيقونة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_split.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً ضَبْطَ z-index لِضَمَانِ ظُهُورِ الْقَائِمَةِ فَوْقَ الْعَنَاصِرِ الْأُخْرَى. كَمَا يُمْكِنُكَ تَحْسِينُ التَّجْرِبَةِ بِإِضَافَةِ تَنْسِيقَاتٍ لِلرَّوَابِطِ دَاخِلَ الْقَائِمَةِ لِتَكُونَ أَكْثَرَ جَاذِبِيَّةً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "نصائح لتحسين تجربة المستخدم وتنسيق القوائم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم z-index للتحكم في طبقات العناصر",
+          "أضف hover effect لروابط القائمة",
+          "تأكد من توافق الألوان مع هوية الموقع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_split.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ Split Button. نَنُصُّ عَلَى تَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْأَحْجَامِ لِتُنَاسِبَ مَشَارِيعَكُمُ الْخَاصَّةَ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: قم بتجربة الكود وتخصيصه لمشروعك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح هيكلية HTML للـ Split Button",
+          "تم تطبيق CSS للتحكم في التموضع والظهور",
+          "تم توضيح كيفية استخدام hover للتفاعل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_split.asp"
+      ]
+    }
+  ]
+}
