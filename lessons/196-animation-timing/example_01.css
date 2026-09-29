@@ -1,0 +1,9 @@
+div {
+  animation-name: myAnimation;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+/* استخدام قيمة سالبة */
+div.negative {
+  animation-delay: -2s;
+}
