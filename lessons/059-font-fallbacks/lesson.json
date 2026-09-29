@@ -3,6 +3,8 @@
   "lesson_id": "59",
   "title": "CSS Font Fallbacks",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم مفهوم Font Fallbacks في CSS",
     "التعرف على الـ 5 Generic Font Families",
