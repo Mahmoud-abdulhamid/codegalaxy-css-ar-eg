@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "324",
+  "title": "بناء معرض صور متجاوب باستخدام CSS Flexbox",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام CSS Flexbox لإنشاء شبكة صور متجاوبة",
+    "التحكم في توزيع الصور عبر الأعمدة بناء على حجم الشاشة",
+    "تطبيق تقنيات Media Queries لجعل التصميم متجاوبا",
+    "تحسين تجربة المستخدم في عرض الصور على مختلف الأجهزة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Responsive Image Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ Responsive Image Grid، وَهِيَ مَعْرِضُ صُوَرٍ يَتَغَيَّرُ تَنْسِيقُهُ تِلْقَائِيّاً لِيُنَاسِبَ أَحْجَامَ الشَّاشَاتِ الْمُخْتَلِفَةِ بِاسْتِخْدَامِ تَقْنِيَةِ Flexbox.",
+        "caption_text": "مرحبا بكم في درس بناء معرض صور متجاوب باستخدام تقنية Flexbox."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء معرض صور احترافي ومتجاوب",
+          "استخدام CSS Flexbox لتنظيم العناصر",
+          "تغيير عدد الأعمدة بناء على حجم الشاشة",
+          "تحسين تجربة المستخدم عبر مختلف الأجهزة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للمعرض",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكْلَاسِ row لِتَغْلِيفِ الْأَعْمِدَةِ، وَدَاخِلَ كُلِّ column نَضَعُ مَجْمُوعَةً مِنَ ال img Elements. هَذَا التَّنْظِيمُ يُسَاعِدُنَا فِي التَّحَكُّمِ بِتَوْزِيعِ الصُّوَرِ بِسُهُولَةٍ.",
+        "caption_text": "الهيكل البرمجي يستخدم div كحاوية رئيسية row وأعمدة column تحتوي على عناصر img."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"row\">\n      <div class=\"column\">\n        <img src=\"wedding.jpg\">\n        <img src=\"rocks.jpg\">\n      </div>\n      <div class=\"column\">\n        <img src=\"underwater.jpg\">\n        <img src=\"ocean.jpg\">\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp"
+      ]
+    },
+    {
+      "id": "css_flexbox",
+      "title": "تنسيق الشبكة باستخدام Flexbox",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى CSS. نُعْطِي ال row خَاصِّيَّةَ display: flex مَعَ flex-wrap: wrap لِلسَّمَاحِ بِالِانْتِقَالِ إِلَى سَطْرٍ جَدِيدٍ. أَمَّا ال column فَنُحَدِّدُ لَهُ flex: 25 لِيَأْخُذَ رُبْعَ عَرْضِ الشَّاشَةِ.",
+        "caption_text": "تنسيق الحاوية باستخدام display: flex وتحديد عرض الأعمدة بنسبة 25."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".row {\n  display: flex;\n  flex-wrap: wrap;\n  padding: 0 4px;\n}\n.column {\n  flex: 25%;\n  max-width: 25%;\n  padding: 0 4px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp"
+      ]
+    },
+    {
+      "id": "image_styling",
+      "title": "تنسيق الصور داخل الأعمدة",
+      "narration": {
+        "spoken_text": "لِضَمَانِ مَظْهَرٍ مُتَنَاسِقٍ، نَقُومُ بِتَنْسِيقِ ال img دَاخِلَ ال column. نَضَعُ width: 100 لِتَمْتَلِئَ الصُّورَةُ بِعَرْضِ الْعَمُودِ، وَنَسْتَخْدِمُ vertical-align: middle لِتَحْسِينِ التَّمَوْضُعِ الْعَمُودِيِّ.",
+        "caption_text": "تنسيق الصور لتأخذ كامل عرض العمود مع ضبط المحاذاة العمودية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".column img {\n  margin-top: 8px;\n  vertical-align: middle;\n  width: 100%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp"
+      ]
+    },
+    {
+      "id": "media_queries",
+      "title": "تطبيق التجاوب عبر Media Queries",
+      "narration": {
+        "spoken_text": "لِجَعْلِ التَّصْمِيمِ مُتَجَاوِباً، نَسْتَخْدِمُ Media Queries. عِنْدَمَا يَقِلُّ عَرْضُ الشَّاشَةِ عَنْ 800 بيكسل، نُغَيِّرُ flex إِلَى 50 لِيُصْبِحَ الْعَرْضُ عَمُودَيْنِ فَقَطْ، وَعِنْدَ 600 بيكسل نَجْعَلُهَا 100 لِتَصْطَفَّ الصُّوَرُ فَوْقَ بَعْضِهَا.",
+        "caption_text": "استخدام Media Queries لتغيير عدد الأعمدة بناء على عرض الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 800px) {\n  .column {\n    flex: 50%; max-width: 50%;\n  }\n}\n@media screen and (max-width: 600px) {\n  .column {\n    flex: 100%; max-width: 100%;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة النهائية",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ النِّهَائِيَّةُ. سَتُحَافِظُ الصُّوَرُ عَلَى تَنْسِيقِهَا الْجَمَالِيِّ، وَسَتَتَغَيَّرُ بِنْيَةُ الْأَعْمِدَةِ بِسَلَاسَةٍ عِنْدَ تَصْغِيرِ أَوْ تَكْبِيرِ نَافِذَةِ الْمُتَصَفِّحِ، مِمَّا يُوَفِّرُ تَجْرِبَةً مُمَيَّزَةً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "معاينة المعرض المتجاوب الذي يتكيف مع مختلف أحجام الشاشات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Desktop: 4 Columns\nTablet: 2 Columns\nMobile: 1 Column (Full Width)",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَبْنِي مَعْرِضَ صُوَرٍ مُتَجَاوِباً بِاسْتِخْدَامِ Flexbox وَ Media Queries. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ الْقِيَمِ لِفَهْمِ التَّأْثِيرِ بِشَكْلٍ أَعْمَقَ. شُكْراً لِمُتَابَعَتِكُمْ مَعَ مَحْمُودٍ عَبْدِ الْحَمِيدِ.",
+        "caption_text": "خلاصة: استخدمنا Flexbox و Media Queries لبناء معرض صور متجاوب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox يسهل توزيع العناصر",
+          "Media Queries أساس التجاوب",
+          "التصميم المتجاوب يحسن تجربة المستخدم",
+          "جرب الكود بنفسك عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp"
+      ]
+    }
+  ]
+}
