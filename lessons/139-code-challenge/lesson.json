@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "139",
+  "title": "CSS Counters Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار الفهم العملي لخصائص CSS Counters",
+    "تطبيق counter-reset و counter-increment",
+    "استخدام الدالة counter لتوليد الترقيم التلقائي",
+    "حل التحديات البرمجية المتقدمة في تصميم الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_counters.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة تحدي Counters",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي العَمَلِيِّ لِفَهْمِ CSS Counters بِشَكْلٍ عَمِيقٍ. سَنُخْتَبِرُ مَهاراتِنا فِي تَوْظِيفِ العناصِرِ وَتَوْلِيدِ التَّرْقِيمِ التِّلْقَائِيِّ.",
+        "caption_text": "مرحبا بكم في هذا التحدي العملي لفهم CSS Counters بشكل عميق وتوظيف الترقيم التلقائي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار الفهم العملي لخصائص CSS Counters",
+          "تطبيق counter-reset و counter-increment",
+          "استخدام الدالة counter لتوليد الترقيم التلقائي",
+          "حل التحديات البرمجية المتقدمة في تصميم الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_counters.asp"
+      ]
+    },
+    {
+      "id": "scene_concepts",
+      "title": "المفاهيم الأساسية للعدادات",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ فِكْرَةُ Counters عَلَى إِنْشَاءِ عَدَّادٍ بَرْمَجِيٍّ دَاخِلَ لُغَةِ CSS. نَسْتَخْدِمُ counter-reset لِبَدْءِ العَدَّادِ ثُمَّ counter-increment لِزِيادَةِ قِيمَتِهِ بِشَكْلٍ تِلْقَائِيٍّ.",
+        "caption_text": "تعتمد فكرة Counters على إنشاء عداد برمجي داخل CSS باستخدام counter-reset و counter-increment."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء عداد برمجي باستخدام خصائص CSS",
+          "استخدام counter-reset لتعيين القيمة الابتدائية",
+          "استخدام counter-increment لزيادة قيمة العداد",
+          "تحديث الترقيم تلقائيا مع كل عنصر جديد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_counters.asp"
+      ]
+    },
+    {
+      "id": "scene_code_1",
+      "title": "كتابة هيكل العداد البرمجي",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ لِكِتَابَةِ الكود العَمَلِيِّ. نُعَرِّفُ العُنْصُرَ الأَسَاسِيَّ ثُمَّ نُطَبِّقُ counter-reset عَلى العُنْصُرِ الحاضِنِ لِضَمَانِ بَدْءِ العَدْدِ مِنَ الصِّفْرِ أَوْ الواحِدِ.",
+        "caption_text": "ننتقل الآن لكتابة الكود العملي وتطبيق counter-reset على العنصر الحاضن للعداد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  counter-reset: section-counter;\n}\nh2::before {\n  counter-increment: section-counter;\n  content: \"Section \" counter(section-counter) \": \";\n}",
+        "highlight_lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "output": "Section 1: Introduction\nSection 2: Advanced CSS",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_counters.asp"
+      ]
+    },
+    {
+      "id": "scene_code_2",
+      "title": "عرض القيمة باستخدام دالة counter",
+      "narration": {
+        "spoken_text": "فِي هَذَا الجُزْءِ نَسْتَخْدِمُ Pseudo element مِثْلَ before مَعَ خاصيَّة content وَدالَّة counter لِعَرْضِ قِيمَةِ العَدَّادِ المُتَحَرِّكِ أَمَامَ العناصِرِ بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "نستخدم Pseudo element مثل before مع خاصية content ودالة counter لعرض قيمة العداد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": ".my-list {\n  counter-reset: list-counter;\n}\n.my-list li {\n  counter-increment: list-counter;\n}\n.my-list li::before {\n  content: counter(list-counter) \". \";\n}",
+        "highlight_lines": [
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "output": "1. First item\n2. Second item",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_counters.asp"
+      ]
+    },
+    {
+      "id": "scene_output_review",
+      "title": "معاينة المخرجات في متصفح الويب",
+      "narration": {
+        "spoken_text": "نُلاحِظُ هُنَا كَيْفَ تَعْرِضُ شاشَةُ مُتَصَفِّحِ الوِيبِ التَّرْقِيمَ التِّلْقَائِيَّ بِدِقَّةٍ. الكود يُؤَدِّي الوَظِيفَةَ بِكَفاءَةٍ عالِيَةٍ دُونَ الحاجةِ لِتَدَخُّلِ جَافَا سِكْرِيبْت.",
+        "caption_text": "نلاحظ هنا كيف تعرض شاشة متصفح الويب الترقيم التلقائي بدقة وكفاءة عالية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ظهور الأرقام تلقائيا بجانب العناصر المستهدفة",
+          "تنسيق متناسق للمحتوى داخل متصفح الويب",
+          "غياب الحاجة لاستخدام لغات البرمجة النصية",
+          "توافق تام مع معايير تصميم الويب الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_counters.asp"
+      ]
+    },
+    {
+      "id": "scene_advanced",
+      "title": "تقنيات متقدمة والتحكم بالقيم",
+      "narration": {
+        "spoken_text": "يُمْكِنُنا أَيْضاً تَحْدِيدُ قِيمَةِ الزِّيادَةِ صَراحَةً؛ فَبِدْلًا مِنَ الزِّيادَةِ بِمِقْدارِ واحِدٍ، نَسْتَخْدِمُ counter-increment لِزِيادَةِ العَدَّادِ بِرَقْمٍ مُحَدَّدٍ مِثْلَ اثْنَيْنِ.",
+        "caption_text": "يمكننا تحديد قيمة الزيادة صراحة باستخدام counter-increment برقم مخصص مثل اثنين."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "advanced.css",
+        "code": ".custom-counter {\n  counter-reset: my-counter 0;\n}\n.step-item {\n  counter-increment: my-counter 2;\n}\n.step-item::before {\n  content: counter(my-counter) \" - \";\n}",
+        "highlight_lines": [
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "output": "2 - First step\n4 - Second step",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_counters.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "عِنْدَ العَمَلِ عَلى CSS Counters، احْرِصْ دائِماً عَلى تَسْمِيَةِ العَدَّادِ بِشَكْلٍ واضِحٍ، وَتَأَكَّدْ مِنَ اسْتِخْدامِ Pseudo elements الطَّبِيعيَّةِ لِضَمانِ أداءٍ مِثَالِيٍّ فِي مُتَصَفِّحِ الوِيبِ.",
+        "caption_text": "احرص دائما على تسمية العداد بوضوح واستخدام Pseudo elements لضمان أداء مثالي في متصفح الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تسمية العدادات بأسماء واضحة ودلالية",
+          "استخدام Pseudo elements المناسبة مثل before و after",
+          "اختبار التنسيق داخل متصفح الويب باستمرار",
+          "الالتزام بقواعد ومعايير تنسيق صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_counters.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس والدعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي خِتامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ أَتْمَمْنا تَحَدِّي CSS Counters بِنَجاحٍ. نَدْعوكُمْ لِتَجْرِبَةِ الأَكْوادِ بِأَنْفُسِكُمْ مِثْلَ مَا تَوْجِدُونَهُ فِي الرَّابِطِ المُدْرَجِ بَالسَّفْلِ مَعَ تَحِيَّاتِ مَحْمُودِ عَبْدِالحَمِيدِ.",
+        "caption_text": "أتممنا تحدي CSS Counters بنجاح. ندعوكم لتجربة الأكواد بأنفسكم من الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتمام التحدي البرمجي الخاص بـ CSS Counters بنجاح",
+          "فهم شامل لكيفية توليد وترقيم العناصر تلقائيا",
+          "تطبيق الخصائص وتجاوز التحديات التقنية بكفاءة",
+          "تجربة الأكواد البرمجية مباشرة من الرابط المرفق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_counters.asp"
+      ]
+    }
+  ]
+}
