@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "325",
+  "title": "بناء معرض صور متجاوب باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء معرض صور متجاوب",
+    "استخدام Media Queries للتحكم في تخطيط الصور",
+    "تطبيق تقنيات CSS لتنسيق العناصر",
+    "التعامل مع أحجام الشاشات المختلفة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_gallery.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول معرض الصور المتجاوب",
+      "narration": {
+        "spoken_text": "مرحباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْس. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ مَعْرِضِ صُوَرٍ مُتَجَاوِب، Responsive Image Gallery، بِاسْتِخْدَامِ CSS، لِضَمَانِ ظُهُورِ الصُّوَرِ بِشَكْلٍ مِثَالِيٍّ عَلَى مُخْتَلَفِ أَحْجَامِ الشَّاشَات.",
+        "caption_text": "سنتعلم اليوم كيفية بناء معرض صور متجاوب باستخدام CSS لضمان ظهور الصور بشكل مثالي على مختلف أحجام الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء معرض صور متجاوب",
+          "استخدام CSS لتنسيق الصور",
+          "التحكم في التخطيط عبر Media Queries"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML لمعرض الصور",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِهَيْكَلِ HTML، حَيْثُ نَسْتَخْدِمُ div مَعَ كَلَاس responsive وَ gallery لِاحْتِوَاءِ كُلِّ صُورَة. نَضَعُ رابطاً a يُحِيطُ بِ img، مَعَ div إِضَافِيٍّ لِكِتَابَةِ وَصْفِ الصُّورَة.",
+        "caption_text": "نستخدم div مع كلاس responsive و gallery لاحتواء كل صورة، مع رابط a يحيط بـ img ووصف للصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"responsive\">\n      <div class=\"gallery\">\n        <a target=\"_blank\" href=\"img.jpg\">\n          <img src=\"img.jpg\" alt=\"Image\">\n        </a>\n        <div class=\"desc\">وصف الصورة</div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق معرض الصور بـ CSS",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى CSS. نَسْتَخْدِمُ box-sizing بِقِيمَة border-box لِضَبْطِ الْأَبْعَاد، وَنُحَدِّدُ عَرْضَ الْعَنَاصِرِ بِ 24.99999 بِالْمِئَةِ لِتَوْزِيعِ أَرْبَعِ صُوَرٍ فِي السَّطْرِ الْوَاحِد.",
+        "caption_text": "نستخدم box-sizing بقيمة border-box لضبط الأبعاد، ونحدد عرض العناصر بـ 24.99999 بالمئة لتوزيع أربع صور في السطر الواحد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "* {\n  box-sizing: border-box;\n}\n.responsive {\n  padding: 0 6px;\n  float: left;\n  width: 24.99999%;\n}\ndiv.gallery {\n  border: 1px solid #ccc;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "media_queries",
+      "title": "استخدام Media Queries للتجاوب",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ Media Queries لِتَغْيِيرِ الْعَرْضِ عِنْدَ تَصْغِيرِ الشَّاشَة. عِنْدَ عَرْضٍ أَقَلَّ مِنْ 700 بِكْسِل، نَجْعَلُ الْعَرْضَ 49.99999 بِالْمِئَةِ، وَعِنْدَ أَقَلَّ مِنْ 500 بِكْسِل، نَجْعَلُ الْعَرْضَ 100 بِالْمِئَة.",
+        "caption_text": "نستخدم Media Queries لتغيير العرض عند تصغير الشاشة، حيث نجعل العرض 49.99999 بالمئة للشاشات الصغيرة، و100 بالمئة للشاشات الأصغر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media only screen and (max-width: 700px) {\n  .responsive {\n    width: 49.99999%;\n  }\n}\n@media only screen and (max-width: 500px) {\n  .responsive {\n    width: 100%;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ الْمُتَوَقَّعَة؛ مَعْرِضُ صُوَرٍ مُرَتَّبٌ يَتَغَيَّرُ تَخْطِيطُهُ تلقائياً بناءً عَلَى عَرْضِ الْمُتَصَفِّح، مِمَّا يُوَفِّرُ تَجْرِبَةَ مُسْتَخْدِمٍ مُمْتَازَةً عَلَى مُخْتَلَفِ الْأَجْهِزَة.",
+        "caption_text": "معرض صور مرتب يتغير تخطيطه تلقائيا بناء على عرض المتصفح، مما يوفر تجربة مستخدم ممتازة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة: معرض صور متجاوب -->\n    <!-- 4 صور في الشاشات الكبيرة -->\n    <!-- صورتان في الشاشات المتوسطة -->\n    <!-- صورة واحدة في الشاشات الصغيرة -->\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Responsive Grid Layout",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "تَذَكَّرُوا دائماً اسْتِخْدَامَ clearfix بَعْدَ الْعَنَاصِرِ الْعَائِمَة، وَاسْتِخْدَامَ خَاصِّيَّةِ hover لِإِضَافَةِ تَفَاعُلٍ بَصَرِيٍّ عِنْدَ تَمْرِيرِ الْفَأْرَةِ فَوْقَ الصُّوَر، مِمَّا يُعَزِّزُ مِنْ جَمَالِيَّةِ التَّصْمِيم.",
+        "caption_text": "استخدم clearfix بعد العناصر العائمة، واستخدم خاصية hover لإضافة تفاعل بصري عند تمرير الفأرة فوق الصور."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام clearfix لتنظيف العناصر العائمة",
+          "إضافة تأثيرات hover لتحسين التفاعل",
+          "ضبط الصور لتكون بعرض 100 بالمئة",
+          "اختبار التصميم على أحجام شاشات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ مَعْرِضِ صُوَرٍ مُتَجَاوِب. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ وَتَعْدِيلِ الْقِيَمِ بِأَنْفُسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْف. شكراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِم.",
+        "caption_text": "بهذا نكون قد أتممنا بناء معرض صور متجاوب. أدعوكم لتجربة الكود وتعديل القيم بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح هيكل HTML",
+          "تم شرح تنسيقات CSS",
+          "تم شرح Media Queries",
+          "رابط المصدر في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_gallery.asp"
+      ]
+    }
+  ]
+}
