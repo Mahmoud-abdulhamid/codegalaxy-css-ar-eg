@@ -1,0 +1,8 @@
+.btn-group button:not(:last-child) {
+  border-right: none;
+}
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
