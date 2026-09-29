@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "191",
+  "title": "CSS3D Transforms Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار الفهم العملي لمهارات CSS 3D Transforms",
+    "تطبيق خصائص التحويل الثلاثي الأبعاد في مشاريع الويب",
+    "التعامل مع العناصر البصرية بابعاد ثلاثة محاور"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_3dtransforms.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة التحدي البرمجي",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي الْعَمَلِيِّ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَمَرَّسُ الْيَوْمَ عَلَى تَطْبِيقِ مَهَارَاتِ CSS 3D Transforms وَاخْتِبَارِ قُدُرَاتِنَا.",
+        "caption_text": "مرحبا بكم في هذا التحدي العملي لاختبار مهارات CSS 3D Transforms."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار الفهم العملي لخصائص CSS 3D Transforms",
+          "بناء تجارب بصرية تفاعلية ثلاثية الأبعاد",
+          "تطبيق الخصائص البرمجية مباشرة عبر التحدي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "مفاهيم التحويل ثلاثي الأبعاد",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ فِكْرَةُ CSS 3D Transforms عَلَى الْمَحَاوِرِ الثَّلَاثَةِ خِلَالَ تَعَامُلِنَا مَعَ عَنَصِرِ الْوِبّّ. نَحْنُ نَسْتَخْدِمُ مِحْوَرَ x وَ مِحْوَرَ y وَ كَذَلِكَ مِحْوَرَ z لِإِنْشَاءِ عُمُقٍ حَقِيقِيٍّ فِي الصَّفْحَةِ.",
+        "caption_text": "تعتمد فكرة CSS 3D Transforms على المحاور الثلاثة X و Y و Z لإنشاء عمق حقيقي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام المحاور الثلاثة X و Y و Z",
+          "تحقيق العمق البصري الحقيقي للعناصر",
+          "التحكم الكامل في اتجاهات العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كتابة شفرة التحدي الأولية",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ فِي كِتَابَةِ الشَّفْرَةِ الأَسَاسِيَّةِ لِهَذَا التَّحَدِّي. نَحْنُ نُنْشِئُ عُنْصُراً حَاضِناً نُطَبِّقُ عَلَيْهِ خَاصِيَّةَ perspective ثُمَّ نُضِيفُ خَصَائِصَ التحويل الْمُخْتَلِفَةَ مِثْلَ rotateX وَ rotateY.",
+        "caption_text": "نبدأ بكتابة الشفرة الأساسية وإضافة خاصية perspective وعناصر التحويل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": ".scene {\n  perspective: 1000px;\n}\n.box {\n  transform: rotateX(45deg) rotateY(45deg);\n}",
+        "highlight_lines": [],
+        "output": "العنصر يظهر متحولاً في الفضاء الثلاثي الأبعاد",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تفاصيل خصائص التحويل البرمجية",
+      "narration": {
+        "spoken_text": "لَاحِظْ كَيْفَ تَعْمَلُ دَوَالُّ التحويل مِثْلَ rotateX وَ rotateY عَلَى دَوَرَانِ الْعُنْصُرِ حَوْلَ الْمَحَاوِرِ. هَذِهِ الدَّوَالُّ تُعْطِي بَعْداً تَمْثِيلِيّاً رَائِعاً يَجْعَلُ تَصْمِيمَ الْوِبّّ يَخْتَلِفُ كُلِّيّاً عَنِ التَّصْمِيمِ الثُّنَائِيِّ.",
+        "caption_text": "تعمل دوال التحويل مثل rotateX و rotateY على دوران العناصر حول المحاور."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام rotateX للدوران الأفقي",
+          "استخدام rotateY للدوران الرأسي",
+          "خلق تأثيرات حركية واقعية ومبهرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تطبيق التحدي وعرض المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَنْفِيذِ هَذِهِ الشَّفْرَةِ فِي الْمُتَصَفِّحِ، سَتُلَاحِظُ كَيْفَ يَتَفَاعَلُ الْعُنْصُرُ مَعَ الْمُسْتَوَى الثَّلَاثِيِّ. نُشَاهِدُ الْآنَ الْمُخْرَجَاتِ النِّهَائِيَّةَ لِلتَّحَدِّي كَمَا تَظَهَرُ لِلْمُسْتَخْدِمِ بِشَكْلٍ عَمَلِيٍّ مُمَازٍ.",
+        "caption_text": "عند تنفيذ الشفرة نلاحظ تفاعل العنصر مع المستوى الثلاثي الأبعاد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "output.css",
+        "code": "/* مخرجات تنفيذ التحدي الثلاثي الأبعاد */\n.box-rendered {\n  transform-style: preserve-3d;\n  transform: translateZ(50px);\n}",
+        "highlight_lines": [],
+        "output": "تفاعل العناصر في الفضاء الثلاثي الأبعاد بوضوح",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "أفضل الممارسات البرمجية والتحسينات",
+      "narration": {
+        "spoken_text": "لِضَمَانِ أَفْضَلِ أَدَاءٍ لِلتَّحْمِيلِ وَالرَّسْمِ، احْرِصْ دَائماً عَلَى اسْتِخْدَامِ transform-style مَعَ قيمَة preserve-3d عِنْدَ الْعَمَلِ عَلَى التَّحَوُّلَاتِ الْمُعَقَّدَةِ لِلتَّأَكُّدِ مِنْ ظُهُورِ الْعَنَصِرِ بِكِفَاءَةٍ عَالِيَةٍ.",
+        "caption_text": "احرص دائما على استخدام transform-style مع قيمة preserve-3d لتحسين الأداء."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تفعيل قيم preserve-3d للتصميمات المركبة",
+          "مراعاة الأداء وسرعة المعالجة الرسومية",
+          "اختبار التوافقية عبر متصفحات الويب المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة التحدي البرمجي",
+      "narration": {
+        "spoken_text": "خِتَاماً يَا أَصْدِقَائِي، نَكُونُ قَدْ أَتْمَمْنَا هَذَا التَّحَدِّي الرَّائِعَ لِ CSS 3D Transforms. نُشَجِّعُكُمْ عَلَى تَجْرِبَةِ الأَكْوادِ بِمَنْصَةِ ال W3Schools وَمُتَابَعَةِ الدَّوْرَةِ لِلْمَزِيدِ مِنْ تَطَوُّرِ مَهَارَاتِكُم.",
+        "caption_text": "اتممنا التحدي بنجاح، ونشجعكم على تجربة الأكواد بأنفسكم ومواصلة التعلم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتمام التحدي البرمجي بنجاح تام",
+          "دعوة لتجربة الأكواد عبر الرابط المرفق",
+          "متابعة الدروس القادمة في دورة CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_3dtransforms.asp"
+      ]
+    }
+  ]
+}
