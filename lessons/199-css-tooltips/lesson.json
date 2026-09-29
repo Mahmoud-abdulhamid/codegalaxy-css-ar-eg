@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "199",
+  "title": "شرح إنشاء وتنسيق Tooltip في CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء Tooltip أساسي باستخدام CSS",
+    "التحكم في إظهار وإخفاء عنصر Tooltip عند التحويم",
+    "محاذاة وتثبيت Tooltip في اتجاهات مختلفة",
+    "إضافة تأثيرات التلاشي والانتقال السلس"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_tooltip.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-e12aeb22a611eb97.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_tooltip.asp",
+      "source_url": "https://www.w3schools.com/css/css_tooltip.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن CSS Tooltip",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ Tooltip احْتِرَافِيٍّ لِعَرْضِ مَعْلُومَاتٍ إِضَافِيَّةٍ عِنْدَ تَحْرِيكِ الْمُؤشِّرِ فَوْقَ عُنْصُرِ الْوِبّ.",
+        "caption_text": "تعرف على كيفية إنشاء وتنسيق Tooltip لعرض معلومات إضافية عند تحويم المؤشر فوق عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم لغة CSS لتصميم عناصر Tooltip",
+          "عرض معلومات إضافية عند تحويم المؤشر",
+          "تحسين تجربة المستخدم في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "إنشاء حاوية Tooltip الأساسية",
+      "narration": {
+        "spoken_text": "لإِنْشَاءِ Tooltip نَحْتَاجُ أَوَّلاً إِلَى عُنْصُرِ حَاوِيَةٍ يَحْمِلُ الْكِلَاس tooltip مَعَ اسْتِخْدَامِ خَاصِيَّةِ position بِقِيمَة relative ثُمَّ إِضَافَةِ تَنْسِيقَاتِ الْعَرْضِ inline-block.",
+        "caption_text": "إنشاء حاوية Tooltip باستخدام الكلاس الخاص وتحديد موقع العنصر وحجمه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltip {\n  position: relative;\n  display: inline-block;\n  border-bottom: 1px dotted black;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": "Tooltip container ready",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق نص Tooltip المخفي",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الآنَ لِتَنْسِيقِ نَصِّ العُنْصُرِ دَاخِلَ tooltiptext حَيْثُ نَجْعَلُهُ مَخْفِيّاً فِي الْبِدَايَةِ بِاسْتِخْدَامِ visibility: hidden، مَعَ تَحْدِيدِ العَرْضِ، وَاللَّوْنِ، وَخَاصِيَّةِ position بِقِيمَة absolute.",
+        "caption_text": "تنسيق نص Tooltip وإخفاؤه افتراضيا باستخدام visibility hidden وتحديد خصائص التموضع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltiptext {\n  visibility: hidden;\n  width: 130px;\n  background-color: black;\n  color: #ffffff;\n  text-align: center;\n  padding: 5px 0;\n  border-radius: 6px;\n  position: absolute;\n  z-index: 1;\n}",
+        "highlight_lines": [],
+        "output": "Hidden tooltip text styled",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "إظهار Tooltip عند التحويم",
+      "narration": {
+        "spoken_text": "لِإِظْهَارِ النَّصِّ عِنْدَ الوُقُوفِ بِالْمُؤشِّرِ، نَسْتَخْدِمُ مُحَدِّدَ الحَوْمَةِ hover مَعَ tooltiptext، وَنُغَيِّرُ خَاصِيَّةَ visibility إِلَى visible لِيَظْهَرَ النَّصُّ لِلْمُسْتَخْدِمِ بِشَكْلٍ فَوْرِيٍّ.",
+        "caption_text": "استخدام محدد hover لإظهار نص Tooltip عند تحويم المؤشر فوق الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltip:hover .tooltiptext {\n  visibility: visible;\n}",
+        "highlight_lines": [],
+        "output": "Tooltip appears on hover",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "معاينة Tooltip الأساسي في المتصفح",
+      "narration": {
+        "spoken_text": "تُظْهِرُ لَنَا هَذِهِ الصُّورَةُ الشَّكْلَ النِّهَائِيَّ لِلْعُنْصُرِ عِنْدَ تَطْبِيقِ كُودِ HTML وَ CSS مَعاً، حَيْثُ يَظْهَرُ النَّصُّ التَّوْضِيحِيُّ فَوْقَ الكَلِمَةِ بِنَجَاحٍ.",
+        "caption_text": "معاينة النتيجة المرئية لعنصر Tooltip بعد اكتمال التنسيق."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "Tooltip rendered in web browser"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "محاذاة Tooltip لليمين واليسار",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَغْيِيرُ مَوْقِعِ Tooltip إلَى اليَمِينِ أَوْ اليَسَارِ بِاسْتِخْدَامِ left أَوْ right بِنِسْبَة مِئَوِيَّةٍ، مَعَ ضَبْطِ top إِلَى سَالِبِ خَمْسَةِ بِيكْسِلَاتٍ لِيَبْقَى فِي وَسَطِ الحَاوِيَةِ.",
+        "caption_text": "محاذاة Tooltip لليمين أو اليسار باستخدام خصائص التموضع والمسافات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltiptext {\n  top: -5px;\n  left: 105%;\n}",
+        "highlight_lines": [],
+        "output": "Right-aligned tooltip positioned",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "محاذاة Tooltip للأعلى والأسفل",
+      "narration": {
+        "spoken_text": "لِإِظْهَارِ Tooltip فِي الأَعْلَى أَوْ الأَسْفَلِ، نَسْتَخْدِمُ خَاصِيَّةَ margin-left بِقِيمَةٍ سَالِبَةٍ تُسَاوِي نِصْفَ عَرْضِ العُنْصُرِ، وَهِيَ سِتُّونَ بيكسلاً لِتَكْمِلَةِ التَّوْسِيطِ بِدِقَّةٍ تِقْنِيَّةٍ عَالِيَةٍ.",
+        "caption_text": "محاذاة Tooltip للأعلى أو الأسفل وتوسيطه باستخدام margin-left بالسالب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltiptext {\n  width: 130px;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -65px;\n}",
+        "highlight_lines": [],
+        "output": "Centered top-aligned tooltip",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "إضافة تأثير التلاشي Fade-in",
+      "narration": {
+        "spoken_text": "وَلِإِضَافَةِ لَمْسَةٍ جَمَالِيَّةٍ، نَسْتَخْدِمُ خَاصِيَّةَ transition مَعَ opacity لِجْعَلِ ظُهُورِ Tooltip يَتِمُّ بِشَكْلٍ تَدْرِيجِيٍّ نَاعِمٍ خِلَالَ ثَانِيَتَيْنِ كَمَا رَأَيْنَا.",
+        "caption_text": "إضافة تأثير التلاشي والانتقال السلس باستخدام خصائص transition وopacity."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltiptext {\n  opacity: 0;\n  transition: opacity 2s;\n}\n.tooltip:hover .tooltiptext {\n  opacity: 1;\n}",
+        "highlight_lines": [],
+        "output": "Fade-in transition applied",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "scene_9",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "إِلَى هُنَا يَا أَصْدِقَائِي نَكُونُ قَدْ أَتْمَمْنَا شَرْحَ كَيْفِيَّةِ إِنْشَاءِ وَتَنْسِيقِ وَتَمْصِيعِ Tooltip فِي لُغَةِ CSS بِكُلِّ مَهَارَةٍ وَاحْتِرَافِيَّةٍ. نَنْتَظِرُ تَطْبِيقَاتِكُمُ الرَّائِعَةَ.",
+        "caption_text": "خلاصة درس CSS Tooltip وأهم ممارسات التصميم والتنسيق."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتقان بناء عناصر Tooltip بالكامل",
+          "التحكم الكامل في اتجاهات ومواقع العنصر",
+          "تطبيق تأثيرات الانتقال والتلاشي باحترافية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip.asp"
+      ]
+    }
+  ]
+}
