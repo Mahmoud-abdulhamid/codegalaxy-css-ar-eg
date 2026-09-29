@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "289",
+  "title": "استضافة مواقع الويب باستخدام HTML و CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم أساسيات استضافة مواقع الويب",
+    "التعرف على الفرق بين Basic Spaces و Fullstack Spaces",
+    "تعلم كيفية بناء هيكل صفحة ويب باستخدام HTML و CSS",
+    "استكشاف أدوات التطوير المتاحة في بيئة العمل"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_website.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في استضافة المواقع",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ اسْتِضَافَةِ مَوَاقِعِ الْوِبّ وَبِنَاءِ هَيْكَلٍ احْتِرَافِيٍّ لِلصَّفْحَةِ بِاسْتِخْدَامِ HTML وَ CSS وَأَدَوَاتِ التَّطْوِيرِ الْحَدِيثَةِ.",
+        "caption_text": "مرحبا بكم في درس استضافة مواقع الويب باستخدام HTML و CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استضافة مواقع الويب عبر منصات متخصصة",
+          "أهمية استخدام HTML و CSS في بناء الهيكل",
+          "التعرف على بيئة العمل السحابية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_website.asp"
+      ]
+    },
+    {
+      "id": "basic-structure",
+      "title": "الهيكل الأساسي للمستند",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْهَيْكَلِ الْأَسَاسِيِّ لِأَيِّ صَفْحَةِ وِبّ. نَبْدَأُ بِ DOCTYPE HTML ثُمَّ نَفْتَحُ Element ال html، وَدَاخِلَهُ نَضَعُ head لِلْمَعْلُومَاتِ الْعَامَّةِ، وَ body لِلْمُحْتَوَى الْمَرْئِيِّ.",
+        "caption_text": "الهيكل الأساسي للمستند يبدأ بـ DOCTYPE HTML."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>My Website</title>\n  </head>\n  <body>\n    <h1>Welcome</h1>\n    <p>Hello World</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Welcome\nHello World",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_website.asp"
+      ]
+    },
+    {
+      "id": "spaces-types",
+      "title": "أنواع الاستضافة في Spaces",
+      "narration": {
+        "spoken_text": "تُوَفِّرُ مَنْصَةُ Spaces نَوْعَيْنِ مِنَ الِاسْتِضَافَةِ. ال Basic Spaces تَدْعَمُ HTML وَ CSS وَ Javascript، بَيْنَمَا ال Fullstack Spaces تُتِيحُ لَكُمْ بِنَاءَ مَوَاقِعَ مُتَكَامِلَةٍ مَعَ PHP وَ Python وَ Django.",
+        "caption_text": "الفرق بين Basic Spaces و Fullstack Spaces."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "نوع الاستضافة",
+          "التقنيات المدعومة"
+        ],
+        "rows": [
+          [
+            "Basic Spaces",
+            "HTML, CSS, Javascript"
+          ],
+          [
+            "Fullstack Spaces",
+            "PHP, Python, React, Node.js"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_website.asp"
+      ]
+    },
+    {
+      "id": "ai-tutor",
+      "title": "استخدام kAI المساعد الذكي",
+      "narration": {
+        "spoken_text": "يُمْكِنُكُمْ الِاسْتِفَادَةُ مِنْ kAI، وَهُوَ AI Tutor مُتَخَصِّصٌ لِمُسَاعَدَتِكُمْ فِي تَصْحِيحِ الْأَكْوَادِ، وَتَحْسِينِ هَيْكَلِ الصَّفْحَةِ، وَشَرْحِ الْمَفَاهِيمِ الْبَرْمَجِيَّةِ بِطَرِيقَةٍ سَلِسَةٍ وَوَاضِحَةٍ لِتُطَوِّرُوا مَهَارَاتِكُمْ بِشَكْلٍ أَذْكَى.",
+        "caption_text": "استخدام kAI المساعد الذكي لتحسين الكود."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصحيح الأخطاء البرمجية",
+          "تحسين هيكل الكود",
+          "شرح المفاهيم المعقدة",
+          "إنشاء مواقع كاملة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_website.asp"
+      ]
+    },
+    {
+      "id": "development-tools",
+      "title": "أدوات التطوير المتاحة",
+      "narration": {
+        "spoken_text": "تُوَفِّرُ بِيئَةُ الْعَمَلِ أَدَوَاتٍ قَوِيَّةً مِثْلَ Terminal وَ Log لِمُرَاقَبَةِ الْأَدَاءِ، وَ File Navigator لِإِدَارَةِ الْمَلَفَاتِ، وَ Package Manager لِتَنْظِيمِ الْمَكْتَبَاتِ، مِمَّا يَجْعَلُ عَمَلِيَّةَ التَّطْوِيرِ سَهْلَةً وَمُنَظَّمَةً.",
+        "caption_text": "أدوات التطوير المتاحة في بيئة العمل السحابية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم Terminal & Log",
+          "مفهوم File Navigator",
+          "مفهوم Package Manager",
+          "مفهوم Analytics"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_website.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "لِضَمَانِ نَجَاحِ مَوْقِعِكُمُ الْوِبّ، احْرِصُوا عَلَى تَنْظِيمِ ال Elements بِشَكْلٍ جَيِّدٍ، وَاسْتَخْدِمُوا Templates لِتَوْفِيرِ الْوَقْتِ، وَلَا تَتَرَدَّدُوا فِي طَلَبِ الْمُسَاعَدَةِ مِنَ الدَّعْمِ الْفَنِّيِّ عِنْدَ الْحَاجَةِ.",
+        "caption_text": "أفضل الممارسات لبناء مواقع ويب احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنظيم هيكل العناصر",
+          "استخدام القوالب الجاهزة",
+          "التواصل مع الدعم الفني"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_website.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نَبْدَأُ فِي اسْتِضَافَةِ مَوَاقِعِ الْوِبّ، وَفَهِمْنَا أَنْوَاعَ ال Spaces، وَكَيْفِيَّةَ الِاسْتِفَادَةِ مِنَ الْأَدَوَاتِ الذَّكِيَّةِ. جَرِّبُوا الْأَكْوَادَ بِنَفْسِكُمْ وَابْدَأُوا رِحْلَتَكُمْ الْآنَ.",
+        "caption_text": "خلاصة الدرس: ابدأ رحلتك في استضافة المواقع اليوم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهم أساسيات الاستضافة",
+          "التعرف على أدوات kAI",
+          "تطبيق المفاهيم في مشاريع حقيقية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_website.asp"
+      ]
+    }
+  ]
+}
