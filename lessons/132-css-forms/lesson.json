@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "132",
+  "title": "تنسيق النماذج في لغة CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام لغة CSS لتنسيق HTML forms بطريقة احترافية",
+    "التعرف على خصائص CSS المستخدمة لتنسيق input fields وlabels",
+    "تطبيق التنسيقات المختلفة على عناصر الإدخال مثل text fields وpassword fields"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_forms.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة تنسيق النماذج",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَسْيِيقِ النَّمَاذِجِ أو HTML forms لِجَعْلِ صَفْحَةِ الْوِبِّ أَكْثَرَ جَذْبًا وَجَمَالاً.",
+        "caption_text": "مرحبا بكم في درس تنسيق النماذج باستخدام CSS وكيفية تحسين مظهر HTML forms."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم لغة CSS لتنسيق HTML forms بشكل كامل",
+          "تحسين المظهر العام لعناصر الإدخال في صفحات الويب",
+          "رفع مستوى تجربة المستخدم أثناء تفاعله مع النماذج"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_forms.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "أهمية تنسيق النماذج",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ لُغَةُ CSS لِتَحْسِينِ مَظْهَرِ النَّمَاذِجِ بِشَكْلٍ جِذْرِيٍّ. يُمْكِنُكَ تَحْوِيلُ العَنَاصِرِ البَسِيطَةِ إِلَى تَصَمِيمَاتٍ عَصْرِيَّةٍ تَجْذِبُ انْتِبَاهَ المُسْتَخْدِمِينَ فِي كُلِّ مَوَاقِعِ الْوِبِّ.",
+        "caption_text": "تساعد لغة CSS في تحسين مظهر النماذج بشكل جذري وجعلها أكثر عصرية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحويل النماذج العادية إلى تصميمات عصرية",
+          "جذب انتباه المستخدمين في مواقع الويب",
+          "إضفاء طابع احترافي على واجهات المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_forms.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق حقول الإدخال",
+      "narration": {
+        "spoken_text": "يُمْكِنُكَ بِاسْتِخْدَامِ لُغَةِ CSS تَسْيِيقِ مُخْتَلِفِ input types مِثْلَ text fields وَ password fields وَ checkboxes بِكُلِّ سُهُولَةٍ وَيُسْرٍ دَاخِلَ صَفْحَةِ الْوِبِّ.",
+        "caption_text": "يمكنك باستخدام CSS تنسيق مختلف أنواع input types مثل text fields وpassword fields."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق حقول النصوص text fields",
+          "تنسيق حقول كلمات المرور password fields",
+          "تنسيق مربعات الاختيار checkboxes"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_forms.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تنسيق الأزرار والتسميات",
+      "narration": {
+        "spoken_text": "لَا يَقْتَصِرُ الأَمْرُ عَلَى حُقُولِ الإِدْخَالِ فَحَسْبُ، بَلْ يُمْكِنُكَ أَيْضاً تَسْيِيقِ input labels وَ form buttons لِتَحْقِيقِ تَصْمِيمٍ مُتَکَامِلٍ فِي جَمِيعِ نَمَاذِجِ الْوِبِّ.",
+        "caption_text": "يمكنك أيضا تنسيق input labels وform buttons لتحقيق تصميم متكامل."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق تسميات حقول الإدخال input labels",
+          "تنسيق أزرار النماذج form buttons",
+          "خلق تناسق بصري كامل في النماذج"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_forms.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "خصائص CSS الشائعة",
+      "narration": {
+        "spoken_text": "هُنَاكَ عَدَدٌ مِنَ الخَصَائِصِ الأَكَثْرِ اسْتِخْدَاماً فِي لُغَةِ CSS لِتَسْيِيقِ حُقُولِ الإِدْخَالِ، وَمِنْهَا width وَ padding وَ margin لِلتَّحَكُّمِ فِي الأَبْعَادِ وَالمَسَافَاتِ.",
+        "caption_text": "استخدام خصائص مثل width وpadding وmargin للتحكم في أبعاد ومسافات حقول الإدخال."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام خاصية width لتحديد العرض",
+          "استخدام خاصية padding للمسافات الداخلية",
+          "استخدام خاصية margin للمسافات الخارجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_forms.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "خصائص الحدود والألوان",
+      "narration": {
+        "spoken_text": "تَشْمَلُ الخَصَائِصُ المُهِمَّةُ أَيْضاً border وَ border-radius لِإِنْشَاءِ حُفَافٍ مُسْتَدِيرَةٍ، إِلَى جَانِبِ background-color وَ color وَ font-size لِتَنْسِيقِ النُّصُوصِ وَالأَلْوَانِ.",
+        "caption_text": "استخدام border وborder-radius وbackground-color لتنسيق الحدود والألوان."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق الحدود باستخدام border وborder-radius",
+          "تغيير ألوان الخلفية باستخدام background-color",
+          "تحديد حجم الخط وألوان النصوص باستخدام font-size وcolor"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_forms.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "مثال عملي لتنسيق النماذج",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ مَعاً هَذَا المِثَالَ البَمِيطَ لِكِتَابَةِ كُودِ CSS لِتَسْيِيقِ العَنَاصِرِ حَيْثُ نَسْتَخْدِمُ هَذِهِ الخَصَائِصَ لِتَحْسِينِ مَظْهَرِ حَقْلِ الإِدْخَالِ فِي صَفْحَةِ الْوِبِّ.",
+        "caption_text": "مثال عملي يوضح تطبيق خصائص CSS على حقول الإدخال في صفحات الويب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text] {\n  width: 100%;\n  padding: 12px 20px;\n  margin: 8px 0;\n  box-sizing: border-box;\n  border: 2px solid #ccc;\n  border-radius: 4px;\n}",
+        "highlight_lines": [],
+        "output": "يظهر حقل إدخال النص بعرض كامل مع مسافات داخلية وحدود منسقة وزوايا مستديرة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_forms.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى أَهَمِّيَّةِ اسْتِخْدَامِ لُغَةِ CSS لِتَنْسِيقِ النَّمَاذِجِ وَكَذَلِكَ خَصَائِصَ الحُقُولِ المُخْتَلِفَةِ. أَدْعُوكُمْ لِتَجْرِبَةِ الأَكْوَادِ بِمَفْرُودِكُمْ مِنَ الرَّابِطِ فِي الوَصْفِ.",
+        "caption_text": "خلاصة الدرس حول تنسيق النماذج في CSS ودعوة لتجربة الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة شاملة لخصائص تنسيق النماذج",
+          "أهمية تطبيق المعايير الحديثة في CSS",
+          "تجربة الأكواد العملية عبر رابط المصدر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_forms.asp"
+      ]
+    }
+  ]
+}
