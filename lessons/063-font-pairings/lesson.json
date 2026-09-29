@@ -3,6 +3,8 @@
   "lesson_id": "63",
   "title": "احتراف تنسيق الخطوط في CSS",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم قواعد اختيار الخطوط المتناغمة",
     "التعرف على مفهوم Font Superfamilies",
