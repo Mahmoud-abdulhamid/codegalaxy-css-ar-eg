@@ -1,0 +1,8 @@
+@media screen and (min-width: 450px) {
+  .container {
+    --fontsize: 40px;
+  }
+  :root {
+    --primary-bg-color: lightblue;
+  }
+}
