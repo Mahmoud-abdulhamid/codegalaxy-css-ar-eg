@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "239",
+  "title": "CSS property Rule",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "التعرف على قاعدة property في لغة CSS وكيفية تعريف Custom Properties",
+    "فحص أنواع البيانات والتحقق منها باستخدام syntax و initial-value",
+    "التحكم في خاصية الوراثة عبر تعيين inherits إلى true أو false",
+    "إنشاء تأثيرات رسومية سلسة وانتقالات للجداول اللونية Gradients"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_property.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-16ddd8b373a2b2ec.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css3_property.asp",
+      "source_url": "https://www.w3schools.com/css/css3_property.asp"
+    },
+    {
+      "id": "html_example_2",
+      "path": "assets/html-96e1047b1613715d.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css3_property.asp",
+      "source_url": "https://www.w3schools.com/css/css3_property.asp"
+    },
+    {
+      "id": "html_example_3",
+      "path": "assets/html-bba3a0e3f8286753.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css3_property.asp",
+      "source_url": "https://www.w3schools.com/css/css3_property.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة قاعدة property",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى قَاعِدَة property الْمُمَيَّزَةِ لِتَعْرِيفِ Custom Properties مُبَاشَرَةً فِي ملف الويب دُونَ حَاجَةٍ لِأَيِّ JavaScript.",
+        "caption_text": "تعرف على قاعدة property لتعريف Custom Properties مباشرة في ملف الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم قاعدة property لتعريف Custom Properties في CSS",
+          "لا تحتاج إلى تشغيل أكواد JavaScript لتفعيلها",
+          "تدعم التحقق من أنواع البيانات وتحديد القيم الافتراضية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_property.asp"
+      ]
+    },
+    {
+      "id": "scene_2_syntax",
+      "title": "صياغة وبنية property",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ إِلَى دِرَاسَةِ بِنْيَةِ Syntax الْخَاصَّةِ بِهَا. تَتَضَمَّنُ الصِّيَاغَةُ تَحْدِيدَ syntax مِثْلَ صِفَةِ اللون، وَإِكْدَاسَ inherits ثُمَّ تَعْيِينَ القيمة الابتدائية عبر initial-value.",
+        "caption_text": "تتضمن بنية property تحديد نوع البيانات syntax والقيمة الابتدائية initial-value."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "property.css",
+        "code": "@property --myColor {\n  syntax: \"<color>\";\n  inherits: true;\n  initial-value: lightgray;\n}",
+        "highlight_lines": [],
+        "output": "CSS @property rule defined successfully",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_property.asp"
+      ]
+    },
+    {
+      "id": "scene_3_using_var",
+      "title": "استخدام دالة var",
+      "narration": {
+        "spoken_text": "بَعْدَ تَعْرِيفِ المتغير، نَسْتَخْدِمُ دَالَةَ var لِإِدْرَاجِ القيمة الْمُخَصَّصَةِ دَاخِلَ أَيِّ عنصر في ملف الويب، مِثْلَ تَطْبِيقِ background-color على عنصر body بكل سهولة.",
+        "caption_text": "تستخدم دالة var لإدراج المتغير المخصص في عناصر CSS المختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "body {\n  background-color: var(--myColor);\n}",
+        "highlight_lines": [],
+        "output": "background-color: lightgray;",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_property.asp"
+      ]
+    },
+    {
+      "id": "scene_4_multiple_properties",
+      "title": "تطبيق خصائص متعددة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَعْرِيفُ أَكْثَرَ مِنْ مُتَغَيِّرٍ مِثْلِ my-bg-color و my-txt-color، ثُمَّ اسْتِخْدَامِهِمَا مَعاً دَاخِلَ عنصر div لِتَحْدِيدِ لون الخلفية والنص بدقة.",
+        "caption_text": "يمكن تعريف أكثر من متغير مخصص واستخدامها داخل عنصر div."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "multi.css",
+        "code": "@property --my-bg-color {\n  syntax: \"<color>\";\n  inherits: true;\n  initial-value: lightgray;\n}\ndiv {\n  background-color: var(--my-bg-color);\n  color: var(--my-txt-color);\n}",
+        "highlight_lines": [],
+        "output": "div styled with custom properties",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_property.asp"
+      ]
+    },
+    {
+      "id": "scene_5_override_classes",
+      "title": "تجاوز القيم عبر الفئات",
+      "narration": {
+        "spoken_text": "نَسْتَطِيعُ أَيْضاً التَّعْدِيلَ عَلَى القيمة الافتراضية مِنْ خِلَالِ تَصْنِيفَاتٍ فَرْعِيَّةٍ مِثْلَ fresh و nature، حَيْثُ نُغَيِّرُ قيم المتغيرات لِتَعْرِضَ ألواناً مُخْتَلِفَةً بِكُلِّ كَفَاءَةٍ.",
+        "caption_text": "يمكن تجاوز القيمة الافتراضية للمتغير داخل الفئات الفرعية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "classes.css",
+        "code": ".fresh {\n  --my-bg-color: #ff6347;\n}\n.nature {\n  --my-bg-color: rgb(120, 180, 30);\n}",
+        "highlight_lines": [],
+        "output": "Custom property overridden by class",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_property.asp"
+      ]
+    },
+    {
+      "id": "scene_6_visual_preview",
+      "title": "معاينة النتيجة المرئية",
+      "narration": {
+        "spoken_text": "تُظْهِرُ لَنَا هَذِهِ الصُّورَةُ كَيْفَ يَعْرِضُ المتصفح عنصر div عِنْدَ تَطْبِيقِ الخصائص الْمُخَصَّصَةِ وَتَجَاوُزِهَا دَاخِلَ صَفْحَةِ الويب بِشَكْلٍ مِرْئِيٍّ وَاضِحٍ.",
+        "caption_text": "صورة توضح معاينة عنصر div بعد تطبيق الخصائص المخصصة."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "معاينة نتائج تطبيق قاعدة property في المتصفح"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_property.asp"
+      ]
+    },
+    {
+      "id": "scene_7_type_checking",
+      "title": "التحقق من الأخطاء والاحتياط",
+      "narration": {
+        "spoken_text": "عِنْدَ إِدْخَالِ قِيْمَةٍ غَيْرِ صَحِيحَةٍ كَالأَرْقَامِ مَثَفلاً بَدَلَ الألوان، يَتَعَرَّفُ المتصفح على الخطأ وَيَلْجَأُ مُبَاشَرَةً إِسْتِخْدَامَ القيمة الاحتياطية المُعَرَّفَةِ في initial-value.",
+        "caption_text": "عند إدخال قيمة غير صالحة، يستخدم المتصفح القيمة الاحتياطية تلقائيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "fallback.css",
+        "code": ".nature {\n  --my-bg-color: 2;\n  /* Falls back to lightgray */\n}",
+        "highlight_lines": [],
+        "output": "Fallback to initial-value applied",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_property.asp"
+      ]
+    },
+    {
+      "id": "scene_8_animation_gradients",
+      "title": "رسوم متحركة للتدرجات",
+      "narration": {
+        "spoken_text": "مِنْ أَهَمِّ مُمَيِّزَاتِ هَذِهِ القاعدَةِ أَيْضاً، هُوَ القُدْرَةُ عَلَى إِنْشَاءِ تَرْنِيمَاتٍ وَتَمْوِيجَاتٍ سَلِسَةٍ لِلتَّدَرُّجَاتِ اللونية Gradients الَّتِي لَمْ تَكُنْ قَابِلَةً لِلتَّحْرِيكِ مِنْ قَبْلُ.",
+        "caption_text": "تتيح قاعدة property إمكانية تحريك التدرجات اللونية بسلاسة فائقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "gradient.css",
+        "code": "@property --startColor {\n  syntax: \"<color>\";\n  initial-value: #EADEDB;\n  inherits: false;\n}",
+        "highlight_lines": [],
+        "output": "Smooth gradient animation enabled",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_property.asp"
+      ]
+    },
+    {
+      "id": "scene_9_conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَرَّفْنَا الْيَوْمَ عَلَى كَيْفِيَّةِ اسْتِخْدَامِ قَاعِدَة property لِتَحْسِينِ مَرُونَةِ مُتَغَيِّرَاتِ CSS وَحِمَايَتِهَا بِالتَّحَقُّقِ مِنَ الأنوع. نَتَمَنَّى لَكُمْ التَّوْفِيقَ وَنَنْتَظِرُكُمْ فِي الدَّرْسِ القادم مَعَ مَحْمُودِ عَبْدِالْحَمِيدِ.",
+        "caption_text": "خلاصة استخدام قاعدة property والتحقق من الأنواع في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعريف متغيرات CSS المخصصة بقواعد دقيقة",
+          "استخدام syntax و initial-value لمنع الأخطاء",
+          "تفعيل الرسوم المتحركة للتدرجات اللونية Gradients"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_property.asp"
+      ]
+    }
+  ]
+}
