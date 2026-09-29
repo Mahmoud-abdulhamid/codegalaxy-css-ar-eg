@@ -1,0 +1,9 @@
+#div1 {
+  border: 5px dotted black; padding: 35px; background-clip: border-box;
+}
+#div2 {
+  border: 5px dotted black; padding: 35px; background-clip: padding-box;
+}
+#div3 {
+  border: 5px dotted black; padding: 35px; background-clip: content-box;
+}
