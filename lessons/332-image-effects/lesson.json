@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "332",
+  "title": "إضافة تأثيرات بصرية للصور باستخدام CSS Filters",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام خاصية filter في CSS",
+    "تطبيق تأثير grayscale لتحويل الصور إلى الأبيض والأسود",
+    "تطبيق تأثير blur لعمل ضبابية على الصور",
+    "التعرف على التوافقية الخاصة بـ CSS Filters"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_effects.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول تأثيرات الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِضَافَةِ تَأْثِيرَاتٍ بَصَرِيَّةٍ مُدْهِشَةٍ لِلصُّوَرِ بِاسْتِخْدَامِ خَاصِيَّةِ filter، وَهِيَ تَقْنِيَةٌ قَوِيَّةٌ تُغْنِينَا عَنْ بَرَامِجِ تَعْدِيلِ الصُّوَرِ الْخَارِجِيَّةِ.",
+        "caption_text": "مرحبا بكم في درس إضافة تأثيرات بصرية للصور باستخدام CSS Filters."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم خاصية filter لإضافة تأثيرات بصرية للعناصر",
+          "يمكن تطبيق التأثيرات على الصور بسهولة",
+          "تساعد هذه التقنية في تحسين تجربة المستخدم البصرية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_effects.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم CSS Filters",
+      "narration": {
+        "spoken_text": "خَاصِيَّةُ filter فِي CSS تُتِيحُ لَنَا تَطْبِيقَ تَأْثِيرَاتٍ مِثْلَ blur أَوْ saturation عَلَى أَيِّ Element. لَكِنْ يَجِبُ أَنْ نَنْتَبِهَ أَنَّ هَذِهِ الْخَاصِيَّةَ لَا تَدْعَمُ بَعْضَ مُتَصَفِّحَاتِ الويب الْقَدِيمَةِ مِثْلَ Internet Explorer.",
+        "caption_text": "تسمح خاصية filter بإضافة تأثيرات بصرية متنوعة للعناصر في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية filter تدعم تأثيرات مثل blur و grayscale",
+          "تطبق التأثيرات على أي Element في الصفحة",
+          "ملاحظة: لا تدعم المتصفحات القديمة مثل Internet Explorer"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_effects.asp"
+      ]
+    },
+    {
+      "id": "grayscale_code",
+      "title": "تطبيق تأثير Grayscale",
+      "narration": {
+        "spoken_text": "لِتَحْوِيلِ الصُّوَرِ إِلَى الْأَبْيَضِ وَالْأَسْوَدِ، نَسْتَخْدِمُ قِيمَةَ grayscale بِنِسْبَةِ مِئَةٍ بِالْمِئَةِ. نُضِيفُ أَيْضاً -webkit-filter لِضَمَانِ عَمَلِ التَّأْثِيرِ عَلَى مُتَصَفِّحَاتِ Safari الْقَدِيمَةِ بِشَكْلٍ سَلِيمٍ.",
+        "caption_text": "استخدام grayscale(100) لتحويل الصور إلى اللونين الأبيض والأسود."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  -webkit-filter: grayscale(100%);\n  filter: grayscale(100%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_effects.asp"
+      ]
+    },
+    {
+      "id": "blur_code",
+      "title": "تطبيق تأثير Blur",
+      "narration": {
+        "spoken_text": "أَمَّا إِذَا أَرَدْنَا إِضَافَةَ تَأْثِيرِ الضَّبَابِيَّةِ، فَنَسْتَخْدِمُ قِيمَةَ blur مَعَ تَحْدِيدِ قُوَّةِ التَّأْثِيرِ بِال pixels. فِي هَذَا الْمِثَالِ، نَضَعُ خَمْسَةَ pixels لِتَحْقِيقِ نَتِيجَةٍ مَلْحُوظَةٍ عَلَى جَمِيعِ الصُّوَرِ.",
+        "caption_text": "استخدام blur(5px) لإضافة تأثير الضبابية على الصور."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  -webkit-filter: blur(5px);\n  filter: blur(5px);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_effects.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتُعْرَضُ الصُّوَرُ فِي Web Browser بِالتَّأْثِيرَاتِ الْمُحَدَّدَةِ. سَتَظْهَرُ الصُّوَرُ إِمَّا بِأَلْوَانٍ مُحَادَةٍ أَوْ بِشَكْلٍ ضَبَابِيٍّ بِنَاءً عَلَى الْخَاصِيَّةِ الَّتِي اخْتَرْتَهَا لِتَصْمِيمِكَ.",
+        "caption_text": "تظهر النتائج في المتصفح بناء على قيم filter المستخدمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Image 1: Black and White (Grayscale)\nImage 2: Blurred Effect (5px)",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_effects.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِاسْتِخْدَامِ الْبَادِئَاتِ مِثْلَ -webkit- لِضَمَانِ التَّوَافُقِيَّةِ. كَمَا يُمْكِنُكُمْ دَمْجُ أَكْثَرَ مِنْ تَأْثِيرٍ فِي نَفْسِ الْوَقْتِ لِلْحُصُولِ عَلَى نَتَائِجَ إِبْدَاعِيَّةٍ وَمُمَيَّزَةٍ فِي مَوَاقِعِكُمُ الْإِلِكْتُرُونِيَّةِ.",
+        "caption_text": "استخدم البادئات لضمان التوافقية وادمج التأثيرات للحصول على نتائج إبداعية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم -webkit-filter لدعم المتصفحات القديمة",
+          "يمكن دمج عدة تأثيرات في سطر واحد",
+          "اختبر التأثيرات على متصفحات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_effects.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي مَظْهَرِ الصُّوَرِ بِاسْتِخْدَامِ CSS Filters. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ الرَّائِعَةِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم لتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية خاصية filter",
+          "تم شرح grayscale و blur",
+          "تم التأكيد على أهمية التوافقية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_effects.asp"
+      ]
+    }
+  ]
+}
