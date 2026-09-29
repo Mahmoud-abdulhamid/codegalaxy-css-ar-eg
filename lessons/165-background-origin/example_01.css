@@ -1,0 +1,9 @@
+#div1 {
+  border: 2px solid black; padding: 35px; background-origin: padding-box;
+}
+#div2 {
+  border: 2px solid black; padding: 35px; background-origin: border-box;
+}
+#div3 {
+  border: 2px solid black; padding: 35px; background-origin: content-box;
+}
