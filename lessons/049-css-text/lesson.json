@@ -3,6 +3,8 @@
   "lesson_id": "49",
   "title": "تنسيق ألوان النصوص باستخدام CSS",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية استخدام خاصية color لتغيير لون النص",
     "التعرف على كيفية دمج background-color مع النصوص",
