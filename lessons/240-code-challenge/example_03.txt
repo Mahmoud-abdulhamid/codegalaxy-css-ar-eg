@@ -1,0 +1,1 @@
+Element color changes smoothly from red to blue on hover.
