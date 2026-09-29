@@ -1,0 +1,10 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'header'
+  'menu'
+  'main'
+  'facts'
+  'footer';
+  gap: 10px;
+}
