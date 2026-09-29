@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "337",
+  "title": "Full Page Background Image in CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Learn how to create a full page background image with CSS",
+    "Configure html and body height to 100 for full screen coverage",
+    "Use background-image and background-size cover property for scaling",
+    "Create half page background layouts easily using height 50 percent"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_full_page.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ صُورَةِ خَلْفِيَّةٍ تَمْلَأُ صَفْحَةَ الْوِبِّ بِالْكَامِلِ بِأُسْلُوبٍ اعْتِرَافِيٍّ مُمَيِّزٍ وَمُتَوَافِقٍ مَعَ شَاشَاتِ الْعَرْضِ الْمُخْتَلِفَةِ.",
+        "caption_text": "مرحبا بكم في درس جديد لتعلم كيفية إنشاء صورة خلفية تملأ صفحة الويب بالكامل باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم تصميم خلفيات صفحات الويب باحترافية",
+          "استخدام لغة CSS لتنسيق وتغطية إطار المتصفح",
+          "جعل الخلفيات متجاوبة مع مختلف الشاشة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_full_page.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "المفاهيم الأساسية للخلفيات",
+      "narration": {
+        "spoken_text": "لِضَمَانِ أَنْ تُغَطِّيَ صُورَةُ الْخَلْفِيَّةِ كَافَّةَ إِطَارِ الْمُتَصَفِّحِ بِدِقَّةٍ، يَجِبُ عَلَيْنَا فِي الْبِدَايَةِ تَحْدِيدِ اخْتِصَارَاتِ الارتفاع لِكُلٍّ مِنْ عُنْصُرَيْ html وَ body بِقِيمَةِ مِئَةٍ فِي الْمِئَةِ لِتَفَادِي أَيِّ فَرَاغَاتٍ غَيْرِ مَرْغُوبٍ فِيهَا.",
+        "caption_text": "لضمان تغطية الصورة لنافذة المتصفح بالكامل، يجب تطبيق ارتفاع بنسبة مئة بالمئة على عنصري html و body."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تطبيق ارتفاع مئة بالمئة على عنصر html",
+          "تطبيق ارتفاع مئة بالمئة على عنصر body",
+          "تهيئة الحاوية لاستيعاب الصورة بالشكل الصحيح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_full_page.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كتابة كود الـ HTML و CSS الأساسي",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ لِكِتَابَةِ كود ال CSS الْمُخَصَّصِ. نَسْتَخْدِمُ خَاصِيَّةَ background-image لِتَحْدِيدِ مَسَارِ الصُّورَةِ، ثُمَّ نُحَدِّدُ خَاصِيَّةَ height لِتَكُونَ مِئَةً فِي الْمِئَةِ لِتَغْطِيَةِ الشَّاشَةِ بِالْكَامِلِ.",
+        "caption_text": "نكتب الآن قواعد CSS لتحديد مسار الصورة والارتفاع الكامل لشاشة العرض."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body, html {\n  height: 100%;\n}\n.bg {\n  background-image: url(\"img_girl.jpg\");\n  height: 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}",
+        "highlight_lines": [],
+        "output": "Full page background image loaded successfully",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_full_page.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "شرح خواص التوسيط والتكبير",
+      "narration": {
+        "spoken_text": "لَاحِظْ مَعِي أَنَّنَا اسْتَخْدَمْنَا background-position بَقِيمَةِ center لِتَوَسُطِ الصُّورَةِ، وَخَاصِيَّةَ background-repeat بَقِيمَةِ no-repeat لِمَنْعِ تَكْرَارِهَا، إِضَافَةً إِلَى background-size بَقِيمَةِ cover لِتَكْبِيرِهَا بِشَكْلٍ مُتَنَاسِبٍ.",
+        "caption_text": "نستخدم خصائص التوسيط وعدم التكرار وتغطية المساحة بالكامل للحصول على مظهر مرئي متناسق."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توسيط الصورة باستخدام background-position center",
+          "منع تكرار الصورة عبر background-repeat no-repeat",
+          "تغطية الشاشة باحترافية عبر background-size cover"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_full_page.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "إنشاء خلفية بنصف الصفحة",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْنَا إِنْشَاءَ صُورَةِ خَلْفِيَّةٍ تَشْغَلُ نِصْفَ الصَّفْحَةِ فَقَطْ بَدَلاً مِنَ الشَّاشَةِ كَامِلَةً، فَإِنَّنَا نُغَيِّرُ قِيمَةَ خَاصِيَّةِ height فِي كْلَاسِ .bg إِلَى خَمْسِينَ فِي الْمِئَةِ بَدَلاً مِنْ مِئَةٍ فِي الْمِئَةِ.",
+        "caption_text": "يمكننا بسهولة إنشاء خلفية لنصف الصفحة فقط من خلال تعديل قيمة الارتفاع إلى خمسين بالمئة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bg {\n  height: 50%;\n}",
+        "highlight_lines": [],
+        "output": "Half page background image rendered",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_full_page.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "مِنْ أَهْمِ النِّقَاطِ الْهَنْدَسِيَّةِ لِضَمَانِ عَرْضٍ سَلِيمٍ هُوَ التَّأَكُّدُ مِنْ صِحَّةِ مَسَارِ مَلَفِّ الصُّورَةِ فِي دَالَّةِ url، وَالتَّحَقُّقُ مِنْ تَعْرِيفِ الإرتفاع لِكِلَا الْعُنْصُرَيْنِ html و body لِتَفَادِي اخْتِفَاءِ التَّأْثِيرِ فِي بَعْضِ الْمُتَصَفِّحَاتِ.",
+        "caption_text": "احرص دائما على التأكد من صحة مسارات الصور وتطبيق الارتفاع الكامل لعنصري html و body."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحقق الدائم من مسارات الصور في url",
+          "ضمان تعريف الارتفاع لعنصري html و body معا",
+          "اختبار التصميم على مختلف أحجام الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_full_page.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس والتطبيقات العملية",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ تَمْوِيلِ صَفْحَةِ الْوِبِّ بِصُورَةِ خَلْفِيَّةٍ مِثَالِيَّةٍ تَمْلَأُ الشَّاشَةَ بِكَامِلِ حُدُودِهَا، أَوْ تُغَطِّي نِصْفَهَا بِاسْتِخْدَامِ أَقَلِّ عَدَدٍ مُمْكِنٍ مِنْ أَسْطُرِ CSS النَّقِيَّةِ.",
+        "caption_text": "تعلمنا في هذا الدرس كيفية تصميم خلفيات صفحات الويب الكاملة والنصفية بأسلوب احترافي وسهل."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استعراض شامل لتقنيات خلفيات CSS الحديثة",
+          "تطبيق خصائص التوسيط والتغطية والمرونة",
+          "جاهزية الكود للتنفيذ الفوري في مشاريع الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_full_page.asp"
+      ]
+    }
+  ]
+}
