@@ -1,0 +1,3 @@
+Element 1 (linear): Constant speed.
+Element 2 (ease-in): Starts slow, accelerates.
+Element 3 (infinite): Never stops running.
