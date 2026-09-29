@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "123",
+  "title": "CSS Advanced Dropdowns",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية محاذاة القوائم المنسدلة من اليمين لليسار باستخدام right: 0",
+    "إضافة الصور والمحتويات المختلفة داخل عناصر الويب",
+    "دمج القوائم المنسدلة باحترافية داخل شريط التنقل"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_dropdowns_advanced.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة القوائم المنسدلة المتقدمة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي قَنَاتِكُمْ CodeGalaxy. سَنَتَعَرَّفُ الْيَوْمَ فِي دَوْرَةِ لُغَةِ CSS عَلَى مَوَاضِيعَ مُتَقَدِّمَه تَخْصُص Dropdowns وَكَيْفِيَّةِ تَعْدِيلِ اتِّجَاهِهَا بِمَا يُنَاسِبُ تَصْمِيمَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Advanced Dropdowns لتعلم الخصائص المتقدمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تطوير مهارات تصميم الواجهات",
+          "التحكم الكامل باتجاه Dropdowns",
+          "إضافة صور وعناصر متقدمة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "مفهوم المحاذاة اليمنى Right-aligned Dropdown",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْنَا أَنْ تَتَحَرَّكَ قَائِمَةِ Dropdown مِنَ الْيَمِينِ إِلَى الْيَسَارِ بَدَلًا مِنَ الِاتِّجَاهِ الِافْتِرَاضِيِّ مِنَ الْيَسَارِ إِلَى الْيَمِينِ، فَإِنَّنَا نَسْتَخْدِمُ خَاصِّيَّه مُهِمَّه وَهِي right: 0 فِي لُغَةِ CSS.",
+        "caption_text": "شرح فكرة محاذاة القائمة المنسدلة من اليمين لليسار باستخدام الخاصية المناسبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تغيير اتجاه الحركة في Dropdowns",
+          "التحكم الدقيق بموقع العنصر",
+          "مناسب لتصميمات اللغات العربية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كتابة كود المحاذاة لليمين",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ مَعاً هَذَا الْمِثَالَ الْبَرَاجْمَاتِيَّ، حَيْثُ نَقُومُ بِتَطْبِيقِ خَاصِّيَّةِ right: 0 عَلَى كُلَاسِ .dropdown-content لِتَغْيِيرِ الْمُحَاذَاه وَجَعْلِ الصَّفْحَه تَتَمَوَّعُ بِدِقَّه تِقْنِيَّه عَالِيَه.",
+        "caption_text": "تطبيق كود CSS لتوجيه المحتوى المنسدلة نحو اليمين مباشرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": ".dropdown-content {\n  right: 0;\n}",
+        "highlight_lines": [
+          2
+        ],
+        "output": "Right-aligned dropdown menu active",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "إضافة الصور داخل Dropdown",
+      "narration": {
+        "spoken_text": "لَا تَقْتَصِرُ الْقَوَائِمُ المُنسَدِلَه عَلَى النُّصُوصِ فَقَطْ، بَلْ نَسْتَطِيعُ إضافَه صُوَرٍ ومُحتَياتٍ مُتَنوِّعَه دَاخِلَ صُنْدُوق Dropdown لِتَقْدِيمِ تَجْرِبَه مُسْتَخْدِمٍ غَنِيَّه وَجَذَّابَه فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "إضافة صور ومحتويات إضافية داخل صندوق القائمة المنسدلة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إدراج عناصر الوسائط المتعددة",
+          "تحسين التفاعل عند المرور بالفأرة",
+          "تنظيم محتوى الويب باحترافية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "مثال تفاعلي للصور داخل القائمة",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نَضَعُ صُورَه دَاخِلَ الْعُنْصُرِ وَنَقُومُ بِتَفْعِيلِ حَدَثِ الْمُرُور Hover over the image، يَتِمُّ عَرْضُ التَّفَاصِيلِ الإضافِيَّه بِشَكْلٍ انْسِيَابِيٍّ يُمَيِّزُ مَوَاقِعَ الْوِبّ العَصْرِيَّه.",
+        "caption_text": "تفعيل تفاعل الصور عند مرور مؤشر الفأرة ضمن القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"dropdown\">\n      <img src=\"img_avatar.png\" alt=\"Avatar\">\n      <div class=\"dropdown-content\">\n        <p>Hello World!</p>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [
+          2,
+          3
+        ],
+        "output": "Image dropdown rendered successfully",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "دمج Dropdown داخل Navbar",
+      "narration": {
+        "spoken_text": "مِنَ الْمُمَارَسَاتِ الأَساسيَّه أَيْضاً، إضافَه قَائِمَه مُنسَدِلَه دَاخِلَ شَرِيطِ التَّنَقُّل Navigation Bar، لِيَتَسَنَّى لِلْمُسْتَخْدِمِ التَّنَقُّلُ بَيْنَ الصَّفَحَاتِ بِسُهُولَه تَاّمَّه وَسَلَاسَه فائِقَه.",
+        "caption_text": "كيفية دمج القوائم المنسدلة داخل شريط التنقل العلوي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء أشرطة تنقل متقدمة Navbar",
+          "دمج العناصر ضمن تصميم متناسق",
+          "تنظيم الروابط بشكل هرمي واضح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس وأفضل الممارسات",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا الْيَوْمَ يَا أَصْدِقَائِي، تَعَلَّمْنَا كَيْفَ نُعَدِّلُ اتِّجَاهَ الْقَوَائِمِ المُنسَدِلَه بِاسْتِخْدَام right: 0، وَكَيْفَ نُضِيفُ الصُّوَرَ وَمِيزَاتِ شَرِيطِ التَّنَقُّلِ بِاحترافيَه تامَه مَعَ مَحْمُودِ عَبْدِالْحَمِيد.",
+        "caption_text": "خلاصة شاملة لمهارات القوائم المنسدلة المتقدمة في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام right: 0 للمحاذاة الصحيحة",
+          "تضمين الصور بكفاءة عالية",
+          "تابعوا تطبيق الأكواد بأنفسكم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns_advanced.asp"
+      ]
+    }
+  ]
+}
