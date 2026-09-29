@@ -1,0 +1,10 @@
+/* Good Contrast */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+/* Bad Contrast */
+body {
+  background-color: #eeeeee;
+  color: #cccccc;
+}
