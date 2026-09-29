@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "354",
+  "title": "تصميم أزرار التنبيه باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية إنشاء أزرار تنبيه احترافية",
+    "فهم استخدام Classes في CSS لتنسيق العناصر",
+    "تطبيق تأثيرات التفاعل باستخدام Pseudo-class",
+    "التحكم في خصائص الأزرار مثل Padding وCursor"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_alert_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول أزرار التنبيه",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَصْمِيمِ أَزْرَارِ التَّنْبِيهِ أَوْ مَا يُعْرَفُ بِ Alert Buttons، وَهِيَ عَنَاصِرُ حَيَوِيَّةٌ تُسْتَخْدَمُ لِتَنْبِيهِ الْمُسْتَخْدِمِ بِحَالَةِ الْعَمَلِيَّةِ الَّتِي يَقُومُ بِهَا عَلَى صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تصميم Alert Buttons باستخدام CSS لبناء واجهات تفاعلية جذابة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أزرار التنبيه تعزز تجربة المستخدم",
+          "تستخدم لتوضيح حالات النجاح أو التحذير",
+          "تعتمد على CSS لتغيير الألوان والحالة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_alert_buttons.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل الأزرار في HTML",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْهَيْكَلِ الْأَسَاسِيِّ لِلْأَزْرَارِ. نَسْتَخْدِمُ Element مِنْ نَوْعِ button، وَنُضِيفُ لَهُ Class مُشْتَرَكاً بِاسْمِ btn، ثُمَّ نُضِيفُ Class إِضَافِيّاً لِتَحْدِيدِ نَوْعِ التَّنْبِيهِ مِثْلَ success أَوْ danger لِتَطْبِيقِ التَّنْسِيقَاتِ الْمُخَصَّصَةِ لِكُلِّ زِرٍّ.",
+        "caption_text": "نستخدم عنصر button مع Classes متعددة للتحكم في التنسيق العام والخاص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <button class=\"btn success\">Success</button>\n    <button class=\"btn info\">Info</button>\n    <button class=\"btn warning\">Warning</button>\n    <button class=\"btn danger\">Danger</button>\n    <button class=\"btn default\">Default</button>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_alert_buttons.asp"
+      ]
+    },
+    {
+      "id": "css_base",
+      "title": "تنسيق الفئة العامة btn",
+      "narration": {
+        "spoken_text": "الْآنَ نَضَعُ التَّنْسِيقَاتِ الْعَامَّةَ لِكُلِّ الْأَزْرَارِ دَاخِلَ Class بِاسْمِ btn. نَقُومُ بِإِزَالَةِ الْحُدُودِ بِاسْتِخْدَامِ border: none، وَنُحَدِّدُ لَوْنَ النَّصِّ بِ white، مَعَ إِضَافَةِ padding مُنَاسِبٍ لِتَوْسِيعِ الزِّرِّ، وَتَغْيِيرِ cursor إِلَى pointer لِتَفَاعُلٍ أَفْضَلَ.",
+        "caption_text": "تنسيق الفئة العامة btn يضمن توحيد المظهر الأساسي لجميع الأزرار."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn {\n  border: none;\n  color: white;\n  padding: 14px 28px;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_alert_buttons.asp"
+      ]
+    },
+    {
+      "id": "css_variants",
+      "title": "تخصيص ألوان الحالات",
+      "narration": {
+        "spoken_text": "لِكُلِّ حَالَةٍ لَوْنٌ خَاصٌّ. نَسْتَخْدِمُ background-color لِتَحْدِيدِ لَوْنِ الْخَلْفِيَّةِ لِكُلِّ Class مِثْلَ success بِاللَّوْنِ الْأَخْضَرِ، أَوْ danger بِاللَّوْنِ الْأَحْمَرِ. هَذَا يُسَاعِدُ الْمُسْتَخْدِمَ عَلَى تَمْيِيزِ نَوْعِ التَّنْبِيهِ بَصَرِيّاً بِسُرْعَةٍ كَبِيرَةٍ.",
+        "caption_text": "تخصيص الألوان لكل حالة يعطي دلالة بصرية واضحة للمستخدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".success {\n  background-color: #04AA6D;\n}\n.info {\n  background-color: #2196F3;\n}\n.warning {\n  background-color: #ff9800;\n}\n.danger {\n  background-color: #f44336;\n}\n.default {\n  background-color: #e7e7e7; color: black;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_alert_buttons.asp"
+      ]
+    },
+    {
+      "id": "hover_effects",
+      "title": "إضافة تأثيرات التفاعل",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الْأَزْرَارِ أَكْثَرَ تَفَاعُلِيَّةً، نَسْتَخْدِمُ Pseudo-class الَّذِي يُسَمَّى hover. عِنْدَ تَحْرِيكِ الْمَاوْسِ فَوْقَ الزِّرِّ، نَقُومُ بِتَغْيِيرِ background-color لِيُعْطِيَ انْطِبَاعاً بِأَنَّ الزِّرَّ قَابِلٌ لِلنَّقْرِ وَيَتَجَاوَبُ مَعَ حَرَكَاتِ الْمُسْتَخْدِمِ.",
+        "caption_text": "استخدام hover يضيف تفاعلية بصرية عند مرور مؤشر الماوس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".success:hover {\n  background-color: #46a049;\n}\n.info:hover {\n  background: #0b7dda;\n}\n.warning:hover {\n  background: #e68a00;\n}\n.danger:hover {\n  background: #da190b;\n}\n.default:hover {\n  background: #ddd;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_alert_buttons.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَنْهَيْنَا تَصْمِيمَ أَزْرَارِ التَّنْبِيهِ. تَعَلَّمْنَا كَيْفَ نُوَظِّفُ Classes لِتَنْظِيمِ الْأَكْوَادِ وَكَيْفَ نُضِيفُ تَأْثِيرَاتٍ جَمَالِيَّةً بِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِهَا فِي مَشَارِيعِكُمُ الْقَادِمَةِ عَلَى صَفْحَاتِ الْوِبّ.",
+        "caption_text": "لقد تعلمنا بناء أزرار تنبيه احترافية باستخدام CSS. جربوا الأكواد بأنفسكم!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Classes متعددة للعناصر",
+          "تطبيق Pseudo-class للتحكم في التفاعل",
+          "تحسين تجربة المستخدم بالألوان",
+          "الاستمرار في ممارسة كتابة CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_alert_buttons.asp"
+      ]
+    }
+  ]
+}
