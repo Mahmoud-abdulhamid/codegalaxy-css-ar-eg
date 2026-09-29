@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "298",
+  "title": "تصميم قائمة جانبية ثابتة باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية إنشاء قائمة جانبية ثابتة في صفحات الويب",
+    "فهم خصائص CSS مثل position: fixed و z-index",
+    "التحكم في أبعاد القائمة وتنسيق الروابط",
+    "تطبيق استجابة القائمة للشاشات الصغيرة باستخدام Media Queries"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول القائمة الجانبية الثابتة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ قَائِمَةٍ جَانِبِيَّةٍ ثَابِتَةٍ تُسَمَّى Fixed Sidebar بِاسْتِخْدَامِ لُغَةِ CSS، وَهِيَ عُنْصُرٌ أَسَاسِيٌّ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "سنتعلم اليوم كيفية إنشاء قائمة جانبية ثابتة Fixed Sidebar باستخدام CSS لتحسين تجربة المستخدم في مواقع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "القائمة الجانبية الثابتة تبقى في مكانها عند التمرير",
+          "تستخدم خاصية position: fixed للتحكم في التموضع",
+          "تعد عنصرا أساسيا في تصميم واجهات المستخدم الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للقائمة الجانبية",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ Element مِنْ نَوْع div بِكَلَاسِ sidenav لِاحْتِوَاءِ الرَّوَابِطِ، وَ div آخَرَ بِكَلَاسِ main لِاحْتِوَاءِ مُحْتَوَى الصَّفْحَةِ الرَّئِيسِيِّ، وَهَذَا التَّقْسِيمُ يُسَاعِدُنَا فِي تَنْظِيمِ الْعَنَاصِرِ بِشَكْلٍ مَنْطِقِيٍّ.",
+        "caption_text": "نستخدم div بكلاس sidenav لاحتواء الروابط، و div بكلاس main لاحتواء محتوى الصفحة الرئيسي لتنظيم العناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"sidenav\">\n      <a href=\"#\">About</a>\n      <a href=\"#\">Services</a>\n      <a href=\"#\">Clients</a>\n      <a href=\"#\">Contact</a>\n    </div>\n    <div class=\"main\">\n      <p>Main content goes here</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp"
+      ]
+    },
+    {
+      "id": "css_sidebar",
+      "title": "تنسيق القائمة باستخدام CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نَضْبِطُ خَصَائِصَ sidenav. نَسْتَخْدِمُ height: 100 لِتَغْطِيَةِ طُولِ الشَّاشَةِ، وَ position: fixed لِتَثْبِيتِ الْقَائِمَةِ، مَعَ ضَبْطِ top وَ left عَلَى صِفْرٍ لِتَكُونَ فِي الزَّاوِيَةِ الْيُسْرَى، وَ z-index لِضَمَانِ ظُهُورِهَا فِي الْمُقَدِّمَةِ.",
+        "caption_text": "نستخدم position: fixed لتثبيت القائمة، مع ضبط top و left على صفر، و z-index لضمان ظهورها فوق العناصر الأخرى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".sidenav {\n  height: 100%;\n  width: 160px;\n  position: fixed;\n  z-index: 1;\n  top: 0;\n  left: 0;\n  background-color: #111;\n  overflow-x: hidden;\n  padding-top: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp"
+      ]
+    },
+    {
+      "id": "links_and_main",
+      "title": "تنسيق الروابط والمحتوى الرئيسي",
+      "narration": {
+        "spoken_text": "نُعَدِّلُ شَكْلَ الرَّوَابِطِ دَاخِلَ sidenav بِاسْتِخْدَامِ text-decoration: none وَتَغْيِيرِ اللَّوْنِ عِنْدَ الْحَوْمِ بِاسْتِخْدَامِ a:hover. أَمَّا عُنْصُرُ main، فَيَجِبُ أَنْ نُعْطِيَهُ margin-left يُسَاوِي عَرْضَ الْقَائِمَةِ لِتَجَنُّبِ تَدَاخُلِ الْمُحْتَوَى.",
+        "caption_text": "ننسق الروابط داخل sidenav ونضيف تأثير hover، ونضبط margin-left لعنصر main ليتناسب مع عرض القائمة الجانبية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".sidenav a {\n  padding: 6px 8px 6px 16px;\n  text-decoration: none;\n  font-size: 25px;\n  color: #818181;\n  display: block;\n}\n.main {\n  margin-left: 160px;\n  padding: 0px 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp"
+      ]
+    },
+    {
+      "id": "responsive_design",
+      "title": "الاستجابة للشاشات الصغيرة",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الْقَائِمَةِ مُتَجَاوِبَةً مَعَ الشَّاشَاتِ الصَّغِيرَةِ، نَسْتَخْدِمُ Media Queries. عِنْدَمَا يَكُونُ طُولُ الشَّاشَةِ أَقَلَّ مِنْ 450 بيكسل، نُقَلِّلُ padding وَ font-size لِتَتَنَاسَبَ الْقَائِمَةُ مَعَ الْمِسَاحَةِ الْمُتَاحَةِ بِشَكْلٍ أَنِيقٍ.",
+        "caption_text": "نستخدم Media Queries لضبط حجم الخط والتباعد في القائمة الجانبية عند الشاشات التي يقل طولها عن 450 بيكسل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-height: 450px) {\n  .sidenav {\n    padding-top: 15px;\n  }\n  .sidenav a {\n    font-size: 18px;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ قَائِمَةٍ جَانِبِيَّةٍ ثَابِتَةٍ. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ ضَبْطِ margin-left لِلْمُحْتَوَى الرَّئِيسِيِّ، وَاسْتِخْدَامِ position: fixed بِحَذَرٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِهَا لِتُنَاسِبَ مَشَارِيعَكُمُ الْخَاصَّةَ.",
+        "caption_text": "لقد تعلمنا كيفية بناء قائمة جانبية ثابتة مع مراعاة التجاوب وتنسيق المحتوى الرئيسي. جربوا الأكواد بأنفسكم لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position: fixed لتثبيت القائمة",
+          "ضبط margin-left للمحتوى الرئيسي لتجنب التداخل",
+          "استخدام Media Queries لضمان تجاوب التصميم",
+          "تطبيق تأثيرات hover لتحسين التفاعل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp"
+      ]
+    }
+  ]
+}
