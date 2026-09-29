@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "138",
+  "title": "CSS Nested Counters",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام CSS Counters المتعددة",
+    "التعرف على دالة counters() للترقيم المتداخل",
+    "تطبيق counter-reset و counter-increment",
+    "التحكم في تنسيق المحتوى المولد عبر ::before"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_counters_nested.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Nested Counters",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ تَرْقِيمٍ مُتَدَاخِلٍ بِاسْتِخْدَامِ CSS Counters، وَهِيَ تَقْنِيَةٌ قَوِيَّةٌ لِتَنْظِيمِ الْمُحْتَوَى دَاخِلَ صَفْحَةِ الْوِبّ بِشَكْلٍ آليٍّ وَمُنَسَّقٍ.",
+        "caption_text": "مقدمة حول استخدام CSS Counters لإنشاء ترقيم متداخل ومنظم داخل صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS Counters للترقيم التلقائي",
+          "إنشاء مستويات متعددة من الترقيم",
+          "التحكم في تنسيق الترقيم المتداخل",
+          "استخدام دالة counters() للربط بين المستويات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters_nested.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للترقيم",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ التَّرْقِيمِ الْمُتَدَاخِلِ، نَسْتَخْدِمُ counter-reset لِتَهْيِئَةِ الْعَدَّادِ، وَ counter-increment لِزِيَادَتِهِ. كَمَا نَسْتَخْدِمُ دَالَّةَ counter لِعَرْضِ قِيمَةِ الْعَدَّادِ الْحَالِيَّةِ دَاخِلَ خَاصِيَّةِ content فِي Pseudo-element.",
+        "caption_text": "شرح مفاهيم counter-reset و counter-increment ودالة counter لعرض القيم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "counter-reset لتهيئة العداد",
+          "counter-increment لزيادة قيمة العداد",
+          "دالة counter() لعرض القيمة الحالية",
+          "استخدام ::before لإدراج الترقيم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters_nested.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "مثال استخدام عدادين",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَهْيِئَةِ عَدَّادِ section فِي body، ثُمَّ نُعِيدُ تَهْيِئَةَ عَدَّادِ subsection مَعَ كُلِّ h1. نَسْتَخْدِمُ ::before لِإِظْهَارِ التَّرْقِيمِ بِشَكْلٍ تِلْقَائِيٍّ مَعَ كُلِّ عُنْصُرٍ.",
+        "caption_text": "مثال برمجي يوضح كيفية استخدام عدادين مختلفين للترقيم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  counter-reset: section;\n}\nh1 {\n  counter-reset: subsection;\n}\nh1::before {\n  counter-increment: section;\n  content: \"Section \" counter(section) \". \";\n}\nh2::before {\n  counter-increment: subsection;\n  content: counter(section) \".\" counter(subsection) \" \";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters_nested.asp"
+      ]
+    },
+    {
+      "id": "counters_function",
+      "title": "دالة counters() للترقيم المتداخل",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ دَالَّةُ counters() لِإِرْجَاعِ قِيَمِ الْعَدَّادَاتِ الْمُتَدَاخِلَةِ كَسِلْسِلَةٍ نَصِّيَّةٍ. هَذِهِ الدَّالَّةُ تُسَهِّلُ عَمَلِيَّةَ فَصْلِ الْمُسْتَوَيَاتِ بِرَمْزٍ مُحَدَّدٍ مِثْلَ النُّقْطَةِ، كَمَا نَرَى فِي هَذَا الْمِثَالِ مَعَ الْقَوَائِمِ.",
+        "caption_text": "شرح دالة counters() التي تتيح عرض قيم العدادات المتداخلة كسلسلة نصية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ol {\n  counter-reset: section;\n  list-style-type: none;\n}\nli::before {\n  counter-increment: section;\n  content: counters(section, \".\") \" \";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters_nested.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَظْهَرُ التَّرْقِيمُ بِشَكْلٍ هَرَمِيٍّ مُنَظَّمٍ. سَتَرَى الْأَقْسَامَ مُرَقَّمَةً تِلْقَائِيّاً مِثْلَ 1.1، 1.2، وَهَكَذَا، مِمَّا يُعْطِي مَظْهَراً احْتِرَافِيّاً لِلْمُحْتَوَى دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "شكل المخرجات المتوقعة للترقيم المتداخل في المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "1. Section 1.\n1.1 Item\n1.2 Item\n2. Section 2.",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters_nested.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ بِاسْتِخْدَامِ CSS Counters لِلْمُحْتَوَى الَّذِي يَتَطَلَّبُ تَرْقِيماً دِينَامِيكِيّاً. تَأَكَّدْ مِنْ إِعَادَةِ تَهْيِئَةِ الْعَدَّادَاتِ فِي الْمَكَانِ الْمُنَاسِبِ لِتَجَنُّبِ التَّدَاخُلِ غَيْرِ الْمَقْصُودِ فِي تَرْتِيبِ الْعَنَاصِرِ.",
+        "caption_text": "نصائح برمجية حول الاستخدام الأمثل للعدادات في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم counter-reset في الحاوية الأب",
+          "احرص على تسمية العدادات بوضوح",
+          "استخدم counters() للترقيم المتعدد المستويات",
+          "اختبر الترقيم في مختلف المتصفحات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters_nested.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا شَرْحَ CSS Nested Counters. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِ مَهَارَاتِكُمْ فِي تَنْسِيقِ صَفَحَاتِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة الدرس ودعوة للممارسة العملية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية مفهوم CSS Counters",
+          "شرح دالة counters() المتداخلة",
+          "تطبيق عملي على القوائم والعناوين",
+          "راجع الرابط في الوصف لمزيد من التفاصيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters_nested.asp"
+      ]
+    }
+  ]
+}
