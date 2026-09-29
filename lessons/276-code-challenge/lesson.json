@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "276",
+  "title": "CSS RWD Grid View Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار الفهم العملي لمفهوم RWD Grid View عبر تحدي برمجي مباشر",
+    "تطبيق تقنيات تصميم صفحات الويب المتجاوبة باستخدام CSS Grid",
+    "التحقق من كفاءة توزيع الأعمدة في مختلف أحجام الشاشات",
+    "تعزيز المهارات البرمجية من خلال حل التحديات التقنية بدقة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_rwd_grid.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة تحدي RWD Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي الْعَمَلِيِّ لِمَفْهُومِ RWD Grid View فِي لُغَةِ CSS. سَنَنْتَقِلُ الْآنَ لِاخْتِبَارِ مَهَارَاتِكُمْ فِي بِنَاءِ تَصْمِيمَاتِ شَبَكِيَّةٍ مُتَجَاوِبَةٍ تَتَأَقْلَمُ بَدْرَجَةٍ عَالِيَةٍ مَعَ مُخْتَلَفِ أَحْجَامِ الشَّاشَاتِ بِكفاءة.",
+        "caption_text": "مرحبا بكم في التحدي العملي لمفهوم RWD Grid View لاختبار مهارات التصميم المتجاوب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مرحبا بكم في تحدي CSS RWD Grid View",
+          "اختبار الفهم العملي لبناء شبكات الويب المتجاوبة",
+          "تطبيق القواعد الحديثة لتوزيع العناصر بمرونة عالية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "scene_concepts",
+      "title": "أهمية تحديات التصميم المتجاوب",
+      "narration": {
+        "spoken_text": "يُعْتَبَرُ التَّحَدِّي الْبَرْمَجِيُّ أَدَاةً قَوِيَّةً لِتَعْزِيزِ الْمَهَارَاتِ العَمَلِيَّةِ. نَحْتَاجُ فِي تَصْمِيمِ الُوِبّ إِلَى اسْتِخْدَامِ مُمَيِّزَاتِ CSS Grid بَدِقَّةٍ لِضَمَانِ ظُهُورِ الْمُحْتَوَى بِشَكْلٍ مِثَالِيٍّ عَلَى كُلِّ الْأَجْهِزَةِ الْمَحْمُولَةِ وَالْمَكْتَبِيَّةِ.",
+        "caption_text": "التحديات البرمجية تقوي المهارات وتضمن ظهور المحتوى بشكل مثالي على كل الأجهزة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية التحديات العملية في تثبيت المعلومات",
+          "استخدام CSS Grid لتنظيم المحتوى",
+          "ضمان توافق التصميم مع الشاشات المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "scene_code_setup",
+      "title": "هيكل الكود الأساسي للشبكة",
+      "narration": {
+        "spoken_text": "نَبْدَأُ الْآنَ بِدِرَاسَةِ هَيْكَلِ الْكُودِ الْمَطْلُوبِ لِإِتْمَامِ التَّحَدِّي. نَقُومُ بِتَعْرِيفِ عَاصِمَةِ الْعَنَاصِرِ وَتَحْدِيدِ الخَصَائِصِ الْأَسَاسِيَّةِ مِثْلِ display grid لِإِنْشَاءِ الشَّبَكَةِ الْمُتَجَاوِبَةِ بِشَكْلٍ سَلِسٍ.",
+        "caption_text": "نبدأ بدراسة هيكل الكود وتعريف خصائص الشبكة المتجاوبة باستخدام display grid."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": ".container {\n  display: grid;\n  grid-template-columns: repeat(12, 1fr);\n  gap: 20px;\n}",
+        "highlight_lines": [],
+        "output": "Grid container initialized with 12 flexible columns.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "scene_code_media",
+      "title": "تطبيق Media Queries للتحكم بالتجاوب",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى إِضَافَةِ Media Queries ضِمْنَ التَّحَدِّي لِلتَّحَكُّمِ فِي عَرْضِ الأَعْمِدَةِ عِنْدَ تَغَيُّرِ مِسَاحَةِ الشَّاشَةِ. هَذِهِ الْخُطْوَةُ أَسَاسِيَّةٌ لِتَحْقِيقِ تَصْمِيمِ الُوِبّ المُتَجَاوِبِ بِكفاءة تَامَّةٍ.",
+        "caption_text": "نضيف Media Queries للتحكم في عرض الأعمدة عند تغير مساحة الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": "@media only screen and (max-width: 600px) {\n  .container {\n    grid-template-columns: 1fr;\n  }\n}",
+        "highlight_lines": [],
+        "output": "Columns stack vertically on small screens.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "scene_output_view",
+      "title": "معاينة المخرجات المتوقعة",
+      "narration": {
+        "spoken_text": "تُظْهِرُ لَنَا هَذِهِ الْمُعَايَنَةُ كَيْفَ يَتَفَاعَلُ الْمُتَصَفِّحُ مَعَ الْكُودِ الَّذِي كَتَبْنَاهُ. تَتَرَتَّبُ العَنَاصِرُ بِانْسِيَابِيَّةٍ تَامَّةٍ عِنْدَ تَصْغِيرِ النَّافِذَةِ، مِمَّا يَعْكِسُ نَجَاحَ التَّصْمِيمِ الشَّبَكِيِّ المُتَجَاوِبِ.",
+        "caption_text": "تظهر المعاينة تفاعل المتصفح وانسيابية تراتب العناصر عند تصغير النافذة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تفاعل سلس للمتصفح مع أحجام الشاشات المختلفة",
+          "انسيابية تامة في إعادة ترتيب الأعمدة تلقائيا",
+          "تحقيق تجربة مستخدم مثالية على كل الأجهزة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "مِنْ أَجْمَلِ المُمَارَسَاتِ عِنْدَ الْعَمَلِ عَلَى CSS Grid هُوَ الاعْتِمَادُ عَلَى الْوَحْدَاتِ الْمَرِنَةِ مِثْلِ fr لِتَفَادِي المَشَاكِلِ. احْرِصُوا دَائِماً عَلَى اخْتِبَارِ التَّصْمِيمِ بِشَكْلٍ مُسْتَمِرٍّ.",
+        "caption_text": "من أفضل الممارسات الاعتماد على الوحدات المرنة مثل fr واختبار التصميم باستمرار."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام وحدات القياس المرنة مثل fr",
+          "اختبار التجاوب على أجهزة متعددة وحقيقية",
+          "الحفاظ على نظافة وترتيب الأكواد البرمجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_grid.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ التَّحَدِّي الْعَمَلِيِّ لِمَفْهُومِ RWD Grid View بِنَجَاحٍ. أَدْعُوكُمْ لِتَجْرِبَةِ الأَكواد بِأَنْفُسِكُمْ مِنْ خِلَالِ الرَّابِطِ فِي الْوَصْفِ لِتَعْزِيزِ مَهَارَاتِكُمُ الْبَرْمَجِيَّةِ.",
+        "caption_text": "أتممنا التحدي بنجاح، وندعوكم لتجربة الأكواد بأنفسكم من الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص شامل لتطبيق تحدي RWD Grid View",
+          "دعوة لتطبيق الأكواد وتجربتها عمليا",
+          "تابعوا قناة CodeGalaxy للمزيد من التحديات البرمجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_grid.asp"
+      ]
+    }
+  ]
+}
