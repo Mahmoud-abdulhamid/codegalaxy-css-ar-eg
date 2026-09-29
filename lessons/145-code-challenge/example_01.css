@@ -1,0 +1,10 @@
+body {
+  color: blue;
+  font-family: Arial;
+}
+h1 {
+  /* يرث اللون من body */
+}
+p {
+  /* يرث اللون من body */
+}
