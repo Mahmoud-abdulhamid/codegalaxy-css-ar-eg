@@ -1,0 +1,2 @@
+Screen < 450px: Font size 20px, Blue background
+Screen >= 450px: Font size 40px, Lightblue background
