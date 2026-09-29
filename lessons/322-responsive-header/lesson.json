@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "322",
+  "title": "بناء Header متجاوب باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تصميم Responsive Header يتكيف مع مختلف أحجام الشاشات.",
+    "تطبيق خصائص CSS مثل float و overflow و background-color.",
+    "استخدام Media Queries لإعادة ترتيب عناصر الترويسة على الشاشات الصغيرة."
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_responsive_header.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة حول Responsive Header",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ كَيْفَ نُصَمِّمُ Responsive Header يَتَغَيَّرُ تَمَاماً حَسَبَ حَجْمِ شَاشَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تصميم Responsive Header متجاوب مع مختلف شاشات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصميم ترويسة متجاوبة مع كافة الأجهزة",
+          "تغيير التصميم بناء على حجم شاشة المتصفح",
+          "تحسين تجربة المستخدم عبر شاشات الويب المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_responsive_header.asp"
+      ]
+    },
+    {
+      "id": "scene_html_structure",
+      "title": "هيكل الـ HTML للترويسة",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوْلاً بِكِتَابَةِ هَيْكَلِ HTML الْخَاصِّ بِال header، حَيْثُ نَسْتَخْدِمُ div يَحْمِلُ class بِاسْمِ header، وَبِدَاخِلِهِ نَضَعُ رَابِطَ الشَّرِكَةِ logo وَمَجْمُوعَةَ رَوَابِطِ التَّنَقُّلِ.",
+        "caption_text": "نكتب هيكل HTML للـ header مع روابط التنقل وشعار الشركة logo."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"header\">\n      <a href=\"#default\" class=\"logo\">CompanyLogo</a>\n      <div class=\"header-right\">\n        <a class=\"active\" href=\"#home\">Home</a>\n        <a href=\"#contact\">Contact</a>\n        <a href=\"#about\">About</a>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "CompanyLogo   Home   Contact   About",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_responsive_header.asp"
+      ]
+    },
+    {
+      "id": "scene_css_header",
+      "title": "تنسيق الحاوية الرئيسية للترويسة",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ لِتَنْسِيقِ الْحَاوِيَةِ الرَّئِيسِيَّةِ بَاسْتِخْدَامِ CSS. نُعَيِّنُ خَاصِّيَّةَ overflow لِتَكُونَ hidden لِتَجَنُّبِ أَيِّ خُرُوجٍ لِلْمُحْتَوَى، مَعَ لَوْنِ خَلْفِيَّةٍ رَمَادِيٍّ وَحَوَاشٍ دَاخِلِيَّةٍ padding مُنَاسِبَةٍ.",
+        "caption_text": "ننسق حاوية الـ header بـ overflow و background-color ولون رمادي هادئ."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".header {\n  overflow: hidden;\n  background-color: #f1f1f1;\n  padding: 20px 10px;\n}",
+        "highlight_lines": [],
+        "output": "Container styled with grey background and padding",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_responsive_header.asp"
+      ]
+    },
+    {
+      "id": "scene_css_links",
+      "title": "تنسيق روابط التنقل داخل الترويسة",
+      "narration": {
+        "spoken_text": "نُوَصِّلُ التَّنْسِيقَ لِرَوَابِطِ التَّنَقُّلِ دَاخِلَ ال header. نَجْعَلُهَا تَتَفَاعَلُ مَعَ float لِلْيَسَارِ، وَنُحَدِّدُ لَوْنَ النَّصِّ بِالأسودِ وَحَجْمَ خَطٍّ ثَابِتٍ لِمَنْعِ أَيِّ تَغَيُّرٍ غَيْرِ مُرَادٍ.",
+        "caption_text": "نحدد خصائص روابط الـ header مثل float وخاصية text-decoration وfont-size."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".header a {\n  float: left;\n  color: black;\n  text-align: center;\n  padding: 12px;\n  text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px;\n}",
+        "highlight_lines": [],
+        "output": "Links floated left with padding and typography styles",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_responsive_header.asp"
+      ]
+    },
+    {
+      "id": "scene_css_logo_active",
+      "title": "تنسيق الشعار والرابط النشط",
+      "narration": {
+        "spoken_text": "نُخَصِّصُ تَنْسِيقَ الشِّعَارِ logo بِجْعَلِ حَجْمِ خَطِّهِ أَكْبَرَ وَأَكْثَرَ سُمْكاً، كَمَا نُمَيِّزُ الرَّابِطَ النَّشِطَ active بِخَلْفِيَّةٍ زَرْقَاءَ وَنَصٍّ أَبْيَضَ لِتَوَضُّحِ الرُّؤْيَةِ.",
+        "caption_text": "ننسق الشعار بـ font-weight واجبار الرابط النشط بلون خلفية dodgerblue."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".header a.logo {\n  font-size: 25px;\n  font-weight: bold;\n}\n.header a.active {\n  background-color: dodgerblue;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "Logo is bold and large, active link has blue background",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_responsive_header.asp"
+      ]
+    },
+    {
+      "id": "scene_css_hover_right",
+      "title": "تأثيرات المرور وخاصية اليمين",
+      "narration": {
+        "spoken_text": "نُضِيفُ تَأْثِيرَ hover عِنْدَ مُرُورِ الْمَاوْسِ فَوْقَ الرَّوَابِطِ لِتَغْيِيرِ لَوْنِ الْخَلْفِيَّةِ، وَنَسْتَخْدِمُ خَاصِّيَّةَ float لِلْيَمِينِ لِمَجْمُوعَةِ الرَّوَابِطِ الثَّانِيَةِ header-right.",
+        "caption_text": "نضيف تأثير hover وندفع مجموعة header-right إلى جهة اليمين بـ float."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".header a:hover {\n  background-color: #ddd;\n  color: black;\n}\n.header-right {\n  float: right;\n}",
+        "highlight_lines": [],
+        "output": "Hover background changes and right alignment applied",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_responsive_header.asp"
+      ]
+    },
+    {
+      "id": "scene_media_queries",
+      "title": "تطبيق Media Queries للتجاوب",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ التَّجَاوُبِ، نَسْتَخْدِمُ Media Query عِنْدَمَا تَكُونُ شَاشَةُ الْوِبّ بِعَرْضِ خَمْسِ مِئَةِ بيكسْل أَوْ أَقَلَّ، حَيْثُ نُعِيدُ تَرْتِيبَ الرَّوَابِطِ لِتَصْطَفَّ فَوْقَ بَعْضِهَا.",
+        "caption_text": "نستخدم Media Queries لإعادة ترتيب الروابط فوق بعضها عند عرض 500px أو أقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 500px) {\n  .header a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .header-right {\n    float: none;\n  }\n}",
+        "highlight_lines": [],
+        "output": "Header links stack vertically on small screens",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_responsive_header.asp"
+      ]
+    },
+    {
+      "id": "scene_conclusion",
+      "title": "خلاصة الدرس وتجربة الأكواد",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ Responsive Header إِحْتِرَافِيٍّ وَمُرْنٍ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِمُفْرَدِكُمْ، وَتَابِعُوا دَوْرَاتِنَا لِلْمَزِيدِ مِنْ تَقْنِيَاتِ CSS.",
+        "caption_text": "إلى هنا نختتم الدرس. نلتقي في دروس قادمة من دورة CSS مع المدرب محمود عبدالحميد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تلخيص خطوات بناء ترويسة متجاوبة",
+          "أهمية استخدام Media Queries للشاشات الصغيرة",
+          "تابعوا المزيد من دروس تصميم الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_responsive_header.asp"
+      ]
+    }
+  ]
+}
