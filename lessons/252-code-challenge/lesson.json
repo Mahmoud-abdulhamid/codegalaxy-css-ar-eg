@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "252",
+  "title": "CSS Flex Items Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية التعامل مع Flex Items في CSS",
+    "تطبيق خصائص Flexbox على العناصر",
+    "التحكم في توزيع المساحات داخل Flex Container",
+    "حل تحديات برمجية باستخدام Flexbox"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_flexbox_items.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Flex Items",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي Flex Items دَاخِلَ أَيِّ Flex Container، وَهِيَ مَهَارَةٌ أَسَاسِيَّةٌ لِتَصْمِيمِ تَخْطِيطَاتِ الْوِبّ الْمَرِنَةِ وَالْمُتَجَاوِبَةِ.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد حول Flex Items وكيفية التحكم في العناصر داخل Flex Container."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox يوفر نظام تخطيط مرن",
+          "Flex Items هي العناصر المباشرة داخل Flex Container",
+          "التحكم في المحاذاة والتوزيع",
+          "تطبيق التحديات البرمجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم Flexbox الأساسية",
+      "narration": {
+        "spoken_text": "لِتَفْعِيلِ هَذَا النِّظَامِ، نَسْتَخْدِمُ display: flex عَلَى الْعُنْصُرِ الْأَبِ. بَعْدَ ذَلِكَ، تُصْبِحُ جَمِيعُ الْعَنَاصِرِ الْمُبَاشِرَةِ بِدَاخِلِهِ Flex Items، وَيُمْكِنُنَا التَّحَكُّمُ بِخَصَائِصِ مِثْلَ flex-grow وَ flex-shrink وَ flex-basis.",
+        "caption_text": "نستخدم display: flex لتفعيل النظام، وتصبح العناصر المباشرة Flex Items قابلة للتحكم بخصائص مرنة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "display: flex لتفعيل الحاوية",
+          "flex-grow للتحكم في التمدد",
+          "flex-shrink للتحكم في الانكماش",
+          "flex-basis لتحديد الحجم الأساسي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "code_setup",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيفِ Container بِخَاصِيَّةِ display: flex، ثُمَّ نُعْطِي كُلَّ Item خَصَائِصَ مُعَيَّنَةً لِتَحْدِيدِ كَيْفِيَّةِ تَوَزُّعِهِ دَاخِلَ هَذِهِ الْحَاوِيَةِ الْوِبِّيَّةِ.",
+        "caption_text": "هيكل الكود يوضح كيفية تعريف الحاوية وتطبيق الخصائص على العناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: flex;\n}\n.item {\n  flex: 1;\n  padding: 10px;\n  background: #f1f1f1;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "خَاصِيَّةُ flex: 1 هِيَ اخْتِصَارٌ لِ flex-grow وَ flex-shrink وَ flex-basis. هَذَا يَعْنِي أَنَّ كُلَّ عُنْصُرٍ سَيَأْخُذُ نَفْسَ الْمِسَاحَةِ الْمُتَاحَةِ دَاخِلَ الْحَاوِيَةِ، مِمَّا يَجْعَلُ التَّصْمِيمَ مُتَوَازِناً تَمَاماً.",
+        "caption_text": "خاصية flex: 1 تجعل العناصر تتوزع بالتساوي داخل الحاوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "flex: 1 يوزع المساحة بالتساوي",
+          "تجنب التداخل بين العناصر",
+          "تحسين تجربة المستخدم في الويب",
+          "مرونة عالية في العرض"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَتَظْهَرُ الْعَنَاصِرُ بِجَانِبِ بَعْضِهَا فِي صَفٍّ وَاحِدٍ، وَسَتَتَمَدَّدُ لِتَمْلَأَ الْعَرْضَ بِالتَّسَاوِي. هَذِهِ هِيَ الْقُوَّةُ الْحَقِيقِيَّةُ لِ Flexbox فِي تَنْظِيمِ مُحْتَوَى الْوِبّ.",
+        "caption_text": "تظهر العناصر بجانب بعضها وتتوزع بالتساوي داخل الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"item\">1</div>\n      <div class=\"item\">2</div>\n      <div class=\"item\">3</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "1 | 2 | 3",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ دائماً التَّأَكُّدُ مِنْ أَنَّ الْحَاوِيَةَ لَهَا عَرْضٌ مُنَاسِبٌ. كَمَا يُفَضَّلُ اسْتِخْدَامُ gap لِإِضَافَةِ مَسَافَاتٍ بَيْنَ الْعَنَاصِرِ بَدَلاً مِنَ الاعْتِمَادِ عَلَى margin فَقَطْ، لِتَحْقِيقِ تَصْمِيمٍ نَظِيفٍ.",
+        "caption_text": "استخدم خاصية gap لإضافة مسافات بين العناصر بدلا من الاعتماد على margin."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام gap للمسافات",
+          "اختبار التجاوب مع الشاشات",
+          "تجنب القيم الثابتة للعرض",
+          "استخدام Flexbox للترتيب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ التَّحَكُّمِ فِي Flex Items وَتَطْبِيقَ خَصَائِصِ التَّوَزُّعِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ وَحَلِّ التَّحَدِّيَاتِ الْمَوْجُودَةِ فِي الرَّابِطِ الْمُدْرَجِ فِي الْوَصْفِ. شُكْراً لِمُتَابَعَتِكُمْ مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "تعلمنا التحكم في Flex Items. جربوا الكود وحلوا التحديات عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox أداة قوية للويب",
+          "التطبيق العملي يثبت المعلومة",
+          "راجعوا الرابط لمزيد من التحديات",
+          "شكرا لمتابعتكم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_items.asp"
+      ]
+    }
+  ]
+}
