@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "295",
+  "title": "إنشاء شريط تنقل مقسوم باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تمويج وتحديد أماكن العناصر في شريط التنقل",
+    "استخدام خاصية float لتوجيه الروابط يمارا ويسارا",
+    "تصميم رابط مقسوم ومميز في جهة اليمين للتركيز",
+    "إنشاء شريط تنقل عالي الاستجابة وجذاب للمستخدم"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_topnav_split.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة عن شريط التنقل المقسوم",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS، سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ شَرِيطِ تَنَقُّل مَقْسُوم أَوْ ما يُسَمَّى Split Navigation بِطَرِيقَةٍ احْتِرَافِيَّةٍ سَهْلَةٍ وَجَذَّابَةٍ لِلتَّطْبِيقَاتِ.",
+        "caption_text": "مرحبا بكم في درس جديد لتعلم إنشاء شريط تنقل مقسوم باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم بناء شريط تنقل احترافي",
+          "تقسيم الروابط في يمين ويسار الشريط",
+          "تحسين تجربة المستخدم في مواقع الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_split.asp"
+      ]
+    },
+    {
+      "id": "scene_html_structure",
+      "title": "هبكلة HTML لشريط التنقل",
+      "narration": {
+        "spoken_text": "نَبْدَأُ اَلْآنَ بِبِنَاءِ هَيْكَلِ HTML لِشَرِيطِ التَّنَقُّلِ، نُسْتَخْدِمُ عُنْصُر div مَعَ كِلاس topnav، وَدَاخِلَهُ نَضَعُ مَجْمُوعَةً مِنْ رَوَابِط a تُمَثِّلُ الصَفَحَاتِ مِثْل Home وَ News، وَرَابِطاً أَخِيرًا يحْمِلُ كِلاس split لِلتَّوْجِيهِ.",
+        "caption_text": "نكتب هيكل HTML لعناصر شريط التنقل مع تحديد الروابط الأساسية ورابط التقسيم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"topnav\">\n      <a href=\"#home\">Home</a>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n      <a href=\"#about\" class=\"split\">Help</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home  News  Contact               Help",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_split.asp"
+      ]
+    },
+    {
+      "id": "scene_css_topnav",
+      "title": "تنسيق الحاوية الرئيسية",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى تَنْسِيقِ حَاوِيَة topnav بِوَاسِطَةِ لُغَةِ CSS، نُحَدِّدُ لَوْنَ خَلْفِيَّةٍ دَاكِنٍ وَهُوَ background-color مَعَ خَاصِيَّة overflow لِإِخْفَاءِ الْمُحْتَوَى الزَّائِدِ لِضَمَانِ اسْتِقْرَارِ التَّصْمِيمِ بِشَكْلٍ كَامِلٍ.",
+        "caption_text": "ننسق الحاوية الرئيسية باستخدام لون خلفية داكن وخاصية overflow."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav {\n  background-color: #333;\n  overflow: hidden;\n}",
+        "highlight_lines": [],
+        "output": "topnav container styled with dark background",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_split.asp"
+      ]
+    },
+    {
+      "id": "scene_css_links",
+      "title": "تنسيق روابط التنقل",
+      "narration": {
+        "spoken_text": "فِي هَذِهِ الْخُطْوَةِ، نَقُومُ بَتَنْسِيقِ الرَّوَابِطِ دَاخِلَ topnav، نَسْتَخْدِمُ خَاصِيَّة float لِلْيَسَارِ لِجَعْلِ الرَّوَابِطِ تَتَرَتَّبُ أُفُقِيّاً، مَعَ ضَبْطِ الأَلْوَانِ، والتباعدات padding وَتَأْمِين إِزَالَةِ خَطِّ التَّرْكِيزِ تَمَاماً.",
+        "caption_text": "نحدد خصائص الروابط مثل التموضع العائم لليسار والألوان والهوامش الداخلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav a {\n  float: left;\n  color: #f2f2f2;\n  text-align: center;\n  padding: 14px 16px;\n  text-decoration: none;\n  font-size: 17px;\n}",
+        "highlight_lines": [],
+        "output": "Links floated left with padding and light text color",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_split.asp"
+      ]
+    },
+    {
+      "id": "scene_css_hover",
+      "title": "إضافة تأثيرات الحوم HOVER",
+      "narration": {
+        "spoken_text": "لِتَحْسِينِ تَجْرُبَةِ الْمُسْتَخْدِمِ عِنْدَ مُرُورِ الْمَأْشِرِ فَوْقَ الرَّوَابِطِ، نُضِيفُ تَأْثِير a:hover، حَيْثُ يَتَغَيَّرُ لَوْنُ الْخَلْفِيَّةِ إِلَى الدَّرَجَةِ الْفَاتِحَةِ مَعَ تَحْوِيلِ لَوْنِ النَّصِّ لِيُصْبِحَ دَاكِناً وَاضِحاً.",
+        "caption_text": "نضيف تأثير hover لتغيير ألوان الخلفية والنص عند مرور المؤشر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav a:hover {\n  background-color: #ddd;\n  color: black;\n}",
+        "highlight_lines": [],
+        "output": "Hover effect changes background to light gray",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_split.asp"
+      ]
+    },
+    {
+      "id": "scene_css_split",
+      "title": "تفصيل الرابط المقسوم يمينا",
+      "narration": {
+        "spoken_text": "السِّحْرُ الْحَقِيقِيُّ هُنَا يَتَمَثَّلُ فِي كِلاس split، حَيْثُ نَسْتَخْدِمُ خَاصِيَّة float لِلْيَمِين بَدَلاً مِنَ الْيَسَار، مَعَ تَحْدِيدِ لَوْنِ خَلْفِيَّة مُتَمَيِّزٍ لِجَعْلِ هَذَا الرَّابِطِ بَارِزاً بَيْنَ بَقِيَّةِ الرَّوَابِطِ.",
+        "caption_text": "نستخدم float right ولون خلفية مميز لعنصر split لدفعه إلى يمين الشريط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav a.split {\n  float: right;\n  background-color: #04AA6D;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "Help link is aligned to the right with green background",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_split.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس والنتيجة",
+      "narration": {
+        "spoken_text": "بِهَذَا تَعَرَّفْنَا عَلَى كَيْفِيَّةِ تَقْسِيمِ شَرِيطِ التَّنَقُّلِ بِاحْتِرَافِيَّةٍ عَالِيَةٍ بِاسْتِخْدَامِ خَوَاصِّ float الْمُخْتَلِفَةِ، نَرْجُو أَنْ يَكُونَ الدَّرْسُ نَالَ إِعْجَابَكُمْ، وَنَنْتَظِرُكُمْ فِي الدَّرُوسِ الْقَادِمَةِ لِمَزِيدٍ مِنَ الإِبْدَاعِ.",
+        "caption_text": "خلاصة الدرس: إنشاء شريط تنقل مقسوم احترافي باستخدام خصائص float في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تطبيق ناجح لتقسيم شريط التنقل يمينا ويسارا",
+          "استخدام float left و float right بفعالية",
+          "تصميم مرن وجذاب باستخدام CSS الصافي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_split.asp"
+      ]
+    }
+  ]
+}
