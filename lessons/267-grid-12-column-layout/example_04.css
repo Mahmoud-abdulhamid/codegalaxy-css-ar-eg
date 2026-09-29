@@ -1,0 +1,9 @@
+.nav {
+  grid-column: col-start / span 2;
+}
+.content {
+  grid-column: col-start 3 / span 8;
+}
+.sidebar {
+  grid-column: col-start 11 / span 2;
+}
