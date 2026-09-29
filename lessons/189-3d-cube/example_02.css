@@ -1,0 +1,6 @@
+.container {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  perspective: 600px;
+}
