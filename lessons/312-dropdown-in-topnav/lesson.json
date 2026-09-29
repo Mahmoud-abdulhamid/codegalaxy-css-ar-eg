@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "312",
+  "title": "بناء Dropdown Navbar باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم هيكل HTML لقائمة الـ Dropdown",
+    "تطبيق تنسيقات CSS لإنشاء شريط تنقل احترافي",
+    "استخدام خاصية display للتحكم في ظهور القائمة",
+    "تفعيل القائمة عند تمرير الفأرة باستخدام hover"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Dropdown Navbar",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ Dropdown Navbar احْتِرَافِيٍّ، يَعْرِضُ قَائِمَةً مُنْسَدِلَةً عِنْدَ تَحْرِيكِ الْفَأْرَةِ فَوْقَ عُنْصُرٍ مُعَيَّنٍ دَاخِلَ شَرِيطِ التَّنَقُّلِ.",
+        "caption_text": "تعلم كيفية إنشاء شريط تنقل يحتوي على قائمة منسدلة باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء هيكل HTML لشريط التنقل",
+          "تنسيق القائمة المنسدلة باستخدام CSS",
+          "استخدام خاصية hover للتفاعل",
+          "تحسين تجربة المستخدم في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp"
+      ]
+    },
+    {
+      "id": "html-structure",
+      "title": "هيكل HTML للقائمة المنسدلة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكْلَاس navbar لِاحْتِوَاءِ الرَّوَابِطِ، ثُمَّ نُضِيفُ div بِكْلَاس dropdown لِتَضَمُّنِ الزِّرِّ وَالْمُحْتَوَى الْمُنْسَدِلِ. لَاحِظْ اسْتِخْدَامَ button لِفَتْحِ الْقَائِمَةِ.",
+        "caption_text": "هيكل HTML يتكون من حاوية navbar وعنصر dropdown يحتوي على زر ومحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"navbar\">\n      <a href=\"#home\">Home</a>\n      <a href=\"#news\">News</a>\n      <div class=\"dropdown\">\n        <button class=\"dropbtn\">Dropdown</button>\n        <div class=\"dropdown-content\">\n          <a href=\"#\">Link 1</a>\n          <a href=\"#\">Link 2</a>\n        </div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp"
+      ]
+    },
+    {
+      "id": "css-navbar",
+      "title": "تنسيق شريط التنقل الأساسي",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى CSS. نَقُومُ بِتَنْسِيقِ navbar بِخَاصِيَّةِ overflow hidden لِإِخْفَاءِ الْعَنَاصِرِ الْخَارِجَةِ، وَنُحَدِّدُ لَوْنَ الْخَلْفِيَّةِ. الرَّوَابِطُ دَاخِلَ navbar تَحْتَاجُ إِلَى float left لِتَصْطَفَّ بِجَانِبِ بَعْضِهَا.",
+        "caption_text": "تنسيق حاوية navbar والروابط بداخلها باستخدام CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar {\n  overflow: hidden;\n  background-color: #333;\n}\n.navbar a {\n  float: left;\n  color: white;\n  padding: 14px 16px;\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp"
+      ]
+    },
+    {
+      "id": "dropdown-css",
+      "title": "تنسيق القائمة المنسدلة",
+      "narration": {
+        "spoken_text": "الْآنَ نُصَمِّمُ dropdown-content. نَجْعَلُهَا position absolute لِتَظْهَرَ فَوْقَ الْمُحْتَوَى، وَنَضْبِطُ display إِلَى none لِإِخْفَائِهَا افْتِرَاضِيّاً. نَسْتَخْدِمُ box-shadow لِإِعْطَاءِ مَظْهَرِ الْبِطَاقَةِ.",
+        "caption_text": "إخفاء القائمة المنسدلة وتنسيق مظهرها باستخدام CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropdown-content {\n  display: none;\n  position: absolute;\n  background-color: #f9f9f9;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n  z-index: 1;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp"
+      ]
+    },
+    {
+      "id": "hover-effect",
+      "title": "تفعيل القائمة عند التمرير",
+      "narration": {
+        "spoken_text": "لِإِظْهَارِ الْقَائِمَةِ، نَسْتَخْدِمُ مُحَدِّدَ hover. عِنْدَمَا يَمُرُّ الْمُسْتَخْدِمُ بِالْفَأْرَةِ فَوْقَ dropdown، نُغَيِّرُ display لِلْقَائِمَةِ إِلَى block. هَذَا يَمْنَحُ تَفَاعُلاً سَلِساً وَمُبَاشِراً.",
+        "caption_text": "استخدام hover لإظهار القائمة المنسدلة عند تمرير الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropdown:hover .dropdown-content {\n  display: block;\n}\n.navbar a:hover, .dropdown:hover .dropbtn {\n  background-color: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَظْهَرُ شَرِيطُ التَّنَقُّلِ بِشَكْلٍ أَنِيقٍ. عِنْدَ تَحْرِيكِ الْفَأْرَةِ فَوْقَ زِرِّ Dropdown، سَتَنْسَدِلُ الْقَائِمَةُ لِتَعْرِضَ الرَّوَابِطَ الْمُخْتَلِفَةَ، مِمَّا يُحَسِّنُ مِنْ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي مَوْقِعِ الْوِبّ.",
+        "caption_text": "النتيجة النهائية: شريط تنقل تفاعلي مع قائمة منسدلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "preview.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة المرئية في المتصفح -->\n    [ Home ] [ News ] [ Dropdown v ]\n    [ Link 1 ]\n    [ Link 2 ]\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "تظهر القائمة المنسدلة عند تمرير الفأرة فوق زر Dropdown.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ بِنَاءِ Dropdown Navbar بِاسْتِخْدَامِ HTML وَ CSS. تَذَكَّرْ دَائِماً أَهَمِّيَّةَ زِيَادَةِ z-index لِضَمَانِ ظُهُورِ الْقَائِمَةِ فَوْقَ الْعَنَاصِرِ الْأُخْرَى. جَرِّبُوا الْأَكْوَادَ بِنَفْسِكُمْ لِتَتْقِنُوا هَذِهِ الْمَهَارَةَ.",
+        "caption_text": "خلاصة: استخدام z-index و hover لإنشاء قائمة منسدلة احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام div كحاوية للقائمة",
+          "خاصية display للتحكم في الإخفاء والظهور",
+          "استخدام z-index للترتيب الطبقي",
+          "تطبيق hover للتفاعل مع المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp"
+      ]
+    }
+  ]
+}
