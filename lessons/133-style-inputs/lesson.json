@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "133",
+  "title": "Styling Form Inputs in CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تنسيق عرض الحقول باستخدام خاصية width",
+    "إضافة الحشو والموامسة باستخدام padding و margin",
+    "التحكم في الحدود وتدوير الزوايا عبر border و border-radius",
+    "تطبيق الألوان وتغيير مظهر حقول الإدخال باحترافية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_form_inputs.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة في تنسيق حقول الإدخال",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَنسِيقِ Form Inputs بِاحْتِرَافِيَّةٍ كَبِيرَةٍ لِتَبْدُوَ صَفَحَاتُ الْوِبّ أَكْثَرَ جَاذبِيَّةً.",
+        "caption_text": "تعلم كيفية تنسيق عناصر Form Inputs في لغة CSS لجعل صفحات الويب أكثر احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق مختلف أنواع حقول الإدخال في لغة CSS",
+          "التحكم الكامل في العرض والحشو والحدود والألوان",
+          "تحسين تجربة المستخدم في نماذج الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_inputs.asp"
+      ]
+    },
+    {
+      "id": "scene_width",
+      "title": "تنسيق عرض الحقول باستخدام width",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِخَاصِيَّةِ width لِتَحْدِيدِ عَرْضِ حُقُولِ الْإِدْخَالِ. عَرْضُ ال text input الِافتِرَاضِيُّ هُوَ عِشْرُونَ حَرْفاً، وَنَسْتَطِيعُ جَعْلَهُ يمتدُّ بِنِسْبَةِ مِئَةِ بِالْمِئَةِ لِيَتْلَائَمَ مَعَ الْحَاوِيَةِ.",
+        "caption_text": "تستخدم خاصية width لتحديد عرض حقل الإدخال وجعله يتمدد بالكامل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input {\n  width: 100%;\n}",
+        "highlight_lines": [],
+        "output": "يظهر حقل الإدخال بعرض كامل يغطي المساحة المتاحة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_inputs.asp"
+      ]
+    },
+    {
+      "id": "scene_padding_margin",
+      "title": "إضافة الحشو والموامسة عبر padding و margin",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ مَسَاحَةٍ دَاخِلِيَّةٍ تمنح النَّصَّ تَنَفُّساً، نَسْتَخْدِمُ خاصية padding. وَعِنْدَ وُجُودِ حُقُولٍ مُتَعَدِّدَةٍ، نَسْتَخْدِمُ margin لِإِيجَادِ فَوَاصِلَ مَسَافِيَّةٍ بَيْنَهَا بِدِقَّةٍ وَرَوْعَةٍ.",
+        "caption_text": "استخدام padding لإضافة مساحة داخلية و margin للفواصل بين الحقول."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text] {\n  width: 100%;\n  padding: 12px;\n  margin: 10px 0;\n  box-sizing: border-box;\n}",
+        "highlight_lines": [],
+        "output": "حقل إدخال بمسافات داخلية مريحة وفواصل مناسبة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_inputs.asp"
+      ]
+    },
+    {
+      "id": "scene_box_sizing",
+      "title": "أهمية خاصية box-sizing",
+      "narration": {
+        "spoken_text": "لَاحِظْ ضَرُورَةَ ضَبْطِ خاصية box-sizing إِلَى border-box. هَذَا يضمن تضمين الحشو والحدود ضمن العرض وَالِارْتِفَاعِ الْإِجْمَالِيَّيْنِ لِلتَّصْمِيمِ دُونَ أَيِّ تَوَسُّعٍ غَيْرِ مَقْصُودٍ.",
+        "caption_text": "خاصية box-sizing تضمن حساب الحشو والحدود ضمن الحجم الكلي للعنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "منع تمدد الحقول خارج نطاق الحاوية بسبب الحشو",
+          "تسهيل الحسابات الدقيقة لأبعاد العناصر",
+          "تحقيق توافقية عالية مع مختلف الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_inputs.asp"
+      ]
+    },
+    {
+      "id": "scene_borders",
+      "title": "تنسيق الحدود وتدوير الزوايا",
+      "narration": {
+        "spoken_text": "لِتَغْيِيرِ سَمْكِ ولون حُدُودِ الْحُقُولِ، نَسْتَخْدِمُ خاصية border. كَمَا نَسْتَخْدِمُ خاصية border-radius لِإِضَافَةِ زَوَايَا مُدَوَّرَةٍ جَمِيلَةٍ تُضْفِي مَظْهراً عَصْرِيّاً عَلَى النَّمُوذَجِ.",
+        "caption_text": "استخدام border و border-radius لتخصيص الحدود وتدوير الزوايا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text] {\n  border: 2px solid red;\n  border-radius: 8px;\n}",
+        "highlight_lines": [],
+        "output": "حقل إدخال بحدود حمراء سميكة وزوايا دائرية أنيقة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_inputs.asp"
+      ]
+    },
+    {
+      "id": "scene_bottom_border",
+      "title": "الحد السفلي فقط واستخدام border-bottom",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْنَا تَصْمِيماً عَصْرِيّاً بحدٍّ سُفْلِيٍّ فَقَطْ، نُلْغِي الْحُدُودَ الْكَامِلَةَ بوضع none ثُمَّ نَسْتَخْدِمُ خاصية border-bottom مَعَ لَوْنٍ مُحَدَّدٍ بِمِثَالٍ رَائِعٍ.",
+        "caption_text": "إلغاء الحدود الكاملة واستخدام border-bottom لتصميم عصري وبسيط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text] {\n  border: none;\n  border-bottom: 1px solid red;\n}",
+        "highlight_lines": [],
+        "output": "حقل إدخال بخط سفلي فقط دون حدود محيطية.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_inputs.asp"
+      ]
+    },
+    {
+      "id": "scene_colors",
+      "title": "ألوان الخلفية والنصوص",
+      "narration": {
+        "spoken_text": "أَمَّا لِتَغْيِيرِ لَوْنِ خَلْفِيَّةِ الْحَقْلِ فَنَسْتَخْدِمُ background-color، وَلِتَغْيِيرِ لَوْنِ النَّصِّ الْمَكْتُوبِ دَاخِلَهُ نَسْتَخْدِمُ خاصية color لِضَمَانِ أَفْضَلِ تَبَايُنٍ وَوُضُوحٍ.",
+        "caption_text": "تخصيص لون الخلفية ولون النصوص الداخلية لحقول الإدخال."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text] {\n  background-color: #3CBC8D;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "حقل إدخال بخلفية خضراء ونصوص بيضاء واضحة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_inputs.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة تنسيق النماذج وتجربتها",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا عَلَى أَهَمِّ خَصَائِصِ CSS لِتَنْسِيقِ حُقُولِ الْإِدْخَالِ بِكَفَاءَةٍ عَالِيَةٍ. نَتَوَمَّنُ مِنْكُمْ تَجْرِبَةَ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ مِنْ خِلَالِ الرَّابِطِ فِي الْوَصْفِ.",
+        "caption_text": "خلاصة شاملة لتنسيق حقول الإدخال في لغة CSS وكيفية تطبيقها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام width لتحديد العرض و padding للحشو",
+          "ضبط border و border-radius للتصميم الجمالي",
+          "تطبيق الألوان وتجربة الأكواد بأنفسكم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_inputs.asp"
+      ]
+    }
+  ]
+}
