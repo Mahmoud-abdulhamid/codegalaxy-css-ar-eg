@@ -1,0 +1,12 @@
+p.test1 {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+p.test2 {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
