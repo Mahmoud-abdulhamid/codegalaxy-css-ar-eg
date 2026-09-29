@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "251",
+  "title": "CSS Flex Items Properties",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية التعامل مع Flex Items داخل Flex Container",
+    "التحكم في ترتيب العناصر باستخدام order",
+    "تطبيق خصائص النمو والتقلص والابتدائية flex-grow و flex-shrink و flex-basis",
+    "استخدام الخاصية المختصرة flex ومحاذاة العناصر باستخدام align-self"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_flexbox_items.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-6b4cd7077fe83a03.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css3_flexbox_items.asp"
+    },
+    {
+      "id": "html_example_2",
+      "path": "assets/html-6ea95825148f1164.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css3_flexbox_items.asp"
+    },
+    {
+      "id": "html_example_3",
+      "path": "assets/html-3a92bbdf35119a24.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css3_flexbox_items.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة حول Flex Items",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَصَائِصِ Flex Items وَكَيْفَ تُصْبِحُ العَنَاصِرُ الفَرْعِيَّةُ الْمُبَاشِرَةُ دَاخِلَ أَيِّ Flex Container أَعْضَاءَ مَارِنَةً تَقْبَلُ التَّعْدِيلَ بِمُرُونَةٍ تَامَّةٍ.",
+        "caption_text": "مرحبا بكم في درس خصائص Flex Items والعناصر الفرعية المباشرة داخل Flex Container."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "العناصر الفرعية المباشرة تصبح تلقائيا Flex Items",
+          "إمكانية التحكم الكامل في سلوك ومظهر وتوزيع كل عنصر",
+          "استخدام الخصائص المتقدمة لتخصيص التخطيط المرن"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "scene_2_order",
+      "title": "خاصية order للتحكم في الترتيب",
+      "narration": {
+        "spoken_text": "سَنَبْدَأُ بِخَاصِيَّةِ order. هَذِهِ الْخَاصِيَّةُ تُحَدِّدُ تَرْتِيبَ عَرْضِ Flex Items دَاخِلَ الْحَاوِيَةِ. لَا يَجِبُ أَنْ يَظْهَرَ العُنْصُرُ الْأَوَّلُ فِي كُودِ الْمَصْدَرِ كَأَوَّلِ عُنْصُرٍ فِي التَّخْطِيطِ بَلْ نَسْتَطِيعُ تَرْتِيبَهَا بِحُرِّيَّةٍ بِوَاسِطَةِ أَرْقَامٍ صَحِيحَةٍ.",
+        "caption_text": "خاصية order تحدد ترتيب عرض Flex Items داخل الحاوية بغض النظر عن ترتيب كود المصدر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "order_example.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"flex-container\">\n      <div style=\"order: 3\">1</div>\n      <div style=\"order: 2\">2</div>\n      <div style=\"order: 4\">3</div>\n      <div style=\"order: 1\">4</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "يتم إعادة ترتيب العناصر بصرياً بناءً على قيم order المدخلة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "scene_3_grow",
+      "title": "خاصية flex-grow للنمو",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى خَاصِيَّةِ flex-grow. هَذِهِ الْخَاصِيَّةُ تُحَدِّدُ مِقْدَارَ تَمَدُّدِ العُنْصُرِ نِسْبَةً إِلَى بَقِيَّةِ العَنَاصِرِ. القِيمَةُ يَجِبُ أَنْ تَكُونَ رَقْماً، وَالقِيمَةُ الِافْتِرَاضِيَّةُ هِيَ صِفْرٌ، وَبِزِيَادَةِ الرَّقْمِ نَجْعَلُ العُنْصُرَ يَنْمُو بِسُرْعَةٍ أَكْبَرَ.",
+        "caption_text": "خاصية flex-grow تحدد مقدار نمو العنصر بالنسبة لبقية العناصر وبقيمة افتراضية تساوي صفر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "grow_example.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"flex-container\">\n      <div style=\"flex-grow: 1\">1</div>\n      <div style=\"flex-grow: 1\">2</div>\n      <div style=\"flex-grow: 4\">3</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "ينمو العنصر الثالث بسرعة أكبر أربع مرات مقارنة بالعناصر الأخرى.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "scene_4_shrink",
+      "title": "خاصية flex-shrink للتقلص",
+      "narration": {
+        "spoken_text": "تَعَرَّفْنَا عَلَى النُّمُوِّ وَالْآنَ نَتَعَرَّفُ عَلَى خَاصِيَّةِ flex-shrink. تُحَدِّدُ هَذِهِ الْخَاصِيَّةُ كَمْ يَنْكَمِشُ العُنْصُرُ نِسْبَةً لِلْعَنَاصِرِ الْأُخْرَى عِنْدَ ضِيقِ المَسَاحَةِ، وَقِيمَتُهَا الِافْتِرَاضِيَّةُ هِيَ وَاحِدٌ صَحِيحٌ دَائِماً.",
+        "caption_text": "خاصية flex-shrink تحدد مقدار انكماش العنصر نسبة لبقية العناصر بقيمة افتراضية واحد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "shrink_example.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"flex-container\">\n      <div>1</div>\n      <div>2</div>\n      <div style=\"flex-shrink: 2\">3</div>\n      <div>4</div>\n      <div>5</div>\n      <div>6</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "ينكمش العنصر الثالث ضعفي انكماش باقي عناصر الحاوية المرنة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "scene_5_basis",
+      "title": "خاصية flex-basis والطول الابتدائي",
+      "narration": {
+        "spoken_text": "مِنْ ثَمَّ نَنْتَقِلُ إِلَى خَاصِيَّةِ flex-basis. تُحَدِّدُ هَذِهِ الْخَاصِيَّةُ الطُّولَ الِابْتِدَائِيَّ لِلْعُنْصُرِ قَبْلَ أَنْ يَتِمَّ تَوْزِيعُ المَسَاحَةِ المُتَبَقِّيَةِ حَسَبَ قِيَمِ النُّمُوِّ أَوِ الِانْكِمَاشِ، مِثْلَ تَحْدِيدِ مِئَتَيْنِ وَخَمْسِينَ بِيكْسِل.",
+        "caption_text": "خاصية flex-basis تحدد الطول الابتدائي للعنصر قبل تطبيق آليات المرونة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "basis_example.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"flex-container\">\n      <div>1</div>\n      <div>2</div>\n      <div style=\"flex-basis: 250px\">3</div>\n      <div>4</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "يتم ضبط الطول الأولي للعنصر الثالث على مئتين وخمسين بيكسِل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "scene_6_shorthand",
+      "title": "خاصية flex المختصرة",
+      "narration": {
+        "spoken_text": "لِتَسْهِيلِ كِتَابَةِ الكُودِ، تُوَفِّرُ لَنَا لُغَةُ CSS خَاصِيَّةَ flex المُخْتَصَرَةَ. هَذِهِ الخَاصِيَّةُ تَدْمُجُ ثَلَاثَ خَصَائِصَ مَعاً وَهِيَ flex-grow وَflex-shrink وَflex-basis فِي سَطْرٍ بَرْمَجِيٍّ وَاحِدٍ بِكُفَاءَةٍ عَالِيَةٍ.",
+        "caption_text": "خاصية flex هي صيغة مختصرة تجمع خصائص flex-grow و flex-shrink و flex-basis."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "flex_shorthand.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"flex-container\">\n      <div>1</div>\n      <div>2</div>\n      <div style=\"flex: 1 0 150px\">3</div>\n      <div>4</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "العنصر الثالث قابل للنمو وغير قابل للانكماش وبطول ابتدائي مئة وخمسين بيكسِل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "scene_7_align_self",
+      "title": "خاصية align-self للمحاذاة الفردية",
+      "narration": {
+        "spoken_text": "أَمَّا خَاصِيَّةُ align-self فَتُحَدِّدُ مُحَاذَاةَ عُنْصُرٍ مُحَدَّدٍ بِمُفْرَدِهِ دَاخِلَ الحَاوِيَةِ، وَهِيَ تَتَغَلَّبُ عَلَى المُحَاذَاةِ الِافْتِرَاضِيَّةِ الَّتِي حَدَّدَتْهَا الحَاوِيَةُ بِوَاسِطَةِ align-items لِتَمْنَحَنَا تَحكُّماً دَقِيقاً.",
+        "caption_text": "خاصية align-self تتيح محاذاة عنصر محدد بشكل مستقل وتتجاوز إعدادات الحاوية العامة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "align_self.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"flex-container\">\n      <div>1</div>\n      <div style=\"align-self: flex-start\">2</div>\n      <div style=\"align-self: flex-end\">3</div>\n      <div>4</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "يتم وضع العنصر الثاني في أعلى الحاوية والثالث في أسفلها.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_items.asp"
+      ]
+    },
+    {
+      "id": "scene_8_summary",
+      "title": "خلاصة خصائص Flex Items",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا الْيَوْمَ، نَكُونُ قَدْ تَعَرَّفْنَا بِشَكْلٍ شَامِلٍ عَلَى جَمِيعِ خَصَائِصِ Flex Items مِثْلَ order وَflex-grow وَflex-shrink وَflex-basis وَalign-self. نَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الأَكْوَادِ بِنُفُوسِكُمْ.",
+        "caption_text": "خلاصة شاملة لجميع خصائص Flex Items ودعوة لتجربة الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "order لتغيير ترتيب ظهور العناصر",
+          "flex-grow و flex-shrink للتحكم في مرونة المساحة",
+          "flex-basis لتحديد الطول الأولي",
+          "align-self للمحاذاة الفردية الدقيقة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_items.asp"
+      ]
+    }
+  ]
+}
