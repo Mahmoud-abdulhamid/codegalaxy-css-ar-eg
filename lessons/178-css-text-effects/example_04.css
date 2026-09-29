@@ -1,0 +1,6 @@
+p.test1 {
+  word-break: normal;
+}
+p.test2 {
+  word-break: break-all;
+}
