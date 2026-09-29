@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "260",
+  "title": "CSS Grid Container - Align Grid Content",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية محاذاة محتوى Grid باستخدام justify-content",
+    "التحكم في المحاذاة الرأسية باستخدام align-content",
+    "استخدام الخاصية المختصرة place-content",
+    "تطبيق قيم المحاذاة المختلفة في مشاريع الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid_align.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في محاذاة محتوى Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ ضَبْطِ مَحَاذَاةِ الْعَنَاصِرِ دَاخِلَ Grid Container بِاسْتِخْدَامِ خَصَائِصَ قَوِيَّةٍ تُسَاعِدُنَا فِي تَنْظِيمِ تَصْمِيمِ صَفْحَةِ الْوِبّ بِكُلِّ احْتِرَافِيَّةٍ.",
+        "caption_text": "مرحبا بكم في درس محاذاة محتوى Grid في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في توزيع العناصر داخل Grid Container",
+          "استخدام justify-content للمحاذاة الأفقية",
+          "استخدام align-content للمحاذاة الرأسية",
+          "استخدام place-content كخاصية مختصرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_align.asp"
+      ]
+    },
+    {
+      "id": "justify-content",
+      "title": "الخاصية justify-content",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةُ justify-content لِمَحَاذَاةِ الْمُحْتَوَى عَلَى الْمِحْوَرِ الْأُفُقِيِّ main-axis. لَاحِظْ أَنَّ هَذِهِ الْخَاصِيَّةَ تَعْمَلُ فَقَطْ إِذَا كَانَ إِجْمَالِيُّ عَرْضِ الْعَنَاصِرِ أَقَلَّ مِنْ عَرْضِ الْحَاوِيَةِ.",
+        "caption_text": "تستخدم justify-content لمحاذاة المحتوى أفقيا على main-axis."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  justify-content: space-evenly;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_align.asp"
+      ]
+    },
+    {
+      "id": "justify-values",
+      "title": "قيم justify-content",
+      "narration": {
+        "spoken_text": "يُمْكِنُكَ اسْتِخْدَامُ قِيَمٍ مُتَنَوِّعَةٍ مِثْلَ space-evenly لِتَوْزِيعِ الْمَسَافَاتِ بِتَسَاوٍ، أَوْ center لِوَضْعِ الْعَنَاصِرِ فِي الْمُنْتَصَفِ، أَوْ start وَ end لِتَحْدِيدِ مَوْقِعِ الْبِدَايَةِ وَالنِّهَايَةِ.",
+        "caption_text": "قيم justify-content تشمل space-evenly و center و start و end."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "الوصف"
+        ],
+        "rows": [
+          [
+            "space-evenly",
+            "توزيع مسافات متساوية حول العناصر"
+          ],
+          [
+            "center",
+            "توسيط العناصر أفقيا"
+          ],
+          [
+            "start",
+            "المحاذاة عند بداية الحاوية"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_align.asp"
+      ]
+    },
+    {
+      "id": "align-content",
+      "title": "الخاصية align-content",
+      "narration": {
+        "spoken_text": "أَمَّا لِلْمَحَاذَاةِ الرَّأْسِيَّةِ عَلَى الْمِحْوَرِ cross-axis، فَنَسْتَخْدِمُ خَاصِيَّةَ align-content. تَذَكَّرْ أَنَّ هَذِهِ الْخَاصِيَّةَ تَتَطَلَّبُ ارْتِفَاعاً مُحَدَّداً لِلْحَاوِيَةِ لِتَظْهَرَ نَتَائِجُهَا بِشَكْلٍ وَاضِحٍ.",
+        "caption_text": "تستخدم align-content للمحاذاة الرأسية على cross-axis."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  height: 300px;\n  align-content: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_align.asp"
+      ]
+    },
+    {
+      "id": "place-content",
+      "title": "الخاصية المختصرة place-content",
+      "narration": {
+        "spoken_text": "لِتَوْفِيرِ الْوَقْتِ، يُمْكِنُكَ اسْتِخْدَامُ خَاصِيَّةِ place-content، وَهِيَ خَاصِيَّةٌ مُخْتَصَرَةٌ تَجْمَعُ بَيْنَ align-content وَ justify-content فِي سَطْرٍ وَاحِدٍ لِتَحْقِيقِ الْمَحَاذَاةِ فِي الْجِهَتَيْنِ مَعاً.",
+        "caption_text": "استخدم place-content كاختصار لدمج align-content و justify-content."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  height: 300px;\n  place-content: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_align.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة النتائج",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ place-content بِقِيمَةِ center، سَتَجِدُ أَنَّ جَمِيعَ الْعَنَاصِرِ قَدْ تَمَّ تَوَسِيطُهَا تَمَاماً دَاخِلَ الْحَاوِيَةِ، سَوَاءً كَانَ ذَلِكَ أَفُقِيّاً أَوْ رَأْسِيّاً، وَهَذَا يُعْطِي تَصْمِيماً مُتَوَازِناً لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "توسيط العناصر أفقيا ورأسيا باستخدام place-content."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Container (300px height)\n+-----------------------+\n|                       |\n|     Grid Content      |\n|                       |\n+-----------------------+",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_align.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَتَحَكَّمُ فِي مَحَاذَاةِ الْعَنَاصِرِ بِاسْتِخْدَامِ justify-content وَ align-content وَ place-content. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْخَصَائِصِ بِأَنْفُسِكُمْ لِتَرَوْا كَيْفَ يَتَغَيَّرُ تَصْمِيمُ الْوِبّ بَيْنَ أَيْدِيكُمْ.",
+        "caption_text": "خلاصة: استخدم الخصائص الثلاث للتحكم الكامل في محاذاة Grid."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "justify-content للمحاذاة الأفقية",
+          "align-content للمحاذاة الرأسية",
+          "place-content للدمج والاختصار",
+          "جرب الأكواد بنفسك عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_align.asp"
+      ]
+    }
+  ]
+}
