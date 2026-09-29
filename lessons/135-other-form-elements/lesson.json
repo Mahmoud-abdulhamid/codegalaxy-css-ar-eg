@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "135",
+  "title": "CSS Form Elements Styling",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Learn to style textarea elements",
+    "Master select element styling",
+    "Apply CSS to form buttons",
+    "Create responsive form layouts"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_form_elements.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تنسيق عناصر النماذج",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَحْسِينِ مَظْهَرِ Form Elements بِاسْتِخْدَامِ خَصَائِصِ CSS لِجَعْلِ تَجْرِبَةِ الْمُسْتَخْدِمِ أَكْثَرَ جَمَالاً وَاحْتِرَافِيَّةً فِي صَفْحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تنسيق عناصر النماذج باستخدام CSS لجعل صفحات الويب أكثر احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق textarea",
+          "تنسيق select",
+          "تنسيق أزرار النماذج",
+          "تصميم نماذج متجاوبة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_elements.asp"
+      ]
+    },
+    {
+      "id": "textarea_styling",
+      "title": "تنسيق textarea",
+      "narration": {
+        "spoken_text": "لِتَحْكِيمِ مَظْهَرِ textarea، نُحَدِّدُ الْعَرْضَ وَالارْتِفَاعَ. وَلِإِزَالَةِ أَدَاةِ التَّحْجِيمِ فِي الزَّاوِيَةِ، نَضْبُطُ خَاصِيَّةَ resize عَلَى none. لَاحِظْ كَيْفَ نُضِيفُ padding وَ border لِتَحْسِينِ الشَّكْلِ الْعَامِّ.",
+        "caption_text": "يمكن التحكم في حجم textarea وإزالة أداة التحجيم باستخدام خاصية resize."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "textarea {\n  width: 100%;\n  height: 150px;\n  padding: 12px 20px;\n  box-sizing: border-box;\n  border: 2px solid #ccc;\n  border-radius: 4px;\n  resize: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_elements.asp"
+      ]
+    },
+    {
+      "id": "select_styling",
+      "title": "تنسيق عناصر select",
+      "narration": {
+        "spoken_text": "عِنْدَ تَصْمِيمِ قَائِمَةِ select، نَسْتَخْدِمُ padding لِتَوْسِيعِ الْمَسَاحَةِ الدَّاخِلِيَّةِ، وَنُزِيلُ الْحُدُودَ التَّقْلِيدِيَّةَ بِاسْتِخْدَامِ border: none. هَذَا يَمْنَحُ الْقَائِمَةَ مَظْهَراً عَصْرِيّاً وَمُتَنَاسِقاً مَعَ بَقِيَّةِ الْعَنَاصِرِ.",
+        "caption_text": "تنسيق القوائم المنسدلة select لجعلها تبدو أكثر عصرية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "select {\n  width: 100%;\n  padding: 16px 20px;\n  border: none;\n  border-radius: 4px;\n  background-color: #f1f1f1;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_elements.asp"
+      ]
+    },
+    {
+      "id": "buttons_styling",
+      "title": "تنسيق أزرار النماذج",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَطْبِيقُ نَفْسِ التَّنْسِيقَاتِ عَلَى أَنْوَاعِ الْأَزْرَارِ الْمُخْتَلِفَةِ مِثْلَ button وَ submit. نَسْتَخْدِمُ cursor: pointer لِتَغْيِيرِ شَكْلِ الْمُؤَشِّرِ عِنْدَ الْمُرُورِ فَوْقَ الزِّرِّ، مِمَّا يُعْطِي تَغْذِيَةً رَاجِعَةً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "تنسيق أزرار النماذج باستخدام CSS لجعلها تفاعلية وجذابة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=button], input[type=submit] {\n  background-color: #04AA6D;\n  border: none;\n  color: white;\n  padding: 16px 32px;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_elements.asp"
+      ]
+    },
+    {
+      "id": "responsive_layout",
+      "title": "التصميم المتجاوب",
+      "narration": {
+        "spoken_text": "لِجَعْلِ النَّمُوذَجِ مُتَجَاوِباً، نَسْتَخْدِمُ Media Queries. عِنْدَمَا يَكُونُ عَرْضُ الشَّاشَةِ أَقَلَّ مِنْ سِتِّمِائَةِ بيكسل، نَقُومُ بِتَرْتِيبِ الْعَنَاصِرِ بِشَكْلٍ رَأْسِيٍّ بَدَلاً مِنَ الْأُفُقِيِّ لِتُنَاسِبَ الشَّاشَاتِ الصَّغِيرَةَ.",
+        "caption_text": "استخدام Media Queries لضمان تجاوب النموذج مع مختلف أحجام الشاشات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "responsive.css",
+        "code": "@media screen and (max-width: 600px) {\n  input, select, textarea {\n    width: 100%;\n    margin-top: 0;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_elements.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ الْمُتَوَقَّعَةُ لِتَنْفِيذِ الْأَكْوَادِ السَّابِقَةِ. لَاحِظْ كَيْفَ أَصْبَحَتِ الْعَنَاصِرُ مُنَسَّقَةً بِشَكْلٍ مُوَحَّدٍ وَمَرِيحٍ لِلْعَيْنِ، مَعَ تَجَاوُبٍ كَامِلٍ مَعَ حَجْمِ الشَّاشَةِ.",
+        "caption_text": "معاينة مخرجات التنسيق في المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- نموذج منسق -->\n    <form>\n      <input type='text' placeholder='Name'>\n      <textarea>Message</textarea>\n      <input type='submit' value='Send'>\n    </form>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Form elements appear styled with consistent padding, borders, and responsive layout.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_elements.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ تَحْوِيلِ النَّمَاذِجِ الْعَادِيَّةِ إِلَى تَصَامِيمَ احْتِرَافِيَّةٍ بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِ مَهَارَاتِكُمْ فِي تَصْمِيمِ الْوِبّ.",
+        "caption_text": "خلاصة: CSS يمنحك تحكما كاملا في مظهر عناصر النماذج وتجاوبها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم resize: none لـ textarea",
+          "استخدم border-radius لتنعيم الزوايا",
+          "استخدم Media Queries للتجاوب",
+          "جرب الأكواد بنفسك عبر الرابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_elements.asp"
+      ]
+    }
+  ]
+}
