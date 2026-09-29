@@ -3,6 +3,8 @@
   "lesson_id": "54",
   "title": "CSS Text Spacing Properties",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية التحكم في تباعد النصوص باستخدام CSS",
     "التعرف على خصائص text-indent و letter-spacing",
