@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "357",
+  "title": "تصميم أزرار تفاعلية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إضافة تأثيرات حركية للأزرار",
+    "تطبيق تأثير الضغط على الأزرار باستخدام CSS",
+    "إضافة تأثيرات بصرية عند التمرير",
+    "تنفيذ تأثير الـ ripple عند النقر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_animate_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحريك الأزرار",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِ الْيَوْمِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ كَيْفِيَّةَ إِضَافَةِ تَأْثِيرَاتٍ حَرَكِيَّةٍ مُبْتَكَرَةٍ لِلْأَزْرَارِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي صَفْحَاتِ الْوِبّ، وَجَعْلِ التَّفَاعُلِ مَعَ الْعَنَاصِرِ أَكْثَرَ جَاذِبِيَّةً وَاحْتِرَافِيَّةً.",
+        "caption_text": "مرحبا بكم في درس اليوم. سنتعلم كيفية إضافة تأثيرات حركية مبتكرة للأزرار لتحسين تجربة المستخدم في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحسين تجربة المستخدم عبر CSS",
+          "إضافة حيوية لعناصر الواجهة",
+          "استخدام خصائص CSS المتقدمة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_animate_buttons.asp"
+      ]
+    },
+    {
+      "id": "pressed-effect",
+      "title": "تأثير الضغط على الأزرار",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ تَأْثِيرِ ضَغْطٍ عِنْدَ النَّقْرِ، نَسْتَخْدِمُ Pseudo-class الْمُسَمَّى active. هَذَا التَّأْثِيرُ يُعْطِي انْطِبَاعاً بِأَنَّ الزِّرَّ يَنْخَفِضُ لِلْأَسْفَلِ، مِمَّا يُؤَكِّدُ لِلْمُسْتَخْدِمِ أَنَّهُ قَدْ تَمَّ النَّقْرُ بِنَجَاحٍ عَلَى هَذَا ال Element.",
+        "caption_text": "نستخدم Pseudo-class المسمى active لإضافة تأثير ضغط عند النقر، مما يعطي انطباعا بأن الزر ينخفض للأسفل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button:active {\n  transform: translateY(4px);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_animate_buttons.asp"
+      ]
+    },
+    {
+      "id": "hover-effect",
+      "title": "تأثير التمرير بالسهم",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً إِضَافَةُ سَهْمٍ يَظْهَرُ عِنْدَ التَّمْرِيرِ بِالْفَأْرَةِ فَوْقَ الزِّرِ. نَسْتَخْدِمُ Pseudo-element الْمُسَمَّى after مَعَ خاصية content لِإِظْهَارِ السَّهْمِ، وَنُحَرِّكُهُ بِاسْتِخْدَامِ transition لِيَبْدُوَ التَّغْيِيرُ سَلِساً وَمُتَنَاغِماً.",
+        "caption_text": "يمكننا إضافة سهم يظهر عند التمرير بالفأرة باستخدام Pseudo-element المسمى after مع خاصية transition."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button span:after {\n  content: '\\00bb';\n  opacity: 0;\n  transition: 0.5s;\n}\n.button:hover span {\n  padding-right: 25px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_animate_buttons.asp"
+      ]
+    },
+    {
+      "id": "ripple-effect",
+      "title": "تأثير الـ ripple",
+      "narration": {
+        "spoken_text": "تَأْثِيرُ ال ripple هُوَ أَحَدُ أَكْثَرِ التَّأْثِيرَاتِ شُيُوعاً فِي تَصْمِيمِ الْوِبّ. يَعْتَمِدُ هَذَا التَّأْثِيرُ عَلَى إِنْشَاءِ دَائِرَةٍ تَتَوَسَّعُ مِنْ مَوْقِعِ النَّقْرِ، وَيُضِيفُ لَمْسَةً عَصْرِيَّةً جِدّاً لِتَفَاعُلِ الْأَزْرَارِ فِي صَفْحَتِكَ.",
+        "caption_text": "تأثير الـ ripple هو أحد أكثر التأثيرات شيوعا، حيث يعتمد على إنشاء دائرة تتوسع من موقع النقر لإضافة لمسة عصرية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".ripple {\n  position: relative;\n  overflow: hidden;\n}\n.ripple:after {\n  content: '';\n  position: absolute;\n  background: #f1f1f1;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_animate_buttons.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتُحَوِّلُ أزرارَكَ الْعَادِيَةَ إِلَى عَنَاصِرَ تَفَاعُلِيَّةٍ حَيَّةٍ. لَاحِظْ كَيْفَ يَتَجَاوَبُ الزِّرُّ مَعَ حَرَكَاتِ الْمُسْتَخْدِمِ بِشَكْلٍ فَوْرِيٍّ وَسَلِسٍ، مِمَّا يَرْفَعُ مِنْ جَوْدَةِ التَّصْمِيمِ الْعَامِّ لِمَوْقِعِ الْوِبّ.",
+        "caption_text": "عند تطبيق هذه الأكواد، ستتحول الأزرار إلى عناصر تفاعلية حية تستجيب لحركات المستخدم بشكل فوري وسلس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <button class=\"button\"><span>Click Me</span></button>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Button with animated hover effect",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_animate_buttons.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَحْرِصَ عَلَى أَلَّا تُؤَثِّرَ التَّأْثِيرَاتُ الْحَرَكِيَّةُ عَلَى أَدَاءِ الصَّفْحَةِ. اسْتَخْدِمْ transition بِحِكْمَةٍ، وَتَأَكَّدْ مِنْ أَنَّ الْأَزْرَارَ تَبْقَى وَاضِحَةً وَسَهْلَةَ الِاسْتِخْدَامِ لِجَمِيعِ الزُّوَّارِ عَلَى مُخْتَلَفِ الْمُتَصَفِّحَاتِ.",
+        "caption_text": "يجب الحرص على عدم تأثير الحركات على أداء الصفحة، واستخدام transition بحكمة لضمان بقاء الأزرار واضحة وسهلة الاستخدام."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الحفاظ على سلاسة الأداء",
+          "تجربة الأزرار عبر متصفحات مختلفة",
+          "التركيز على سهولة الوصول"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_animate_buttons.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِهَا لِتُنَاسِبَ تَصْمِيمَ مَوَاقِعِكُمْ. لَا تَتَرَدَّدُوا فِي زِيَارَةِ الرَّوَابِطِ الْمُوَفَّرَةِ فِي الْوَصْفِ لِلتَّعَمُّقِ أَكْثَرَ فِي عَالَمِ CSS.",
+        "caption_text": "أتممنا درس اليوم، أدعوكم لتجربة الأكواد وتعديلها، وزيارة الروابط في الوصف للتعمق أكثر في عالم CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجع الأكواد من الرابط المرفق",
+          "طبق التأثيرات في مشروعك الخاص",
+          "تابع الدورة لمزيد من المهارات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_animate_buttons.asp"
+      ]
+    }
+  ]
+}
