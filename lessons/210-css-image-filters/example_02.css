@@ -1,0 +1,6 @@
+#img1 {
+  filter: contrast(150%);
+}
+#img2 {
+  filter: drop-shadow(8px 8px 10px gray);
+}
