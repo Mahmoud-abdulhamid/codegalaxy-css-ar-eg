@@ -3,6 +3,8 @@
   "lesson_id": "61",
   "title": "التحكم في حجم الخط باستخدام CSS",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم خاصية font-size في CSS",
     "التعرف على الوحدات المطلقة والنسبية",
