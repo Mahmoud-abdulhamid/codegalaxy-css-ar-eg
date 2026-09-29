@@ -3,6 +3,8 @@
   "lesson_id": "80",
   "title": "CSS Tables Code Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية تنسيق الجداول باستخدام CSS",
     "تطبيق خصائص CSS على عناصر table و th و td",
