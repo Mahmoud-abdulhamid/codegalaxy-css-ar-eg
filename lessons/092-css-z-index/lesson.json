@@ -3,6 +3,8 @@
   "lesson_id": "92",
   "title": "CSS z-index Property",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية استخدام خاصية z-index للتحكم بترتيب العناصر المتداخلة في صفحة الويب",
     "التعرف على أهمية الشروط المطلوبة لعمل خاصية z-index على العناصر الموضحة",
