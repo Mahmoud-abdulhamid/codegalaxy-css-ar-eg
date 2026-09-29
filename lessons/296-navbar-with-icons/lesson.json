@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "296",
+  "title": "بناء شريط تنقل احترافي مع أيقونات باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية دمج مكتبة Font Awesome في صفحات الويب",
+    "تصميم شريط تنقل متجاوب باستخدام CSS",
+    "تنسيق الروابط داخل شريط التنقل",
+    "تطبيق تأثيرات التفاعل عند تمرير الفأرة",
+    "جعل شريط التنقل متجاوبا مع الشاشات الصغيرة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_navbar_icon.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول أشرطة التنقل",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِ الْيَوْمِ. سَنَتَعَلَّمُ كَيْفِيَّةَ بِنَاءِ شَرِيطِ تَنَقُّلٍ احْتِرَافِيٍّ لِمَوْقِعِ الْوِبّ، مَعَ دَمْجِ أَيْقُونَاتٍ جَذَّابَةٍ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ بِاسْتِخْدَامِ CSS وَمَكْتَبَةِ Font Awesome.",
+        "caption_text": "تعلم كيفية إنشاء شريط تنقل متجاوب مع أيقونات باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية أشرطة التنقل في تجربة المستخدم",
+          "استخدام مكتبة Font Awesome للأيقونات",
+          "تنسيق العناصر باستخدام CSS",
+          "تحقيق التجاوب مع مختلف الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_icon.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي لشريط التنقل",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْهَيْكَلِ. نَسْتَخْدِمُ div بِكْلَاسِ navbar، وَدَاخِلَهُ نَضَعُ رَوَابِطَ a. كُلُّ رَابِطٍ يَحْتَوِي عَلَى i لِعَرْضِ الْأَيْقُونَةِ، مَعَ ضَرُورَةِ رَبْطِ مَلَفِّ التَّنْسِيقِ الْخَاصِّ بِ Font Awesome فِي قِسْمِ head.",
+        "caption_text": "الهيكل البرمجي لشريط التنقل مع روابط وأيقونات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  </head>\n  <body>\n    <div class=\"navbar\">\n      <a class=\"active\" href=\"#\"><i class=\"fa fa-fw fa-home\"></i> Home</a>\n      <a href=\"#\"><i class=\"fa fa-fw fa-search\"></i> Search</a>\n      <a href=\"#\"><i class=\"fa fa-fw fa-envelope\"></i> Contact</a>\n      <a href=\"#\"><i class=\"fa fa-fw fa-user\"></i> Login</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_icon.asp"
+      ]
+    },
+    {
+      "id": "css_navbar",
+      "title": "تنسيق الحاوية الأساسية",
+      "narration": {
+        "spoken_text": "نَقُومُ الْآنَ بِتَنْسِيقِ الْحَاوِيَةِ navbar. نُحَدِّدُ الْعَرْضَ بِ 100، وَنَضْبِطُ لَوْنَ الْخَلْفِيَّةِ، وَنَسْتَخْدِمُ overflow: auto لِضَمَانِ احْتِوَاءِ الْعَنَاصِرِ دَاخِلَ الشَّرِيطِ بِشَكْلٍ سَلِيمٍ وَمُنَظَّمٍ.",
+        "caption_text": "تنسيق الحاوية navbar باستخدام CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar {\n  width: 100%;\n  background-color: #555;\n  overflow: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_icon.asp"
+      ]
+    },
+    {
+      "id": "css_links",
+      "title": "تنسيق روابط التنقل",
+      "narration": {
+        "spoken_text": "نُعَدِّلُ رَوَابِطَ a دَاخِلَ navbar. نَجْعَلُهَا تَتَمَوْضَعُ جَانِبِيّاً بِاسْتِخْدَامِ float: left، وَنُضِيفُ padding لِلْمَسَافَاتِ، مَعَ ضَبْطِ الْأَلْوَانِ وَإِلْغَاءِ تَسْطِيرِ النُّصُوصِ بِاسْتِخْدَامِ text-decoration: none.",
+        "caption_text": "تنسيق الروابط داخل شريط التنقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar a {\n  float: left;\n  text-align: center;\n  padding: 12px;\n  color: white;\n  text-decoration: none;\n  font-size: 17px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_icon.asp"
+      ]
+    },
+    {
+      "id": "css_hover",
+      "title": "تأثيرات التفاعل",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ لَمْسَةٍ تَفَاعُلِيَّةٍ، نَسْتَخْدِمُ hover عَلَى الرَّوَابِطِ لِتَغْيِيرِ لَوْنِ الْخَلْفِيَّةِ عِنْدَ مُرُورِ الْفَأْرَةِ. كَمَا نُحَدِّدُ كْلَاسَ active لِتَمْيِيزِ الصَّفْحَةِ الْحَالِيَّةِ بِاللَّوْنِ الْأَخْضَرِ.",
+        "caption_text": "إضافة تأثيرات التفاعل وتحديد الرابط النشط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar a:hover {\n  background-color: #000;\n}\n.active {\n  background-color: #04AA6D;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_icon.asp"
+      ]
+    },
+    {
+      "id": "responsiveness",
+      "title": "جعل الشريط متجاوبا",
+      "narration": {
+        "spoken_text": "لِضَمَانِ عَمَلِ الشَّرِيطِ عَلَى الشَّاشَاتِ الصَّغِيرَةِ، نَسْتَخْدِمُ Media Query. عِنْدَمَا يَكُونُ عَرْضُ الشَّاشَةِ أَقَلَّ مِنْ 500 بيكسل، نُلْغِي float وَنَجْعَلُ الْعَنَاصِرَ تَظْهَرُ بِشَكْلٍ عَمُودِيٍّ.",
+        "caption_text": "تطبيق التجاوب للشاشات الصغيرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 500px) {\n  .navbar a {\n    float: none;\n    display: block;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_icon.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ التَّنْسِيقَاتِ، سَيَظْهَرُ شَرِيطُ التَّنَقُّلِ بِشَكْلٍ أَنِيقٍ مَعَ أَيْقُونَاتٍ وَاضِحَةٍ، وَسَيَتَحَوَّلُ تِلْقَائِيّاً إِلَى التَّرْتِيبِ الْعَمُودِيِّ عِنْدَ تَصْغِيرِ نَافِذَةِ الْمُتَصَفِّحِ، مِمَّا يُوَفِّرُ تَجْرِبَةً مُمَيَّزَةً لِلْمُسْتَخْدِمِينَ.",
+        "caption_text": "النتيجة النهائية لشريط التنقل في المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- شريط تنقل أفقي في الشاشات الكبيرة -->\n    <!-- شريط تنقل عمودي في الشاشات الصغيرة -->\n    [Home] [Search] [Contact] [Login]\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home Search Contact Login",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_icon.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَبْنِي شَرِيطَ تَنَقُّلٍ مُتَجَاوِبٍ بِاسْتِخْدَامِ CSS وَ Font Awesome. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِهَا لِتُنَاسِبَ مَشَارِيعَكُمُ الْخَاصَّةَ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة الدرس ودعوة للتطبيق العملي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Font Awesome للأيقونات",
+          "تنسيق الروابط بـ CSS",
+          "تطبيق Media Queries للتجاوب",
+          "تجربة الكود عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_icon.asp"
+      ]
+    }
+  ]
+}
