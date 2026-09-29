@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "144",
+  "title": "CSS Inheritance",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم الـ Inheritance في CSS",
+    "التمييز بين الـ Inherited Properties والـ Non-inherited Properties",
+    "تعلم كيفية استخدام الـ inherit keyword للتحكم في التوريث"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_inheritance.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-9bd009f2244477d6.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css_inheritance.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Inheritance",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِ الْيَوْمِ حَوْلَ مَفْهُومِ CSS Inheritance. هَذَا الْمَفْهُومُ يُحَدِّدُ مَا يَحْدُثُ عِنْدَمَا لَا نُحَدِّدُ قِيمَةً لِ Property مُعَيَّنَةٍ عَلَى Element، حَيْثُ يُمْكِنُ أَنْ تَرِثَ الْقِيمَةَ مِنَ ال Parent Element أَوْ تَأْخُذَ الْقِيمَةَ الِافْتِرَاضِيَّةَ.",
+        "caption_text": "مفهوم CSS Inheritance يحدد سلوك الخصائص عند عدم تعيين قيم لها على العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Inheritance هو انتقال قيم الخصائص من العنصر الأب إلى الابن",
+          "الخصائص إما أن تكون Inherited أو Non-inherited",
+          "تساعد هذه الميزة في الحفاظ على تناسق التصميم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inheritance.asp"
+      ]
+    },
+    {
+      "id": "inherited_props",
+      "title": "الخصائص القابلة للتوريث",
+      "narration": {
+        "spoken_text": "ال Inherited Properties تَرِثُ قِيمَتَهَا تِلْقَائِيّاً مِنَ ال Parent Element. مِثْلَ خَصَائِصِ النَّصِّ كَ color وَ font-family وَ font-size. هَذَا يَضْمَنُ تَطْبِيقَ نَفْسِ التَّنْسِيقِ عَلَى كَافَّةِ الْعَنَاصِرِ دَاخِلَ الْمُسْتَنَدِ بِشَكْلٍ مُتَنَاسِقٍ.",
+        "caption_text": "الخصائص المتعلقة بالنص مثل color و font-size يتم توريثها افتراضيا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم color",
+          "مفهوم font-family",
+          "مفهوم font-size",
+          "مفهوم line-height",
+          "مفهوم text-align"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inheritance.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "مثال على التوريث",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. عِنْدَمَا نُحَدِّدُ color بِاللَّوْنِ blue لِلْعُنْصُرِ p، فَإِنَّ الْعُنْصُرَ strong دَاخِلَهُ سَيَرِثُ هَذَا اللَّوْنَ وَيَظْهَرُ بِهِ تِلْقَائِيّاً دُونَ حَاجَةٍ لِتَحْدِيدِهِ مُبَاشَرَةً عَلَى strong.",
+        "caption_text": "العنصر strong يرث خصائص النص من العنصر الأب p."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      p {\n        color: blue;\n        font-size: 20px;\n      }\n    </style>\n  </head>\n  <body>\n    <p>This is a <strong>important</strong> text.</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inheritance.asp"
+      ]
+    },
+    {
+      "id": "non_inherited_props",
+      "title": "الخصائص غير القابلة للتوريث",
+      "narration": {
+        "spoken_text": "بِالْمُقَابِلِ، هُنَاكَ خَصَائِصُ لَا تُوَرَّثُ، مِثْلَ خَصَائِصِ ال Box Model كَ border وَ margin وَ padding. إِذَا لَمْ نُحَدِّدْ قِيمَةً لَهَا، فَإِنَّهَا تَعُودُ إِلَى قِيمَتِهَا الِافْتِرَاضِيَّةِ، وَلَا تَرِثُ شَيْئاً مِنَ ال Parent.",
+        "caption_text": "خصائص الـ Box Model مثل border و margin لا يتم توريثها افتراضيا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم border",
+          "مفهوم background",
+          "مفهوم margin",
+          "مفهوم padding",
+          "مفهوم width / height"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inheritance.asp"
+      ]
+    },
+    {
+      "id": "code_example_2",
+      "title": "مثال على عدم التوريث",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نُحَدِّدُ border لِلْعُنْصُرِ p. لَكِنَّ الْعُنْصُرَ strong لَنْ يَرِثَ هَذَا ال border، لِأَنَّ خَاصِيَّةَ border لَيْسَتْ مِنَ الْخَصَائِصِ الَّتِي تُوَرَّثُ تِلْقَائِيّاً فِي CSS.",
+        "caption_text": "العنصر strong لن يظهر له border لأن الخاصية لا تورث."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      p {\n        border: 1px solid red;\n      }\n    </style>\n  </head>\n  <body>\n    <p>This is a <strong>important</strong> text.</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inheritance.asp"
+      ]
+    },
+    {
+      "id": "inherit_keyword",
+      "title": "استخدام الـ inherit keyword",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا فَرْضُ التَّوَرِيثِ يَدَوِيّاً بِاسْتِخْدَامِ الْكَلِمَةِ الْمَحْجُوزَةِ inherit. هَذِهِ الْكَلِمَةُ تَعْمَلُ عَلَى أَيِّ Property، سَوَاءٌ كَانَتْ تُوَرَّثُ تِلْقَائِيّاً أَمْ لَا، مِمَّا يَمْنَحُنَا تَحَكُّماً كَامِلاً فِي تَصْمِيمِ الْعَنَاصِرِ.",
+        "caption_text": "كلمة inherit تجبر العنصر على توريث قيمة الخاصية من الأب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "strong {\n  border: inherit;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inheritance.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، تَعَلَّمْنَا أَنَّ التَّوَرُثَ فِي CSS يُسَهِّلُ عَمَلِيَّةَ التَّنْسِيقِ. تَذَكَّرْ أَنَّ خَصَائِصَ النَّصِّ تُوَرَّثُ، بَيْنَمَا خَصَائِصُ ال Layout لَا تُوَرَّثُ، وَيُمْكِنُكَ دَائِماً اسْتِخْدَامُ inherit لِفَرْضِ التَّوَرُثِ عِنْدَ الْحَاجَةِ.",
+        "caption_text": "استخدم inherit للتحكم الكامل في توريث الخصائص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الخصائص النصية تورث افتراضيا",
+          "خصائص الـ Layout لا تورث افتراضيا",
+          "استخدم inherit لفرض التوريث يدويا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_inheritance.asp"
+      ]
+    }
+  ]
+}
