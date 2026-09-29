@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "265",
+  "title": "ترتيب عناصر CSS Grid باستخدام خاصية order",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام خاصية order لتغيير الترتيب البصري لعناصر CSS Grid",
+    "التعرف على الفرق بين الترتيب البصري والترتيب المنطقي في مستند HTML",
+    "تطبيق قيم مختلفة لخاصية order على عناصر متعددة داخل Grid Container",
+    "معرفة تأثير خاصية order على إمكانية الوصول وقارئات الشاشة للمستخدمين"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid_item_order.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة عن ترتيب عناصر Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَحْدِيدِ التَّرْتِيبِ الْبَصَرِيِّ لِعَنَاصِرِ Grid بِاستخدَامِ خَاصِيَّةِ order.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتعلم كيفية ترتيب عناصر Grid."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "نتعلم اليوم كيفية التحكم في الترتيب البصري لعناصر Grid",
+          "استخدام خاصية order لتغيير مكان ظهور العناصر",
+          "التحكم الكامل في تصميم وتخطيط صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_order.asp"
+      ]
+    },
+    {
+      "id": "scene_concept",
+      "title": "مفهوم الترتيب البصري",
+      "narration": {
+        "spoken_text": "الْعُنْصُرُ الْأَوَّلُ فِي مَصْدَرِ HTML لَا يَجِبُ حَتْماً أَنْ يَظْهَرَ كَأَوَّلِ عُنْصُرٍ دَاخِلِ الْحَاوِيَةِ. تُمَكِّنُنَا خَاصِيَّةُ order مِنْ إِعَادَةِ تَرْتِيبِ الْعَنَاصِرِ بَصَرِيّاً بِكُلُّ سُهُولَةٍ.",
+        "caption_text": "العنصر الأول في مصدر HTML لا يجب حتما أن يظهر كأول عنصر داخل الحاوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "العنصر الأول في الكود لا يشترط ظهوره أولا",
+          "خاصية order تفصل بين الترتيب البرمجي والترتيب المرئي",
+          "مرونة عالية في توزيع وتصميم العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_order.asp"
+      ]
+    },
+    {
+      "id": "scene_code_part1",
+      "title": "كتابة كود order للعناصر الأولى",
+      "narration": {
+        "spoken_text": "لُنَاحِظْ مَعِي كَيْفَ نُطَبِّقُ خَاصِيَّةَ order عَلَى الْعَنَاصِرِ الْأُولَى. نُحَدِّدُ لِلْعُنْصُرِ الْأَوَّلِ قِيمَةَ ثَلَاثَةٍ، وَلِلْعُنْصُرِ الثَّانِي قِيمَةَ سِتَّةٍ، وَلِلْعُنْصُرِ الثَّالِثِ قِيمَةَ وَاحِدٍ.",
+        "caption_text": "تطبيق خاصية order على العناصر الأولى بقيم مختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  order: 3;\n}\n.item2 {\n  order: 6;\n}\n.item3 {\n  order: 1;\n}",
+        "highlight_lines": [
+          1,
+          2,
+          3
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_order.asp"
+      ]
+    },
+    {
+      "id": "scene_code_part2",
+      "title": "استكمال كود order لبقية العناصر",
+      "narration": {
+        "spoken_text": "نُتَبِعُ ذَلِكَ بِتَحْدِيدِ القِيَمِ لِبَقِيَّةِ الْعَنَاصِرِ. نَضَعُ لِلْعُنْصُرِ الرَّابِعِ قِيمَةَ اثْنَيْنِ، وَلِلْعُنْصُرِ الْخَامِسِ قِيمَةَ أَرْبَعَةٍ، وَلِلْعُنْصُرِ السَّادِسِ قِيمَةَ خَمْسَةٍ.",
+        "caption_text": "استكمال تطبيق خاصية order على باقي العناصر في الشبكة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item4 {\n  order: 2;\n}\n.item5 {\n  order: 4;\n}\n.item6 {\n  order: 5;\n}",
+        "highlight_lines": [
+          1,
+          2,
+          3
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_order.asp"
+      ]
+    },
+    {
+      "id": "scene_output",
+      "title": "معاينة المخرجات والنتيجة المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَنْفِيذِ هَذِهِ القِيَمِ، سَتَتَغَيَّرُ أَمَاكِنُ ظُهُورِ الْعَنَاصِرِ عَلَى الشَّاشَةِ حَسَبَ التَّرْتِيبِ الصَّاعِدِ لِقِيَمِ order، لِيَظْهَرَ العُنْصُرُ الثَّالِثُ أَوَّلاً ثُمَّ الرَّابِعُ.",
+        "caption_text": "النتيجة المرئية لترتيب العناصر بناء على قيم order."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Visual Layout Order:\n[Item 3] (order: 1)\n[Item 4] (order: 2)\n[Item 1] (order: 3)\n[Item 5] (order: 4)\n[Item 6] (order: 5)\n[Item 2] (order: 6)",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_order.asp"
+      ]
+    },
+    {
+      "id": "scene_accessibility",
+      "title": "ملاحظات إمكانية الوصول",
+      "narration": {
+        "spoken_text": "تَنْبِيهٌ مُهِمٌّ لِإِمْكَانِيَّةِ الْوُصُولِ. خَاصِيَّةُ order تُغَيِّرُ التَّرْتِيبَ الْبَصَرِيَّ فَقَطْ وَلَا تُغَيِّرُ التَّرْتِيبَ المَنْطِقِيَّ فِي DOM، مِمَّا يُؤَثِّرُ عَلَى مُسْتَخْدِمِي قَارِئَاتِ الشَّاشَةِ.",
+        "caption_text": "تنبيه مهم: خاصية order تغير الترتيب البصري فقط ولا تغير الترتيب المنطقي في DOM."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية order تؤثر على الترتيب البصري فقط",
+          "الترتيب المنطقي في كود HTML يبقى كما هو",
+          "يجب الانتباه لمستخدمي قارئات الشاشة وأدوات المساعدة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_order.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَامِ خَاصِيَّةِ order، احْرِصْ عَلَى أَلَّا يُؤَدِّيَ التَّرْتِيبُ البَصَرِيُّ إِلَى إِحْدَاثِ ارْتِبَاكٍ لِلْمُسْتَخْدِمِينَ الَّذِينَ يَتَصَفَّحُونَ الموقع باستخدام لوحة المفاتيح أو الأدوات المساعدة.",
+        "caption_text": "أفضل الممارسات لضمان تجربة مستخدم سليمة ومتوافقة مع معايير الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجنب الاختلافات الكبيرة بين الترتيب المرئي والمنطقي",
+          "اختبار الموقع باستخدام لوحة المفاتيح وقارئات الشاشة",
+          "الحفاظ على تجربة مستخدم مريحة لجميع الزوار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_order.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ خَاصِيَّةِ order لِلتَّحْكُمِ فِي التَّرْتِيبِ البَصَرِيِّ لِعَنَاصِرِ Grid، مَعَ مراعاةِ جَوَانِبِ إِمْكَانِيَّةِ الْوُصُولِ. كَانَ مَعَكُمْ مَحْمُودُ عَبْدِالحَمِيدِ.",
+        "caption_text": "خلاصة درس ترتيب عناصر CSS Grid باستخدام خاصية order."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلمنا تطبيق خاصية order على عناصر Grid",
+          "فهمنا تأثير الخاصية على الترتيب المرئي والمنطقي",
+          "أهمية مراعاة إمكانية الوصول في تصميم الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_order.asp"
+      ]
+    }
+  ]
+}
