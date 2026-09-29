@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "340",
+  "title": "تصميم خلفية ضبابية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تطبيق تأثير الضبابية على صور الخلفية",
+    "التعرف على خاصية filter و blur",
+    "تعلم كيفية وضع النصوص فوق الصور",
+    "تنسيق العناصر باستخدام position و transform"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_blurred_background.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول الخلفيات الضبابية",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِنَا الْيَوْمَ حَوْلَ كَيْفِيَّةِ إِنْشَاءِ خَلْفِيَّةٍ ضَبَابِيَّةٍ بِاسْتِخْدَامِ CSS. سَنَتَعَلَّمُ كَيْفَ نُضِيفُ لَمْسَةً جَمَالِيَّةً لِصَفْحَةِ الْوِبّ بِاسْتِخْدَامِ خَاصِيَّةِ filter وَتَأْثِيرِ blur لِتَحْقِيقِ مَظْهَرٍ احْتِرَافِيٍّ لِلْمُصَمِّمِينَ.",
+        "caption_text": "تعلم كيفية إنشاء خلفية ضبابية جذابة باستخدام CSS لتعزيز تصميم صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS لإنشاء تأثيرات بصرية متقدمة",
+          "تطبيق خاصية filter: blur",
+          "تحسين تجربة المستخدم عبر التصميم الجذاب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_blurred_background.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML للصفحة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَحْتَاجُ إِلَى Element لِلْخَلْفِيَّةِ بِكْلَاسِ bg-image، وَآخَرَ لِلنَّصِّ بِكْلَاسِ bg-text. هَذَا التَّقْسِيمُ يُسَاعِدُنَا فِي الْفَصْلِ بَيْنَ الصُّورَةِ وَالْمُحْتَوَى لِتَنْسِيقِهِمَا بِشَكْلٍ مُسْتَقِلٍّ.",
+        "caption_text": "هيكل HTML يتكون من حاوية للصورة وحاوية للنص فوقها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"bg-image\"></div>\n    <div class=\"bg-text\">\n      <h1>I am John Doe</h1>\n      <p>And I'm a Photographer</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_blurred_background.asp"
+      ]
+    },
+    {
+      "id": "css_blur",
+      "title": "تطبيق تأثير الضبابية",
+      "narration": {
+        "spoken_text": "فِي CSS، نَضْبُطُ الْارْتِفَاعَ إِلَى مِئَةٍ بِالْمِئَةِ. نَسْتَخْدِمُ خَاصِيَّةَ filter مَعَ قِيمَةِ blur لِتَحْقِيقِ الضَّبَابِيَّةِ. لَا تَنْسَ إِضَافَةَ -webkit-filter لِضَمَانِ التَّوَافُقِيَّةِ مَعَ مُتَصَفِّحَاتِ الْوِبّ الْمُخْتَلِفَةِ.",
+        "caption_text": "استخدام filter: blur لتطبيق التأثير على عنصر الخلفية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bg-image {\n  background-image: url(\"photographer.jpg\");\n  filter: blur(8px);\n  -webkit-filter: blur(8px);\n  height: 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_blurred_background.asp"
+      ]
+    },
+    {
+      "id": "text_positioning",
+      "title": "تنسيق النص في المنتصف",
+      "narration": {
+        "spoken_text": "لِوَضْعِ النَّصِّ فِي مُنْتَصَفِ الصَّفْحَةِ، نَسْتَخْدِمُ position absolute مَعَ transform translate. هَذِهِ الطَّرِيقَةُ تَضْمَنُ تَمَرْكُزَ الْعُنْصُرِ بِدِقَّةٍ، بَيْنَمَا نُضِيفُ خَلْفِيَّةً سَوْدَاءَ شَفَّافَةً بِاسْتِخْدَامِ rgba لِجَعْلِ النَّصِّ مَقْرُوءاً.",
+        "caption_text": "استخدام position و transform لتوسيط النص فوق الخلفية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bg-text {\n  background-color: rgba(0,0,0, 0.4);\n  color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n  padding: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_blurred_background.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَنْفِيذِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ صُورَةُ الْخَلْفِيَّةِ بِتَأْثِيرٍ ضَبَابِيٍّ نَاعِمٍ، وَيَتَمَرْكُزُ النَّصُّ فِي مُنْتَصَفِ الشَّاشَةِ دَاخِلَ إِطَارٍ شَفَّافٍ، مِمَّا يُعْطِي مَظْهَراً جَذَّاباً وَمُتَنَاسِقاً لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "النتيجة النهائية: خلفية ضبابية مع نص متمركز بوضوح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[ Blurred Background Image ]\n[   I am John Doe    ]\n[ Photographer Text  ]",
+        "highlight_lines": [],
+        "output": "تأثير ضبابي كامل مع نص في المنتصف",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_blurred_background.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات تقنية هامة",
+      "narration": {
+        "spoken_text": "يَجِبُ مُرَاعَاةُ أَنَّ هَذَا التَّأْثِيرَ قَدْ لَا يَعْمَلُ فِي الْمُتَصَفِّحَاتِ الْقَدِيمَةِ مِثْلَ IE 11. احْرِصْ دَائِماً عَلَى اخْتِبَارِ تَصَامِيمِكَ فِي مُتَصَفِّحَاتٍ حَدِيثَةٍ مِثْلَ Chrome أَوْ Edge لِضَمَانِ أَفْضَلِ أَدَاءٍ.",
+        "caption_text": "نصائح حول التوافقية مع المتصفحات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تأثير blur لا يدعم المتصفحات القديمة",
+          "استخدام -webkit-prefix للتوافق",
+          "اختبار التصميم في متصفحات حديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_blurred_background.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمَ. نَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ قِيَمِ blur لِلْحُصُولِ عَلَى نَتَائِجَ مُخْتَلِفَةٍ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجع الأكواد من الرابط",
+          "جرب تغيير قيم blur",
+          "استمر في التعلم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_blurred_background.asp"
+      ]
+    }
+  ]
+}
