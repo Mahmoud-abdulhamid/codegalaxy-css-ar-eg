@@ -3,6 +3,8 @@
   "lesson_id": "48",
   "title": "CSS Outline Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية استخدام خاصية outline في CSS",
     "التمييز بين outline و border في تصميم الويب",
