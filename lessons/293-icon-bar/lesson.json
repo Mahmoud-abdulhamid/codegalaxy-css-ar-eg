@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "293",
+  "title": "تصميم شريط أيقونات احترافي باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية بناء شريط أيقونات عمودي وأفقي",
+    "استخدام مكتبة Font Awesome للأيقونات",
+    "تطبيق خصائص CSS للتحكم في التخطيط",
+    "إضافة تأثيرات تفاعلية عند التمرير"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_icon_bar.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول شريط الأيقونات",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ Icon Bar احْتِرَافِيٍّ لِمَوَاقِعِ الْوِبّ بِاسْتِخْدَامِ CSS، سَوَاءً كَانَ هَذَا الشَّرِيطُ عَمُودِيّاً أَوْ أُفُقِيّاً، مِمَّا يُضِيفُ لَمْسَةً جَمَالِيَّةً وَتَفَاعُلِيَّةً لِتَصْمِيمِ صَفْحَتِكُمْ.",
+        "caption_text": "سنتعلم اليوم كيفية بناء Icon Bar احترافي لمواقع الويب باستخدام CSS، سواء كان هذا الشريط عموديا أو أفقيا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء شريط أيقونات جذاب",
+          "دعم التخطيط العمودي والأفقي",
+          "إضافة تأثيرات تفاعلية",
+          "استخدام مكتبة Font Awesome"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_bar.asp"
+      ]
+    },
+    {
+      "id": "html-structure",
+      "title": "الهيكل البرمجي للأيقونات",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَحْتَاجُ أَوَّلاً لِرَبْطِ مَكْتَبَةِ Font Awesome لِعَرْضِ الْأَيْقُونَاتِ. بَعْدَهَا نَسْتَخْدِمُ div بِكَلَاسِ icon-bar، وَدَاخِلَهُ نَضَعُ رَوَابِطَ a تَحْتَوِي عَلَى i تَمْثُلُ الْأَيْقُونَاتِ الْمُخْتَلِفَةَ مِثْلَ الْبَيْتِ وَالْبَحْثِ.",
+        "caption_text": "نستخدم مكتبة Font Awesome لعرض الأيقونات داخل عناصر a ضمن حاوية icon-bar."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  </head>\n  <body>\n    <div class=\"icon-bar\">\n      <a class=\"active\" href=\"#\"><i class=\"fa fa-home\"></i></a>\n      <a href=\"#\"><i class=\"fa fa-search\"></i></a>\n      <a href=\"#\"><i class=\"fa fa-envelope\"></i></a>\n      <a href=\"#\"><i class=\"fa fa-globe\"></i></a>\n      <a href=\"#\"><i class=\"fa fa-trash\"></i></a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_bar.asp"
+      ]
+    },
+    {
+      "id": "vertical-css",
+      "title": "تنسيق الشريط العمودي",
+      "narration": {
+        "spoken_text": "لِتَصْمِيمِ شَرِيطٍ عَمُودِيٍّ، نُعْطِي icon-bar عَرْضاً مُحَدَّداً وَلَوْنَ خَلْفِيَّةٍ. نَجْعَلُ الرَّوَابِطَ display: block لِتَظْهَرَ فَوْقَ بَعْضِهَا، مَعَ ضَبْطِ text-align إِلَى center، وَإِضَافَةِ padding مُنَاسِبٍ لِتَحْسِينِ الْمَظْهَرِ الْعَامِّ لِلْأَيْقُونَاتِ.",
+        "caption_text": "نستخدم display: block لجعل الروابط تظهر فوق بعضها في الشريط العمودي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".icon-bar {\n  width: 90px;\n  background-color: #555;\n}\n.icon-bar a {\n  display: block;\n  text-align: center;\n  padding: 16px;\n  color: white;\n  font-size: 36px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_bar.asp"
+      ]
+    },
+    {
+      "id": "horizontal-css",
+      "title": "تنسيق الشريط الأفقي",
+      "narration": {
+        "spoken_text": "أَمَّا فِي الشَّرِيطِ الْأُفُقِيِّ، فَنَجْعَلُ الْعَرْضَ 100، وَنَسْتَخْدِمُ float: left لِتَرْتِيبِ الرَّوَابِطِ جَنْباً إِلَى جَنْبٍ. نُعْطِي كُلَّ رَابِطٍ عَرْضاً يُسَاوِي 20 لِيَتَمَكَّنَ الْخَمْسَةُ أَيْقُونَاتٍ مِنَ التَّوَزُّعِ بِالتَّسَاوِي عَلَى كَامِلِ عَرْضِ الشَّاشَةِ.",
+        "caption_text": "نستخدم float: left وعرض 20 لكل رابط لتوزيع الأيقونات أفقيا بالتساوي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".icon-bar {\n  width: 100%;\n  background-color: #555;\n  overflow: auto;\n}\n.icon-bar a {\n  float: left;\n  width: 20%;\n  text-align: center;\n  padding: 12px 0;\n  color: white;\n  font-size: 36px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_bar.asp"
+      ]
+    },
+    {
+      "id": "hover-effects",
+      "title": "إضافة التأثيرات التفاعلية",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ حَيَوِيَّةٍ، نَسْتَخْدِمُ transition لِتَنْعِيمِ التَّغَيُّرَاتِ. عِنْدَ التَّمْرِيرِ بِالْفَأْرَةِ hover، نُغَيِّرُ لَوْنَ الْخَلْفِيَّةِ إِلَى الْأَسْوَدِ. كَمَا نُخَصِّصُ كَلَاسَ active لِتَمْيِيزِ الْأَيْقُونَةِ النَّشِطَةِ بِاللَّوْنِ الْأَخْضَرِ الْجَذَّابِ.",
+        "caption_text": "نستخدم hover و transition لإضافة تأثيرات تفاعلية عند التمرير، مع تمييز العنصر النشط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".icon-bar a:hover {\n  background-color: #000;\n}\n.active {\n  background-color: #04AA6D;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_bar.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ شَرِيطِ أَيْقُونَاتٍ مَرِنٍ وَجَذَّابٍ. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ التَّجْرِبَةِ وَتَعْدِيلِ الْقِيَمِ لِتُنَاسِبَ تَصْمِيمَكُمْ. أَدْعُوكُمْ لِزِيَارَةِ الرَّابِطِ فِي الْوَصْفِ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "لقد تعلمنا بناء شريط أيقونات مرن. جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS للتحكم في التخطيط",
+          "تطبيق تأثيرات hover و transition",
+          "تنسيق العناصر النشطة بـ active",
+          "تطوير مهارات تصميم واجهات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_bar.asp"
+      ]
+    }
+  ]
+}
