@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "124",
+  "title": "CSS Dropdowns Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية بناء Dropdowns باستخدام CSS",
+    "التحكم في ظهور العناصر عند التفاعل",
+    "تطبيق مفاهيم الـ Positioning و Display",
+    "حل تحديات البرمجة في CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_dropdowns.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Dropdowns",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنُحَلِّلُ تَحَدِّي Dropdowns لِنَفْهَمَ كَيْفَ نَبْنِي قَوَائِمَ مُنْسَدِلَه تَظْهَرُ عِنْدَ التَّفَاعُلِ مَعَ عَنَاصِرِ صَفْحَةِ الْوِبّ بِطَرِيقَه احْتِرَافِيَّه وَسَلِسَه.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS. اليوم سنحلل تحدي Dropdowns لنفهم كيف نبني قوائم منسدلة تظهر عند التفاعل مع عناصر صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على مفهوم الـ Dropdowns",
+          "أهمية القوائم المنسدلة في واجهات المستخدم",
+          "استخدام CSS للتحكم في حالة الظهور"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للـ Dropdowns",
+      "narration": {
+        "spoken_text": "لِتَنْفِيذ Dropdowns نَحْتَاجُ إِلَى عُنْصُرٍ حَاوٍ لِلْقَائِمَه، وَعُنْصُرٍ آخَرَ لِلْمُحْتَوَى الْمُنْسَدِلِ. نَسْتَخْدِمُ خَاصِيَّةِ display مَعَ قيمَةِ none لِإِخْفَاءِ الْقَائِمَه، ثُمَّ نُغَيِّرُهَا إِلَى block عِنْدَ حَدَث hover عَلَى الْحَاوِي.",
+        "caption_text": "لتنفيذ Dropdowns نحتاج إلى عنصر حاو للقائمة، وعنصر آخر للمحتوى المنسدل. نستخدم خاصية display مع قيمة none للإخفاء، ثم نغيرها إلى block عند حدث hover."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display: none للإخفاء",
+          "استخدام :hover لتفعيل الظهور",
+          "تنسيق القائمة باستخدام position: absolute"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَسْتَخْدِم div بِكْلَاس dropdown لِتَغْلِيفِ الزِّرِّ وَالْقَائِمَه. الْقَائِمَه تَكُونُ بِكْلَاس dropdown-content، وَهِيَ الَّتِي نَتَحَكَّمُ فِي ظُهُورِهَا وَاخْتِفَائِهَا بِوَاسِطَةِ CSS.",
+        "caption_text": "نستخدم div بكلاس dropdown لتغليف الزر والقائمة. القائمة تكون بكلاس dropdown-content، وهي التي نتحكم في ظهورها واختفائها بواسطة CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"dropdown\">\n      <button>Menu</button>\n      <div class=\"dropdown-content\">\n        <a href=\"#\">Link 1</a>\n        <a href=\"#\">Link 2</a>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "css_logic",
+      "title": "منطق الـ CSS للتحكم",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْجُزْءِ، نَضْبُط dropdown-content عَلَى position: absolute لِتَكُونَ فَوْقَ الْعَنَاصِرِ الْأُخْرَى. نَضْبُط display عَلَى none، وَعِنْدَ حُدُوث hover عَلَى dropdown، نُحَوِّل display إِلَى block لِتَظْهَرَ الْقَائِمَه.",
+        "caption_text": "نضبط dropdown-content على position: absolute لتكون فوق العناصر الأخرى. نضبط display على none، وعند حدوث hover على dropdown، نحول display إلى block لتظهر القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropdown-content {\n  display: none;\n  position: absolute;\n}\n.dropdown:hover .dropdown-content {\n  display: block;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَرَى زِرّاً فِي صَفْحَةِ الْوِبّ. عِنْدَ تَحْرِيكِ مُؤَشِّرِ الْفَأْرَه فَوْقَهُ، سَتَنْسَدِلُ الْقَائِمَه الْمُخْتَفِيَه أَمَامَكَ بِسُهُولَه، وَهَذَا هُوَ الْمَطْلُوبُ فِي تَحَدِّي CSS الْخَاصِّ بِنَا.",
+        "caption_text": "عند تطبيق هذه الأكواد، سترى زرا في صفحة الويب. عند تحريك مؤشر الفأرة فوقه، ستنسدل القائمة المختفية أمامك بسهولة، وهذا هو المطلوب في تحدي CSS الخاص بنا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[Menu] \n(Hovering over Menu)\n[Link 1]\n[Link 2]",
+        "highlight_lines": [],
+        "output": "Menu\nLink 1\nLink 2",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، احْرِصُوا دائماً عَلَى إِضَافَةِ z-index لِضَمَانِ ظُهُورِ الْقَائِمَه فَوْقَ كُلِّ شَيْءٍ. كَمَا يُفَضَّلُ إِضَافَةِ background-color و padding لِتَحْسِينِ مَظْهَرِ الْقَائِمَه وَجَعْلِهَا أَكْثَرَ قَابِلِيَّه لِلْقِرَاءَه وَالتَّفَاعُلِ.",
+        "caption_text": "احرصوا دائما على إضافة z-index لضمان ظهور القائمة فوق كل شيء. كما يفضل إضافة background-color و padding لتحسين مظهر القائمة وجعلها أكثر قابلية للقراءة والتفاعل."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام z-index للتحكم في الطبقات",
+          "إضافة padding لتحسين المساحات",
+          "تنسيق الألوان لتعزيز تجربة المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة وتحدي",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا شَرْحَ تَحَدِّي Dropdowns. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو، وَمُحَاوَلَةِ تَطْوِيرِهِ بِإِضَافَه تَأْثِيرَاتٍ حَرَكِيَّه جَدِيدَه. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "بهذا نكون قد أتممنا شرح تحدي Dropdowns. أدعوكم لتجربة الكود بأنفسكم عبر الرابط الموجود في وصف الفيديو، ومحاولة تطويره بإضافة تأثيرات حركية جديدة. إلى اللقاء في درس قادم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا الرابط في المصادر",
+          "طبقوا الأكواد في محرركم الخاص",
+          "استمروا في ممارسة CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_dropdowns.asp"
+      ]
+    }
+  ]
+}
