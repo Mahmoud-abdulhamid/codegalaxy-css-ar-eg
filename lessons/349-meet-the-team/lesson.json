@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "349",
+  "title": "بناء صفحة فريق العمل باحترافية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تصميم صفحة Meet The Team استجابة للشاشات المختلفة",
+    "استخدام خاصية float و column لترتيب الأعمدة بجانب بعضها",
+    "تطبيق ظلال وتاثيرات جمالية باستخدام box-shadow و card",
+    "جعل التصميم متجاوبا Responsive باستخدام Media Queries"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_team.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة صفحة فريق العمل",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ عَلَى طَرِيقَةِ بِنَاءِ صَفْحَةِ فَرِيقِ الْعَمَلِ أَوْ مَا تُسَمَّى Meet The Team بِلُغَةِ CSS لِعَرْضِ الْمُوَظَّفِينَ فِي الشَّرِكَةِ.",
+        "caption_text": "مرحبا بكم في درس تصميم صفحة Meet The Team باستخدام CSS لعرض أعضاء الشركة باحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصميم صفحة Meet The Team استجابة للشاشات المختلفة",
+          "عرض معلومات الموظفين وطرق التواصل بداخل بطاقات جذابة",
+          "استخدام لغة CSS لبناء تخطيط مرن واحترافي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_team.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "هيكل HTML الخاص بالبطاقات",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوْلاً بِتَمْثِيلِ هَيْكَلِ HTML لِصَفْحَةِ الْفَرِيقِ حَيْثُ نَسْتَخْدِمُ Container رئيسي يسمى row ثُمَّ نُقَسِّمُهُ إِلَى عناصر column وَ card لِكُلِّ مُظَفَّفٍ مِثْلَ Jane Doe وَ Mike Ross.",
+        "caption_text": "هيكل HTML يعتمد على عناصر row و column و card لكل موظف في الفريق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "team.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"row\">\n      <div class=\"column\">\n        <div class=\"card\">\n          <img src=\"img1.jpg\" alt=\"Jane\" style=\"width:100%\">\n          <div class=\"container\">\n            <h2>Jane Doe</h2>\n            <p class=\"title\">CEO &amp; Founder</p>\n            <p>Some text that describes me.</p>\n            <p>example@example.com</p>\n            <p><button class=\"button\">Contact</button></p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عرض بطاقة الموظف مع الصورة والاسم والمسمى الوظيفي وزر التفاعل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_team.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق الأعمدة وتوزيعها",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ لِكِتَابَةِ تَنْسِيقَاتِ CSS لِأَعْمِدَةِ الْفَرِيقِ. نَسْتَخْدِمُ خَاصِيَّةَ float لِعَرْضِ ثَلَاثَةِ أَعْمِدَةٍ جنباً إلى جنب بِعَرْضِ ثَلَاثِينَ وَثُلُثِ المِئَةِ لِكُلِّ عُنْصُرٍ.",
+        "caption_text": "نستخدم خاصية float لعرض الأعمدة بجانب بعضها بنسبة عرض متساوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".column {\n  float: left;\n  width: 33.3%;\n  margin-bottom: 16px;\n  padding: 0 8px;\n}",
+        "highlight_lines": [],
+        "output": "توزيع الأعمدة الثلاثة أفقياً داخل الصف.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_team.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "إضافة تأثير البطاقات والظلال",
+      "narration": {
+        "spoken_text": "لِإِعْطَاءِ مَظْهَرٍ جَمَالِيٍّ مُجَسَّمٍ لِلطَّبَقَاتِ نُطَبِّقُ خَاصِيَّةَ box-shadow عَلَى عُنْصُرِ card مَعَ تَحْدِيدِ حَوَاشِئِ dody الداخلية داخل الحاوية container لضمان تناسق المسافات.",
+        "caption_text": "نضيف تأثير الظلال باستخدام box-shadow لتبدو البطاقات بارزة وجميلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".card {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\n}\n.container {\n  padding: 0 16px;\n}",
+        "highlight_lines": [],
+        "output": "تطبيق ظل خفيف وحواف داخلية مرتبة حول المحتوى.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_team.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "إدارة عناصر الـ Float وتنظيفها",
+      "narration": {
+        "spoken_text": "لِتَفَادِي مَشَاكِلِ تَدَاخُلِ العَنَاصِرِ العَائِمَةِ float، نَسْتَخْدِمُ الوَسِيطَةَ after لِكُلٍّ مِنَ container وَ row مَعَ تَطْبِيقِ خَاصِيَّةِ clear لِإِعَادَةِ الضَّبْطِ بِشَكْلٍ صَحِيحٍ.",
+        "caption_text": "نستخدم الخصائص الوهمية after لتنظيف عناصر ال float ومنع التداخل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container::after,\n.row::after {\n  content: \"\";\n  clear: both;\n  display: table;\n}",
+        "highlight_lines": [],
+        "output": "منع تداخل العناصر وترتيب المحتوى بدقة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_team.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "تنسيق الأزرار والمسميات الوظيفية",
+      "narration": {
+        "spoken_text": "نُصَمِّمُ زِرَّ التَّوَاصُلِ button بِخَلْفِيَّةٍ سَوْدَاءِ وَنَصٍّ أَبْيَضَ، مَعَ تَفْعِيلِ تَأْثِيرِ hover لِتَغْيِيرِ اللُّوْنِ عِنْدَ مُرُورِ الْمَاوْسِ، وَتَلْوِينِ عُنْصُرِ title بِاللَّوْنِ الرَّمَادِيِّ.",
+        "caption_text": "ننسق الأزرار والمسميات الوظيفية لتكون جذابة وتتفاعل مع حركة الماوس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".title {\n  color: grey;\n}\n.button {\n  border: none;\n  outline: 0;\n  display: inline-block;\n  padding: 8px;\n  color: white;\n  background-color: #000;\n  text-align: center;\n  cursor: pointer;\n  width: 100%;\n}\n.button:hover {\n  background-color: #555;\n}",
+        "highlight_lines": [],
+        "output": "زر تفاعلي بلون أسود يتحول إلى رمادي داكن عند مرور المؤشر.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_team.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "التجاوب مع الشاشات الصغيرة باستخدام Media Queries",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الصَّفْحَةِ مُتَجَاوِبَةً تَمَاماً مَعَ الشَّاشَاتِ الصَّغِيرَةِ، نَسْتَخْدِمُ Media Query عِنْدَ عَرْضِ أَقَلَّ مِنْ سِتِّمِائَةٍ وَخَمْسِينَ بِكْسِلْ لِيُصْبِحَ عَرْضُ الأعمدة مِئَةً بِالْمِئَةِ وَتَتَرَتَّبُ تَحْتَ بَعْضِهَا.",
+        "caption_text": "نستخدم Media Query لتغيير عرض الأعمدة إلى مئة بالمئة على الشاشات الصغيرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 650px) {\n  .column {\n    width: 100%;\n    display: block;\n  }\n}",
+        "highlight_lines": [],
+        "output": "تراصف البطاقات رأسياً فوق بعضها على الهواتف المحمولة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_team.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نَبْنِي صَفْحَةَ فَرِيقِ عَمَلٍ احترافية ومتجاوبة باستخدام CSS. نَتَمَنَى أَنْ تَكُونُوا قَدِ اسْتَفَدْتُمْ، وَنَنْتَظِرُكُمْ فِي الدَّرْسِ الْقَادِمِ مَعَ مَهَارَاتٍ جَدِيدَةٍ بِقِيَادَةِ الْمُدَرِّبِ مَحْمُودِ عَبْدِالْحَمِيدِ.",
+        "caption_text": "تعلمنا تصميم صفحة Meet The Team باحترافية وتجاوب كامل مع كافة الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تلخيص خطوات بناء صفحة Meet The Team الاستجابية",
+          "استخدام الـ Float والـ Flexbox والـ Media Queries",
+          "تطبيق الظلال والأزرار التفاعلية لتجربة مستخدم ممتازة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_team.asp"
+      ]
+    }
+  ]
+}
