@@ -1,0 +1,5 @@
+@property --myColor {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
