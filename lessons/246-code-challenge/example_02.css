@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  background-color: #f1f1f1;
+}
+.container > div {
+  background-color: dodgerblue;
+  margin: 10px;
+  padding: 20px;
+}
