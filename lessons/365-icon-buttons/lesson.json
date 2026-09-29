@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "365",
+  "title": "تصميم أزرار الأيقونات باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية دمج مكتبات الأيقونات الخارجية في صفحات الويب",
+    "استخدام HTML لإنشاء أزرار تحتوي على أيقونات",
+    "تطبيق تنسيقات CSS المتقدمة على الأزرار",
+    "تحسين تجربة المستخدم عبر تأثيرات التفاعل"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_icon_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول أزرار الأيقونات",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ أَزْرَارِ أَيْقُونَاتٍ احْتِرَافِيَّةٍ لِتَحْسِينِ وَاجِهَةِ الْمُسْتَخْدِمِ فِي صَفْحَةِ الْوِبّ، وَكَيْفَ نَدْمِجُ مَكْتَبَاتِ الأيقونات مِثْلَ Font Awesome بِسُهُولَةٍ.",
+        "caption_text": "تعلم كيفية تصميم أزرار الأيقونات الاحترافية باستخدام CSS ودمج مكتبات الأيقونات الخارجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية الأيقونات في تحسين تجربة المستخدم",
+          "استخدام مكتبات الأيقونات مثل Font Awesome",
+          "تطبيق CSS لتنسيق الأزرار بشكل جذاب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_buttons.asp"
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "إعداد مكتبة الأيقونات",
+      "narration": {
+        "spoken_text": "لِتَشْغِيلِ الأيقونات، نَحْتَاجُ أَوَّلاً إِلَى رَبْطِ مَكْتَبَةِ Font Awesome دَاخِلَ قِسْمِ head فِي مِلَفِّ HTML. نَسْتَخْدِمُ لِذَلِكَ التَّاجَ link مَعَ السِّمَةِ href لِتَحْدِيدِ مَسَارِ الْمَلَفِّ، وَبِذَلِكَ نُصْبِحُ قَادِرِينَ عَلَى اسْتِدْعَاءِ أَيِّ أَيْقُونَةٍ نُرِيدُهَا.",
+        "caption_text": "ربط مكتبة Font Awesome داخل قسم head في مستند HTML باستخدام Tag link."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  </head>\n  <body>\n    <h1>Hello World</h1>\n    <p>Styled Web Page</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_buttons.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكلة أزرار الأيقونات",
+      "narration": {
+        "spoken_text": "الآن نَقُومُ بِإِنْشَاءِ أزرارٍ بِاسْتِخْدَامِ التَّاجَ button، وَنَضَعُ دَاخِلَهُ التَّاجَ i مَعَ كِلَاسَاتٍ مُحَدَّدَةٍ لِتَظْهَرَ الأيقونة. يُمْكِنُنَا أَيْضاً إِضَافَةُ نَصٍّ بِجَانِبِ الأيقونة لِتَوْضِيحِ وَظِيفَةِ الزِّرِّ لِلْمُسْتَخْدِمِ بِشَكْلٍ أَفْضَلَ.",
+        "caption_text": "استخدام Tag button مع Tag i لإضافة الأيقونات، مع إمكانية دمج النصوص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <button class=\"btn\">\n      <i class=\"fa fa-home\"></i> Home\n      </button>\n      <button class=\"btn\">\n        <i class=\"fa fa-trash\"></i> Trash\n        </button>\n      </body>\n    </html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_buttons.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق الأزرار بـ CSS",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ الأزرار، نَسْتَخْدِمُ CSS لِتَحْدِيدِ background-color وَإِزَالَةِ border. نُضِيفُ padding لِتَوْسِيعِ مَسَاحَةِ الزِّرِّ، وَنَضْبِطُ font-size لِتَنَاسُبِ الأيقونة، مَعَ جَعْلِ cursor يَظْهَرُ ك pointer عِنْدَ التَّحْوِيمِ.",
+        "caption_text": "تطبيق تنسيقات CSS الأساسية للتحكم في مظهر الأزرار وحجمها وتفاعلها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn {\n  background-color: DodgerBlue;\n  border: none;\n  color: white;\n  padding: 12px 16px;\n  font-size: 16px;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_buttons.asp"
+      ]
+    },
+    {
+      "id": "hover_effect",
+      "title": "تأثير التفاعل عند التمرير",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ لَمْسَةٍ جَمَالِيَّةٍ، نَسْتَخْدِمُ ال pseudo-class الَّتِي تُسَمَّى hover. عِنْدَ تَحْوِيمِ الْمُؤَشِّرِ فَوْقَ الزِّرِّ، نُغَيِّرُ لَوْنَ الْخَلْفِيَّةِ إِلَى RoyalBlue، مِمَّا يُعْطِي تَغْذِيَةً رَاجِعَةً بَصَرِيَّةً لِلْمُسْتَخْدِمِ أَنَّ هَذَا الْعُنْصُرَ قَابِلٌ لِلنَّقْرِ.",
+        "caption_text": "استخدام hover لتغيير لون الزر عند مرور مؤشر الفأرة فوقه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn:hover {\n  background-color: RoyalBlue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_buttons.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ أَزْرَارِ أَيْقُونَاتٍ عَصْرِيَّةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الأكواد بِنَفْسِكُمْ وَتَطْوِيرِهَا. لَا تَنْسَوْا مُرَاجَعَةَ دُرُوسِ CSS Buttons وَ Icons لِتَعْمِيقِ مَعْرِفَتِكُمْ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة الدرس: تم بناء أزرار أيقونات تفاعلية. جرب الأكواد بنفسك وراجع دروس CSS Buttons."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دمج مكتبة Font Awesome",
+          "استخدام Tag button و i",
+          "تنسيق الأزرار بـ CSS",
+          "إضافة تأثير hover للتفاعل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_icon_buttons.asp"
+      ]
+    }
+  ]
+}
