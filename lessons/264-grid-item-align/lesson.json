@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "264",
+  "title": "CSS Grid Items Alignment",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية محاذاة العناصر داخل خلايا CSS Grid",
+    "التعرف على خاصية justify-self للمحاذاة الأفقية",
+    "التعرف على خاصية align-self للمحاذاة الرأسية",
+    "تطبيق المحاذاة على عناصر فردية داخل الـ Grid"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid_item_align.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في محاذاة عناصر Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي مَوْضِعِ الْعَنَاصِرِ دَاخِلَ خَلَايَا ال Grid بِاسْتِخْدَامِ خَصَائِصِ الْمُحَاذَاةِ لِتَحْقِيقِ تَصْمِيمٍ احْتِرَافِيٍّ لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس محاذاة عناصر Grid باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم CSS Grid لتنظيم العناصر في شبكة",
+          "يمكن محاذاة كل عنصر داخل خليته الخاصة",
+          "نتعلم اليوم خصائص justify-self و align-self"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_align.asp"
+      ]
+    },
+    {
+      "id": "justify-self-concept",
+      "title": "خاصية justify-self",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةُ justify-self لِمُحَاذَاةِ الْعُنْصُرِ دَاخِلَ خَلِيَّتِهِ فِي ال inline direction. فِي اللُّغَةِ الْإِنْجِلِيزِيَّةِ، يَعْنِي هَذَا الْمُحَاذَاةَ مِنَ الْيَسَارِ إِلَى الْيَمِينِ، وَيَتَطَلَّبُ ذَلِكَ وُجُودَ مَسَاحَةٍ فَارِغَةٍ حَوْلَ الْعُنْصُرِ.",
+        "caption_text": "خاصية justify-self تتحكم في المحاذاة الأفقية للعنصر داخل خليته."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "justify-self تتحكم في المحاذاة الأفقية",
+          "تتطلب مساحة إضافية داخل الخلية لتعمل",
+          "القيم تشمل start و end و center و stretch"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_align.asp"
+      ]
+    },
+    {
+      "id": "justify-self-code",
+      "title": "تطبيق justify-self",
+      "narration": {
+        "spoken_text": "لِنُطَبِّقْ هَذَا مَعاً. نَقُومُ بِتَحْدِيدِ الْعُنْصُرِ item1 وَنَضْبِطُ justify-self عَلَى right، بَيْنَمَا نَضْبِطُ item6 عَلَى center. هَذَا يُؤَدِّي إِلَى تَحْرِيكِ الْعَنَاصِرِ دَاخِلَ مَسَاحَةِ الْخَلِيَّةِ الْمُخَصَّصَةِ لَهَا.",
+        "caption_text": "مثال برمجي لاستخدام justify-self مع عناصر Grid."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  justify-self: right;\n}\n.item6 {\n  justify-self: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_align.asp"
+      ]
+    },
+    {
+      "id": "align-self-concept",
+      "title": "خاصية align-self",
+      "narration": {
+        "spoken_text": "أَمَّا خَاصِيَّةُ align-self فَهِيَ مَسْؤُولَةٌ عَنِ الْمُحَاذَاةِ فِي ال block direction، أَيْ مِنَ الْأَعْلَى إِلَى الْأَسْفَلِ. مِثْلَ السَّابِقَةِ، تَحْتَاجُ هَذِهِ الْخَاصِيَّةُ إِلَى وُجُودِ مَسَاحَةٍ كَافِيَةٍ لِتَظْهَرَ نَتِيجَةُ الْمُحَاذَاةِ بِشَكْلٍ وَاضِحٍ.",
+        "caption_text": "خاصية align-self تتحكم في المحاذاة الرأسية للعنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "align-self تتحكم في المحاذاة الرأسية",
+          "تعمل في اتجاه block direction",
+          "تتطلب مساحة إضافية داخل الخلية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_align.asp"
+      ]
+    },
+    {
+      "id": "align-self-code",
+      "title": "تطبيق align-self",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَحْدِيدِ item1 لِيَبْدَأَ مِنَ الْأَعْلَى بِاسْتِخْدَامِ start، وَنَجْعَلُ item6 فِي الْمُنْتَصَفِ بِاسْتِخْدَامِ center. هَذَا يُعْطِينَا تَحَكُّماً دَقِيقاً فِي تَوْزِيعِ الْعَنَاصِرِ رَأْسِيّاً.",
+        "caption_text": "مثال برمجي لاستخدام align-self مع عناصر Grid."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  align-self: start;\n}\n.item6 {\n  align-self: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_align.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْخَصَائِصِ، سَتُحَاذَى الْعَنَاصِرُ دَاخِلَ خَلَايَا الشَّبَكَةِ بِنَاءً عَلَى الْقِيَمِ الْمُعْطَاةِ. هَذَا يُسَاعِدُ فِي تَحْسِينِ التَّنَاسُقِ الْبَصَرِيِّ لِتَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تظهر العناصر داخل الشبكة محاذية وفقا للخصائص المطبقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Grid Cell [ .item1 ] -> Aligned Right / Start\nGrid Cell [ .item6 ] -> Aligned Center / Center",
+        "highlight_lines": [],
+        "output": "توزيع العناصر داخل خلايا الشبكة حسب المحاذاة المحددة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_align.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، تَعَلَّمْنَا أَنَّ justify-self وَ align-self هُمَا أَدَوَاتٌ قَوِيَّةٌ لِتَحْرِيكِ الْعَنَاصِرِ دَاخِلَ خَلَايَا ال Grid. نَنْصَحُكُمْ بِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا النَّتَائِجَ مُبَاشَرَةً.",
+        "caption_text": "خلاصة: استخدم justify-self و align-self للتحكم الكامل في محاذاة عناصر Grid."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "justify-self للمحاذاة الأفقية",
+          "align-self للمحاذاة الرأسية",
+          "تأكد من وجود مساحة كافية للخلية",
+          "جرب الأكواد عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_align.asp"
+      ]
+    }
+  ]
+}
