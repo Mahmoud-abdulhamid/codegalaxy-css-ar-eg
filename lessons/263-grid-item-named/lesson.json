@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "263",
+  "title": "تسمية عناصر شبكة CSS Grid باستخدام grid-area",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام خاصية grid-template-areas لتحديد مناطق شبكة الويب",
+    "تسمية عناصر Grid باستخدام خاصية grid-area وربطها بالخواص",
+    "استخدام نقطة (.) للدلالة على الخلايا الفارغة غير المسمى عناصرها",
+    "بناء نموذج صفحة ويب كامل وجاهز للاستخدام باستخدام Grid"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid_item_name.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة حول تسمية عناصر الشبكة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَسْمِيَةِ عَنَاصِرِ شبكة CSS Grid بِاسْتِخْدَامِ خَاصِيَّةِ grid-area وَتَنْظِيمِ التَّمْضَاتِ بِدِقَّةٍ.",
+        "caption_text": "مرحبا بكم في درس تسمية عناصر CSS Grid وتحديد المناطق بدقة وسهولة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنظيم صفحات الويب باستخدام CSS Grid",
+          "استخدام grid-template-areas لتحديد المناطق",
+          "تسمية العناصر المرئية بأسماء واضحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_name.asp"
+      ]
+    },
+    {
+      "id": "scene_2_grid_area_concept",
+      "title": "مفهوم خصائص التسمية والمناطق",
+      "narration": {
+        "spoken_text": "خَاصِيَّةُ grid-template-areas تُمَكِّنُنَا مِنْ تَحْدِيدِ مَنَاطِقَ دَاخِلَ حَاوِيَةِ الويب. نَسْتَخْدِمُ خَاصِيَّةَ grid-area لِتَعْيِينِ اسْمٍ لِلْعُنْصِرِ ثُمَّ الإِشَارَةِ إِلَيْهِ دَاخِلَ الأَقْوَاسِ.",
+        "caption_text": "تتيح خاصية grid-template-areas تحديد مناطق الشبكة وربطها بالأسماء."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "grid-template-areas تخص حاوية الويب",
+          "grid-area تخص العنصر الفردي",
+          "تعريف كل منطقة داخل علامات اقتباس مفصولة بمسافة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_name.asp"
+      ]
+    },
+    {
+      "id": "scene_3_single_item_columns",
+      "title": "توسيع العنصر على عدة أعمدة",
+      "narration": {
+        "spoken_text": "لِنُجَرِّبِ الْمِثَالَ الأَوَّلَ حَيْثُ نَجْعَلُ العنصر item1 يحمل الاسْمَ myHeader ويَمْتَدُّ عَلَى خَمْسَةِ أَعْمِدَةٍ دَاخِلَ شَبَكَةٍ مُتَكَوِّنَةٍ مِنْ خَمْسَةِ أَعْمِدَةٍ.",
+        "caption_text": "جعل العنصر يمتد على خمسة أعمدة باستخدام الأسماء داخل علامات الاقتباس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-areas: 'myHeader myHeader myHeader myHeader myHeader';\n}\n.item1 {\n  grid-area: myHeader;\n}",
+        "highlight_lines": [],
+        "output": "يظهر العنصر ممتداً على كامل عرض الأعمدة الخمسة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_name.asp"
+      ]
+    },
+    {
+      "id": "scene_4_empty_cells_period",
+      "title": "استخدام النقطة للخلايا الفارغة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا اسْتِخْدَامُ نُقْطَةِ الِاسْتِنَادِ لِلتَّعْبِيرِ عَنْ خَلِيَّةٍ فَارِغَةٍ بِلَا اسْمٍ. هَذَا يُسَاعِدُنَا عَلَى تَرْكِ مَسَاحَاتٍ فِارِغَةٍ بِشَكْلٍ مُنَظَّمٍ دَاخِلَ التَّمْضَةِ.",
+        "caption_text": "استخدام رمز النقطة (.) للإشارة إلى عنصر بلا اسم أو خلايا فارغة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-areas: 'myHeader myHeader myHeader . .';\n}\n.item1 {\n  grid-area: myHeader;\n}",
+        "highlight_lines": [],
+        "output": "يمتد العنوان على ثلاثة أعمدة ويترك عمودين فارغين",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_name.asp"
+      ]
+    },
+    {
+      "id": "scene_5_multiple_rows",
+      "title": "تعريف صفوف متعددة في الشبكة",
+      "narration": {
+        "spoken_text": "لِتَعْرِيفِ صَفَّيْنِ أَوْ أَكْثَرَ دَاخِلَ الشَّبَكَةِ، نَسْتَخْدِمُ مَجْمُوعَاتٍ مُتَعَدِّدَةً مِنْ عَلَامَاتِ الِاقْتِبَاسِ لِكُلِّ صَفٍّ عَلَى حِدَةٍ بِمَهَارَةٍ وَسُهُولَةٍ.",
+        "caption_text": "تعريف صفوف متعددة عبر وضع كل صف داخل مجموعة خاصة من علامات الاقتباس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-areas:\n  'myHeader myHeader . . .'\n  'myHeader myHeader . . .';\n}\n.item1 {\n  grid-area: myHeader;\n}",
+        "highlight_lines": [],
+        "output": "يمتد العنصر على عمودين وصفين معاً",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_name.asp"
+      ]
+    },
+    {
+      "id": "scene_6_webpage_template_intro",
+      "title": "بناء قوالب صفحات الويب الجاهزة",
+      "narration": {
+        "spoken_text": "الآن، سَنَقُومُ بِبِنَاءِ قَالِبِ صَفْحَةِ وِبٍّ كَامِلٍ وَجَاهِزٍ لِلِاسْتِخْدَامِ مِنْ خِلَالِ تَسْمِيَةِ جَمِيعِ العَنَاصِرِ مِثْلَ header و menu و main و right و footer.",
+        "caption_text": "بناء قالب صفحة ويب متكامل عبر تسمية كافة العناصر بأسماء دلالية واضحة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تسمية الرأس header والقائمة menu",
+          "تحديد القسم الرئيسي main والمحتوى الجانبي right",
+          "تخصيص التذييل footer في أسفل الشبكة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_name.asp"
+      ]
+    },
+    {
+      "id": "scene_7_webpage_template_code",
+      "title": "كود قالب صفحة الويب المتكامل",
+      "narration": {
+        "spoken_text": "لَاحِظْ كَيْفَ نُوَزِّعُ التَّمْضَاتِ فِي هَذَا الكُودِ لِنَحْصُلَ عَلَى تَصْمِيمِ مَوْقِعٍ اِعْتِيَادِيٍّ يَتَكَوَّنُ مِنْ رَأْسٍ وَقَائِمَةٍ جَانِبِيَّةٍ وَمُحْتَوَى رَئِيسِيٍّ وَتَذْيِيلٍ.",
+        "caption_text": "الكود الكامل لتوزيع مناطق الموقع على الشبكة بشكل احترافي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  grid-area: header;\n}\n.item2 {\n  grid-area: menu;\n}\n.item3 {\n  grid-area: main;\n}\n.item4 {\n  grid-area: right;\n}\n.item5 {\n  grid-area: footer;\n}\n.container {\n  display: grid;\n  grid-template-areas:\n  'header header header header header header'\n  'menu main main main main right'\n  'menu footer footer footer footer footer';\n}",
+        "highlight_lines": [],
+        "output": "هيكل صفحة ويب كامل ومنتظم بعناصر Grid",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_name.asp"
+      ]
+    },
+    {
+      "id": "scene_8_conclusion",
+      "title": "خلاصة الدرس ودعوة للمتابعة",
+      "narration": {
+        "spoken_text": "تَعَرَّفْنَا اليَوْمَ عَلَى الطَّرِيقَةِ الاِحْتِرَافِيَّةِ لِتَسْمِيَةِ عَنَاصِرِ CSS Grid وَبِنَاءِ قَوَالِبِ الويب بِسُهُولَةٍ. نَتَمَنَّى أَنْ يَكُونَ الشَّرْحُ قَدْ نَالَ إِعْجَابَكُمْ، وَنَنْتَظِرُكُم فِي الدَّرْسِ القَادِمِ مَعَ مَحْمُودِ عَبْدِالحَمِيدِ.",
+        "caption_text": "خلاصة درس تسمية عناصر Grid وبناء قوالب الويب المرنة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنظيم وتسمية مناطق الشبكة بمرونة عالية",
+          "تسهيل قراءة صيانة الشفرة البرمجية",
+          "تجربة الأكواد بأنفسكم لمزيد من الفهم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item_name.asp"
+      ]
+    }
+  ]
+}
