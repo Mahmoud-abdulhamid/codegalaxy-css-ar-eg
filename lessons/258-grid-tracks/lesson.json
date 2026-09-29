@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "258",
+  "title": "CSS Grid Tracks",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تحديد عدد وحجم الأعمدة والصفوف في CSS Grid",
+    "استخدام خاصية grid-template-columns",
+    "التعرف على وحدة fr وخصائص repeat و minmax",
+    "التحكم في ارتفاع الصفوف باستخدام grid-template-rows"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid_tracks.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Grid Tracks",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي هَيْكَلِ الصَّفْحَةِ عَبْرَ تَحْدِيدِ عَدَدِ وَأَحْجَامِ الْأَعْمِدَةِ وَالصُّفُوفِ دَاخِلَ grid container بِاسْتِخْدَامِ خَصَائِصِ grid-template-columns وَ grid-template-rows.",
+        "caption_text": "مرحبا بكم في درس CSS Grid Tracks. سنتعلم اليوم كيفية التحكم في هيكل الصفحة عبر تحديد عدد وأحجام الأعمدة والصفوف داخل grid container."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد عدد وحجم الأعمدة والصفوف",
+          "استخدام grid-template-columns",
+          "استخدام grid-template-rows",
+          "التحكم الكامل في تخطيط الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_tracks.asp"
+      ]
+    },
+    {
+      "id": "columns_auto",
+      "title": "خاصية grid-template-columns",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةُ grid-template-columns لِتَحْدِيدِ عَدَدِ وَعَرْضِ الْأَعْمِدَةِ. عِنْدَمَا نَكْتُبُ auto ثَلَاثَ مَرَّاتٍ، نَحْصُلُ عَلَى ثَلَاثَةِ أَعْمِدَةٍ مُتَسَاوِيَةِ الْعَرْضِ تَمَاماً دَاخِلَ الْعُنْصُرِ الَّذِي يَحْمِلُ الْكَلَاسَ container.",
+        "caption_text": "تستخدم خاصية grid-template-columns لتحديد عدد وعرض الأعمدة. عند كتابة auto ثلاث مرات، نحصل على ثلاثة أعمدة متساوية العرض."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-columns: auto auto auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_tracks.asp"
+      ]
+    },
+    {
+      "id": "fr_unit",
+      "title": "وحدة fr للتقسيم المرن",
+      "narration": {
+        "spoken_text": "تُعَدُّ وَحْدَةُ fr اخْتِصَاراً لِ fraction، وَهِيَ تُقَسِّمُ الْمَسَاحَةَ الْمُتَاحَةَ إِلَى أَجْزَاءٍ نِسْبِيَّةٍ. كَمَا تَرَوْنَ، 1fr تُوَزِّعُ الْمَسَاحَةَ بِالتَّسَاوِي، بَيْنَمَا 2fr تَجْعَلُ الْعَمُودَ ضِعْفَ حَجْمِ الْأَعْمِدَةِ الْأُخْرَى.",
+        "caption_text": "تعد وحدة fr اختصارا لـ fraction، وهي تقسم المساحة المتاحة إلى أجزاء نسبية. 1fr توزع المساحة بالتساوي، بينما 2fr تجعل العمود ضعف حجم الأعمدة الأخرى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-columns: 1fr 2fr 1fr;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_tracks.asp"
+      ]
+    },
+    {
+      "id": "functions",
+      "title": "دوال repeat و minmax",
+      "narration": {
+        "spoken_text": "لِتَبْسِيطِ الْأَكْوَادِ، نَسْتَخْدِمُ دَالَّةَ repeat لِتَكْرَارِ الْأَعْمِدَةِ. أَمَّا دَالَّةُ minmax فَتُسَاعِدُنَا فِي تَحْدِيدِ نِطَاقِ حَجْمٍ مَرِنٍ، حَيْثُ لَا يَقِلُّ الْعَمُودُ عَنْ حَجْمٍ مُعَيَّنٍ وَلَا يَزِيدُ عَنْ حَجْمٍ آخَرَ.",
+        "caption_text": "نستخدم دالة repeat لتكرار الأعمدة. أما دالة minmax فتساعدنا في تحديد نطاق حجم مرن، حيث لا يقل العمود عن حجم معين ولا يزيد عن حجم آخر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  /* أو */\n  grid-template-columns: minmax(80px, 1fr) 150px 150px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_tracks.asp"
+      ]
+    },
+    {
+      "id": "rows",
+      "title": "خاصية grid-template-rows",
+      "narration": {
+        "spoken_text": "أَخِيراً، نَسْتَخْدِمُ خَاصِيَّةَ grid-template-rows لِتَحْدِيدِ ارْتِفَاعِ الصُّفُوفِ. فِي هَذَا الْمِثَالِ، نُحَدِّدُ ارْتِفَاعَ الصَّفِّ الْأَوَّلِ بِ 80 بيكسل، وَالصَّفِّ الثَّانِي بِ 200 بيكسل، بَيْنَمَا تَأْخُذُ الصُّفُوفُ التَّالِيَةُ قِيمَةَ auto تِلْقَائِيّاً.",
+        "caption_text": "نستخدم خاصية grid-template-rows لتحديد ارتفاع الصفوف. الصف الأول 80px، والثاني 200px، والصفوف التالية تأخذ قيمة auto تلقائيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-rows: 80px 200px;\n}",
+        "highlight_lines": [],
+        "output": "Row 1: 80px height\nRow 2: 200px height",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_tracks.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ بِنَاءِ هَيْكَلِ الْوِبّ بِاسْتِخْدَامِ CSS Grid. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْخَصَائِصِ بِنَفْسِكُمْ عَبْرَ رَابِطِ الْمَصْدَرِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَتَمَكَّنُوا مِنَ الْمَهَارَاتِ بِشَكْلٍ عَمَلِيٍّ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا اليوم كيفية بناء هيكل الويب باستخدام CSS Grid. أدعوكم لتجربة هذه الخصائص عبر رابط المصدر الموجود في وصف الفيديو."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام grid-template-columns للتحكم في الأعمدة",
+          "استخدام grid-template-rows للتحكم في الصفوف",
+          "استخدام وحدات fr و repeat و minmax",
+          "تجربة الأكواد عبر الرابط المرفق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_tracks.asp"
+      ]
+    }
+  ]
+}
