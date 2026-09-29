@@ -1,0 +1,2 @@
+Grid Container (Block) -> Full Width
+Grid Container (Inline) -> Content Width
