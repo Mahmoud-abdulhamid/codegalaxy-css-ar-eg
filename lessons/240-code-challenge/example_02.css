@@ -1,0 +1,7 @@
+div {
+  color: var(--my-color);
+  transition: --my-color 1s;
+}
+div:hover {
+  --my-color: blue;
+}
