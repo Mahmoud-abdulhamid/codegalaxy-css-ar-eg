@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "126",
+  "title": "CSS Image Gallery Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية بناء معرض صور باستخدام CSS",
+    "تطبيق خصائص Flexbox أو Grid في تصميم المعارض",
+    "تحسين تجربة المستخدم من خلال التنسيق المرئي",
+    "إتمام تحدي البرمجة الخاص بمعرض الصور"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_image_gallery.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي معرض الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّيِ الْعَمَلِيِّ لِبِنَاءِ مَعْرِضِ صُوَرٍ بِاسْتِخْدَام CSS. سَنُطَبِّقُ مَفَاهِيمَ التَّنْسِيقِ لِتَحْوِيلِ مَجْمُوعَه مِنَ الصُّوَرِ إِلَى مَعْرِضٍ احْتِرَافِيٍّ جَذَّابٍ عَلَى صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في تحدي بناء معرض صور احترافي باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء معرض صور متجاوب",
+          "استخدام خصائص CSS المتقدمة",
+          "تحسين المظهر البصري للعناصر",
+          "تطبيق تحدي البرمجة العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للمعرض",
+      "narration": {
+        "spoken_text": "لِتَصْمِيمِ مَعْرِضِ صُوَرٍ، نَحْتَاجُ إِلَى اسْتِخْدَام div كَحَاوِيَه رَئِيسِيَّه، ثُمَّ نُضِيفُ دَاخِلَهَا Elements مِن نَوْع img. يُمْكِنُنَا اسْتِخْدَام Flexbox أَوْ Grid لِتَنْظِيمِ الصُّوَرِ بِشَكْلٍ مُنْتَظِمٍ وَمُتَنَاسِقٍ.",
+        "caption_text": "نستخدم حاوية div لتجميع الصور وتنسيقها باستخدام Flexbox أو Grid."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام div كحاوية للعناصر",
+          "تنسيق img داخل المعرض",
+          "تطبيق خاصية display flex",
+          "التحكم في المسافات باستخدام gap"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَكْتُبِ الْآنَ الْهَيْكَلَ الْأَسَاسِيَّ لِلْمَعْرِضِ. نَبْدَأُ بِتَعْرِيفِ دُوكْ تَايْبْ HTML، ثُمَّ نَضَعُ الصُّوَرَ دَاخِلَ حَاوِيَه بَةِ Class مُحَدَّدٍ لِنَتَمَكَّنَ مِنَ التَّحَكُّمِ فِي تَفَاصِيلِ التَّنْسِيقِ بِاسْتِخْدَام CSS.",
+        "caption_text": "هيكل HTML الأساسي لمعرض الصور مع استخدام Class للتحكم بالتنسيق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"gallery\">\n      <img src=\"img1.jpg\" alt=\"Image 1\">\n      <img src=\"img2.jpg\" alt=\"Image 2\">\n      <img src=\"img3.jpg\" alt=\"Image 3\">\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق المعرض بـ CSS",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى CSS لِتَنْظِيمِ الْعَنَاصِرِ. نَسْتَخْدِم display flex لِجَعْلِ الصُّوَرِ بِجَانِبِ بَعْضِهَا، وَنُحَدِّد width لِكُلِّ صُورَه لِضَمَانِ التَّنَاسُقِ، مَعَ إِضَافَةِ margin لِتَوْفِيرِ مَسَافَاتٍ بَصَرِيَّه بَيْنَ الصُّوَرِ.",
+        "caption_text": "تنسيق المعرض باستخدام CSS لجعل الصور متراصة ومنظمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".gallery {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.gallery img {\n  width: 200px;\n  height: auto;\n  border: 1px solid #ccc;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ الصُّوَرُ فِي صَفْحَةِ الْوِبّ مُرَتَّبَه بِشَكْلٍ أُفُقِيٍّ، وَمَعَ خَاصِيَّةِ flex-wrap، سَتَنْتَقِلُ الصُّوَرُ إِلَى السَّطْرِ التَّالِي تِلْقَائِيّاً إِذَا لَمْ تَكْفِ مِسَاحَةِ الشَّاشَه.",
+        "caption_text": "نتيجة المعرض في المتصفح مع ترتيب الصور وتجاوبها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[Image 1] [Image 2] [Image 3]\n[Image 4] [Image 5] [Image 6]",
+        "highlight_lines": [],
+        "output": "عرض الصور في صفوف متجاوبة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات الهندسية",
+      "narration": {
+        "spoken_text": "يَجِبُ دَائِماً التَّأَكُّدُ مِنَ اسْتِخْدَام alt Attribute لِكُلِّ صُورَه لِتَحْسِينِ إِمْكَانِيَّةِ الْوُصُولِ. كَمَا يُفَضَّلُ تَحْسِينُ حَجْمِ الصُّوَرِ لِتَسْرِيعِ تَحْمِيلِ صَفْحَةِ الْوِبّ لِلْمُسْتَخْدِمِينَ.",
+        "caption_text": "أفضل الممارسات تشمل استخدام alt للصور وتحسين أحجام الملفات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام alt لتعزيز Accessibility",
+          "ضغط الصور لتقليل وقت التحميل",
+          "استخدام وحدات قياس مرنة",
+          "اختبار التجاوب على مختلف الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "لَقَدْ تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةِ بِنَاءِ مَعْرِضِ صُوَرٍ بَسِيطٍ وَفَعَّالٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا الْكُودِ وَتَعْدِيلِ الْخَصَائِصِ لِتَرَوْا كَيْفَ يَتَغَيَّرُ التَّصْمِيمُ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم الانتهاء من تحدي معرض الصور",
+          "تم شرح هيكل HTML وCSS",
+          "تم توضيح أهمية التجاوب",
+          "استمروا في التدريب العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_gallery.asp"
+      ]
+    }
+  ]
+}
