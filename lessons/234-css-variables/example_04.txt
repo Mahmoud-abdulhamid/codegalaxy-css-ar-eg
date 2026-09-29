@@ -1,0 +1,3 @@
+Background: #1e90ff (DodgerBlue)
+Container Text: #1e90ff
+Container Background: #ffffff
