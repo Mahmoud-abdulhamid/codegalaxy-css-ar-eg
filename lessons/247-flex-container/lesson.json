@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "247",
+  "title": "CSS Flex Container Properties",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تحويل العناصر إلى Flex Container",
+    "التحكم في اتجاه العناصر باستخدام flex-direction",
+    "إدارة التفاف العناصر داخل الحاوية باستخدام flex-wrap",
+    "استخدام الخاصية المختصرة flex-flow"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_flexbox_container.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Flex Container",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى Flex Container وَكَيْفِيَّةِ التَّحَكُّمِ فِي تَرْتِيبِ وَتَوْزِيعِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ بِكُلِّ سُهُولَةٍ وَاحْتِرَافِيَّةٍ.",
+        "caption_text": "مرحبا بكم في درس CSS Flex Container للتحكم في توزيع العناصر داخل صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox هو نموذج تصميم قوي لتوزيع العناصر",
+          "يتم تفعيل Flexbox عبر خاصية display: flex",
+          "يوفر تحكما كاملا في الاتجاه والالتفاف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "flex-direction",
+      "title": "التحكم في اتجاه العناصر",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةُ flex-direction لِتَحْدِيدِ اتِّجَاهِ الْعَنَاصِرِ دَاخِلَ الْحَاوِيَةِ. يُمْكِنُكَ جَعْلُهَا تَتَرَتَّبُ أَفُقِيّاً أَوْ عَمُودِيّاً، أَوْ حَتَّى عَكْسِ التَّرْتِيبِ بِمُجَرَّدِ تَغْيِيرِ الْقِيمَةِ الْمُسْتَخْدَمَةِ فِي هَذِهِ الْخَاصِيَّةِ.",
+        "caption_text": "تحدد خاصية flex-direction اتجاه العناصر داخل الحاوية سواء أفقيا أو عموديا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  flex-direction: row;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "direction-options",
+      "title": "خيارات اتجاه العناصر",
+      "narration": {
+        "spoken_text": "لَدَيْنَا أَرْبَعُ قِيَمٍ رَئِيسِيَّةٍ لِخَاصِيَّةِ flex-direction. الْقِيمَةُ row تُرَتِّبُ الْعَنَاصِرَ أَفُقِيّاً، وَ column تُرَتِّبُهَا عَمُودِيّاً، بَيْنَمَا row-reverse وَ column-reverse تَقُومَانِ بِعَكْسِ التَّرْتِيبِ التَّقْلِيدِيِّ لِلْعَنَاصِرِ.",
+        "caption_text": "خيارات flex-direction تشمل row و column و row-reverse و column-reverse."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "الوصف"
+        ],
+        "rows": [
+          [
+            "row",
+            "أفقي من اليسار لليمين"
+          ],
+          [
+            "column",
+            "عمودي من الأعلى للأسفل"
+          ],
+          [
+            "row-reverse",
+            "أفقي معكوس"
+          ],
+          [
+            "column-reverse",
+            "عمودي معكوس"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "flex-wrap",
+      "title": "خاصية flex-wrap",
+      "narration": {
+        "spoken_text": "عِنْدَمَا لَا تَكُونُ هُنَاكَ مَسَاحَةٌ كَافِيَةٌ لِكُلِّ الْعَنَاصِرِ، نَسْتَخْدِمُ خَاصِيَّةَ flex-wrap. هَذِهِ الْخَاصِيَّةُ تُحَدِّدُ مَا إِذَا كَانَ يَجِبُ عَلَى الْعَنَاصِرِ الِالْتِفَافُ إِلَى سَطْرٍ جَدِيدٍ أَمْ لَا.",
+        "caption_text": "تحدد خاصية flex-wrap ما إذا كانت العناصر ستلتف إلى سطر جديد عند ضيق المساحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  flex-wrap: wrap;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "flex-flow",
+      "title": "الخاصية المختصرة flex-flow",
+      "narration": {
+        "spoken_text": "لِتَبْسِيطِ الْكُودِ، يُمْكِنُنَا اسْتِخْدَامُ خَاصِيَّةِ flex-flow. هِيَ خَاصِيَّةٌ مُخْتَصَرَةٌ تَجْمَعُ بَيْنَ flex-direction وَ flex-wrap فِي سَطْرٍ وَاحِدٍ، مِمَّا يُسَاعِدُ فِي كِتَابَةِ كُودٍ أَكْثَرَ نَظَافَةً وَتَنْظِيماً.",
+        "caption_text": "تجمع خاصية flex-flow بين flex-direction و flex-wrap في سطر واحد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  flex-flow: row wrap;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْخَصَائِصِ، سَتُحَظُونَ أَنَّ الْعَنَاصِرَ تَتَمَوْضَعُ بِشَكْلٍ مَرِنٍ دَاخِلَ الْحَاوِيَةِ. هَذَا هُوَ السِّحْرُ الْحَقِيقِيُّ لِ Flexbox فِي تَصْمِيمِ وَاجِهَاتِ الْوِبّ الْمُتَجَاوِبَةِ.",
+        "caption_text": "تظهر العناصر داخل الحاوية بشكل مرن ومنظم بناء على الخصائص المطبقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Item 1 | Item 2 | Item 3\n(توزيع مرن حسب العرض المتاح)",
+        "highlight_lines": [],
+        "output": "Item 1 | Item 2 | Item 3",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ أَهَمَّ خَصَائِصِ Flex Container. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَتَمَكَّنُوا مِنْ هَذِهِ الْمَهَارَاتِ الْأَسَاسِيَّةِ فِي CSS.",
+        "caption_text": "جربوا الأكواد بأنفسكم عبر الرابط في الوصف لتتقنوا مهارات Flexbox."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم display: flex للحاوية",
+          "تحكم بالاتجاه عبر flex-direction",
+          "تحكم بالالتفاف عبر flex-wrap",
+          "استخدم flex-flow للاختصار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container.asp"
+      ]
+    }
+  ]
+}
