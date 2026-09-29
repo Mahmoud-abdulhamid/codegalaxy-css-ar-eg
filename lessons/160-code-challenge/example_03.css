@@ -1,0 +1,4 @@
+div {
+  /* top-left, top-right, bottom-right, bottom-left */
+  border-radius: 10px 20px 30px 40px;
+}
