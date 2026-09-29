@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "323",
+  "title": "تصميم نافذة Modal Images تفاعلية باستخدام CSS و JavaScript",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء نوافذ Modal Images باستخدام CSS و JavaScript",
+    "تطبيق تصميم نافذة منبثقة responsive للصورة المصغرة",
+    "إضافة تأثيرات الحركة والانتقال وتكبير الصور",
+    "برمجة التفاعل لفتح وإغلاق نافذة Modal عبر JavaScript"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_modal_images.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة الدرس وأهمية Modal Images",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ نَافِذَةِ Modal Images تَفَاعُلِيَّةٍ وَجَذَّابَةٍ لِعَرْضِ الصُّوَرِ بِحَجْمٍ كَبِيرٍ عِنْدَ النَّقْرِ عَلَيْهَا، مِمَّا يُحَسِّنُ تَجْرِبَةَ الْمُسْتَخْدِمِ فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تصميم Modal Images لتفاعل أفضل للصور في مواقع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "عرض الصور بحجم كبير عبر Modal منبثق",
+          "تحسين تجربة المستخدم على متصفحات الويب",
+          "دمج CSS و JavaScript لتفاعل كامل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_modal_images.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "هيكل HTML الخاص بعنصر الصورة والمودال",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوْلاً بِكِتَابَةِ هَيْكَلِ HTML لِصَفْحَةِ الْوِبّ. نَضَعُ صُورَةً مُصَغَّرَةً تَعْمَلُ كَمُحَفِّزٍ لِفَتْحِ النَّافِذَةِ، ثُمَّ عُنْصُرَ div لِلْمُدَالِ يَحْتَوي عَلَى زِرِّ الإغلاق وشاشة عرض الصورة المكبرة مع فقرة الوصف.",
+        "caption_text": "نكتب كود HTML المتضمن للصورة المصغرة وdiv المودال وزر الإغلاق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- Trigger the Modal -->\n    <img id=\"myImg\" src=\"img_snow.jpg\" alt=\"Snow\" style=\"width:100%;max-width:300px\">\n    <!-- The Modal -->\n    <div id=\"myModal\" class=\"modal\">\n      <span class=\"close\">&times;</span>\n      <img class=\"modal-content\" id=\"img01\">\n      <div id=\"caption\"></div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عنصر صورة مصغرة قابلة للنقر مع نافذة منبثقة مخفية افتراضياً",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_modal_images.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق الصورة المحفزة وتصميم خلفية المودال",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الآنَ إِلَى كِتَابَةِ تَوَاسِيقِ CSS لِتَنْسِيقِ صُورَةِ التَّحْفِيزِ مِعْ َمِيزَاتِ border-radius وَ cursor، ثُمَّ نُصَمِّمُ خَلْفِيَّةَ modal لِتَكُونَ ثَابِتَةً بِلَوْنٍ أَسْوَدَ شَفَّافٍ وَتَغْطِي كَامِلَ الشَّاشَةِ.",
+        "caption_text": "نضيف تنسيقات CSS للصورة وتصميم خلفية المودال الثابتة والشفافة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#myImg {\n  border-radius: 5px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n#myImg:hover {\n  opacity: 0.7;\n}\n.modal {\n  display: none;\n  position: fixed;\n  z-index: 1;\n  padding-top: 100px;\n  left: 0; top: 0;\n  width: 100%; height: 100%;\n  overflow: auto;\n  background-color: rgba(0,0,0,0.9);\n}",
+        "highlight_lines": [],
+        "output": "خلفية سوداء شفافة بالكامل تغطي الشاشة عند التفعيل",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_modal_images.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تنسيق محتوى الصورة داخل المودال ونص الوصف",
+      "narration": {
+        "spoken_text": "نُخَصِّصُ كَذَلِكَ عُنْصُرَ modal-content لِتَحْدِيدِ عَرْضِ الصُّورَةِ الْمُكَبَّرَةِ بِحَيْثُ لَا يَتَجَاوَزُ سَبْعَمِائَةِ بِكْسِل، وَنُنَسِّقُ عُنْصُرَ caption بِجَعْلِ نَصِّهِ مُتَوَسِّطاً وَبِلَوْنٍ رَْمَادِيٍّ جَمِيلٍ.",
+        "caption_text": "ننسق عرض الصورة المكبرة ونصوص الوصف لتطابق التصميم المتجاوب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".modal-content {\n  margin: auto;\n  display: block;\n  width: 80%;\n  max-width: 700px;\n}\n#caption {\n  margin: auto;\n  display: block;\n  width: 80%;\n  max-width: 700px;\n  text-align: center;\n  color: #ccc;\n  padding: 10px 0;\n  height: 150px;\n}",
+        "highlight_lines": [],
+        "output": "صورة مكبرة ونصوص وصف متمركزة بشكل متناسق",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_modal_images.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "إضافة تأثيرات الحركة والانتقال وزر الإغلاق",
+      "narration": {
+        "spoken_text": "لإضَافَةِ لَمْسَةٍ جَمَالِيَّةٍ، نَسْتَخْدِمُ animation-name مَعَ حَرِكَةِ zoom لِتَكْبِيرِ الصُّوَرِ تَدْرِيجِيّاً، كَمَا نُنَسِّقُ زِرَ الإِغْلَاقِ close بِجَعْلِهِ مُتَمَوْضِعاً فِي الأَعْلَى بِحَجْمِ خَطٍّ كَبِيرٍ.",
+        "caption_text": "نضيف تأثير zoom الحركي وزر الإغلاق الأنيق في أعلى النافذة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".modal-content, #caption {\n  animation-name: zoom;\n  animation-duration: 0.6s;\n}\n@keyframes zoom {\n  from {\n    transform:scale(0)\n  }\n  to {\n    transform:scale(1)\n  }\n}\n.close {\n  position: absolute;\n  top: 15px; right: 35px;\n  color: #f1f1f1;\n  font-size: 40px;\n  font-weight: bold;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": "حركة تكبير سلسة وزر إغلاق تفاعلي عند التمرير",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_modal_images.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "برمجة التفاعل باستخدام JavaScript",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى بَرْمَجَةِ سِلُوكِ الْمُدَالِ بِاسْتِخْدَامِ JavaScript. نَقُومُ بِالْوُصُولِ لِعَنَاصِرِ الْمُدَالِ والصُّورَةِ، ثُمَّ نُضِيفُ حَدَثَ onclick لِعَرْضِ الْمُدَالِ وَتَحْدِيدِ مَصْدَرِ الصُّوَرِ وَنَصِّ التَّعْلِيقِ تِلْقَائِيّاً.",
+        "caption_text": "نكتب كود JavaScript للتحكم بفتح المودال وتمرير مصدر الصورة والنص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "javascript",
+        "filename": "script.js",
+        "code": "var modal = document.getElementById(\"myModal\");\nvar img = document.getElementById(\"myImg\");\nvar modalImg = document.getElementById(\"img01\");\nvar captionText = document.getElementById(\"caption\");\nimg.onclick = function() {\n  modal.style.display = \"block\";\n  modalImg.src = this.src;\n  captionText.innerHTML = this.alt;\n}",
+        "highlight_lines": [],
+        "output": "النقر على الصورة يفتح نافذة Modal ويعرض الصورة المكبرة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_modal_images.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "برمجة زر الإغلاق والتوافقية مع الشاشات الصغيرة",
+      "narration": {
+        "spoken_text": "أَخِراً، نَبْرْمِجُ حَدَثَ النَّقْرِ عَلَى زِرِّ close لِإِغْلَاقِ النَّافِذَةِ بِتَغْيِيرِ display إِلَى none، مَعَ إِضَافَةِ media query لضَمَانِ تَكَيُّفِ عَرْضِ الصُّوَرِ لِيُصْبِحَ مِائَةً بِالْمِائَةِ عَلَى الشَّاشَاتِ الصَّغِيرَةِ.",
+        "caption_text": "نكمل كود إغلاق النافذة ونضيف التجاوب للشاشات الصغيرة عبر media query."
+      },
+      "visual": {
+        "type": "code",
+        "language": "javascript",
+        "filename": "script.js",
+        "code": "var span = document.getElementsByClassName(\"close\")[0];\nspan.onclick = function() {\n  modal.style.display = \"none\";\n}\n// Media query for smaller screens\n/*\n   @media only screen and (max-width: 700px) {\n   .modal-content {\n   width: 100%;\n   }\n   }\n   */",
+        "highlight_lines": [],
+        "output": "إغلاق النافذة بسلاسة وضمان التوافق مع الهواتف الذكية",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_modal_images.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "بهذَا يَا أَصْدِقَائِي نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ نَافِذَةِ Modal Images احْتِرَافِيَّةٍ وَمُتَجَاوِبَةٍ بِاسْتِخْدَامِ CSS و JavaScript. نُشَجِّعُكُمْ عَلَى تَجْرِبَةِ الأَكْوادِ بأنفسكم لِرَفْعِ كَفَاءَتِكُمِ البَرْمَجِيَّةِ. كَانَ مَعَكُمْ مُحْمُودُ عَبْدِالحَمِيدِ.",
+        "caption_text": "خلاصة الدرس: إنشاء Modal Images متجاوبة باستخدام CSS و JavaScript."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصميم احترافي ومتجاوب لعرض الصور",
+          "استخدام CSS Animations للتأثيرات البصرية",
+          "ربط الأحداث بـ JavaScript للتحكم الكامل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_modal_images.asp"
+      ]
+    }
+  ]
+}
