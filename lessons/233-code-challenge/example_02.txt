@@ -1,0 +1,3 @@
+Element with resize handle
+Visible outline with 10px offset
+Dynamic width and height
