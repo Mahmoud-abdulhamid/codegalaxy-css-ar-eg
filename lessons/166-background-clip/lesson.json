@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "166",
+  "title": "CSS background-clip Property",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the purpose of background-clip",
+    "Learn the three main values: border-box, padding-box, and content-box",
+    "Apply background-clip to images and colors",
+    "Master the visual control of background extension"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_background_clip.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول background-clip",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفَ نَتَحَكَّمُ فِي مَسَاحَةِ انْتِشَارِ الْخَلْفِيَّةِ دَاخِلَ الْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ background-clip الْقَوِيَّةِ وَالْمُفِيدَةِ لِتَصْمِيمِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد حول خاصية background-clip للتحكم في مساحة انتشار الخلفية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحدد خاصية background-clip مدى امتداد الخلفية",
+          "تدعم الألوان والصور والتدرجات اللونية",
+          "تتحكم في كيفية ظهور الخلفية بالنسبة للحدود والمسافات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_clip.asp"
+      ]
+    },
+    {
+      "id": "values",
+      "title": "قيم خاصية background-clip",
+      "narration": {
+        "spoken_text": "تَمْتَلِكُ هَذِهِ الْخَاصِيَّةُ ثَلَاثَ قِيَمٍ رَئِيسِيَّةٍ. border-box تَجْعَلُ الْخَلْفِيَّةَ تَمْتَدُّ حَتَّى حُدُودِ الْعُنْصُرِ. padding-box تَقْصُرُهَا عَلَى مَسَاحَةِ الْحَشْوِ فَقَطْ. وَ content-box تَجْعَلُهَا تَقْتَصِرُ عَلَى مَسَاحَةِ الْمُحْتَوَى دَاخِلَ الْعُنْصُرِ.",
+        "caption_text": "تتضمن القيم الرئيسية: border-box، وpadding-box، وcontent-box للتحكم الدقيق في مساحة الخلفية."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "الوصف"
+        ],
+        "rows": [
+          [
+            "border-box",
+            "تمتد الخلفية حتى الحدود"
+          ],
+          [
+            "padding-box",
+            "تمتد حتى منطقة الحشو"
+          ],
+          [
+            "content-box",
+            "تمتد حتى منطقة المحتوى"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_clip.asp"
+      ]
+    },
+    {
+      "id": "code_image",
+      "title": "تطبيق background-clip مع الصور",
+      "narration": {
+        "spoken_text": "لِنُطَبِّقَ هَذَا مَعَ صُورَةِ خَلْفِيَّةٍ. نُحَدِّدُ border: 5px dotted black لِإِظْهَارِ الْحُدُودِ، ثُمَّ نَسْتَخْدِمُ background-clip مَعَ الْقِيَمِ الثَّلَاثِ لِنَرَى كَيْفَ تَتَغَيَّرُ مَسَاحَةُ الصُّورَةِ بِاخْتِلَافِ الْقِيمَةِ الْمُسْتَخْدَمَةِ.",
+        "caption_text": "تطبيق عملي لاستخدام background-clip مع الصور وتأثيرها على الحدود والحشو."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  border: 5px dotted black; padding: 35px; background-clip: border-box;\n}\n#div2 {\n  border: 5px dotted black; padding: 35px; background-clip: padding-box;\n}\n#div3 {\n  border: 5px dotted black; padding: 35px; background-clip: content-box;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_clip.asp"
+      ]
+    },
+    {
+      "id": "code_color",
+      "title": "تطبيق background-clip مع الألوان",
+      "narration": {
+        "spoken_text": "نَفْسُ الْمَبْدَأِ يَنْطَبِقُ عِنْدَ اسْتِخْدَامِ background-color. لَاحِظْ كَيْفَ أَنَّ الْخَلْفِيَّةَ الْمُلَوَّنَةَ بِ lightblue تَنْحَسِرُ أَوْ تَمْتَدُّ بِنَاءً عَلَى الْقِيمَةِ الْمُخْتَارَةِ لِ background-clip، مِمَّا يُعْطِينَا تَحَكُّماً كَامِلاً فِي مَظْهَرِ الْعُنْصُرِ.",
+        "caption_text": "استخدام background-clip مع الألوان يوضح الفرق في الامتداد بين الحدود والحشو والمحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  background-color: lightblue; background-clip: border-box;\n}\n#div2 {\n  background-color: lightblue; background-clip: padding-box;\n}\n#div3 {\n  background-color: lightblue; background-clip: content-box;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_clip.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَشْغِيلِ هَذِهِ الْأَكْوَادِ، سَتَرَى أَنَّ الْعُنْصُرَ الْأَوَّلَ يُظْهِرُ الْخَلْفِيَّةَ خَلْفَ الْحُدُودِ، بَيْنَمَا الْعُنْصُرُ الثَّانِي يَتَوَقَّفُ عِنْدَ الْحَشْوِ، وَالثَّالِثُ يَتَوَقَّفُ عِنْدَ الْمُحْتَوَى فَقَطْ، وَهَذَا هُوَ الْفَرْقُ الْجَوْهَرِيُّ بَيْنَ الْقِيَمِ.",
+        "caption_text": "تظهر المعاينة كيف تختلف مساحة الخلفية بناء على القيمة المختارة للخاصية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "div1: Background covers border area.\ndiv2: Background stops at padding.\ndiv3: Background limited to content only.",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_clip.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ بِاسْتِخْدَامِ background-clip لِتَحْسِينِ التَّصَامِيمِ الْعَصْرِيَّةِ. تَأَكَّدْ مِنْ تَجْرِبَةِ الْقِيَمِ مَعَ حُدُودٍ شَفَّافَةٍ لِتَرَى التَّأْثِيرَ بِشَكْلٍ أَوْضَحَ، وَتَذَكَّرْ أَنَّ هَذِهِ الْخَاصِيَّةَ تَعْمَلُ بِشَكْلٍ مُمْتَازٍ مَعَ الصُّوَرِ وَالْأَلْوَانِ عَلَى حَدٍّ سَوَاءٍ.",
+        "caption_text": "استخدم background-clip مع الحدود الشفافة للحصول على تأثيرات بصرية احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "جرب القيم مع border شفافة",
+          "استخدمها لإنشاء تأثيرات بصرية فريدة",
+          "تأكد من توافق المتصفحات الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_clip.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُحَدِّدُ مَسَاحَةَ انْتِشَارِ الْخَلْفِيَّةِ بِاسْتِخْدَامِ background-clip. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَتَمَكَّنُوا مِنْ هَذِهِ الْمَهَارَةِ.",
+        "caption_text": "تعلمنا اليوم التحكم في مساحة الخلفية. جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح background-clip بالتفصيل",
+          "تم استعراض القيم الثلاث الأساسية",
+          "تم تطبيق أمثلة عملية على الألوان والصور",
+          "شجعنا على التطبيق العملي عبر الرابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_clip.asp"
+      ]
+    }
+  ]
+}
