@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "304",
+  "title": "إنشاء شريط تنقل سفلي Bottom Navigation باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية بناء شريط تنقل سفلي ثابت في صفحات الويب",
+    "فهم خصائص CSS المتقدمة مثل position fixed و bottom zero",
+    "تنسيق روابط الويب داخل الـ navbar بشكل احترافي ومتناسق",
+    "تطبيق تأثيرات التفاعل hover والحالة النشطة active على العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_bottom_nav.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة حول شريط التنقل السفلي Bottom Navigation",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ شريط تنقل سفلي أو Bottom Navigation مُمَيَّزٍ وَثَابِتٍ فِي أَسْفَلِ صَفْحَةِ الْوِبّ لِتَحْسِينِ تَجْرُبَةِ الْمُسْتَخْدِمِ وَتُسْهيلِ التَّنَقُّلِ.",
+        "caption_text": "مرحبا بكم في درس إنشاء شريط تنقل سفلي Bottom Navigation باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية شريط التنقل السفلي في تصميم واجهات الويب الحديثة",
+          "كيفية توجيه المستخدمين بسرعة بين أقسام الموقع المختلفة",
+          "استخدام لغة CSS لتصميم عناصر القائمة وتثبيتها أسفل الصفحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bottom_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "هيكلة عناصر HTML لقائمة التنقل",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ أَوَّلًا بكتل HTML الأساسية. نَسْتَخْدِمُ عنصر div مع فئة navbar لتحواء روابط الويب، ثُمَّ نُضِيفُ روابط a مثل Home و News و Contact مَعَ تَحْدِيدِ الفئة active للرابط النشط حالياً.",
+        "caption_text": "نبدأ بكتابة هيكل HTML لقائمة التنقل السفلية باستخدام عنصر div والروابط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"navbar\">\n      <a href=\"#home\" class=\"active\">Home</a>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home | News | Contact",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bottom_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تثبيت شريط الـ navbar في أسفل الصفحة",
+      "narration": {
+        "spoken_text": "لِتَثْبِيتِ ال navbar في أسفل الصفحة وجعله ملازماً للشاشة أثناء التمرير، نستخدم خاصية position مع قيمة fixed، وخاصية bottom بقيمة صفر، مع عرض كامِل width بنسبة مئة بالمئة، وخلفية ذات لون داكن.",
+        "caption_text": "تثبيت شريط التنقل في أسفل الصفحة باستخدام position fixed و bottom zero."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar {\n  background-color: #333;\n  overflow: hidden;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}",
+        "highlight_lines": [],
+        "output": "Fixed bottom navbar container styled",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bottom_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تنسيق الروابط الداخلية للـ navbar",
+      "narration": {
+        "spoken_text": "الآن ننتقل لتنسيق الروابط داخل ال navbar. نجعلها تطفو لليسار باستخدام float وتظهر ككتلة block، مع لون نص فاتح ومحاذاة في المنتصف، وإضافة مساحات padding مناسبة وإلغاء التزيين النصي text-decoration.",
+        "caption_text": "تنسيق روابط الويب داخل القائمة بتحديد الطفو والمحاذاة والهوامش الداخلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar a {\n  float: left;\n  display: block;\n  color: #f2f2f2;\n  text-align: center;\n  padding: 14px 16px;\n  text-decoration: none;\n  font-size: 17px;\n}",
+        "highlight_lines": [],
+        "output": "Links formatted with padding and colors",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bottom_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "إضافة تأثير التفاعل hover على الروابط",
+      "narration": {
+        "spoken_text": "لتحسين تجربة المستخدم، نقوم بتغيير ألوان الروابط عند تمرير مؤشر الفأرة عليها باستخدام تأثير hover، حيث يتغير لون الخلفية إلى درجات فاتحة وتصبح النصوص بلون داكن وواضح.",
+        "caption_text": "إضافة تأثير hover لتغيير ألوان الروابط عند مرور مؤشر الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar a:hover {\n  background-color: #ddd;\n  color: black;\n}",
+        "highlight_lines": [],
+        "output": "Hover effect changes link background and text color",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bottom_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "تمييز الرابط النشط active link",
+      "narration": {
+        "spoken_text": "ولتمييز الصفحة الحالية أو الرابط النشط، نستخدم فئة active مع ال navbar لتعيين لون خلفية مميز مثل اللون الأخضر الجذاب وتأكيد النص باللون الأبيض ليكون بارزاً للمستخدم.",
+        "caption_text": "تخصيص الرابط النشط active لتعيين لون خلفية مميز."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar a.active {\n  background-color: #04AA6D;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "Active link highlighted in green",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bottom_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس وأفضل الممارسات",
+      "narration": {
+        "spoken_text": "إلى هُنَا يَا أَصْدِقَائِي نَكُونُ قَدْ أَتْمَمْنَا بِنَاءِ شريط التنقل السفلي باحترافية تامة باستخدام خصائص CSS الثابتة. تذكره دائماً أنه لإنشاء أشرطة متجاوبة مع الهواتف الذكية يمكنكم مراجعة الدروس المتقدمة في الموقع.",
+        "caption_text": "خلاصة درس تصميم شريط التنقل السفلي الثابت وأفضل الممارسات البرمجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position fixed لضمان بقاء الشريط أسفل الشاشة دائما",
+          "تنسيق حالات الروابط العادية و hover و active بعناية",
+          "تجربة الكود وتعديله لتناسب تصاميم مواقع الويب المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_bottom_nav.asp"
+      ]
+    }
+  ]
+}
