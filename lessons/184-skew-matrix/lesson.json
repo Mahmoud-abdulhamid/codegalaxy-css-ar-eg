@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "184",
+  "title": "CSS 2D Transform Skew and Matrix Functions",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام دالة skewX لإمالة العناصر على محور الـ X.",
+    "تطبيق دالة skewY لإمالة العناصر على محور الـ Y بدقة.",
+    "دمج إحداثيات الإمالة معا باستخدام دالة skew.",
+    "فهم وتطبيق دالة matrix المتقدمة للتحويل ثنائي الأبعاد."
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_2dtransforms_skew.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة حول تحويلات الإمالة ثنائية الأبعاد في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى دُوَّالِ الْإِمَالَةِ ثُنَائِيَّةِ الْأَبْعَادِ مِثْلَ skewX وَ skewY وَ skew وَكَذَلِكَ دَالَةِ matrix الْمُتَقَدِّمَةِ لِلتَّحْكُمِ التَّامِّ بِالْعَنَاصِرِ عَلَى شَبَكَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تحويلات الإمالة ثنائية الأبعاد في CSS ودوال Skew و Matrix."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على دوال skew المختلفة في CSS",
+          "إمالة العناصر على محور X ومحور Y",
+          "استخدام دالة matrix لدمج التحويلات",
+          "تطبيق التحويلات ثنائية الأبعاد باحترافية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_skew.asp"
+      ]
+    },
+    {
+      "id": "scene_2_skewx",
+      "title": "شرح دالة skewX لإمالة العناصر أفقيا",
+      "narration": {
+        "spoken_text": "تَقُومُ دَالَةُ skewX بِإِمَالَةِ أَيِّ عُنْصِرٍ عَلَى مِحْوَرِ الْأَحْدَاثِيَّاتِ الْأُفْقِيِّ X بِالزَّاوِيَةِ الْمُحَدَّدَةِ. لِنُشَاهِدْ مَعاً هَذَا الْمِثَالَ الْبَمَجْمِيَّ الْعَمَلِيَّ لِتَطْبِيقِ الزَّاوِيَةِ.",
+        "caption_text": "تستخدم دالة skewX لإمالة العناصر على المحور الأفقي X بالزاوية المحددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: skewX(20deg);\n}",
+        "highlight_lines": [],
+        "output": "element skewed 20 degrees along X-axis",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_skew.asp"
+      ]
+    },
+    {
+      "id": "scene_3_skewy",
+      "title": "شرح دالة skewY لإمالة العناصر عموديا",
+      "narration": {
+        "spoken_text": "عِنْدَ الرَّغْبَةِ فِي إِمَالَةِ الْعُنْصِرِ عَمُودِيّاً عَلَى مِحْوَرِ الرَّأْسِيِّ Y، نَسْتَخْدِمُ دَالَةَ skewY بِالزَّاوِيَةِ الْمَطْلُوبَةِ لِخَلْقِ تَأْثِيرَاتٍ بَصَرِيَّةٍ رَائِعَةٍ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تقوم دالة skewY بإمالة العناصر على المحور الرأسي Y بالزاوية المحددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: skewY(20deg);\n}",
+        "highlight_lines": [],
+        "output": "element skewed 20 degrees along Y-axis",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_skew.asp"
+      ]
+    },
+    {
+      "id": "scene_4_skew_combined",
+      "title": "استخدام دالة skew للجمع بين المحورين",
+      "narration": {
+        "spoken_text": "تَمْكُنُنَا دَالَةُ skew مِنْ إِمَالَةِ الْعُنْصِرِ عَلَى مِحْوَرَيْ X وَ Y مَعاً. إِذَا تَرَكْنَا الْمُتَغَيِّرَ الثَّانِي فَارِغاً، فَسَيَكُونُ صِفْراً تِلْقَائِيّاً لِيَتِمَّ التَّطْبِيقُ أُفُقِيّاً فَقَطْ.",
+        "caption_text": "تسمح دالة skew بإمالة العناصر على محوري X و Y في نفس الوقت."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: skew(20deg, 10deg);\n}",
+        "highlight_lines": [],
+        "output": "element skewed 20deg on X and 10deg on Y",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_skew.asp"
+      ]
+    },
+    {
+      "id": "scene_5_skew_single_param",
+      "title": "تطبيق دالة skew بمعامل واحد",
+      "narration": {
+        "spoken_text": "لَاحِظْ هُنَا أَنَّهُ فِي حَالِ عَدَمِ تَحْدِيدِ الْمُتَغَيِّرِ الثَّانِي دَاخِلَ دَالَةِ skew، يَكُونُ طْتَراؤُهُ صِفْراً وَيُطَبَّقُ التَّأْثِيرُ عَلَى مِحْوَرِ X فَقَطْ.",
+        "caption_text": "إذا لم يتم تحديد المعامل الثاني لدالة skew، فسيتم اعتباره صفرا وتطبيق الإمالة أفقيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: skew(20deg);\n}",
+        "highlight_lines": [],
+        "output": "element skewed 20deg on X-axis only",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_skew.asp"
+      ]
+    },
+    {
+      "id": "scene_6_matrix_intro",
+      "title": "التعرف على دالة matrix الشاملة",
+      "narration": {
+        "spoken_text": "تُجْمِعُ دَالَةُ matrix جَمِيعَ دُوَّالِ التَّحْوِيلِ الثُّنَائِيِّ فِي دَالَةٍ وَاحِدَةٍ تَقْبَلُ سِتَّةَ مُتَغَيِّرَاتٍ رِيَاضِيَّةٍ لِلتَّدْوِيرِ وَالتَّحْجِيمِ وَالتَّحْرِيكِ وَالْإِمَالَةِ مَعاً.",
+        "caption_text": "تدمج دالة matrix جميع دوال التحويل ثنائي الأبعاد في دالة واحدة بستة معاملات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجمع كافة وظائف التحويل ثنائي الأبعاد",
+          "تستقبل ستة معاملات رياضية دقيقة",
+          "تدعم التدوير، التحجيم، التحريك والإمالة",
+          "مفهوم Matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_skew.asp"
+      ]
+    },
+    {
+      "id": "scene_7_matrix_code",
+      "title": "تطبيق عملي على دالة matrix",
+      "narration": {
+        "spoken_text": "يُعْرَضُ أَمَامَكُمْ الآنَ مِثَالٌ عَمَلِيٌّ لِكِتَابَةِ دَالَةِ matrix مَعَ سِتَّةِ قِيَمٍ مُخْتَلِفَةٍ لِلرَّبْطِ بَيْنَ خَصَائِصِ التَّحْوِيلِ الْمُتَعَدِّدَةِ لِلْعُنْصِرِ بِكَفَاءَةٍ عَالِيَةٍ.",
+        "caption_text": "مثال عملي لاستخدام دالة matrix مع ستة معاملات رياضية مختلفة للتحويل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: matrix(1, -0.3, 0, 1, 0, 0);\n}",
+        "highlight_lines": [],
+        "output": "element transformed using matrix values",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_skew.asp"
+      ]
+    },
+    {
+      "id": "scene_8_summary",
+      "title": "خلاصة تحويلات الإمالة والمصفوفات في CSS",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ skewX وَ skewY وَ skew لِإِمَالَةِ الْعَنَاصِرِ، إِضَافَةً إِلَى دَالَةِ matrix الْمُتَقَدِّمَةِ. نَنْتَظِرُ تَجَارِبَكُمْ، وَأَدْعُوكُمْ لِمُتَابَعَةِ الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "خلاصة درس تحويلات Skew و Matrix ودورها في تصميم واجهات الويب العصرية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتقان دوال skewX و skewY و skew",
+          "فهم تركيب واستخدام دالة matrix",
+          "تحسين المظهر البصري لعناصر صفحات الويب",
+          "تطبيق الأمثلة والتدريب المستمر بمدونة الكود"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_skew.asp"
+      ]
+    }
+  ]
+}
