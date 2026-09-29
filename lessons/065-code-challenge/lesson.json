@@ -3,6 +3,8 @@
   "lesson_id": "65",
   "title": "CSS Fonts Code Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية تطبيق خصائص الخطوط في CSS",
     "التعامل مع تحديات البرمجة في CSS",
