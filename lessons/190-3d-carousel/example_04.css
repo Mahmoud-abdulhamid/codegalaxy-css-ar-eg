@@ -1,0 +1,5 @@
+.card {
+  position: absolute;
+  transform: rotateY(calc(var(--index) * (360deg / var(--total-items))))
+  translateZ(var(--radius));
+}
