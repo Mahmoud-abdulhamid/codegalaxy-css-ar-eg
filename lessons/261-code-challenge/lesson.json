@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "261",
+  "title": "CSS Grid Container Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار الفهم العملي لخصائص CSS Grid Container",
+    "تطبيق خواص عرض الشبكة في صفحات الويب",
+    "بناء تخطيطات مرنة باستخدام عناصر الويب الحديثة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_grid_container.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة تحدي CSS Grid Container",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّدْرِيبِ الْعَمَلِيِّ مِنْ دَوْرَةِ CSS، سَنَتَحَدَّى أَنْفُسَنَا الْيَوْمَ فِي اخْتِبَارِ فَهْمِ مَفَاهِيمِ CSS Grid Container مِنْ خِلَالِ تَطْبِيقِ كُودٍ بَرْمَجِيٍّ مُفِيدٍ لِبِنَاءِ تَخطيطَاتِ وِبٍّ احْتِرَافِيَّةٍ.",
+        "caption_text": "مرحبا بكم في تدريب CSS Grid Container لاختبار مهارات تصميم وتنسيق صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار الفهم العملي لخواص CSS Grid",
+          "بناء حاوي شبكي احترافي Grid Container",
+          "تطوير مهارات تنسيق صفحات الويب الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_container.asp"
+      ]
+    },
+    {
+      "id": "scene_2_concepts",
+      "title": "أهمية خصائص Grid Container",
+      "narration": {
+        "spoken_text": "تَعْلَمُونَ أَنَّ تَحْوِيلَ أَيِّ عُنْصُرٍ إلَى شَبكَةٍ يَتِمُّ بِاسْتِخْدَامِ قَاعِدَةِ display grid داخل مِلَفِّ CSS، وَهَذَا يَمْنَحُنَا تَعامُلاً دَقِيقاً وَمَرِناً مَع الأَعْمِدَةِ وَالصُّفُوفِ في تَصْمِيمِ الُوِبّ.",
+        "caption_text": "تحويل أي عنصر إلى حاوية شبكية يتم عبر تحديد الخاصية display grid في ملف التنسيقات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display grid لتفعيل الشبكة",
+          "التحكم الكامل في توزيع الأعمدة والصصفوف",
+          "تنظيم العناصر داخل الـ Grid Container بسلاسة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_container.asp"
+      ]
+    },
+    {
+      "id": "scene_3_code_setup",
+      "title": "كتابة هيكل الكود الأساسي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ فِي كِتَابَةِ الْكُودِ الْعَمَلِيِّ. نُشَاهِدُ هُنَا إِعْدَادَ الحَاوِيَةِ الرَّئِيسِيَّةِ عَبْرَ تَطْبِيقِ كُودِ CSS لِتَفْعِيلِ الْخِصَائصِ الْمَطْلُوبَةِ وَاضِعِينَ فِي أَعْطَابِنَا الشروط المطلوبة للتحدي.",
+        "caption_text": "نبدأ بكتابة كود CSS لتفعيل حاوية الشبكة وضبط الخصائص الأساسية للتحدي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".grid-container {\n  display: grid;\n  grid-template-columns: auto auto auto;\n  background-color: #2196F3;\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": "Grid container created with 3 columns",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_container.asp"
+      ]
+    },
+    {
+      "id": "scene_4_code_items",
+      "title": "تنسيق عناصر الشبكة الداخلية",
+      "narration": {
+        "spoken_text": "بَعْدَ إِعْدَادِ الْحَاوِيَةِ، نَنْتَقِلُ لِتَنْسِيقِ الْعَنَاصِرِ الدَّاخِلِيَّةِ مِثْلَ grid item لِتَبْدُوَ بِمَظْهَرٍ جَمَّالِيٍّ وَمُرَتَّبٍ دَاخِلَ صَفْحَةِ الُوِبّ بِاسْتِخْدَامِ الأَلْوَانِ والْخَفَايَا المناسبة.",
+        "caption_text": "نقوم بتنسيق العناصر الفردية داخل الشبكة لضمان مظهر جذاب ومنظم على المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".grid-item {\n  background-color: rgba(255, 255, 255, 0.8);\n  border: 1px solid rgba(0, 0, 0, 0.8);\n  padding: 20px;\n  font-size: 30px;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": "Styled grid items with borders and padding",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_container.asp"
+      ]
+    },
+    {
+      "id": "scene_5_output_view",
+      "title": "معاينة المخرجات في المتصفح",
+      "narration": {
+        "spoken_text": "يَظْهَرُ لَنَا هُنَا كَيْفَ تَتَمَوَّضُ العَنَاصِرُ بِدِقَّةٍ دَاخِلَ الشَّبَكَةِ عِنْدَ تَطْبِيقِ هَذِهِ الْقَوَاعِدِ، حَيْثُ تَتَوَزَّعُ الأَعْمِدَةُ بِتَسَاوٍ كَامِلٍ لِتُعْطِي تَصْمِيماً رَائِعاً عَلَى مَتْصَفِحِ الوِبّ.",
+        "caption_text": "تظهر النتيجة النهائية لتنفيذ الكود على متصفح الويب بتوزيع هندسي متناسق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"grid-container\">\n      <div class=\"grid-item\">1</div>\n      <div class=\"grid-item\">2</div>\n      <div class=\"grid-item\">3</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "1 | 2 | 3",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_container.asp"
+      ]
+    },
+    {
+      "id": "scene_6_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "لِضَمَانِ كِتَابَةِ كُودِ CSS نَظِيفٍ وَقَابِلٍ لِلصِّيَانَةِ، احْرِصُوا دَائِماً عَلَى اسْتِخْدَامِ التَّسْمِيَاتِ الوَاضِحَةِ لِلْكْلَاسَاتِ وَالتَّأَكُّدِ مِنْ تَوَافُقِيَّةِ التَّصْمِيمِ مَع شَاشَاتِ العَرْضِ المُخْتَلِفَةِ في مَتْصَفحاتِ الوِبّ.",
+        "caption_text": "اتباع أفضل الممارسات يضمن صيانة الكود وتوافقية التصميم مع الشاشات المتعددة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام أسماء واضحة ودلالية للفئات",
+          "التحقق من التوافق مع المتصفحات الحديثة",
+          "اختبار استجابة التخطيط على الشاشات المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_container.asp"
+      ]
+    },
+    {
+      "id": "scene_7_conclusion",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدِ اجْتَزْنَا تَحَدِّي CSS Grid Container بِكَفَاءَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ الأَكْوادِ بِمَنْصَحِكُمْ بِنَفْسِكُم وَمُراجَعَةِ الرَّابِطِ الْمَوْجُودِ فِي الوَصْفِ لِلْمَزِيدِ مِنَ التَّطْبِيقَاتِ العَمَلِيَّةِ مَع مَحْمُودِ عَبْدِالْحَمِيدِ.",
+        "caption_text": "خلاصة تحدي Grid Container ودعوة لتطبيق الأكواد ومتابعة الدورة التعليمية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتمام تحدي CSS Grid بنجاح تام",
+          "تطبيق الأكواد بانتظام لتعزيز المهارات",
+          "متابعة دورة CSS مع المدرب محمود عبدالحميد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_container.asp"
+      ]
+    }
+  ]
+}
