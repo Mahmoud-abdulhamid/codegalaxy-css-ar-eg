@@ -3,6 +3,8 @@
   "lesson_id": "88",
   "title": "CSS Sticky Positioning",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية عمل position: sticky في CSS",
     "التعرف على الفرق بين sticky و fixed",
