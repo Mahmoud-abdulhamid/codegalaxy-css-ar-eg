@@ -1,0 +1,10 @@
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #008CBA;
+  transform: scale(0);
+  transition: .3s ease;
+}
+.container:hover .overlay {
+  transform: scale(1);
+}
