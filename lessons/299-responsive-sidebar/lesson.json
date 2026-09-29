@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "299",
+  "title": "بناء Responsive Sidebar باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية بناء Responsive Sidebar احترافي باستخدام CSS",
+    "فهم خصائص position و fixed لتثبيت القائمة الجانبية",
+    "استخدام Media Queries للتجاوب مع الشاشات المختلفة وتحويل القائمة إلى topbar"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفَيَةِ إِنْشَاءِ Responsive Sidebar جَذَّابٍ وَمُتَجَاوِبٍ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس بناء Responsive Sidebar باستخدام CSS لتحسين تصميم مواقع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء Responsive Sidebar متجاوب واحترافي",
+          "تحسين تجربة المستخدم في تصفح مواقع الويب",
+          "التعرف على خصائص التخطيط والتجاوب في CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp"
+      ]
+    },
+    {
+      "id": "scene_html_structure",
+      "title": "هيكل HTML للقائمة الجانبية",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوْلاً بِكِتَابَةِ هَيْكَلِ HTML. نُنْشِئُ عُنْصَرَ div ي يحْمِلُ className بِاسْم sidebar وَيَحْتَسِي رَوَابِطَ التنقل links، مِثْلَ Home وَ News، بَدْءاً مِنَ الصَّفْحَةِ.",
+        "caption_text": "نكتب هيكل HTML للقائمة الجانبية باستخدام عناصر div والروابط الداخلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- The sidebar -->\n    <div class=\"sidebar\">\n      <a class=\"active\" href=\"#home\">Home</a>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n      <a href=\"#about\">About</a>\n    </div>\n    <!-- Page content -->\n    <div class=\"content\">\n      ...\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عرض قائمة جانبية وعنصر محتوى الصفحة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp"
+      ]
+    },
+    {
+      "id": "scene_sidebar_css",
+      "title": "تنسيق القائمة الجانبية الأساسية",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ لِتَنْسِيقِ sidebar بِاسْتِخْدَامِ CSS. نُحَدِّدُ العَرْض width بقيمة مِئَتَيْ بكسل، وَنُثَبِّتُ المَوْقِعَ بِوَاسِطَةِ position fixed، مَعَ جَعْلِ الارتفاع height كامِلاً بِنِسْبَةِ مِئَةِ بالمِئَةِ.",
+        "caption_text": "نحدد عرض القائمة الجانبية ونثبت موقعها باستخدام position fixed و height 100."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".sidebar {\n  margin: 0;\n  padding: 0;\n  width: 200px;\n  background-color: #f1f1f1;\n  position: fixed;\n  height: 100%;\n  overflow: auto;\n}",
+        "highlight_lines": [],
+        "output": "تثبيت القائمة الجانبية بعرض 200 بكسل وخلفية رمادية فاتحة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp"
+      ]
+    },
+    {
+      "id": "scene_sidebar_links",
+      "title": "تنسيق الروابط وحالات التفاعل",
+      "narration": {
+        "spoken_text": "نُنَسِّقُ الرَّوَابِطَ دَاخِلَ القَائِمَةِ لِتَظْهَرَ كَوِحْدَاتٍ مُسْتَقِلَّةٍ بَاسْتِخْدَامِ display block. نُضِيفُ أَيْضاً ألواناً لِحَالَةِ hover وَحَالَةِ active لِتُمَيِّزَ الرَّابِطَ النَّشِيطَ.",
+        "caption_text": "ننسق الروابط داخل القائمة باستخدام display block ونحدد ألوان حالة التفاعل و active."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".sidebar a {\n  display: block;\n  color: black;\n  padding: 16px;\n  text-decoration: none;\n}\n.sidebar a.active {\n  background-color: #04AA6D;\n  color: white;\n}\n.sidebar a:hover:not(.active) {\n  background-color: #555;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "تنسيق الروابط مع تلوين الرابح النشط باللون الأخضر وعند تمرير الفأرة باللون الرمادي",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp"
+      ]
+    },
+    {
+      "id": "scene_page_content",
+      "title": "تنسيق محتوى الصفحة الرئيسي",
+      "narration": {
+        "spoken_text": "لِكَيْ لَا يَتَدَاخَلَ مُحْتَوَى الصَّفْحَةِ مَعَ القَائِمَةِ الثَّابِتَةِ، نَسْتَخْدِمُ خَاصِّيَّةَ margin left بقيمة تُمَاثِلُ عَرْضَ القَائِمَةِ، وَهِيَ مِئَتَا بكسل، مَعَ إِضَافَةِ padding مُنَاسِبٍ.",
+        "caption_text": "نضبط margin-left لمحتوى الصفحة ليتطابق مع عرض القائمة الجانبية الثابتة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.content {\n  margin-left: 200px;\n  padding: 1px 16px;\n  height: 1000px;\n}",
+        "highlight_lines": [],
+        "output": "إزاحة محتوى الصفحة بمقدار 200 بكسل لليمين لتجنب تداخله مع القائمة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp"
+      ]
+    },
+    {
+      "id": "scene_media_query_700",
+      "title": "التجاوب مع الشاشات المتوسطة",
+      "narration": {
+        "spoken_text": "عِنْدَمَا تَصْغُرُ الشَّاشَةُ عَنْ سَبْعِمِئَةِ بكسل، نَسْتَخْدِمُ Media Queries لِتَغْيِيرِ حَجْمِ القَائِمَةِ إِلَى مِئَةِ بالمِئَةِ، وَتَحْوِيلِهَا إِلَى topbar أفقية لِرَحَابَةِ العَرْضِ.",
+        "caption_text": "نستخدم Media Queries للشاشات أقل من 700 بكسل لتحويل القائمة الجانبية إلى شريط علوي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 700px) {\n  .sidebar {\n    width: 100%;\n    height: auto;\n    position: relative;\n  }\n  .sidebar a {\n    float: left;\n  }\n  div.content {\n    margin-left: 0;\n  }\n}",
+        "highlight_lines": [],
+        "output": "تحويل القائمة إلى أفقية وإلغاء الإزاحة في الشاشات المتوسطة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp"
+      ]
+    },
+    {
+      "id": "scene_media_query_400",
+      "title": "التجاوب مع الشاشات الصغيرة جدا",
+      "narration": {
+        "spoken_text": "وَللشَّاشَاتِ الأَصْغَرِ مِنْ أَرْبَعِمِئَةِ بكسل، نَجْعَلُ الرَّوَابِطَ تَتَوَسَّطُ الصَّفْحَةِ بَاسْتِخْدَامِ text align center وإلغاء العَوِيقَاتِ لِضَمَانِ مَظْهَرٍ مُتَنَاسِقٍ دَائِماً.",
+        "caption_text": "نضبط العناصر للشاشات أقل من 400 بكسل لتتوسط النصوص وتظهر عموديا بشكل متناسق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 400px) {\n  .sidebar a {\n    text-align: center;\n    float: none;\n  }\n}",
+        "highlight_lines": [],
+        "output": "توسيط الروابط وعرضها عمودياً على الشاشات شديدة الصغر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا تَعَرَّفْنَا عَلَى كَيْفَيَةِ بِنَاءِ Responsive Sidebar اِحْتِرَافِيٍّ مَعَ Media Queries. جَرِّبُوا الكُودَ بَأَنْفُسِكُمْ وَتَابِعُوا الدُّرُوسَ القَادِمَةَ لِلْمَزِيدِ مِنَ الإِبْدَاعِ فِي CSS مَعَ مَحْمُودِ عَبْدِالحَمِيد.",
+        "caption_text": "خلاصة الدرس: تعلم بناء Responsive Sidebar وتطويعه لمختلف الشاشات باستخدام Media Queries."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position fixed لتثبيت القائمة الجانبية",
+          "مطابقة margin-left للمحتوى مع عرض القائمة",
+          "تطبيق Media Queries للتجاوب مع كافة الأجهزة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp"
+      ]
+    }
+  ]
+}
