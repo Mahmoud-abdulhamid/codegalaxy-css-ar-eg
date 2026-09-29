@@ -3,6 +3,8 @@
   "lesson_id": "83",
   "title": "CSS Display Property Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية التحكم في عرض العناصر باستخدام خاصية display",
     "تطبيق قيم display المختلفة مثل block وnone وinline",
