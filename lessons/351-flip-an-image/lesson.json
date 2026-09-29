@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "351",
+  "title": "تصميم تأثير قلب الصور باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية استخدام transform لقلب الصور",
+    "فهم كيفية إنشاء تأثير 3D Flip",
+    "التحكم في backface-visibility",
+    "تطبيق تأثيرات الحركة باستخدام transition"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_flip_image.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول تأثير قلب الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِضَافَةِ تَأْثِيرِ مِرْآةٍ أَوْ قَلْبٍ لِلصُّوَرِ بِاسْتِخْدَامِ خَصَائِصِ CSS الْمُتَقَدِّمَةِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "سنتعلم اليوم كيفية إضافة تأثير قلب الصور باستخدام خصائص CSS المتقدمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS لتحويل العناصر",
+          "إضافة تأثيرات بصرية جذابة",
+          "تحسين تفاعل المستخدم مع الصور"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_flip_image.asp"
+      ]
+    },
+    {
+      "id": "basic_flip",
+      "title": "تأثير القلب البسيط باستخدام scaleX",
+      "narration": {
+        "spoken_text": "لِقَلْبِ صُورَةٍ أَفُقِيّاً، نَسْتَخْدِمُ خَاصِّيَّةَ transform مَعَ قِيمَةِ scaleX بِمِقْدَارِ سَالِبِ وَاحِدٍ عِنْدَ حَدَثِ hover. هَذَا يُعْطِي تَأْثِيرَ انْعِكَاسٍ سَرِيعٍ وَمُبَاشِرٍ لِلصُّورَةِ.",
+        "caption_text": "نستخدم خاصية transform مع scaleX(-1) لقلب الصورة أفقيا عند تمرير الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img:hover {\n  -webkit-transform: scaleX(-1);\n  transform: scaleX(-1);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_flip_image.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكلة حاوية القلب 3D",
+      "narration": {
+        "spoken_text": "لِتَصْمِيمِ قَلْبٍ ثُلَاثِيِّ الْأَبْعَادِ، نَحْتَاجُ إِلَى حَاوِيَةٍ رَئِيسِيَّةٍ بِاسْمِ flip-box وَحَاوِيَةٍ دَاخِلِيَّةٍ flip-box-inner. نَضَعُ الْوَجْهَ الْأَمَامِيَّ وَالْخَلْفِيَّ دَاخِلَ هَذِهِ الْحَاوِيَةِ لِتَحْقِيقِ التَّأْثِيرِ الْمَطْلُوبِ.",
+        "caption_text": "نستخدم حاوية flip-box و flip-box-inner لتنظيم المحتوى الأمامي والخلفي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"flip-box\">\n      <div class=\"flip-box-inner\">\n        <div class=\"flip-box-front\">\n          <img src=\"paris.jpg\">\n        </div>\n        <div class=\"flip-box-back\">\n          <h2>Paris</h2>\n          <p>Amazing city!</p>\n        </div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_flip_image.asp"
+      ]
+    },
+    {
+      "id": "css_perspective",
+      "title": "إعدادات المنظور والتحويل",
+      "narration": {
+        "spoken_text": "نَضْبُطُ خَاصِّيَّةَ perspective لِإِعْطَاءِ عُمْقٍ لِلْمَشْهَدِ. ثُمَّ نَسْتَخْدِمُ transform-style مَعَ قِيمَةِ preserve-3d لِضَمَانِ عَرْضِ الْعَنَاصِرِ بِشَكْلٍ صَحِيحٍ فِي الْفَضَاءِ ثُلَاثِيِّ الْأَبْعَادِ.",
+        "caption_text": "نستخدم perspective لإضافة العمق و preserve-3d للحفاظ على الأبعاد الثلاثية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flip-box {\n  perspective: 1000px;\n}\n.flip-box-inner {\n  transform-style: preserve-3d;\n  transition: transform 0.8s;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_flip_image.asp"
+      ]
+    },
+    {
+      "id": "hover_effect",
+      "title": "تفعيل حركة القلب عند التمرير",
+      "narration": {
+        "spoken_text": "عِنْدَ حَدَثِ hover عَلَى الْحَاوِيَةِ، نَقُومُ بِتَدْوِيرِ الْحَاوِيَةِ الدَّاخِلِيَّةِ بِزَاوِيَةِ مِائَةٍ وَثَمَانِينَ دَرَجَةً حَوْلَ الْمِحْوَرِ الرَّأْسِيِّ rotateY، مِمَّا يُؤَدِّي إِلَى ظُهُورِ الْوَجْهِ الْخَلْفِيِّ بِسَلَاسَةٍ.",
+        "caption_text": "نستخدم rotateY(180deg) لتدوير الحاوية عند تمرير الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flip-box:hover .flip-box-inner {\n  transform: rotateY(180deg);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_flip_image.asp"
+      ]
+    },
+    {
+      "id": "backface_visibility",
+      "title": "إخفاء الوجه الخلفي",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ خَاصِّيَّةَ backface-visibility مَعَ قِيمَةِ hidden لِإِخْفَاءِ الْجُزْءِ الْخَلْفِيِّ مِنَ الْعُنْصُرِ عِنْدَمَا لَا يَكُونُ مُوَاجِهاً لِلْمُسْتَخْدِمِ، وَهَذَا ضَرُورِيٌّ لِتَجَنُّبِ ظُهُورِ الْجَانِبِ الْآخَرِ بِشَكْلٍ غَيْرِ مَقْصُودٍ.",
+        "caption_text": "خاصية backface-visibility: hidden تضمن عدم ظهور الجانب الخلفي للعنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flip-box-front, .flip-box-back {\n  position: absolute;\n  backface-visibility: hidden;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_flip_image.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة النهائية",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَحْصُلُونَ عَلَى تَأْثِيرٍ احْتِرَافِيٍّ. عِنْدَ تَحْرِيكِ الْفَأْرَةِ، سَتَنْقَلِبُ الصُّورَةُ لِتَكْشِفَ عَنِ النَّصِّ الْمَوْجُودِ فِي الْخَلْفِيَّةِ بِحَرَكَةٍ انْسِيَابِيَّةٍ وَجَذَّابَةٍ.",
+        "caption_text": "النتيجة: تأثير قلب ثلاثي الأبعاد عند تمرير الفأرة فوق الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.txt",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    /* عند التمرير: */\n    [ الصورة تنقلب 180 درجة ]\n    [ يظهر النص: Paris - Amazing city ]\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "3D Flip Effect Active",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_flip_image.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ اسْتِخْدَامِ CSS لِإِنْشَاءِ تَأْثِيرَاتِ قَلْبٍ مُتَقَدِّمَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ وَتَعْدِيلِ الْقِيَمِ لِتَحْصُلُوا عَلَى نَتَائِجَ مُبْتَكَرَةٍ فِي مَشَارِيعِكُمُ الْخَاصَّةِ.",
+        "caption_text": "خلاصة: استخدمنا transform و transition لإنشاء تأثيرات بصرية احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام transform للقلب والتدوير",
+          "تفعيل العمق عبر perspective",
+          "التحكم في الرؤية عبر backface-visibility",
+          "تجربة الأكواد متاحة عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_flip_image.asp"
+      ]
+    }
+  ]
+}
