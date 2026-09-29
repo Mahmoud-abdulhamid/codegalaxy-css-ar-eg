@@ -1,0 +1,7 @@
+button:focus {
+  outline: 3px solid blue;
+}
+.text-content {
+  color: #333;
+  font-size: 16px;
+}
