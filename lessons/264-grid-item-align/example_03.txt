@@ -1,0 +1,2 @@
+Grid Cell [ .item1 ] -> Aligned Right / Start
+Grid Cell [ .item6 ] -> Aligned Center / Center
