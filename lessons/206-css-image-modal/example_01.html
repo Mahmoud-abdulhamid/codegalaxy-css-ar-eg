@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        background-color: rgba(0,0,0,0.8);
+      }
+      .modal.show {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <img src="img.jpg" onclick="openModal('m1')">
+    </div>
+  </body>
+</html>
