@@ -1,0 +1,7 @@
+#div1 {
+  margin: auto;
+  width: calc(100% - 100px);
+  height: calc(30vh + 50px);
+  border: 1px solid black;
+  padding: 10px;
+}
