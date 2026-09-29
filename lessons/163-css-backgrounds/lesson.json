@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "163",
+  "title": "CSS Multiple Backgrounds",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إضافة أكثر من صورة خلفية للعنصر الواحد",
+    "تعلم استخدام خاصية background-image مع الفواصل",
+    "التعرف على خاصية background المختصرة",
+    "التحكم في ترتيب وتكرار صور الخلفية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_backgrounds.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Multiple Backgrounds",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِضَافَةِ أَكْثَرَ مِنْ صُورَةِ خَلْفِيَّةٍ لِلْعُنْصُرِ الْوَاحِدِ بِاسْتِخْدَامِ خَاصِيَّةِ background-image، وَكَيْفَ نَتَحَكَّمُ فِي تَرْتِيبِهَا وَتَكْرَارِهَا لِتَصْمِيمِ وَاجِهَاتِ وِبٍّ احْتِرَافِيَّةٍ.",
+        "caption_text": "تسمح CSS بإضافة صور خلفية متعددة للعنصر الواحد باستخدام خاصية background-image."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إضافة صور خلفية متعددة للعنصر",
+          "استخدام خاصية background-image",
+          "ترتيب الصور فوق بعضها البعض",
+          "الصورة الأولى تكون الأقرب للمشاهد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للصور المتعددة",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَامِ صُوَرٍ مُتَعَدِّدَةٍ، نَفْصِلُ بَيْنَهَا بِفَاصِلَةٍ. الصُّورَةُ الْأُولَى فِي الْكُودِ تَكُونُ هِيَ الْأَقْرَبَ لِلْمُشَاهِدِ، بَيْنَمَا تَأْتِي الصُّوَرُ التَّالِيَةُ خَلْفَهَا. هَذَا يَمْنَحُنَا مَرُونَةً عَالِيَةً فِي التَّصْمِيمِ.",
+        "caption_text": "يتم الفصل بين صور الخلفية باستخدام الفواصل، وتترتب الصور فوق بعضها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الفصل بين الصور باستخدام الفاصلة (comma)",
+          "الصورة الأولى تظهر في المقدمة",
+          "الصور التالية تظهر في الخلفية",
+          "إمكانية تحديد موقع وتكرار كل صورة على حدة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "استخدام الخصائص المنفصلة",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ مَسَارِ الصُّوَرِ بِاسْتِخْدَامِ url، ثُمَّ نُحَدِّدُ background-position لِكُلِّ صُورَةٍ، وَأَخِيراً background-repeat لِتَحْدِيدِ مَا إِذَا كَانَتِ الصُّورَةُ سَتَتَكَرَّرُ أَمْ لَا.",
+        "caption_text": "استخدام الخصائص الفردية للتحكم في كل صورة خلفية على حدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#example1 {\n  background-image: url(img_flwr.gif), url(paper.gif);\n  background-position: right bottom, left top;\n  background-repeat: no-repeat, repeat;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "code_example_2",
+      "title": "استخدام خاصية background المختصرة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً اخْتِصَارُ الْكُودِ بِاسْتِخْدَامِ خَاصِيَّةِ background الْوَاحِدَةِ. نَكْتُبُ مَسَارَ الصُّورَةِ، مَوْقِعَهَا، وَحَالَةَ تَكْرَارِهَا، ثُمَّ نَضَعُ فَاصِلَةً وَنُكَرِّرُ الْأَمْرَ لِلصُّورَةِ الثَّانِيَةِ. هَذَا يُوَفِّرُ مَسَاحَةً وَيَجْعَلُ الْكُودَ أَنْظَفَ.",
+        "caption_text": "استخدام خاصية background المختصرة لتحقيق نفس النتيجة بكود أقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#example1 {\n  background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَنْفِيذِ هَذَا الْكُودِ، سَتَظْهَرُ صُورَةُ الزَّهْرَةِ فِي الرُّكْنِ السُّفْلِيِّ الْأَيْمَنِ دُونَ تَكْرَارٍ، وَتَظْهَرُ صُورَةُ الْوَرَقِ فِي الْخَلْفِيَّةِ كَنَمَطٍ مُتَكَرِّرٍ يَمْلَأُ الْمِسَاحَةَ الْمُتَبَقِّيَةَ.",
+        "caption_text": "تظهر النتيجة بدمج صورتين فوق بعضهما البعض في العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Element Background:\n- Layer 1: Flower (Right-Bottom, No-Repeat)\n- Layer 2: Paper (Left-Top, Repeat)",
+        "highlight_lines": [],
+        "output": "Layer 1: Flower (Right-Bottom, No-Repeat)\nLayer 2: Paper (Left-Top, Repeat)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً أَنَّ التَّرْتِيبَ مُهِمٌّ جِدّاً. إِذَا كَانَتِ الصُّورَةُ الْأُولَى تُغَطِّي كَامِلَ الْمِسَاحَةِ، فَلَنْ تَظْهَرَ الصُّوَرُ الَّتِي تَلِيهَا. احْرِصْ عَلَى اسْتِخْدَامِ صُوَرٍ بِخَلْفِيَّاتٍ شَفَّافَةٍ لِتَحْقِيقِ أَفْضَلِ نَتَائِجَ.",
+        "caption_text": "نصائح هامة للتعامل مع صور الخلفية المتعددة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الترتيب يحدد الطبقات (Layering)",
+          "استخدام صور شفافة (PNG) للطبقات العليا",
+          "التأكد من توافق المتصفحات الحديثة",
+          "استخدام background المختصرة لتقليل حجم الملف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ إِدَارَةِ خَلْفِيَّاتٍ مُتَعَدِّدَةٍ بِكُلِّ سُهُولَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهِدَةِ النَّتَائِجِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "لقد تعلمنا كيفية إضافة صور خلفية متعددة والتحكم بها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية خاصية background-image",
+          "تم شرح خاصية background المختصرة",
+          "تم توضيح كيفية ترتيب الصور",
+          "تطبيق عملي للصور المتعددة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_backgrounds.asp"
+      ]
+    }
+  ]
+}
