@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "216",
+  "title": "شرح خاصية object-position في CSS بالتفصيل",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام خاصية object-position مع object-fit",
+    "التحكم في إحداثيات x و y لتحديد موضع الصور والفيديوهات داخل الحاوية",
+    "تطبيق قيم النسبة المئوية والبكسل للتحكم الدقيق في العرض المرئي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_object-position.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن خصائص الويب والتحكم في العناصر المرئية",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ object-position وَكَيْفَ نَسْتَخْدِمُهَا لِلتَّحكُمِ فِي مَوْضِعِ الصُّوَرِ وَالْفِيدْيُوهَاتِ بِدِقَّةٍ دَاخِلَ الْحَاوِيَةِ الْخَاصَّةِ بِهَا فِي الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد حول خاصية object-position في CSS للتحكم في موضع الصور والفيديوهات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "نتعرف اليوم على خاصية object-position في CSS",
+          "نستخدم الخاصية مع object-fit لتحديد الموضع بدقة",
+          "التحكم في إحداثيات الصور والفيديوهات داخل عناصر الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-position.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "دور خاصية object-position مع إحداثيات x و y",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةُ object-position مَعَ خَاصِيَّةِ object-fit لِتَحْدِيدِ كَيْفِيَّةِ تَوْضِعِ عَنَاصِرِ img أَوْ video. تُحَدَّدُ القِيَمُ بِاسْتِخْدَامِ إِحْدَاثِيَاتِ x وَ y، حَيْثُ تَحْكُمُ القِيمَةُ الأُولَى فِي الْمِحْوَرِ الْأُفُقِيِّ x، وَالثَّانِيَةُ فِي الْمِحْوَرِ الرَّأْسِيِّ y.",
+        "caption_text": "تستخدم object-position مع object-fit لتحديد موضع عناصر الصور والفيديوهات باستخدام إحداثيات x و y."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد كيفية تمركز العناصر داخل الحاوية",
+          "القيمة الأولى تتحكم في المحور الأفقي x",
+          "القيمة الثانية تتحكم في المحور الرأسي y"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-position.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "أنواع القيم المستخدمة ووحدات القياس",
+      "narration": {
+        "spoken_text": "تَقْبَلُ خَاصِيَّةُ object-position عِدَّةَ أَنْوَاعٍ مِنَ القِيَمِ. تَمَاماً مِثْلَ السَّلَاسِلِ النَّصِّيَّةِ كِلمَاتِ left وَ center وَ right، أَوْ الْأَرْقَامِ بِوِحْدَاتِ الْقِيَاسِ ك px وَ النَّسَبِ الْمِئَوِيَّةِ، كَمَا سُمِحَ أَيْضاً بِاسْتِخْدَامِ القِيَمِ السَّالِبَةِ بِمُرُونَةٍ.",
+        "caption_text": "تقبل الخاصية قيم نصية مثل center أو أرقام بوحدات px والنسب المئوية، بالإضافة إلى القيم السالبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قبول قيم نصية مثل left و center و right",
+          "استخدام وحدات القياس مثل البكسل px والنسب المئوية",
+          "إمكانية استخدام القيم السالبة لتحريك العناصر بحرية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-position.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "كتابة الكود البرمجي لتحديد حجم الحاوية والخصائص",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ الآنَ إِلَى المِثَالِ الأوَّلِ. نُنْشِئُ عُنْصُرَ حَاوِيَةٍ بِاسْمِ image-container بِعَرْضِ مِئَتَيْ بِكْسِلْ وَارْتِفَاعِ ثَلَاثِمِائَةِ بِكْسِلْ، مَعَ حُدُودِ بِكْسِلٍ وَاحِدٍ، ثُمَّ نُطَبِّقُ object-fit بِوَضْعِ cover.",
+        "caption_text": "نكتب كود CSS لتحديد أبعاد حاوية الصور بـ 200 بكسل عرضا و300 بكسل ارتفاعا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".image-container {\n  width: 200px;\n  height: 300px;\n  border: 1px solid black;\n}\n.image-container img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}",
+        "highlight_lines": [],
+        "output": "حاوية صور بأبعاد 200 في 300 بكسل مع تغطية كاملة للصورة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-position.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "استخدام خاصية object-position بنسب مئوية دقيقة",
+      "narration": {
+        "spoken_text": "فِي هَذَا الجُزْءِ مِنَ الْكُودِ، نُحَدِّدُ قِيمَةَ object-position بِتَمْرِيرِ ثَمَانِينَ بِالْمِائَةِ لِلْمِحْوَرِ الْأُفُقِيِّ وَمِئَةِ بِالْمِائَةِ لِلْمِحْوَرِ الرَّأْسِيِّ، لِتَوَجُّهِ العَرْضِ تَمَاماً نَحْوَ الْبِنَاءِ المُرَادِ إِظْهَارُهُ فِي الوَسَطِ.",
+        "caption_text": "نستخدم object-position بقيم 80 للمحور الأفقي و100 للمحور الرأسي لإبراز المعلم المطلوب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".image-container img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: 80% 100%;\n}",
+        "highlight_lines": [],
+        "output": "ضبط موضع الصورة لتظهر النقطة المحددة بنسبة 80% أفقياً و100% رأسياً.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-position.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "تطبيق مثال إضافي لتغيير الموضع بنسبة أخرى",
+      "narration": {
+        "spoken_text": "نَسْتَطِيعُ أَيْضاً تَغْيِيرَ الْإِحْدَاثِيَاتِ لِتَعْدِيلِ التَّرْكِيزِ. فِي هَذَا المِثَالِ الثَّانِي، نَضَعُ القِيمَةَ خَمْسَةَ عَشَرَ بِالْمِائَةِ أفقياً وَمِئَةِ بِالْمِائَةِ رأسياً، لِعَرْضِ جُزْءٍ مُخْتَلِفٍ تَمَاماً مِنَ الصُّورَةِ دَاخِلَ الْحَاوِيَةِ.",
+        "caption_text": "مثال إضافي لتغيير الموضع باستخدام قيم 15 و100 لعرض جزء مختلف من الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".image-container img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: 15% 100%;\n}",
+        "highlight_lines": [],
+        "output": "تغيير إحداثيات الموضع لتركيز العرض على جزء مختلف من الصورة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-position.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس وأفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "فِي الخِتَامِ، تُمَكِّنُنَا خَاصِيَّةُ object-position مِنَ التَّحكُمِ الْكَامِلِ فِي تَفَاصِيلِ الصُّوَرِ المَعْرُوضَةِ. نَنْصَحُ بِتَجْرِبَةِ مُخْتَلَفِ النِّسَبِ وَالقِيَمِ لِلْوُصُولِ إِلَى التَّمَرُّكُزِ المِثَالِيِّ لِعَنَاصِرِ الوِبّ لَدَيْكُمْ.",
+        "caption_text": "خلاصة الدرس: استخدم object-position للتحكم الكامل بموضع العناصر وجرب مختلف القيم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم الكامل في موضع الصور والفيديوهات",
+          "ضرورة استخدام الخاصية مع object-fit",
+          "تجربة النسب المختلفة للوصول للتصميم المثالي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-position.asp"
+      ]
+    }
+  ]
+}
