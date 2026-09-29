@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "347",
+  "title": "تصميم صور مصغرة باحترافية باستخدام CSS Thumbnail",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم Thumbnail واستخداماته في صفحات الويب",
+    "تطبيق حدود أنيقة وحواف دائرية على الصور",
+    "إضافة تأثيرات تفاعلية باستخدام hover و box-shadow"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_thumbnail.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن الصور المصغرة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفَيَّةِ إِنْشَاءِ Thumbnail صُورَةٍ مُصَغَّرَةٍ تُمْسِكُ الانْتِبَاهَ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تعرف على كيفية إنشاء Thumbnail باستخدام CSS لتنظيم العرض."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ما هي الصور المصغرة Thumbnail",
+          "أهمية الصور المصغرة في تجربة المستخدم",
+          "استخدام عناصر HTML و CSS معا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_thumbnail.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "المفهوم الأساسي للصور المصغرة",
+      "narration": {
+        "spoken_text": "الصُّورَةُ الْمُصَغَّرَةُ هِيَ صُورَةٌ صَغِيرَةٌ تُمَثِّلُ صُورَةً أَكْبَرَ حَجْماً عِنْدَ الضَّغْطِ عَلَيْهَا، وَغَالِباً مَا يَتِمُّ تَمْيِيزُهَا بِوُجُودِ إِطَارٍ حَوْلَهَا لِتَجْذِبَ انْتِبَاهَ الْمُسْتَخْدِمِ فِي الْمَوْقِعِ.",
+        "caption_text": "Thumbnail هي صورة مصغرة تمثل صورة أكبر عند النقر مع إطار مميز."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمثيل الصور الكبيرة بصور مصغرة",
+          "إضافة إطار خارجي لتوضيح الحدود",
+          "تحسين سرعة تحميل وتخطيط الصفحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_thumbnail.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تطبيق هيكل HTML للصورة المصغرة",
+      "narration": {
+        "spoken_text": "لإِنْشَاءِ Thumbnail نَسْتَخْدِمُ عُنْصَرَ img مَحْمُولاً دَاخِلَ عُنْصَرِ رَابِطِ a لِيُمْكِنَ فَتْحُ الصُّورَةِ الْكَبِيرَةِ فِي نَافِذَةٍ جَدِيدَةٍ بِاسْتِخْدَامِ target blank.",
+        "caption_text": "استخدام عنصر <img> داخل عنصر <a> لإنشاء رابط للصورة الكبيرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "thumbnail.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <a target=\"_blank\" href=\"img_forest.jpg\">\n      <img src=\"img_forest.jpg\" alt=\"Forest\">\n    </a>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "رابط يحتوي على صورة مصغرة تفتح في نافذة جديدة عند النقر عليها.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_thumbnail.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تنسيق الحدود والزوايا بـ CSS",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الآنَ إِلَى كِتَابَةِ أكواد CSS. نُنَسِّقُ عُنْصَرَ img بِإِضَافَةِ border رَمَادِيٍّ خَفِيفٍ، وَتَحْدِيدِ border-radius لِتَدْوِيرِ الزَّوَايَا، وَتَحْدِيدِ عَرْضٍ مُنَاسِبٍ width.",
+        "caption_text": "تنسيق الحدود والزوايا وتحديد العرض المناسب للصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  border: 1px solid #ddd;\n  border-radius: 4px;\n  padding: 5px;\n  width: 150px;\n}",
+        "highlight_lines": [],
+        "output": "صورة بعرض 150 بكسل مع إطار رمادي وزوايا دائرية وهامش داخلي.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_thumbnail.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "إضافة تأثير التفاعل hover",
+      "narration": {
+        "spoken_text": "لإِضَافَةِ تَفَاعُلٍ جَمِيلٍ عِنْدَ مُرُورِ الْمَاوْسِ، نَسْتَخْدِمُ مُحَوِّلَ img hover مَعَ خَاصِّيَّةِ box-shadow لِإِظْهَارِ ظِلٍّ أَزْرَقَ يَدُلُّ عَلَى إِمْكَانِيَّةِ النَّقْرِ عَلَى الصُّورَةِ.",
+        "caption_text": "إضافة تأثير hover مع box-shadow بلون أزرق عند مرور المؤشر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "hover.css",
+        "code": "img:hover {\n  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);\n}",
+        "highlight_lines": [],
+        "output": "ظهور ظل أزرق ناعم حول الصورة عند مرور مؤشر الفأرة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_thumbnail.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "تجميع الكود الكامل في الصفحة",
+      "narration": {
+        "spoken_text": "هَذَا هُوَ الْكودُ الْكَامِلُ المُتَمَثِّلُ فِي تَنسِيقِ CSS دَاخِلَ قِسْمِ style مَعَ هَيْكَلِ body لِلصَّفْحَةِ، لِيُصْبِحَ لَدَيْكُم كُودٌ جَاهِزٌ وَمُتَکَامِلٌ لِعَرْضِ الصُّورِ الْمُصَغَّرَةِ.",
+        "caption_text": "جمع أكواد HTML و CSS في ملف واحد لتطبيق التأثيرات بالكامل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      img {\n        border: 1px solid #ddd;\n        border-radius: 4px;\n        padding: 5px;\n        width: 150px;\n      }\n      img:hover {\n        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);\n      }\n    </style>\n  </head>\n  <body>\n    <a target=\"_blank\" href=\"img_forest.jpg\">\n      <img src=\"img_forest.jpg\" alt=\"Forest\">\n    </a>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "صفحة وِبّ تعرض صورة مصغرة متفاعلة مع إطار وظل عند مرور الفأرة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_thumbnail.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "أفضل الممارسات والنصائح الهندسية",
+      "narration": {
+        "spoken_text": "احْرِصُوا دَائِماً عَلَى اسْتِخْدَامِ خَاصِّيَّةِ alt بِوَصْفٍ دَقِيقٍ لِلصُّورَةِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ وَتَحْسِينِ مَحَارِكِ الْبَحْثِ SEO، مَعَ ضَبْطِ الْأَحْجَامِ بِطَرِيقَةٍ مُتَنَاسِقَةٍ.",
+        "caption_text": "أفضل الممارسات لتحسين إمكانية الوصول ومحركات البحث."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام alt لجميع عناصر الصور بدقة",
+          "اختيار ألوان ظلال تتناسب مع تصميم الموقع",
+          "مراجعة دورة CSS Images لمزيد من التنسيقات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_thumbnail.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِ الْيَوْمِ، تَعَلَّمْنَا كَيْفَيَّةِ صُنْعِ Thumbnail احْتِرَافِيَّةٍ بِاسْتِخْدَامِ CSS. نَتَمَنَى أَنْ تَقُومُوا بِتَجْرِبَةِ هَذَا الْكودِ بِنُفُوسِكُمْ، وَنَنْتَظِرُكُم فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "خلاصة الدرس ودعوة لتطبيق الكود بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تلخيص خطوات إنشاء Thumbnail",
+          "تجربة الأكواد بأنفسكم عبر الرابط المرفق",
+          "انتظرونا في الدرس القادم من دورة CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_thumbnail.asp"
+      ]
+    }
+  ]
+}
