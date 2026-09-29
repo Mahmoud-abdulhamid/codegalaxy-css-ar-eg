@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "320",
+  "title": "بناء شريط أيقونات التواصل الاجتماعي الثابت Sticky Social Bar",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام position: fixed في CSS",
+    "تطبيق تقنية تحويل العناصر باستخدام transform",
+    "تصميم شريط أيقونات تفاعلي وجذاب",
+    "دمج Font Awesome في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول شريط الأيقونات الثابت",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ شَرِيطِ أَيْقُونَاتِ التَّوَاصُلِ الِاجْتِمَاعِيِّ الثَّابِتِ، الَّذِي يَبْقَى ظَاهِراً عَلَى جَانِبِ صَفْحَةِ الْوِبّ أَثْنَاءَ التَّمْرِيرِ، وَذَلِكَ بِاسْتِخْدَامِ خَصَائِصِ CSS الْمُتَقَدِّمَةِ.",
+        "caption_text": "سنتعلم اليوم كيفية بناء شريط أيقونات التواصل الاجتماعي الثابت الذي يبقى ظاهرا على جانب صفحة الويب أثناء التمرير."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء شريط أيقونات ثابت Sticky Social Bar",
+          "استخدام CSS للتحكم في التموضع",
+          "إضافة أيقونات تفاعلية باستخدام Font Awesome"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp"
+      ]
+    },
+    {
+      "id": "html-structure",
+      "title": "هيكلة شريط الأيقونات في HTML",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِتَضْمِينِ مَكْتَبَةِ Font Awesome لِعَرْضِ الْأَيْقُونَاتِ، ثُمَّ نُنْشِئُ Element بِاسْمِ icon-bar يَحْتَوِي عَلَى رَوَابِط a، كُلُّ رَابِطٍ يَمْثِلُ مَنْصَةَ تَوَاصُلٍ اجْتِمَاعِيٍّ مَعَ Class خَاصٍّ بِهَا.",
+        "caption_text": "نبدأ بتضمين مكتبة Font Awesome ثم ننشئ Element باسم icon-bar يحتوي على روابط a لكل منصة تواصل اجتماعي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  </head>\n  <body>\n    <div class=\"icon-bar\">\n      <a href=\"#\" class=\"facebook\"><i class=\"fa fa-facebook\"></i></a>\n      <a href=\"#\" class=\"twitter\"><i class=\"fa fa-twitter\"></i></a>\n      <a href=\"#\" class=\"google\"><i class=\"fa fa-google\"></i></a>\n      <a href=\"#\" class=\"linkedin\"><i class=\"fa fa-linkedin\"></i></a>\n      <a href=\"#\" class=\"youtube\"><i class=\"fa fa-youtube\"></i></a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp"
+      ]
+    },
+    {
+      "id": "css-positioning",
+      "title": "ضبط التموضع باستخدام CSS",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الشَّرِيطِ ثَابِتاً، نَسْتَخْدِمُ position: fixed مَعَ top: 50. وَلِضَبْطِ التَّمَرْكُزِ الْعَمُودِيِّ بِدِقَّةٍ، نَسْتَخْدِمُ transform: translateY(-50) لِيَكُونَ الشَّرِيطُ فِي مُنْتَصَفِ الشَّاشَةِ تَمَاماً.",
+        "caption_text": "نستخدم position: fixed مع top: 50 و transform: translateY(-50) لضبط التمركز العمودي للشريط في منتصف الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".icon-bar {\n  position: fixed;\n  top: 50%;\n  transform: translateY(-50%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp"
+      ]
+    },
+    {
+      "id": "css-styling",
+      "title": "تنسيق الروابط والأيقونات",
+      "narration": {
+        "spoken_text": "نُحَوِّلُ الرَّوَابِطَ إِلَى display: block لِتَأْخُذَ مَسَاحَةً كَامِلَةً، مَعَ تَوْسِيطِ النَّصِّ وَإِضَافَةِ padding. نَسْتَخْدِمُ transition لِجَعْلِ تَغَيُّرِ الْأَلْوَانِ عِنْدَ الْحَوَمَانِ بِوَاسِطَةِ hover سَلِساً وَجَذَّاباً.",
+        "caption_text": "نحول الروابط إلى display: block مع توسيط النص وإضافة padding، ونستخدم transition لجعل تأثير hover سلسا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".icon-bar a {\n  display: block;\n  text-align: center;\n  padding: 16px;\n  transition: all 0.3s ease;\n  color: white;\n  font-size: 20px;\n}\n.icon-bar a:hover {\n  background-color: #000;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp"
+      ]
+    },
+    {
+      "id": "colors-setup",
+      "title": "تخصيص ألوان المنصات",
+      "narration": {
+        "spoken_text": "لِكُلِّ مَنْصَةٍ لَوْنٌ خَاصٌّ يُمَيِّزُهَا. نَقُومُ بِتَعْرِيفِ background-color لِكُلِّ Class مِثْلَ facebook أَوْ twitter، لِيَظْهَرَ الشَّرِيطُ بِشَكْلٍ احْتِرَافِيٍّ يُطَابِقُ هُوِيَّةَ كُلِّ مَوْقِعٍ.",
+        "caption_text": "نقوم بتعريف background-color لكل Class مثل facebook أو twitter ليعكس هوية كل منصة تواصل اجتماعي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".facebook {\n  background: #3B5998;\n}\n.twitter {\n  background: #55ACEE;\n}\n.google {\n  background: #dd4b39;\n}\n.linkedin {\n  background: #007bb5;\n}\n.youtube {\n  background: #bb0000;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة النتيجة النهائية",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَظْهَرُ شَرِيطُ الْأَيْقُونَاتِ عَلَى الْجَانِبِ الْأَيْسَرِ مِنَ الشَّاشَةِ. عِنْدَ التَّمْرِيرِ لِلْأَسْفَلِ أَوْ الْأَعْلَى، سَيَظَلُّ الشَّرِيطُ ثَابِتاً فِي مَكَانِهِ، مِمَّا يُوَفِّرُ وُصُولاً سَرِيعاً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "يظهر شريط الأيقونات ثابتا على جانب الشاشة، مما يوفر وصولا سريعا للمستخدم أثناء التمرير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "preview.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة: شريط أيقونات عمودي ثابت -->\n    <div class=\"icon-bar\">\n      <a class=\"facebook\">f</a>\n      <a class=\"twitter\">t</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "شريط أيقونات ملون وثابت على جانب المتصفح",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "نصائح برمجية هامة",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ يَا صَدِيقِي أَنَّ اسْتِخْدَامَ position: fixed قَدْ يُغَطِّي بَعْضَ مُحْتَوَى الصَّفْحَةِ إِذَا لَمْ تَقُمْ بِضَبْطِ margin-left لِلْحَاوِيَةِ الرَّئِيسِيَّةِ. كَمَا يُفَضَّلُ دَائِماً اخْتِبَارُ التَّصْمِيمِ عَلَى الشَّاشَاتِ الصَّغِيرَةِ.",
+        "caption_text": "تذكر ضبط margin-left للحاوية الرئيسية لتجنب تداخل المحتوى، واختبر التصميم دائما على الشاشات الصغيرة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ضبط الهوامش لتجنب تداخل المحتوى",
+          "اختبار التجاوب على الهواتف",
+          "استخدام وحدات قياس مرنة",
+          "تحسين الأداء بتحميل الأيقونات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ شَرِيطِ أَيْقُونَاتٍ احْتِرَافِيٍّ. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِأَنْفُسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدِيُو، وَلَا تَتَرَدَّدُوا فِي طَرْحِ أَسْئِلَتِكُمْ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "لقد أتممنا بناء شريط أيقونات احترافي. جربوا الكود بأنفسكم عبر الرابط في الوصف، ولا تترددوا في طرح أسئلتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم الانتهاء من بناء الشريط",
+          "راجعوا الرابط في الوصف للتجربة",
+          "استعدوا للدرس القادم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sticky_social_bar.asp"
+      ]
+    }
+  ]
+}
