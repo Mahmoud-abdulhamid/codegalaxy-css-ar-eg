@@ -1,0 +1,6 @@
+#home a:hover {
+  background: url('img_navsprites_hover.gif') 0 -45px;
+}
+#prev a:hover {
+  background: url('img_navsprites_hover.gif') -47px -45px;
+}
