@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "301",
+  "title": "بناء قائمة جانبية احترافية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية إنشاء قائمة جانبية ثابتة",
+    "دمج مكتبة Font Awesome للأيقونات",
+    "تطبيق خصائص CSS للتحكم في التخطيط",
+    "استخدام Media Queries للتجاوب مع الشاشات"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_sidebar_icons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول القوائم الجانبية",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ قَائِمَةٍ جَانِبِيَّةٍ احْتِرَافِيَّةٍ لِصَفْحَةِ الْوِبّ، مَعَ دَمْجِ أَيْقُونَاتٍ جَذَّابَةٍ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ بِاسْتِخْدَامِ تَقْنِيَاتِ التَّنْسِيقِ الْحَدِيثَةِ.",
+        "caption_text": "مرحبا بكم في درس بناء القائمة الجانبية الاحترافية باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء هيكل القائمة الجانبية",
+          "استخدام مكتبة Font Awesome للأيقونات",
+          "تنسيق القائمة باستخدام CSS",
+          "جعل القائمة متجاوبة مع الشاشات الصغيرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_icons.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML للقائمة الجانبية",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ Element مِنْ نَوْع div بِكَلَاس sidebar، وَنَضَعُ دَاخِلَهُ رَوَابِط a. لِإِضَافَةِ الْأَيْقُونَاتِ، نَسْتَخْدِمُ i Tag مَعَ كَلَاسَاتِ Font Awesome لِتَظْهَرَ الْأَيْقُونَةُ بِجَانِبِ النَّصِّ بِشَكْلٍ مُنَسَّقٍ.",
+        "caption_text": "هيكل HTML يستخدم div كحاوية رئيسية و i للأيقونات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"sidebar\">\n      <a href=\"#home\"><i class=\"fa fa-home\"></i> Home</a>\n      <a href=\"#services\"><i class=\"fa fa-wrench\"></i> Services</a>\n      <a href=\"#clients\"><i class=\"fa fa-user\"></i> Clients</a>\n      <a href=\"#contact\"><i class=\"fa fa-envelope\"></i> Contact</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_icons.asp"
+      ]
+    },
+    {
+      "id": "css_sidebar",
+      "title": "تنسيق القائمة الجانبية بـ CSS",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ لِتَنْسِيقِ sidebar. نَضْبِطُ height عَلَى 100 وَ width عَلَى 160px. نَسْتَخْدِمُ position: fixed لِتَثْبِيتِ الْقَائِمَةِ، وَنُحَدِّدُ background-color لِلَّوْنِ الدَّاكِنِ، مَعَ ضَبْطِ overflow-x لِتَجَنُّبِ ظُهُورِ أَيِّ أَشْرِطَةِ تَمْرِيرٍ غَيْرِ مُرَادَةٍ.",
+        "caption_text": "تنسيق القائمة الجانبية باستخدام خصائص CSS الثابتة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".sidebar {\n  height: 100%;\n  width: 160px;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: #111;\n  overflow-x: hidden;\n  padding-top: 16px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_icons.asp"
+      ]
+    },
+    {
+      "id": "css_links",
+      "title": "تنسيق الروابط والتفاعل",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ الرَّوَابِطِ دَاخِلَ sidebar، نُعْطِيهَا padding مُنَاسِباً وَنُزِيلُ text-decoration. نَسْتَخْدِمُ display: block لِتَأْخُذَ الرَّابِطَةُ كَامِلَ عَرْضِ الْقَائِمَةِ. وَلِإِضَافَةِ تَفَاعُلٍ عِنْدَ مُرُورِ الْفَأْرَةِ، نَسْتَخْدِمُ a:hover لِتَغْيِيرِ لَوْنِ النَّصِّ.",
+        "caption_text": "تنسيق الروابط داخل القائمة وإضافة تأثير hover."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".sidebar a {\n  padding: 6px 8px 6px 16px;\n  text-decoration: none;\n  font-size: 20px;\n  color: #818181;\n  display: block;\n}\n.sidebar a:hover {\n  color: #f1f1f1;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_icons.asp"
+      ]
+    },
+    {
+      "id": "main_content",
+      "title": "تنسيق المحتوى الرئيسي",
+      "narration": {
+        "spoken_text": "لِضَمَانِ عَدَمِ تَدَاخُلِ الْمُحْتَوَى مَعَ الْقَائِمَةِ، نُعْطِي كَلَاس main هَامِشاً يَسَارِيّاً margin-left يُسَاوِي عَرْضَ الْقَائِمَةِ، وَهُوَ 160px. هَذَا يَجْعَلُ الْمُحْتَوَى يَبْدَأُ بَعْدَ انْتِهَاءِ مِسَاحَةِ الْقَائِمَةِ الْجَانِبِيَّةِ تَمَاماً.",
+        "caption_text": "ضبط الهامش للمحتوى الرئيسي ليتناسب مع عرض القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".main {\n  margin-left: 160px;\n  padding: 0px 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_icons.asp"
+      ]
+    },
+    {
+      "id": "responsive",
+      "title": "التجاوب مع الشاشات الصغيرة",
+      "narration": {
+        "spoken_text": "أَخِيراً، نَسْتَخْدِمُ Media Queries لِتَكَيُّفِ الْقَائِمَةِ مَعَ الشَّاشَاتِ الصَّغِيرَةِ. عِنْدَمَا يَكُونُ ارْتِفَاعُ الشَّاشَةِ أَقَلَّ مِنْ 450px، نُقَلِّلُ padding وَ font-size لِتَبْقَى الْقَائِمَةُ مَقْرُوءَةً وَمُنَاسِبَةً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "استخدام Media Queries لضبط القائمة في الشاشات الصغيرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-height: 450px) {\n  .sidebar {\n    padding-top: 15px;\n  }\n  .sidebar a {\n    font-size: 18px;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_icons.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَنْشَأْنَا قَائِمَةً جَانِبِيَّةً احْتِرَافِيَّةً. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ التَّنْسِيقِ الْمُنَظَّمِ وَاسْتِخْدَامِ Media Queries لِتَجْعَلُوا مَوَاقِعَكُمُ الْوِبِّيَّةَ تَعْمَلُ بِكُلِّ كَفَاءَةٍ عَلَى جَمِيعِ الْأَجْهِزَةِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: القائمة الجانبية تعزز تجربة المستخدم وتوفر تنقلا سهلا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position: fixed للقوائم الثابتة",
+          "تنسيق الروابط بـ display: block",
+          "استخدام Media Queries للتجاوب",
+          "تجربة الأكواد عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidebar_icons.asp"
+      ]
+    }
+  ]
+}
