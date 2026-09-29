@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "153",
+  "title": "CSS Performance Optimization",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم أهمية تحسين أداء CSS لسرعة تحميل صفحات الويب",
+    "تعلم كيفية كتابة Selectors بسيطة وفعالة",
+    "تجنب استخدام Universal Selector و Inline Styles",
+    "استخدام Shorthand Properties وتقنيات التخزين المؤقت"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_performance.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-832edaee240420a2.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_performance.asp",
+      "source_url": "https://www.w3schools.com/css/css_performance.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحسين أداء CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ حَوْلَ تَحْسِينِ أَدَاءِ CSS. إِنَّ تَحْسِينَ كُودِ CSS يَجْعَلُ صَفْحَةَ الْوِبّ تَتَحَمَّلُ بِسُرْعَةٍ أَكْبَر، وَيُحَسِّنُ تَجْرِبَةَ الْمُسْتَخْدِمِ بِشَكْلٍ مَلْحُوظٍ وَمُبَاشِرٍ.",
+        "caption_text": "تحسين أداء CSS يجعل صفحات الويب أسرع وأكثر سلاسة للمستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحسين سرعة تحميل صفحات الويب",
+          "تعزيز سلاسة التفاعل مع الموقع",
+          "تحسين تجربة المستخدم النهائية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_performance.asp"
+      ]
+    },
+    {
+      "id": "selectors",
+      "title": "استخدام Selectors بسيطة",
+      "narration": {
+        "spoken_text": "يَجِبُ عَلَيْنَا اسْتِخْدَامُ Selectors بَسِيطَةٍ كُلَّمَا أَمْكَنَ ذَلِكَ. إِنَّ اسْتِخْدَامَ Selectors مُعَقَّدَةٍ يَزِيدُ مِنْ وَقْتِ الْقِرَاءَةِ وَالْمُعَالَجَةِ، مِمَّا يُؤَدِّي إِلَى بُطْءٍ فِي عَرْضِ الصَّفْحَةِ.",
+        "caption_text": "تجنب Selectors المعقدة لتقليل وقت المعالجة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button:hover {\n  background-color: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_performance.asp"
+      ]
+    },
+    {
+      "id": "universal_selector",
+      "title": "تجنب Universal Selector",
+      "narration": {
+        "spoken_text": "تَجَنَّبْ اسْتِخْدَامَ Universal Selector أَوْ النَّجْمَةَ (*) إِذَا لَمْ تَكُنْ ضَرُورِيَّةً. هَذَا التَّاجُ يُؤَثِّرُ عَلَى كُلِّ Element فِي الصَّفْحَةِ وَيُبْطِئُ عَمَلِيَّةَ الرَّنْدَرَةِ.",
+        "caption_text": "الاستخدام المفرط لـ Universal Selector يؤثر على أداء الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "* {\n  margin: 0;\n  padding: 0;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_performance.asp"
+      ]
+    },
+    {
+      "id": "inline_styles",
+      "title": "تجنب Inline Styles",
+      "narration": {
+        "spoken_text": "يُفَضَّلُ تَجَنُّبُ Inline Styles لِأَنَّهَا تَجْعَلُ كُودَ HTML أَثْقَلَ وَأَصْعَبَ فِي الْإِدَارَةِ. اسْتَخْدِمْ مَلَفَّاتِ CSS خَارِجِيَّةً لِتَنْظِيمِ الْكُودِ وَتَحْسِينِ الْأَدَاءِ.",
+        "caption_text": "Inline Styles تجعل ملفات HTML أكبر حجما وأصعب في الصيانة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div style=\"color: red;\">Hello</div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_performance.asp"
+      ]
+    },
+    {
+      "id": "import_link",
+      "title": "استخدام link بدلا من import",
+      "narration": {
+        "spoken_text": "تَجَنَّبْ اسْتِخْدَامَ import لِتَحْمِيلِ CSS، لِأَنَّهَا تُؤَخِّرُ عَمَلِيَّةَ التَّحْمِيلِ. بَدَلاً مِنْ ذَلِكَ، اسْتَخْدِمْ التَّاجَ link دَاخِلَ قِسْمِ head لِضَمَانِ تَحْمِيلِ التَّنْسِيقَاتِ قَبْلَ عَرْضِ الصَّفْحَةِ.",
+        "caption_text": "استخدم link في head لتحميل ملفات CSS بكفاءة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Hello World</h1>\n    <p>Styled Web Page</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_performance.asp"
+      ]
+    },
+    {
+      "id": "shorthand",
+      "title": "استخدام Shorthand Properties",
+      "narration": {
+        "spoken_text": "اسْتَخْدِمْ Shorthand Properties لِتَقْلِيلِ حَجْمِ الْمَلَفِّ وَتَسْرِيعِ الْقِرَاءَةِ. مِثَالٌ عَلَى ذَلِكَ، بَدَلاً مِنْ كِتَابَةِ كُلِّ اتِّجَاهٍ عَلَى حِدَةٍ، يُمْكِنُكَ جَمْعُهَا فِي سَطْرٍ وَاحِدٍ.",
+        "caption_text": "Shorthand Properties توفر المساحة وتسرع عملية المعالجة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "margin: 10px 20px;",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_performance.asp"
+      ]
+    },
+    {
+      "id": "animations",
+      "title": "تحسين Animations",
+      "narration": {
+        "spoken_text": "قَلِّلْ مِنَ ال Animations غَيْرِ الضَّرُورِيَّةِ. عِنْدَ الْحَاجَةِ، اسْتَخْدِمْ خَصَائِصَ مِثْلَ transforms وَ opacity، لِأَنَّهَا لَا تُسَبِّبُ إِعَادَةَ رَسْمِ الصَّفْحَةِ بِشَكْلٍ مُكَلِّفٍ لِلْمُعَالَجِ.",
+        "caption_text": "استخدم خصائص مثل transforms و opacity لتحسين أداء Animations."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إزالة Animations غير الضرورية",
+          "استخدام transforms و opacity",
+          "تجنب تغيير width و height في Animations"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_performance.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي النِّهَايَةِ، تَذَكَّرْ أَنَّ تَجْمِيعَ وَتَصْغِيرَ مَلَفَّاتِ CSS، وَتَفْعِيلَ التَّخْزِينِ الْمُؤَقَّتِ Cache، هِيَ خُطُوَاتٌ جَوْهَرِيَّةٌ لِتَحْسِينِ أَدَاءِ مَوْقِعِكَ. شُكْراً لِمُتَابَعَتِكُمْ، وَنَلْتَقِي فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "تجميع الملفات وتفعيل Cache يساهمان في تحسين الأداء العام."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجميع ملفات CSS",
+          "تصغير حجم الملفات Minify",
+          "تفعيل Cache في إعدادات السيرفر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_performance.asp"
+      ]
+    }
+  ]
+}
