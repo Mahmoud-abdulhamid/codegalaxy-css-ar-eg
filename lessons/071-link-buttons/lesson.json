@@ -3,6 +3,8 @@
   "lesson_id": "71",
   "title": "CSS Link Buttons",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية تحويل الروابط إلى أزرار باستخدام CSS",
     "التعرف على استخدام Pseudo-classes مثل :link و :visited و :hover",
