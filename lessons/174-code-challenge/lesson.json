@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "174",
+  "title": "CSS Gradients Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تطبيق CSS Gradients",
+    "التعرف على أنواع التدرجات اللونية",
+    "تطبيق التحديات البرمجية في CSS",
+    "تحسين مهارات التصميم باستخدام CSS3"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_gradients.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Gradients",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ بِنَاءِ التَّدَرُّجَاتِ اللَّوْنِيَّةِ أَو مَا يُعْرَفُ بِ CSS Gradients، وَهِيَ مَهَارَةٌ أَسَاسِيَّةٌ لِتَصْمِيمِ وَاجِهَاتِ الْوِبّ الْجَذَّابَةِ.",
+        "caption_text": "مرحبا بكم في درس CSS Gradients، سنتعلم اليوم كيفية بناء التدرجات اللونية لتصميم واجهات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Gradients تسمح بدمج لونين أو أكثر",
+          "تستخدم لإنشاء خلفيات احترافية",
+          "تغني عن استخدام الصور الثابتة",
+          "تزيد من سرعة تحميل صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "types",
+      "title": "أنواع التدرجات في CSS",
+      "narration": {
+        "spoken_text": "تُوَفِّرُ لَنَا لُغَةُ CSS أَنْوَاعاً مُخْتَلِفَةً مِنَ التَّدَرُّجَاتِ. لَدَيْنَا Linear Gradients لِلتَّدَرُّجِ الْخَطِّيِّ، وَ Radial Gradients لِلتَّدَرُّجِ الدَّائِرِيِّ، بِالْإِضَافَةِ إِلَى Conic Gradients لِلتَّدَرُّجِ الْمَخْرُوطِيِّ. كُلُّ نَوْعٍ يُعْطِي لَمْسَةً جَمَالِيَّةً مُخْتَلِفَةً.",
+        "caption_text": "تتنوع التدرجات في CSS بين Linear و Radial و Conic Gradients، حيث يوفر كل نوع تأثيرا بصريا فريدا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "linear-gradient: تدرج في اتجاه خطي",
+          "radial-gradient: تدرج من المركز للخارج",
+          "conic-gradient: تدرج حول نقطة مركزية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كتابة كود التدرج الخطي",
+      "narration": {
+        "spoken_text": "لِنَقُمْ بِكِتَابَةِ كُودٍ بَسِيطٍ لِتَطْبِيقِ تَدَرُّجٍ خَطِّيٍّ عَلَى عُنْصُرِ div. نَسْتَخْدِمُ خَاصِّيَّةَ background مَعَ الدَّالَّةِ linear-gradient، وَنُحَدِّدُ الْأَلْوَانَ الْمَطْلُوبَةَ بَيْنَ الْأَقْوَاسِ لِتَحْقِيقِ التَّأْثِيرِ الْمَرْئِيِّ.",
+        "caption_text": "نستخدم خاصية background مع الدالة linear-gradient لتطبيق التدرج اللوني على العناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".gradient-box {\n  width: 300px;\n  height: 200px;\n  background: linear-gradient(to right, red, yellow);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيدِ الْعَرْضِ وَالِارْتِفَاعِ لِلْعُنْصُرِ. بَعْدَهَا، اسْتَخْدَمْنَا to right لِتَحْدِيدِ اتِّجَاهِ التَّدَرُّجِ مِنَ الْيَسَارِ إِلَى الْيَمِينِ، ثُمَّ وَضَعْنَا الْأَلْوَانَ red وَ yellow لِيَتِمَّ الْخَلْطُ بَيْنَهُمَا بِشَكْلٍ انْسِيَابِيٍّ.",
+        "caption_text": "تحدد القيمة to right اتجاه التدرج، بينما تقوم الألوان المحددة بإنشاء الانتقال اللوني السلس."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "to right: يحدد اتجاه التدرج",
+          "red: اللون الأول للبداية",
+          "yellow: اللون الثاني للنهاية",
+          "background: الخاصية المسؤولة عن التدرج"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "output",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ فِي مُتَصَفِّحِ الويب، سَتَظْهَرُ لَنَا مَرْبَعٌ مُلَوَّنٌ يَبْدَأُ بِاللَّوْنِ الْأَحْمَرِ وَيَنْتَهِي بِالْأَصْفَرِ بِشَكْلٍ مُتَدَرِّجٍ. هَذِهِ هِيَ النَّتِيجَةُ الْمَرْئِيَّةُ لِاسْتِخْدَامِ CSS Gradients فِي تَصْمِيمِ الْعَنَاصِرِ.",
+        "caption_text": "تظهر النتيجة في المتصفح كمربع ملون بتدرج انسيابي من الأحمر إلى الأصفر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"gradient-box\"></div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "مربع بعرض 300px وارتفاع 200px بتدرج لوني من الأحمر إلى الأصفر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دائماً بِاخْتِيَارِ أَلْوَانٍ مُتَنَاسِقَةٍ لِتَجَنُّبِ التَّشَتُّتِ الْبَصَرِيِّ. كَمَا يُمْكِنُكُمْ إِضَافَةُ أَكْثَرَ مِنْ لَوْنَيْنِ فِي التَّدَرُّجِ الْوَاحِدِ لِتَحْقِيقِ تَأْثِيرَاتٍ أَكْثَرَ تَعْقِيداً وَجَمَالاً فِي تَصَامِيمِكُمُ الْخَاصَّةِ.",
+        "caption_text": "استخدم ألوانا متناسقة، ويمكنك دمج أكثر من لونين للحصول على تأثيرات بصرية احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم ألوانا متناغمة",
+          "جرب إضافة ألوان متعددة",
+          "تحقق من التباين للنصوص فوق التدرج",
+          "استخدم أدوات توليد التدرجات عبر الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا أَهَمِّيَّةَ CSS Gradients وَكَيْفِيَّةَ كِتَابَةِ الْكُودِ الْخَاصِّ بِهَا. أَدْعُوكُمْ لِتَجْرِبَةِ التَّحَدِّيَاتِ الْمَوْجُودَةِ فِي الرَّابِطِ الْمُدْرَجِ فِي وَصْفِ الْفِيدِيُو لِتَطْوِيرِ مَهَارَاتِكُمْ. مَعَ تَحِيَّاتِي، مَحْمُود عَبْد الْحَمِيد.",
+        "caption_text": "تعلمنا اليوم أساسيات CSS Gradients. لا تنسوا تجربة التحديات البرمجية عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعنا أنواع التدرجات",
+          "طبقنا كود التدرج الخطي",
+          "ناقشنا أفضل الممارسات",
+          "شجعنا على الممارسة العملية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_gradients.asp"
+      ]
+    }
+  ]
+}
