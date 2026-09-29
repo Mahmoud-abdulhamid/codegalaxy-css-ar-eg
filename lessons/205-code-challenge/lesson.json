@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "205",
+  "title": "CSS Image Styling Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تطبيق CSS على الصور",
+    "التعامل مع تحديات تنسيق الصور",
+    "تطبيق خصائص CSS لتحسين مظهر الصور",
+    "اختبار المهارات في تصميم الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_images.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي تنسيق الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنُخَصِّصُ هَذَا الْوَقْتَ لِإِتْمَامِ تَحَدِّي CSS Image Styling، حَيْثُ سَنَخْتَبِرُ مَهَارَاتِنَا فِي تَطْبِيقِ خَصَائِصِ CSS عَلَى الْعَنَاصِرِ الْمَرْئِيَّةِ لِتَحْسِينِ مَظْهَرِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تحدي تنسيق الصور باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على تحديات CSS",
+          "تطبيق مهارات تنسيق الصور",
+          "تحسين تجربة المستخدم عبر CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_images.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية لتنسيق الصور",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ الصُّوَرِ بِاسْتِخْدَامِ CSS، نَعْتَمِدُ عَلَى خَصَائِصَ مِثْلَ width وَ height لِلْتَحَكُّمِ فِي الْأَبْعَادِ، وَ border لِإِضَافَةِ إِطَارَاتٍ، وَ opacity لِلتَّحَكُّمِ فِي الشَّفَافِيَّةِ. هَذِهِ الْخَصَائِصُ تُعْطِينَا تَحَكُّماً كَامِلاً فِي مَظْهَرِ الْعُنْصُرِ.",
+        "caption_text": "نستخدم خصائص CSS مثل width و height و border للتحكم في مظهر الصور."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام width و height للتحكم في الحجم",
+          "إضافة border لتحديد إطار الصورة",
+          "التحكم في الشفافية عبر خاصية opacity"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_images.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود تنسيق الصورة الأساسي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ الْعُنْصُرِ img، ثُمَّ نُطَبِّقُ عَلَيْهِ border-radius لِجَعْلِ زَوَايَا الصُّورَةِ مُسْتَدِيرَةً، وَنُضِيفُ box-shadow لِإِعْطَاءِ عُمْقٍ جَمَالِيٍّ لِلصُّورَةِ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مثال برمجي لتنسيق صورة باستخدام CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  width: 300px;\n  height: auto;\n  border-radius: 8px;\n  box-shadow: 0 4px 8px rgba(0,0,0,0.2);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_images.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، border-radius بِقِيمَةِ 8px تُعْطِي حَوَافاً نَاعِمَةً. أَمَّا box-shadow فَتُضِيفُ ظِلّاً خَفِيفاً يَجْعَلُ الصُّورَةَ تَبْرُزُ عَنِ الْخَلْفِيَّةِ، وَهَذَا يُعَدُّ مِنْ أَهَمِّ مُمَارَسَاتِ التَّصْمِيمِ الْحَدِيثِ لِعَنَاصِرِ الْوِبّ.",
+        "caption_text": "شرح تأثير border-radius و box-shadow على مظهر الصورة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "border-radius: 8px لجعل الزوايا مستديرة",
+          "box-shadow: لإضافة تأثير الظل",
+          "تحسين التباين البصري للصورة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_images.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ الصُّورَةُ بِحَوَافٍ مُسْتَدِيرَةٍ وَظِلٍّ جَذَّابٍ. هَذِهِ النَّتِيجَةُ تُعَزِّزُ مِنْ جَوْدَةِ التَّصْمِيمِ وَتَجْعَلُ الصَّفْحَةَ أَكْثَرَ احْتِرَافِيَّةً لِلْمُسْتَخْدِمِينَ الَّذِينَ يَتَصَفَّحُونَ مَوَاقِعَ الْوِبّ.",
+        "caption_text": "النتيجة النهائية تظهر صورة بتصميم عصري وجذاب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <img src=\"image.jpg\" alt=\"CSS Image\">\n    <!-- النتيجة: صورة بزوايا مستديرة وظل -->\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "صورة بتصميم مستدير مع ظل خفيف",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_images.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَحْرِصَ دَائِماً عَلَى اسْتِخْدَامِ alt attribute لِتَحْسِينِ إِمْكَانِيَّةِ الْوُصُولِ، وَتَحْسِينِ حَجْمِ الصُّوَرِ لِضَمَانِ سُرْعَةِ تَحْمِيلِ صَفْحَةِ الْوِبّ. هَذِهِ التَّفَاصِيلُ الصَّغِيرَةُ تَجْعَلُ مَوَاقِعَكُمْ أَفْضَلَ بِكَثِيرٍ.",
+        "caption_text": "أفضل الممارسات تشمل تحسين الصور وإمكانية الوصول."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام alt attribute للصور",
+          "تحسين حجم الملف لسرعة التحميل",
+          "التأكد من توافق التصميم مع الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_images.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا التَّحَدِّي، تَعَلَّمْنَا كَيْفَ نُطَبِّقُ CSS لِتَحْسِينِ مَظْهَرِ الصُّوَرِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُحَاوَلَةِ إِضَافَةِ تَأْثِيرَاتٍ أُخْرَى. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، استمروا في ممارسة مهارات CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية أساسيات تنسيق الصور",
+          "تم شرح خصائص CSS المهمة",
+          "شجعنا على الممارسة العملية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_images.asp"
+      ]
+    }
+  ]
+}
