@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "317",
+  "title": "تصميم Breadcrumb Navigation باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم Breadcrumb Navigation في مواقع الويب",
+    "بناء هيكل HTML باستخدام ul و li",
+    "تطبيق تنسيقات CSS المتقدمة على القوائم",
+    "استخدام pseudo-elements لإضافة فواصل بين العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_breadcrumbs.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة عن Breadcrumb Navigation",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ Breadcrumb Navigation، وَهِيَ أَدَاةٌ حَيَوِيَّةٌ تُسَاعِدُ الْمُسْتَخْدِمَ عَلَى مَعْرِفَةِ مَوْقِعِهِ الْحَالِيِّ دَاخِلَ صَفْحَةِ الْوِبّ وَتُسَهِّلُ التَّنَقُّلَ بَيْنَ الصَّفَحَاتِ السَّابِقَةِ.",
+        "caption_text": "تعد Breadcrumb Navigation أداة تنقل أساسية تساعد المستخدم في تتبع موقعه داخل موقع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم Breadcrumb Navigation لتحسين تجربة المستخدم",
+          "توضح المسار الهرمي للموقع",
+          "تعتمد على HTML و CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_breadcrumbs.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML الخاص بـ Breadcrumb",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ هَيْكَلِ HTML. نَسْتَخْدِمُ Element مِنْ نَوْع ul مَعَ class بِاسْم breadcrumb، وَدَاخِلَهُ نَضَعُ عَنَاصِرَ li لِتَمْثِيلِ كُلِّ رَابِطٍ فِي الْمَسَارِ، مَعَ اسْتِخْدَامِ a لِلرَّوَابِطِ الْفِعْلِيَّةِ.",
+        "caption_text": "نستخدم ul و li لبناء هيكل قائمة التنقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <ul class=\"breadcrumb\">\n      <li><a href=\"#\">Home</a></li>\n      <li><a href=\"#\">Pictures</a></li>\n      <li><a href=\"#\">Summer 15</a></li>\n      <li>Italy</li>\n    </ul>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_breadcrumbs.asp"
+      ]
+    },
+    {
+      "id": "css_styling_1",
+      "title": "تنسيق القائمة باستخدام CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نَقُومُ بِتَنْسِيقِ الْقَائِمَةِ. نَضْبُطُ list-style إِلَى none لِإِخْفَاءِ النِّقَاطِ، وَنُضِيفُ background-color لِتَمْيِيزِ الْخَلْفِيَّةِ، ثُمَّ نَجْعَلُ عَنَاصِرَ li تَظْهَرُ بِجَانِبِ بَعْضِهَا بِاسْتِخْدَامِ display: inline.",
+        "caption_text": "تنسيق القائمة الأساسي لإزالة النقاط وترتيب العناصر أفقيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul.breadcrumb {\n  padding: 10px 16px;\n  list-style: none;\n  background-color: #eee;\n}\nul.breadcrumb li {\n  display: inline;\n  font-size: 18px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_breadcrumbs.asp"
+      ]
+    },
+    {
+      "id": "css_pseudo",
+      "title": "إضافة الفواصل باستخدام pseudo-elements",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ رَمْزِ الْفَاصِلَةِ بَيْنَ الْعَنَاصِرِ، نَسْتَخْدِمُ li+li:before مَعَ خَاصِيَّةِ content. هَذَا يَقُومُ بِإِدْرَاجِ رَمْزِ الشَّرْطَةِ الْمَائِلَةِ قَبْلَ كُلِّ عُنْصِرٍ لَاحِقٍ، مِمَّا يُعْطِي شَكْلًا جَمَالِيّاً لِلْمَسَارِ.",
+        "caption_text": "استخدام pseudo-element لإضافة الفواصل بين عناصر القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul.breadcrumb li+li:before {\n  padding: 8px;\n  color: black;\n  content: \"/\\00a0\";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_breadcrumbs.asp"
+      ]
+    },
+    {
+      "id": "css_links",
+      "title": "تنسيق الروابط والتفاعل",
+      "narration": {
+        "spoken_text": "أَخِيراً، نُضِيفُ تَأْثِيرَاتٍ عَلَى الروابط. نُحَدِّدُ لَوْنَ الرَّابِطِ وَنُزِيلُ text-decoration. كَمَا نُضِيفُ تَأْثِيرَ hover لِتَغْيِيرِ اللَّوْنِ عِنْدَ مُرُورِ مُؤَشِّرِ الْفَأْرَةِ، لِتَحْسِينِ تَفَاعُلِ الْمُسْتَخْدِمِ مَعَ الْعَنَاصِرِ.",
+        "caption_text": "تنسيق الروابط وإضافة تأثيرات التفاعل عند المرور."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul.breadcrumb li a {\n  color: #0275d8;\n  text-decoration: none;\n}\nul.breadcrumb li a:hover {\n  color: #01447e;\n  text-decoration: underline;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_breadcrumbs.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة النهائية",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَحْصُلُونَ عَلَى شَرِيطِ تَنَقُّلٍ أَنِيقٍ يَعْرِضُ الْمَسَارَ بِشَكْلٍ أَفُقِيٍّ مَعَ فَوَاصِلَ بَيْنَ كُلِّ رَابِطٍ، وَتَفَاعُلٍ سَلِسٍ عِنْدَ الْوُقُوفِ بِالْمُؤَشِّرِ عَلَى أَيِّ عُنْصِرٍ.",
+        "caption_text": "النتيجة النهائية: شريط تنقل احترافي وأنيق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    Home / Pictures / Summer 15 / Italy\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home / Pictures / Summer 15 / Italy",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_breadcrumbs.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ بِنَاءِ Breadcrumb Navigation بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْخُطُوطِ لِتُنَاسِبَ تَصْمِيمَ مَوْقِعِكُمُ الْخَاصِّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، لا تترددوا في تجربة الكود وتخصيصه."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام ul و li للهيكل",
+          "استخدام display: inline للترتيب الأفقي",
+          "استخدام pseudo-elements للفواصل",
+          "تخصيص الألوان عبر CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_breadcrumbs.asp"
+      ]
+    }
+  ]
+}
