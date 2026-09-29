@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "244",
+  "title": "CSS Media Queries Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار الفهم العميق لمهارات CSS Media Queries",
+    "تطبيق الشروط البرمجية لتغيير التصميم حسب الشاشة",
+    "حل التحدي العملي لتصميم صفحات الويب المتجاوبة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_mediaqueries.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة تحدي Media Queries",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي العَمَلِيِّ لِقِسْمِ CSS Media Queries فِي دَوْرَةِ CSS، سَنَتَحَدَّى أَنْفُسَنَا اليَوْمَ لِتَطْبِيقِ المَفَاهِيمِ وَاخْتِبَارِ قُدْرَاتِنا فِي بِنَاءِ صَفَحَاتِ وِبٍّ مُتَجَاوِبَةٍ تَتَمَاشَى مَعَ كَافَةِ الشَّاشَاتِ بِكفاءة عالية.",
+        "caption_text": "مرحبا بكم في هذا التحدي العملي لقسم CSS Media Queries لاختبار مهاراتنا في تصميم الويب المتجاوب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار المهارات العملية في CSS Media Queries",
+          "فهم كيفية تطبيق الشروط على أحجام الشاشات المختلفة",
+          "تحسين تجربة المستخدم عبر الأجهزة المتنوعة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "مفاهيم التصميم المتجاوب الأساسية",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ فِكْرَةُ Media Queries عَلَى فَحْصِ خَصَائِصِ جِهَازِ العَرْضِ، مِثْلِ العَرْضِ وَالارْتِفَاعِ، ثُمَّ تَبْدِيلِ قَوَاعِدِ CSS بِشَكْلٍ دِينامِيكِيٍّ لِيَتَاسَبَ التَّصْمِيمُ تَمَاماً مَعَ الهَاتِفِ أوِ الحَاسُوبِ دُونَ أَيِّ خَلَلٍ فِي المُنْتَجِ النهائي.",
+        "caption_text": "تعتمد فكرة Media Queries على فحص خصائص الشاشة وتطبيق قواعد CSS ملائمة لكل جهاز."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فحص عرض الشاشة باستخدام خصائص متقدمة",
+          "تطبيق قواعد تنسيق مخصصة حسب حجم الجهاز",
+          "ضمان مرونة العناصر ووضوح المحتوى البرمجي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كتابة قاعدة Media Query البرمجية",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ مَعاً إِلَى كِتَابَةِ الكُودِ البرمجي الخاص ب Media Query فِي لغة CSS، نَسْتَخْدِمُ العِبَارَةَ المفتاحية media مَتْبُوعَةً بِالشَّرْطِ المَطْلُوبِ بَيْنَ أَقْوَاسٍ مِثْلِ max-width لِتَغْيِيرِ أَلْوَانِ الخلَفِيَّةِ أو أحجام الخطوط بسهولة تامة.",
+        "caption_text": "نستخدم الكلمة المفتاحية media مع الشروط لتحديد متى يتم تطبيق التنسيقات الجديدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": "@media screen and (max-width: 600px) {\n  body {\n    background-color: lightblue;\n  }\n}",
+        "highlight_lines": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "output": "يتحول لون الخلفية إلى الأزرق الفاتح عندما يصبح عرض الشاشة أقل من أو يساوي ستمائة بكسل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تحليل أجزاء الكود خطوة بخطوة",
+      "narration": {
+        "spoken_text": "لِنُحَلِّلِ الكود السَّابِقَ، تَبْدَأُ القَاعِدَةُ بِاسْتِخْدَمِ media screen لِتَحْدِيدِ الشَّاشَاتِ المَرْئِيَّةِ، ثُمَّ نُحَدِّدُ الشَّرْطَ max-width بَقِيمة ستمائة بكسل، وَبِدَاخِلِ القَوْسَيْنِ نَكْتُبُ تَوَجيهات CSS التي سَتُنفَّذُ فَقَطْ عند تحقق الشَّرْط.",
+        "caption_text": "نحدد نوع الجهاز عبر screen ونحدد الحد الأقصى للعرض عبر max-width ثم نكتب الأوامر داخل الأقواس."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام media screen لتحديد الشاشات الرقمية",
+          "تحديد الحد الأقصى للعرض max-width بعناية",
+          "كتابة أوامر CSS داخل الأقواس المعقوصة لتنفيذها فورا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تطبيق شروط متعددة وأحجام مختلفة",
+      "narration": {
+        "spoken_text": "نَسْتَطِيعُ أَيْضاً دَمْجَ أَكْثَرَ مِنْ شَرْطٍ بَرْمَجِيٍّ دَاخِلَ القَاعِدَةِ نَفْسِهَا لِتَحْقِيقِ أَقْصَى دَرَجَةٍ مِنَ التَّحَكُّمِ فِي التَّصْمِيمِ، مِثْلَ التَّعَامُلِ مَعَ الحواسيب اللوحية والهواتف الذكية عبر نطاقات عروض مختلفة ومتنوعة.",
+        "caption_text": "يمكننا دمج عدة شروط برمجية للتحكم الدقيق في التنسيق على الحواسيب اللوحية والهواتف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "multi-media.css",
+        "code": "@media screen and (min-width: 600px) and (max-width: 900px) {\n  .container {\n    width: 100%;\n  }\n}",
+        "highlight_lines": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "output": "يتم ضبط عرض العنصر ليملأ الشاشة بالكامل في المدى بين ستمائة وتسعمائة بكسل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "أفضل الممارسات الهندسية للتصميم",
+      "narration": {
+        "spoken_text": "عِنْدَ كِتَابَةِ Media Queries، مِنَ المُهِمِّ جِدّاً اعْتِمَادُ نَهْجِ Mobile First أَوْ تَنْظِيمِ المقاييس بِتَرْتِيبٍ صَحِيحٍ لِتَفَادِي تَدَاخُلِ القَوَاعِدِ البرمجية وَضَمَانِ سُرْعَةِ تَنْفِيذِ المتصفحات لِتَصْمِيمِ صَفْحَةِ الويب.",
+        "caption_text": "ننصح باتباع نهج Mobile First وتنظيم مقاييس الشاشات بدقة لتفادي تداخل قواعد التنسيق."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اعتماد نهج التصميم الموجه للهواتف أولا Mobile First",
+          "ترتيب القواعد تصاعديا أو تنازليا بانتظام تام",
+          "اختبار التجاوب على المتصفحات المختلفة لتجنب الأخطاء"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس وتجربة التحدي العملي",
+      "narration": {
+        "spoken_text": "بهَذَا يَا أَصْدِقَائِي نَكُونُ قَدْ أَتْمَمْنَا اسْتِعْرَاضَ تَحَدِّي CSS Media Queries بِكُلِّ ثِقَةٍ، أَدْعُوكُمْ لِتَجْرِبَةِ الكود المذكور بأنفسكم عبر الرَّابِطِ المُدْرَجِ فِي الوَصْفِ لتطوير مهاراتكم البرمجية الرائعة.",
+        "caption_text": "بهذا نكون قد أتممنا استعراض تحدي CSS Media Queries بنجاح وندعوكم لتجربة الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتقان استخدام Media Queries لبناء واجهات مرنة",
+          "تطبيق الشروط البرمجية المتعددة بكفاءة عالية",
+          "متابعة دورة CSS لتطوير مهارات تصميم الويب الاحترافي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_mediaqueries.asp"
+      ]
+    }
+  ]
+}
