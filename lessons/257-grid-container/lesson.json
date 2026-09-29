@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "257",
+  "title": "CSS Grid Container",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم CSS Grid Container",
+    "التعرف على كيفية تحويل العناصر إلى Grid Container",
+    "الفرق بين display: grid و display: inline-grid",
+    "إدراك كيفية تحول العناصر الابنة إلى Grid Items"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid_container.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Grid Container",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَرَّفُ عَلَى CSS Grid Container، وَهُوَ نِظَامُ تَخْطِيطٍ قَوِيٌّ يُسَاعِدُنَا فِي تَرْتِيبِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ بِكُلِّ سُهُولَةٍ وَدِقَّةٍ.",
+        "caption_text": "مرحبا بكم في درس CSS Grid Container، وهو نظام تخطيط قوي لتنظيم عناصر صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Grid هو نظام تخطيط ثنائي الأبعاد",
+          "يسمح بترتيب العناصر في صفوف وأعمدة",
+          "يتحكم في توزيع المساحات بدقة عالية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_container.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم Grid Container و Grid Items",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُحَدِّدُ عُنْصُراً لِيَكُونَ Grid Container، فَإِنَّ جَمِيعَ الْعَنَاصِرِ الْمُبَاشِرَةِ دَاخِلَهُ تُصْبِحُ تِلْقَائِيّاً Grid Items. هَذَا يَمْنَحُنَا سَيْطَرَةً كَامِلَةً عَلَى تَمَوْضُعِ هَذِهِ الْعَنَاصِرِ دَاخِلَ الْأَعْمِدَةِ وَالصُّفُوفِ.",
+        "caption_text": "يتحول أي عنصر مباشر داخل الـ Grid Container إلى Grid Item بشكل تلقائي."
+      },
+      "visual": {
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "1",
+            "label": "Grid Container",
+            "active": false
+          },
+          {
+            "id": "2",
+            "label": "Grid Item",
+            "active": false
+          },
+          {
+            "id": "3",
+            "label": "Grid Item",
+            "active": false
+          }
+        ],
+        "edges": [
+          {
+            "source": "1",
+            "target": "2",
+            "label": ""
+          },
+          {
+            "source": "1",
+            "target": "3",
+            "label": ""
+          }
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_container.asp"
+      ]
+    },
+    {
+      "id": "display-grid",
+      "title": "استخدام display: grid",
+      "narration": {
+        "spoken_text": "لِتَحْوِيلِ أَيِّ عُنْصُرٍ إِلَى Grid Container، نَسْتَخْدِمُ خَاصِّيَّةَ display مَعَ الْقِيمَةِ grid. هَذَا يَجْعَلُ الْعُنْصُرَ يَتَصَرَّفُ كَمُسْتَوًى كُتْلِيٍّ أَوْ Block-level، وَيُهَيِّئُهُ لِتَنْظِيمِ الْعَنَاصِرِ بِدَاخِلِهِ.",
+        "caption_text": "نستخدم display: grid لتحويل العنصر إلى حاوية شبكية من نوع block-level."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_container.asp"
+      ]
+    },
+    {
+      "id": "inline-grid",
+      "title": "استخدام display: inline-grid",
+      "narration": {
+        "spoken_text": "بِالْإِضَافَةِ إِلَى ذَلِكَ، يُمْكِنُنَا اسْتِخْدَامُ الْقِيمَةِ inline-grid. هَذِهِ الْقِيمَةُ تَجْعَلُ الْحَاوِيَةَ تَتَصَرَّفُ كَعُنْصُرٍ مُضَمَّنٍ أَوْ Inline، مِمَّا يَعْنِي أَنَّهَا لَنْ تَحْتَلَّ سَطْراً كَامِلاً بَلْ سَتَأْخُذُ مَسَاحَةَ مُحْتَوَاهَا فَقَطْ.",
+        "caption_text": "تستخدم display: inline-grid لجعل الحاوية تظهر كعنصر inline داخل الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: inline-grid;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_container.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتُصْبِحُ الْعَنَاصِرُ مُنَظَّمَةً ضِمْنَ شَبَكَةٍ. فِي حَالَةِ grid، سَتَمْتَدُّ الْحَاوِيَةُ عَرْضِيّاً، بَيْنَمَا فِي inline-grid سَتَكُونُ مُتَمَوْضِعَةً بِجَانِبِ الْعَنَاصِرِ الْأُخْرَى.",
+        "caption_text": "تظهر الحاوية كـ block-level مع display: grid وكـ inline مع display: inline-grid."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Grid Container (Block) -> Full Width\nGrid Container (Inline) -> Content Width",
+        "highlight_lines": [],
+        "output": "Grid Container (Block) -> Full Width\nGrid Container (Inline) -> Content Width",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_container.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَتَذَكَّرَ أَنَّ Grid Container هُوَ الْأَسَاسُ لِتَفْعِيلِ خَصَائِصَ أُخْرَى مِثْلَ grid-template-columns وَ gap. بِدُونِ تَعْرِيفِ display: grid، لَنْ تَعْمَلَ هَذِهِ الْخَصَائِصُ عَلَى الْعَنَاصِرِ.",
+        "caption_text": "يعد تعريف display: grid الخطوة الأولى لتفعيل كافة خصائص الـ Grid الأخرى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تفعيل الـ Grid هو شرط أساسي",
+          "استخدام gap للتحكم في المسافات",
+          "تحديد الأعمدة عبر grid-template-columns"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_container.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا كَيْفَ نُحَوِّلُ الْعَنَاصِرَ إِلَى Grid Container بِاسْتِخْدَامِ display. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَرَوْا النَّتَائِجَ بِأَعْيُنِكُمْ.",
+        "caption_text": "تعلمنا اليوم كيفية إنشاء Grid Container، جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "display: grid للتحكم الكامل",
+          "display: inline-grid للمرونة",
+          "تطبيق عملي عبر الرابط المرفق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_container.asp"
+      ]
+    }
+  ]
+}
