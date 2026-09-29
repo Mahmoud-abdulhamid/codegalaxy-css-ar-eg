@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "190",
+  "title": "بناء Carousel ثلاثي الأبعاد باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام 3D Transforms في CSS",
+    "بناء هيكل HTML لـ Carousel ثلاثي الأبعاد",
+    "استخدام transform-style و perspective في التصميم",
+    "تطبيق CSS Animations لإنشاء حركة دوران مستمرة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-e77b821399880f19.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css3_3dtransforms_carousel.asp",
+      "source_url": "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول 3D Carousel",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ 3D Carousel احْتِرَافِيٍّ يَدُورُ بِشَكْلٍ مُسْتَمِرٍّ، مُعْتَمِدِينَ عَلَى خَصَائِصِ 3D Transforms وَالْحَرَكَاتِ فِي لُغَةِ CSS.",
+        "caption_text": "مرحبا بكم في درس بناء 3D Carousel احترافي باستخدام CSS و 3D Transforms."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء كائنات ثلاثية الأبعاد باستخدام CSS",
+          "استخدام تقنيات 3D Transforms",
+          "إنشاء حركة دوران مستمرة باستخدام CSS Animations"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML الخاص بـ Carousel",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَحْتَاجُ إِلَى container لِتَحْدِيدِ مَسَاحَةِ 3D، وَعُنْصُرِ carousel لِتَمْثِيلِ الْجِسْمِ، ثُمَّ سِتَّةَ Elements مِنْ نَوْعِ card لِتَشْكِيلِ وَجْهَاتِ الْ Carousel.",
+        "caption_text": "هيكل HTML يتكون من حاوية رئيسية وعنصر carousel وستة عناصر card."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"carousel\">\n        <div class=\"card\" style=\"--index:0;\">1</div>\n        <div class=\"card\" style=\"--index:1;\">2</div>\n        <div class=\"card\" style=\"--index:2;\">3</div>\n        <div class=\"card\" style=\"--index:3;\">4</div>\n        <div class=\"card\" style=\"--index:4;\">5</div>\n        <div class=\"card\" style=\"--index:5;\">6</div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+      ]
+    },
+    {
+      "id": "css_variables",
+      "title": "تعريف المتغيرات في CSS",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ :root لِتَعْرِيفِ مُتَغَيِّرَاتٍ مِثْلَ --card-width وَ --radius. حِسَابُ نِصْفِ الْقُطْرِ يَعْتَمِدُ عَلَى دَالَّةِ tan لِضَمَانِ تَوْزِيعِ الْعَنَاصِرِ بِشَكْلٍ دَائِرِيٍّ صَحِيحٍ فِي مَسَاحَةِ 3D.",
+        "caption_text": "استخدام :root لتعريف المتغيرات وحساب نصف القطر بدقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ":root {\n  --card-width: 200px;\n  --card-height: 200px;\n  --total-items: 6;\n  --radius: 173px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+      ]
+    },
+    {
+      "id": "container_styling",
+      "title": "تنسيق الحاوية وخصائص 3D",
+      "narration": {
+        "spoken_text": "فِي الْ container، نُحَدِّدُ perspective لِإِعْطَاءِ عُمْقٍ لِلْمَشْهَدِ. أَمَّا فِي ال carousel، فَنَسْتَخْدِمُ transform-style: preserve-3d لِلتَّأَكُّدِ مِنْ أَنَّ الْعَنَاصِرَ الْأَبْنَاءَ تَبْقَى فِي مَسَاحَةِ 3D وَلَا تَتَسَطَّحُ.",
+        "caption_text": "استخدام perspective و transform-style لتهيئة بيئة ثلاثية الأبعاد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  width: var(--card-width);\n  height: var(--card-height);\n  margin: 80px auto;\n  perspective: 1000px;\n}\n.carousel {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  transform-style: preserve-3d;\n  animation: spin 20s infinite linear;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+      ]
+    },
+    {
+      "id": "card_transform",
+      "title": "تحويل العناصر وتوزيعها",
+      "narration": {
+        "spoken_text": "لِتَوْزِيعِ الْ cards، نَسْتَخْدِمُ rotateY لِتَدْوِيرِ كُلِّ عُنْصُرٍ بِزَاوِيَةٍ مُحَدَّدَةٍ، ثُمَّ translateZ لِدَفْعِهِ لِلْخَارِجِ. هَذَا يُشَكِّلُ حَافَةَ الْأُسْطُوَانَةِ بِشَكْلٍ دَقِيقٍ.",
+        "caption_text": "استخدام rotateY و translateZ لتوزيع العناصر في الفضاء ثلاثي الأبعاد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".card {\n  position: absolute;\n  transform: rotateY(calc(var(--index) * (360deg / var(--total-items))))\n  translateZ(var(--radius));\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+      ]
+    },
+    {
+      "id": "animation_and_hover",
+      "title": "الحركة والتفاعل",
+      "narration": {
+        "spoken_text": "أَخِيراً، نُضِيفُ keyframes لِتَحْرِيكِ ال carousel بِدَوَرَانٍ كَامِلٍ. وَلِتَحْسِينِ التَّجْرِبَةِ، نَسْتَخْدِمُ animation-play-state: paused عِنْدَ الْ hover لِإِيقَافِ الدَّوَرَانِ عِنْدَ تَحْرِيكِ الْفَأْرَةِ عَلَيْهِ.",
+        "caption_text": "إضافة حركة الدوران وإيقافها عند التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@keyframes spin {\n  from {\n    transform: rotateY(0deg);\n  }\n  to {\n    transform: rotateY(360deg);\n  }\n}\n.carousel:hover {\n  animation-play-state: paused;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+      ]
+    },
+    {
+      "id": "preview",
+      "title": "معاينة النتيجة النهائية",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ النِّهَائِيَّةُ لِل Carousel. كَمَا تَرَوْنَ، الْعَنَاصِرُ تَدُورُ بِسَلَاسَةٍ فِي مَسَاحَةِ 3D، وَيُمْكِنُكُمْ إِيقَافُهَا بِبَسَاطَةٍ عَبْرَ الْ hover. جَرِّبُوا تَغْيِيرَ الْقِيَمِ لِتَرَوْا تَأْثِيرَاتٍ مُخْتَلِفَةً.",
+        "caption_text": "النتيجة النهائية لـ Carousel ثلاثي الأبعاد يعمل بكفاءة."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "صورة توضح الـ Carousel ثلاثي الأبعاد"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نُوَظِّفُ CSS لِخَلْقِ تَجَارِبَ بَصَرِيَّةٍ مُبْهِرَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِأَنْفُسِكُمْ وَتَعْدِيلِ الْخَصَائِصِ لِفَهْمِ كَيْفِيَّةِ تَفَاعُلِ الْعَنَاصِرِ فِي مَسَاحَةِ 3D. شُكْراً لِمُتَابَعَتِكُمْ مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "شكرا لمتابعتكم، لا تنسوا تجربة الكود وتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS Variables للتحكم في الأبعاد",
+          "أهمية perspective و transform-style",
+          "تطبيق CSS Animations للدوران",
+          "التفاعل مع العناصر باستخدام hover"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_carousel.asp"
+      ]
+    }
+  ]
+}
