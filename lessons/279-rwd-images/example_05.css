@@ -1,0 +1,8 @@
+body {
+  background-image: url('img_smallflower.jpg');
+}
+@media only screen and (min-width: 400px) {
+  body {
+    background-image: url('img_flowers.jpg');
+  }
+}
