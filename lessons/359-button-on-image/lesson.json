@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "359",
+  "title": "تصميم زر فوق صورة باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية وضع العناصر فوق بعضها باستخدام position",
+    "التحكم في تموضع الزر داخل الحاوية",
+    "تطبيق تقنيات responsive design للصور",
+    "إضافة تأثيرات تفاعلية عند تمرير الفأرة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_button_on_image.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول وضع زر فوق صورة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ وَضْعِ Button فَوْقَ صُورَةٍ بِطَرِيقَةٍ احْتِرَافِيَّةٍ وَمُنَسَّقَةٍ، وَهِيَ مَهَارَةٌ أَسَاسِيَّةٌ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي تَصْمِيمِ صَفَحَاتِ الْوِبّ.",
+        "caption_text": "سنتعلم اليوم كيفية وضع Button فوق صورة بطريقة احترافية ومنسقة باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS للتحكم في تموضع العناصر",
+          "بناء واجهات تفاعلية وجذابة",
+          "تطبيق تقنيات التموضع المطلق والنسبي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_on_image.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للصفحة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِالْهَيْكَلِ الْأَسَاسِيِّ. نَحْتَاجُ إِلَى div بِكَلَاسِ container لِيَضُمَّ كُلّاً مِنَ ال img وَال button. هَذَا ال container هُوَ الْأَسَاسُ الَّذِي سَنَعْتَمِدُ عَلَيْهِ فِي عَمَلِيَّةِ التَّمَوْضُعِ لِضَمَانِ بَقَاءِ الزِّرِّ دَاخِلَ حُدُودِ الصُّورَةِ.",
+        "caption_text": "نستخدم div كحاوية رئيسية تضم الصورة والزر للتحكم في تموضعهما."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"img_snow.jpg\" alt=\"Snow\">\n      <button class=\"btn\">Button</button>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_on_image.asp"
+      ]
+    },
+    {
+      "id": "css_container",
+      "title": "تنسيق الحاوية والصورة",
+      "narration": {
+        "spoken_text": "نَضْبِطُ ال container عَلَى position: relative لِيَكُونَ مَرْجِعاً لِلْعَنَاصِرِ الدَّاخِلِيَّةِ. أَمَّا الصُّورَةُ فَنَجْعَلُهَا responsive بِتَحْدِيدِ width: 100 وَ height: auto، لِتَتَنَاسَبَ مَعَ أَحْجَامِ الشَّاشَاتِ الْمُخْتَلِفَةِ بِشَكْلٍ مَرِنٍ وَسَلِسٍ.",
+        "caption_text": "نضبط الحاوية على position: relative ونضمن استجابة الصورة للشاشات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  position: relative;\n  width: 50%;\n}\n.container img {\n  width: 100%;\n  height: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_on_image.asp"
+      ]
+    },
+    {
+      "id": "css_button",
+      "title": "تنسيق الزر وتموضعه",
+      "narration": {
+        "spoken_text": "الْآنَ نَأْتِي لِلْجُزْءِ الْأَهَمِّ، وَهُوَ تَمَوْضُعُ الزِّرِّ. نَسْتَخْدِمُ position: absolute مَعَ top وَ left بِقِيمَةِ 50، ثُمَّ نَسْتَخْدِمُ transform: translate لِضَبْطِ مَرْكَزِ الزِّرِّ بِدِقَّةٍ فِي مُنْتَصَفِ الصُّورَةِ تَمَاماً.",
+        "caption_text": "نستخدم position: absolute و transform لضبط الزر في منتصف الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container .btn {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background-color: #555;\n  color: white;\n  padding: 12px 24px;\n  border: none;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_on_image.asp"
+      ]
+    },
+    {
+      "id": "hover_effect",
+      "title": "إضافة تأثير التفاعل",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ لَمْسَةٍ جَمَالِيَّةٍ، نَسْتَخْدِمُ pseudo-class الَّتِي تُسَمَّى hover. عِنْدَ تَحْرِيكِ الْفَأْرَةِ فَوْقَ الزِّرِّ، نُغَيِّرُ background-color إِلَى اللَّوْنِ الْأَسْوَدِ، مِمَّا يُعْطِي تَغْذِيَةً رَاجِعَةً بَصَرِيَّةً لِلْمُسْتَخْدِمِ تُشْعِرُهُ بِأَنَّ الزِّرَّ قَابِلٌ لِلنَّقْرِ.",
+        "caption_text": "نستخدم hover لتغيير لون الزر عند تمرير الفأرة فوقه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container .btn:hover {\n  background-color: black;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_on_image.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا تَصْمِيمَ زِرٍّ تَفَاعُلِيٍّ فَوْقَ صُورَةٍ. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ position: relative لِلْحَاوِيَةِ وَ absolute لِلْعَنَاصِرِ الدَّاخِلِيَّةِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا الْكُودِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْأَحْجَامِ لِتُنَاسِبَ مَشَارِيعَكُمُ الْخَاصَّةَ.",
+        "caption_text": "تذكروا أهمية position: relative للحاوية و absolute للعناصر الداخلية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الحاوية يجب أن تكون relative",
+          "الزر يجب أن يكون absolute",
+          "استخدام transform للتوسيط الدقيق",
+          "تطبيق hover لتحسين تجربة المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_on_image.asp"
+      ]
+    }
+  ]
+}
