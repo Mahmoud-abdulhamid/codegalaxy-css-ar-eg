@@ -1,0 +1,5 @@
+.container {
+  display: grid;
+  height: 300px;
+  align-content: center;
+}
