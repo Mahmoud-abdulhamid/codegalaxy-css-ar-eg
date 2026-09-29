@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "176",
+  "title": "CSS box-shadow Property",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the box-shadow property in CSS",
+    "Learn to control horizontal and vertical offsets",
+    "Apply blur and spread radius to shadows",
+    "Master the inset parameter for inner shadows",
+    "Create multiple shadows and card effects"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_shadows_box.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول box-shadow",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ box-shadow، وَهِيَ أَدَاةٌ قَوِيَّةٌ تُسْتَخْدَمُ لِإِضَافَةِ ظِلٍّ وَاحِدٍ أَوْ أَكْثَرَ لِأَيِّ Element دَاخِلَ صَفْحَةِ الْوِبّ، مِمَّا يُعْطِي عُمْقاً وَجَمَالِيَّةً لِلتَّصْمِيمِ.",
+        "caption_text": "تستخدم خاصية box-shadow لإضافة تأثيرات الظل للعناصر في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية box-shadow تضفي عمقا على التصميم",
+          "يمكن تطبيق ظل واحد أو عدة ظلال",
+          "تتحكم في المظهر البصري للعناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows_box.asp"
+      ]
+    },
+    {
+      "id": "basic-usage",
+      "title": "التحكم في إزاحة الظل",
+      "narration": {
+        "spoken_text": "فِي أَبْسَطِ حَالَاتِهَا، نَحْتَاجُ لِتَحْدِيدِ قِيمَتَيْنِ لِلْإِزَاحَةِ الْأُفُقِيَّةِ وَالرَّأْسِيَّةِ. لَاحِظْ هَذَا الْكُودَ حَيْثُ نُطَبِّقُ box-shadow عَلَى div بِقِيمَةِ عَشْرَةِ بيكسل لِلْأُفُقِيِّ وَعَشْرَةِ بيكسل لِلرَّأْسِيِّ، وَيَكُونُ لَوْنُ الظِّلِّ افْتِرَاضِيّاً هُوَ لَوْنُ النَّصِّ الْحَالِيِّ.",
+        "caption_text": "تحديد الإزاحة الأفقية والرأسية للظل باستخدام box-shadow."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  box-shadow: 10px 10px;\n}",
+        "highlight_lines": [],
+        "output": "يظهر ظل أسود خلف العنصر بإزاحة 10px يميناً وأسفل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows_box.asp"
+      ]
+    },
+    {
+      "id": "color-blur",
+      "title": "تخصيص اللون وتأثير Blur",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَحْدِيدُ لَوْنٍ مُعَيَّنٍ لِلظِّلِّ بِإِضَافَةِ قِيمَةِ اللَّوْنِ بَعْدَ الْإِزَاحَةِ. كَمَا نَسْتَطِيعُ إِضَافَةَ قِيمَةِ blur لِجَعْلِ الظِّلِّ أَكْثَرَ نُعُومَةً؛ فَكُلَّمَا زَادَتْ قِيمَةُ blur، زَادَ تَشَتُّتُ الظِّلِّ وَأَصْبَحَ أَكْثَرَ ضَبَابِيَّةً وَوَاقِعِيَّةً.",
+        "caption_text": "إضافة اللون وتأثير Blur لزيادة واقعية الظل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  box-shadow: 10px 10px 5px lightblue;\n}",
+        "highlight_lines": [],
+        "output": "ظل باللون الأزرق الفاتح مع تأثير ضبابي بمقدار 5px.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows_box.asp"
+      ]
+    },
+    {
+      "id": "spread-inset",
+      "title": "نصف قطر الانتشار و inset",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ قِيمَةُ spread لِتَكْبِيرِ أَوْ تَصْغِيرِ حَجْمِ الظِّلِّ. وَإِذَا أَرَدْنَا تَحْوِيلَ الظِّلِّ مِنْ خَارِجِيٍّ إِلَى دَاخِلِيٍّ، نُضِيفُ كَلِمَةَ inset. هَذَا يُعْطِي انْطِبَاعاً بِأَنَّ الْعُنْصُرَ مَحْفُورٌ دَاخِلَ الصَّفْحَةِ.",
+        "caption_text": "استخدام spread للتحكم في حجم الظل و inset للظل الداخلي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  box-shadow: 10px 10px 5px 12px lightblue inset;\n}",
+        "highlight_lines": [],
+        "output": "ظل داخلي يحيط بمحتوى العنصر مع انتشار واضح.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows_box.asp"
+      ]
+    },
+    {
+      "id": "multiple-shadows",
+      "title": "تعدد الظلال",
+      "narration": {
+        "spoken_text": "لَا نَقْتَصِرُ عَلَى ظِلٍّ وَاحِدٍ، بَلْ يُمْكِنُنَا إِضَافَةُ عِدَّةِ ظِلَالٍ لِنَفْسِ الْعُنْصُرِ عَنْ طَرِيقِ فَصْلِهَا بِفَاصِلَةٍ. هَذَا يُسَاعِدُ فِي خَلْقِ تَأْثِيرَاتٍ بَصَرِيَّةٍ مُعَقَّدَةٍ وَمُبْتَكَرَةٍ، مِثْلَ تَصْمِيمِ الْبِطَاقَاتِ الْوَرَقِيَّةِ الَّتِي نَرَاهَا فِي تَصَامِيمِ الْوِبّ الْحَدِيثَةِ.",
+        "caption_text": "يمكن دمج عدة ظلال في عنصر واحد باستخدام الفاصلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  box-shadow: 5px 5px 8px blue, 10px 10px 8px red;\n}",
+        "highlight_lines": [],
+        "output": "تراكب ظلال متعددة بألوان مختلفة خلف العنصر.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows_box.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة وتطبيق",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ غَطَّيْنَا جَمِيعَ جَوَانِبِ box-shadow. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا كَيْفَ يَتَغَيَّرُ شَكْلُ الْعَنَاصِرِ. لَا تَتَرَدَّدُوا فِي مُرَاجَعَةِ الرَّوَابِطِ الْمُضَافَةِ لِتَعَمُّقٍ أَكْثَرَ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "جرب تطبيق box-shadow بنفسك لتعزيز مهاراتك في تصميم واجهات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "box-shadow أداة أساسية للتصميم الحديث",
+          "جرب قيم مختلفة للـ blur والـ spread",
+          "استخدم rgba للتحكم في شفافية الظل",
+          "راجع الرابط في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_shadows_box.asp"
+      ]
+    }
+  ]
+}
