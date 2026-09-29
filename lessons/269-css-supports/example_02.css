@@ -1,0 +1,9 @@
+.container {
+  float: left;
+  width: 100%;
+}
+@supports (display: flex) {
+  .container {
+    display: flex;
+  }
+}
