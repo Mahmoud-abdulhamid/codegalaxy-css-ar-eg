@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "246",
+  "title": "CSS Flexbox Intro Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم أساسيات CSS Flexbox",
+    "التعرف على كيفية بناء حاوية مرنة",
+    "تطبيق خصائص Flexbox عمليا",
+    "تحسين مهارات تصميم صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_flexbox_intro.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Flexbox",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ. سَنَتَعَرَّفُ الْيَوْمَ عَلَى CSS Flexbox، وَهُوَ نِظَامُ تَخْطِيطٍ قَوِيٌّ يُسَاعِدُنَا فِي بِنَاءِ تَصَامِيمَ مَرِنَةٍ وَمُتَجَاوِبَةٍ لِصَفَحَاتِ الْوِبّ بِكُلِّ سُهُولَةٍ وَاحْتِرَافِيَّةٍ.",
+        "caption_text": "مرحبا بكم في درس CSS Flexbox، النظام الأقوى لتصميم صفحات الويب المرنة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox هو نظام تخطيط حديث في CSS",
+          "يسمح بتوزيع المساحات بين العناصر بذكاء",
+          "يحل مشاكل المحاذاة المعقدة في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_intro.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية",
+      "narration": {
+        "spoken_text": "لِتَفْعِيلِ هَذَا النِّظَامِ، نَحْتَاجُ إِلَى تَحْدِيدِ Flex Container عَنْ طَرِيقِ خَاصِيَّةِ display بِقِيمَةِ flex. بَعْدَ ذَلِكَ، تُصْبِحُ جَمِيعُ الْعَنَاصِرِ الْمُبَاشِرَةِ دَاخِلَهُ Flex Items تَتَأَثَّرُ بِخَصَائِصِ الْحَاوِيَةِ.",
+        "caption_text": "نستخدم display: flex لتحويل العنصر إلى حاوية مرنة والتحكم في العناصر بداخله."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display: flex لإنشاء الحاوية",
+          "العناصر المباشرة تصبح Flex Items",
+          "التحكم في المحاور الرئيسية والثانوية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_intro.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيفِ div بِكِلَاسِ container، وَنَضَعُ دَاخِلَهُ ثَلَاثَةَ عَنَاصِرِ div أُخْرَى. هَذَا هُوَ الْهَيْكَلُ الْأَسَاسِيُّ الَّذِي سَنُطَبِّقُ عَلَيْهِ خَصَائِصَ Flexbox لِتَنْظِيمِ الْمُحْتَوَى.",
+        "caption_text": "هيكل HTML بسيط يحتوي على حاوية رئيسية وثلاثة عناصر فرعية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div>Item 1</div>\n      <div>Item 2</div>\n      <div>Item 3</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_intro.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تطبيق خصائص CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نَكْتُبُ كُودَ CSS. نُعْطِي الْحَاوِيَةَ display: flex، وَنُضِيفُ بَعْضَ التَّنْسِيقَاتِ لِلْعَنَاصِرِ لِنَرَى كَيْفَ تَتَرَتَّبُ جَانِباً إِلَى جَانِبٍ بِشَكْلٍ تِلْقَائِيٍّ وَمُنْتَظِمٍ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تطبيق display: flex على الحاوية يجعل العناصر تترتب أفقيا بشكل افتراضي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: flex;\n  background-color: #f1f1f1;\n}\n.container > div {\n  background-color: dodgerblue;\n  margin: 10px;\n  padding: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_intro.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ الْعَنَاصِرُ الثَّلَاثَةُ مُصْطَفَّةً بِشَكْلٍ أُفُقِيٍّ دَاخِلَ الْحَاوِيَةِ الرَّمَادِيَّةِ. هَذَا هُوَ السُّحْرُ الَّذِي يُقَدِّمُهُ Flexbox فِي تَنْظِيمِ الْعَنَاصِرِ دُونَ الْحَاجَةِ لِاسْتِخْدَامِ float أَوْ تَقْنِيَاتٍ قَدِيمَةٍ.",
+        "caption_text": "تظهر العناصر مصطفة أفقيا بفضل خاصية flex في الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[ Item 1 ] [ Item 2 ] [ Item 3 ]",
+        "highlight_lines": [],
+        "output": "تظهر العناصر الثلاثة في صف واحد داخل الحاوية",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_intro.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِاسْتِخْدَامِ Flexbox لِلْمُكَوِّنَاتِ الصَّغِيرَةِ وَالتَّخْطِيطَاتِ الْبَسِيطَةِ. تَذَكَّرْ أَنَّ الْحَاوِيَةَ هِيَ الْمَسْؤُولَةُ عَنْ تَوْزِيعِ الْعَنَاصِرِ، لِذَا احْرِصْ عَلَى ضَبْطِ خَصَائِصِ justify-content وَ align-items لِتَحْقِيقِ التَّمَوْضُعِ الْمِثَالِيِّ.",
+        "caption_text": "استخدم خصائص المحاذاة للتحكم الكامل في توزيع العناصر داخل الحاوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم justify-content للمحاذاة الأفقية",
+          "استخدم align-items للمحاذاة الرأسية",
+          "Flexbox مثالي للمكونات الصغيرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_intro.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُفَعِّلُ Flexbox وَنُطَبِّقُهُ لِتَنْظِيمِ الْعَنَاصِرِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَغْيِيرِ الْقِيَمِ لِمُشَاهَدَةِ النَّتَائِجِ الْمُخْتَلِفَةِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم لتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox يسهل تصميم صفحات الويب",
+          "التطبيق العملي هو مفتاح التعلم",
+          "راجعوا الرابط في الوصف لمزيد من التحديات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_intro.asp"
+      ]
+    }
+  ]
+}
