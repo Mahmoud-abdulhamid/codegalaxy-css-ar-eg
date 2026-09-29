@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "249",
+  "title": "CSS Flexbox align-items and align-content",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام خاصية align-items لمحاذاة العناصر عموديا في Flexbox",
+    "التعرف على قيم align-items المختلفة مثل center و flex-start و flex-end و stretch",
+    "فهم خاصية align-content لمحاذاة الخطوط المتعددة في حاوية الويب",
+    "تحقيق التمركز التام الحقيقي True Centering بدمج justify-content و align-items"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_flexbox_container_align.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة حول محاذاة عناصر Flexbox",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ مُحَاذَاةِ الْعَنَاصِرِ دَاخِلَ حَاوِيَةِ الْوِبّ بِاسْتِخْدَامِ خَاصِيَّةِ align-items وَخَاصِيَّةِ align-content بِالتَّفْصِيلِ التَّامِّ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتعلم محاذاة عناصر Flexbox عبر align-items و align-content."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم خصائص المحاذاة في Flexbox",
+          "استخدام align-items للمحاذاة العمودية",
+          "استخدام align-content للخطوط المتعددة",
+          "تحقيق التمركز التام True Centering"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_align.asp"
+      ]
+    },
+    {
+      "id": "scene_align_items_center",
+      "title": "استخدام خاصية align-items مع قيمة center",
+      "narration": {
+        "spoken_text": "تُنْشِئُ خَاصِيَّةُ align-items مُحَاذَاةً عَمُودِيَّةً لِلْعَنَاصِرِ عَلَى مِحْوَرِ التَّقَاطُعِ. عِنْدَمَا نَسْتَخْدِمُ قِيمَةَ center فَإِنَّنَا نَضَعُ الْعَنَاصِرَ فِي مُنْتَصَفِ الحَاوِيَةِ تَمَاماً كَمَا تَرَى فِي الكُودِ الْآتِي.",
+        "caption_text": "تستخدم خاصية align-items للمحاذاة العمودية، ومع قيمة center تتوسط العناصر الحاوية تماما."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  height: 200px;\n  align-items: center;\n}",
+        "highlight_lines": [],
+        "output": "Container height 200px, items centered vertically.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_align.asp"
+      ]
+    },
+    {
+      "id": "scene_align_items_start_end",
+      "title": "قيم flex-start و flex-end في align-items",
+      "narration": {
+        "spoken_text": "نَسْتَطِيعُ أَيْضاً تَحْدِيدَ مَوْقِعِ الْعَنَاصِرِ فِي الْأَعْلَى بِاسْتِخْدَامِ قِيمَةِ flex-start، أَوْ فِي الْأَسْفَلِ بِاسْتِخْدَامِ قِيمَةِ flex-end لِتَتَوَازَى تَمَاماً مَعَ حُدُودِ حَاوِيَةِ الْوِبّ.",
+        "caption_text": "يمكن محاذاة العناصر في أعلى الحاوية بـ flex-start أو في أسفلها بـ flex-end."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  height: 200px;\n  align-items: flex-start;\n}",
+        "highlight_lines": [],
+        "output": "Items aligned at the top of the container.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_align.asp"
+      ]
+    },
+    {
+      "id": "scene_align_items_stretch",
+      "title": "قيمة stretch لتمدد العناصر",
+      "narration": {
+        "spoken_text": "قِيمَةُ stretch تَعْمَلُ عَلَى مَدِّ وَتَمْدِيدِ الْعَنَاصِرِ لِتَمْلَأَ حَاوِيَةَ الْوِبّ بِالْكَامِلِ عَمُودِيّاً، وَهَذِهِ الْقِيمَةُ تُعْتَبَرُ هِيَ الْقِيمَةَ الافْتِرَاضِيَّةَ أَوْ normal لِلْعَنَاصِرِ الدَّاخِلِيَّةِ.",
+        "caption_text": "قيمة stretch تمدد العناصر لملء الحاوية عموديا وهي القيمة الافتراضية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  height: 200px;\n  align-items: stretch;\n}",
+        "highlight_lines": [],
+        "output": "Items stretch to fill container height.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_align.asp"
+      ]
+    },
+    {
+      "id": "scene_align_content_intro",
+      "title": "خاصية align-content لمحاذاة خطوط Flex",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى خَاصِيَّةِ align-content التِّي تَقُومُ بِمُحَاذَاةِ خُطُوطِ الْوِبّ المتعددة flex lines عِنْدَمَا يَتِمُّ تَفْعِيلُ التَّلَفُّفِ بِاسْتِخْدَامِ خَاصِيَّةِ flex-wrap فِي حَاوِيَةِ الْوِبّ.",
+        "caption_text": "خاصية align-content تتعامل مع خطوط متعددة عند تفعيل flex-wrap داخل الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  height: 400px;\n  flex-wrap: wrap;\n  align-content: center;\n}",
+        "highlight_lines": [],
+        "output": "Flex lines packed toward container center.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_align.asp"
+      ]
+    },
+    {
+      "id": "scene_align_content_space",
+      "title": "توزيع الخطوط بـ space-between",
+      "narration": {
+        "spoken_text": "بِاسْتِخْدَامِ قِيمَةِ space-between مَعَ align-content، تَكُونُ المسَافَاتُ بَيْنَ خُطُوطِ الْوِبّ متساويةً تَمَاماً، ممَّا يُعْطِي تَصْمِيماً مُتَنَاسِقاً ومُحْتَرِفاً لِصَفْحَاتِ الويب.",
+        "caption_text": "قيمة space-between توزع المسافات بالتساوي بين خطوط الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  height: 400px;\n  flex-wrap: wrap;\n  align-content: space-between;\n}",
+        "highlight_lines": [],
+        "output": "Equal spacing between flex lines.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_align.asp"
+      ]
+    },
+    {
+      "id": "scene_true_centering",
+      "title": "التمركز التام True Centering في Flexbox",
+      "narration": {
+        "spoken_text": "لِحَلِّ مُشْكِلَةِ التَّمَرْكُزِ التَّامِّ لِلْعَنَاصِرِ أُفُقِيّاً وَعَمُودِيّاً، نَقُومُ بِتَعْيِينِ كُلٍّ مِنْ justify-content وَ align-items إِلَى قِيمَةِ center لِتَظْهَرَ العناصِرُ فِي الْمُنْتَصَفِ تَمَاماً.",
+        "caption_text": "لتحقيق True Centering نضبط justify-content و align-items على center معا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  height: 400px;\n  justify-content: center;\n  align-items: center;\n}",
+        "highlight_lines": [],
+        "output": "Element perfectly centered horizontally and vertically.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_align.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة درس محاذاة Flexbox",
+      "narration": {
+        "spoken_text": "إِلَى هُنَا يَا أَصْدِقَائِي نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ مُحَاذَاةِ العَنَاصِرِ والخُطُوطِ فِي CSS Flexbox. نَرْجُو مِنْكُمْ تَجْرِبَةَ هَذِهِ الأَكْوادِ بأنْفُسِكُمْ لِتَتْبِعَ الْمَفَاهِيمَ بِشَكْلٍ عَمَلِيٍّ.",
+        "caption_text": "خلاصة الدرس: استخدام align-items و align-content و justify-content لاحتراف محاذاة عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم align-items للمحاذاة العمودية المفردة",
+          "استخدم align-content لخطوط الحاوية المتعددة",
+          "ادمج الخاصيتين مع justify-content للتمركز التام",
+          "تابع دورة CSS على منصة CodeGalaxy للمزيد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_container_align.asp"
+      ]
+    }
+  ]
+}
