@@ -1,0 +1,6 @@
+.dropup:hover .dropup-content {
+  display: block;
+}
+.dropup:hover .dropbtn {
+  background-color: #2980B9;
+}
