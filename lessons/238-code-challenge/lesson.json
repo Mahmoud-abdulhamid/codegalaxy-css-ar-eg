@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "238",
+  "title": "CSS Variables Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار فهم المتغيرات في CSS من خلال تحدي برمجي عملي",
+    "تطبيق تعريف واستخدام CSS Variables بشكل صحيح",
+    "التحقق من كفاءة الأكواد وتنسيقها في لغة CSS",
+    "استعراض أفضل الممارسات البرمجية في إدارة الخصائص"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_variables.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة تحدي المتغيرات في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّدْرِيبِ الْعَمَلِيِّ لِتقييم مهاراتكم في لغة CSS. سَنَتَمَرَّسُ اليوم عَلَى حِلِّ تَحَدٍّ بَرْمَجِيٍّ يَتَعَلَّقُ بِاستخدام CSS Variables وكيفية تطبيقها بِكفاءة.",
+        "caption_text": "مرحبا بكم في هذا التدريب العملي لتقييم مهاراتكم في لغة CSS وتطبيق CSS Variables."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار الفهم العملي لمتغيرات CSS",
+          "تطبيق القواعد البرمجية الصحيحة",
+          "تحسين بنية ورقة الأنماط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_variables.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "فهم متطلبات التحدي البرمجي",
+      "narration": {
+        "spoken_text": "يَتَطَلَّبُ مِنَّا هَذَا التَّحَدِّي اختبَارَ فَهمِنا الشَّامِلِ لِقواعد CSS Variables. لَنُنْشِئْ بَيَانَاتٍ تَنظيمية دقيقة تتيح لنا تَعْرِيفَ المتغيرات في نطاق المستند العام واستهدافها بدقة فائقة.",
+        "caption_text": "يتطلب منا هذا التحدي اختبار الفهم الشامل لقواعد CSS Variables وتعريف المتغيرات في النطاق العام."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد نطاق المتغيرات داخل selector مناسب",
+          "استخدام الرمز المزدوج للشرطة لدفق المتغيرات",
+          "ربط القيم بالعناصر المرئية بكفاءة عالية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_variables.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كتابة هيكل الكود الأساسي للمتغيرات",
+      "narration": {
+        "spoken_text": "نَبْدَأُ الْآنَ بِكِتَابَةِ الأكواد الفعلية. نُعَرِّفُ المتغيرات داخل سياق root ثُمَّ نَسْتَدْعِيهَا بأسلوب var داخل الخصائص المختلفة لضمان سهولة التعديل والصيانة لاحقاً.",
+        "caption_text": "نبدأ كتابة الأكواد بتعريف المتغيرات داخل root واستدعائها باستخدام دالة var داخل الخصائص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": ":root {\n  --main-bg-color: #2b2b2b;\n  --main-text-color: #ffffff;\n}\nbody {\n  background-color: var(--main-bg-color);\n  color: var(--main-text-color);\n}",
+        "highlight_lines": [],
+        "output": "تم تطبيق لون الخلفية الداكن ولون النص الأبيض بنجاح عبر المتغيرات.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_variables.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "استكمال وتفصيل الأكواد البرمجية",
+      "narration": {
+        "spoken_text": "لْنُتَابِعْ كِتَابَةَ بَقِيَّةِ الأكواد المرتبطة بالعناصر المختلفة. لَاحِظْ كَيْفَ نَقومُ بِتَوْجِيهِ المتغيرات لتخصيص الحاويات والأزرار لتوحيد مظهر صفحة الْوِبّ بِصورة احترافية.",
+        "caption_text": "نتابع كتابة بقية الأكواد لتخصيص الحاويات والأزرار وتوحيد مظهر صفحة الويب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": ".container {\n  background-color: var(--main-bg-color);\n  padding: 20px;\n}\n.btn {\n  background-color: var(--main-text-color);\n  color: var(--main-bg-color);\n  border: none;\n  padding: 10px 20px;\n}",
+        "highlight_lines": [],
+        "output": "الحاويات والأزرار تستجيب بدقة لمتغيرات الألوان المعرفة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_variables.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "معاينة وتحليل المخرجات البرمجية",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الآن لِمُشَاهَدَةِ النَّتِيجَةِ النِّهَائِيَّةِ لتنفيذ الأكواد. تَظْهَرُ العناصر في متصفح الْوِبّ متناسقة تماماً مع الألوان والمقاسات المعرفة مسبقاً عبر CSS Variables.",
+        "caption_text": "ننتقل لمشاهدة النتيجة النهائية وظهور العناصر متناسقة في متصفح الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توافق تام في الألوان عبر العناصر",
+          "استجابة سريعة لتغيير قيم المتغيرات العامة",
+          "تجربة مستخدم منظمة ونظيفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_variables.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "أمثلة إضافية وتطبيقات متقدمة",
+      "narration": {
+        "spoken_text": "لِنَعْرِضْ مِثَالاً إضافياً حول إعادة تعيين المتغيرات داخل عناصر فرعية محددة. يتيح لنا ذلك تغيير الثيمات بِسُهولة بالغة ودون الحاجة لتكرار أكواد الطراز في كل مكان.",
+        "caption_text": "عرض مثال إضافي حول إعادة تعيين المتغيرات داخل عناصر فرعية لتغيير الثيمات بسهولة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "theme.css",
+        "code": ".dark-theme {\n  --main-bg-color: #000000;\n  --main-text-color: #00ff00;\n}\n.card {\n  background-color: var(--main-bg-color);\n  color: var(--main-text-color);\n}",
+        "highlight_lines": [],
+        "output": "تم تطبيق ثيم خاص داخل العنصر الفرعي بنجاح.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_variables.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "أفضل الممارسات البرمجية والملاحظات",
+      "narration": {
+        "spoken_text": "عِنْدَ العَمَلِ ب CSS Variables احرِصْ دَائِماً عَلَى اختيار أسماء واضحة ودلالية للمتغيرات، ووضعها دائماً في العنصر الجذري أو root لتسهيل الوصول إليها عبر ورقة الأنماط بأكملها.",
+        "caption_text": "عند العمل بـ CSS Variables احرص دائما على اختيار أسماء دلالية ووضعها في root."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام أسماء واضحة وموثوقة للمتغيرات",
+          "الاعتماد على root لتعريف النطاق العام",
+          "تجنب التكرار المفرط للقيم الثابتة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_variables.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس ودعوة للتطبيق العملي",
+      "narration": {
+        "spoken_text": "في ختام هَذَا الدَّرْسِ، نَكُونُ قَدْ أْمَمْنَا التَّحَدِّي الْبَرْمَجِيَّ ل CSS Variables بِنجاح تامة. أَدْعُوكُمْ لِتَجْرِبَةِ هذه الأكواد بأنفسكم عبر الروابط الموجودة في الوصف، كان معكم محمود عبدالحميد.",
+        "caption_text": "في ختام الدرس أتممنا التحدي البرمجي بنجاح ونلتقي في الدرس القادم مع المدرب محمود عبدالحميد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتمام التحدي البرمجي بنجاح تام",
+          "مراجعة الأمثلة وتطبيقها عمليا",
+          "متابعة دورة CSS المتكاملة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_variables.asp"
+      ]
+    }
+  ]
+}
