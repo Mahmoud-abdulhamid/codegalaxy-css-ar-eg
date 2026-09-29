@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "234",
+  "title": "CSS Variables and var() Function",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تعريف واستخدام CSS Variables",
+    "الفرق بين النطاق العالمي والمحلي للمتغيرات",
+    "استخدام دالة var() لإدراج قيم المتغيرات",
+    "تطبيق المتغيرات في تصميم صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_variables.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Variables",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ اسْتِخْدَامِ CSS Variables وَدَالَّةِ var() لِتَنْظِيمِ قِيَمِ التَّصْمِيمِ وَتَجَنُّبِ تَكْرَارِ الْأَكْوَادِ فِي مَشَارِيعِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Variables. سنتعلم اليوم كيفية استخدام المتغيرات لتنظيم قيم التصميم بفعالية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Variables تسهل إدارة الألوان والقيم المتكررة",
+          "تسمح بتغيير القيم في مكان واحد وتحديثها في كامل الصفحة",
+          "تتميز بإمكانية الوصول إلى DOM وتغييرها عبر JavaScript"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables.asp"
+      ]
+    },
+    {
+      "id": "declaration",
+      "title": "قواعد تعريف المتغيرات",
+      "narration": {
+        "spoken_text": "لِتَعْرِيفِ مُتَغَيِّرٍ فِي CSS، نَبْدَأُ بِشَرْطَتَيْنِ مُتَتَالِيَتَيْنِ --. يُمْكِنُ أَنْ يَكُونَ النِّطَاقُ Global عَبْرَ :root، أَوْ Local دَاخِلَ Selector مُعَيَّنٍ. تَذَكَّرْ أَنَّ أَسْمَاءَ الْمُتَغَيِّرَاتِ حَسَّاسَةٌ لِحَالَةِ الْأَحْرُفِ.",
+        "caption_text": "يجب أن يبدأ اسم المتغير بشرطتين --. يمكن تعريف المتغيرات عالميا عبر :root أو محليا داخل أي selector."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ":root {\n  --primary-bg-color: green;\n}\n.note {\n  --note-bg: yellow;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables.asp"
+      ]
+    },
+    {
+      "id": "var-function",
+      "title": "استخدام دالة var()",
+      "narration": {
+        "spoken_text": "لِاسْتِخْدَامِ قِيمَةِ الْمُتَغَيِّرِ، نَسْتَعْمِلُ دَالَّةَ var(). هَذِهِ الدَّالَّةُ تَأْخُذُ اسْمَ الْمُتَغَيِّرِ كَمُعَامِلٍ أَوَّلٍ، وَيُمْكِنُهَا أَيْضاً اسْتِقْبَالُ قِيمَةٍ افْتِرَاضِيَّةٍ ثَانِيَةٍ فِي حَالِ لَمْ يَكُنِ الْمُتَغَيِّرُ مُعَرَّفاً.",
+        "caption_text": "تستخدم دالة var() لإدراج قيمة المتغير. الصيغة هي var(--name, value)."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "syntax.css",
+        "code": "/* الصيغة العامة */\nproperty: var(--name, fallback-value);",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables.asp"
+      ]
+    },
+    {
+      "id": "full-example",
+      "title": "مثال عملي متكامل",
+      "narration": {
+        "spoken_text": "لِنُطَبِّقْ هَذَا فِي مِثَالٍ عَمَلِيٍّ. نُعَرِّفُ الْمُتَغَيِّرَاتِ فِي :root، ثُمَّ نَسْتَدْعِيهَا فِي body وَ container لِتَوْحِيدِ أَلْوَانِ التَّصْمِيمِ بِشَكْلٍ احْتِرَافِيٍّ وَسَهْلِ التَّعْدِيلِ.",
+        "caption_text": "نستخدم المتغيرات لتعريف الألوان الأساسية وتطبيقها على عناصر الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "example.css",
+        "code": ":root {\n  --primary-bg-color: #1e90ff;\n  --primary-color: #ffffff;\n}\nbody {\n  background-color: var(--primary-bg-color);\n}\n.container {\n  color: var(--primary-bg-color);\n  background-color: var(--primary-color);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَيَظْهَرُ لَوْنُ الْخَلْفِيَّةِ بِالْقِيمَةِ الْمُحَدَّدَةِ فِي الْمُتَغَيِّرِ. إِذَا قُمْتَ بِتَغْيِيرِ قِيمَةِ الْمُتَغَيِّرِ فِي :root، سَيَتَحَدَّثُ التَّصْمِيمُ بِالْكَامِلِ تِلْقَائِيّاً.",
+        "caption_text": "تظهر الصفحة بالألوان المحددة في المتغيرات، مما يسهل عملية التعديل الشامل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Background: #1e90ff (DodgerBlue)\nContainer Text: #1e90ff\nContainer Background: #ffffff",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنْ أَفْضَلِ الْمُمَارَسَاتِ هِيَ تَعْرِيفُ الْأَلْوَانِ وَالْمَسَافَاتِ كَمُتَغَيِّرَاتٍ فِي بِدَايَةِ مَلَفِّ CSS. هَذَا يُسَاعِدُ فِي الْحِفَاظِ عَلَى اتِّسَاقِ التَّصْمِيمِ وَيُسَهِّلُ عَمَلِيَّةَ الصِّيَانَةِ لِفَرِيقِ الْعَمَلِ.",
+        "caption_text": "استخدم المتغيرات للألوان والمسافات لضمان اتساق التصميم وسهولة الصيانة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم أسماء واضحة ومعبرة للمتغيرات",
+          "عرف المتغيرات العالمية في :root",
+          "استخدم القيم الافتراضية في var() للحماية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ قُوَّةَ CSS Variables فِي تَنْظِيمِ مَشَارِيعِ الْوِبّ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَغْيِيرِ الْأَلْوَانِ لِمُشَاهَدَةِ التَّأْثِيرِ الْفَوْرِيِّ عَلَى الصَّفْحَةِ. شُكْراً لِمُتَابَعَتِكُمْ.",
+        "caption_text": "تعلمنا كيفية استخدام المتغيرات لتنظيم التصميم. جربوا الأكواد بأنفسكم لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Variables أداة قوية ومرنة",
+          "سهولة التعديل عبر تغيير قيمة واحدة",
+          "تكامل تام مع DOM و JavaScript"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables.asp"
+      ]
+    }
+  ]
+}
