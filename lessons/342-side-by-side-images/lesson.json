@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "342",
+  "title": "محاذاة الصور جنبا إلى جنب باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام float لمحاذاة العناصر",
+    "التعرف على تقنية Flexbox لتنسيق الصور",
+    "تطبيق التصميم المتجاوب باستخدام Media Queries"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_images_side_by_side.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول محاذاة الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ مُحَاذَاةِ الصُّوَرِ جَنْباً إِلَى جَنْبٍ بِطُرُقٍ احْتِرَافِيَّةٍ، سَوَاءً بِاسْتِخْدَامِ خَاصِيَّةِ float أَوْ تَقْنِيَةِ Flexbox الْحَدِيثَةِ لِتَصْمِيمِ مَعَارِضِ صُوَرٍ جَذَّابَةٍ لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "سنتعلم اليوم كيفية محاذاة الصور جنبا إلى جنب باستخدام CSS بطرق احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS لمحاذاة الصور",
+          "مقارنة بين float و Flexbox",
+          "إنشاء معرض صور متجاوب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_images_side_by_side.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للصور",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِالْهَيْكَلِ الْأَسَاسِيِّ. نَسْتَخْدِمُ div بِكْلَاس row لِتَجْمِيعِ الْعَنَاصِرِ، وَدَاخِلَهُ نَضَعُ div بِكْلَاس column لِكُلِّ صُورَةٍ. هَذَا التَّنْظِيمُ يُسَاعِدُنَا فِي التَّحَكُّمِ بِتَوْزِيعِ الْعَنَاصِرِ بِشَكْلٍ مُنْتَظِمٍ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "نستخدم div class='row' لتجميع العناصر و div class='column' لكل صورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"row\">\n      <div class=\"column\">\n        <img src=\"img_snow.jpg\" alt=\"Snow\" style=\"width:100%\">\n      </div>\n      <div class=\"column\">\n        <img src=\"img_forest.jpg\" alt=\"Forest\" style=\"width:100%\">\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_images_side_by_side.asp"
+      ]
+    },
+    {
+      "id": "float_technique",
+      "title": "استخدام خاصية float",
+      "narration": {
+        "spoken_text": "الطَّرِيقَةُ الْكَلَاسِيكِيَّةُ تَعْتَمِدُ عَلَى خَاصِيَّةِ float. نُعْطِي لِلْكْلَاس column عَرْضاً بِقِيمَةِ 33.33 بالمئة لِضَمَانِ وُجُودِ ثَلَاثِ صُوَرٍ فِي الصَّفِّ الْوَاحِدِ، مَعَ ضَرُورَةِ اسْتِخْدَامِ clearfix لِإِعَادَةِ ضَبْطِ التَّدَفُّقِ بَعْدَ الْعَنَاصِرِ.",
+        "caption_text": "نستخدم float: left مع عرض 33.33 لإنشاء أعمدة متجاورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".column {\n  float: left;\n  width: 33.33%;\n  padding: 5px;\n}\n.row::after {\n  content: \"\";\n  clear: both;\n  display: table;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_images_side_by_side.asp"
+      ]
+    },
+    {
+      "id": "flexbox_technique",
+      "title": "استخدام تقنية Flexbox",
+      "narration": {
+        "spoken_text": "تُعَدُّ تَقْنِيَةُ Flexbox الْخِيَارَ الْأَفْضَلَ حَالِياً. نَقُومُ بِتَعْيِينِ display: flex لِلْحَاوِيَةِ الرَّئِيسِيَّةِ row، وَتَحْدِيدِ قِيمَةِ flex لِلْأَعْمِدَةِ. هَذِهِ الطَّرِيقَةُ أَكْثَرُ مُرُونَةً وَتُغْنِينَا عَنِ اسْتِخْدَامِ float الْمُعَقَّدِ فِي بَعْضِ الْحَالَاتِ.",
+        "caption_text": "Flexbox توفر مرونة أكبر في توزيع العناصر وتنسيقها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".row {\n  display: flex;\n}\n.column {\n  flex: 33.33%;\n  padding: 5px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_images_side_by_side.asp"
+      ]
+    },
+    {
+      "id": "responsiveness",
+      "title": "إضافة التصميم المتجاوب",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الصُّوَرِ تَتَكَدَّسُ فَوْقَ بَعْضِهَا فِي الشَّاشَاتِ الصَّغِيرَةِ، نَسْتَخْدِمُ Media Queries. عِنْدَمَا يَكُونُ عَرْضُ الشَّاشَةِ 500 بكسل أَوْ أَقَلَّ، نُغَيِّرُ عَرْضَ الْكْلَاس column إِلَى 100 بالمئة لِتَظْهَرَ الصُّوَرُ بِشَكْلٍ عَمُودِيٍّ.",
+        "caption_text": "نستخدم Media Queries لجعل التصميم متجاوبا مع الشاشات الصغيرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 500px) {\n  .column {\n    width: 100%;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_images_side_by_side.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُوَازِنُ بَيْنَ float وَ Flexbox لِتَصْمِيمِ مَعَارِضِ صُوَرٍ احْتِرَافِيَّةٍ. تَذَكَّرُوا دَائِماً اخْتِبَارَ تَصَامِيمِكُمْ عَلَى مُخْتَلِفِ الشَّاشَاتِ لِضَمَانِ تَجْرِبَةِ مُسْتَخْدِمٍ مُمَيَّزَةٍ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا موازنة استخدام float و Flexbox لتصميم معارض صور احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم Flexbox للمشاريع الحديثة",
+          "استخدم float لدعم المتصفحات القديمة",
+          "لا تنس Media Queries للتجاوب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_images_side_by_side.asp"
+      ]
+    }
+  ]
+}
