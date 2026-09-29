@@ -1,0 +1,3 @@
+div1: Background starts at padding edge
+div2: Background starts at border edge
+div3: Background starts at content edge
