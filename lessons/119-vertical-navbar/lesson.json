@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "119",
+  "title": "CSS Vertical Navigation Bar",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية بناء Vertical Navigation Bar باستخدام HTML و CSS",
+    "التحكم في تنسيق القوائم غير المرتبة ul و li",
+    "تطبيق تأثيرات التفاعل hover على الروابط",
+    "إضافة حالة active لتحديد الصفحة الحالية",
+    "إنشاء قوائم جانبية ثابتة ومحاذاة العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_navbar_vertical.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة عن Vertical Navigation Bar",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ بِنَاء Vertical Navigation Bar، وَهِيَ قَائِمَه تَنَقُّلٍ عَمُودِيَّه تُسْتَخْدَمُ لِتَرْتِيبِ الرَّوَابِطِ فَوْقَ بَعْضِهَا، وَتُعَدُّ عُنْصُراً أَسَاسِيّاً فِي تَصْمِيمِ وَاجِهَاتِ الْوِبّ.",
+        "caption_text": "تستخدم Vertical Navigation Bar لترتيب روابط التنقل بشكل عمودي على جانب صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعتمد على القوائم غير المرتبة ul",
+          "تحتوي على عناصر li وروابط a",
+          "توضع عادة على جانبي صفحة الويب",
+          "تسهل تجربة المستخدم في التنقل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_vertical.asp"
+      ]
+    },
+    {
+      "id": "basics",
+      "title": "تنسيق القائمة الأساسية",
+      "narration": {
+        "spoken_text": "لِتَنْفِيذِ هَذِهِ الْقَائِمَه، نَبْدَأُ بِإِلْغَاء list-style-type لِعُنْصُر ul، مَعَ ضَبْط margin و padding إِلَى صِفْرٍ. نُحَدِّد width لِلْقَائِمَه، وَنَضَع background-color لِتَمْيِيزِهَا عَنْ بَقِيَّةِ مُحْتَوَى الصَّفْحَه.",
+        "caption_text": "نستخدم CSS لإزالة التنسيق الافتراضي للقائمة وضبط أبعادها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  width: 200px;\n  background-color: #f1f1f1;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_vertical.asp"
+      ]
+    },
+    {
+      "id": "links",
+      "title": "تنسيق الروابط والتفاعل",
+      "narration": {
+        "spoken_text": "الْآنَ نُنَسِّقُ الرَّوَابِطَ دَاخِل li. نَجْعَل display بِقِيمَةِ block لِيَأْخُذَ الرَّابِطُ كَامِلَ عَرْضِ الْقَائِمَه. كَمَا نُضِيف padding لِتَحْسِينِ الْمَسَافَاتِ، وَنُغَيِّرُ الْأَلْوَانَ عِنْدَ حَدَث hover لِتَفَاعُلٍ أَفْضَلَ مَعَ الْمُسْتَخْدِمِ.",
+        "caption_text": "تحويل الروابط إلى block يسهل النقر عليها وتنسيقها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "li a {\n  display: block;\n  color: black;\n  padding: 8px 16px;\n  text-decoration: none;\n}\nli a:hover {\n  background-color: #555555;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_vertical.asp"
+      ]
+    },
+    {
+      "id": "active",
+      "title": "حالة العنصر النشط",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ الصَّفْحَه الْحَالِيَّه، نُضِيف class بِاسْم active. هَذَا يُسَاعِدُ الْمُسْتَخْدِمَ عَلَى مَعْرِفَةِ مَكَانِهِ دَاخِلَ الْمَوْقِعِ بِتَغْيِيرِ لَوْنِ الْخَلْفِيَّه وَالنَّصِّ لِتَمْيِيزِ هَذَا الرَّابِطِ عَنْ بَقِيَّةِ الرَّوَابِطِ.",
+        "caption_text": "استخدام class باسم active لتمييز الرابط الحالي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".active {\n  background-color: #04AA6D;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_vertical.asp"
+      ]
+    },
+    {
+      "id": "borders",
+      "title": "إضافة الحدود والمحاذاة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَحْسِينُ الْمَظْهَرِ بِإِضَافَةِ border لِعُنْصُر ul، وَتَوْسِيطِ النَّصِّ بِاسْتِخْدَام text-align. كَمَا نُضِيف border-bottom لِكُلِّ li، مَعَ اسْتِثْنَاءِ الْعُنْصُرِ الْأَخِيرِ بِاسْتِخْدَام last-child.",
+        "caption_text": "إضافة حدود وتوسيط النصوص لتحسين التصميم البصري."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  border: 1px solid #555555;\n}\nli {\n  text-align: center;\n  border-bottom: 1px solid #555555;\n}\nli:last-child {\n  border-bottom: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_vertical.asp"
+      ]
+    },
+    {
+      "id": "sticky",
+      "title": "القائمة الثابتة",
+      "narration": {
+        "spoken_text": "أَخِيراً، لِجَعْلِ الْقَائِمَه ثَابِتَه بِطُولِ الصَّفْحَه، نَضْبِط height إِلَى 100 وَنَسْتَخْدِم position: fixed. هَذَا يَجْعَلُ الْقَائِمَه تَبْقَى ظَاهِرَه حَتَّى عِنْدَ التَّمْرِيرِ لِأَسْفَلِ الصَّفْحَه.",
+        "caption_text": "استخدام position: fixed لإنشاء قائمة جانبية ثابتة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  height: 100%;\n  position: fixed;\n  overflow: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_vertical.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نُصَمِّم Vertical Navigation Bar احْتِرَافِيَّه. جَرِّبُوا هَذِهِ الْأَكْوَادَ فِي مَشَارِيعِكُمُ الْخَاصَّه، وَلَا تَنْسَوْا مُرَاجَعَةِ الرَّوَابِطِ فِي وَصْفِ الْفِيدْيُو لِلْمَزِيدِ مِنَ التَّفَاصِيلِ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تطبيق ما تعلمناه لبناء قوائم تنقل احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام ul و li للهيكل",
+          "تنسيق الروابط بـ display: block",
+          "تفعيل hover و active",
+          "استخدام position: fixed للثبات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_vertical.asp"
+      ]
+    }
+  ]
+}
