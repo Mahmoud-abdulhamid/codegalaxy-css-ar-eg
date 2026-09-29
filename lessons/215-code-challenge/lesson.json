@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "215",
+  "title": "CSS object-fit Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية التحكم في أبعاد الصور داخل الحاويات باستخدام object-fit",
+    "تطبيق قيم object-fit المختلفة مثل cover وcontain",
+    "حل تحديات برمجية عملية لتحسين مظهر عناصر الويب",
+    "التعرف على الفرق بين القيم المختلفة لخاصية object-fit"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_objectfit.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS object-fit",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةَ التَّحَكُّمِ فِي مَظْهَرِ الصُّوَرِ دَاخِلَ حَاوِيَاتِهَا بِاسْتِخْدَامِ خَاصِيَّةِ object-fit، وَهِيَ أَدَاةٌ ضَرُورِيَّةٌ لِكُلِّ مُطَوِّرِ وِبٍّ مُحْتَرِفٍ.",
+        "caption_text": "مرحبا بكم في درس CSS object-fit حيث سنتعلم التحكم في مظهر الصور داخل صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية object-fit تحدد كيفية ملاءمة الصورة داخل صندوقها",
+          "تساعد في الحفاظ على تناسق التصميم",
+          "تمنع تشوه الصور عند تغيير أبعادها"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectfit.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم object-fit الأساسية",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةُ object-fit لِتَحْدِيدِ كَيْفِيَّةِ تَغْيِيرِ حَجْمِ الْعُنْصُرِ الْمُسْتَبْدَلِ مِثْلَ img أَوْ video لِيَتَنَاسَبَ مَعَ أَبْعَادِ الْحَاوِيَةِ الْخَاصَّةِ بِهِ. هَذِهِ الْخَاصِيَّةُ تُغْنِينَا عَنْ كَثِيرٍ مِنَ الْحُلُولِ الْمُعَقَّدَةِ لِتَنْسِيقِ الصُّوَرِ.",
+        "caption_text": "تتحكم خاصية object-fit في كيفية ملاءمة العناصر المستبدلة مثل img داخل الحاويات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "القيمة fill: هي القيمة الافتراضية وتؤدي لتمدد الصورة",
+          "القيمة contain: تجعل الصورة تظهر كاملة مع الحفاظ على النسبة",
+          "القيمة cover: تملأ الحاوية بالكامل مع قص الأطراف الزائدة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectfit.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي على الكود",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ أَبْعَادِ الْحَاوِيَةِ بِاسْتِخْدَامِ width وَ height، ثُمَّ نُطَبِّقُ object-fit: cover لِضَمَانِ مَلْءِ الْمِسَاحَةِ دُونَ تَشْوِيهِ نِسْبَةِ الْعَرْضِ إِلَى الِارْتِفَاعِ.",
+        "caption_text": "نستخدم object-fit: cover لملء الحاوية مع الحفاظ على نسبة أبعاد الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  width: 300px;\n  height: 200px;\n  object-fit: cover;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectfit.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للقيم",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَامِ cover، يَتِمُّ قَصُّ الْأَطْرَافِ لِتَمْلَأَ الصُّورَةُ الْحَاوِيَةَ بِالْكَامِلِ. أَمَّا عِنْدَ اسْتِخْدَامِ contain، فَإِنَّ الصُّورَةَ تَظْهَرُ بِكَامِلِهَا دَاخِلَ الْحَاوِيَةِ، وَقَدْ تَتْرُكُ مَسَاحَاتٍ فَارِغَةً إِذَا لَمْ تَتَطَابَقِ النِّسَبُ.",
+        "caption_text": "الفرق الجوهري بين cover وcontain في التعامل مع مساحة الحاوية."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "الوظيفة",
+          "النتيجة"
+        ],
+        "rows": [
+          [
+            "cover",
+            "ملء المساحة",
+            "قص الأطراف"
+          ],
+          [
+            "contain",
+            "احتواء الصورة",
+            "ترك فراغات"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectfit.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَرَى كَيْفَ تَتَغَيَّرُ الصُّورَةُ بَعْدَ تَطْبِيقِ التَّنْسِيقَاتِ. تَصْبَحُ الصُّورَةُ مُتَنَاسِقَةً وَمُحْتَرِفَةً دَاخِلَ الْحَاوِيَةِ الْمُحَدَّدَةِ، مِمَّا يُعْطِي تَجْرِبَةَ مُسْتَخْدِمٍ مُمَيَّزَةً فِي مَوْقِعِ الْوِبّ.",
+        "caption_text": "تظهر الصورة بشكل متناسق داخل الحاوية بعد تطبيق التنسيق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"image.jpg\" alt=\"Example\">\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "الصورة تملأ الحاوية 300x200 بكسل دون تشوه",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectfit.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِاسْتِخْدَامِ object-fit مَعَ خَاصِيَّةِ object-position لِتَحْدِيدِ نُقْطَةِ التَّرْكِيزِ فِي الصُّورَةِ، مِثْلَ جَعْلِ التَّرْكِيزِ فِي الْمُنْتَصَفِ أَوْ فِي الْأَعْلَى، لِضَمَانِ ظُهُورِ الْجُزْءِ الْمُهِمِّ مِنَ الصُّورَةِ.",
+        "caption_text": "استخدم object-position مع object-fit للتحكم في نقطة التركيز."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم object-position للتحكم في نقطة التركيز",
+          "اختبر التصميم على شاشات بأحجام مختلفة",
+          "تأكد من توافق المتصفحات مع الخاصية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectfit.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ التَّحَكُّمِ فِي الصُّوَرِ بِاسْتِخْدَامِ object-fit. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا اليوم التحكم في الصور باستخدام object-fit، جربوا الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية مفاهيم object-fit",
+          "تم شرح الفرق بين cover وcontain",
+          "تم عرض كيفية تطبيق الكود عمليا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectfit.asp"
+      ]
+    }
+  ]
+}
