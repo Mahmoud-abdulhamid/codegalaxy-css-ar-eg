@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "314",
+  "title": "إنشاء Dropup Menu باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم Dropup Menu وكيفية عملها",
+    "استخدام HTML لبناء هيكل القائمة",
+    "تنسيق العناصر باستخدام خصائص CSS المتقدمة",
+    "تطبيق تأثير hover لإظهار المحتوى المخفي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_dropup.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن Dropup Menu",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ قَائِمَةِ Dropup Menu احْتِرَافِيَّةٍ تَظْهَرُ عِنْدَ تَحْرِيكِ الْمُؤشِّرِ فَوْقَ الْعُنْصُرِ لِتَمْكِينِ الْمُسْتَخْدِمِ مِنْ الِاخْتِيَارِ.",
+        "caption_text": "مرحبا بكم في درس إنشاء Dropup Menu باستخدام CSS لتوفير خيارات تفاعلية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعريف Dropup Menu وقوائم الاختيار",
+          "أهمية القوائم التفاعلية في تصميم الويب",
+          "استخدام CSS للتحكم في ظهور المحتوى"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropup.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "هيكل HTML للقائمة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِبِنَاءِ الْهَيْكَلِ الْأَسَاسِيِّ بِاسْتِخْدَامِ لُغَةِ HTML. نَسْتَخْدِمُ عُنْصُرَ div بِفِئَةِ dropup ثُمَّ نَضَعُ دَاخِلَهُ button بِفِئَةِ dropbtn، وَمَعَهُ عُنْصُرَ div آخَرَ يَحْمِلُ فِئَةَ dropup-content وَيَضُمُّ رَوَابِطَ القَائِمَةِ.",
+        "caption_text": "بناء هيكل القائمة باستخدام عناصر div و button وروابط a داخل HTML."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"dropup\">\n      <button class=\"dropbtn\">Dropup</button>\n      <div class=\"dropup-content\">\n        <a href=\"#\">Link 1</a>\n        <a href=\"#\">Link 2</a>\n        <a href=\"#\">Link 3</a>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Dropup button with hidden content list",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropup.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق زر Dropup Button",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى تَْسِيقِ الزِّرِّ الأَسَاسِيِّ dropbtn بِاسْتِخْدَامِ لُغَةِ CSS. نُحَدِّدُ لَوْنَ الخَلْفِيَّةِ بِدَرَجَةِ الأَزْرَقِ، وَنُضِيفُ حَشْواً padding بِمِقْدَارِ سِتَّةَ عَشَرَ بِيكْسِلًا، مَعَ إِزَالَةِ الحُدُودِ بِنِهَائِيَّةٍ لِيَبْدُوَ الزِّرُّ بِشَكْلٍ جَذَّابٍ.",
+        "caption_text": "تنسيق الزر الرئيسي بتحديد لون الخلفية والحشو وإزالة الحدود."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropbtn {\n  background-color: #3498DB;\n  color: white;\n  padding: 16px;\n  font-size: 16px;\n  border: none;\n}",
+        "highlight_lines": [],
+        "output": "Styled blue button with padding",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropup.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "إعداد الحاوية الرئيسية position relative",
+      "narration": {
+        "spoken_text": "لِتَضْمِينَ ظُهُورِ مُحْتَوَى القَائِمَةِ فِي المَكَانِ الصَّحِيحِ فَوْقَ الزِّرِّ، نَسْتَخْدِمُ خَاصِّيَّةَ position بَقِيمَةِ relative لِلْعُنْصُرِ الحَاوِي dropup، مَعَ تَعْيِينِ خَاصِّيَّةِ display بَقِيمَةِ inline-block لِيَتَكَيَّفَ العُنْصُرُ مَعَ المُحْتَوَى.",
+        "caption_text": "استخدام position relative للعنصر الحاوية لتثبيت موضع القائمة بدقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropup {\n  position: relative;\n  display: inline-block;\n}",
+        "highlight_lines": [],
+        "output": "Container positioned relative for absolute children",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropup.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تنسيق محتوى القائمة المخفي",
+      "narration": {
+        "spoken_text": "العُنْصُرُ dropup-content يَحْتَوِي عَلَى القَائِمَةِ الحَقِيقِيَّةِ وَيَكُونُ مُخْفِيّاً بِالاصِلِ عَبْرَ display none. نَسْتَخْدِمُ position absolute مَعَ خَاصِّيَّةِ bottom بِقِيمَةِ خَمْسِينَ بِيكْسِلًا لِيَظْهَرَ فَوْقَ الزِّرِّ، وَنُضِيفُ ظِلًّا box-shadow.",
+        "caption_text": "إخفاء المحتوى افتراضيا وتحديد موضع الظهور باستخدام absolute و bottom."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropup-content {\n  display: none;\n  position: absolute;\n  bottom: 50px;\n  background-color: #f1f1f1;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n  z-index: 1;\n}",
+        "highlight_lines": [],
+        "output": "Hidden dropup content box with shadow",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropup.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "تنسيق الروابط وتأثير hover",
+      "narration": {
+        "spoken_text": "نُنَسِّقُ الرَّوَابِطَ دَاخِلَ القَائِمَةِ بِإِزَالَةِ خُطُوطِ الرَّوَابِطِ text-decoration، وَإِضَافَةِ حَشْوٍ مُنَاسِبٍ. عِنْدَ تَمْرِيرِ الْمُؤشِّرِ foka al-rawabit a:hover تَتَغَيَّرُ خَلْفِيَّةُ الرَّابِطِ لِتَمْنَحَ تَجْرِبَةَ مُسْتَخْدِمٍ مِثَالِيَّةً.",
+        "caption_text": "تنسيق الروابط الداخلية وتطبيق تأثير hover لتغيير الخلفية عند التمرير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropup-content a {\n  color: black;\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n}\n.dropup-content a:hover {\n  background-color: #ddd;\n}",
+        "highlight_lines": [],
+        "output": "Links styled with hover background color change",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropup.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "إظهار القائمة وتغيير لون الزر",
+      "narration": {
+        "spoken_text": "أَخِيرًا، نَسْتَخْدِمُ مُحَدِّدَ hover عَلَى العُنْصُرِ dropup لِتَعْيِينِ display block عَلَى dropup-content، مَعَ تَبْدِيلِ لَوْنِ خَلْفِيَّةِ الزِّرِّ dropbtn لِلتَّأْكِيدِ عَلَى حَالَةِ التَّفَاعُلِ النَّاجِحَةِ.",
+        "caption_text": "استخدام hover لإظهار القائمة وتحديث لون زر التفعيل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropup:hover .dropup-content {\n  display: block;\n}\n.dropup:hover .dropbtn {\n  background-color: #2980B9;\n}",
+        "highlight_lines": [],
+        "output": "Dropup menu displayed and button color changed on hover",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropup.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ قَائِمَةِ Dropup Menu احترافية بِوَاسِطَةِ HTML وَ CSS، مَعَ ِاسْتِخْدَامِ خَصَائِصِ position و hover بمهارة. نَشْكُرُ حُسْنَ تَسْمِيعِكُمْ وَنَلْقَاكُمْ فِي الدَّرْسِ القَادِمِ مَعَ مَحْمُودِ عَبْدِالْحَمِيدِ.",
+        "caption_text": "خلاصة درس إنشاء Dropup Menu واحتراف خصائص CSS التفاعلية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء هيكل HTML للقوائم المنسدلة للأعلى",
+          "استخدام position absolute و relative للتحكم في الموضع",
+          "تفعيل القائمة وإظهارها باستخدام hover selector"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_dropup.asp"
+      ]
+    }
+  ]
+}
