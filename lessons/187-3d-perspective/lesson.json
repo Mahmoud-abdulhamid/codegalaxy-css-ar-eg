@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "187",
+  "title": "CSS 3D Transforms Perspective",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم perspective في الفضاء الثلاثي الأبعاد",
+    "استخدام خاصية perspective على العناصر الأبوية",
+    "تطبيق دالة perspective داخل خاصية transform"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_3dtransforms_perspective.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة حول الفضاء ثلاثي الأبعاد وperspective",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ كَيْفَ نُفَعِّلُ فِضَاءً ثُلَاثِيَّ الْأَبْعَادِ بِاسْتِخْدَامِ مَفْهُومِ perspective. يُحَدِّدُ هَذَا الْمَفْهُومُ الْمَسَافَةَ بَيْنَ نُقْطَةِ رُؤْيَةِ الْمُسْتَخْدِمِ وَالْعُنْصُرِ فِي الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد. سنتعرف كيف نفعل فضاء ثلاثي الأبعاد باستخدام مفهوم perspective لتحديد المسافة بين المشاهد والعنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تفعيل الفضاء الثلاثي الأبعاد يتطلب استخدام perspective",
+          "يحدد perspective المسافة بين المستخدم والعنصر",
+          "بدون perspective ستظهر التحويلات بشكل مسطح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_perspective.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "تأثير القيم المختلفة على تأثير 3D",
+      "narration": {
+        "spoken_text": "إِذَا اسْتَخْدَمْنَا قِيمَةً مُنْخَفِضَةً مِثْلَ perspective صِفْرٍ وَمِئَتَيْ بِكْسِلٍ، فَإِنَّ النِّظَامَ يَفْتَرِضُ أَنَّ الْمُسْتَخْدِمَ قَرِيبٌ لِلْعُنْصُرِ، مَمَّا يُعْطِي تَأْثِيراً قَوِيّاً لِلثَّلَاثِيِّ الْأَبْعَادِ. أَمَّا الْقِيَمُ الْعَالِيَةُ فَتَجْعَلُ التَّأْثِيرَ خَفِيفاً.",
+        "caption_text": "القيم المنخفضة تعطي تأثيرا قويا لثلاثي الأبعاد بينما القيم العالية تعطي تأثيرا خفيفا وهادئا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "القيمة perspective: 200px تخلق تأثيرا قويا وقريبا",
+          "القيمة perspective: 2000px تخلق تأثيرا خفيفا وبعيدا",
+          "الغياب التام للخاصية يجعل العناصر تبدو ثنائية الأبعاد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_perspective.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "استخدام خاصية perspective على العنصر الأب",
+      "narration": {
+        "spoken_text": "نَسْتَطِيعُ إِضَافَةَ هَذَا التَّأْثِيرِ بِطَرِيقَتَيْنِ. الطَّرِيقَةُ الْأُولَى هِيَ اسْتِخْدَامُ خَاصِيَّةِ perspective عَلَى الْعُنْصُرِ الْأَبِ، وَحِينَئِذٍ يَتَشَارَكُ جَمِيعُ الْعَنَاصِرِ الْأَبْنَاءِ نَفْسَ الْفَضَاءِ الثُّلَاثِيِّ الْأَبْعَادِ.",
+        "caption_text": "الطريقة الأولى هي استخدام خاصية perspective على العنصر الأب لتتشارك جميع العناصر الأبناء نفس الفضاء."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توضع الخاصية perspective على الـ parent element",
+          "تتشارك جميع الـ children نفس الفضاء الثلاثي الأبعاد",
+          "تضمن توحيد نقطة الرؤية لجميع الأبناء معا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_perspective.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "الكود الأول: خاصية perspective على الأب",
+      "narration": {
+        "spoken_text": "لْنَنْظُرْ مَعاً إِلَى هَذَا الْمِثَالِ الْعَمَلِيِّ. نُحَدِّدُ العُنْصُرَ الحَاضِنَ container مَعَ خَاصِيَّةِ perspective بِقِيمَةِ خَمْسِمِئَةِ بِكْسِلٍ، ثُمَّ نُطَبِّقُ تَحْوِيلَ الدَّوَرَانِ rotateY عَلى العُنْصُرِ الدَّاخِلِيِّ.",
+        "caption_text": "نحدد خاصية perspective بقيمة 500 بكسل على العنصر الحاضن container ونطبق rotateY على العنصر الفرعي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  width: 180px;\n  height: 180px;\n  border: 1px solid lightgray;\n  margin: 30px;\n  perspective: 500px;\n}\n.box {\n  width: 100%;\n  height: 100%;\n  background-color: green;\n  transform: rotateY(45deg);\n}",
+        "highlight_lines": [],
+        "output": "يظهر صندوق أخضر استدار بزاوية 45 درجة داخل إطار رمادي فاتح بتأثير 3D واضح.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_perspective.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "استخدام دالة perspective داخل transform",
+      "narration": {
+        "spoken_text": "الطَّرِيقَةُ الثَّانِيَةُ هِيَ اسْتِخْدَامُ دَالَةِ perspective مَعَ قَوْسَيْنِ بَدَلًا مِنَ الخَاصِيَّةِ الْمُسْتَقِلَّةِ. تُسْتَخْدَمُ هَذِهِ الدَّالَةُ مُبَاشَرَةً دَاخِلَ خَاصِيَّةِ transform لِتَطْبِيقِ التَّحْوِيلِ عَلَى عُنْصُرٍ وَاحِدٍ فَقَطْ.",
+        "caption_text": "الطريقة الثانية هي استخدام دالة perspective() مباشرة داخل خاصية transform لتطبيقه على عنصر مفرد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تكتب الدالة بالشكل perspective(500px)",
+          "توضع مباشرة ضمن قيم خاصية transform",
+          "تؤثر على العنصر الفردي ولا تشترك مع الأبناء الآخرين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_perspective.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "الكود الثاني: دالة perspective داخل transform",
+      "narration": {
+        "spoken_text": "لُنَطَبِّقِ الدَّالَةَ الْآنَ. نُعَرِّفُ نَفْسَ العُنْصُرِ الحَاضِنِ دُونَ خَاصِيَّةِ perspective، ثُمَّ نَكْتُبُ transform بِمَا يَتَضَمَّنُ دَالَةَ perspective ثُمَّ دَالَةَ rotateY لِلْوُصُولِ إِلَى نَفْسِ النَّتِيجَةِ.",
+        "caption_text": "نكتب دالة perspective داخل خاصية transform مع rotateY لنحصل على نفس النتيجة البصرية تماما."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  width: 180px;\n  height: 180px;\n  border: 1px solid lightgray;\n  margin: 30px;\n}\n.box {\n  width: 100%;\n  height: 100%;\n  background-color: green;\n  transform: perspective(500px) rotateY(45deg);\n}",
+        "highlight_lines": [],
+        "output": "نفس التأثير البصري السابق للصندوق الأخضر المستدار بزاوية ثلاثية الأبعاد.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_perspective.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "مقارنة هندسية وخلاصة شاملة",
+      "narration": {
+        "spoken_text": "كِلْتَا الطَّرِيقَتَيْنِ تُعْطِيَانِ نَفْسَ النَّتِيجَةِ الظَّاهِرَةِ، لَكِنَّ خَاصِيَّةَ perspective عَلَى الأَبِ تُمَكِّنُ جَمِيعَ الأَبْنَاءِ مِنْ مُشَارَكَةِ نَفْسِ الفَضَاءِ، بَيْنَمَا الدَّالَةُ تَخُصُّ عُنْصُراً وَحِيداً. شُكْرَاً لِمُتَابَعَتِكُمْ.",
+        "caption_text": "الخاصية للأب تتشاركها جميع العناصر، بينما الدالة تخص عنصرا منفردا. شكرا لحسن متابعتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الخاصية للـ parent توفر فضاء مشتركا لجميع الأبناء",
+          "الدالة perspective() مخصصة لعنصر فردي مستقل",
+          "كلا الطريقتين تنتجان تأثيرا بصريا متطابقا ودقيقا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_perspective.asp"
+      ]
+    }
+  ]
+}
