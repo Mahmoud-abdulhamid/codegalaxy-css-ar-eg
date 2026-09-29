@@ -1,0 +1,8 @@
+.button span:after {
+  content: '\00bb';
+  opacity: 0;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
