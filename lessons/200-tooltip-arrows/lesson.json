@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "200",
+  "title": "CSS Tooltip Arrows",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء أسهم المؤشرات أو Tooltip Arrows باستخدام العناصر الوهمية pseudo-elements مثل after",
+    "التعرف على خدعة الحدود أو borders لتشكيل الأسهم بنجاح",
+    "تطبيق اتجاهات الأسهم المختلفة في الأسفل والأعلى واليمين واليسار"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_tooltip_arrows.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة تصميم Tooltip Arrows",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ أَسْحَمِ الصَفَحَاتِ أَوْ Tooltip Arrows لِتَبْدُوَ كَفَقَاعَةِ حِوَارٍ رَقْمِيَّةٍ جذابة.",
+        "caption_text": "تعلم كيفية إضافة أسهم جذابة لعناصر Tooltip لتشبه فقاعات الحوار."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء أسهم المؤشرات باستخدام CSS",
+          "تحويل المؤشرات إلى فقاعات حوار",
+          "استخدام العناصر الوهمية class::after"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip_arrows.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "استخدام pseudo-element و content",
+      "narration": {
+        "spoken_text": "لإِنْشَاءِ السَّهْمِ مِنْ أَيِّ جَانِبٍ فِي Tooltip، نَسْتَخْدِمُ الْعُنْصُرَ الْوَهْمِيَّ class::after مَعَ خَاصِيَّةِ content وَالْحُدُودِ border لِرَسْمِ الشَّكْلِ الْهَنْدَسِيِّ الْمَطْلُوبِ بِدِقَّةٍ.",
+        "caption_text": "استخدام class::after مع خاصية content لإنشاء محتوى السهم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام class::after لإضافة محتوى وهمي",
+          "الاعتماد على خاصية content الفارغة",
+          "رسم السهم باستخدام الخصائص البصرية للحدود"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip_arrows.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كود Bottom Arrow",
+      "narration": {
+        "spoken_text": "في هَذَا الكود نُحَدِّدُ positioning مُطلَقاً ونضع top بقيمة مئة بالمئة مع left بخمسين بالمئة ونستعمل border-color لجعل الحدود العليا سوداء والباقي شفافاً ليتشكل السهم السفلي.",
+        "caption_text": "كود CSS لإنشاء سهم في أسفل Tooltiptext."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltiptext::after {\n  content: \" \";\n  position: absolute;\n  top: 100%;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px;\n  border-style: solid;\n  border-color: black transparent transparent transparent;\n}",
+        "highlight_lines": [],
+        "output": "يظهر سهم أسود صغير في منتصف الحافة السفلية لعنصر Tooltip.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip_arrows.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "شرح خصائص الحدود والحجم",
+      "narration": {
+        "spoken_text": "خاصية border-width تُحَدِّدُ حَجْمَ السَّهْمِ، وَعِنْدَ تَغْيِيرِهَا يجب تعديل margin-left بنفس القيمة سالبةً ليبقى السهم في المنتصف تماماً ودون أي انحراف بصري مزعج.",
+        "caption_text": "ضبط حجم السهم ومحافظته على التمركز باستخدام margin-left."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "border-width يحدد سمك وحجم السهم",
+          "margin-left بنصف القيمة السالبة يحافظ على التمركز",
+          "استخدام الألوان الشفافة لقص شكل المثلث"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip_arrows.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "كود Top Arrow",
+      "narration": {
+        "spoken_text": "لإِنْشَاءِ سَهْمٍ فِي أَعْلَى Tooltip، نَجْعَلُ bottom بقيمة مئة بالمئة ونضبط border-color بحيث يكون اللون الأسود في الحد السفلي وباقي الحدود شفافة تماماً.",
+        "caption_text": "كود CSS لإضافة سهم في أعلى Tooltiptext."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltiptext::after {\n  content: \" \";\n  position: absolute;\n  bottom: 100%;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px;\n  border-style: solid;\n  border-color: transparent transparent black transparent;\n}",
+        "highlight_lines": [],
+        "output": "يظهر سهم أسود صغير في منتصف الحافة العلوية لعنصر Tooltip.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip_arrows.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "كود Left Arrow",
+      "narration": {
+        "spoken_text": "أَمَّا لِإِضَافَةِ سَهْمٍ عَلَى يَسَارِ Tooltip، فنستخدم top بنسبة خمسين بالمئة مع right بمائة بالمئة، ونعكس الحواف بجعل الحد الأيمن أسود والباقي شفافاً.",
+        "caption_text": "كود CSS لإضافة سهم على يسار Tooltiptext."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltiptext::after {\n  content: \" \";\n  position: absolute;\n  top: 50%;\n  right: 100%;\n  margin-top: -5px;\n  border-width: 5px;\n  border-style: solid;\n  border-color: transparent black transparent transparent;\n}",
+        "highlight_lines": [],
+        "output": "يظهر سهم أسود على الحافة اليسرى لعنصر Tooltip.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip_arrows.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "كود Right Arrow",
+      "narration": {
+        "spoken_text": "ولإِضَافَةِ سَهْمٍ عَلَى يَمِينِ Tooltip، نَجْعَلُ left بقيمة مئة بالمئة ونضع الحد الأيسر بلون أسود شفافاً للحدود الأخرى، لنحصل على تصميم متكامل واحترافي.",
+        "caption_text": "كود CSS لإضافة سهم على يمين Tooltiptext."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "tooltip.css",
+        "code": ".tooltiptext::after {\n  content: \" \";\n  position: absolute;\n  top: 50%;\n  left: 100%;\n  margin-top: -5px;\n  border-width: 5px;\n  border-style: solid;\n  border-color: transparent transparent transparent black;\n}",
+        "highlight_lines": [],
+        "output": "يظهر سهم أسود على الحافة اليمنى لعنصر Tooltip.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip_arrows.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة تصميم Tooltip Arrows",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ الْحُدُودِ border مَعَ العناصر الوهمية لِتَصْمِيمِ أَسْحُمِ Tooltip بجميع الاتجاهات. شكرا لمتابعتكم وإلى اللقاء في دروس قادمة مع محمود عبدالحميد.",
+        "caption_text": "خلاصة درس تصميم أسهم المؤشرات بجميع الاتجاهات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام الحدود الملونة لقص المثلثات",
+          "التحكم الكامل بالاتجاهات الأربعة",
+          "تطبيق ممارسات CSS المتقدمة باحترافية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_tooltip_arrows.asp"
+      ]
+    }
+  ]
+}
