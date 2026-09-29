@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "254",
+  "title": "CSS Responsive Flexbox Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء تخطيطات مرنة باستخدام Flexbox",
+    "تطبيق خصائص Responsive Design في صفحات الويب",
+    "حل تحديات برمجية عملية باستخدام CSS",
+    "التعرف على أفضل الممارسات في تصميم الواجهات"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_flexbox_responsive.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Responsive Flexbox",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنُطَبِّقُ مَا تَعَلَّمْنَاهُ حَوْلَ Flexbox لِبِنَاءِ تَخْطِيطَاتٍ مَرِنَةٍ تَتَكَيَّفُ مَعَ مُخْتَلَفِ أَحْجَامِ الشَّاشَاتِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Responsive Flexbox Code Challenge."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox يوفر أدوات قوية لتوزيع العناصر",
+          "Responsive Design يضمن تجربة مستخدم ممتازة",
+          "التحديات البرمجية تعزز مهاراتك في CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية لـ Flexbox",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ تَصْمِيمٍ مَرِنٍ، نَسْتَخْدِمُ display: flex عَلَى الْحَاوِيَةِ الْأُمّ. بَعْدَهَا نَسْتَخْدِمُ flex-wrap لِلسَّمَاحِ لِلْعَنَاصِرِ بِالِانْتِقَالِ إِلَى سَطْرٍ جَدِيدٍ عِنْدَ نَقْصِ الْمَسَاحَةِ، وَهَذَا هُوَ سِرُّ ال Responsive Design.",
+        "caption_text": "استخدام display: flex و flex-wrap للتحكم في مرونة العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "display: flex لتفعيل التخطيط المرن",
+          "flex-wrap: wrap للسماح بالالتفاف",
+          "flex-direction للتحكم في اتجاه العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيفِ container يَحْتَوِي عَلَى عِدَّةِ items. نُطَبِّقُ عَلَى الْحَاوِيَةِ display: flex، وَنُحَدِّدُ لِلْعَنَاصِرِ flex-basis لِتَحْدِيدِ الْحَجْمِ الْأَوَّلِيِّ قَبْلَ التَّكَيُّفِ مَعَ الشَّاشَةِ.",
+        "caption_text": "هيكل HTML و CSS الأساسي لتطبيق Flexbox."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: flex;\n  flex-wrap: wrap;\n}\n.item {\n  flex: 1 1 200px;\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "media_queries",
+      "title": "استخدام Media Queries",
+      "narration": {
+        "spoken_text": "فِي التَّصْمِيمِ الْمُتَجَاوِبِ، نَسْتَخْدِمُ Media Queries لِتَغْيِيرِ خَصَائِصِ Flexbox عِنْدَ أَحْجَامٍ مُعَيَّنَةٍ. هَذَا يَسْمَحُ لَنَا بِتَغْيِيرِ flex-direction مِنْ row إِلَى column لِتُنَاسِبَ شَاشَاتِ الْهَوَاتِفِ الذَّكِيَّةِ.",
+        "caption_text": "تغيير اتجاه العناصر باستخدام Media Queries."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "responsive.css",
+        "code": "@media (max-width: 600px) {\n  .container {\n    flex-direction: column;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتُحَافِظُ الْعَنَاصِرُ عَلَى تَرْتِيبِهَا فِي الشَّاشَاتِ الْكَبِيرَةِ، بَيْنَمَا تَتَرَتَّبُ فَوْقَ بَعْضِهَا فِي الشَّاشَاتِ الصَّغِيرَةِ بِشَكْلٍ انْسِيَابِيٍّ وَمُنَظَّمٍ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "توزيع العناصر يتغير تلقائيا بناء على عرض الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"item\">1</div>\n      <div class=\"item\">2</div>\n      <div class=\"item\">3</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "1 | 2 | 3 (Desktop)\n1\n2\n3 (Mobile)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "احْرِصْ دَائِماً عَلَى اخْتِبَارِ تَصْمِيمِكَ عَلَى مُتَصَفِّحَاتٍ مُخْتَلِفَةٍ مِثْلَ Chrome أَوْ Edge. اسْتَخْدِمْ مِيزَةَ Inspect Element لِمُرَاقَبَةِ كَيْفِيَّةِ تَغَيُّرِ ال Elements وَتَأْثِيرِ ال Attributes عَلَى التَّخْطِيطِ.",
+        "caption_text": "نصائح لاختبار وتطوير التصميم المرن."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم Chrome DevTools للاختبار",
+          "جرب أحجام شاشات مختلفة",
+          "تأكد من توافق الكود مع المعايير"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا التَّحَدِّيَ. تَعَلَّمْنَا كَيْفَ نَجْعَلُ التَّخْطِيطَ مَرِناً بِاسْتِخْدَامِ Flexbox. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتُطَوِّرُوا مَهَارَاتِكُمْ.",
+        "caption_text": "شكرا لمتابعتكم، استمروا في ممارسة البرمجة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox هو الحل الأمثل للتصميم المرن",
+          "التطبيق العملي هو مفتاح الاحتراف",
+          "راجع الرابط في الوصف للمزيد من التحديات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_responsive.asp"
+      ]
+    }
+  ]
+}
