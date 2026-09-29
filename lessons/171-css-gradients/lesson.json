@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "171",
+  "title": "CSS Gradients",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام CSS Gradients",
+    "التعرف على دالة linear-gradient",
+    "التحكم في اتجاهات وزوايا التدرج اللوني",
+    "استخدام الشفافية وتكرار التدرجات"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_gradients.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة عن CSS Gradients",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ. سَنَتَعَرَّفُ عَلَى CSS Gradients، وَهِيَ دَوَالّ تُمَكِّنُنَا مِنْ عَرْضِ انْتِقَالَاتٍ سَلِسَةٍ بَيْنَ لَوْنَيْنِ أَوْ أَكْثَرَ دَاخِلَ عُنْصُرِ الْوِبّ، وَتُسْتَخْدَمُ ضِمْنَ خَاصِّيَّةِ background-image.",
+        "caption_text": "تسمح CSS Gradients بعرض انتقالات سلسة بين لونين أو أكثر داخل عنصر الويب وتستخدم ضمن خاصية background-image."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم CSS Gradients لإنشاء انتقالات لونية سلسة",
+          "تطبق التدرجات داخل خاصية background-image",
+          "توجد أنواع متعددة من التدرجات في CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "linear-gradient-basics",
+      "title": "دالة linear-gradient",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ دَالَّةُ linear-gradient لِإِنْشَاءِ تَدَرُّجٍ خَطِّيٍّ يَسِيرُ فِي خَطٍّ مُسْتَقِيمٍ. يُمْكِنُ أَنْ يَتَّجِهَ التَّدَرُّجُ لِلْأَسْفَلِ، أَوْ لِلْأَعْلَى، أَوْ لِلْيَمِينِ، أَوْ لِلْيَسَارِ، أَوْ بِشَكْلٍ قُطْرِيٍّ، مَعَ ضَرُورَةِ تَحْدِيدِ لَوْنَيْنِ عَلَى الْأَقَلّ.",
+        "caption_text": "تنشئ دالة linear-gradient تدرجا خطيا يسير في خط مستقيم ويمكن توجيهه في اتجاهات مختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "background-image: linear-gradient(direction, color-stop1, color-stop2, ...);",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "directions",
+      "title": "اتجاهات التدرج",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا التَّحَكُّمُ فِي اتِّجَاهِ التَّدَرُّجِ بِسُهُولَةٍ. الْوَضْعُ الِافْتِرَاضِيُّ هُوَ to bottom، لَكِنْ يُمْكِنُكَ اسْتِخْدَامُ to top، أَوْ to right، أَوْ حَتَّى to bottom right لِلْحُصُولِ عَلَى تَدَرُّجٍ قُطْرِيٍّ بَيْنَ الْأَلْوَانِ.",
+        "caption_text": "يمكن التحكم في اتجاه التدرج باستخدام قيم مثل to bottom أو to right أو اتجاهات قطرية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: linear-gradient(to bottom right, red, yellow);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "angles",
+      "title": "استخدام الزوايا",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْتَ تَحَكُّماً أَكْبَرَ فِي اتِّجَاهِ التَّدَرُّجِ، يُمْكِنُكَ اسْتِخْدَامُ الزَّوَايَا بَدَلًا مِنَ الِاتِّجَاهَاتِ الْمُعَرَّفَةِ مُسْبَقاً. نَكْتُبُ الزَّاوِيَةَ بِوَحْدَةِ deg، مِثْلَ 180deg لِلْحُصُولِ عَلَى تَدَرُّجٍ دَقِيقٍ.",
+        "caption_text": "يمكن تحديد زاوية التدرج بدقة باستخدام وحدة deg بدلا من الاتجاهات النصية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: linear-gradient(180deg, red, yellow);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "multiple-stops",
+      "title": "تعدد نقاط الألوان",
+      "narration": {
+        "spoken_text": "لَا يَقْتَصِرُ التَّدَرُّجُ عَلَى لَوْنَيْنِ فَقَطْ، بَلْ يُمْكِنُكَ إِضَافَةُ عِدَّةِ أَلْوَانٍ لِتَكْوِينِ مَشْهَدٍ لَوْنِيٍّ غَنِيٍّ. كُلُّ مَا عَلَيْكَ هُوَ فَصْلُ الْأَلْوَانِ بِفَاصِلَةٍ دَاخِلَ دَالَّةِ linear-gradient.",
+        "caption_text": "يمكن إضافة عدة ألوان داخل دالة linear-gradient لإنشاء تدرجات لونية متعددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: linear-gradient(to right, red, orange, yellow, green, blue);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "transparency",
+      "title": "الشفافية في التدرجات",
+      "narration": {
+        "spoken_text": "يُمْكِنُكَ أَيْضاً إِضَافَةُ الشَّفَافِيَّةِ لِلتَّدَرُّجِ بِاسْتِخْدَامِ دَالَّةِ rgba. الْقِيمَةُ الْأَخِيرَةُ فِي هَذِهِ الدَّالَّةِ تَحَدَّدُ دَرَجَةَ الشَّفَافِيَّةِ مِنْ صِفْرٍ إِلَى وَاحِدٍ، مِمَّا يُسَاعِدُ فِي خَلْقِ تَأْثِيرَاتِ تَلاشٍ رَائِعَةٍ.",
+        "caption_text": "تسمح دالة rgba بإضافة الشفافية للتدرجات، حيث تتراوح القيمة الأخيرة بين 0 و1."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "repeating",
+      "title": "تكرار التدرج",
+      "narration": {
+        "spoken_text": "أَخِيراً، لَدَيْنَا دَالَّةُ repeating-linear-gradient، وَهِيَ تُسْتَخْدَمُ لِتَكْرَارِ التَّدَرُّجِ الْخَطِّيِّ عِدَّةَ مَرَّاتٍ. هَذَا يُعْطِي تَأْثِيراً بَصَرِيّاً مُتَكَرِّراً وَمُمَيَّزاً لِعَنَاصِرِ الْوِبّ.",
+        "caption_text": "تستخدم دالة repeating-linear-gradient لتكرار التدرج الخطي بشكل متتابع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);\n}",
+        "highlight_lines": [],
+        "output": "تدرج متكرر للألوان أحمر وأصفر وأخضر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ بِنَاءِ تَدَرُّجَاتٍ لَوْنِيَّةٍ احْتِرَافِيَّةٍ بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَغْيِيرِ الْأَلْوَانِ وَالزَّوَايَا لِتَرَوْا النَّتَائِجَ الْمُذْهِلَةَ. شُكْراً لِمُتَابَعَتِكُمْ.",
+        "caption_text": "تعلمنا كيفية بناء تدرجات لونية احترافية. جربوا تغيير الألوان والزوايا بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم linear-gradient للتدرجات الخطية",
+          "تحكم في الاتجاهات والزوايا",
+          "أضف الشفافية باستخدام rgba",
+          "جرب repeating-linear-gradient للتكرار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients.asp"
+      ]
+    }
+  ]
+}
