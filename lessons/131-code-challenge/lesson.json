@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "131",
+  "title": "CSS Attribute Selectors Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "اختبار الفهم العملي لـ CSS Attribute Selectors",
+    "تطبيق محددات الخصائص لتنسيق عناصر الـ HTML بدقة",
+    "استخدام الرموز المتقدمة مثل = و = و *= للبحث الفعال"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_attribute_selectors.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro-challenge",
+      "title": "مقدمة تحدي محددات الخصائص",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي العَمَلِيِّ لِمُحَدِّدَاتِ الخَصَائِصِ فِي لُغَةِ CSS. سَنَخْتَبِرُ اليَوْمَ مَهَارَاتِنَا فِي استهداف العَنَاصِرِ بِنَاءً عَلَى Attributes الخاصَه بِهَا، لِصُنْعِ تَصَامِيمَ دقيقَه واحترافيَه.",
+        "caption_text": "مرحبا بكم في تحدي محددات الخصائص في CSS لاختبار مهاراتنا العملية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار مهارات CSS عبر تحدي عملي مباشر",
+          "استهداف العناصر بدقة باستخدام Attribute Selectors",
+          "تحسين القدرة على كتابة أكواد نظيفة وفعالة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "syntax-basics",
+      "title": "قواعد كتابة Attribute Selectors",
+      "narration": {
+        "spoken_text": "لِكِتَابَةِ مُحَدِّدِ خَصَائِصِ صَحِيحٍ فِي CSS، نَسْتَخْدِمُ الأَقْوَاسَ المربعَه، مِثْل inputtype='text' لِاسْتِهْدَافِ حُقُولِ الإِدْخَالِ النصيَه مباشرَه، أَوْ استِخْدَام target لِاسْتِهْدَافِ الرَّوَابِطِ الَّتِي تَحْتَوِي عَلَى هَذِه Attribute بِغَضِّ النَّظَرِ عَنْ قِيمَتِهَا.",
+        "caption_text": "نستخدم الأقواس المربعة لاستهداف العناصر بناء على سماتها مثل inputtype='text'."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "selectors.css",
+        "code": "input[type=\"text\"] {\n  background-color: #f0f0f0;\n}\na[target] {\n  color: #ff0000;\n}",
+        "highlight_lines": [],
+        "output": "Styling applied to text inputs and links with target",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "exact-matching",
+      "title": "المطابقة التامة للقيم",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُرِيدُ استِهْدَافَ قيمَه محددَه بدقَه، نَكْتُبُ الرَّمْزَ يُسَاوِي دَاخِلَ الأَقْوَاسِ المربعَه مِثْل class='button' أَوْ العُنْصُرَ الَّذِي يَحْمِلُ قيمَه مُعَيَّنَه بِالكَامِلِ، وَهَذَا يَمْنَحُنَا تَحَكُّماً كَامِلاً فِي تَفَاصِيلِ التَّصْمِيمِ.",
+        "caption_text": "نستخدم علامة التساوي للمطابقة التامة لقيمة Attribute داخل الأقواس المربعة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "exact.css",
+        "code": "a[class=\"btn-primary\"] {\n  padding: 10px 20px;\n  background-color: blue;\n}",
+        "highlight_lines": [],
+        "output": "Button styled with exact class attribute match",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "advanced-symbols-start",
+      "title": "البحث المتقدم باستخدام الرمز =",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى المُمَيِّزَاتِ المُتَقَدِّمَه، حَيْثُ يُسْتَخْدَمُ الرَّمْز carat مَتْبُوعاً بِيُسَاوِي أَيْ = لِلتَّعَرُّفِ عَلَى القِيَمِ الَّتِي تَبْدَأُ بِحَرْفٍ أَوْ كَلِمَه مُعَيَّنَه، مِثْلَ الرَّوَابِطِ الَّتِي تَبْدَأُ بَةِ https.",
+        "caption_text": "استخدام الرمز = لاستهداف القيم التي تبدأ بنص محدد مثل الروابط الآمنة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "starts.css",
+        "code": "a[href^=\"https\"] {\n  color: green;\n  font-weight: bold;\n}",
+        "highlight_lines": [],
+        "output": "Secure links styled with green color",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "advanced-symbols-end",
+      "title": "البحث المتقدم باستخدام الرمز =",
+      "narration": {
+        "spoken_text": "أَمَّا الرَّمْز dollar مَتْبُوعاً بِيُسَاوِي أَيْ =، فَيُسْتَخْدَمُ بِدِقَّه لِاسْتِهْدَافِ القِيَمِ الَّتِي تَنْتَهِي بِامْتِدَادٍ مُعَيَّنٍ، مِثْلَ استِهْدَافِ جَمِيعِ المِلَفَّاتِ الَّتِي تَنْتَهِي بالصيغَه pdf لِتَلْوِينِهَا أَوْ تَمْيِيزِهَا.",
+        "caption_text": "استخدام الرمز = لاستهداف العناصر التي تنتهي بقيمة معينة مثل ملفات pdf."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "ends.css",
+        "code": "a[href$=\"pdf\"] {\n  background: url(pdf-icon.png);\n}",
+        "highlight_lines": [],
+        "output": "PDF links marked with specific icon",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "advanced-symbols-contains",
+      "title": "البحث الشامل باستخدام الرمز *=",
+      "narration": {
+        "spoken_text": "وَإِذَا أَرَدْنَا البَحْثَ عَنْ كلمَه أَوْ نَصٍّ مُعَيَّنٍ فِي أَيِّ مَوْضِعٍ دَاخِلَ القِيمَه، نَسْتَخْدِمُ رَمْزَ النجمَه مَتْبُوعاً بِيُسَاوِي أَيْ star equals، وَهُوَ مُفِيدٌ جِدّاً لِلْبَحْثِ المَرِنِ فِي الرَّوَابِطِ أَوْ النُّصُوصِ.",
+        "caption_text": "استخدام الرمز *= للبحث عن نص معين داخل القيمة في أي موقع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "contains.css",
+        "code": "div[class*=\"col-\"] {\n  float: left;\n  padding: 15px;\n}",
+        "highlight_lines": [],
+        "output": "Grid columns styled dynamically",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "عِنْدَ كِتَابَةِ مُحَدِّدَاتِ الخَصَائِصِ، احْرِصْ دَائِماً عَلَى اخْتِيَارِ المُحَدِّدِ الأَنْسَبِ لِأَدَائِكَ البَرْمَجِيِّ، وَلَا تَسْتَخْدِمِ المُحَدِّدَاتِ المعقدَه إِلَّا عِنْدَ الحاجَه لِضَمَانِ سُرْعَةِ مُعَالَجَةِ صَفْحَةِ الْوِبّ فِي الْمُتَصَفِّحْ.",
+        "caption_text": "أفضل الممارسات تتطلب اختيار المحدد الأنسب لضمان أداء عالي وسرعة في المتصفح."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختر المحدد الأنسب لطبيعة العنصر بدقة",
+          "تجنب التعقيد الزائد لتحسين أداء صفحة الويب",
+          "اختبر الأكواد باستمرار في مختلف متصفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة التحدي والخطوات القادمة",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا تَحَدِّي مُحَدِّدَاتِ الخَصَائِصِ بِنَجَاحٍ تَامٍّ، شُكْرًاً لِمُتَابَعَتِكُمْ، وَأَتَدَرَّبُوا عَلَى هَذِهِ الْأَكْوَادِ بِأَنْفُسِكُمْ لِتَعْزِيزِ مَهَارَاتِكُمْ فِي لُغَةِ CSS.",
+        "caption_text": "نختتم التحدي بنجاح ونشجعكم على ممارسة الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتمام تحدي CSS Attribute Selectors بنجاح",
+          "مراجعة الرموز المتقدمة مثل = و = و *=",
+          "استعد للانتقال إلى الدروس القادمة في دورة CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_attribute_selectors.asp"
+      ]
+    }
+  ]
+}
