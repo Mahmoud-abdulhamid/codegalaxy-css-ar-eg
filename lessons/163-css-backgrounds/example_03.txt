@@ -1,0 +1,3 @@
+Element Background:
+- Layer 1: Flower (Right-Bottom, No-Repeat)
+- Layer 2: Paper (Left-Top, Repeat)
