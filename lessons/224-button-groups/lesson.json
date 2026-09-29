@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "224",
+  "title": "CSS Button Groups",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية إنشاء مجموعات الأزرار الأفقية والعمودية باستخدام CSS",
+    "استخدام خاصية display: flex لتنظيم الأزرار",
+    "إضافة تأثيرات تفاعلية مثل hover وborder",
+    "تحسين تجربة المستخدم في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_buttons_groups.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في مجموعات الأزرار",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَنْظِيمِ الْأَزْرَارِ فِي مَجْمُوعَاتٍ مُتَرَابِطَةٍ، وَكَيْفَ نُضِيفُ لَهَا تَأْثِيرَاتٍ جَمَالِيَّةً وَتَفَاعُلِيَّةً لِتَحْسِينِ تَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Button Groups، حيث سنتعلم تنظيم الأزرار وتصميمها باحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنظيم الأزرار في مجموعات متناسقة",
+          "استخدام CSS للتحكم في التخطيط",
+          "إضافة تأثيرات تفاعلية عند التفاعل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_groups.asp"
+      ]
+    },
+    {
+      "id": "horizontal-group",
+      "title": "إنشاء مجموعة أزرار أفقية",
+      "narration": {
+        "spoken_text": "لِإِنْشَاءِ مَجْمُوعَةِ أَزْرَارٍ أُفُقِيَّةٍ، نَقُومُ بِوَضْعِ الْأَزْرَارِ دَاخِلَ Element مِنْ نَوْع div، ثُمَّ نُطَبِّقُ خَاصِيَّةَ display: flex عَلَيْهِ. هَذَا يَجْعَلُ الْأَزْرَارَ تَصْطَفُّ بِجَانِبِ بَعْضِهَا بِشَكْلٍ مُنْتَظَمٍ.",
+        "caption_text": "نستخدم div مع display: flex لإنشاء مجموعة أزرار أفقية متجاورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn-group {\n  display: flex;\n  flex-wrap: wrap;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_groups.asp"
+      ]
+    },
+    {
+      "id": "button-styling",
+      "title": "تنسيق الأزرار داخل المجموعة",
+      "narration": {
+        "spoken_text": "نَقُومُ الْآنَ بِتَنْسِيقِ الْأَزْرَارِ نَفْسِهَا بِاسْتِخْدَامِ background-color وَ padding. لَاحِظْ أَنَّنَا نُضِيفُ تَأْثِيرَ hover لِتَغْيِيرِ لَوْنِ الزِّرِّ عِنْدَ تَحْرِيكِ مُؤَشِّرِ الْفَأْرَةِ فَوْقَهُ، مِمَّا يُعْطِي تَجْرِبَةً تَفَاعُلِيَّةً رَائِعَةً.",
+        "caption_text": "تنسيق الأزرار باستخدام الألوان والمسافات وإضافة تأثير hover."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button {\n  background-color: #04AA6D;\n  padding: 15px 32px;\n  cursor: pointer;\n}\n.btn-group .button:hover {\n  background-color: dodgerblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_groups.asp"
+      ]
+    },
+    {
+      "id": "bordered-group",
+      "title": "إضافة حدود للمجموعة",
+      "narration": {
+        "spoken_text": "لِإِعْطَاءِ مَظْهَرٍ مُحَدَّدٍ لِلْمَجْمُوعَةِ، نَسْتَخْدِمُ خَاصِيَّةَ border. نَقُومُ بِإِزَالَةِ الْحُدُودِ الْيُمْنَى لِكُلِّ زِرٍّ مَا عَدَا الزِّرَّ الْأَخِيرَ، لِيَبْدُوَ الْكُلُّ كَأَنَّهُ كُتْلَةٌ وَاحِدَةٌ مُتَّصِلَةٌ.",
+        "caption_text": "استخدام border لإنشاء مجموعة أزرار ذات حدود متصلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button {\n  border: 1px solid green;\n}\n.btn-group .button:not(:last-child) {\n  border-right: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_groups.asp"
+      ]
+    },
+    {
+      "id": "vertical-group",
+      "title": "إنشاء مجموعة أزرار عمودية",
+      "narration": {
+        "spoken_text": "لِتَحْوِيلِ الْمَجْمُوعَةِ إِلَى الشَّكْلِ الْعَمُودِيِّ، نَكْتَفِي بِتَغْيِيرِ خَاصِيَّةِ flex-direction إِلَى column. هَذَا التَّغْيِيرُ الْبَسِيطُ يُعِيدُ تَرْتِيبَ الْأَزْرَارِ فَوْقَ بَعْضِهَا الْبَعْضِ بِسُهُولَةٍ تَامَّةٍ.",
+        "caption_text": "استخدام flex-direction: column لترتيب الأزرار عموديا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn-group {\n  display: flex;\n  flex-direction: column;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_groups.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ الْأَزْرَارُ فِي صَفْحَةِ الْوِبّ كَمَجْمُوعَةٍ مُنَسَّقَةٍ. سَتَسْتَجِيبُ لِلْفَأْرَةِ بِسَلَاسَةٍ، وَتَتَمَتَّعُ بِتَصْمِيمٍ احْتِرَافِيٍّ يَتَنَاسَبُ مَعَ مُخْتَلَفِ أَحْجَامِ الشَّاشَاتِ.",
+        "caption_text": "النتيجة النهائية: أزرار متجاورة أو عمودية بتأثيرات تفاعلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"btn-group\">\n      <button class=\"button\">Button 1</button>\n      <button class=\"button\">Button 2</button>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Button 1 | Button 2",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_groups.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَسْتَخْدِمُ flexbox لِتَنْظِيمِ الْأَزْرَارِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِ تَأْثِيرَاتٍ إِضَافِيَّةٍ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: استخدمنا flexbox لتنظيم الأزرار. جربوا الأكواد بأنفسكم!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display: flex للتخطيط",
+          "التحكم في الاتجاه عبر flex-direction",
+          "تخصيص الحدود عبر border",
+          "إضافة تفاعلية عبر hover"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_groups.asp"
+      ]
+    }
+  ]
+}
