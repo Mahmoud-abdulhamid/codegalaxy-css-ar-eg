@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "350",
+  "title": "دورة CSS - بناء Sticky Image احترافية",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية إنشاء Sticky Image باستخدام CSS",
+    "فهم آلية عمل position sticky في صفحات الويب",
+    "تطبيق خصائص التموضع الإحداثي مثل top بشكل صحيح"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_sticky.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ Sticky Image بِاسْتِخْدَامِ أُسْلُوبِ التَّمْضُعِ الذَّكِيِّ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ أَثْنَاءَ التَّصَفُّحِ.",
+        "caption_text": "مرحبا بكم في درس إنشاء Sticky Image باستخدام CSS وتحسين تجربة المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء عناصر مرئية ثابتة بذكاء",
+          "فهم تأثير التموضع أثناء التمرير",
+          "تطبيق خصائص CSS الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_sticky.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "مفهوم Sticky Positioning",
+      "narration": {
+        "spoken_text": "يَعْمَلُ عُنْصُرُ position sticky عَلَى تَبْدِيلِ حَالَتِهِ بَيْنَ relative وَ fixed حَسَبَ حَرَكَةِ التَّمَرُّرِ فِي ال viewport، حَتَّى يَصِلَ إِلَى النُّقْطَةِ الْمُحَدَّدَةِ لِيَسْتَقِرَّ فِي مَكَانِهِ بِشَكْلٍ مِثَالِيٍّ.",
+        "caption_text": "العنصر ذو position sticky يتبادل بين relative و fixed بناء على موقع التمرير."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التبديل التلقائي بين relative و fixed",
+          "الاستجابة الفورية لموقع التمرير في الـ viewport",
+          "الثبات في النقطة المحددة مسبقا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_sticky.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كتابة كود الـ CSS الأساسي",
+      "narration": {
+        "spoken_text": "لِتَبْدِيقِ هَذِهِ التَّقْنِيَّةِ عَلَى الصُّوَرِ، نَقُومُ بِتَحْدِيدِ selector الْخَاصِّ بِالصُّورَةِ مِثْلَ img.sticky، ثُمَّ نُعَيِّنُ قِيمَةَ position إِلَى sticky مَعَ إِضَافَةِ إِحْدَاثِيَّاتِ الْمَسَافَةِ.",
+        "caption_text": "تحديد Selector الصورة وإسناد قيمة sticky لخاصية position."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img.sticky {\n  position: sticky;\n  top: 0;\n}",
+        "highlight_lines": [],
+        "output": "تلتصق الصورة بأعلى الشاشة عند التمرير.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_sticky.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "لِكَيْ تَعْمَلَ هَذِهِ التَّقْنِيَّةُ بِشَكْلٍ صَحِيحٍ، يَجِبُ تَحْدِيدُ قِيمَةٍ وَاحِدَةٍ عَلَى الْأَقَلِّ مِنْ خَصَائصِ ال offset مِثْلَ top أَوْ right أَوْ bottom أَوْ left لِتَحْدِيدِ مَكَانِ التَّثْبِيتِ.",
+        "caption_text": "يجب تحديد قيمة offset واحدة على الأقل مثل top ليعمل التموضع بنجاح."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية تحديد خاصية top أو left",
+          "التحكم الكامل في مسافة الالتصاق",
+          "ضمان توافق التصميم مع المتصفحات الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_sticky.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "معاينة المخرجات في المتصفح",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ وَقِيَامِ الْمُسْتَخْدِمِ بِالتَّمَرُّرِ لِأَسْفَلِ الصَّفْحَةِ، سَتُلَاحِظُ أَنَّ الصُّوَرَةَ تَتَحَرَّكُ عَادِيًّا حَتَّى تَبْلُغَ حُدُودَ top الصَّفْحَةِ فَتَثْبُتُ هُنَاكَ بِلَا حَرَكَةٍ.",
+        "caption_text": "معاينة سلوك الصورة الثابتة أثناء التمرير في متصفح الويب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"content\">\n      <img src=\"photo.jpg\" class=\"sticky\" alt=\"Sticky Image\">\n      <p>محتوى إضافي للتمرير...</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "تظل الصورة مثبتة في الأعلى أثناء تمرير المحتوى الطويل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_sticky.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "التوافقية والملاحظات التقنية",
+      "narration": {
+        "spoken_text": "يَجِبُ الْإِنْتِبَاهُ إِلَى أَنَّ هَذَا الْمِثَالَ قَدْ لَا يَعْمَلُ فِي مِتْصَفِحَاتٍ قَدِيمَةٍ مِثْلَ Internet Explorer أَوْ إصْدَارَاتِ Edge الْخَمْسَةَ عَشَرَ وَمَا قَبْلَهَا، لِذَا يُنْصَحُ بِدَوْمِ مُرَاجَعَةِ تَوَافُقِيَّةِ الْمُتَصَفِّحَاتِ.",
+        "caption_text": "ملاحظة حول دعم المتصفحات وعدم عمل الخاصية في الإصدارات القديمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "عدم الدعم في Internet Explorer",
+          "مشاكل التوافق مع Edge 15 والإصدارات الأقدم",
+          "أهمية فحص توافق المتصفحات عبر CanIUse"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_sticky.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا الْيَوْمِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ position sticky لِجْعَلِ الصُّوَرِ تَثْبُتُ بِذَكَاءٍ أَثْنَاءَ التَّمَرُّرِ. نَدْعُوكُمْ لِلتَّجْرِبَةِ الْعَمَلِيَّةِ وَمُتَابَعَةِ الدَّوْرَةِ لِلْمَزِيدِ.",
+        "caption_text": "خلاصة الدرس ودعوة لتطبيق الأكواد البرمجية ومواصلة التعلم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتقان خاصية position sticky في CSS",
+          "تحسين التفاعل البصري لمواقع الويب",
+          "تجربة الأكواد بأنفسكم عبر روابط المصدر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_sticky.asp"
+      ]
+    }
+  ]
+}
