@@ -1,0 +1,5 @@
+.container > * {
+  grid-column: col-start / span 12;
+  padding: 10px;
+  border: 1px solid green;
+}
