@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "250",
+  "title": "CSS Flex Container Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء Flex Container",
+    "التحكم في توزيع العناصر داخل Flex Container",
+    "تطبيق خصائص Flexbox عمليا",
+    "تحسين مهارات التنسيق في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_flexbox_container.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Flex Container",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنُتْقِنُ مَفْهُومَ Flex Container وَكَيْفِيَّةَ اسْتِخْدَامِهِ لِبِنَاءِ تَصَامِيمَ مَرِنَةٍ وَمُتَجَاوِبَةٍ لِصَفْحَاتِ الْوِبّ بِكُلِّ سُهُولَةٍ وَاحْتِرَافِيَّةٍ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS. اليوم سنتقن مفهوم Flex Container وكيفية استخدامه لبناء تصاميم مرنة ومتجاوبة لصفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox هو نموذج تنسيق قوي في CSS",
+          "يسمح بتوزيع العناصر داخل الحاويات بمرونة",
+          "يستخدم Flex Container لتنظيم العناصر",
+          "يسهل محاذاة العناصر أفقيا وعموديا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية لـ Flexbox",
+      "narration": {
+        "spoken_text": "لِتَحْوِيلِ أَيِّ Element إِلَى Flex Container، نَسْتَخْدِمُ خَاصِيَّةَ display بِقِيمَةِ flex. هَذَا يُفَعِّلُ نِظَامَ التَّوْزِيعِ الْمَرِنِ لِجَمِيعِ الْعَنَاصِرِ الْأَبْنَاءِ دَاخِلَ هَذِهِ الْحَاوِيَةِ.",
+        "caption_text": "لتحويل أي Element إلى Flex Container، نستخدم خاصية display بقيمة flex. هذا يفعل نظام التوزيع المرن لجميع العناصر الأبناء داخل هذه الحاوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display: flex لتفعيل الحاوية",
+          "العناصر الأبناء تصبح Flex Items",
+          "التحكم في المحور الرئيسي عبر flex-direction",
+          "التحكم في المحاذاة عبر justify-content"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "code_setup",
+      "title": "هيكل الكود الأساسي",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ كَيْفَ نَكْتُبُ الْكُود. نَقُومُ بِتَعْرِيفِ حَاوِيَةِ div بِكْلَاسٍ مُعَيَّنٍ، ثُمَّ نُطَبِّقُ التَّنْسِيقَاتِ فِي قِسْمِ style. لَاحِظْ كَيْفَ نَضْبِطُ display إِلَى flex لِتَفْعِيلِ الْخَصَائِصِ.",
+        "caption_text": "لنقوم بتعريف حاوية div بكلاس معين، ثم نطبق التنسيقات في قسم style. لاحظ كيف نضبط display إلى flex لتفعيل الخصائص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 200px;\n  background: #f1f1f1;\n}",
+        "highlight_lines": [],
+        "output": "Flex Container active with centered items.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "خَاصِيَّةُ justify-content تَتَحَكَّمُ فِي تَوْزِيعِ الْعَنَاصِرِ عَلَى الْمِحْوَرِ الرَّئِيسِيِّ، بَيْنَمَا align-items تَتَحَكَّمُ فِي الْمِحْوَرِ الْمُتَعَامِدِ. هَذِهِ الْخَصَائِصُ هِيَ الْأَسَاسُ لِتَصْمِيمِ أَيِّ وَاجِهَةِ وِبّ.",
+        "caption_text": "خاصية justify-content تتحكم في توزيع العناصر على المحور الرئيسي، بينما align-items تتحكم في المحور المتعامد. هذه الخصائص هي الأساس لتصميم أي واجهة ويب."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة",
+          "القيمة"
+        ],
+        "rows": [
+          [
+            "display",
+            "تفعيل Flexbox",
+            "flex"
+          ],
+          [
+            "justify-content",
+            "المحور الرئيسي",
+            "center"
+          ],
+          [
+            "align-items",
+            "المحور المتعامد",
+            "center"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "visual_output",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَجِدُ أَنَّ الْعَنَاصِرَ دَاخِلَ ال container قَدْ تَمَّتْ مَحَاذَاتُهَا بِدِقَّةٍ فِي الْمُنْتَصَفِ. هَذَا هُوَ الْجَمَالُ فِي اسْتِخْدَامِ Flexbox لِتَنْظِيمِ الْمُحْتَوَى.",
+        "caption_text": "عند تطبيق هذه الأكواد، ستجد أن العناصر داخل الـ container قد تمت محاذاتها بدقة في المنتصف. هذا هو الجمال في استخدام Flexbox لتنظيم المحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div>Item 1</div>\n      <div>Item 2</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "[ Item 1 ] [ Item 2 ] centered in container",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِتَجْرِبَةِ قِيَمٍ مُخْتَلِفَةٍ لِخَاصِيَّةِ flex-direction، مِثْلَ row أَوْ column، لِفَهْمِ كَيْفَ يَتَغَيَّرُ سُلُوكُ الْعَنَاصِرِ. التَّجْرِبَةُ الْعَمَلِيَّةُ هِيَ السَّبِيلُ الْأَمْثَلُ لِإِتْقَانِ هَذِهِ الْمَهَارَةِ.",
+        "caption_text": "ينصح دائما بتجربة قيم مختلفة لخاصية flex-direction، مثل row أو column، لفهم كيف يتغير سلوك العناصر. التجربة العملية هي السبيل الأمثل لإتقان هذه المهارة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم flex-direction لتغيير اتجاه المحور",
+          "جرب قيم flex-wrap للتحكم في التفاف العناصر",
+          "استخدم gap لإضافة مسافات بين العناصر",
+          "اختبر التصميم على متصفحات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_container.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا عَلَى أَسَاسِيَّاتِ Flex Container. أَدْعُوكُمْ لِزِيَارَةِ الرَّابِطِ فِي الْوَصْفِ لِتَجْرِبَةِ التَّحَدِّيَاتِ بِنَفْسِكُمْ وَتَطْوِيرِ مَهَارَاتِكُمْ فِي CSS. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "بهذا نكون قد تعرفنا على أساسيات Flex Container. أدعوكم لزيارة الرابط في الوصف لتجربة التحديات بنفسكم وتطوير مهاراتكم في CSS. شكرا لمتابعتكم، وإلى اللقاء في درس قادم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox أداة أساسية لكل مطور ويب",
+          "التحكم الكامل في التخطيط أصبح أسهل",
+          "مارس التحديات البرمجية بانتظام",
+          "تابعونا للمزيد من دروس CodeGalaxy"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_flexbox_container.asp"
+      ]
+    }
+  ]
+}
