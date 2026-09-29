@@ -3,6 +3,8 @@
   "lesson_id": "77",
   "title": "CSS Table Alignment",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية محاذاة المحتوى أفقيا داخل عناصر الجداول في HTML",
     "استخدام property واسمها text-align لمحاذاة النصوص داخل th و td",
