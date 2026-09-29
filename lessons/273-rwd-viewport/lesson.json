@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "273",
+  "title": "Responsive Web Design - The Viewport",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم الـ Viewport وأهميته في صفحات الويب.",
+    "تعلم كيفية إضافة meta tag الخاص بالـ viewport.",
+    "التعرف على خصائص width و initial-scale.",
+    "تجنب مشاكل التمرير الأفقي في تصميمات الويب."
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_rwd_viewport.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-2492670883861489.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_rwd_viewport.asp",
+      "source_url": "https://www.w3schools.com/css/css_rwd_viewport.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول الـ Viewport",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَرَّفُ عَلَى مَفْهُومِ ال Viewport، وَهُوَ الْمِسَاحَةُ الْمَرْئِيَّةُ لِصَفْحَةِ الْوِبّ عَلَى جِهَازِ الْمُسْتَخْدِمِ، وَكَيْفَ نَضْبِطُهَا لِتَتَنَاسَبَ مَعَ مُخْتَلِفِ الشَّاشَاتِ.",
+        "caption_text": "مفهوم الـ Viewport هو المساحة المرئية من صفحة الويب التي تختلف باختلاف الجهاز المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Viewport هي المساحة المرئية للمستخدم.",
+          "تختلف أبعادها بين الهواتف وأجهزة الكمبيوتر.",
+          "التحكم فيها ضروري لتصميم صفحات الويب المتجاوبة."
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "meta_tag_explanation",
+      "title": "إضافة الـ meta tag للـ Viewport",
+      "narration": {
+        "spoken_text": "لِتَحْكِيمِ أَبْعَادِ الصَّفْحَةِ، يَجِبُ إِدْرَاجُ هَذَا ال meta element دَاخِلَ قِسْمِ head. هَذَا الْكُودُ يُعْطِي تَعْلِيمَاتٍ لِل Web Browser حَوْلَ كَيْفِيَّةِ التَّحَكُّمِ فِي أَبْعَادِ الصَّفْحَةِ وَمُسْتَوَى التَّكْبِيرِ الْأَوَّلِيِّ عِنْدَ التَّحْمِيلِ.",
+        "caption_text": "يجب إضافة meta tag داخل قسم head للتحكم في أبعاد الصفحة وتوسيعها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  </head>\n  <body>\n    <h1>Hello World</h1>\n    <p>Styled Web Page</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "code_breakdown",
+      "title": "تحليل خصائص الـ meta tag",
+      "narration": {
+        "spoken_text": "لَاحِظْ مَعِي، جُزْءُ width=device-width يَجْعَلُ عَرْضَ الصَّفْحَةِ مُتَوَافِقاً مَعَ عَرْضِ شَاشَةِ الْجِهَازِ. أَمَّا initial-scale=1.0 فَيُحَدِّدُ مُسْتَوَى التَّكْبِيرِ الْأَوَّلِيَّ عِنْدَ فَتْحِ الصَّفْحَةِ لِأَوَّلِ مَرَّةٍ فِي ال Web Browser.",
+        "caption_text": "شرح خصائص width و initial-scale في الـ meta tag."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "width=device-width: يطابق عرض الصفحة مع عرض الشاشة.",
+          "initial-scale=1.0: يضبط مستوى التكبير عند التحميل.",
+          "هذه الإعدادات تضمن تجربة مستخدم أفضل على الهواتف."
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "visual_comparison",
+      "title": "أهمية الـ Viewport في العرض",
+      "narration": {
+        "spoken_text": "إِذَا لَمْ نَسْتَخْدِمْ هَذَا ال meta tag، قَدْ تَظْهَرُ الصَّفْحَةُ بِشَكْلٍ غَيْرِ مُنَاسِبٍ عَلَى الْهَوَاتِفِ. هَذِهِ الصُّورَةُ تُوَضِّحُ الْفَرْقَ بَيْنَ صَفْحَةٍ بِدُونِ هَذَا الْإِعْدَادِ وَأُخْرَى تَحْتَوِي عَلَيْهِ.",
+        "caption_text": "مقارنة مرئية توضح تأثير استخدام الـ viewport meta tag."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "مقارنة بين صفحة ويب مع وبدون viewport meta tag"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "scrolling_rules",
+      "title": "قواعد تجنب التمرير الأفقي",
+      "narration": {
+        "spoken_text": "يَعْتَادُ الْمُسْتَخْدِمُونَ عَلَى التَّمْرِيرِ الرَّأْسِيِّ، لَكِنَّ التَّمْرِيرَ الْأُفُقِيَّ يُؤَدِّي إِلَى تَجْرِبَةِ مُسْتَخْدِمٍ سَيِّئَةٍ. لِذَا، تَجَنَّبْ اسْتِخْدَامَ عَنَاصِرَ بِعَرْضٍ ثَابِتٍ كَبِيرٍ قَدْ تَتَجَاوَزُ عَرْضَ شَاشَةِ الْجِهَازِ.",
+        "caption_text": "تجنب التمرير الأفقي من خلال عدم استخدام عناصر ذات عرض ثابت كبير."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "لا تستخدم عناصر ذات عرض ثابت كبير.",
+          "تجنب التمرير الأفقي تماما.",
+          "اضبط الصور لتناسب عرض الـ viewport."
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "نصائح تقنية إضافية",
+      "narration": {
+        "spoken_text": "يَجِبُ أَلَّا يَعْتَمِدَ الْمُحْتَوَى عَلَى عَرْضٍ مُحَدَّدٍ لِيَظْهَرَ بِشَكْلٍ جَيِّدٍ. اسْتَخْدِمْ CSS Media Queries لِتَطْبِيقِ تَنْسِيقَاتٍ مُخْتَلِفَةٍ، وَاسْتَعِنْ بِالْقِيَمِ النِّسْبِيَّةِ مِثْلَ width: 100 بَدَلاً مِنَ الْقِيَمِ الثَّابِتَةِ.",
+        "caption_text": "استخدم القيم النسبية و Media Queries لضمان مرونة المحتوى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم القيم النسبية مثل width: 100.",
+          "استخدم CSS Media Queries للتجاوب.",
+          "احذر من قيم الـ absolute positioning الكبيرة."
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا أَهَمِّيَّةَ ال Viewport فِي تَصْمِيمِ الْوِبّ الْمُتَجَاوِبِ. احْرِصْ دَائِماً عَلَى إِدْرَاجِ ال meta tag الْمُنَاسِبِ، وَتَجَنَّبِ الْعَنَاصِرَ الثَّابِتَةَ لِتَضْمَنَ تَجْرِبَةً مُمَيَّزَةً لِكُلِّ مُسْتَخْدِمِيكَ.",
+        "caption_text": "الخلاصة: الـ viewport هو مفتاح التصميم المتجاوب الناجح."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Viewport ضروري للتجاوب.",
+          "استخدم meta tag دائما.",
+          "التزم بالقيم النسبية في CSS."
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_viewport.asp"
+      ]
+    }
+  ]
+}
