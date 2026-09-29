@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "330",
+  "title": "إنشاء تأثير Image Overlay Title في CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء تأثير Overlay على الصور باستخدام CSS",
+    "تطبيق خصائص Position و Opacity و Transition",
+    "إظهار العنوان أو النص عند التمرير بواسطة Container Hover"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_overlay_title.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ تَأْشِيرَةِ عُنْوَانٍ فَوْقَ الصُّوَرِ عِنْدَ التَّمَرُّرِ أَوْ مَا يُسَمَّى Image Overlay Title بِأُسْلُوبٍ احْتِرَافِيٍّ وَسَلِسٍ.",
+        "caption_text": "مرحبا بكم في درس إنشاء تأثير Image Overlay Title باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم إنشاء تأثير Image Overlay Title",
+          "إظهار النصوص والعناوين فوق الصور عند المرور",
+          "استخدام خصائص CSS المتقدمة والحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_title.asp"
+      ]
+    },
+    {
+      "id": "scene_2_html_structure",
+      "title": "هيكل HTML للصفحة",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوَّلاً بِبِنَاءِ هَيْكَلِ HTML لِلتَّأْشِيرَةِ. نُشْئُ حَاوِيَةً رئيسيةً بِاسْمِ container تَحْتَوِي عَلَى عُنْصُرِ img لِلصُّوَرِ وَعُنْصُرِ div دَاخِلِيٍّ يَحْمِلُ نَصَّ العُنْوَانِ الْمُرَادِ ظُهُورُهُ.",
+        "caption_text": "نبدأ ببناء هيكل HTML باستخدام container يحوي الصورة ونص الـ overlay."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"img_avatar.png\" alt=\"Avatar\" class=\"image\">\n      <div class=\"overlay\">My Name is John</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "يظهر صندوق الحاوية مع الصورة وعنصر النص المخفي مؤقتاً.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_title.asp"
+      ]
+    },
+    {
+      "id": "scene_3_css_container",
+      "title": "تنسيق الحاوية الرئيسية Container",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلَ إِلَى تَأْسِيسِ كُودِ CSS. نَبْدَأُ بِتَطْبِيقِ box-sizing بِلِمْسَةٍ عَامَّةٍ ثُمَّ نُحَدِّدُ خَاصِّيَّةَ position لِعُنْصُرِ container بِقِيمَةِ relative لِيَتِمَّ تَصْمِيمُ العُنْصُرِ بِحِرَفِيَّةٍ.",
+        "caption_text": "نضبط خاصية position بقيمة relative للحاوية container."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "* {\n  box-sizing: border-box\n}\n.container {\n  position: relative;\n  width: 50%;\n  max-width: 300px;\n}",
+        "highlight_lines": [],
+        "output": "تحديد العرض الأقصى للحاوية وجعلها مرجعية للعناصر الموضعة بداخله.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_title.asp"
+      ]
+    },
+    {
+      "id": "scene_4_css_image",
+      "title": "تنسيق الصورة وجعلها مرنة",
+      "narration": {
+        "spoken_text": "نَجْعَلُ الصُّوَرِ مَرِنَةً وَمُتَجَاوِبَةً بِاسْتِخْدَامِ display block ثُمَّ ضَبْطِ العَرْضِ بِنِسْبَةِ مِئَةِ بِالْمِئَةِ لِيَتَوَافَقَ مَعَ الحَاوِيَةِ تَمَاماً دُونَ أَيِّ تَشَوُّهٍ فِيمَا يَتَعَلَّقُ بِالأَبْعَادِ.",
+        "caption_text": "نجعل الصورة متجاوبة بضبط العرض بنسبة مئوية والارتفاع التلقائي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".image {\n  display: block;\n  width: 100%;\n  height: auto;\n}",
+        "highlight_lines": [],
+        "output": "الصورة تتكيف تلقائياً مع عرض الحاوية الأقصى.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_title.asp"
+      ]
+    },
+    {
+      "id": "scene_5_css_overlay",
+      "title": "تنسيق عنصر الـ Overlay",
+      "narration": {
+        "spoken_text": "نُنَظِّمُ الآنَ عُنْصُرَ overlay بِوَضْعِ position absolute عِنْدَ أسفلِ الحَاوِيَةِ ثُمَّ نُضِيفُ خَاصِّيَّةَ background مَعَ شَفَّافِيَّةِ rgba وَإِصْرَارِ التَّمْهِيدِ لِتَأْشِيرَةِ الانتقالِ transition.",
+        "caption_text": "نحدد موقع overlay بالأسفل مع خلفية شفافة وتأثير انتقال سلس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".overlay {\n  position: absolute;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.5);\n  color: white;\n  width: 100%;\n  transition: .5s ease;\n  opacity: 0;\n  font-size: 20px;\n  padding: 20px;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": "يصبح صندوق النص مخفياً تماماً بواسطة opacity صفر في الحالة العادية.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_title.asp"
+      ]
+    },
+    {
+      "id": "scene_6_css_hover",
+      "title": "تفعيل تأثير الـ Hover",
+      "narration": {
+        "spoken_text": "عِنْدَ مَرُورِ مؤشّر الْفَأْرَةِ عَلَى الحَاوِيَةِ نُفَعِّلُ حَالَةِ container:hover مَعَ عُنْصُرِ overlay لِتَغْيِيرِ خَاصِّيَّةِ opacity إِلَى وَاحِدٍ، مِمَّا يُؤَدِّي لِظُهُورِ العُنْوَانِ بِشَكْلٍ تَدْرِيجِيٍّ رَائِعٍ.",
+        "caption_text": "نغير قيمة opacity إلى واحد عند التمرير لإظهار النص بسلاسة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container:hover .overlay {\n  opacity: 1;\n}",
+        "highlight_lines": [],
+        "output": "يظهر العنوان بسلاسة تامة عند تمرير الماوس فوق الصورة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_title.asp"
+      ]
+    },
+    {
+      "id": "scene_7_summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ دَمْجِ خَاصِّيَّةِ position مَعَ transition و opacity لِتَصْمِيمِ تَأْشِيرَاتِ عَنَاوِينِ الصُّوَرِ بِكُودِ CSS نَقِيٍّ وَسَهْلٍ. نُرَحِّبُ بِتَجْرِبَةِ الأَكْوادِ بِأَنْفُسِكُمْ.",
+        "caption_text": "خلاصة الدرس: دمج position و transition و opacity لتأثيرات احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position absolute و relative لتمركز دقيق",
+          "التحكم في الشفافية عبر opacity و rgba",
+          "إضافة حركات انتقالية سلسة بواسطة transition"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_title.asp"
+      ]
+    }
+  ]
+}
