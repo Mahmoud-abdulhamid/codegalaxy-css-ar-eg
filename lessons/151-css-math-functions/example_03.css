@@ -1,0 +1,9 @@
+h2 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+div {
+  border: 1px solid green;
+  padding: 10px;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  width: clamp(200px, 50%, 600px);
+}
