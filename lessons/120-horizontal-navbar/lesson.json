@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "120",
+  "title": "CSS Horizontal Navigation Bar",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية بناء شريط تنقل أفقي باستخدام CSS",
+    "التعرف على تقنيات Float و Flexbox في تصميم الـ Navbar",
+    "تطبيق حالات التفاعل مثل Hover و Active",
+    "تعلم كيفية تثبيت شريط التنقل باستخدام Position"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_navbar_horizontal.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول شريط التنقل الأفقي",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ بِنَاءِ شَرِيطِ تَنَقُّلٍ أُفُقِيٍّ، وَهُوَ عُنْصُرٌ أَسَاسِيٌّ فِي أَيِّ صَفْحَه وِبٍّ، حَيْثُ نَسْتَخْدِم ul و li مَع a لِتَنْظِيمِ الرَّوَابِطِ بِشَكْلٍ جَذَّابٍ.",
+        "caption_text": "شريط التنقل الأفقي هو عنصر أساسي في تصميم صفحات الويب ويتم بناؤه باستخدام عناصر القوائم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "شريط التنقل الأفقي يوضع عادة في أعلى الصفحة",
+          "يعتمد الهيكل الأساسي على <ul> و <li> و <a>",
+          "يمكن استخدام <nav> كحاوية رئيسية لشريط التنقل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_horizontal.asp"
+      ]
+    },
+    {
+      "id": "float_method",
+      "title": "استخدام خاصية Float",
+      "narration": {
+        "spoken_text": "الطَّرِيقَه الْكَلَاسِيكِيَّه لِجَعْلِ الْعَنَاصِرِ بِجَانِبِ بَعْضِهَا هِيَ اسْتِخْدَامُ خَاصِيَّةِ float. نَقُومُ بِتَطْبِيق float: left عَلَى عَنَاصِر li، مَعَ ضَبْط padding و background-color لِلْوُصُولِ إِلَى التَّنْسِيقِ الْمَطْلُوبِ لِلرَّوَابِطِ.",
+        "caption_text": "تعتبر خاصية float وسيلة تقليدية لترتيب عناصر القائمة بشكل أفقي بجانب بعضها البعض."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul li {\n  float: left;\n}\nul li a {\n  display: block;\n  padding: 14px 16px;\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_horizontal.asp"
+      ]
+    },
+    {
+      "id": "flexbox_method",
+      "title": "استخدام تقنية Flexbox",
+      "narration": {
+        "spoken_text": "الْآنَ، نَنْتَقِلُ إِلَى الطَّرِيقَه الْأَحْدَثِ وَالْأَكْثَرِ مُرُونَه وَهِي CSS flexbox. بِإِضَافَةِ display: flex إِلَى الْعُنْصُر ul، نَحْصُلُ عَلَى تَوَزِيعٍ تِلْقَائِيٍّ لِلْعَنَاصِرِ، وَيُمْكِنُنَا مَرْكَزَةِ الرَّوَابِطِ بِسُهُولَه بِاسْتِخْدَام justify-content: center.",
+        "caption_text": "تعد تقنية Flexbox الطريقة الحديثة والأكثر كفاءة لتصميم أشرطة التنقل المرنة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  display: flex;\n  justify-content: center;\n  list-style-type: none;\n  background-color: #333;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_horizontal.asp"
+      ]
+    },
+    {
+      "id": "active_state",
+      "title": "إضافة حالة Active وتنسيق الروابط",
+      "narration": {
+        "spoken_text": "لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ، نُضِيفُ كَلَاس active لِتَمْيِيزِ الصَّفْحَه الْحَالِيَّه. كَمَا نَسْتَخْدِم pseudo-class وَهِي hover لِتَغْيِيرِ لَوْنِ الْخَلْفِيَّه عِنْدَ تَحْرِيكِ الْمَاوْسِ فَوْقَ الرَّوَابِطِ، مِمَّا يُعْطِي تَفَاعُلِيَّه رَائِعَه لِلْمُسْتَخْدِمِ.",
+        "caption_text": "استخدام class باسم active و pseudo-class باسم hover يعزز من تفاعلية شريط التنقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul li a.active {\n  background-color: #04AA6D;\n}\nul li a:hover {\n  background-color: #111;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_horizontal.asp"
+      ]
+    },
+    {
+      "id": "fixed_sticky",
+      "title": "تثبيت شريط التنقل",
+      "narration": {
+        "spoken_text": "يُمْكِنُكُمْ تَثْبِيتُ شَرِيطِ التَّنَقُّلِ فِي أَعْلَى أَو أَسْفَلِ الصَّفْحَه بِاسْتِخْدَام position: fixed. وَإِذَا أَرَدْتُمْ أَنْ يَبْقَى الشَّرِيطُ ظَاهِراً أَثْنَاءَ التَّمْرِيرِ، فَيُمْكِنُكُمُ اسْتِخْدَام position: sticky مَعَ تَحْدِيدِ قِيمَةِ top.",
+        "caption_text": "يمكن التحكم في تموضع شريط التنقل باستخدام خصائص position مثل fixed و sticky."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  position: sticky;\n  top: 0;\n  width: 100%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_horizontal.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا أَنَّ بِنَاءَ شَرِيطِ تَنَقُّلٍ احْتِرَافِيٍّ يَعْتَمِدُ عَلَى التَّنْسِيقِ الصَّحِيحِ لِلْقَوَائِمِ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِنَفْسِكُمْ، وَلَا تَتَرَدَّدُوا فِي تَطْوِيرِ تَصَامِيمِكُمْ بِاسْتِخْدَامِ الْخَصَائِصِ الَّتِي تَعَلَّمْنَاهَا الْيَوْمَ.",
+        "caption_text": "تطبيق ما تعلمته اليوم سيساعدك في بناء واجهات مستخدم احترافية وعصرية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم Flexbox للتصاميم الحديثة",
+          "استخدم Float للتوافق مع المتصفحات القديمة",
+          "لا تنس إضافة حالة Hover لتحسين التفاعل",
+          "جرب استخدام Position لتثبيت القائمة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar_horizontal.asp"
+      ]
+    }
+  ]
+}
