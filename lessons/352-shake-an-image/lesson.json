@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "352",
+  "title": "تصميم تأثير الاهتزاز المتحرك للصور باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية تطبيق تأثير الاهتزاز على الصور باستخدام CSS",
+    "استخدام pseudo-class المسمى hover مع تأثيرات الـ animations",
+    "فهم كيفية دمج خاصية transform مع translate و rotate",
+    "ضبط تكرار الحركة بشكل لا نهائي باستخدام animation-iteration-count"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_shake_image.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro_scene",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ عَمَلِ تَأْثِيرِ اهْتِزَازٍ أَوْ تَمَرُّجٍ لِلصُّوَرِ عِنْدَ وُقُوعِ الْمَاوْسِ عَلَيْهَا بِمَا يُضْفِي حَمَاسَةً وَتَفَاعُلاً عَلَى صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تصميم تأثير الاهتزاز المتحرك للصور باستخدام لغة CSS وتفاعل المؤشر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على طريقة اهتزاز الصور",
+          "استخدام تأثيرات الـ CSS animations",
+          "تحسين تجربة المستخدم على صفحة الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_shake_image.asp"
+      ]
+    },
+    {
+      "id": "concept_scene",
+      "title": "المفاهيم الأساسية",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ هَذَا التَّأْثِيرِ، نَسْتَخْدِمُ مُحَدِّدَ الْعَنَاصِرِ مَعَ حَالَةِ hover لِلصُّوَرِ، وَذَلِكَ لِبَدْءِ دَالَّةِ الْحَرَكَةِ الْمُسَمَّاةِ animation عِنْدَ مُرُورِ الْمَاوْسِ فَوْقَ الصُّورَةِ، مِمَّا يَجْعَلُ التَّأْثِيرَ حَيّاً وَتَفَاعُلِيّاً.",
+        "caption_text": "نستخدم محدد العناصر مع حالة hover لبدء دالة الحركة عند مرور المؤشر فوق الصورة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تفعيل التأثير عند مرور المؤشر hover",
+          "استخدام خصائص animation و transform",
+          "تحديد مدة زمنية دقيقة للحركة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_shake_image.asp"
+      ]
+    },
+    {
+      "id": "code_part1_scene",
+      "title": "كتابة قاعدة hover",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ الْأَوَّلِيِّ. هُنَا نَقُومُ بِتَبْدِئَةِ حَرَكَةِ shake وَتَحْدِيدِ مُدَّتِهَا بِصِفْرٍ فَاصِلَةٍ خَمْسَةِ ثَوَانٍ، مَعَ جَعْلِ التَّكْرَارِ لَا نِهَائِيّاً طَالَمَا الْمَاوْسُ فَوْقَ الصُّورَةِ.",
+        "caption_text": "كتابة قاعدة img hover لتحديد مدة الانيميشن والتكرار اللانهائي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img:hover {\n  animation: shake 0.5s;\n  animation-iteration-count: infinite;\n}",
+        "highlight_lines": [],
+        "output": "يؤدي مرور المؤشر إلى بدء حركة الاهتزاز بشكل مستمر.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_shake_image.asp"
+      ]
+    },
+    {
+      "id": "code_part2_scene",
+      "title": "تعريف keyframes الجزء الأول",
+      "narration": {
+        "spoken_text": "الْآنَ نَعْرِفُ مَسَارَ الْحَرَكَةِ بِاسْتِخْدَامِ keyframes shake، وَنُحَدِّدُ النِّسَبِ الْمِئَوِيَّةِ لِلتَّغَيُّرَاتِ مِثْلَ صِفْرٍ بِالْمِئَةِ وَعَشْرَةِ بِالْمِئَةِ وَعِشْرِينَ بِالْمِئَةِ حَيْثُ نُغَيِّرُ الْإِحْدَاثِيَّاتِ بِالدَّالَّةِ translate وَالزَّاوِيَةِ rotate.",
+        "caption_text": "تعريف keyframes shake وتغيير الإحداثيات والدوران في النسب الأولى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@keyframes shake {\n  0% {\n    transform: translate(1px, 1px) rotate(0deg);\n  }\n  10% {\n    transform: translate(-1px, -2px) rotate(-1deg);\n  }\n  20% {\n    transform: translate(-3px, 0px) rotate(1deg);\n  }\n}",
+        "highlight_lines": [],
+        "output": "اهتزاز خفيف للصورة في البداية.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_shake_image.asp"
+      ]
+    },
+    {
+      "id": "code_part3_scene",
+      "title": "تعريف keyframes الجزء الثاني",
+      "narration": {
+        "spoken_text": "نُوَاصِلُ بَقِيَّةَ مَرَاحِلِ حَرَكَةِ shake لِتَغْطِيَةِ النِّسَبِ مِن ثَلَاثِينَ بِالْمِئَةِ حَتَّى سِتِّينَ بِالْمِئَةِ، حَيْثُ تَتَبَدَّلُ الْقِيَمُ السَّالِبَةُ وَالْمُوجَبَةُ لِخَلْقِ إِحْسَاسِ الِاهْتِزَازِ السَّرِيعِ وَالْمُتَوَازِنِ.",
+        "caption_text": "استكمال مراحل keyframes shake من 30 بالمئة حتى 60 بالمئة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@keyframes shake {\n  30% {\n    transform: translate(3px, 2px) rotate(0deg);\n  }\n  40% {\n    transform: translate(1px, -1px) rotate(1deg);\n  }\n  50% {\n    transform: translate(-1px, 2px) rotate(-1deg);\n  }\n  60% {\n    transform: translate(-3px, 1px) rotate(0deg);\n  }\n}",
+        "highlight_lines": [],
+        "output": "استمرار حركة الاهتزاز بتباين القيم.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_shake_image.asp"
+      ]
+    },
+    {
+      "id": "code_part4_scene",
+      "title": "اكتمال كود keyframes",
+      "narration": {
+        "spoken_text": "وَنَخْتِمُ مَرَاحِلَ الْحَرَكَةِ فِي keyframes بِالنِّسَبِ الَّتِي تَبْلُغُ سَبْعِينَ ثُمَّ ثَمَانِينَ ثُمَّ تِسْعِينَ فَصُولاً إِلَى مِئَةِ بِالْمِئَةِ، لِتَعُودَ الصُّورَةُ إِلَى وَضْعِهَا الطَّبِيعِيِّ بِشَكْلٍ مُتَنَاسِقٍ وَمُسْتَمِرٍّ.",
+        "caption_text": "الوصول إلى نهاية keyframes shake عند مئة بالمئة واستقرار التأثير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@keyframes shake {\n  70% {\n    transform: translate(3px, 1px) rotate(-1deg);\n  }\n  80% {\n    transform: translate(-1px, -1px) rotate(1deg);\n  }\n  90% {\n    transform: translate(1px, 2px) rotate(0deg);\n  }\n  100% {\n    transform: translate(1px, -2px) rotate(-1deg);\n  }\n}",
+        "highlight_lines": [],
+        "output": "اكتمال حلقة الاهتزاز بنجاح.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_shake_image.asp"
+      ]
+    },
+    {
+      "id": "summary_scene",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفَ نُنَفِّذُ حَرَكَاتٍ مُتَقَدِّمَةً مِثْلَ الِاهْتِزَازِ بِاسْتِخْدَامِ animations وَ transform في CSS. شُكْرَاً لِمُتَابَعَتِكُمْ وَنَسْتَوْدِعُكُمُ اللَّهَ إِلَى لِقَاءٍ قَادِمٍ.",
+        "caption_text": "خلاصة درس تصميم اهتزاز الصور باستخدام animations و transform في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام keyframes لتحديد تفاصيل الحركة",
+          "ضبط تكرار الانيميشن بشكل لا نهائي",
+          "تطبيق التأثيرات عند مرور المؤشر hover"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_shake_image.asp"
+      ]
+    }
+  ]
+}
