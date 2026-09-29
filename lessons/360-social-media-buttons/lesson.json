@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "360",
+  "title": "تصميم أزرار التواصل الاجتماعي باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية دمج مكتبة Font Awesome في صفحات الويب",
+    "تنسيق الأزرار باستخدام خصائص CSS الأساسية",
+    "تطبيق تأثيرات التفاعل مثل hover",
+    "إنشاء أزرار مربعة ودائرية باستخدام border-radius"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_social_media_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول أزرار التواصل الاجتماعي",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَصْمِيمِ أزرار التَّوَاصُلِ الِاجْتِمَاعِيِّ بِشَكْلٍ احْتِرَافِيٍّ وَجَذَّابٍ، وَكَيْفَ نَسْتَخْدِمُ مَكْتَبَةَ Font Awesome لِإِضَافَةِ أَيِقُونَاتٍ عَصْرِيَّةٍ لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "سنتعلم اليوم كيفية تصميم أزرار التواصل الاجتماعي بشكل احترافي وجذاب باستخدام CSS ومكتبة Font Awesome."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS لتنسيق الأزرار",
+          "دمج مكتبة Font Awesome",
+          "تحسين تجربة المستخدم عبر التفاعل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_social_media_buttons.asp"
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "إعداد مكتبة الأيقونات",
+      "narration": {
+        "spoken_text": "لِلبَدْءِ، نَحْتَاجُ لِرَبْطِ مَكْتَبَةِ Font Awesome بِصَفْحَتِنَا عَبْرَ وسم link. هَذِهِ الْمَكْتَبَةُ تُوَفِّرُ لَنَا أَيِقُونَاتٍ جَاهِزَةً نَسْتَدْعِيهَا بِاسْتِخْدَامِ class مُحَدَّدٍ دَاخِلَ وسم a، مِمَّا يُسَهِّلُ عَلَيْنَا عَمَلِيَّةَ التَّصْمِيمِ وَالتَّنْسِيقِ.",
+        "caption_text": "نربط مكتبة Font Awesome عبر Tag link، ثم نستخدم Tag a مع class مناسب لاستدعاء الأيقونات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  </head>\n  <body>\n    <a href=\"#\" class=\"fa fa-facebook\"></a>\n    <a href=\"#\" class=\"fa fa-twitter\"></a>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_social_media_buttons.asp"
+      ]
+    },
+    {
+      "id": "styling",
+      "title": "تنسيق الأزرار باستخدام CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نَقُومُ بِتَنْسِيقِ الْأَيِقُونَاتِ بِاسْتِخْدَامِ class المسمى fa. نُحَدِّدُ padding لِلْمَسَافَاتِ الدَّاخِلِيَّةِ، وَfont-size لِحَجْمِ الْأَيِقُونَةِ، وَtext-align لِتَوْسِيطِ الْمُحْتَوَى، مَعَ ضَبْطِ text-decoration عَلَى none لِإِلْغَاءِ خُطُوطِ الرَّوَابِطِ التَّقْلِيدِيَّةِ.",
+        "caption_text": "نستخدم CSS لتنسيق الأيقونات عبر ضبط padding وfont-size وtext-align وإلغاء التسطير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".fa {\n  padding: 20px;\n  font-size: 30px;\n  width: 50px;\n  text-align: center;\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_social_media_buttons.asp"
+      ]
+    },
+    {
+      "id": "hover",
+      "title": "إضافة تأثيرات التفاعل",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ لَمْسَةٍ جَمَالِيَّةٍ، نَسْتَخْدِمُ pseudo-class المسمى hover. عِنْدَمَا يَمُرُّ مُؤَشِّرُ الْفَأْرَةِ فَوْقَ الزِّرِّ، تَتَغَيَّرُ قِيمَةُ opacity لِتُعْطِيَ تَأْثِيرَ شَفَافِيَّةٍ بَسِيطٍ، وَهَذَا يُعْطِي انْتِبَاهَاً لِلْمُسْتَخْدِمِ بِأَنَّ هَذَا الْعُنْصُرَ قَابِلٌ لِلنَّقْرِ.",
+        "caption_text": "نستخدم pseudo-class المسمى hover لتغيير شفافية الزر عند مرور الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".fa:hover {\n  opacity: 0.7;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_social_media_buttons.asp"
+      ]
+    },
+    {
+      "id": "colors",
+      "title": "تخصيص الألوان لكل منصة",
+      "narration": {
+        "spoken_text": "لِكُلِّ مَنْصَةٍ لَوْنُهَا الْخَاصُّ. نَقُومُ بِتَحْدِيدِ background-color خَاصٍّ لِكُلِّ class، مِثْلَ fa-facebook بِاللَّوْنِ الْأَزْرَقِ الْغَامِقِ، وَfa-twitter بِاللَّوْنِ الْأَزْرَقِ الْفَاتِحِ، مَعَ ضَبْطِ لَوْنِ الْأَيِقُونَةِ نَفْسِهَا بِاسْتِخْدَامِ color.",
+        "caption_text": "نخصص ألوان الخلفية لكل منصة اجتماعية باستخدام CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".fa-facebook {\n  background: #3B5998;\n  color: white;\n}\n.fa-twitter {\n  background: #55ACEE;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_social_media_buttons.asp"
+      ]
+    },
+    {
+      "id": "round",
+      "title": "إنشاء أزرار دائرية",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْتُمْ تَحْوِيلَ الْأَزْرَارِ إِلَى شَكْلٍ دَائِرِيٍّ، فَكُلُّ مَا عَلَيْكُمْ فِعْلُهُ هُوَ إِضَافَةُ خَاصِّيَّةِ border-radius بِقِيمَةِ خَمْسِينَ بِالْمِئَةِ. هَذَا التَّعْدِيلُ الْبَسِيطُ يُغَيِّرُ مَظْهَرَ التَّصْمِيمِ بِالْكَامِلِ لِيُصْبِحَ أَكْثَرَ عَصْرِيَّةً.",
+        "caption_text": "استخدم border-radius: 50 لتحويل الأزرار إلى شكل دائري."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".fa {\n  padding: 20px;\n  font-size: 30px;\n  width: 30px;\n  text-align: center;\n  text-decoration: none;\n  border-radius: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_social_media_buttons.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ أزرار تَوَاصُلٍ اجْتِمَاعِيٍّ مُتَفَاعِلَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِهَا. لَا تَنْسَوْا مُرَاجَعَةَ دُرُوسِ CSS Buttons وَIcons لِتَعْمِيقِ مَعْرِفَتِكُمْ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "لقد تعلمنا بناء أزرار تفاعلية. جربوا الأكواد بأنفسكم وراجعوا دروس CSS Buttons لمزيد من الاحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام مكتبة Font Awesome",
+          "تطبيق تأثيرات hover",
+          "تخصيص الألوان لكل علامة تجارية",
+          "استخدام border-radius للأشكال الدائرية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_social_media_buttons.asp"
+      ]
+    }
+  ]
+}
