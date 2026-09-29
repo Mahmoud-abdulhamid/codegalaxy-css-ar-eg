@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "193",
+  "title": "التحكم في توقيت وتأخير CSS Transitions",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم خاصية transition-timing-function للتحكم في سرعة التأثير",
+    "تعلم كيفية استخدام transition-delay لتأخير بدء الانتقال",
+    "الدمج بين transition و transform في عناصر الويب",
+    "استخدام خاصية الاختصار transition لكتابة كود نظيف"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_transitions_timing.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Transition Timing",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي سُرْعَةِ وَتَوْقِيتِ تَأْثِيرَاتِ ال Transition، وَكَيْفَ نُضِيفُ تَأْخِيراً لِبَدْءِ هَذِهِ التَّأْثِيرَاتِ لِتَصْبَحَ صَفَحَاتُ الْوِبّ أَكْثَرَ حَيَوِيَّةً وَتَفَاعُلِيَّةً.",
+        "caption_text": "مرحبا بكم في درس التحكم في توقيت وتأخير CSS Transitions."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في منحنى سرعة الانتقال",
+          "إضافة تأخير زمني قبل بدء التأثير",
+          "الدمج بين Transition و Transform",
+          "استخدام خاصية الاختصار لتنظيم الكود"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions_timing.asp"
+      ]
+    },
+    {
+      "id": "timing-function",
+      "title": "خاصية transition-timing-function",
+      "narration": {
+        "spoken_text": "تُحَدِّدُ خَاصِيَّةُ transition-timing-function مَنْحَنَى سُرْعَةِ تَأْثِيرِ ال Transition. يُمْكِنُنَا اسْتِخْدَامُ قِيَمٍ مِثْلَ linear لِتَكُونَ السُّرْعَةُ ثَابِتَةً، أَوْ ease لِتَكُونَ بَطِيئَةً فِي الْبِدَايَةِ وَالنِّهَايَةِ، أَوْ خِيَارَاتٍ أُخْرَى مِثْلَ ease-in وَ ease-out.",
+        "caption_text": "تستخدم خاصية transition-timing-function لتحديد منحنى سرعة تأثير الانتقال."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  transition-timing-function: linear;\n}\n#div2 {\n  transition-timing-function: ease;\n}\n#div3 {\n  transition-timing-function: ease-in;\n}\n#div4 {\n  transition-timing-function: ease-out;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions_timing.asp"
+      ]
+    },
+    {
+      "id": "transition-delay",
+      "title": "خاصية transition-delay",
+      "narration": {
+        "spoken_text": "لِتَأْخِيرِ بَدْءِ التَّأْثِيرِ، نَسْتَخْدِمُ خَاصِيَّةَ transition-delay. نُحَدِّدُ الْقِيمَةَ بِالثَّوَانِي s أَوْ بِالْمِلِّي ثَانِيَة ms. فِي هَذَا الْمِثَالِ، سَيَنْتَظِرُ الْعُنْصَرُ ثَانِيَةً وَاحِدَةً قَبْلَ أَنْ يَبْدَأَ التَّغْيِيرُ فِي الْحُدُوثِ.",
+        "caption_text": "تستخدم خاصية transition-delay لتحديد وقت التأخير قبل بدء الانتقال."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transition-delay: 1s;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions_timing.asp"
+      ]
+    },
+    {
+      "id": "transition-transform",
+      "title": "الدمج بين Transition و Transform",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا دَمْجُ عِدَّةِ خَصَائِصَ فِي تَأْثِيرٍ وَاحِدٍ، مِثْلَ تَغْيِيرِ الْعَرْضِ وَالارْتِفَاعِ وَاللَّوْنِ وَال transform فِي آنٍ وَاحِدٍ. هَذَا يُعْطِي تَجْرِبَةً بَصَرِيَّةً غَنِيَّةً عِنْدَ التَّفَاعُلِ مَعَ أَزْرَارِ أَوْ عَنَاصِرِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "يمكن دمج خصائص متعددة مثل transform مع Transition."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "button {\n  transition: background-color 1s ease-out, transform 1s ease-out;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions_timing.asp"
+      ]
+    },
+    {
+      "id": "shorthand",
+      "title": "خاصية الاختصار transition",
+      "narration": {
+        "spoken_text": "بَدَلاً مِنْ كِتَابَةِ كُلِّ خَاصِيَّةٍ عَلَى حِدَةٍ، نَسْتَخْدِمُ خَاصِيَّةَ الِاخْتِصَارِ transition. نَقُومُ بِتَرْتِيبِ الْقِيَمِ: الْخَاصِيَّةُ، الْمُدَّةُ، مَنْحَنَى السُّرْعَةِ، ثُمَّ التَّأْخِيرُ. هَذَا يُسَاعِدُ فِي جَعْلِ الْكُودِ أَكْثَرَ اخْتِصَاراً وَسُهُولَةً فِي الْقِرَاءَةِ.",
+        "caption_text": "استخدام خاصية الاختصار transition لكتابة كود CSS مختصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transition: width 2s linear 1s;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions_timing.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَتَحَكَّمُ فِي تَفَاصِيلِ ال Transition بِدِقَّةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْخَصَائِصِ فِي مَشَارِيعِكُمْ لِتَحْسِينِ أَدَاءِ وَجَمَالِيَّةِ صَفَحَاتِ الْوِبّ. لَا تَنْسَوْا مُرَاجَعَةَ الْمَصَادِرِ فِي وَصْفِ الْفِيدِيُو لِتَطْوِيرِ مَهَارَاتِكُمْ.",
+        "caption_text": "خلاصة: استخدم خصائص Transition للتحكم الكامل في حركات عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم transition-timing-function لتحديد منحنى السرعة",
+          "استخدم transition-delay لإضافة تأخير زمني",
+          "استخدم transition للاختصار",
+          "جرب دمج transform مع Transition"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions_timing.asp"
+      ]
+    }
+  ]
+}
