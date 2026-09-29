@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "128",
+  "title": "CSS Image Sprites Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم تقنية Image Sprites في CSS",
+    "تعلم كيفية استخدام خاصية background-position",
+    "تحسين أداء صفحات الويب بتقليل طلبات HTTP",
+    "تطبيق التحدي البرمجي الخاص بـ Image Sprites"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_image_sprites.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Image Sprites",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ تَقْنِيَةِ Image Sprites، وَهِيَ طَرِيقَه احْتِرَافِيَّه لِتَجْمِيعِ عِدَّه صُوَرٍ فِي مِلَفٍّ وَاحِدٍ لِتَحْسِينِ أَدَاءِ مَوْقِعِ الْوِبّ.",
+        "caption_text": "مقدمة حول تقنية Image Sprites وكيفية استخدامها لتحسين أداء صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تقنية Image Sprites تجمع عدة صور في ملف واحد",
+          "تقلل من عدد طلبات HTTP للمتصفح",
+          "تسرع من تحميل صفحات الويب",
+          "تعتمد بشكل أساسي على خاصية background-position"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم العمل الأساسي",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ هَذِهِ التَّقْنِيَه عَلَى تَحْدِيدِ مِسَاحَه مُعَيَّنَه مِنَ الصُّورَه الْكَبِيرَه لِعَرْضِهَا دَاخِل Element مُحَدَّدٍ. نَسْتَخْدِم background-image لِتَحْدِيدِ مَصْدَرِ الصُّورَه، ثُمَّ نُحَدِّدُ الْإِحْدَاثِيَّاتِ بِاسْتِخْدَام background-position.",
+        "caption_text": "شرح مفهوم العمل الأساسي باستخدام background-image و background-position."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام background-image لتعيين ملف الصورة المجمع",
+          "استخدام background-position لتحديد الجزء المراد عرضه",
+          "تحديد أبعاد العنصر عبر width و height"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود CSS لتطبيق Image Sprites",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيفِ كَلَاسٍ لِتَحْدِيدِ أَبْعَادِ الْعُنْصُرِ، ثُمَّ نَضْبُطُ الصُّورَه الْخَلْفِيَّه. بَعْدَ ذَلِكَ، نُحَدِّدُ الْإِحْدَاثِيَّاتِ الدَّقِيقَه لِإِظْهَارِ الْأَيْقُونَه الْمَطْلُوبَه فَقَطْ.",
+        "caption_text": "كود CSS يوضح كيفية ضبط الأبعاد والإحداثيات لعنصر يستخدم Image Sprites."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".icon {\n  width: 50px;\n  height: 50px;\n  background-image: url('sprites.png');\n  background-position: -10px -20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "تحليل أجزاء الكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، تُحَدِّد width و height مِسَاحَةِ الْعَرْضِ. أَمَّا background-position بِقِيمَه سَالِبَه، فَهِيَ تُحَرِّكُ الصُّورَه الْكَبِيرَه لِتَظْهَرَ الْأَيْقُونَه الْمَقْصُودَه دَاخِلَ هَذِهِ الْمِسَاحَه الْمَحْدُودَه.",
+        "caption_text": "تحليل تفصيلي لخصائص CSS المستخدمة في تحديد موقع الصورة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "width و height يحددان إطار العرض",
+          "background-image يربط ملف الصورة المجمع",
+          "القيم السالبة في background-position تحرك الصورة للأعلى أو اليسار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَيَقُومُ مُتَصَفِّحْ الْوِبّ بِعَرْضِ جُزْءٍ صَغِيرٍ فَقَطْ مِنَ الصُّورَه الْكَبِيرَه، وَكَأَنَّهَا أَيْقُونَه مُسْتَقِلَّه، مِمَّا يُؤَدِّي إِلَى تَجْرِبَه مُسْتَخْدِمٍ سَرِيعَه وَمُتَمَيِّزَه.",
+        "caption_text": "معاينة النتيجة النهائية في المتصفح حيث تظهر الأيقونة المحددة فقط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"icon\"></div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عرض أيقونة واحدة من ملف الصور المجمع",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِتَنْظِيمِ الصُّورِ دَاخِلَ الْمِلَفِّ الْمُجَمَّعِ بِشَكْلٍ مُنْتَظِمٍ، وَاسْتِخْدَامِ أَدَوَاتٍ لِحِسَابِ الْإِحْدَاثِيَّاتِ بِدِقَّه، لِتَجَنُّبِ ظُهُورِ أَجْزَاءٍ غَيْرِ مَقْصُودَه مِنَ الصُّورِ الْأُخْرَى.",
+        "caption_text": "نصائح وأفضل الممارسات للتعامل مع Image Sprites باحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنظيم الصور داخل الملف المجمع بمسافات ثابتة",
+          "استخدام أدوات توليد Sprites لتقليل الأخطاء",
+          "التأكد من دقة الإحداثيات لضمان جودة العرض"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا التَّحَدِّيَ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا الْكُودِ بِنَفْسِكُمْ وَتَطْبِيقِهِ فِي مَشَارِيعِكُمُ الْقَادِمَه. لَا تَتَرَدَّدُوا فِي زِيَارَةِ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ لِتَحْسِينِ مَهَارَاتِكُمْ فِي CSS.",
+        "caption_text": "خاتمة الدرس ودعوة للممارسة والتطبيق العملي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "شكرا لمتابعتكم هذا الدرس",
+          "مارسوا كتابة الكود بأنفسكم",
+          "تابعوا الدورة لمزيد من التحديات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_sprites.asp"
+      ]
+    }
+  ]
+}
