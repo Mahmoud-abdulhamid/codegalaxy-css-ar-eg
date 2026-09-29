@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "214",
+  "title": "التحكم في أبعاد الصور باستخدام CSS object-fit",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام خاصية object-fit للتحكم في أبعاد العناصر",
+    "التعرف على قيم object-fit المختلفة مثل fill وcover وcontain",
+    "تطبيق خاصية object-fit على عناصر img وvideo",
+    "الحفاظ على نسبة العرض إلى الارتفاع للعناصر داخل الحاويات"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_object-fit.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول object-fit",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي أَبْعَادِ الْعَنَاصِرِ مِثْلَ img وَ video دَاخِلَ حَاوِيَاتِهَا بِاسْتِخْدَامِ خَاصِيَّةِ object-fit الْقَوِيَّةِ وَالْمُهِمَّةِ فِي تَصْمِيمِ الْوِبّ.",
+        "caption_text": "تستخدم خاصية object-fit للتحكم في كيفية تغيير أبعاد عناصر img أو video لتناسب حاوياتها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم خاصية object-fit مع عناصر الوسائط",
+          "تساعد في ضبط مظهر الصور والفيديوهات داخل الحاويات",
+          "تمنع تشوه العناصر عند تغيير أبعادها"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-fit.asp"
+      ]
+    },
+    {
+      "id": "fill-mode",
+      "title": "استخدام القيمة fill",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِالْقِيمَةِ fill. هَذِهِ الْقِيمَةُ تَقُومُ بِتَمْدِيدِ الصُّورَةِ لِتَمْلَأَ الْحَاوِيَةَ بِالْكَامِلِ، وَلَكِنَّهَا لَا تُحَافِظُ عَلَى نِسْبَةِ الْعَرْضِ إِلَى الِارْتِفَاعِ، مِمَّا قَدْ يُؤَدِّي إِلَى حُدُوثِ تَشْوِيهٍ فِي مَظْهَرِ الصُّورَةِ الْأَصْلِيِّ.",
+        "caption_text": "القيمة fill تقوم بملء الحاوية بالكامل مع احتمال حدوث تشويه في أبعاد الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".image-container img {\n  width: 100%;\n  height: 100%;\n  object-fit: fill;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-fit.asp"
+      ]
+    },
+    {
+      "id": "cover-mode",
+      "title": "استخدام القيمة cover",
+      "narration": {
+        "spoken_text": "أَمَّا الْقِيمَةُ cover فَهِيَ الْأَكْثَرُ شُيُوعاً، حَيْثُ تُحَافِظُ عَلَى نِسْبَةِ الْعَرْضِ إِلَى الِارْتِفَاعِ مَعَ مَلْءِ الْحَاوِيَةِ بِالْكَامِلِ. قَدْ يَتِمُّ قَصُّ بَعْضِ أَجْزَاءِ الصُّورَةِ لِضَمَانِ تَغْطِيَةِ كَامِلِ مِسَاحَةِ الْحَاوِيَةِ بِشَكْلٍ مُتَنَاسِقٍ.",
+        "caption_text": "القيمة cover تحافظ على نسبة العرض إلى الارتفاع مع قص أجزاء من الصورة لملء الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".image-container img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-fit.asp"
+      ]
+    },
+    {
+      "id": "contain-mode",
+      "title": "استخدام القيمة contain",
+      "narration": {
+        "spoken_text": "بِالنِّسْبَةِ لِلْقِيمَةِ contain، فَهِيَ تُحَافِظُ أَيْضاً عَلَى نِسْبَةِ الْعَرْضِ إِلَى الِارْتِفَاعِ، لَكِنَّهَا تَضْمَنُ ظُهُورَ الصُّورَةِ بِالْكَامِلِ دَاخِلَ الْحَاوِيَةِ دُونَ قَصٍّ، وَقَدْ يَتْرُكُ هَذَا مَسَاحَاتٍ فَارِغَةً إِذَا كَانَتْ أَبْعَادُ الصُّورَةِ مُخْتَلِفَةً عَنْ أَبْعَادِ الْحَاوِيَةِ.",
+        "caption_text": "القيمة contain تظهر الصورة بالكامل داخل الحاوية مع الحفاظ على نسبة العرض إلى الارتفاع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".image-container img {\n  width: 100%;\n  height: 100%;\n  object-fit: contain;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-fit.asp"
+      ]
+    },
+    {
+      "id": "none-scale",
+      "title": "استخدام القيم none و scale-down",
+      "narration": {
+        "spoken_text": "تُوجَدُ قِيَمٌ أُخْرَى مِثْلَ none الَّتِي لَا تُغَيِّرُ أَبْعَادَ الصُّورَةِ، وَ scale-down الَّتِي تَقُومُ بِتَصْغِيرِ الصُّورَةِ لِتُطَابِقَ أَصْغَرَ حَجْمٍ بَيْنَ none وَ contain، وَهِيَ خِيَارَاتٌ مُفِيدَةٌ لِتَحْقِيقِ تَصَامِيمَ دَقِيقَةٍ لِلْوِبّ.",
+        "caption_text": "القيمة none لا تغير أبعاد الصورة، بينما scale-down تختار الحجم الأصغر بين none و contain."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".image-container img {\n  object-fit: scale-down;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-fit.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِاخْتِصَارٍ، تُعَدُّ خَاصِيَّةُ object-fit أَدَاةً لَا غِنَى عَنْهَا لِكُلِّ مُطَوِّرِ وِبٍّ. جَرِّبُوا هَذِهِ الْقِيَمَ فِي مَشَارِيعِكُمْ لِتَرَوْا كَيْفَ يَتَغَيَّرُ مَظْهَرُ الصُّورِ وَالْفِيدْيُوهَاتِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعد خاصية object-fit أداة أساسية للتحكم في الوسائط، جربوها لتحسين تجربة المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم fill للملء الكامل مع احتمال التشوه",
+          "استخدم cover للملء مع الحفاظ على النسبة",
+          "استخدم contain لضمان ظهور كامل الصورة",
+          "جرب القيم المختلفة للحصول على أفضل نتيجة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_object-fit.asp"
+      ]
+    }
+  ]
+}
