@@ -3,6 +3,8 @@
   "lesson_id": "81",
   "title": "CSS display Property",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم أهمية خاصية display في التحكم بتخطيط عناصر الويب",
     "التمييز بين Block-level Elements و Inline Elements",
