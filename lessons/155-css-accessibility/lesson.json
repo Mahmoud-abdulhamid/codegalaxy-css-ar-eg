@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "155",
+  "title": "CSS Accessibility Styling",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the importance of accessibility in web design",
+    "Implement high color contrast for better readability",
+    "Use relative units for font sizes",
+    "Manage focus indicators properly",
+    "Utilize semantic HTML with CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_accessibility.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Accessibility",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةَ تَصْمِيمِ مَوَاقِعِ الْوِبّ بِحَيْثُ تَكُونُ مُتَاحَةً لِجَمِيعِ الْمُسْتَخْدِمِينَ، بِمَا فِي ذَلِكَ ذَوُو الِاحْتِيَاجَاتِ الْخَاصَّةِ، وَذَلِكَ عَبْرَ تَقْنِيَاتِ CSS Accessibility.",
+        "caption_text": "تصميم مواقع الويب يجب أن يضمن سهولة الوصول لجميع المستخدمين."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية Accessibility في تجربة المستخدم",
+          "تحسين الوضوح البصري والتنقل",
+          "تطبيق معايير التصميم الشامل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_accessibility.asp"
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "title": "أهمية تباين الألوان",
+      "narration": {
+        "spoken_text": "أَوَّلُ خُطْوَةٍ هِيَ ضَمَانُ تَبَايُنٍ عَالٍ بَيْنَ النَّصِّ وَالْخَلْفِيَّةِ. هَذَا أَمْرٌ حَيَوِيٌّ لِلْمُسْتَخْدِمِينَ الَّذِينَ يُعَانُونَ مِنْ ضَعْفِ الْبَصَرِ أَوْ عَمَى الْأَلْوَانِ. لَاحِظْ الْفَرْقَ بَيْنَ التَّنْسِيقِ الْجَيِّدِ وَالتَّنْسِيقِ السَّيِّئِ فِي هَذَا الْكُودِ.",
+        "caption_text": "استخدم تباين ألوان عال لضمان قابلية القراءة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* Good Contrast */\nbody {\n  background-color: #ffffff;\n  color: #000000;\n}\n/* Bad Contrast */\nbody {\n  background-color: #eeeeee;\n  color: #cccccc;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_accessibility.asp"
+      ]
+    },
+    {
+      "id": "fonts-units",
+      "title": "الخطوط والوحدات النسبية",
+      "narration": {
+        "spoken_text": "يَجِبُ اخْتِيَارُ خُطُوطٍ سَهْلَةِ الْقِرَاءَةِ، وَاسْتِخْدَامُ وَحْدَاتٍ نِسْبِيَّةٍ مِثْلَ rem لِحَجْمِ الْخَطِّ. هَذَا يَسْمَحُ لِلْمُسْتَخْدِمِ بِتَكْبِيرِ النَّصِّ مِنْ إِعْدَادَاتِ الْمُتَصَفِّحِ، وَهُوَ أَمْرٌ ضَرُورِيٌّ لِتَحْسِينِ إِمْكَانِيَّةِ الْوُصُولِ.",
+        "caption_text": "استخدم وحدات rem بدلا من px لمرونة أكبر في التحكم بحجم الخط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  font-family: Arial, sans-serif;\n  font-size: 1rem;\n  line-height: 1.6;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_accessibility.asp"
+      ]
+    },
+    {
+      "id": "focus-indicators",
+      "title": "مؤشرات التركيز Focus",
+      "narration": {
+        "spoken_text": "لَا تَقُمْ أَبَداً بِإِزَالَةِ مُؤَشِّرَاتِ التَّرْكِيزِ الِافْتِرَاضِيَّةِ دُونَ اسْتِبْدَالِهَا بِأُخْرَى وَاضِحَةٍ. اسْتَخْدِمْ pseudo-class الَّتِي تُسَمَّى focus لِضَمَانِ أَنَّ مُسْتَخْدِمِي لَوْحَةِ الْمَفَاتِيحِ يَعْرِفُونَ الْعُنْصُرَ النَّشِطَ حَالِيّاً.",
+        "caption_text": "استخدم :focus لتحديد العناصر التفاعلية بوضوح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a:focus,\nbutton:focus,\ninput:focus {\n  outline: 2px solid orange;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_accessibility.asp"
+      ]
+    },
+    {
+      "id": "semantic-html",
+      "title": "استخدام Semantic HTML",
+      "narration": {
+        "spoken_text": "يَجِبُ الْجَمْعُ بَيْنَ CSS وَ Semantic HTML. بَدَلاً مِنْ اسْتِخْدَامِ div لِكُلِّ شَيْءٍ، اسْتَخْدِمْ عَنَاصِرَ مِثْلَ nav وَ aside لِتَوْضِيحِ هَيْكَلِ الصَّفْحَةِ لِأَدَوَاتِ قِرَاءَةِ الشَّاشَةِ.",
+        "caption_text": "الهيكل الدلالي يساعد المتصفحات وأدوات المساعدة على فهم محتوى الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "nav, aside {\n  background-color: #333333;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_accessibility.asp"
+      ]
+    },
+    {
+      "id": "user-preferences",
+      "title": "احترام تفضيلات المستخدم",
+      "narration": {
+        "spoken_text": "أَخِيراً، يُمْكِنُكَ اسْتِخْدَامُ media query مَعَ prefers-reduced-motion لِتَقْلِيلِ الْحَرَكَاتِ لِلْمُسْتَخْدِمِينَ الَّذِينَ يُفَضِّلُونَ ذَلِكَ. هَذِهِ مُمَارَسَةٌ هَنْدَسِيَّةٌ رَائِعَةٌ لِتَحْسِينِ التَّجْرِبَةِ لِذَوِي الْحَسَاسِيَّةِ لِلْحَرَكَةِ.",
+        "caption_text": "احترم إعدادات المستخدم لتقليل الحركة عبر media queries."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media (prefers-reduced-motion: reduce) {\n  * {\n    animation: none !important;\n    transition: none !important;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_accessibility.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِاخْتِصَارٍ، تَحْسِينُ إِمْكَانِيَّةِ الْوُصُولِ يَعْنِي تَصْمِيماً أَفْضَلَ لِلْجَمِيعِ. طَبِّقْ هَذِهِ التِّقْنِيَاتِ فِي مَشَارِيعِكَ لِتَجْعَلَ الْوِبّ مَكَاناً أَكْثَرَ شُمُولِيَّةً. شُكْراً لِمُتَابَعَتِكُمْ، وَأَنَا مَحْمُودُ عَبْدِ الْحَمِيدِ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "اجعل الويب مكانا متاحا للجميع بتطبيق معايير Accessibility."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التباين العالي للألوان",
+          "استخدام الوحدات النسبية",
+          "مؤشرات التركيز المرئية",
+          "الهيكل الدلالي HTML",
+          "احترام تفضيلات الحركة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_accessibility.asp"
+      ]
+    }
+  ]
+}
