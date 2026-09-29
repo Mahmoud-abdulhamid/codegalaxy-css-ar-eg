@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "240",
+  "title": "CSS property Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the purpose of CSS property",
+    "Learn how to define custom properties with types",
+    "Master the syntax of property",
+    "Apply CSS property in real-world challenges"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_property.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS property",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى مَفْهُومٍ مُتَقَدِّمٍ وَهُوَ CSS property، الَّذِي يُتِيحُ لَنَا تَحْدِيدَ نَوْعِ الْبَيَانَاتِ لِلْ Custom Properties بِشَكْلٍ دَقِيقٍ وَاحْتِرَافِيٍّ.",
+        "caption_text": "مرحبا بكم في درس CSS property المتقدم لتحديد أنواع البيانات للـ Custom Properties."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS property يسمح بتعريف متغيرات CSS مع نوع بيانات محدد",
+          "يوفر تحكما أكبر في القيم الافتراضية والوراثة",
+          "يعد جزءا من CSS Houdini API"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_property.asp"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "قواعد كتابة property",
+      "narration": {
+        "spoken_text": "لِكِتَابَةِ property نَحْتَاجُ إِلَى اسْتِخْدَامِ Syntax مُحَدَّدٍ. نُحَدِّدُ اسم ال property، ثُمَّ نَضَعُ Attributes مِثْلَ syntax، وinherits، وinitial-value لِضَمَانِ عَمَلِهِ بِشَكْلٍ صَحِيحٍ دَاخِلَ مِلَفِّ ال CSS.",
+        "caption_text": "تتطلب كتابة property تحديد اسم الخاصية مع خصائص مثل syntax وinherits وinitial-value."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@property --my-color {\n  syntax: '<color>';\n  inherits: false;\n  initial-value: red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_property.asp"
+      ]
+    },
+    {
+      "id": "code_breakdown",
+      "title": "شرح تفصيلي للكود",
+      "narration": {
+        "spoken_text": "لَاحِظْ مَعِي أَنَّ syntax تَحْدُدُ نَوْعَ الْقِيمَةِ مِثْلَ color أَوْ length. أَمَّا inherits فَتُحَدِّدُ هَلْ تَرِثُ الْعَنَاصِرُ الْأَبْنَاءُ هَذِهِ الْقِيمَةَ أَمْ لَا، وَ initial-value هِيَ الْقِيمَةُ الْأَوَّلِيَّةُ عِنْدَ عَدَمِ تَعْرِيفِ قِيمَةٍ أُخْرَى.",
+        "caption_text": "شرح مكونات property: تحديد نوع البيانات، الوراثة، والقيمة الافتراضية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "syntax: يحدد نوع البيانات مثل <color> أو <number>",
+          "inherits: قيمة منطقية (true/false) للتحكم في الوراثة",
+          "initial-value: القيمة التي يبدأ بها المتغير"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_property.asp"
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "تطبيق عملي",
+      "narration": {
+        "spoken_text": "بَعْدَ تَعْرِيفِ ال property، يُمْكِنُنَا اسْتِخْدَامُهَا فِي أَيِّ Selector مِثْلَ div. هَذَا يُسَاعِدُنَا فِي عَمَلِ Animations مُعَقَّدَةٍ لَمْ تَكُنْ مُمْكِنَةً مِنْ قَبْلُ بِاسْتِخْدَامِ المتغيرات العادية.",
+        "caption_text": "استخدام المتغير المعرف بواسطة property داخل العناصر لتطبيق تأثيرات متقدمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  color: var(--my-color);\n  transition: --my-color 1s;\n}\ndiv:hover {\n  --my-color: blue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_property.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَتُحَوِّلُ الْعَنَاصِرُ لَوْنَهَا بِسَلَاسَةٍ عِنْدَ التَّفَاعُلِ مَعَهَا. هَذِهِ هِيَ قُوَّةُ CSS property فِي التَّحَكُّمِ بِالْقِيَمِ الْبَرْمَجِيَّةِ.",
+        "caption_text": "تأثير انتقال اللون عند التفاعل مع العنصر باستخدام property."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Element color changes smoothly from red to blue on hover.",
+        "highlight_lines": [],
+        "output": "Smooth transition effect active.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_property.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ دَائِماً التَّأَكُّدُ مِنْ أَنَّ syntax مُتَوَافِقٌ مَعَ الْقِيمَةِ الْمُعْطَاةِ. كَمَا يُفَضَّلُ اسْتِخْدَامُ inherits: false لِتَحْسِينِ الْأَدَاءِ إِذَا لَمْ تَكُنْ بِحَاجَةٍ لِوِرَاثَةِ الْقِيمَةِ.",
+        "caption_text": "نصائح تقنية: توافق النوع وتحسين الأداء عبر ضبط الوراثة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تأكد دائما من مطابقة syntax للقيم المستخدمة",
+          "استخدم inherits: false لتقليل استهلاك الموارد",
+          "اختبر الكود في المتصفحات الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_property.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُعَرِّفُ CSS property بِشَكْلٍ صَحِيحٍ. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ مِنْ خِلَالِ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتُطَوِّرُوا مَهَارَاتِكُمْ فِي ال CSS.",
+        "caption_text": "خلاصة: تعلم كيفية تعريف واستخدام property لتطوير مهاراتك في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS property يمنحك تحكما برمجيا متقدما",
+          "جرب التحدي البرمجي في الرابط المرفق",
+          "استمر في ممارسة كتابة الأكواد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_property.asp"
+      ]
+    }
+  ]
+}
