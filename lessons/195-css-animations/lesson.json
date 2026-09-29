@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "195",
+  "title": "CSS Animations",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية عمل CSS Animations",
+    "التعرف على قاعدة keyframes",
+    "استخدام animation-name و animation-duration",
+    "تطبيق التحويلات التدريجية على العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_animations.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Animations",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ CSS Animations لِتَحْرِيكِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ بِشَكْلٍ انْسِيَابِيٍّ وَرَائِعٍ دُونَ الْحَاجَةِ إِلَى اسْتِخْدَامِ JavaScript.",
+        "caption_text": "تتيح CSS Animations تحريك عناصر HTML بشكل انسيابي دون الحاجة إلى JavaScript."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحريك العناصر بأسلوب احترافي",
+          "لا حاجة لاستخدام JavaScript",
+          "تغيير الخصائص تدريجيا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية للتحريك",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ الْحَرَكَةُ عَلَى تَغْيِيرِ خَصَائِصِ CSS تَدْرِيجِيّاً. لِتَفْعِيلِ ذَلِكَ، نَحْتَاجُ إِلَى تَحْدِيدِ Keyframes، وَهِيَ نِقَاطٌ زَمَنِيَّةٌ تُحَدِّدُ كَيْفَ سَيَبْدُو الْعُنْصُرُ فِي لَحَظَاتٍ مُعَيَّنَةٍ أَثْنَاءَ عَمَلِيَّةِ التَّحْرِيكِ.",
+        "caption_text": "تعتمد الرسوم المتحركة على تغيير خصائص CSS تدريجيا باستخدام Keyframes."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تغيير الخصائص من نمط إلى آخر",
+          "تحديد Keyframes للتحكم في التوقيت",
+          "إمكانية تكرار التغييرات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations.asp"
+      ]
+    },
+    {
+      "id": "properties",
+      "title": "خصائص التحكم في التحريك",
+      "narration": {
+        "spoken_text": "لِتَشْغِيلِ الْحَرَكَةِ، نَسْتَخْدِمُ خَاصِيَّةَ animation-name لِتَسْمِيَةِ الْحَرَكَةِ، وَ animation-duration لِتَحْدِيدِ مُدَّتِهَا الزَّمَنِيَّةِ. إِذَا لَمْ نُحَدِّدِ الْمُدَّةَ، فَلَنْ تَحْدُثَ أَيُّ حَرَكَةٍ لِأَنَّ الْقِيمَةَ الِافْتِرَاضِيَّةَ هِيَ صِفْرٌ.",
+        "caption_text": "استخدام animation-name و animation-duration للتحكم في اسم ومدة الحركة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "animation-name: اسم الحركة",
+          "animation-duration: مدة الحركة بالثواني",
+          "القيمة الافتراضية للمدة هي 0s"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations.asp"
+      ]
+    },
+    {
+      "id": "keyframes_rule",
+      "title": "قاعدة keyframes",
+      "narration": {
+        "spoken_text": "تُعَدُّ قَاعِدَةُ keyframes هِيَ الْقَلْبُ النَّابِضُ لِلْحَرَكَةِ. نَقُومُ فِيهَا بِتَحْدِيدِ الْأَنْطِمَةِ عِنْدَ نِسَبٍ مِئَوِيَّةٍ مُخْتَلِفَةٍ، مِمَّا يَسْمَحُ لَنَا بِإِنْشَاءِ تَغْيِيرَاتٍ مُعَقَّدَةٍ وَمُتَعَدِّدَةٍ لِلْعُنْصُرِ.",
+        "caption_text": "تستخدم قاعدة keyframes لتحديد أنماط CSS عند نقاط زمنية محددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@keyframes myAnimation {\n  from {\n    background-color: red;\n  }\n  to {\n    background-color: yellow;\n  }\n}\ndiv {\n  animation-name: myAnimation;\n  animation-duration: 4s;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations.asp"
+      ]
+    },
+    {
+      "id": "percentage_example",
+      "title": "استخدام النسب المئوية",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا اسْتِخْدَامُ النِّسَبِ الْمِئَوِيَّةِ بَدَلًا مِنْ from وَ to لِتَحْقِيقِ تَغْيِيرَاتٍ أَكْثَرَ دِقَّةً. فِي هَذَا الْمِثَالِ، نُغَيِّرُ لَوْنَ الْخَلْفِيَّةِ عِنْدَ 25 وَ 50 وَ 100 مِنْ عُمُرِ الْحَرَكَةِ.",
+        "caption_text": "استخدام النسب المئوية يتيح إضافة تغييرات متعددة أثناء الحركة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@keyframes myAnimation {\n  0% {\n    background-color: red;\n  }\n  25% {\n    background-color: yellow;\n  }\n  50% {\n    background-color: blue;\n  }\n  100% {\n    background-color: green;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations.asp"
+      ]
+    },
+    {
+      "id": "complex_animation",
+      "title": "تحريك الموقع واللون",
+      "narration": {
+        "spoken_text": "لَا يَقْتَصِرُ الْأَمْرُ عَلَى الْأَلْوَانِ فَقَطْ، بَلْ يُمْكِنُنَا تَحْرِيكُ مَوْقِعِ الْعُنْصُرِ أَيْضًا. لَاحِظْ كَيْفَ نُغَيِّرُ خَصَائِصَ left وَ top مَعَ الْخَلْفِيَّةِ لِخَلْقِ تَأْثِيرٍ حَرَكِيٍّ مُتَكَامِلٍ.",
+        "caption_text": "يمكن تحريك الموقع واللون معا باستخدام خصائص CSS داخل keyframes."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@keyframes myAnimation {\n  0% {\n    background-color: red; left:0px; top:0px;\n  }\n  50% {\n    background-color: blue; left:200px; top:200px;\n  }\n  100% {\n    background-color: red; left:0px; top:0px;\n  }\n}\ndiv {\n  position: relative;\n  animation-name: myAnimation;\n  animation-duration: 4s;\n}",
+        "highlight_lines": [],
+        "output": "العنصر يتحرك ويغير لونه خلال 4 ثوانٍ.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا أَسَاسِيَّاتِ CSS Animations. تَدَرَّبُوا عَلَى هَذِهِ الْأَكْوَادِ وَحَاوِلُوا تَغْيِيرَ الْقِيَمِ لِتَرَوْا نَتَائِجَ مُخْتَلِفَةً. شُكْرًا لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تذكروا دائما تجربة الأكواد وتغيير القيم لاكتشاف إمكانيات CSS Animations."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم keyframes لتعريف الحركة",
+          "اربط الحركة بالعنصر عبر animation-name",
+          "حدد المدة الزمنية بـ animation-duration",
+          "جرب النسب المئوية لتعدد التغييرات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations.asp"
+      ]
+    }
+  ]
+}
