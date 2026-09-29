@@ -1,0 +1,4 @@
+.box {
+  width: max(300px, 50%);
+  height: min(200px, 10vh);
+}
