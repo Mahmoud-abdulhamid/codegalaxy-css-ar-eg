@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "230",
+  "title": "التحكم في أعمدة الويب باستخدام CSS Column Rules",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام column-rule للتحكم في الفواصل بين الأعمدة",
+    "تعلم كيفية استخدام column-span لتوسيع العناصر عبر الأعمدة",
+    "التحكم في عرض الأعمدة باستخدام خاصية column-width"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_multiple_columns_rules.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Multi-columns",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي تَخْطِيطِ الْأَعْمِدَةِ دَاخِلَ صَفْحَةِ الْوِبّ، وَكَيْفَ نُضِيفُ لَمَسَاتٍ جَمَالِيَّةً عَلَى الْفَوَاصِلِ بَيْنَ هَذِهِ الْأَعْمِدَةِ بِاسْتِخْدَامِ خَصَائِصِ CSS الْمُتَقَدِّمَةِ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS. سنتعلم اليوم كيفية التحكم في تخطيط الأعمدة داخل صفحة الويب باستخدام خصائص CSS المتقدمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في الفواصل بين الأعمدة باستخدام column-rule",
+          "توسيع العناصر عبر الأعمدة باستخدام column-span",
+          "تحديد العرض الأمثل للأعمدة باستخدام column-width"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns_rules.asp"
+      ]
+    },
+    {
+      "id": "column-rule-properties",
+      "title": "خصائص الفواصل بين الأعمدة",
+      "narration": {
+        "spoken_text": "لِتَحْسِينِ مَظْهَرِ الْفَوَاصِلِ بَيْنَ الْأَعْمِدَةِ، نَسْتَخْدِمُ مَجْمُوعَةً مِنَ الْخَصَائِصِ. يُمْكِنُنَا تَحْدِيدُ style الْفَاصِلِ بِاسْتِخْدَامِ column-rule-style، وَتَحْدِيدُ width الْخَاصِّ بِهِ، وَكَذَلِكَ color لِتَكُونَ الْفَوَاصِلُ مُتَنَاسِقَةً مَعَ تَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "يمكننا تحسين مظهر الفواصل بين الأعمدة باستخدام خصائص مثل column-rule-style وcolumn-rule-width وcolumn-rule-color."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  column-rule-style: solid;\n  column-rule-width: 1px;\n  column-rule-color: lightblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns_rules.asp"
+      ]
+    },
+    {
+      "id": "shorthand-property",
+      "title": "استخدام خاصية الاختصار column-rule",
+      "narration": {
+        "spoken_text": "بَدَلاً مِنْ كِتَابَةِ كُلِّ خَاصِيَّةٍ عَلَى حِدَةٍ، نَسْتَخْدِمُ خَاصِيَّةَ الِاخْتِصَارِ column-rule. هَذِهِ الْخَاصِيَّةُ تَسْمَحُ لَنَا بِتَحْدِيدِ الْعَرْضِ وَالنَّمَطِ وَاللَّوْنِ فِي سَطْرٍ وَاحِدٍ فَقَطْ، مِمَّا يَجْعَلُ الْكُودَ أَكْثَرَ نَظَافَةً وَسُهُولَةً فِي الْقِرَاءَةِ.",
+        "caption_text": "خاصية الاختصار column-rule تسمح لنا بتحديد العرض والنمط واللون في سطر واحد فقط لجعل الكود أكثر تنظيما."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  column-rule: 1px solid lightblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns_rules.asp"
+      ]
+    },
+    {
+      "id": "column-span",
+      "title": "توسيع العناصر عبر الأعمدة",
+      "narration": {
+        "spoken_text": "أَحْيَاناً نُرِيدُ أَنْ يَمْتَدَّ عُنْصُرٌ مُعَيَّنٌ، مِثْلَ الْعُنْوَانِ h2، عَلَى كَامِلِ عَرْضِ الْأَعْمِدَةِ. نَسْتَخْدِمُ لِذَلِكَ خَاصِيَّةَ column-span مَعَ الْقِيمَةِ all، وَنُضِيفُ text-align لِتَوْسِيطِ الْعُنْوَانِ بِشَكْلٍ احْتِرَافِيٍّ.",
+        "caption_text": "نستخدم خاصية column-span مع القيمة all لجعل العنوان يمتد عبر جميع الأعمدة، مع استخدام text-align للتوسيط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h2 {\n  column-span: all;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns_rules.asp"
+      ]
+    },
+    {
+      "id": "column-width",
+      "title": "تحديد العرض الأمثل للأعمدة",
+      "narration": {
+        "spoken_text": "خَاصِيَّةُ column-width تُحَدِّدُ الْعَرْضَ الْمُقْتَرَحَ لِكُلِّ عَمُودٍ. يَقُومُ مُتَصَفِّحُ الْوِبّ بِحِسَابِ عَدَدِ الْأَعْمِدَةِ الْمُنَاسِبِ بِنَاءً عَلَى هَذَا الْعَرْضِ وَالْمِسَاحَةِ الْمُتَاحَةِ، مِمَّا يَضْمَنُ تَجْرِبَةَ مُسْتَخْدِمٍ مُمَيَّزَةً عَلَى مُخْتَلَفِ الشَّاشَاتِ.",
+        "caption_text": "خاصية column-width تحدد العرض المقترح لكل عمود، ويقوم المتصفح بحساب عدد الأعمدة بناء على المساحة المتاحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  column-width: 100px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns_rules.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نَتَحَكَّمُ فِي تَخْطِيطِ الْأَعْمِدَةِ بِدِقَّةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا كَيْفَ تَتَغَيَّرُ صَفْحَةُ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا اليوم كيفية التحكم في تخطيط الأعمدة بدقة. ندعوكم لتجربة الأكواد بأنفسكم لملاحظة النتائج."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام column-rule للاختصار",
+          "استخدام column-span للتوسيع",
+          "استخدام column-width للتحكم في العرض",
+          "تطبيق الخصائص على عناصر div وh2"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns_rules.asp"
+      ]
+    }
+  ]
+}
