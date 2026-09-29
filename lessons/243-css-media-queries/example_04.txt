@@ -1,0 +1,2 @@
+Viewport width >= 480px: Background becomes lightgreen
+Viewport width < 480px: Default background color
