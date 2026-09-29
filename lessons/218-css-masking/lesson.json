@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "218",
+  "title": "احتراف تقنية CSS Masking وتخصيص طبقات الأقنعة",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم تقنية CSS Masking وكيفية إخفاء أجزاء من العناصر",
+    "استخدام صور PNG كطبقات أقعنة عبر خاصية mask-image",
+    "التحكم في تكرار القناع باستخدام خاصية mask-repeat",
+    "ضبط موضع طبقة القناع باستخدام خاصية mask-position"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_masking.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro_masking",
+      "title": "مقدمة في تقنية CSS Masking",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى تَقْنِيَةِ CSS Masking وَكَيْفَ نُنْشِئُ طَبَقَةَ قِنَاعٍ لِإِخْفَاءِ أَجْزَاءٍ مِنْ الْعُنْصِرِ أَوْ إِظْهَارِهَا بِدِقَّةٍ تَمَّامَةٍ.",
+        "caption_text": "تعلم كيفية استخدام تقنية CSS Masking لإخفاء أو إظهار أجزاء من العناصر في صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تسمح تقنية CSS Masking بإنشاء طبقات أقنعة فوق العناصر",
+          "يمكن إخفاء أو إظهار أجزاء محددة من أي عنصر مرئي",
+          "تدعم التقنية صور PNG و SVG وتدرجات الألوان"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking.asp"
+      ]
+    },
+    {
+      "id": "mask_image_concept",
+      "title": "خاصية mask-image وقنوات الشفافية",
+      "narration": {
+        "spoken_text": "تُحَدِّدُ خَاصِيَّةُ mask-image صُورَةَ طَبَقَةِ الْقِنَاعِ لِلْعُنْصِرِ. تَعْتَمِدُ هَذِهِ التَّقْنِيَةُ عَلَى قَنَاةِ الشَّفَافِيَّةِ أَوْ السَّطُوعِ، حَيْثُ تَعْمَلُ الْمَنَاطِقُ الشَّفَفَةُ عَلَى إِخْفَاءِ الْجُزْءِ الْمُقَابِلِ مِنْ الْعُنْصِرِ بَيْنَمَا تُظْهِرُ الْمَنَاطِقُ غَيْرُ الشَّفَّافَةِ الْمُحْتَوَى.",
+        "caption_text": "تعتمد خاصية mask-image على قنوات الشفافية أو السطوع لتحديد الأجزاء المرئية والمخفية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية mask-image تحدد صورة طبقة القناع للعنصر",
+          "المناطق الشفافة في القناع تخفي أجزاء العنصر المقابلة",
+          "المناطق المعتمة أو غير الشفافة تبقي محتوى العنصر ظاهرا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking.asp"
+      ]
+    },
+    {
+      "id": "png_mask_example",
+      "title": "استخدام صور PNG كقناع بدون تكرار",
+      "narration": {
+        "spoken_text": "لِنَسْتَخْدِمْ صُورَةَ PNG كَقِنَاعٍ بَوَاسِطَةِ قِيمَةِ url، مَعَ تَعْيِينِ خَاصِيَّةِ mask-repeat بِقِيمَةِ no-repeat لِضَمَانِ عُرْضِ صُورَةِ الْقِنَاعِ مَرَّةً وَاحِدَةً فَقَطْ دُونَ تَكْرَارٍ عَلَى عُنْصِرِ الصُّورَةِ.",
+        "caption_text": "تطبيق صورة PNG كقناع باستخدام url ومع إيقاف التكرار عبر no-repeat."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".mask1 {\n  -webkit-mask-image: url(w3logo.png);\n  mask-image: url(w3logo.png);\n  mask-repeat: no-repeat;\n}",
+        "highlight_lines": [],
+        "output": "يتم تطبيق صورة القناع مرة واحدة على العنصر المستهدف دون تكرار.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking.asp"
+      ]
+    },
+    {
+      "id": "repeat_mask_layer",
+      "title": "تكرار طبقة القناع أفقيا وعموديا",
+      "narration": {
+        "spoken_text": "إِذَا أَهْمَلْنَا تَحْدِيدَ خَاصِيَّةِ mask-repeat، سَتَتَكَرَّرُ صُورَةُ الْقِنَاعِ تِلْقَائِيّاً عَلَى جَمِيعِ مَنَاطِقِ الصُّورَةِ كُلِّهَا أُفُقِيّاً وَعَمُودِيّاً بِنَفْسِ النَّمَطِ السَّابِقِ.",
+        "caption_text": "عند إغفال خاصية mask-repeat تتكرر صورة القناع على كامل مساحة العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".mask1 {\n  -webkit-mask-image: url(w3logo.png);\n  mask-image: url(w3logo.png);\n}",
+        "highlight_lines": [],
+        "output": "تتكرر صورة القناع في كافة اتجاهات العنصر أفقياً وعمودياً.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking.asp"
+      ]
+    },
+    {
+      "id": "position_mask_layer",
+      "title": "تحديد موضع طبقة القناع mask-position",
+      "narration": {
+        "spoken_text": "تَتَحَكَّمُ خَاصِيَّةُ mask-position فِي نُقْطَةِ الْبِدَايَةِ لِصُورَةِ الْقِنَاعِ نِسْبَةً لِمَنْطَقَةِ الْقِنَاعِ. بِالْإِمْكَانِ ضَبْطُهَا فِي الْمُنْتَصَفِ بَوَاسِطَةِ قِيمَةِ center لِتَحْقِيقِ تَمَرُكزٍ دَقِيقٍ.",
+        "caption_text": "استخدام خاصية mask-position لضبط موضع القناع في المنتصف بدقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".mask1 {\n  -webkit-mask-image: url(w3logo.png);\n  mask-image: url(w3logo.png);\n  mask-repeat: no-repeat;\n  mask-position: center;\n}",
+        "highlight_lines": [],
+        "output": "يتموضع القناع في وسط العنصر تماماً دون تكرار.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking.asp"
+      ]
+    },
+    {
+      "id": "all_masking_properties",
+      "title": "جدول خصائص الأقنعة الشاملة في CSS",
+      "narration": {
+        "spoken_text": "تَتَضَمَّنُ لُغَةُ CSS مَجْمُوعَةً وَاسِعَةً مِنْ خَصَائِصِ الْأَقْنِعَةِ مِثْلَ mask-clip وَ mask-size وَ mask-origin، وَهِيَ تُتِيحُ لِلْمُطَوِّرِ تَحَكُّماً كَامِلاً وَاحْتِرَافِيّاً فِي تَصْمِيمِ الْعَنَاصِرِ.",
+        "caption_text": "استعراض أهم خصائص الأقنعة المتقدمة في CSS للتحكم الشامل."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية (Property)",
+          "الوظيفة الأساسية",
+          "قيمة نموذجية"
+        ],
+        "rows": [
+          [
+            "mask-image",
+            "تحديد صورة القناع",
+            "url(mask.png)"
+          ],
+          [
+            "mask-repeat",
+            "التحكم في تكرار القناع",
+            "no-repeat"
+          ],
+          [
+            "mask-position",
+            "تحديد موضع البداية",
+            "center"
+          ],
+          [
+            "mask-size",
+            "تحديد حجم القناع",
+            "cover"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking.asp"
+      ]
+    },
+    {
+      "id": "summary_and_best_practices",
+      "title": "خلاصة وأفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا الْيَوْمَ، نُذَكِّرُ بِأَهَمِّيَّةِ اسْتِخْدَامِ البادئات التوافقية مثل بادئة webkit مَعَ خَصَائِصِ mask لِضَمَانِ عَمَلِ التَّصْمِيمِ بِكَفَاءَةٍ عَالِيَةٍ عَلَى جَمِيعِ الْمُتَصَفِّحَاتِ. نَسْعَى دائماً لِمُتَابَعَةِ الدَّوْرَةِ وَتَجْرِبَةِ الأكواد.",
+        "caption_text": "ملخص أهم الممارسات لاستخدام بادئات المتصفحات وضمان التوافقية في CSS Masking."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام بادئة -webkit-mask-image لدعم متصفحات Chrome وسفاري القديمة والحديثة",
+          "دمج الخصائص في قواعد CSS واضحة ونظيفة للصيانة السريعة",
+          "تجربة الأكواد بأنفسكم عبر روابط المصادر المرفقة بالأسفل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking.asp"
+      ]
+    }
+  ]
+}
