@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "173",
+  "title": "CSS Conic Gradients",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم دالة conic-gradient في CSS",
+    "تعلم كيفية توزيع الألوان حول نقطة مركزية",
+    "تطبيق الزوايا والمواقع المخصصة",
+    "إنشاء أشكال Pie Charts باستخدام border-radius",
+    "استخدام repeating-conic-gradient للتكرار"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_gradients_conic.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Conic Gradients",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى دَالَّةِ conic-gradient الَّتِي تُنْشِئُ تَدرُجَاتٍ لَوْنِيَّةً تَدُورُ حَوْلَ نُقْطَةٍ مَرْكَزِيَّةٍ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تستخدم دالة conic-gradient لإنشاء تدرجات لونية تدور حول نقطة مركزية في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تدرج لوني يدور حول نقطة مركزية",
+          "تتطلب لونين على الأقل للعمل",
+          "تستخدم في تصميم الرسوم البيانية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_conic.asp"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "بناء الجملة البرمجية",
+      "narration": {
+        "spoken_text": "لِكِتَابَةِ هَذَا التَّدَرُّجِ نَسْتَخْدِمُ بِنَاءَ الْجُمْلَةِ هَذَا. بِشَكْلٍ افْتِرَاضِيٍّ، تَكُونُ الزَّاوِيَةُ صِفْراً وَالْمَوْقِعُ فِي الْمَرْكَزِ، وَيُمْكِنُنَا تَحْدِيدُ زَوَايَا مُخْتَلِفَةٍ لِكُلِّ لَوْنٍ لِتَحْقِيقِ تَوَزُّعٍ دَقِيقٍ.",
+        "caption_text": "بناء الجملة البرمجية لدالة conic-gradient مع تحديد الزوايا والمواقع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_conic.asp"
+      ]
+    },
+    {
+      "id": "colors_example",
+      "title": "تدرج بثلاثة ألوان",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ نُطَبِّقُ تَدَرُّجاً بِثَلَاثَةِ أَلْوَانٍ بَسِيطَةٍ. سَيَقُومُ الْمُتَصَفِّحُ بِتَوْزِيعِ الْأَلْوَانِ بِالتَّسَاوِي حَوْلَ الْمَرْكَزِ إِذَا لَمْ نُحَدِّدْ دَرَجَاتٍ زَاوِيَةً مُعَيَّنَةً لِكُلِّ لَوْنٍ.",
+        "caption_text": "مثال بسيط لتدرج لوني باستخدام ثلاثة ألوان موزعة بالتساوي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: conic-gradient(red, yellow, green);\n}",
+        "highlight_lines": [],
+        "output": "تدرج دائري يبدأ بالأحمر ثم الأصفر ثم الأخضر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_conic.asp"
+      ]
+    },
+    {
+      "id": "degrees_example",
+      "title": "تحديد الزوايا بدقة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا التَّحَكُّمُ فِي مَسَاحَةِ كُلِّ لَوْنٍ بِاسْتِخْدَامِ دَرَجَاتِ الزَّاوِيَةِ. هُنَا نُحَدِّدُ لِلَّوْنِ الْأَحْمَرِ 45 دَرَجَةً، وَلِلْأَصْفَرِ 90 دَرَجَةً، وَلِلْأَخْضَرِ 210 دَرَجَاتٍ لِتَحْقِيقِ تَوَزُّعٍ مُخَصَّصٍ.",
+        "caption_text": "تحديد زوايا دقيقة لكل لون داخل التدرج المخروطي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_conic.asp"
+      ]
+    },
+    {
+      "id": "pie_chart",
+      "title": "إنشاء Pie Charts",
+      "narration": {
+        "spoken_text": "لِتَحْوِيلِ التَّدَرُّجِ إِلَى شَكْلِ دَائِرَةٍ أَوْ Pie Chart، نُضِيفُ خَاصِّيَّةَ border-radius بِقِيمَةِ 50. هَذَا يُعْطِي تَصْمِيماً جَذَّاباً وَمُفِيداً لِعَرْضِ الْبَيَانَاتِ بَصَرِيّاً.",
+        "caption_text": "استخدام border-radius لتحويل التدرج إلى شكل دائري يشبه المخطط البياني."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: conic-gradient(red, yellow, green, blue, black);\n  border-radius: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_conic.asp"
+      ]
+    },
+    {
+      "id": "position_angle",
+      "title": "التحكم في الزاوية والموقع",
+      "narration": {
+        "spoken_text": "نَسْتَطِيعُ أَيْضاً تَدْوِيرَ التَّدَرُّجِ بِاسْتِخْدَامِ from وَتَحْدِيدَ مَرْكَزِهِ بِاسْتِخْدَامِ at. فِي هَذَا الْمِثَالِ نُحَدِّدُ الزَّاوِيَةَ بِ 90 دَرَجَةً، وَالْمَرْكَزَ بِ 60 وَ45 لِتَغْيِيرِ نُقْطَةِ الِارْتِكَازِ.",
+        "caption_text": "تغيير زاوية الدوران وموقع المركز للتدرج المخروطي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: conic-gradient(from 90deg at 60% 45%, red, yellow, green);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_conic.asp"
+      ]
+    },
+    {
+      "id": "repeating",
+      "title": "دالة repeating-conic-gradient",
+      "narration": {
+        "spoken_text": "أَخِيراً، نَسْتَخْدِمُ دَالَّةَ repeating-conic-gradient لِتَكْرَارِ التَّدَرُّجِ. هَذَا يُسَاعِدُ فِي إِنْشَاءِ أَنْمَاطٍ مُتَكَرِّرَةٍ جَمِيلَةٍ عَبْرَ تَحْدِيدِ نِقَاطِ الْبِدَايَةِ وَالنِّهَايَةِ لِكُلِّ لَوْنٍ.",
+        "caption_text": "استخدام دالة التكرار لإنشاء أنماط بصرية متكررة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg);\n  border-radius: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_conic.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ اسْتِخْدَامِ conic-gradient لِإِنْشَاءِ تَصَامِيمَ إِبْدَاعِيَّةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَغْيِيرِ الْأَلْوَانِ وَالزَّوَايَا لِتَرَوْا النَّتَائِجَ الْمُذْهِلَةَ.",
+        "caption_text": "خلاصة الدرس: جرب تغيير القيم والألوان لإنشاء تصاميمك الخاصة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام conic-gradient للتدرجات الدائرية",
+          "التحكم في الزوايا والمواقع",
+          "إنشاء Pie Charts بـ border-radius",
+          "استخدام repeating-conic-gradient للتكرار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_conic.asp"
+      ]
+    }
+  ]
+}
