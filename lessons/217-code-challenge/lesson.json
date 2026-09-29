@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "217",
+  "title": "CSS object-position Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية التحكم في موضع الصور داخل الحاويات باستخدام object-position",
+    "تطبيق قيم CSS المختلفة مثل center وtop وbottom",
+    "حل تحديات برمجية عملية لتعزيز مهارات التنسيق"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_objectposition.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS object-position",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ التَّحَكُّمِ فِي مَوْضِعِ الصُّوَرِ دَاخِلَ حَاوِيَاتِهَا بِاسْتِخْدَامِ خَاصِيَّةِ object-position، وَهِيَ مَهَارَةٌ أَسَاسِيَّةٌ لِتَصْمِيمِ وَاجِهَاتِ الْوِبّ الْجَذَّابَةِ.",
+        "caption_text": "مرحبا بكم في درس CSS object-position، سنتعلم اليوم كيفية التحكم في موضع الصور داخل الحاويات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية object-position تحدد موضع الصورة داخل الـ Element",
+          "تستخدم غالبا مع خاصية object-fit",
+          "تساعد في تحسين مظهر الصور في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectposition.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم أساسية حول object-position",
+      "narration": {
+        "spoken_text": "تَعْمَلُ خَاصِيَّةُ object-position مَعَ الصُّوَرِ وَال video لِتَحْدِيدِ نُقْطَةِ التَّرْكِيزِ. يُمْكِنُنَا اسْتِخْدَامُ قِيَمٍ مِثْلَ center، top، bottom، left، أَوْ حَتَّى قِيَمٍ رَقَمِيَّةٍ بِ pixels أَوْ percentages لِتَحْدِيدِ الْمَوْضِعِ بِدِقَّةٍ مُتَنَاهِيَةٍ.",
+        "caption_text": "تسمح خاصية object-position بتحديد نقطة التركيز للصورة باستخدام قيم مثل center أو top أو قيم رقمية."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "الوصف"
+        ],
+        "rows": [
+          [
+            "center",
+            "توسيط الصورة"
+          ],
+          [
+            "top",
+            "محاذاة للأعلى"
+          ],
+          [
+            "bottom",
+            "محاذاة للأسفل"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectposition.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي على الكود",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ مِثَالاً عَمَلِيّاً. هُنَا نَقُومُ بِتَعْرِيفِ img Element وَتَحْدِيدِ object-fit بِقِيمَةِ cover، ثُمَّ نُحَدِّدُ object-position بِقِيمَةِ top لِضَمَانِ ظُهُورِ الْجُزْءِ الْعُلْوِيِّ مِنَ الصُّورَةِ دَاخِلَ الْحَاوِيَةِ بِشَكْلٍ مُنَاسِبٍ.",
+        "caption_text": "نستخدم object-fit مع cover و object-position مع top للتحكم في عرض الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  width: 300px;\n  height: 200px;\n  object-fit: cover;\n  object-position: top;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectposition.asp"
+      ]
+    },
+    {
+      "id": "output_view",
+      "title": "معاينة النتيجة في المتصفح",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَيَقُومُ ال Web Browser بِقَصِّ الصُّورَةِ لِتُنَاسِبَ الْأَبْعَادَ الْمُحَدَّدَةَ، مَعَ الْحِفَاظِ عَلَى الْجُزْءِ الْعُلْوِيِّ ظَاهِراً. هَذَا يُعْطِي تَحَكُّماً كَامِلاً فِي تَجْرِبَةِ الْمُسْتَخْدِمِ وَتَنْسِيقِ صَفْحَةِ ال Web.",
+        "caption_text": "المتصفح يقوم بقص الصورة بناء على القيم المحددة لضمان أفضل عرض للمحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"image.jpg\" alt=\"Nature\">\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "الصورة تظهر بأبعاد 300x200 مع تركيز على الجزء العلوي منها.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectposition.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "يَجِبُ دَائِماً التَّأَكُّدُ مِنْ أَنَّ الصُّورَةَ لَا تَفْقِدُ مَعْنَاهَا عِنْدَ الْقَصِّ. اسْتَخْدِمْ object-position بِحِكْمَةٍ، وَجَرِّبْ قِيَمَ percentages لِلْحُصُولِ عَلَى أَفْضَلِ نَتِيجَةٍ مُمْكِنَةٍ لِتَصْمِيمِكَ فِي كُلِّ مَرَّةٍ.",
+        "caption_text": "استخدم قيم النسب المئوية للتجربة والوصول إلى أفضل نتيجة بصرية ممكنة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبر دائما استجابة الصور على أحجام شاشات مختلفة",
+          "استخدم object-position مع object-fit للحصول على نتائج احترافية",
+          "تجنب القيم التي قد تؤدي إلى إخفاء الأجزاء المهمة من الصورة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectposition.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمَ حَوْلَ object-position. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ وَمُحَاوَلَةِ حَلِّ التَّحَدِّيَاتِ الْمَوْجُودَةِ فِي الرَّابِطِ الْمُدْرَجِ فِي وَصْفِ الْفِيدِيُو. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا حل التحديات البرمجية المتاحة في الرابط أسفل الفيديو."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجع الرابط في الوصف لحل التحدي",
+          "استمر في ممارسة CSS يوميا",
+          "لا تتردد في طرح الأسئلة في التعليقات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_objectposition.asp"
+      ]
+    }
+  ]
+}
