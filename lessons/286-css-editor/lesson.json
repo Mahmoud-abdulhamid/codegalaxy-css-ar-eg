@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "286",
+  "title": "شرح استخدام محرر CSS Editor وكتابة الأكواد وتنسيق الصفحات",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعرف كيفية استخدام محرر CSS Editor لتعديل أكواد HTML و CSS و JavaScript.",
+    "فهم طريقة كتابة وتنسيق خصائص الألوان والخلفيات والخطوط في CSS.",
+    "معرفة كيفية معاينة النتائج المباشرة في متصفح الويب.",
+    "استكشاف منصة W3Schools Spaces لحفظ وبناء ونشر مواقع الويب."
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_editor.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة حول محرر CSS Editor",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِسْتِخْدَامِ مُحَرِّرِ CSS Editor لِتَعْدِيلِ وَكِتَابَةِ أَكْوَادِ HTML وَ CSS وَ JavaScript ثُمَّ مُشَاهَدَةِ النَّتِيجَةِ مُبَاشَرَةً فِي مُتَصَفِّحِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس محرر CSS Editor وكيفية تعديل أكواد الويب ومعاينتها في متصفح الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على محرر CSS Editor المدمج على الويب",
+          "تعديل أكواد HTML و CSS و JavaScript بسهولة",
+          "معاينة النتائج بشكل فوري داخل متصفح الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_editor.asp"
+      ]
+    },
+    {
+      "id": "scene_concepts",
+      "title": "المفاهيم الأساسية للمحرر وتنسيق الصفحات",
+      "narration": {
+        "spoken_text": "يُمَكِّنُنَا هَذَا الْمُحَرِّرُ مِنَ التَّجْرِبَةِ التَّفَاعُلِيَّةِ الْفَوْرِيَّةِ. يُمْكِنُكَ النَّقْرُ عَلَى زِرِّ Try it Yourself لِمُشَاهَدَةِ كَيْفِيَّةِ عَمَلِ الْأَكْوَدِ وَتَطْبِيقِ التَّنْسِيقَاتِ بِدِقَّةٍ وَسُهُولَةٍ تَمَامَةٍ دَاخِلَ بِيئَةِ الْوِبّ.",
+        "caption_text": "يتيح المحرر تجربة تفاعلية فورية عبر زر Try it Yourself لفهم كيفية عمل التنسيقات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التجربة التفاعلية الفورية لتنسيق صفحات الويب",
+          "استخدام زر Try it Yourself لاختبار الأكواد",
+          "فهم تأثير خصائص CSS على عناصر HTML المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_editor.asp"
+      ]
+    },
+    {
+      "id": "scene_code_part1",
+      "title": "كتابة تنسيق الخلفية والعنوان الرئيسي",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ الْآنَ إِلَى كِتَابَةِ الْكُودِ الْعَمَلِيِّ. نَبْدَأُ بِتَنْسِيقِ عُنْصُرِ body لِتَحْدِيدِ background-color بِاللون lightblue. ثُمَّ نُنَسِّقُ عُنْصُرَ h1 لِيَكُونَ لَوْنُهُ white وَيَتَوَسَّطَ الصَّفْحَةَ بِاسْتِخْدَامِ text-align center.",
+        "caption_text": "نكتب كود CSS لتنسيق خلفية body باللون الأزرق الفاتح وتوسيط عنوان h1 بلون أبيض."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-color: lightblue;\n}\nh1 {\n  color: white;\n  text-align: center;\n}",
+        "highlight_lines": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "output": "background-color: lightblue;\ncolor: white;\ntext-align: center;",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_editor.asp"
+      ]
+    },
+    {
+      "id": "scene_code_part2",
+      "title": "تنسيق فقرات النص والخطوط",
+      "narration": {
+        "spoken_text": "نُوَاصِلُ اكْتِمَالَ الْكُودِ بَتَنْسِيقِ عُنْصُرِ الفقرة p. نَسْتَخْدِمُ خَاصِيَّةَ font-family لِتَحْدِيدِ نَوْعِ الْخَطِّ لِيَكُونَ verdana، مِمَّا يُعْطِي النَّصَّ مَظْهراً جَمَالِيّاً وَوَاضِحاً لِلْمُسْتَخْدِمِ أثْنَاءَ تَصَفُّحِ الْمَوْقِعِ.",
+        "caption_text": "نضيف تنسيق فقرات النص p باستخدام خاصية font-family لتحديد نوع الخط verdana."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p {\n  font-family: verdana;\n}",
+        "highlight_lines": [
+          1,
+          2,
+          3
+        ],
+        "output": "font-family: verdana;",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_editor.asp"
+      ]
+    },
+    {
+      "id": "scene_output",
+      "title": "معاينة النتيجة في المتصفح",
+      "narration": {
+        "spoken_text": "بَعْدَ تَنْفِيذِ هَذِهِ الْأَكْوَدِ، تَظْهَرُ النَّتِيجَةُ فِي مُتَصَفِّحِ الْوِبّ بِخَلْفِيَّةٍ زَرْقَاءَ فَاتِحَةٍ، وَعُنْوَانٍ رَئِيسِيٍّ أَبْيَضَ فِي وَسَطِ الصَّفْحَةِ، إِضَافَةً إِلَى نَصٍّ مُنَسَّقٍ بِخَطِّ verdana الجميل.",
+        "caption_text": "نتيجة المعاينة في المتصفح تظهر خلفية زرقاء فاتحة وعنوانا أبيض في المنتصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خلفية الصفحة تصبح بلون lightblue",
+          "العنوان الرئيسي h1 بلون أبيض وفي المنتصف",
+          "فقرات النص تظهر بنوع الخط verdana المفضل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_editor.asp"
+      ]
+    },
+    {
+      "id": "scene_spaces",
+      "title": "بناء ونشر مواقع الويب عبر W3Schools Spaces",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْتَ حِفْظَ مَارَسَاتِكَ وَأَكْوَدِكَ وَإِنْشَاءَ مَوْقِعِكَ الْخَاصِّ، تُوَفِّرُ لَكَ مِنْصَةُ W3Schools Spaces بِيئَةً سَهْلَةً لِكِتَابَةِ وَتَشْغِيلِ وَإِدَارَةِ وَنَشْرِ الْأَكْوَدِ عَبْرَ الْوِبّ بِكُلِّ يُسْرٍ.",
+        "caption_text": "توفر منصة W3Schools Spaces مكانا سهلا لحفظ وتشغيل وإدارة ونشر الأكواد أونلاين."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "حفظ أكواد HTML و CSS و JavaScript بسهولة",
+          "إنشاء موقع الويب الخاص بك أونلاين",
+          "استخدام W3Schools Spaces لإدارة ونشر المشاريع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_editor.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات والنصائح التعليمية",
+      "narration": {
+        "spoken_text": "إِذَا كُنْتَ مُبْتَدِئاً وَلَا تَمْلِكُ خِبْرَةً سَابِقَةً فِي CSS، نَنْصَحُكَ بِقِرَاءَةِ دَوْرَةِ CSS Tutorial التَّعْلِيمِيَّةِ مِنَ الصِّفْرِ لِبِنَاءِ أَسَاسٍ قَوِيٍّ وَفَهْمِ كَافَّةِ التَّفَاصِيلِ البرمجية.",
+        "caption_text": "ننصح المبتدئين بقراءة دورة CSS Tutorial من الصفر لبناء أساس برمجي متين."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قراءة دورة CSS Tutorial من الصفر للمبتدئين",
+          "التدريب المستمر على كتابة التنسيقات بانتظام",
+          "مراجعة الأمثلة وتطبيقها بشكل عملي فوري"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_editor.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ CSS Editor وَتَنْسِيقِ الْخَلْفِيَّاتِ وَالنُّصُوصِ. نَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَدِ بَأَنْفُسِكُم وَمُتَابَعَةِ الدَّوْرَةِ لِاحْتِرَافِ تَصْمِيمِ مَوَاقِعِ الْوِبّ مَعَ مَحْمُودِ عَبْدِالْحَمِيدِ.",
+        "caption_text": "تعرفنا على محرر CSS Editor وتنسيق الصفحات، وندعوكم لتجربة الأكواد ومتابعة الدورة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص استخدام محرر CSS Editor وتنسيق العناصر",
+          "أهمية التطبيق العملي المستمر للأكواد",
+          "تابعوا دورة CSS لاحتراف تصميم الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_editor.asp"
+      ]
+    }
+  ]
+}
