@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "366",
+  "title": "انشاء أزرارالتنقل Next و Previous باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية تصميم أزرار Next و Previous احترافية باستخدام CSS",
+    "فهم تطبيق خصائص display و padding على عناصر الروابط",
+    "استخدام تأثير a:hover لتغيير الألوان عند مرور المؤشر",
+    "تطبيق زوايا دائرية باستخدام خاصية border-radius"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_next_prev.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ أِزْرَارِ التَّنَقُّلِ Next وَ Previous بِاحْتِرَافِيَّةٍ عَالِيَةٍ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "تعلم كيفية إنشاء أزرار التنقل Next و Previous باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصميم أزرار التنقل لزيادة تفاعل المستخدم",
+          "استخدام لغة CSS لتنسيق عناصر الروابط",
+          "تحسين تجربة تصفح صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_next_prev.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "هيكل عناصر HTML",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوْلاً بِكِتَابَةِ عَنَاصِرِ HTML الْمُسْتَخْدِمَةِ لِلأَزْرَارِ. نَسْتَخْدِمُ عَنَاصِرَ a مَعَ إِضَافَةِ Classes مُخْتَلِفَةٍ مِثْلَ previous وَ next لِتَمْيِيزِ كُلِّ زِرٍّ بَدِيقَةٍ.",
+        "caption_text": "استخدام عناصر HTML مع كلاسات مخصصة لتحديد أزرار التنقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <a href=\"#\" class=\"previous\">&laquo; Previous</a>\n    <a href=\"#\" class=\"next\">Next &raquo;</a>\n    <a href=\"#\" class=\"previous round\">&#8249;</a>\n    <a href=\"#\" class=\"next round\">&#8250;</a>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "« Previous   Next »   ‹   ›",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_next_prev.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق الروابط الأساسية",
+      "narration": {
+        "spoken_text": "لْنَنْتَقِلْ الآنَ إِلَى كِتَابَةِ تَوَاَفُقِيَّةِ CSS. نَقُومُ بِإِزَالَةِ خُطُوطِ التَّحْتِيَّةِ لِلرَّوَابِطِ بِوَاسِطَةِ text-decoration: none، وَتَحْدِيدِ display ك inline-block مَعَ تَوْفِيرِ مساحات داخلية عبر padding.",
+        "caption_text": "تنسيق عناصر a الأساسية بإلغاء التسطير وتحديد الخصائص العامة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a {\n  text-decoration: none;\n  display: inline-block;\n  padding: 8px 16px;\n}",
+        "highlight_lines": [],
+        "output": "تنسيق أساسي للروابط",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_next_prev.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تأثير مرور المؤشر Hover",
+      "narration": {
+        "spoken_text": "عِنْدَ مُرُورِ الْمُؤْشِرِ عَلَى الزِّرِّ، نَسْتَخْدِمُ a:hover لِتَعْدِيلِ لَوْنِ الْخَلْفِيَّةِ إِلَى رَمَادِيٍّ فَاتِحٍ مَعَ تَغْيِيرِ لَوْنِ النَّصِّ إِلَى الأَسْوَدِ لِإِعْطَاءِ مُتَصَفِّحِ الْوِبِّ تَعْقِيباً بَصْرِيّاً وَاضِحاً.",
+        "caption_text": "إضافة تأثير hover لتغيير الألوان عند مرور الماوس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a:hover {\n  background-color: #ddd;\n  color: black;\n}",
+        "highlight_lines": [],
+        "output": "تغير لون الخلفية والنص عند التحويم",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_next_prev.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تخصيص أزرار Previous و Next",
+      "narration": {
+        "spoken_text": "نُخَصِّصُ كُلَّ زِرٍّ عَلَى حِدَةٍ. فَالزِّرُّ السَّابِقُ يحصل عَلَى خَلْفِيَّةٍ رَمَادِيَّةٍ فَاتِحَةٍ، بَيْنَمَا يَتَمَيَّزُ زِرُّ التَّالِي بِخَلْفِيَّةٍ خَضْرَاءَ جَمِيلَةٍ مَعَ نَصٍّ أَبْيَضَ لِيَجْذِبَ انْتِبَاهَ الْمُسْتَخْدِمِ.",
+        "caption_text": "تحديد ألوان الخلفية والنصوص لكل منprevious و next."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".previous {\n  background-color: #f1f1f1;\n  color: black;\n}\n.next {\n  background-color: #04AA6D;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "زر سابق بررمادي وزر تالي أخضر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_next_prev.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "إنشاء الأزرار الدائرية Round",
+      "narration": {
+        "spoken_text": "لإِنْشَاءِ أَزْرَارٍ دَائِرِيَّةِ الشَّكْلِ تَمَاماً، نَسْتَخْدِمُ کْلَاسَ round مَعَ خَاصِيَّةِ border-radius وَنُعَيِّنُ قِيمَتَهَا إِلَى خمسين بالمائة لِتَحْقِيقِ التَّدْوِيرِ الْكَامِلِ.",
+        "caption_text": "استخدام border-radius بقيمة 50 بالمائة لتكوين أزرار دائرية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".round {\n  border-radius: 50%;\n}",
+        "highlight_lines": [],
+        "output": "تحويل شكل الأزرار إلى دوائر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_next_prev.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "مراجعة الكود الكامل",
+      "narration": {
+        "spoken_text": "هَذَا هُوَ الْكُودُ الشَّامِلُ لِلْتَّنْسِيقَاتِ. نُلاحِظُ كَيْفَ تَتَكَامَلُ جَمِيعُ الْقَوَاعِدِ لِتَقْدِيمِ أِزْرَارِ تَنَقُّلٍ عَصْرِيَّةٍ، جَذَّابَةٍ، وَسَهْلَةِ الِاسْتِخْدَامِ فِي مَوَاقِعِ الْوِبِّ.",
+        "caption_text": "عرض الكود الكامل المدمج لتنسيق أزرار Next و Previous."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a {\n  text-decoration: none;\n  display: inline-block;\n  padding: 8px 16px;\n}\na:hover {\n  background-color: #ddd;\n  color: black;\n}\n.previous {\n  background-color: #f1f1f1;\n  color: black;\n}\n.next {\n  background-color: #04AA6D;\n  color: white;\n}\n.round {\n  border-radius: 50%;\n}",
+        "highlight_lines": [],
+        "output": "تنسيق متكامل وجاهز للاستخدام",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_next_prev.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "الخلاصة والمحاكاة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُصَمِّمُ أِزْرَارَ Next وَ Previous بِاسْتِخْدَامِ CSS بِمَهَارَةٍ. نَدْعُوكُمْ لِتَجْرِبَةِ الأَكْوَادِ بَأَنْفُسِكُمْ وَالتَّعْدِيلِ عَلَيْهَا مِنْ خِلَالِ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ.",
+        "caption_text": "خلاصة الدرس ودعوة لتجربة الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تلخيص مهارات تنسيق الروابط والأزرار",
+          "أهمية تطبيق border-radius للأشكال الدائرية",
+          "تجربة الأكواد وتطبيقها العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_next_prev.asp"
+      ]
+    }
+  ]
+}
