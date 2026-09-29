@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "136",
+  "title": "CSS Form Styling Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تنسيق عناصر الـ Form باستخدام CSS",
+    "تطبيق خصائص الـ padding والـ border على الـ input",
+    "تحسين تجربة المستخدم من خلال تصميم واجهات الـ Web",
+    "إتقان استخدام الـ Selectors لاستهداف عناصر الـ HTML"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_form_styling.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تنسيق الـ Forms",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي الْعَمَلِيِّ لِتَنْسِيقِ ال Forms بِاسْتِخْدَامِ CSS. إِنَّ تَصْمِيمَ نَمَاذِجِ الْوِبّ بِشَكْلٍ جَذَّابٍ يُعَدُّ مَهَارَةً أَسَاسِيَّةً لِكُلِّ مُطَوِّرِ وِبٍّ مُحْتَرِفٍ.",
+        "caption_text": "مرحبا بكم في تحدي تنسيق الـ Forms باستخدام CSS لتطوير مهارات تصميم واجهات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق الـ Forms يعزز تجربة المستخدم",
+          "استخدام CSS للتحكم في مظهر الـ input والـ button",
+          "تطبيق التحدي البرمجي لتعزيز الفهم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_form_styling.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية لتنسيق الـ Elements",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ ال input، نَحْتَاجُ إِلَى ضَبْطِ خَصَائِصِ ال width وَ ال padding. كَمَا نَسْتَخْدِمُ ال border لِتَحْدِيدِ حُدُودِ الْعُنْصُرِ، وَال border-radius لِجَعْلِ الزَّوَايَا مُسْتَدِيرَةً وَأَكْثَرَ عَصْرِيَّةً.",
+        "caption_text": "نستخدم خصائص CSS مثل width و padding و border لتنسيق عناصر الـ input بشكل احترافي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام width: 100 لجعل الـ input يملأ الحاوية",
+          "إضافة padding للمساحة الداخلية",
+          "تطبيق border-radius للزوايا المستديرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_form_styling.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الـ HTML للنموذج",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ هَيْكَلِ ال HTML. نَسْتَخْدِمُ ال form وَدَاخِلَهُ نَضَعُ ال label وَال input. هَذَا التَّرْتِيبُ يُسَاعِدُ فِي تَنْظِيمِ الْمُحْتَوَى وَتَسْهِيلِ عَمَلِيَّةِ التَّنْسِيقِ بِاسْتِخْدَامِ CSS لاحِقاً.",
+        "caption_text": "هيكل الـ HTML الأساسي للنموذج يتكون من عناصر الـ label والـ input داخل الـ form."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <form>\n      <label>Name:</label>\n      <input type=\"text\" name=\"name\">\n      <input type=\"submit\" value=\"Submit\">\n    </form>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_form_styling.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تطبيق الـ CSS على الـ Elements",
+      "narration": {
+        "spoken_text": "الْآنَ نَقُومُ بِتَطْبِيقِ ال CSS. نَسْتَهْدِفُ ال input بِاسْتِخْدَامِ ال Element Selector. نُضِيفُ padding لِتَوْسِيعِ الْمَسَاحَةِ، وَنُحَدِّدُ ال width لِيَكُونَ مِائَةً بِالْمِائَةِ، مِمَّا يَمْنَحُ النَّمُوذَجَ مَظْهَراً مُتَنَاسِقاً.",
+        "caption_text": "تطبيق خصائص CSS على عناصر الـ input لتحسين المظهر العام للنموذج."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text] {\n  width: 100%;\n  padding: 12px 20px;\n  margin: 8px 0;\n  box-sizing: border-box;\n}\ninput[type=submit] {\n  background-color: #4CAF50;\n  color: white;\n  padding: 14px 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_form_styling.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة في الـ Web Browser",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَظْهَرُ النَّمُوذَجُ بِشَكْلٍ مُنَظَّمٍ فِي ال Web Browser. لَاحِظْ كَيْفَ أَصْبَحَتِ الْحُقُولُ وَاضِحَةً وَمُتَنَاسِقَةً، مِمَّا يُحَسِّنُ مِنْ تَجْرِبَةِ الْمُسْتَخْدِمِ عِنْدَ إِدْخَالِ الْبَيَانَاتِ.",
+        "caption_text": "النتيجة النهائية للنموذج بعد تطبيق تنسيقات CSS تظهر بشكل احترافي ومنظم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Name:\n[______________________]\n[ Submit Button ]",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_form_styling.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَهْتَمَّ بِ box-sizing: border-box لِضَمَانِ عَدَمِ تَجَاوُزِ الْعَنَاصِرِ لِأَحْجَامِهَا الْمُحَدَّدَةِ. كَمَا يُفَضَّلُ دَائِماً اخْتِبَارُ التَّصْمِيمِ عَلَى مُتَصَفِّحَاتٍ مُخْتَلِفَةٍ مِثْلَ Chrome وَ Edge لِضَمَانِ التَّوَافُقِيَّةِ.",
+        "caption_text": "استخدام box-sizing واختبار التصميم على متصفحات مختلفة يضمن جودة واجهة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام box-sizing: border-box",
+          "اختبار التوافقية مع Chrome و Edge",
+          "الحفاظ على نظافة الكود وتنسيقه"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_form_styling.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ تَنْسِيقِ ال Forms بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِهَا. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، نأمل أن تكونوا قد استفدتم من هذا التحدي العملي لتنسيق الـ Forms."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية أساسيات تنسيق الـ Forms",
+          "تم شرح تطبيق CSS على الـ input",
+          "نوصي بممارسة التحديات البرمجية بانتظام"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_form_styling.asp"
+      ]
+    }
+  ]
+}
