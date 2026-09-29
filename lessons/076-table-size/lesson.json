@@ -3,6 +3,8 @@
   "lesson_id": "76",
   "title": "التحكم في أحجام الجداول باستخدام CSS Width و CSS Height",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية استخدام خاصية width لتحديد عرض الجدول في CSS",
     "تطبيق النسب المئوية مثل 100 و 50 لعرض الجدول",
