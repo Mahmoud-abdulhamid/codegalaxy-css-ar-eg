@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "162",
+  "title": "CSS Border Images Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار الفهم العملي لخصائص CSS Border Images",
+    "تطبيق خصائص border-image و border-image-source بشكل صحيح",
+    "التحكم في قص وتمديد صور الحدود باستخدام border-image-slice",
+    "حل التحديات البرمجية المتقدمة في تنسيق عناصر الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_border_images.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة تحدي CSS Border Images",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّدْرِيبِ العَمَلِيِّ مِنْ دَوْرَةِ CSS. سَنَتَمَرَّسُ الْيَوْمَ عَلَى تَحْدِي بَرْمَجِيٍّ مُهِمٍّ يَتَعَلَّقُ بِاسْتِخْدَامِ Border Images لِتَكْوِينِ حُدُودٍ رَائِعَةٍ لِلْعَنَاصِرِ بَدَلَ الأَلْوَانِ التَّقْلِيدِيَّةِ.",
+        "caption_text": "مرحبا بكم في هذا التدريب العملي من دورة CSS لتطبيق تحدي Border Images."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار المهارات العملية في CSS",
+          "فهم خصائص Border Images المتقدمة",
+          "تحويل الحدود التقليدية إلى صور تفاعلية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_2_concepts",
+      "title": "المفاهيم الأساسية لخصائص الصور",
+      "narration": {
+        "spoken_text": "لِكَيْ نَحُلَّ هَذَا التَّحَدِّيَ بِنجَاحٍ، يَنْبَغِي أَنْ نَسْتَحْضِرَ القَوَاعِدَ الأَسَاسِيَّةَ. نَحْتَاجُ أَوَّلاً إِلَى تَحْدِيدِ مَصْدَرِ الصُّورَةِ بِوَاسِطَةِ border-image-source، ثُمَّ تَقْسِيمِ الصُّورَةِ بِاستِخْدَامِ border-image-slice لِتَحْقِيقِ التَّمْدِيدِ أَوِ التَّكْرَارِ المَطْلُوبِ بِكفاءةٍ عَالِيَةٍ.",
+        "caption_text": "نراجع القواعد الأساسية مثل border-image-source و border-image-slice لحل التحدي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد مصدر الصورة بـ border-image-source",
+          "تقسيم الأجزاء بـ border-image-slice",
+          "التحكم في العرض بـ border-image-width"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_3_code_setup",
+      "title": "الكود الأساسي للتحدي",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى كِتَابَةِ الأَكْوادِ العَمَلِيَّةِ. فِي هَذَا المِثَالِ، نُنْشِئُ عُنْصُرَ div وَنُطَبِّقُ عَلَيْهِ خَصَائِصَ الحُدُودِ الأَسَاسِيَّةِ مِثْلِ border-width وَ border-style قَبْلَ إِضَافَةِ صُورَةِ الحُدُودِ.",
+        "caption_text": "نكتب الكود الأساسي لعنصر div مع تطبيق حدود أولية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": ".border-example {\n  border: 10px solid transparent;\n  padding: 20px;\n  width: 300px;\n}",
+        "highlight_lines": [
+          2
+        ],
+        "output": "عنصر بغلاف حدود شفاف وعرض مناسب",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_4_code_image",
+      "title": "تطبيق خصائص Border Image",
+      "narration": {
+        "spoken_text": "نُوَصِّلُ العَمَلَ بِإِضَافَةِ صُورَةِ البُورْدَرِ عَبْرَ أَمْرِ border-image مَعَ تَحْدِيدِ مَسَرِّ الصُّورَةِ وَنِسْبَةِ القَطْعِ. هَذِهِ الخطْوَةُ هِيَ جَوْهَرُ التَّحَدِّي لِجْعَلِ الحُدُودِ تَبْدُو مُتَنَاسِقَةً وَجَمِيلَةً.",
+        "caption_text": "نضيف خاصية border-image مع تحديد المسار وقيم القطع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": ".border-example {\n  border: 10px solid transparent;\n  padding: 20px;\n  border-image: url('border.png') 30 round;\n}",
+        "highlight_lines": [
+          4
+        ],
+        "output": "تطبيق صورة الحدود بنجاح على العنصر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_5_output_view",
+      "title": "معاينة المخرجات في المتصفح",
+      "narration": {
+        "spoken_text": "نَْرَى الآنَ النَّتِيجَةَ النِّهَائِيَّةَ لِلتَّحَدِّي عِنْدَ عَرْضِ الكُودِ فِي المُتَصَفِّحِ. كَيْفَ ظَهَرَتِ الصُّورَةُ مُوَزَّعَةً بِانْتِظَامٍ حَوْلَ الإِطَارِ بفضلِ اسْتِخْدَامِ قِيمَةِ round.",
+        "caption_text": "معاينة المخرجات المرئية وكيفية ظهور صورة الإطار في المتصفح."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توزيع متناسق لصورة الحدود",
+          "استخدام قيمة round لتجنب التشوه",
+          "تجربة تفاعلية مباشرة لنتائج الكود"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_6_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "مِنْ أَهْلِ النَّصَائِحِ الهَنْدَسِيَّةِ عِنْدَ التَّعَامُلِ مَعَ Border Images، الوِرَاسَةُ السَّلِيمَةُ لِلْقِيَمِ، وَالتَّأَكُّدُ مِنْ وُجُودِ إِطَارٍ بَدِيلٍ solid تَحَسُّباً لِعَدَمِ تَحْمِيلِ الصُّورَةِ لِأَيِّ سَبَبٍ.",
+        "caption_text": "أفضل الممارسات لضمان توافقية التصميم وتجربة المستخدم السليمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توفير حدود احتياطية بديلة للصور",
+          "اختبار التوافقية مع مختلف المتصفحات",
+          "تحسين أداء تحميل ملفات الصور الكبيرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_7_summary",
+      "title": "خلاصة الدرس والدعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي الخِتَامِ، نَكُونُ قَدِ اسْتَكْمَلْنَا حَلَّ تَحَدِّي Border Images بِكِفَايَةٍ عَالِيَةٍ. أَدْعُوكُمْ لِتَجْرِيبِ هَذِهِ الأَكْوادِ بِمُفْرَدِكُمْ وَتَعْدِيلِ القِيَمِ مِنْ خِلَالِ الرَّابِطِ المُوَجَّحِ فِي الوَصْفِ لِتَعْزِيزِ مَهَارَاتِكُمُ البرمجية.",
+        "caption_text": "خلاصة الدرس وتشجيع المطورين على تطبيق التحدي بأنفسهم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتمام التحدي البرمجي بنجاح",
+          "مراجعة الخصائص والقيم المستخدمة",
+          "متابعة دورة CSS للمزيد من التحديات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_border_images.asp"
+      ]
+    }
+  ]
+}
