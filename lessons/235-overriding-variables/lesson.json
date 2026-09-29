@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "235",
+  "title": "CSS Overriding Variables",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم الفرق بين Global Variables و Local Variables",
+    "تعلم كيفية عمل Override للمتغيرات داخل CSS",
+    "تطبيق المتغيرات المحلية في محددات معينة",
+    "تحسين هيكلة الكود باستخدام CSS Variables"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_variables_overriding.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Variables",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ عَمَلِ Override لِلْمُتَغَيِّرَاتِ، وَكَيْفَ نُفَرِّقُ بَيْنَ Global Variables وَ Local Variables لِتَحْكُمَ أَفْضَلَ فِي تَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Overriding Variables. سنتعلم اليوم كيفية التحكم في المتغيرات وتجاوز قيمها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "المتغيرات العالمية Global Variables متاحة في كامل المستند",
+          "المتغيرات المحلية Local Variables محدودة بنطاق Selector معين",
+          "تجاوز القيم يسمح بتخصيص أجزاء محددة من الصفحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_overriding.asp"
+      ]
+    },
+    {
+      "id": "global_vs_local",
+      "title": "مفهوم النطاق في المتغيرات",
+      "narration": {
+        "spoken_text": "تُعَرَّفُ Global Variables دَاخِلَ :root وَتَكُونُ مَرْئِيَّةً فِي كُلِّ مَكَانٍ. أَمَّا Local Variables فَيَتِمُّ تَعْرِيفُهَا دَاخِلَ Selector مُعَيَّنٍ، وَتُؤَثِّرُ فَقَطْ عَلَى هَذَا الْعُنْصُرِ وَمَا دَاخِلَهُ.",
+        "caption_text": "تعرف المتغيرات العالمية في :root بينما تعرف المتغيرات المحلية داخل محددات معينة."
+      },
+      "visual": {
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "root",
+            "label": ":root (Global)",
+            "active": false
+          },
+          {
+            "id": "body",
+            "label": "body",
+            "active": false
+          },
+          {
+            "id": "note",
+            "label": ".note (Local)",
+            "active": false
+          }
+        ],
+        "edges": [
+          {
+            "source": "root",
+            "target": "body",
+            "label": ""
+          },
+          {
+            "source": "root",
+            "target": "note",
+            "label": ""
+          }
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_overriding.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "تعريف المتغيرات الأساسية",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَذَا الْكُودِ. نُعَرِّفُ --primary-bg-color دَاخِلَ :root بِقِيمَةِ #1e90ff. هَذِهِ الْقِيمَةُ سَتُطَبَّقُ عَلَى كَافَّةِ الْعَنَاصِرِ الَّتِي تَسْتَخْدِمُ هَذَا الْمُتَغَيِّرَ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تعريف المتغيرات العامة في :root لتكون متاحة في كامل المستند."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ":root {\n  --primary-bg-color: #1e90ff;\n  --primary-color: #ffffff;\n}\nbody {\n  background-color: var(--primary-bg-color);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_overriding.asp"
+      ]
+    },
+    {
+      "id": "overriding_logic",
+      "title": "تطبيق الـ Override",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُرِيدُ تَغْيِيرَ لَوْنِ الْحُدُودِ لِعُنْصُرٍ مِثْلَ .note، نَقُومُ بِإِعَادَةِ تَعْرِيفِ --primary-bg-color دَاخِلَ هَذَا ال Selector. هَذَا الْإِجْرَاءُ يُؤَدِّي إِلَى تَجَاوُزِ الْقِيمَةِ الْعَالَمِيَّةِ وَاسْتِخْدَامِ الْقِيمَةِ الْمَحَلِّيَّةِ.",
+        "caption_text": "إعادة تعريف المتغير داخل .note يؤدي إلى تجاوز القيمة العالمية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container .note {\n  --primary-bg-color: red;\n  border: 1px solid var(--primary-bg-color);\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_overriding.asp"
+      ]
+    },
+    {
+      "id": "visual_output",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "فِي هَذِهِ الْمُعَايَنَةِ، نَرَى أَنَّ الْعُنْصُرَ الَّذِي يَحْمِلُ الْكَلَاسَ .note يَظْهَرُ بِحُدُودٍ حَمْرَاءَ، بَيْنَمَا بَقِيَّةُ الْعَنَاصِرِ تَسْتَخْدِمُ اللَّوْنَ الْأَزْرَقَ الْأَصْلِيَّ الْمُعَرَّفَ فِي :root.",
+        "caption_text": "تظهر العناصر بحدود حمراء داخل .note بينما تستخدم العناصر الأخرى اللون الأزرق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <h2>Title</h2>\n      <p class=\"note\">This is a note with red border.</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Border: 1px solid red (for .note)\nBorder: 2px solid #1e90ff (for h2)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_overriding.asp"
+      ]
+    },
+    {
+      "id": "new_local_variable",
+      "title": "استخدام متغير محلي جديد",
+      "narration": {
+        "spoken_text": "بَدَلاً مِنْ إِعَادَةِ تَعْرِيفِ نَفْسِ الْمُتَغَيِّرِ، يُمْكِنُنَا تَعْرِيفُ مُتَغَيِّرٍ جَدِيدٍ مِثْلَ --note-border-color. هَذَا يُعَدُّ مُمَارَسَةً جَيِّدَةً إِذَا كَانَ الْمُتَغَيِّرُ سَيُسْتَخْدَمُ فِي مَكَانٍ وَاحِدٍ فَقَطْ.",
+        "caption_text": "يمكن تعريف متغير محلي جديد بدلا من تجاوز المتغير العام."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container .note {\n  --note-border-color: red;\n  border: 1px solid var(--note-border-color);\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_overriding.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً أَنَّ ال Variables فِي CSS حَسَّاسَةٌ لِحَالَةِ الْأَحْرُفِ. اسْتَخْدِمْ أَسْمَاءً وَاضِحَةً وَمُعَبِّرَةً، وَحَاوِلْ حَصْرَ ال Override فِي أَضْيَقِ نِطَاقٍ مُمْكِنٍ لِتَجَنُّبِ تَعْقِيدِ الْكُودِ.",
+        "caption_text": "أفضل الممارسات: استخدم أسماء واضحة وحافظ على نطاق المتغيرات ضيقا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أسماء المتغيرات حساسة لحالة الأحرف",
+          "استخدم أسماء وصفية للمتغيرات",
+          "قلل من التجاوزات غير الضرورية",
+          "نظم المتغيرات في :root للقيم العامة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_overriding.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمَ حَوْلَ CSS Overriding Variables. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَتَأَكَّدُوا مِنْ فَهْمِكُمْ لِهَذِهِ الْمَفَاهِيمِ.",
+        "caption_text": "شكرا لمتابعتكم. جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلمنا كيفية تجاوز المتغيرات العالمية",
+          "فهمنا الفرق بين النطاق العام والمحلي",
+          "طبقنا أمثلة عملية على .note",
+          "راجعوا الرابط في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_overriding.asp"
+      ]
+    }
+  ]
+}
