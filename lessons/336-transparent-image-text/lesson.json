@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "336",
+  "title": "إنشاء نص ذو خلفية شفافة فوق الصور باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية دمج النصوص الشفافة فوق الصور في صفحات الويب باستخدام CSS",
+    "استخدام خاصية position مع قيم مثل relative و absolute لتحديد التموضع بدقة",
+    "تطبيق الشفافية الاحترافية باستخدام دالة rgba وتحديد الألوان الاحتياطية",
+    "تنسيق الحاويات والعناصر لضمان تجربة مستخدم مثالية ومرنة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_transparent.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة الدرس وأهمية النصوص الشفافة فوق الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ صَفْحَةِ وِبٍّ تَحْتَوِي عَلَى صُورَةٍ وَنَصٍّ ذِي خَلْفِيَّةٍ شَفَّافَةٍ أَوْ ما يُسَمَّى see-through بِاسْتِخْدَامِ أَقْوَاسِ container و content.",
+        "caption_text": "تعلم كيفية إنشاء صورة مع نص خلفية شفاف باستخدام CSS وتنسيق الحاويات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دمج النصوص مع الصور بأسلوب عصري",
+          "استخدام CSS لإنشاء خلفيات شفافة",
+          "تحسين المظهر البصري لصفحات الويب",
+          "التحكم الكامل في الشفافية والتموضع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_transparent.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "بناء هيكل HTML الأساسي للصورة والنص",
+      "narration": {
+        "spoken_text": "نَبْدَأُ الآنَ بِبِنَاءِ هَيْكَلِ HTML لِلصَّفْحَةِ. نَسْتَخْدِمُ عنصر div بِصِفَةِ container كَحَاضِنٍ عَامٍّ، ثُمَّ نُضِيفُ صُورَةَ notebook.jpg بِعَرْضِ مِئَةِ بِالْمِئَةِ، وَنَضَعُ بَدَلاً مِنْهَا عنصر div ثانياً يَمْتَلِكُ صِفَةَ content لِلتَّمْشِيَةِ مَعَ النَّصِّ.",
+        "caption_text": "بناء هيكل HTML باستخدام container و img و content."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"notebook.jpg\" alt=\"Notebook\" style=\"width:100%;\">\n      <div class=\"content\">\n        <h1>Heading</h1>\n        <p>Lorem ipsum..</p>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عرض صورة يغطي العرض الكامل مع مكان مخصص للنص السفلي.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_transparent.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق الحاوية الرئيسية باستخدام خاصية position",
+      "narration": {
+        "spoken_text": "لِنَقُمْ بِتَطْبِيقِ تَنْسِيقَاتِ CSS عَلَى الحاوية الرئيسة container. نُحَدِّدُ خاصية position بِقِيمَةِ relative، وَنَضَعُ أقصى عَرْضٍ max-width لِيُسَاوِي ثَمَانِمِائَةِ بِكْسِلْ، مَعَ جَعْلِ الهوامش اليسرى واليمنى تلقائية لِتَوَسُطِ الصَّفْحَةِ.",
+        "caption_text": "تنسيق الحاوية الرئيسية container وتحديد العرض الأقصى والتوسيط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  position: relative;\n  max-width: 800px;\n  margin: 0 auto;\n}",
+        "highlight_lines": [],
+        "output": "توسيط الحاوية في منتصف الشاشة بعرض أقصى 800 بكسل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_transparent.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تنسيق صندوق المحتوى النصي الشفاف",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الآنَ لِتَنْسِيقِ عُنْصُرِ content الدَّاخِلِيِّ. نَجْعَلُ خاصية position بِقِيمَةِ absolute لِتَثْبِيتِ النَّصِّ فَوْقَ الصُّورَةِ، وَنَضْعُ bottom بِقِيمَةِ صِفْرٍ لِيَظْهَرَ النَّصُّ فِي أَسْفَلِ الصُّورَةِ تَمَاماً، أَوْ نَسْتَخْدِمُ top لِلتَّثْبِيتِ فِي الْأَعْلَى.",
+        "caption_text": "ضبط تموضع محتوى النص باستخدام position absolute وتحديد الموقع bottom."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container .content {\n  position: absolute;\n  bottom: 0;\n}",
+        "highlight_lines": [],
+        "output": "تثبيت صندوق النص في أسفل الحاوية فوق الصورة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_transparent.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تطبيق الشفافية والألوان باستخدام rgba",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ التَّأْثِيرِ الشَّفَّافِ، نُحَدِّدُ لَوْناً احْتِيَاطِيّاً background بِقِيمَةِ rgb السوداء، ثُمَّ نُتْبِعُهُ بِقِيمَةِ rgba مَعَ دَرَجَةِ شَفَّافِيَّةٍ صِفْرٌ فَاصِلَةٌ خَمْسَةٌ لِخَلْقِ خَلْفِيَّةٍ سَوْدَاءَ شَفَّافَةٍ تَسْمَحُ بِرُؤْيَةِ الصُّورَةِ تَحْتَهَا.",
+        "caption_text": "استخدام خاصية background مع دالة rgba لتطبيق تأثير الشفافية بمقدار 0.5."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "background: rgb(0, 0, 0);\nbackground: rgba(0, 0, 0, 0.5);\ncolor: #f1f1f1;\nwidth: 100%;\npadding: 20px;",
+        "highlight_lines": [],
+        "output": "خلفية سوداء شفافة بنسبة 50 بالمئة مع نص رمادي فاتح.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_transparent.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "أفضل الممارسات والنصائح الهندسية لتصميم الويب",
+      "narration": {
+        "spoken_text": "عِنْدَ العَمَلِ عَلَى التَّصَامِيمِ الشَّفَّافَةِ، احْرِصْ دَائِماً عَلَى اخْتِيَارِ أَلْوَانِ نُصُوصٍ فاتحة مِثْلِ حَشْوِ color بَقِيمَةِ #f1f1f1 عِنْدَ اسْتِخْدَامِ خَلْفِيَّةٍ دَاكِنَةٍ، لِضْمَانِ قَابِلِيَّةِ القِرَاءَةِ وَتَحْسِينِ تجربة المستخدم.",
+        "caption_text": "أفضل الممارسات لضمان تباين الألوان وقابلية قراءة النصوص فوق الصور."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختيار ألوان نصوص فاتحة مع خلفيات داكنة شفافة",
+          "استخدام قيمة padding المناسبة لتجنب التصاق النصوص",
+          "اختبار التجاوب على مختلف شاشات الأجهزة الذكية",
+          "الاستفادة من الألوان الاحتياطية fallback colors"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_transparent.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس ومراجعة شاملة للمفاهيم المكتسبة",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ تَوْظِيفِ الخاصيات الرَّئِيسَةِ فِي CSS لِإِنْشَاءِ تَصْمِيمَاتِ نُصُوصٍ شَفَّافَةٍ فَوْقَ الصُّورِ بِاحْتِرَافِيَّةٍ عَالِيَةٍ. نَتَوَدَّعُكُمْ عَلَى أَمَلِ اللِّقَاءِ فِي دَرْسٍ قَادِمٍ مَعَ مَحْمُودِ عَبْدِالْحَمِيدِ فِي منبر CodeGalaxy.",
+        "caption_text": "خلاصة درس إنشاء نصوص شفافة فوق الصور واحتراف استخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهم آلية عمل position relative و absolute",
+          "تطبيق الشفافية المتقدمة عبر دالة rgba",
+          "تنسيق العناصر لإنشاء واجهات ويب جذابة",
+          "متابعة دورات CodeGalaxy للمزيد من المهارات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_transparent.asp"
+      ]
+    }
+  ]
+}
