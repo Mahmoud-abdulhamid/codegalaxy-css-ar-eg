@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "310",
+  "title": "تصميم قائمة تنقل فوق صورة باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية وضع قائمة تنقل فوق صورة",
+    "استخدام خاصية position للتحكم في العناصر",
+    "تنسيق القوائم الأفقية باستخدام CSS",
+    "تطبيق تقنيات background-size و background-position"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_navbar_image.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول دمج القوائم مع الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِضَافَةِ قَائِمَةِ تَنَقُّلٍ فَوْقَ صُورَةٍ خَلْفِيَّةٍ بِاسْتِخْدَامِ تَقْنِيَاتِ التَّمَوْضُعِ وَالتَّنْسِيقِ الْعَصْرِيِّ لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تصميم قائمة تنقل فوق صورة باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دمج العناصر المرئية مع القوائم",
+          "استخدام CSS للتحكم في التموضع",
+          "تحسين تجربة المستخدم في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_image.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للصفحة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكَلَاسِ bg-img لِوَضْعِ الصُّورَةِ، وَدَاخِلَهُ نَضَعُ container لِتَثْبِيتِ قَائِمَةِ التَّنَقُّلِ topnav الَّتِي تَحْتَوِي عَلَى رَوَابِطِ التَّنَقُّلِ الْأَسَاسِيَّةِ.",
+        "caption_text": "هيكل HTML يتكون من حاوية للصورة وحاوية للقائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"bg-img\">\n      <div class=\"container\">\n        <div class=\"topnav\">\n          <a href=\"#home\">Home</a>\n          <a href=\"#news\">News</a>\n          <a href=\"#contact\">Contact</a>\n          <a href=\"#about\">About</a>\n        </div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_image.asp"
+      ]
+    },
+    {
+      "id": "css_bg",
+      "title": "تنسيق الصورة الخلفية",
+      "narration": {
+        "spoken_text": "نُعَرِّفُ كَلَاسَ bg-img بِخَاصِيَّةِ background-image، وَنَضْبِطُ background-size عَلَى cover لِتَغْطِيَةِ الْمِسَاحَةِ، مَعَ ضَبْطِ position إِلَى relative لِتَكُونَ مَرْجِعاً لِلْعَنَاصِرِ الدَّاخِلِيَّةِ.",
+        "caption_text": "تنسيق الصورة الخلفية باستخدام background-size و position."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bg-img {\n  background-image: url(\"img_nature.jpg\");\n  min-height: 380px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: relative;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_image.asp"
+      ]
+    },
+    {
+      "id": "css_container",
+      "title": "تموضع القائمة داخل الصورة",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ position absolute لِلْكَلَاسِ container لِتَحْرِيكِهِ فَوْقَ الصُّورَةِ، مَعَ تَحْدِيدِ margin مُنَاسِبٍ لِضَمَانِ ظُهُورِ الْقَائِمَةِ بِشَكْلٍ مُنَسَّقٍ وَمُتَمَرْكِزٍ دَاخِلَ الْحَاوِيَةِ.",
+        "caption_text": "استخدام position absolute لتثبيت القائمة فوق الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  position: absolute;\n  margin: 20px;\n  width: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_image.asp"
+      ]
+    },
+    {
+      "id": "css_navbar",
+      "title": "تنسيق روابط القائمة",
+      "narration": {
+        "spoken_text": "نَقُومُ بِتَنْسِيقِ topnav بِخَاصِيَّةِ overflow hidden، ثُمَّ نُعَدِّلُ الرَّوَابِطَ بِاسْتِخْدَامِ float left لِتَصْطَفَّ بِجَانِبِ بَعْضِهَا، مَعَ إِضَافَةِ padding لِتَحْسِينِ الْمَظْهَرِ الْعَامِّ.",
+        "caption_text": "تنسيق روابط القائمة باستخدام float و padding."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav {\n  overflow: hidden;\n  background-color: #333;\n}\n.topnav a {\n  float: left;\n  color: #f2f2f2;\n  text-align: center;\n  padding: 14px 16px;\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_image.asp"
+      ]
+    },
+    {
+      "id": "css_hover",
+      "title": "إضافة تأثير التفاعل",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ تَفَاعُلٍ عِنْدَ مُرُورِ الْفَأْرَةِ، نَسْتَخْدِمُ pseudo-class الَّتِي تُسَمَّى hover، حَيْثُ نُغَيِّرُ background-color إِلَى لَوْنٍ فَاتِحٍ وَنُغَيِّرُ لَوْنَ النَّصِّ إِلَى الْأَسْوَدِ.",
+        "caption_text": "استخدام hover لإضافة تأثير تفاعلي عند مرور الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav a:hover {\n  background-color: #ddd;\n  color: black;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_image.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة النهائية",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ قَائِمَةُ التَّنَقُّلِ بِشَكْلٍ أَنِيقٍ فَوْقَ الصُّورَةِ، مَعَ تَأْثِيرَاتِ حَرَكَةٍ سَلِسَةٍ عِنْدَ التَّفَاعُلِ مَعَ الرَّوَابِطِ، مِمَّا يُعْطِي مَظْهَراً احْتِرَافِيّاً لِمَوْقِعِ الْوِبّ.",
+        "caption_text": "النتيجة النهائية: قائمة تنقل تفاعلية فوق صورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[ Home ] [ News ] [ Contact ] [ About ]\n---------------------------------------\n|                                     |\n|          صورة الخلفية الطبيعية        |\n|                                     |",
+        "highlight_lines": [],
+        "output": "تظهر القائمة فوق الصورة مع تأثير hover عند التمرير.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_image.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ دَمْجِ الْعَنَاصِرِ بِاسْتِخْدَامِ position، وَتَنْسِيقِ الْقَوَائِمِ بِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْأَحْجَامِ لِتَحْقِيقِ نَتَائِجَ إِبْدَاعِيَّةٍ جَدِيدَةٍ.",
+        "caption_text": "خلاصة: استخدم position و CSS لتصميم واجهات احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position للتحكم في الطبقات",
+          "تنسيق القوائم الأفقية بـ float",
+          "تطبيق تأثيرات hover التفاعلية",
+          "تجربة الأكواد عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_image.asp"
+      ]
+    }
+  ]
+}
