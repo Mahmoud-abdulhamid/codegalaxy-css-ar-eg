@@ -1,0 +1,6 @@
+@supports not (display: grid) {
+  .warning {
+    background-color: pink;
+    border: 1px solid red;
+  }
+}
