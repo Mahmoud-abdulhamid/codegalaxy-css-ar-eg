@@ -3,6 +3,8 @@
   "lesson_id": "89",
   "title": "CSS Position Code Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية عمل خاصية position في CSS",
     "تطبيق قيم position المختلفة عمليا",
