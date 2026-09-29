@@ -1,0 +1,6 @@
+@supports (display: grid) and (gap: 20px) {
+  .grid-layout {
+    display: grid;
+    gap: 20px;
+  }
+}
