@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "256",
+  "title": "مقدمة وتحدي CSS Grid",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم المفاهيم الأساسية لنظام CSS Grid في لغة CSS",
+    "تطبيق التحدي العملي الأول لاختبار المهارات",
+    "تنظيم العناصر بكفاءة عالية على صفحة الوب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_grid_intro.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة تحدي CSS Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ عَلَى تَحَدِّي الْبِدَايَةِ لِأَسَاسِيَّاتِ CSS Grid وَكَيْفَ نُخْتَبِرُ مَهَارَاتِنَا فِي تَنْظِيمِ عَنَاصِرِ الْوِبّ بِكَفَاءَةٍ عَالِيَةٍ.",
+        "caption_text": "مرحبا بكم في درس اليوم. سنتعرف على تحدي البداية لأسايسات CSS Grid وكيف نختبر مهاراتنا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على أساسيات CSS Grid",
+          "اختبار المهارات عبر تحدي برمجي عملي",
+          "بناء تخطيطات مرنة لصفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_concepts",
+      "title": "مفاهيم أساسيات Grid",
+      "narration": {
+        "spoken_text": "يُعْتَدُّ بِنِظَامِ CSS Grid كَأَحْدَثِ وَأَقْوَى أَدَوَاتِ التَّخْطِيطِ فِي لُغَةِ CSS. يُمَكِّنُنَا هَذَا النِّظَامُ مِنْ تَقْسِيمِ الشَّاشَةِ إِلَى أَعْمِدَةٍ وَصُفُوفٍ مُنْتَظَمَةٍ لِتَرْتِيبِ الْمُحْتَوَى بِدِقَّةٍ.",
+        "caption_text": "يعتد بنظام CSS Grid كأحدث وأقوى أدوات التخطيط في لغة CSS لتقسيم الشاشة بدقة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تخطيط ثنائي الأبعاد للأعمدة والصفوف",
+          "توزيع العناصر بمرونة وسهولة فائقة",
+          "التحكم الكامل في المسافات والمحاذاة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_code_setup",
+      "title": "تهيئة ملف CSS Grid",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ فِي كِتَابَةِ الشِّفْرَةِ الْبَرْمَجِيَّةِ. نُعَرِّفُ عُنْصُرَ الحَاوِيَةِ بِاسْتِخْدَامِ دِسْبْلَيْ جِرِيدْ لِتَفْعِيلِ النِّظَامِ وَجَعْلِ العَنَاصِرِ تَخْضَعُ لِقَوَاعِدِ التَّخْطِيطِ الجَدِيدَةِ.",
+        "caption_text": "نبدأ بكتابة الشفرة البرمجية وتعريف الحاوية باستخدام display grid لتفعيل النظام."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".grid-container {\n  display: grid;\n  grid-template-columns: auto auto auto;\n  gap: 10px;\n}",
+        "highlight_lines": [],
+        "output": "Container is set to display grid with 3 auto columns.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_code_details",
+      "title": "شرح تفاصيل الخصائص",
+      "narration": {
+        "spoken_text": "خَاصِّيَّةُ جِرِيدْ تَمْمْلِيتْ كُولُومْزْ تُحَدِّدُ عَدَدَ الْأَعْمِدَةِ وَعَرْضَهَا. أَمَّا خَاصِّيَّةُ جَابْ فَتَسْمَحُ لَنَا بِتَحْدِيدِ الْمَسَافَاتِ الْفَاصِلَةِ بَيْنَ الْعَنَاصِرِ دَاخِلَ الشَّبَكَةِ بِسُهُولَةٍ.",
+        "caption_text": "خاصية grid-template-columns تحدد عدد الأعمدة وعرضها، وخاصية gap تحدد المسافات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد الأعمدة باستخدام grid-template-columns",
+          "ضبط المسافات الفاصلة باستخدام خاصية gap",
+          "الحفاظ على تنسيق متناسق لجميع العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_html_markup",
+      "title": "هيكل عناصر HTML للتحدي",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى بِنَاءِ عَنَاصِرِ HTML. نَضَعُ الْحَاوِيَةَ الرَّئِيسِيَّةَ وَبِدَاخِلِهَا مَجْمُوعَةً مِنَ العَنَاصِرِ الْفَرْعِيَّةِ لِتَظْهَرَ مُتَرَتِّبَةً دَاخِلَ الشَّبَكَةِ بِمَظْهَرٍ جَمِيلٍ.",
+        "caption_text": "ننتقل إلى بناء عناصر HTML بوضع الحاوية الرئيسية وبداخلها العناصر الفرعية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"grid-container\">\n      <div class=\"item\">1</div>\n      <div class=\"item\">2</div>\n      <div class=\"item\">3</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Items rendered inside grid container.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_output_view",
+      "title": "معاينة المخرجات المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَنْفِذِ هَذِهِ الشِّفْرَةِ فِي الْمُتَصَفِّحِ، نَرََى الْعَنَاصِرَ قَدِ اصْطَفَّتْ فِي ثَلَاثَةِ أَعْمِدَةٍ مُتَسَاوِيَةٍ مَعَ وُجُودِ مَسَافَاتِ تَبَاعُدٍ وَاضِحَةٍ بَيْنَهُمَا تَقْرِيراً لِلتَّحَدِّي.",
+        "caption_text": "عند تنفيذ الشفرة في المتصفح، نصطف العناصر في ثلاثة أعمدة متساوية بمسافات واضحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "+-------+ +-------+ +-------+\n|   1   | |   2   | |   3   |\n+-------+ +-------+ +-------+",
+        "highlight_lines": [],
+        "output": "Visual grid layout preview.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "لِضَمَانِ أَدْفَلِ نَتِيجَةٍ، احْرِصْ دَائِماً عَلَى اسْتِخْدَامِ الوَحَدَاتِ الْمَرِنَةِ مِثْلَ الفْرَكْشَنْ أَوْ النِسَبِ الْمِئَوِيَّةِ مَعَ جِرِيدْ، وَاحْتَرِسْ مِنْ نِسْيَانِ تَعْرِيفِ دِسْبْلَيْ جِرِيدْ.",
+        "caption_text": "احرص دائما على استخدام الوحدات المرنة والنسب المئوية مع Grid وتجنب نسيان display grid."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام الوحدات المرنة لتصميم متجاوب",
+          "التحقق من صحة تعريف الحاوية الرئيسية",
+          "اختبار التخطيط على مختلف الأجهزة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس والدعوة للتجربة",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ مُقَدِّمَةِ وتَحَدِّي جِرِيدْ بِنَجَاحٍ. أَدْعُوكُمْ لِزِيَارَةِ الرَّابِطِ فِي الوَصْفِ لِتَجْرِبَةِ الأَكْوَدِ بِنَفْسِكُمْ وَمُتَابَعَةِ الدَّوْرَةِ المُمَتِّعَةِ مَعَ مَحْمُودِ عَبْدالحَمِيد.",
+        "caption_text": "بهذا نكون أتممنا درس مقدمة وتحدي Grid. ندعوكم لتجربة الأكواد بأنفسكم من الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إتمام تحدي CSS Grid بنجاح تام",
+          "تجربة الأكواد العملية عبر الرابط أدناه",
+          "انتظرونا في الدروس القادمة من الدورة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_intro.asp"
+      ]
+    }
+  ]
+}
