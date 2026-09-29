@@ -1,0 +1,6 @@
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+.button2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
