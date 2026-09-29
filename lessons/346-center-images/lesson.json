@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "346",
+  "title": "توسيط الصور باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية توسيط الصور باستخدام خصائص CSS",
+    "التعرف على أهمية تحويل العنصر إلى block",
+    "استخدام خاصية margin مع القيمة auto",
+    "تجنب الأخطاء الشائعة عند ضبط عرض الصورة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_center.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول توسيط الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَوَسِيطِ الصُّوَرِ بِاسْتِخْدَامِ خَصَائِصِ CSS بِطَرِيقَةٍ احْتِرَافِيَّةٍ وَسَلِسَةٍ لِتَظْهَرَ صَفَحَاتُ الْوِبّ بِشَكْلٍ مُنَسَّقٍ وَجَذَّابٍ.",
+        "caption_text": "مرحبا بكم في درس توسيط الصور باستخدام CSS لتنسيق صفحات الويب بشكل احترافي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توسيط الصور يعزز من جمالية تصميم صفحات الويب",
+          "نستخدم CSS للتحكم في تموضع العناصر",
+          "سنتعلم الطريقة القياسية باستخدام margin و display"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_center.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "القواعد الأساسية للتوسيط",
+      "narration": {
+        "spoken_text": "لِتَوَسِيطِ أَيِّ Element مِنْ نَوْعِ img، يَجِبُ عَلَيْنَا أَوَّلاً تَحْوِيلُهُ إِلَى block Element، ثُمَّ ضَبْطُ خَاصِيَّةِ margin-left وَ margin-right عَلَى الْقِيمَةِ auto. هَذِهِ الْخُطْوَةُ تَجْعَلُ الْمُتَصَفِّحَ يُوَزِّعُ الْمَسَافَاتِ الْفَارِغَةَ بِالتَّسَاوِي عَلَى الْجَانِبَيْنِ.",
+        "caption_text": "لتحويل الصورة إلى عنصر block وتوسيطها نستخدم خاصية margin بقيمة auto."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحويل العنصر إلى block باستخدام display: block",
+          "ضبط margin-left على auto",
+          "ضبط margin-right على auto"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_center.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق الكود العملي",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدِ الْآنَ كَيْفَ نَكْتُبُ هَذَا فِي كُودِ CSS. نَقُومُ بِتَعْرِيفِ Class بِاسْمِ center، وَنُطَبِّقُ عَلَيْهِ الْخَصَائِصَ الَّتِي ذَكَرْنَاهَا. لَاحِظْ كَيْفَ نُحَدِّدُ width لِلصُّورَةِ لِتَكُونَ مَثَلاً خَمْسِينَ بِالْمِئَةِ لِضَمَانِ ظُهُورِ التَّوَسِيطِ بِشَكْلٍ وَاضِحٍ.",
+        "caption_text": "تطبيق كود CSS لتوسيط الصورة عبر كلاس center."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".center {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_center.asp"
+      ]
+    },
+    {
+      "id": "html_usage",
+      "title": "استخدام الكلاس في HTML",
+      "narration": {
+        "spoken_text": "بَعْدَ كِتَابَةِ كُودِ CSS، نَقُومُ بِرَبْطِهِ بِعُنْصُرِ img فِي HTML عَنْ طَرِيقِ إِسْنَادِ الْقِيمَةِ center إِلَى Attribute الَّذِي يُدْعَى class. بِهَذِهِ الْبَسَاطَةِ، سَتُصْبِحُ الصُّورَةُ فِي مُنْتَصَفِ الصَّفْحَةِ تَمَاماً.",
+        "caption_text": "ربط كلاس CSS بعنصر img في HTML."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <img src=\"paris.jpg\" alt=\"Paris\" class=\"center\">\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "صورة متمركزة في منتصف الصفحة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_center.asp"
+      ]
+    },
+    {
+      "id": "notes",
+      "title": "ملاحظات تقنية هامة",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَنْتَبِهَ إِلَى أَنَّ التَّوَسِيطَ لَنْ يَعْمَلَ إِذَا كَانَتْ قِيمَةُ width مُحَدَّدَةً بِمِئَةٍ بِالْمِئَةِ، لِأَنَّ الصُّورَةَ سَتَأْخُذُ كَامِلَ عَرْضِ الْحَاوِيَةِ. دَائِماً تَأَكَّدْ مِنْ ضَبْطِ الْعَرْضِ بِشَكْلٍ مُنَاسِبٍ لِتَرَى النَّتِيجَةَ الْمَطْلُوبَةَ.",
+        "caption_text": "تنبيه: لا يمكن توسيط الصورة إذا كان العرض 100."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "لا يعمل التوسيط إذا كان العرض 100",
+          "تأكد من اختيار عرض مناسب للصورة",
+          "راجع دروس CSS Images لمزيد من التنسيقات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_center.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ تَوَسِيطِ الصُّوَرِ بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِ مَهَارَاتِكُمْ. كَانَ مَعَكُمْ مَحْمُود عَبْدِ الْحَمِيد، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display: block ضروري",
+          "استخدام margin: auto للجانبين",
+          "طبقوا الكود عبر الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_center.asp"
+      ]
+    }
+  ]
+}
