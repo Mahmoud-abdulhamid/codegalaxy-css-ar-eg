@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "285",
+  "title": "CSS Layout Templates",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعرف قوالب تخطيطات الويب باستخدام CSS",
+    "استخدام قوالب Header و Columns و Footer",
+    "تطبيق Topnav و Sidenav في تصميم المواقع",
+    "بناء مواقع مرنة ومستجيبة بسرعة واحترافية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_templates.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة عن CSS Layout Templates",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى CSS Layout Templates وَكَيْفَ نَسْتَخْدِمُ قَوَالِبَ التَّخْطِيطِ الْمُسْتَجِيبَةِ لِبِنَاءِ مَوَاقِعِ الْوِبّ بِسُرْعَةٍ وَاحْتِرَافِيَّةٍ عَالِيَةٍ.",
+        "caption_text": "مرحبا بكم في درس قوالب التخطيط واستخدام CSS Layout Templates لبناء صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية قوالب التخطيط في تصميم مواقع الويب",
+          "استخدام CSS Layout Templates الجاهزة",
+          "توفير الوقت وتسريع عملية تطوير الواجهات",
+          "دعم الاستجابة للشاشات المختلفة Responsive Design"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_templates_types",
+      "title": "أنواع قوالب CSS Layout",
+      "narration": {
+        "spoken_text": "تَتَوَفَّرُ عِدَّةُ قَوَالِبِ أَسَاسِيَّةٍ جَاهِزَةٍ لِلِاسْتِخْدَامِ مِثْلَ قَوَالِبِ تَقْسِيمِ الرَّأْسِ وَالْأَعْمِدَةِ وَالتَّذْيِيلِ. يُمْكِنُكُمْ تَحْدِيدُ تَخْطِيطَاتِ مَوَاقِعِكُمْ بِكُلِّ سُهُولَةٍ بِمَا يُنَاسِبُ مُتَطَلَّبَاتِ الْمَشْرُوعِ الْبَرْمَجِيِّ.",
+        "caption_text": "نتعرف على أنواع القوالب الجاهزة مثل Header و Columns و Footer لبناء هيكل الموقع."
+      },
+      "visual": {
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "header",
+            "label": "Header",
+            "active": true
+          },
+          {
+            "id": "columns",
+            "label": "Columns",
+            "active": true
+          },
+          {
+            "id": "footer",
+            "label": "Footer",
+            "active": true
+          }
+        ],
+        "edges": [
+          {
+            "source": "header",
+            "target": "columns",
+            "label": ""
+          },
+          {
+            "source": "columns",
+            "target": "footer",
+            "label": ""
+          }
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_code_header_columns",
+      "title": "تصميم Header و Columns و Footer",
+      "narration": {
+        "spoken_text": "نَعْرِضُ هُنَا نَمُوذَجاً بَرْمَجِيّاً لِتَقْسِيمِ صَفْحَةِ الْوِبّ إِلَى رَأْسِ صَفْحَةٍ وَأَعْمِدَةٍ مُتَسَاوِيَةٍ وَتَذْيِيلٍ. نَسْتَخْدِمُ خَوَاصَّ CSS لِضَمَانِ تَنْسِيقِ الْعَنَاصِرِ بِشَكْلٍ مُتناسقٍ وَجَمِيلٍ.",
+        "caption_text": "شرح كود تصميم Header و Columns و Footer باستخدام قواعد CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "template_columns.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"header\">\n      <h1>Header</h1>\n    </div>\n    <div class=\"row\">\n      <div class=\"column\">Column</div>\n      <div class=\"column\">Column</div>\n    </div>\n    <div class=\"footer\">\n      <p>Footer</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عرض الرأس والأعمدة والتذييل بشكل مرتب في المتصفح.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_topnav_sidenav",
+      "title": "أنظمة التنقل Topnav و Sidenav",
+      "narration": {
+        "spoken_text": "مِنَ الْمُهِمِّ أَيْضاً تَمْكِينُ الْمُسْتَخْدِمِ مِنَ التَّنَقُّلِ بِسُهُولَةٍ عَبْرَ إِضَافَةِ شَرِيطِ تَنَقُّلٍ عُلْوِيّ Topnav أَوْ شَرِيطٍ جَانِبِيّ Sidenav لِإِثْرَاءِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي كُلِّ المَشَارِيعِ.",
+        "caption_text": "إضافة أشرطة التنقل العلوية Topnav والجانبية Sidenav لتسهيل تصفح الموقع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Topnav لتنظيم الروابط العلوية",
+          "استخدام Sidenav للقوائم الجانبية السريعة",
+          "تنسيق الروابط والعناصر باستخدام CSS",
+          "تحسين تجربة التصفح عبر الأجهزة المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_flexbox_grid",
+      "title": "التقنيات الحديثة Flexbox و Grid",
+      "narration": {
+        "spoken_text": "تُتيحُ لَنَا تَقْنِيَاتُ CSS الْحَدِيثَةُ مِثْلَ Flexbox وَ Grid بِنَاءَ قَوَالِبَ مَارِنَةٍ وَمُسْتَجِيبَةٍ بِكِفَاءَةٍ عَالِيَةٍ. يُمْكِنُكُمْ تَجْرِبَةُ هَذِهِ الْخِيَارَاتِ لِتَحْقِيقِ أَفْضَلِ تَخْطِيطٍ لِمَشَارِيعِكُمُ الْبَرْمَجِيَّةِ.",
+        "caption_text": "استخدام تقنيات Flexbox و Grid الحديثة لبناء تخطيطات مرنة ومتجاوبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "layout.css",
+        "code": ".row {\n  display: flex;\n  flex-wrap: wrap;\n}\n.column {\n  flex: 1;\n  padding: 20px;\n}",
+        "highlight_lines": [],
+        "output": "توزيع مرن للأعمدة باستخدام Flexbox.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَامِ قَوَالِبِ CSS، احْرِصُوا دَائِماً عَلَى تَعْدِيلِهَا وَحِفْظِهَا بِمَا يُنَاسِبُ هَدَفَكُمُ الْبَرْمَجِيَّ. يُمْكِنُكُمُ الِاسْتِفَادَةُ مِنْ بِيئَاتِ العَمَلِ السَّحَابِيَّةِ لِتَطْوِيرِ مَوَاقِعِكُمْ مِنْ الصِّفْرِ.",
+        "caption_text": "أفضل الممارسات لتعديل وحفظ واستخدام القوالب في مشاريع الويب الخاصة بك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "حرية تعديل وحفظ ومشاركة القوالب",
+          "إمكانية بناء المواقع من الصفر بسهولة",
+          "اختبار القوالب على مختلف الشاشات",
+          "تنظيم ملفات CSS للصيانة المستمرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ CSS Layout Templates لِبِنَاءِ صَفَحَاتِ وِبٍّ مُتَسَقَةٍ وَمُسْتَجِيبَةٍ. نَتَمَنَى أَنْ يَكُونَ الشَّرْحُ قَدْ نَالَ إِعْجَابَكُمْ، وَنَرْجُو مِنْكُمْ مُتَابَعَةَ الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "خلاصة درس قوالب تخطيط CSS وكيفية الاستفادة منها في مشاريع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص شامل لقوالب CSS Layout",
+          "أهمية التصميم المتجاوب Responsive",
+          "دعوة لتجربة الأكواد بأنفسكم",
+          "انتظرونا في الدرس القادم مع محمود عبدالحميد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_templates.asp"
+      ]
+    }
+  ]
+}
