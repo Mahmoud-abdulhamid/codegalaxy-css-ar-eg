@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "161",
+  "title": "شرح خاصية CSS border-image بالتفصيل",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم border-image في CSS وكيفية استخدام الصور كإطارات للعناصر",
+    "التعرف على كيفية تقسيم الصورة إلى تسعة أجزاء باستخدام border-image-slice",
+    "تطبيق قيم repeat و stretch لتكرار أو مطاطية الأجزاء الوسطى للإطار",
+    "التعامل مع القيم المختلفة للتقطيع بنسب مئوية أو بالبكسل لاحتراف التصميم"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_border_images.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن CSS border-image",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ border-image الَّتِي تُمَكِّنُنَا مِنْ تَحْدِيدِ صُورَةٍ كَإِطَارٍ حَوْلَ أَيِّ عُنْصُرٍ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تعرف على كيفية استخدام خاصية border-image لتحديد صورة كإطار للعناصر بدلا من الحدود التقليدية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام الصور كإطارات متقدمة للعناصر في صفحات الويب",
+          "تجاوز الحدود العادية والتقليدية في التصميم",
+          "إمكانية تخصيص الأشكال والألوان عبر ملفات الصور الخارجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "آلية عمل خاصية border-image",
+      "narration": {
+        "spoken_text": "تَعْمَلُ خَاصِيَّةُ border-image عَلَى أَخْذِ الصُّورَةِ وَتَقْسِيمِهَا إِلَى تِسْعَةِ أَقْسَامٍ، مِثْلَ لُعْبَةِ تِيكْ تَاكْ تُوكْ. حَيْثُ تُوضَعُ الزَّوَايَا فِي الزَّوَايَا، وَتَتَكَرَّرُ أَوْ تَتَمَدَّدُ الْأَقْسَامُ الْوُسْطَى حَسَبَ طَلَبِكَ.",
+        "caption_text": "تقوم الخاصية بتقسيم الصورة إلى تسعة أقسام وتوزع الزوايا والأجزاء الوسطى بناء على التوجيهات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تقسيم الصورة إلى تسعة أقسام مثل رقعة اللعبة",
+          "تثبيت الزوايا في الأماكن المخصصة لها تماما",
+          "تكرار أو تمدد الأجزاء الوسطى لملء المساحة المتاحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "الشروط الأساسية والمتطلبات",
+      "narration": {
+        "spoken_text": "لِكَيْ تَعْمَلَ خَاصِيَّةُ border-image بِشَكْلٍ صَحِيحٍ، يَجَبُ أَنْ يَمْتَلِكَ الْعُنْصُرُ خَاصِيَّةَ border الْعَادِيَّةَ أَيْضاً، مِثْلَ تَحْدِيدِ السُّمكِ وَاللون الشَّفَّافِ، إِضَافَةً إِلَى مَسَارِ الصُّورَةِ.",
+        "caption_text": "يجب تعيين خاصية border العادية أولا مع لون شفاف لكي تعمل خصائص الإطار المصور بنجاح."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ضرورة تحديد border عادي لا يقل عن سمك معين",
+          "استخدام قيمة transparent للون الحد الأساسي",
+          "تحديد مصدر الصورة بدقة عبر دالة url"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "مثال استخدام round مع border-image",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَسْتَخْدِمُ url لِتَحْدِيدِ مَسَارِ الصُّورَةِ border.png، وَرَقْمَ ثَلَاثِينَ لِلتَّقْطِيعِ، ثُمَّ نَسْتَخْدِمُ قِيمَةَ round لِتَكْرَارِ الْقِسْمِ الْأَوْسَطِ لِيَمْلَأَ الْمِسَاحَةَ بِشَكْلٍ مُتَنَاسِقٍ.",
+        "caption_text": "نستعرض كود CSS لاستخدام صورة الإطار مع قيمة round لتكرار الجزء الأوسط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#borderimg {\n  border: 10px solid transparent;\n  padding: 15px;\n  border-image: url(border.png) 30 round;\n}",
+        "highlight_lines": [],
+        "output": "يظهر العنصر بإطار مصور متكرر الزوايا والأجزاء الوسطى",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "مثال استخدام stretch مع border-image",
+      "narration": {
+        "spoken_text": "بَدَلاً مِنَ التَّكْرَارِ، يُمْكِنُنَا اسْتِخْدَامُ قِيمَةِ stretch. فِي هَذَا الْمِثَالِ، يَتِمُّ مَطْطُ أَوْ تَمْدِيدُ الْقِسْمِ الْأَوْسَطِ مِنَ الصُّورَةِ لِيَمْلَأَ الْمِسَاحَةَ الْمُخَصَّصَةَ لِلْإِطَارِ كَامِلَةً.",
+        "caption_text": "تتيح قيمة stretch تمدد الجزء الأوسط من الصورة لملء الفراغ بدلا من تكراره."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#borderimg {\n  border: 10px solid transparent;\n  padding: 15px;\n  border-image: url(border.png) 30 stretch;\n}",
+        "highlight_lines": [],
+        "output": "يظهر العنصر بإطار مطمطود الأجزاء الوسطى",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "تغيير قيم التقطيع Slice Values",
+      "narration": {
+        "spoken_text": "تُغَيِّرُ قِيَمُ التَّقْطِيعِ الْمُخْتَلِفَةُ مَظْهَرَ إِطَارِ الصُّورَةِ تَمَاماً. يُمْكِنُنَا اسْتِخْدَامُ أَرْقَامٍ بِالْبِكْسِلِ أَوْ نِسَبٍ مِئَوِيَّةٍ مِثْلَ عِشْرِينَ بِالْمِائَةِ أَوْ ثَلَاثِينَ بِالْمِائَةِ لِلتَّحْكُمِ الدَّقِيقِ.",
+        "caption_text": "تغيير قيم التقطيع بالبكسل أو النسبة المئوية يؤثر بشكل جذري على شكل الإطار النهائي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#borderimg1 {\n  border: 10px solid transparent;\n  padding: 15px;\n  border-image: url(border.png) 50 round;\n}\n#borderimg2 {\n  border: 10px solid transparent;\n  padding: 15px;\n  border-image: url(border.png) 20% round;\n}",
+        "highlight_lines": [],
+        "output": "تفاوت في شكل الإطار بناء على قيم التقطيع المختلفة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_border_images.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "أفضل الممارسات وخلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَذَكَّرْ دَائِماً أَنَّ خَاصِيَّةَ border-image تُضْفِي لَمْسَةً جَمَالِيَّةً فَرِيدَةً عَلَى مَوَاقِعِ الْوِبّ، شَرطَ التأكُّد مِنْ تَعْيِينِ الْحُدُودِ الشَّفَّافَةِ لِتَفَادِي تَدَاخُلِ التَّصَامِيمِ.",
+        "caption_text": "احرص على استخدام الحدود الشفافة واختيار قيم التقطيع المناسبة للحصول على أفضل تصميم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام border الشفاف كمتطلب أساسي للخاصية",
+          "تجربة نسب مئوية وبكسلات مختلفة للوصول للشكل المطلوب",
+          "اختبار التوافقية والتصاميم على متصفحات الويب المختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_border_images.asp"
+      ]
+    }
+  ]
+}
