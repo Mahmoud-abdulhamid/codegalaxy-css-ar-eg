@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "274",
+  "title": "CSS RWD Viewport Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام الـ viewport meta tag في Responsive Web Design",
+    "تدريب العملي على كتابة وتشغيل كود الـ meta الخاص بالـ viewport",
+    "تطبيق أفضل الممارسات البرمجية لضمان توافق صفحات الويب مع الشاشات المختلفة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_rwd_viewport.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة تحدي Viewport",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْعَمَلِيِّ مِنْ دَوْرَةِ CSS، سَنَتَعَرَّفُ الْيَوْمَ عَلَى تَحَدِّي الْ viewport لِلتَّأَكُّدِ مِنْ تَصْمِيمِ الشَّاشَاتِ الْمُتَوَافِقَةِ فِي Responsive Web Design مَعَ الْمُدَرِّبِ مَحْمُودِ عَبْدِالْحَمِيدِ.",
+        "caption_text": "مرحبا بكم في درس تحدي Viewport ضمن دورة CSS لبناء صفحات الويب المتجاوبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار الفهم العملي لـ viewport meta tag",
+          "بناء صفحات ويب متجاوبة Responsive Web Design",
+          "تحسين تجربة المستخدم على الهواتف المحمولة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "scene_concepts",
+      "title": "مفاهيم Viewport الأساسية",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى فَهْمِ دَوْرِ viewport meta tag فِي تَحْدِيدِ عَرْضِ الشَّاشَةِ وَمُسْتَوَى التَّكْبِيرِ، حَيْثُ نَسْتَخْدِمُ هَذَا الْعُنْصَرَ دَاخِلَ قِسْمِ head لِضَمَانِ عَرْضِ الْمُحْتَوَى بِشَكْلٍ صَحِيحٍ عَلَى جَمِيعِ الأَجْهِزَةِ الذَّكِيَّةِ وَالْحَاسُوبِ.",
+        "caption_text": "دور viewport meta tag في التحكم بعرض الصفحة ومستوى التكبير الافتراضي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "يكتب Tag داخل قسم head في مستند HTML",
+          "يحدد العرض ليتطابق مع عرض الجهاز width=device-width",
+          "يضبط مستوى التكبير الابتدائي بـ initial-scale=1.0"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "scene_code_1",
+      "title": "كتابة هيكل HTML الأساسي",
+      "narration": {
+        "spoken_text": "نَبْدَأُ الآنَ كِتَابَةَ الْكُودِ الْعَمَلِيِّ لِلتَّحَدِّي، حَيْثُ نَكْتُبُ فِي البِدَايَةِ دُوكْ تَايْبْ HTML ثُمَّ نَفْتَحُ عُنْصَرَ html وَدَاخِلَهُ قِسْمَ head الَّذِي سَيَحْتَوِي عَلَى الْعُنْصَرَ الْمَطْلُوبَ.",
+        "caption_text": "كتابة الهيكل الأساسي لمستند HTML مع تعريف DOCTYPE."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Viewport Challenge</title>\n  </head>\n  <body>\n    <h1>Responsive Web Design</h1>\n    <p>This is a viewport challenge page.</p>\n  </body>\n</html>",
+        "highlight_lines": [
+          1,
+          2,
+          3
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "scene_code_2",
+      "title": "إضافة Viewport Meta Tag",
+      "narration": {
+        "spoken_text": "نُوجِّهُ الآنَ انْتِبَاهَكُمْ إِلَى إِضَافَةِ سَطْرِ الْمِيتَا التَّالِي لِحِلِّ التَّحَدِّي بِشَكْلٍ دَقِيقٍ، حَيْثُ نَكْتُبُ meta name viewport ثُمَّ نَحُدِّدُ السَّمَاتِ اللازِمَةَ لِضَمَانِ التَّجَاوُبِ.",
+        "caption_text": "إضافة meta tag الخاص بالـ viewport داخل قسم head."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Viewport Challenge</title>\n  </head>\n  <body>\n    <h1>Responsive Web Design</h1>\n    <p>This is a viewport challenge page.</p>\n  </body>\n</html>",
+        "highlight_lines": [
+          1,
+          2
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "scene_code_3",
+      "title": "استكمال قسم <body>",
+      "narration": {
+        "spoken_text": "نُوَصِّلُ الْعَمَلَ بِكِتَابَةِ قِسْمِ body وَاضِعِينَ فِيهِ عُنْصُرَ عُنْوَانِ h1 وَفَقْرَةً نَصِّيَّةً p لِلتَّأَكُّدِ مِنْ ظُهُورِ الْمُحْتَوَى بِمُسْتَوَى تَعْرِيفٍ سَلِيمٍ وَوَاضِحٍ لِلْمُسْتَخْدِمِينَ.",
+        "caption_text": "إضافة المحتوى المرئي داخل قسم body لتكتمل الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Viewport Challenge</title>\n  </head>\n  <body>\n    <h1>Responsive Web Design</h1>\n    <p>This is a viewport challenge page.</p>\n  </body>\n</html>",
+        "highlight_lines": [
+          1,
+          2,
+          3
+        ],
+        "output": "Responsive Web Design\nThis is a viewport challenge page.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "مِنْ أَجْضَلِ الْمُمَارَسَاتِ أَنْ نَتَأَكَّدَ دَائِماً مِنْ إِدْرَاجِ هَذَا ال meta tag فِي جَمِيعِ صَفْحَاتِ ال وِبّ لِضَمَانِ عَمَلِ قَوَاعِدِ ال CSS Responsive بِنَجَاحٍ تَامٍّ عَلَى شَاشَاتِ الْهَوَاتِفِ وَالأَجْهِزَةِ اللوحية.",
+        "caption_text": "أفضل الممارسات لضمان تجاوب صفحات الويب بكفاءة عالية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "وضع viewport meta tag في جميع صفحات الويب",
+          "التاكد من صحة القيم width و initial-scale",
+          "اختبار التجاوب عبر Web Browser Developer Tools"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_viewport.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي الْخِتَامِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ حِلِّ تَحَدِّي ال viewport لِتَصْمِيمِ صَفْحَاتِ وِبٍّ مُتَوَافِقَةٍ، أَدْعُوكُمْ لِتَجْرِبَةِ الأَكْوَدِ بِمُفْرَدِكُمْ وَمُمَارَسَتِهَا مِنْ خِلَالِ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ مَعَ الْمُدَرِّبِ مَحْمُودِ عَبْدِالْحَمِيدِ.",
+        "caption_text": "خلاصة درس تحدي Viewport ودعوة لتطبيق الأكواد عمليا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم إنجاز تحدي Viewport بنجاح تام",
+          "فهمنا أهمية Responsive Web Design في تطوير الويب",
+          "تابعونا في الدروس القادمة لمزيد من التحديات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_viewport.asp"
+      ]
+    }
+  ]
+}
