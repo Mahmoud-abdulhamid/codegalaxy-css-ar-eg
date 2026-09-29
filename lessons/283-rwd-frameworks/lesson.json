@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "283",
+  "title": "Responsive Web Design Frameworks",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم دور CSS Frameworks في تصميم صفحات الويب المتجاوبة",
+    "التعرف على كيفية استخدام W3.CSS لبناء صفحات مرنة",
+    "استكشاف Bootstrap كإطار عمل شهير لتصميم الويب",
+    "تطبيق مفاهيم Responsive Web Design عمليا"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_rwd_frameworks.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-2cd7cb940b391465.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css_rwd_frameworks.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Frameworks",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَحَدَّثُ عَنْ CSS Frameworks، وَهِيَ أَدَوَاتٌ قَوِيَّةٌ تُسَاعِدُ الْمُطَوِّرِينَ عَلَى بِنَاءِ مَوَاقِعِ الويب الْمُتَجَاوِبَةِ بِسُهُولَةٍ وَكِفَاءَةٍ عَالِيَةٍ دُونَ الْحَاجَةِ لِكِتَابَةِ كُلِّ شَيْءٍ مِنَ الصِّفْرِ.",
+        "caption_text": "تساعد CSS Frameworks المطورين على بناء مواقع الويب المتجاوبة بكفاءة عالية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توفير الوقت والجهد في كتابة CSS",
+          "ضمان التوافق مع مختلف أحجام الشاشات",
+          "تقديم مكونات جاهزة للاستخدام",
+          "دعم مبادئ Responsive Web Design"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_frameworks.asp"
+      ]
+    },
+    {
+      "id": "w3css_intro",
+      "title": "استخدام إطار العمل W3.CSS",
+      "narration": {
+        "spoken_text": "يُعَدُّ W3.CSS خِيَاراً مُمْتَازاً لِتَصْمِيمِ صَفَحَاتِ الويب الْمُتَجَاوِبَةِ. هَذَا الْإِطَارُ يَجْعَلُ الْمَوَاقِعَ تَبْدُو جَمِيلَةً وَمُنَظَّمَةً عَلَى جَمِيعِ الْأَحْجَامِ، وَيُوَفِّرُ لَنَا مَجْمُوعَةً مِنَ ال Classes الْجَاهِزَةِ لِتَنْظِيمِ الْمُحْتَوَى دَاخِلَ ال Containers.",
+        "caption_text": "يعتبر W3.CSS إطار عمل سهل الاستخدام لجعل صفحات الويب تبدو جميلة على أي حجم شاشة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "سهولة التطبيق والتعلم",
+          "تصميم متجاوب تلقائيا",
+          "لا يحتاج إلى ملفات JavaScript خارجية",
+          "خفيف الوزن وسريع التحميل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_frameworks.asp"
+      ]
+    },
+    {
+      "id": "w3css_code",
+      "title": "هيكل كود W3.CSS",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِرَبْطِ مَلَفِّ ال CSS عَبْدَ ال link Tag، ثُمَّ نَسْتَخْدِمُ ال Classes مِثْلَ w3-container وَ w3-third لِتَقْسِيمِ الصَّفْحَةِ إِلَى أَعْمِدَةٍ مُتَجَاوِبَةٍ تَتَكَيَّفُ مَعَ حَجْمِ الشَّاشَةِ.",
+        "caption_text": "يستخدم الكود Classes مثل w3-container و w3-third لإنشاء تخطيط متجاوب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  </head>\n  <body>\n    <div class=\"w3-container w3-blue\">\n      <h1>W3Schools Demo</h1>\n    </div>\n    <div class=\"w3-row-padding\">\n      <div class=\"w3-third\">\n        <h2>London</h2>\n        <p>London is the capital city of England.</p>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_frameworks.asp"
+      ]
+    },
+    {
+      "id": "bootstrap_intro",
+      "title": "التعريف بإطار العمل Bootstrap",
+      "narration": {
+        "spoken_text": "إِطَارُ الْعَمَلِ الْآخَرُ الْأَكْثَرُ شُهْرَةً هُوَ Bootstrap. يَعْتَمِدُ هَذَا الْإِطَارُ عَلَى HTML وَ CSS لِتَقْدِيمِ نِظَامِ Grid مُتَطَوِّرٍ، مِمَّا يُسَهِّلُ عَلَيْنَا بِنَاءَ تَخْطِيطَاتٍ مُعَقَّدَةٍ تَتَغَيَّرُ بِحَسَبِ حَجْمِ الشَّاشَةِ بِشَكْلٍ انْسِيَابِيٍّ.",
+        "caption_text": "Bootstrap هو إطار عمل شهير يعتمد على نظام Grid لبناء تخطيطات متجاوبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "نظام Grid مرن وقوي",
+          "مكونات UI جاهزة مثل الأزرار والقوائم",
+          "دعم واسع للمتصفحات",
+          "مجتمع كبير ومصادر تعليمية وفيرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_frameworks.asp"
+      ]
+    },
+    {
+      "id": "bootstrap_code",
+      "title": "مثال عملي على Bootstrap",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَسْتَخْدِمُ ال Classes مِثْلَ container وَ row وَ col-sm-4. هَذِهِ ال Classes تُحَدِّدُ كَيْفِيَّةَ تَوْزِيعِ الْعَنَاصِرِ عَلَى الشَّاشَاتِ الصَّغِيرَةِ وَالْكَبِيرَةِ، مِمَّا يَضْمَنُ تَجْرِبَةَ مُسْتَخْدِمٍ مِثَالِيَّةً فِي كُلِّ الْأَحْوَالِ.",
+        "caption_text": "استخدام Classes مثل container و row و col-sm-4 لتنظيم المحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "bootstrap.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container mt-5\">\n      <div class=\"row\">\n        <div class=\"col-sm-4\">\n          <h3>Column 1</h3>\n          <p>Content goes here...</p>\n        </div>\n        <div class=\"col-sm-4\">\n          <h3>Column 2</h3>\n          <p>Content goes here...</p>\n        </div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_frameworks.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، نُؤَكِّدُ أَنَّ اسْتِخْدَامَ Frameworks مِثْلَ W3.CSS أَوْ Bootstrap يُعَدُّ مَهَارَةً أَسَاسِيَّةً لِكُلِّ مُطَوِّرِ ويب. نَنْصَحُكُمْ بِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُتَابَعَةِ التَّطَوُّرِ فِي تَصْمِيمِ مَوَاقِعِكُمْ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "استخدام Frameworks مهارة أساسية لكل مطور ويب. جرب الأكواد بنفسك لتطوير مهاراتك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختر الإطار المناسب لمشروعك",
+          "مارس كتابة الأكواد بانتظام",
+          "راجع التوثيق الرسمي لكل إطار",
+          "استمر في التعلم مع CodeGalaxy"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_frameworks.asp"
+      ]
+    }
+  ]
+}
