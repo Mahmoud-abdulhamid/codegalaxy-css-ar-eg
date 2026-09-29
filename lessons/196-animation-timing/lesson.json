@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "196",
+  "title": "التحكم في توقيت وتكرار CSS Animations",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم خاصية animation-delay للتحكم في تأخير بدء الحركة",
+    "تعلم كيفية استخدام القيم السالبة في animation-delay",
+    "التحكم في عدد مرات تكرار الحركة عبر animation-iteration-count",
+    "استكشاف منحنيات السرعة باستخدام animation-timing-function"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_animations_timing.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في توقيت CSS Animations",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي تَوَقِيتِ وَتَكْرَارِ الْحَرَكَاتِ بِاسْتِخْدَامِ خَصَائِصِ animation-delay وَ animation-iteration-count وَ animation-timing-function لِجَعْلِ صَفْحَةِ الْوِبّ أَكْثَرَ حَيَوِيَّةً.",
+        "caption_text": "سنتعلم اليوم التحكم في توقيت وتكرار CSS Animations لجعل صفحات الويب أكثر حيوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في تأخير بدء الحركة عبر animation-delay",
+          "تحديد عدد مرات التكرار باستخدام animation-iteration-count",
+          "ضبط منحنى السرعة بواسطة animation-timing-function"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_timing.asp"
+      ]
+    },
+    {
+      "id": "animation-delay",
+      "title": "خاصية animation-delay",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةُ animation-delay لِتَحْدِيدِ وَقْتِ التَّأْخِيرِ قَبْلَ بَدْءِ الْحَرَكَةِ. يُمْكِنُكَ أَيْضاً اسْتِخْدَامُ قِيَمٍ سَالِبَةٍ، حَيْثُ تَبْدَأُ الْحَرَكَةُ كَأَنَّهَا قَدْ عَمِلَتْ لِفَتْرَةٍ زَمَنِيَّةٍ مُحَدَّدَةٍ مُسْبَقاً.",
+        "caption_text": "تستخدم خاصية animation-delay لتحديد وقت التأخير قبل بدء الحركة، وتدعم القيم السالبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  animation-name: myAnimation;\n  animation-duration: 4s;\n  animation-delay: 2s;\n}\n/* استخدام قيمة سالبة */\ndiv.negative {\n  animation-delay: -2s;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_timing.asp"
+      ]
+    },
+    {
+      "id": "iteration-count",
+      "title": "خاصية animation-iteration-count",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ عَدَدِ مَرَّاتِ تَكْرَارِ الْحَرَكَةِ، نَسْتَخْدِمُ خَاصِيَّةَ animation-iteration-count. يُمْكِنُكَ وَضْعُ رَقْمٍ مُحَدَّدٍ، أَوْ كِتَابَةُ الْكَلِمَةِ infinite لِتَجْعَلَ الْحَرَكَةَ تَسْتَمِرُّ إِلَى مَا لَا نِهَايَةٍ.",
+        "caption_text": "تحدد خاصية animation-iteration-count عدد مرات تكرار الحركة، ويمكن استخدام infinite للتكرار الدائم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  animation-duration: 4s;\n  animation-iteration-count: 3;\n}\n.infinite-loop {\n  animation-iteration-count: infinite;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_timing.asp"
+      ]
+    },
+    {
+      "id": "timing-function",
+      "title": "خاصية animation-timing-function",
+      "narration": {
+        "spoken_text": "تُحَدِّدُ خَاصِيَّةُ animation-timing-function مَنْحَنَى سُرْعَةِ الْحَرَكَةِ. هُنَاكَ قِيَمٌ مِثْلَ linear لِسُرْعَةٍ ثَابِتَةٍ، أَوْ ease لِبِدَايَةٍ بَطِيئَةٍ ثُمَّ سَرِيعَةٍ، وَغَيْرِهَا مِنَ الْخِيَارَاتِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ.",
+        "caption_text": "تحدد خاصية animation-timing-function منحنى سرعة الحركة مثل linear أو ease."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  animation-timing-function: linear;\n}\n#div2 {\n  animation-timing-function: ease;\n}\n#div3 {\n  animation-timing-function: ease-in;\n}\n#div4 {\n  animation-timing-function: ease-out;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_timing.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْخَصَائِصِ، سَتُحَظُون اخْتِلَافاً فِي سُلُوكِ الْعَنَاصِرِ. الْعُنْصُرُ الَّذِي يَسْتَخْدِمُ linear سَيَتَحَرَّكُ بِسُرْعَةٍ مُنْتَظِمَةٍ، بَيْنَمَا الْعُنْصُرُ الَّذِي يَسْتَخْدِمُ ease-in سَيَبْدَأُ بِبُطْءٍ ثُمَّ يَتَسَارَعُ.",
+        "caption_text": "تظهر المخرجات اختلافا في سلوك العناصر بناء على قيم animation-timing-function."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Element 1 (linear): Constant speed.\nElement 2 (ease-in): Starts slow, accelerates.\nElement 3 (infinite): Never stops running.",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_timing.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دائماً بِتَجْرِبَةِ قِيَمٍ مُخْتَلِفَةٍ لِخَصَائِصِ التَّوَقِيتِ لِلْوُصُولِ إِلَى أَفْضَلِ تَأْثِيرٍ بَصَرِيٍّ. تَذَكَّرْ أَنَّ الْحَرَكَاتِ الْمُفْرِطَةِ قَدْ تُؤَثِّرُ عَلَى أَدَاءِ صَفْحَةِ الْوِبّ، لِذَا اسْتَخْدِمْهَا بِحِكْمَةٍ وَتَوَازُنٍ.",
+        "caption_text": "جرب قيم توقيت مختلفة للحصول على أفضل تأثير بصري، مع مراعاة أداء صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم القيم السالبة لتقليل وقت انتظار المستخدم",
+          "استخدم infinite بحذر لتجنب تشتيت الانتباه",
+          "وازن بين الجمالية والأداء التقني"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_timing.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا التَّحَكُّمَ فِي تَوَقِيتِ CSS Animations بِاسْتِخْدَامِ animation-delay وَالتَّكْرَارِ بِاسْتِخْدَامِ animation-iteration-count وَمَنْحَنَى السُّرْعَةِ بِاسْتِخْدَامِ animation-timing-function. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ.",
+        "caption_text": "تعلمنا التحكم في توقيت وتكرار وسرعة CSS Animations. جرب الأكواد بنفسك الآن."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "animation-delay: تأخير بدء الحركة",
+          "animation-iteration-count: عدد مرات التكرار",
+          "animation-timing-function: منحنى سرعة الحركة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_timing.asp"
+      ]
+    }
+  ]
+}
