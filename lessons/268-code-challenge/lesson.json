@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "268",
+  "title": "CSS 12-Column Grid Layout Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the 12-column grid system in CSS",
+    "Implement responsive layouts using CSS Grid",
+    "Apply grid-template-columns and grid-column properties",
+    "Solve practical layout challenges using modern CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_grid_12column.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في نظام 12-Column Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْعَمَلِيِّ حَوْلَ 12-Column Grid. سَنَتَعَلَّمُ كَيْفَ نُقَسِّمُ صَفْحَةَ الْوِبّ إِلَى اثْنَيْ عَشَرَ عَمُوداً مُتَسَاوِياً، وَهِيَ تَقْنِيَةٌ أَسَاسِيَّةٌ لِتَصْمِيمِ وَاجِهَاتٍ احْتِرَافِيَّةٍ وَمُتَجَاوِبَةٍ بِاسْتِخْدَامِ CSS Grid.",
+        "caption_text": "مرحبا بكم في درس CSS 12-Column Grid. سنتعلم تقسيم صفحة الويب إلى 12 عمودا باستخدام CSS Grid."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "نظام 12-Column Grid هو معيار صناعي لتصميم الويب",
+          "يوفر مرونة عالية في توزيع العناصر",
+          "يعتمد بشكل أساسي على خاصية grid-template-columns"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للشبكة",
+      "narration": {
+        "spoken_text": "لِتَنْفِيذِ هَذَا النِّظَامِ، نَحْتَاجُ إِلَى تَعْرِيفِ Container بِخَاصِيَّةِ display: grid. بَعْدَهَا نَسْتَخْدِمُ grid-template-columns مَعَ دَالَّةِ repeat لِتَحْدِيدِ 12 عَمُوداً، حَيْثُ نُعْطِي كُلَّ عَمُودٍ وَحْدَةَ 1fr لِيَأْخُذَ مَسَاحَةً مُتَسَاوِيَةً.",
+        "caption_text": "نستخدم display: grid مع grid-template-columns لإنشاء 12 عمودا متساويا باستخدام وحدة 1fr."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-columns: repeat(12, 1fr);\n  gap: 10px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل الـ HTML للشبكة",
+      "narration": {
+        "spoken_text": "نَحْتَاجُ إِلَى هَيْكَلٍ بَسِيطٍ، حَيْثُ نَضَعُ عَنَاصِرَ ال div دَاخِلَ Container رَئِيسِيّ. كُلُّ عُنْصُرٍ يُمَثِّلُ خَلِيَّةً فِي الشَّبَكَةِ، وَيُمْكِنُنَا التَّحَكُّمُ فِي عَدَدِ الْأَعْمِدَةِ الَّتِي يَشْغَلُهَا كُلُّ عُنْصُرٍ بِاسْتِخْدَامِ grid-column.",
+        "caption_text": "نضع عناصر div داخل حاوية رئيسية، ونستخدم grid-column لتحديد عرض كل عنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"item\">1</div>\n      <div class=\"item\">2</div>\n      <div class=\"item\">3</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "grid_column_usage",
+      "title": "التحكم في عرض العناصر",
+      "narration": {
+        "spoken_text": "لِتَخْصِيصِ عَرْضِ عُنْصُرٍ مُعَيَّنٍ، نَسْتَخْدِمُ خَاصِيَّةَ grid-column. مَثَلاً، إِذَا أَرَدْنَا أَنْ يَشْغَلَ الْعُنْصُرُ نِصْفَ الشَّبَكَةِ، نَكْتُبُ grid-column: span 6. هَذَا يَعْنِي أَنَّهُ سَيَمْتَدُّ عَلَى سِتَّةِ أَعْمِدَةٍ مِنْ أَصْلِ اثْنَيْ عَشَرَ.",
+        "caption_text": "استخدام grid-column: span 6 يجعل العنصر يمتد على 6 أعمدة من أصل 12."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item {\n  grid-column: span 6;\n  background: #f1f1f1;\n  padding: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَنَرَى الْعَنَاصِرَ مُوَزَّعَةً بِدِقَّةٍ عَلَى الشَّبَكَةِ. الْفَوَاصِلُ بَيْنَ الْأَعْمِدَةِ تَتَحَدَّدُ بِخَاصِيَّةِ gap، مِمَّا يَمْنَحُ التَّصْمِيمَ مَظْهَراً مُرَتَّباً وَمُتَنَاسِقاً عَلَى جَمِيعِ شَاشَاتِ الْوِبّ.",
+        "caption_text": "تظهر العناصر موزعة بانتظام مع وجود فواصل بينها بفضل خاصية gap."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة المتوقعة -->\n    <div class=\"container\">\n      <div style=\"grid-column: span 6\">نصف العرض</div>\n      <div style=\"grid-column: span 6\">نصف العرض</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "12-Column Grid Layout Rendered",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دائماً بِاسْتِخْدَامِ Media Queries لِتَغْيِيرِ قِيمَةِ span عِنْدَ تَصْغِيرِ الشَّاشَةِ. هَذَا يَضْمَنُ أَنْ يَبْقَى تَصْمِيمُ الْوِبّ خَاصَّتَكُمْ مُتَجَاوِباً وَسَهْلَ الْقِرَاءَةِ عَلَى الْهَوَاتِفِ وَالْأَجْهِزَةِ اللَّوْحِيَّةِ.",
+        "caption_text": "استخدم Media Queries لضمان تجاوب التصميم مع مختلف أحجام الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم Media Queries لتغيير تخطيط الشبكة",
+          "حافظ على اتساق الـ gap في جميع الشاشات",
+          "اختبر التصميم دائما في Web Browser"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ 12-Column Grid. نُذَكِّرُكُمْ بِأَهَمِّيَّةِ التَّدْرِيبِ الْمُسْتَمِرِّ عَلَى هَذِهِ الْأَكْوَادِ. تَفَضَّلُوا بِزِيَارَةِ الرَّابِطِ فِي الْوَصْفِ لِتَجْرِبَةِ التَّحَدِّي بِنَفْسِكُمْ. كَانَ مَعَكُمْ مَحْمُود عَبْد الْحَمِيد.",
+        "caption_text": "تعلمنا بناء 12-Column Grid. تدربوا على الأكواد عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية مفاهيم CSS Grid",
+          "شرح كيفية تقسيم الأعمدة",
+          "أهمية التجاوب في التصميم",
+          "شكر خاص للمتابعة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_grid_12column.asp"
+      ]
+    }
+  ]
+}
