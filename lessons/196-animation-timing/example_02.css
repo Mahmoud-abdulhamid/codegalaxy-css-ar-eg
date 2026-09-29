@@ -1,0 +1,7 @@
+div {
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+.infinite-loop {
+  animation-iteration-count: infinite;
+}
