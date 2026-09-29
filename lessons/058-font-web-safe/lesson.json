@@ -3,6 +3,8 @@
   "lesson_id": "58",
   "title": "CSS Web Safe Fonts",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم مفهوم Web Safe Fonts",
     "تعلم أهمية استخدام Fallback Fonts",
