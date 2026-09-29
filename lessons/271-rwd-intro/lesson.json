@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "271",
+  "title": "Responsive Web Design Introduction",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Familiarization with Responsive Web Design concepts",
+    "Understanding device screen sizes and viewports",
+    "Ensuring best experience across desktops tablets and mobile phones",
+    "Using HTML and CSS for layout flexibility"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_rwd_intro.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة في Responsive Web Design",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS لِلْتَصْمِيمِ. سَنَتَعَرَّفُ الْيَوْمَ عَلَى مَفْهُومِ Responsive Web Design وَأَهَمِّيَّتِهِ الْكُبْرَى فِي الْعَالَمِ الرَّقْمِيِّ الْحَدِيثِ لِبِنَاءِ صَفَحَاتِ وِبٍّ تَبْدُو رَائِعَةً.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لنتعرف على Responsive Web Design وأهميته."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم Responsive Web Design وتطبيقاته",
+          "أهمية توافق صفحات الويب مع الشاشات المختلفة",
+          "بناء تجربة استخدام مرنة ومريحة للمستخدمين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_definition",
+      "title": "تعريف التصميم المتجاوب",
+      "narration": {
+        "spoken_text": "يَتَحَدَّثُ Responsive Web Design عَنْ إِنْشَاءِ صَفَحَاتِ وِبٍّ تَظْهَرُ بِمَظْهَرٍ جَمِيلٍ عَلَى جَمِيعِ الْأَجْهِزَةِ بِدُونِ اسْتِثْنَاءٍ. يَقُومُ هَذَا التَّصْمِيمُ بِالتَّكَيُّفِ التِّلْقَائِيِّ مَعَ مُخْتَلِفِ مِسَاحَاتِ الشَّاشَاتِ وَالمنافذ.",
+        "caption_text": "التصميم المتجاوب يعني إنشاء صفحات ويب تظهر بشكل جميل على جميع الأجهزة وتتلقى التكيف التلقائي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصميم صفحات ويب تتكيف تلقائيا مع الشاشات",
+          "ضبط مساحات العرض والمنافذ المختلفة",
+          "تحسين المظهر البصري لجميع الأجهزة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_devices",
+      "title": "التجربة المثلى لكل المستخدمين",
+      "narration": {
+        "spoken_text": "تُنْصَفُ صَفَحَاتُ الْوِبّ بِأَنَّهَا تُعْرَضُ عَبْرَ أَجْهِزَةٍ مُتَعَدِّدَةٍ مِثْلَ الْحَاسُوبِ وَالأجهزة اللوحية والهواتف الذكية. يَجِبُ أَنْ تَبْدُوَ صَفْحَتُكَ مِثَالِيَّةً وَسَهْلَةَ الِاسْتِخْدَامِ بغض النظر عن الجهاز المُسْتَخْدَمِ.",
+        "caption_text": "تعرض صفحات الويب عبر أجهزة متعددة كالحواسيب والأجهزة اللوحية والهواتف الذكية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دعم أجهزة الحواسيب المكتبية Desktops",
+          "دعم الأجهزة اللوحية Tablets",
+          "دعم الهواتف المحمولة Mobile Phones"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_html_css",
+      "title": "دور HTML و CSS",
+      "narration": {
+        "spoken_text": "يَعْتَمِدُ Responsive Web Design عَلَى اسْتِخْدَامِ لُغَتَيْ HTML وَ CSS مَعاً لِتَغْيِيرِ الحجم أو الإخفاء أو التقليص أو التكبير التِّلْقَائِيِّ لِمُحْتَوَى المَوْقِعِ لِيَبْدُوَ بِشَكْلٍ مِثَالِيٍّ عَلَى الْأَجْهِزَةِ كَافَّةً.",
+        "caption_text": "يعتمد التصميم المتجاوب على استخدام HTML وCSS لتغيير الحجم والإخفاء والتكبير التلقائي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام لغة HTML لهيكل المحتوى",
+          "استخدام لغة CSS لتنسيق المظهر المتجاوب",
+          "خصائص التكبير والتصغير والإخفاء التلقائي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_components",
+      "title": "العناصر الرئيسية للتصميم المتجاوب",
+      "narration": {
+        "spoken_text": "تُوجَدُ عَنَاصِرُ أَسَاسِيَّةٌ جِدّاً يَجِبُ الإلْمَامُ بِهَا عِنْدَ تَبَنِّي مَفْهُومِ Responsive Web Design. تَتَضَمَّنُ هَذِهِ العَنَاصِرُ مَفَاهِيمَ التَّخْطِيطِ الْمَرِنِ وَالصُّوَرِ المُتَجَاوِبَةِ وقواعد CSS.",
+        "caption_text": "توجد عناصر أساسية يجب الإلمام بها عند تبني مفاهيم التصميم المتجاوب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم الكامل في العرض والارتفاع",
+          "استخدام وحدات القياس النسبي مثل النسب المئوية",
+          "تفعيل وسائط العرض Media Queries"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "عِنْدَ كِتَابَةِ أكواد CSS، احْرِصْ دَائِماً عَلَى اسْتِخْدَامِ قَوَاعِدَ تَقْنِيَّةٍ سَلِيمَةٍ تضمن سرعة تحميل الموقع ومرونته العالية على مختلف المتصفحات الحديثة لخدمة جمهورك بأفضل صورة.",
+        "caption_text": "احرص دائما على استخدام قواعد تقنية سليمة تضمن سرعة تحميل الموقع ومرونته."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار التجاوب على متصفحات متعددة",
+          "مراعاة سهولة التفاعل باللمس للأجهزة المحمولة",
+          "تحسين الأداء وسرعة الاستجابة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_intro.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا بِوُضُوحٍ عَلَى مَفْهُومِ Responsive Web Design وَكَيْفَ يُسَاعِدُنَا فِي تَقْدِيمِ أَفْضَلِ خِدْمَةٍ لِكُلِّ مُسْتَخْدِمِي الْوِبّ بِدُونِ اسْتِثْنَاءٍ. شُكْرَاً لِمُتَابَعَتِكُمْ وَإِلَى اللِّقَاءِ.",
+        "caption_text": "تعرفنا بوضوح على مفهوم Responsive Web Design وكيف يقدم أفضل خدمة لمستخدمي الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص مفاهيم التصميم المتجاوب الأساسية",
+          "أهمية توافق المواقع مع كافة الأجهزة",
+          "استعداد للمزيد من التطبيقات المتقدمة في CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_intro.asp"
+      ]
+    }
+  ]
+}
