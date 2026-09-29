@@ -1,0 +1,9 @@
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+div {
+  background-color: var(--my-bg-color);
+  color: var(--my-txt-color);
+}
