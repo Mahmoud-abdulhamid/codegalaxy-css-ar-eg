@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "202",
+  "title": "CSS Styling Images",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية تقوير حواف الصور وجعلها دائرية باستخدام border-radius",
+    "فهم كيفية تصميم صور مصغرة تفاعلية مع تأثيرات hover",
+    "تطبيق تقنيات الصور المتجاوبة باستخدام max-width و height auto",
+    "إنشاء بطاقات صور كلاسيكية بأسلوب polaroid ومعارض صور متجاوبة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_images.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "شرح Introduction to CSS Image Styling",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَحْسِينِ مَظْهَرِ الصُّوَرِ فِي مَوَاقِعِ الْوِبِّ بِاسْتِخْدَامِ خَصَائِصِ لُغَةِ CSS لِجَعْلِهَا أَكْثَرَ جَاذِبِيَّةً وَتَفَاعُلِيَّةً لِلْمُسْتَخْدِمِينَ.",
+        "caption_text": "سنتعلم اليوم كيفية تحسين مظهر الصور في مواقع الويب باستخدام خصائص لغة CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحسين مظهر الصور وتنسيقها",
+          "جعل الصور دائرية أو ذات حواف ناعمة",
+          "إنشاء صور مصغرة وبطاقات تفاعلية",
+          "جعل الصور متجاوبة مع جميع الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images.asp"
+      ]
+    },
+    {
+      "id": "scene_rounded",
+      "title": "شرح Rounded Images with border-radius",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ أَوَّلاً بِتَقْوِيرِ حَوَافِّ الصُّوَرِ. نَسْتَخْدِمُ الْخَاصِّيَّةَ border-radius لِتَحْدِيدِ مِقْدَارِ الِانْحِنَاءِ. عِنْدَمَا نَضَعُ الْقِيمَةَ ثَمَانِيَةَ بِيْكْسِلْزْ، نَحْصُلُ عَلَى حَوَافَّ دَائِرِيَّةٍ نَاعِمَةٍ وَأَنِيقَةٍ جِدّاً فِي التَّصْمِيمِ.",
+        "caption_text": "نستخدم الخاصية border-radius لتحديد مقدار انحناء حواف الصور."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  border-radius: 8px;\n}",
+        "highlight_lines": [
+          2
+        ],
+        "output": "/* يظهر تأثير انحناء الحواف بمقدار 8 بكسل على الصورة */",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images.asp"
+      ]
+    },
+    {
+      "id": "scene_circle",
+      "title": "شرح Circular Images",
+      "narration": {
+        "spoken_text": "إِذَا كُنْتُمْ تُرِيدُونَ تَحْوِيلَ الصُّورَةِ إِلَى شَكْلٍ دَائِرِيٍّ كَامِلٍ، فَقَطْ قُومُوا بِتَعْيِينِ الْخَاصِّيَّةِ border-radius إِلَى خَمْسِينَ بِالْمِائَةِ. هَذَا التَّأْثِيرُ مُمْتَازٌ جِدّاً لِصُوَرِ الْحِسَابَاتِ الشَّخْصِيَّةِ.",
+        "caption_text": "لتحويل الصورة إلى شكل دائري كامل، نقوم بتعيين border-radius إلى 50."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  border-radius: 50%;\n}",
+        "highlight_lines": [
+          2
+        ],
+        "output": "/* تتحول الصورة المربعة تماماً إلى دائرة كاملة */",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images.asp"
+      ]
+    },
+    {
+      "id": "scene_thumbnail",
+      "title": "شرح Creating Thumbnail Images",
+      "narration": {
+        "spoken_text": "لِإِنْشَاءِ صُورَةٍ مُصَغَّرَةٍ أَوْ مَا يُعْرَفُ بِ Thumbnail، نُضِيفُ إِطَاراً رَقِيقاً بِاسْتِخْدَامِ border مَعَ بَعْضِ الْهَوَامِشِ الدَّاخِلِيَّةِ padding وَتَحْدِيدِ عَرْضِ الصُّورَةِ لِتَبْدُوَ كَإِطَارِ صُورَةٍ حَقِيقِيَّةٍ.",
+        "caption_text": "لإنشاء صورة مصغرة Thumbnail، نستخدم الخصائص border و padding مع تحديد العرض."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  border: 1px solid #ddd;\n  border-radius: 4px;\n  padding: 5px;\n  width: 150px;\n}",
+        "highlight_lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "output": "/* تظهر الصورة محاطة بإطار رمادي خفيف مع مسافة داخلية */",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images.asp"
+      ]
+    },
+    {
+      "id": "scene_hover",
+      "title": "شرح Hover Effects on Thumbnails",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا إِضَافَةُ تَأْثِيرٍ رَائِعٍ عِنْدَ مُرُورِ الْمُؤَشِّرِ فَوْقَ الصُّورَةِ. نَسْتَخْدِمُ hover مَعَ الْخَاصِّيَّةِ box-shadow لِإِنْشَاءِ ظِلٍّ نَاعِمٍ حَوْلَ الصُّورَةِ يَجْذِبُ انْتِبَاهَ الْمُسْتَخْدِمِ بِشَكْلٍ جَمِيلٍ وَتَفَاعُلِيٍّ.",
+        "caption_text": "نستخدم hover مع الخاصية box-shadow لإنشاء تأثير ظل تفاعلي عند مرور المؤشر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  border: 1px solid #ddd;\n  border-radius: 4px;\n  padding: 5px;\n  width: 150px;\n}\nimg:hover {\n  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);\n}",
+        "highlight_lines": [
+          8,
+          9
+        ],
+        "output": "/* عند تمرير الفأرة فوق الصورة، يظهر ظل أزرق ناعم حولها */",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images.asp"
+      ]
+    },
+    {
+      "id": "scene_responsive",
+      "title": "شرح Responsive Images",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الصُّوَرِ مُتَجَاوِبَةً مَعَ جَمِيعِ الشَّاشَاتِ، نَسْتَخْدِمُ max-width بِنِسْبَةِ مِائَةٍ بِالْمِائَةِ مَعَ height تِلْقَائِيٍّ auto. هَذَا يَضْمَنُ أَلَّا تَتَجَاوَزَ الصُّورَةُ حَجْمَ حَاوِيَتِهَا أَبَداً وَتَتَقَلَّصَ بِشَكْلٍ مُتَنَاسِبٍ.",
+        "caption_text": "لجعل الصور متجاوبة، نستخدم max-width بنسبة 100 مع height auto."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  max-width: 100%;\n  height: auto;\n}",
+        "highlight_lines": [
+          2,
+          3
+        ],
+        "output": "/* تتكيف الصورة تلقائياً مع حجم الشاشة دون تشويه أبعادها */",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images.asp"
+      ]
+    },
+    {
+      "id": "scene_polaroid",
+      "title": "شرح Polaroid Images / Cards",
+      "narration": {
+        "spoken_text": "لِنَصْمِيمِ صُورَةٍ بِأُسْلُوبِ Polaroid الْكَلَاسِيكِيِّ، نَضَعُ الصُّورَةَ دَاخِلَ div وَنَمْنَحُهُ خَلْفِيَّةً بَيْضَاءَ مَعَ ظِلٍّ أَنِيقٍ بِاسْتِخْدَامِ box-shadow، ثُمَّ نُضِيفُ نَصّاً تَوْضِيحِيّاً فِي الْأَسْفَلِ لِيَبْدُوَ كَكَرْتٍ مَطْبُوعٍ.",
+        "caption_text": "لتصميم بطاقة Polaroid، نستخدم حاوية بخلفية بيضاء وظل أنيق مع نص توضيحي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.polaroid {\n  width: 80%;\n  background-color: white;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\n}\nimg {\n  width: 100%;\n}\ndiv.container {\n  text-align: center;\n  padding: 10px 20px;\n}",
+        "highlight_lines": [
+          1,
+          3,
+          4,
+          7
+        ],
+        "output": "/* تظهر الصورة داخل إطار أبيض عريض مع ظل واقعي ونصف سفلي للنص */",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images.asp"
+      ]
+    },
+    {
+      "id": "scene_gallery",
+      "title": "شرح Responsive Image Gallery",
+      "narration": {
+        "spoken_text": "أَخِيراً، يُمْكِنُنَا إِنْشَاءُ مَعْرِضِ صُوَرٍ مُتَجَاوِبٍ بِاسْتِخْدَامِ media queries. نَقُومُ بِتَعْدِيلِ عَرْضِ الْعَنَاصِرِ تِلْقَائِيّاً عِنْدَمَا يَصْغُرُ حَجْمُ الشَّاشَةِ لِتَرْتِيبِ الصُّوَرِ بِشَكْلٍ مُتَنَاسِقٍ وَمُرِيحٍ لِلْعَيْنِ.",
+        "caption_text": "نستخدم media queries لتعديل عرض عناصر المعرض تلقائيا حسب حجم الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media only screen and (max-width: 768px) {\n  div.gallery-item {\n    width: calc(50% - 20px);\n  }\n}\n@media only screen and (max-width: 480px) {\n  div.gallery-item {\n    width: calc(100% - 20px);\n  }\n}",
+        "highlight_lines": [
+          1,
+          3,
+          7,
+          9
+        ],
+        "output": "/* يتغير توزيع الصور من عمودين في الشاشات المتوسطة إلى عمود واحد في الهواتف */",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images.asp"
+      ]
+    }
+  ]
+}
