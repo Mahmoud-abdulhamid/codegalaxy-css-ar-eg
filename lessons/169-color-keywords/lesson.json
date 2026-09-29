@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "169",
+  "title": "CSS Color Keywords",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام transparent لجعل العناصر شفافة",
+    "التعرف على وظيفة currentcolor كمتغير للألوان",
+    "تطبيق خاصية inherit لوراثة القيم من العناصر الأب",
+    "التعرف على أفضل الممارسات في استخدام الكلمات المفتاحية للألوان"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_colors_keywords.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Color Keywords",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى بَعْضِ الْكَلِمَاتِ الْمِفْتَاحِيَّةِ الْخَاصَّةِ بِالْأَلْوَانِ، وَالَّتِي تُسَاعِدُنَا فِي التَّحَكُّمِ بِخَصَائِصِ مِثْلِ color وَ background-color وَ border-color بِطَرِيقَةٍ احْتِرَافِيَّةٍ.",
+        "caption_text": "سنتعرف اليوم على الكلمات المفتاحية الخاصة بالألوان في CSS وكيفية استخدامها مع خصائص مثل color و background-color."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS توفر كلمات مفتاحية خاصة للألوان",
+          "تستخدم مع خصائص مثل color و background-color",
+          "تسهل عملية التحكم في تصميم صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_keywords.asp"
+      ]
+    },
+    {
+      "id": "transparent",
+      "title": "استخدام الكلمة المفتاحية transparent",
+      "narration": {
+        "spoken_text": "نَبْدَأُ مَعَ الْكَلِمَةِ الْمِفْتَاحِيَّةِ transparent. هَذِهِ الْكَلِمَةُ تُسْتَخْدَمُ لِجَعْلِ لَوْنِ الْعُنْصُرِ شَفَّافاً تَمَاماً، وَهِيَ تُعَادِلُ قِيمَةَ rgba(0,0,0,0) حَيْثُ تَكُونُ دَرَجَةُ الشَّفَافِيَّةِ صِفْراً، مِمَّا يَسْمَحُ بِظُهُورِ الْخَلْفِيَّةِ مِنْ خَلْفِ الْعُنْصُرِ.",
+        "caption_text": "تستخدم الكلمة المفتاحية transparent لجعل لون العنصر شفافا تماما، وهي تعادل قيمة rgba(0,0,0,0)."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-image: url(\"paper.gif\");\n}\ndiv {\n  background-color: transparent;\n}",
+        "highlight_lines": [],
+        "output": "div background is fully transparent",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_keywords.asp"
+      ]
+    },
+    {
+      "id": "currentcolor_intro",
+      "title": "فهم الكلمة المفتاحية currentcolor",
+      "narration": {
+        "spoken_text": "الْآنَ مَعَ currentcolor. هَذِهِ الْكَلِمَةُ تَعْمَلُ كَمُتَغَيِّرٍ يَحْتَفِظُ بِقِيمَةِ خَاصِيَّةِ color الْحَالِيَّةِ لِلْعُنْصُرِ. هَذَا مُفِيدٌ جِدّاً لِضَمَانِ تَطَابُقِ أَلْوَانِ الْحُدُودِ أَوِ الظِّلَالِ مَعَ لَوْنِ النَّصِّ دَاخِلَ نَفْسِ الْعُنْصُرِ.",
+        "caption_text": "تعمل الكلمة المفتاحية currentcolor كمتغير يحتفظ بقيمة خاصية color الحالية للعنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  color: blue;\n  border: 10px solid currentcolor;\n}",
+        "highlight_lines": [],
+        "output": "div border color becomes blue",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_keywords.asp"
+      ]
+    },
+    {
+      "id": "currentcolor_examples",
+      "title": "تطبيقات متقدمة لـ currentcolor",
+      "narration": {
+        "spoken_text": "يُمْكِنُ ل currentcolor أَيْضاً أَنْ تَرِثَ قِيمَةَ لَوْنِ الْعُنْصُرِ الأَبِ. فِي هَذَا الْمِثَالِ، نَجْعَلُ لَوْنَ الْخَلْفِيَّةِ وَالظِّلِّ يَتَبَعَانِ لَوْنَ body، مِمَّا يَجْعَلُ التَّصْمِيمَ مُتَنَاسِقاً وَمُرِنّاً عِنْدَ تَغْيِيرِ الْأَلْوَانِ فِي مَكَانٍ وَاحِدٍ.",
+        "caption_text": "يمكن استخدام currentcolor لربط ألوان الحدود والظلال بقيمة لون العنصر الأب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  color: green;\n}\ndiv {\n  box-shadow: 0px 0px 15px currentcolor;\n  border: 5px solid currentcolor;\n}",
+        "highlight_lines": [],
+        "output": "div border and shadow are green",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_keywords.asp"
+      ]
+    },
+    {
+      "id": "inherit",
+      "title": "الكلمة المفتاحية inherit",
+      "narration": {
+        "spoken_text": "أَخِيراً، نَنْتَقِلُ إِلَى inherit. هَذِهِ الْكَلِمَةُ تُحَدِّدُ أَنَّ الْخَاصِيَّةَ يَجِبُ أَنْ تَرِثَ قِيمَتَهَا مِنْ الْعُنْصُرِ الأَبِ. يُمْكِنُ اسْتِخْدَامُهَا مَعَ أَيِّ خَاصِيَّةٍ فِي CSS وَعَلَى أَيِّ HTML Element لِضَمَانِ تَوَارُثِ التَّنْسِيقَاتِ.",
+        "caption_text": "تستخدم الكلمة المفتاحية inherit لجعل الخاصية ترث قيمتها من العنصر الأب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  border: 2px solid red;\n}\nspan {\n  border: inherit;\n}",
+        "highlight_lines": [],
+        "output": "span inherits border from div",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_keywords.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا عَلَى أَهَمِّ الْكَلِمَاتِ الْمِفْتَاحِيَّةِ لِلْأَلْوَانِ فِي CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا كَيْفَ تُسَاهِمُ فِي تَحْسِينِ مَرُونَةِ التَّصْمِيمِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا اليوم كيفية استخدام transparent و currentcolor و inherit لتحسين مرونة وتناسق التصميم في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "transparent للشفافية",
+          "currentcolor لربط الألوان",
+          "inherit لوراثة القيم",
+          "استخدم الروابط في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_colors_keywords.asp"
+      ]
+    }
+  ]
+}
