@@ -1,0 +1,3 @@
+div1: Background covers border area.
+div2: Background stops at padding.
+div3: Background limited to content only.
