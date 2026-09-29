@@ -1,0 +1,5 @@
+.container .note {
+  --primary-bg-color: red;
+  border: 1px solid var(--primary-bg-color);
+  padding: 10px;
+}
