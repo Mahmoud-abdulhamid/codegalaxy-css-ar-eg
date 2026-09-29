@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "307",
+  "title": "تصميم شريط تنقل بمركزية العناصر باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية إنشاء شريط تنقل احترافي",
+    "استخدام تقنيات التمركز للعناصر داخل الـ Navbar",
+    "تطبيق الـ CSS للتحكم في توزيع الروابط",
+    "جعل شريط التنقل متجاوبا مع الشاشات الصغيرة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_topnav_centered.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تصميم شريط التنقل",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ شَرِيطِ تَنَقُّلٍ احْتِرَافِيٍّ يَحْتَوِي عَلَى رَابِطٍ أَوْ شِعَارٍ فِي الْمُنْتَصَفِ بِاسْتِخْدَامِ تَقْنِيَاتِ التَّمَرْكُزِ الْحَدِيثَةِ.",
+        "caption_text": "سنتعلم اليوم كيفية إنشاء شريط تنقل احترافي يحتوي على روابط مركزية باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء هيكل HTML لشريط التنقل",
+          "استخدام CSS لتمركز العناصر",
+          "تنسيق الروابط وتأثيرات الـ hover",
+          "ضمان تجاوب التصميم مع الهواتف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_centered.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل الـ HTML لشريط التنقل",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِتَحْدِيدِ الْهَيْكَلِ. نَسْتَخْدِمُ div بِكْلَاس topnav لِاحْتِوَاءِ الْعَنَاصِرِ. نَضَعُ الرَّابِطَ الْمَرْكَزِيَّ دَاخِلَ div بِكْلَاس topnav-centered، ثُمَّ نُضِيفُ الرَّوَابِطَ الْأُخْرَى لِلْيَمِينِ وَالْيَسَارِ.",
+        "caption_text": "نستخدم div كحاوية رئيسية مع كلاسات مخصصة لتوزيع العناصر داخل شريط التنقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"topnav\">\n      <div class=\"topnav-centered\">\n        <a href=\"#home\" class=\"active\">Home</a>\n      </div>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n      <div class=\"topnav-right\">\n        <a href=\"#search\">Search</a>\n        <a href=\"#about\">About</a>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_centered.asp"
+      ]
+    },
+    {
+      "id": "css_base",
+      "title": "تنسيق الحاوية والروابط",
+      "narration": {
+        "spoken_text": "نُعْطِي الْحَاوِيَةَ الرَّئِيسِيَّةَ position: relative وَلَوْنَ خَلْفِيَّةٍ دَاكِنٍ. ثُمَّ نُسَقِّقُ الرَّوَابِطَ دَاخِلَ topnav بِاسْتِخْدَامِ float: left وَتَحْدِيدِ الْهَوَامِشِ وَالْأَلْوَانِ لِتَظْهَرَ بِشَكْلٍ مُنَسَّقٍ.",
+        "caption_text": "نضبط الخصائص الأساسية للحاوية والروابط لضمان مظهر متناسق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav {\n  position: relative;\n  background-color: #333;\n  overflow: hidden;\n}\n.topnav a {\n  float: left;\n  color: #f2f2f2;\n  padding: 14px 16px;\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_centered.asp"
+      ]
+    },
+    {
+      "id": "css_centering",
+      "title": "تمركز العنصر في المنتصف",
+      "narration": {
+        "spoken_text": "لِتَمَرْكُزِ الرَّابِطِ، نَسْتَخْدِمُ position: absolute مَعَ top وَ left بِقِيمَةِ خَمْسِينَ بِالْمِائَةِ، وَنَسْتَخْدِمُ transform: translate لِضَبْطِ الْمَوْقِعِ بِدِقَّةٍ فِي مُنْتَصَفِ الْحَاوِيَةِ.",
+        "caption_text": "نستخدم تقنية التحويل لتمركز الرابط بدقة في منتصف شريط التنقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav-centered a {\n  float: none;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_centered.asp"
+      ]
+    },
+    {
+      "id": "css_right",
+      "title": "تنسيق العناصر اليمنى",
+      "narration": {
+        "spoken_text": "لِتَحْرِيكِ مَجْمُوعَةِ الرَّوَابِطِ إِلَى الْيَمِينِ، نَسْتَخْدِمُ كْلَاس topnav-right مَعَ خَاصِيَّةِ float: right. هَذَا يَضْمَنُ بَقَاءَ هَذِهِ الرَّوَابِطِ فِي نِهَايَةِ الشَّرِيطِ.",
+        "caption_text": "نستخدم float: right لنقل مجموعة الروابط إلى جهة اليمين."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav-right {\n  float: right;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_centered.asp"
+      ]
+    },
+    {
+      "id": "responsive",
+      "title": "التجاوب مع الشاشات الصغيرة",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَامِ الشَّاشَاتِ الصَّغِيرَةِ، نَسْتَخْدِمُ Media Queries لِتَغْيِيرِ التَّخْطِيطِ. نُلْغِي ال float وَنَجْعَلُ الْعَنَاصِرَ تَعْرِضُ بِشَكْلٍ عَمُودِيٍّ لِتُصْبِحَ أَكْثَرَ مُلَاءَمَةً لِلْهَوَاتِفِ.",
+        "caption_text": "نستخدم Media Queries لجعل شريط التنقل متجاوبا على الشاشات الصغيرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 600px) {\n  .topnav a, .topnav-right {\n    float: none;\n    display: block;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_centered.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَحْصُلُ عَلَى شَرِيطِ تَنَقُّلٍ احْتِرَافِيٍّ. الرَّابِطُ الرَّئِيسِيُّ فِي الْمُنْتَصَفِ، وَالرَّوَابِطُ الْأُخْرَى مُوَزَّعَةٌ بِدِقَّةٍ عَلَى الْجَانِبَيْنِ.",
+        "caption_text": "النتيجة النهائية: شريط تنقل بمركزية العناصر مع توزيع متوازن للروابط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.txt",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    [ Home ] [ News ] [ Contact ] [ Search ] [ About ]\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home (Centered) | News, Contact (Left) | Search, About (Right)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_centered.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَسْتَخْدِمُ CSS لِتَنْظِيمِ الْعَنَاصِرِ. جَرِّبُوا تَغْيِيرَ الْأَلْوَانِ وَالْأَحْجَامِ لِتَتَنَاسَبَ مَعَ تَصْمِيمِ مَوْقِعِكُمُ الْخَاصِّ. لَا تَنْسَوْا مُرَاجَعَةَ الرَّوَابِطِ فِي الْوَصْفِ لِتَطْوِيرِ مَهَارَاتِكُمُ الْبَرْمَجِيَّةِ.",
+        "caption_text": "شكرا لمتابعتكم. جربوا الأكواد بأنفسكم وطوروا مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position: absolute للتمركز",
+          "تطبيق float للتحكم في التوزيع",
+          "أهمية Media Queries للتجاوب",
+          "استمروا في الممارسة والتعلم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_topnav_centered.asp"
+      ]
+    }
+  ]
+}
