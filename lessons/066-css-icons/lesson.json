@@ -3,6 +3,8 @@
   "lesson_id": "66",
   "title": "CSS Icons with Font Awesome",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية استخدام مكتبات الأيقونات في صفحات الويب",
     "تعلم دمج Font Awesome في مستند HTML",
