@@ -3,6 +3,8 @@
   "lesson_id": "91",
   "title": "CSS Position Offsets Mastery",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "Understand CSS position property",
     "Master top, bottom, left, and right offsets",
