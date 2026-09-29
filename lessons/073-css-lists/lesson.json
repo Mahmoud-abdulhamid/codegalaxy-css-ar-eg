@@ -3,6 +3,8 @@
   "lesson_id": "73",
   "title": "تنسيق القوائم باستخدام CSS",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "التحكم في شكل علامات القوائم باستخدام list-style-type",
     "استبدال علامات القوائم بصور مخصصة عبر list-style-image",
