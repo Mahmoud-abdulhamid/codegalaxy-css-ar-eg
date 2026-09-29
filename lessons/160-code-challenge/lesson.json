@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "160",
+  "title": "CSS Rounded Corners Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام border-radius في CSS",
+    "تطبيق الزوايا الدائرية على العناصر المختلفة",
+    "حل تحديات برمجية متعلقة بـ CSS",
+    "تحسين مظهر واجهة الويب باستخدام CSS3"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_rounded_corners.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Rounded Corners",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ زَوَايَا دَائِرِيَّةٍ لِلْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ border-radius، وَهِيَ مَهَارَةٌ أَسَاسِيَّةٌ لِتَحْسِينِ تَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS الجديد. سنتعلم اليوم كيفية إنشاء زوايا دائرية للعناصر باستخدام خاصية border-radius لتحسين تصميم صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية border-radius تمنح العناصر زوايا دائرية",
+          "تستخدم هذه الخاصية في CSS3 بشكل واسع",
+          "تساعد في جعل التصميم أكثر حداثة وجاذبية",
+          "تطبيق عملي عبر تحدي برمجي بسيط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_rounded_corners.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم border-radius",
+      "narration": {
+        "spoken_text": "تَعْمَلُ خَاصِيَّةُ border-radius عَلَى تَدْوِيرِ زَوَايَا الْعُنْصُرِ. يُمْكِنُكَ تَحْدِيدُ قِيمَةٍ بِ pixels أَوْ بِ percentage لِتَحْدِيدِ مَدَى انْحِنَاءِ الزَّاوِيَةِ. كُلَّمَا زَادَتِ الْقِيمَةُ، زَادَ انْحِنَاءُ الزَّاوِيَةِ فِي الْعُنْصُرِ.",
+        "caption_text": "تعمل خاصية border-radius على تدوير زوايا العنصر. يمكن تحديد القيمة بالبكسل أو النسبة المئوية للتحكم في مدى انحناء الزاوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "القيمة الافتراضية هي 0",
+          "يمكن استخدام وحدات مثل px أو em أو",
+          "تؤثر على خلفية العنصر والحدود معا",
+          "يمكن تطبيقها على زاوية واحدة أو جميع الزوايا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_rounded_corners.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود تطبيق الزوايا الدائرية",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ div وَنُعْطِيهِ خَاصِيَّةَ border-radius بِقِيمَةِ 25 pixels. هَذَا سَيَجْعَلُ جَمِيعَ الزَّوَايَا الْأَرْبَعِ لِلْعُنْصُرِ مُنْحَنِيَةً بِشَكْلٍ مُتَسَاوٍ.",
+        "caption_text": "نستخدم خاصية border-radius بقيمة 25px لتطبيق انحناء متساو على جميع زوايا العنصر div."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 200px;\n  height: 100px;\n  background-color: blue;\n  border-radius: 25px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_rounded_corners.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ فِي مُتَصَفِّحِ الْوِبّ، سَتَظْهَرُ لَكَ مَرْبَعَاتٌ بِزَوَايَا نَاعِمَةٍ. هَذَا التَّأْثِيرُ يُعْطِي طَابَعاً عَصْرِيّاً لِعَنَاصِرِ الْوِبّ وَيَجْعَلُهَا أَكْثَرَ رَاحَةً لِلْعَيْنِ.",
+        "caption_text": "تظهر النتيجة في المتصفح كعنصر مستطيل بزوايا دائرية ناعمة، مما يضفي لمسة عصرية على التصميم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div style=\"width:200px; height:100px; background:blue; border-radius:25px;\">\n      <!-- Rounded Box -->\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "مستطيل أزرق بزوايا دائرية",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_rounded_corners.asp"
+      ]
+    },
+    {
+      "id": "advanced_usage",
+      "title": "تخصيص الزوايا بشكل فردي",
+      "narration": {
+        "spoken_text": "يُمْكِنُكَ أَيْضاً تَحْدِيدُ قِيمَةٍ مُخْتَلِفَةٍ لِكُلِّ زَاوِيَةٍ عَلَى حِدَةٍ. بِاسْتِخْدَامِ أَرْبَعِ قِيَمٍ مَعَ border-radius، يُمْكِنُكَ التَّحَكُّمُ فِي الزَّاوِيَةِ الْعُلْيَا الْيُمْنَى، وَالسُّفْلَى، وَغَيْرِهَا بِشَكْلٍ دَقِيقٍ.",
+        "caption_text": "يمكن التحكم في كل زاوية على حدة عبر تمرير أربع قيم لخاصية border-radius."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  /* top-left, top-right, bottom-right, bottom-left */\n  border-radius: 10px 20px 30px 40px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_rounded_corners.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ بِاسْتِخْدَامِ قِيَمٍ مُتَنَاسِقَةٍ لِتَحْقِيقِ تَصْمِيمٍ مُرِيحٍ. تَذَكَّرْ أَنَّ border-radius يَعْمَلُ بِشَكْلٍ مُمْتَازٍ مَعَ الْخَلْفِيَّاتِ وَالْحُدُودِ، لَكِنْ تَأَكَّدْ مِنْ تَجْرِبَتِهِ عَلَى مُتَصَفِّحَاتٍ مُخْتَلِفَةٍ لِضَمَانِ التَّوَافُقِيَّةِ.",
+        "caption_text": "استخدم قيما متناسقة للحصول على تصميم احترافي، وتأكد من اختبار التوافقية عبر المتصفحات المختلفة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم قيم متناسبة مع حجم العنصر",
+          "جرب استخدام النسبة المئوية للدوائر الكاملة",
+          "اختبر التصميم على Chrome و Firefox و Edge",
+          "حافظ على بساطة التصميم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_rounded_corners.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا كَيْفِيَّةَ اسْتِخْدَامِ border-radius لِتَحْسِينِ شَكْلِ الْعَنَاصِرِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا التَّحَدِّي بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتَطْوِيرِ مَهَارَاتِكُمْ فِي CSS.",
+        "caption_text": "تعلمنا اليوم كيفية استخدام border-radius. ندعوكم لتجربة التحدي البرمجي عبر الرابط في الوصف لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلمنا أساسيات border-radius",
+          "طبقنا الزوايا الدائرية على العناصر",
+          "تعرفنا على تخصيص الزوايا الفردية",
+          "شجعنا على الممارسة العملية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_rounded_corners.asp"
+      ]
+    }
+  ]
+}
