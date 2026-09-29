@@ -1,0 +1,8 @@
+.button {
+  background-color: #04AA6D;
+  padding: 15px 32px;
+  cursor: pointer;
+}
+.btn-group .button:hover {
+  background-color: dodgerblue;
+}
