@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "165",
+  "title": "CSS background-origin Property",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تحديد نقطة بداية خلفية العناصر باستخدام background-origin",
+    "التعرف على القيم الثلاث الأساسية padding-box و border-box و content-box",
+    "تطبيق الخصائص عمليا على عناصر div",
+    "إدراك العلاقة بين background-origin و background-attachment"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_background_origin.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول background-origin",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ background-origin، وَهِيَ خَاصِيَّةٌ مُهِمَّةٌ تُحَدِّدُ مَوْقِعَ بَدْءِ رَسْمِ صُورَةِ الْخَلْفِيَّةِ دَاخِلَ أَيِّ Element فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تستخدم خاصية background-origin لتحديد نقطة بداية موضع صورة الخلفية داخل عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تتحكم في موضع صورة الخلفية",
+          "تعتمد على صندوق العنصر",
+          "تؤثر في التصميم المرئي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_origin.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "قيم الخاصية background-origin",
+      "narration": {
+        "spoken_text": "تَقْبَلُ هَذِهِ الْخَاصِيَّةُ ثَلَاثَ قِيَمٍ رَئِيسِيَّةٍ. الْقِيمَةُ padding-box وَهِيَ الِافْتِرَاضِيَّةُ، وَ border-box، وَ content-box. كُلُّ قِيمَةٍ تُحَدِّدُ حُدُودَ الْمِنْطَقَةِ الَّتِي سَتَبْدَأُ مِنْهَا الصُّورَةُ بِالظُّهُورِ دَاخِلَ ال Element.",
+        "caption_text": "تتوفر ثلاث قيم رئيسية للخاصية وهي padding-box و border-box و content-box."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "الوصف"
+        ],
+        "rows": [
+          [
+            "padding-box",
+            "تبدأ من حافة الـ padding"
+          ],
+          [
+            "border-box",
+            "تبدأ من حافة الـ border"
+          ],
+          [
+            "content-box",
+            "تبدأ من حافة المحتوى"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_origin.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي باستخدام CSS",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيفِ ثَلَاثَةِ عناصر div، كُلٌّ مِنْهَا يَسْتَخْدِمُ قِيمَةً مُخْتَلِفَةً لِ background-origin. نُحَدِّدُ ال border وَال padding لِكُلِّ عُنْصُرٍ لِنَرَى الْفَرْقَ الْوَاضِحَ فِي مَوْضِعِ الصُّورَةِ.",
+        "caption_text": "نطبق قيم background-origin المختلفة على ثلاثة عناصر div لتوضيح الفروقات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  border: 2px solid black; padding: 35px; background-origin: padding-box;\n}\n#div2 {\n  border: 2px solid black; padding: 35px; background-origin: border-box;\n}\n#div3 {\n  border: 2px solid black; padding: 35px; background-origin: content-box;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_origin.asp"
+      ]
+    },
+    {
+      "id": "code_details",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، نَسْتَخْدِمُ background-image لِتَحْدِيدِ مَسَارِ الصُّورَةِ، وَ background-repeat بِقِيمَةِ no-repeat لِضَمَانِ عَدَمِ تَكْرَارِهَا. هَذِهِ الْإِعْدَادَاتُ تُسَاعِدُنَا فِي مُلَاحَظَةِ تَأْثِيرِ background-origin بِشَكْلٍ دَقِيقٍ وَمُبَاشِرٍ.",
+        "caption_text": "نستخدم background-image و background-repeat لضبط مظهر الخلفية بجانب background-origin."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "background-image لتحديد الصورة",
+          "background-repeat لمنع التكرار",
+          "padding يحدد مساحة الحشو"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_origin.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "المعاينة المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتُحَظُونَ أَنَّ الصُّورَةَ فِي div1 تَبْدَأُ مِنْ حَافَةِ ال padding، بَيْنَمَا فِي div2 تَبْدَأُ مِنْ حَافَةِ ال border، وَفِي div3 تَبْدَأُ مِنْ حَافَةِ الْمُحْتَوَى دَاخِلَ الْعُنْصُرِ.",
+        "caption_text": "تظهر النتائج بوضوح حيث تتغير نقطة بداية الصورة بناء على القيمة المختارة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "div1: Background starts at padding edge\ndiv2: Background starts at border edge\ndiv3: Background starts at content edge",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_origin.asp"
+      ]
+    },
+    {
+      "id": "important_note",
+      "title": "ملاحظة تقنية هامة",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَنْتَبِهَ إِلَى أَنَّ خَاصِيَّةَ background-origin لَا يَكُونُ لَهَا أَيُّ تَأْثِيرٍ إِذَا تَمَّ ضَبْطُ خَاصِيَّةِ background-attachment عَلَى الْقِيمَةِ fixed. هَذِهِ نُقْطَةٌ هَنْدَسِيَّةٌ مُهِمَّةٌ لِتَجَنُّبِ الْأَخْطَاءِ فِي التَّصْمِيمِ.",
+        "caption_text": "ملاحظة: لا تعمل background-origin إذا كانت background-attachment مضبوطة على fixed."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنبيه تقني هام",
+          "تأثير background-attachment",
+          "تجنب تعارض الخصائص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_origin.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا كَيْفَ نَتَحَكَّمُ فِي مَوْضِعِ خَلْفِيَّةِ الْعَنَاصِرِ بِدِقَّةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدِيُو لِتَرَوْا التَّأْثِيرَاتِ بِأَعْيُنِكُمْ. شُكْراً لِمُتَابَعَتِكُمْ.",
+        "caption_text": "تعلمنا التحكم في موضع الخلفية. جربوا الأكواد بأنفسكم من الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم الكامل في موضع الخلفية",
+          "تطبيق القيم الثلاث",
+          "مراجعة الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_origin.asp"
+      ]
+    }
+  ]
+}
