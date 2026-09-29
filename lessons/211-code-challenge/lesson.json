@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "211",
+  "title": "CSS Image Filters Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تطبيق CSS Image Filters",
+    "التعرف على خصائص الفلاتر المختلفة",
+    "تطبيق التحدي العملي على الصور",
+    "تحسين مظهر عناصر الويب باستخدام CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_imagefilters.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Image Filters",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَخُوضُ تَحَدِّياً مُمْتِعاً حَوْلَ CSS Image Filters، وَهِيَ تَقْنِيَةٌ قَوِيَّةٌ لِتَحْسِينِ مَظْهَرِ الصُّوَرِ دَاخِلَ صَفْحَةِ الْوِبّ بِاسْتِخْدَامِ كُودٍ بَسِيطٍ وَفَعَّالٍ.",
+        "caption_text": "مرحبا بكم في درس CSS Image Filters حيث سنتعلم كيفية تحسين صور الويب برمجيا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعريف CSS Image Filters",
+          "أهمية الفلاتر في تصميم الويب",
+          "الاستعداد لتنفيذ التحدي البرمجي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagefilters.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم أساسية في الفلاتر",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ خَاصِّيَّةُ filter فِي CSS عَلَى مَجْمُوعَةٍ مِنَ الدَّوَالِ مِثْلَ blur، وَ brightness، وَ contrast. هَذِهِ الدَّوَالُ تُغَيِّرُ مِنْ خَصَائِصِ الْعُنْصُرِ الْمَرْئِيَّةِ بِشَكْلٍ مُبَاشِرٍ دُونَ الْحَاجَةِ لِتَعْدِيلِ مِلَفِّ الصُّورَةِ الْأَصْلِيِّ.",
+        "caption_text": "تستخدم خاصية filter دوالا مثل blur و brightness للتحكم في مظهر العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام خاصية filter",
+          "دالة blur للتمويه",
+          "دالة brightness للسطوع",
+          "دالة contrast للتباين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagefilters.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود تطبيق الفلاتر",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ selector لِلصُّورَةِ، ثُمَّ نُضِيفُ خَاصِّيَّةَ filter مَعَ الْقِيمَةِ الْمَطْلُوبَةِ. لَاحِظْ كَيْفَ نُطَبِّقُ grayscale بِنِسْبَةِ مِئَةٍ بِالْمِئَةِ لِتَحْوِيلِ الصُّورَةِ إِلَى الْأَبْيَضِ وَالْأَسْوَدِ.",
+        "caption_text": "تطبيق فلتر grayscale على عنصر img لتحويله إلى الأبيض والأسود."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  filter: grayscale(100%);\n}\nimg:hover {\n  filter: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagefilters.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَطْبِيقِ filter عَلَى كُلِّ Elements مِنْ نَوْعِ img. عِنْدَ اسْتِخْدَامِ pseudo-class الَّتِي تُسَمَّى hover، قُمْنَا بِإِلْغَاءِ الْفِلْتَرِ بِاسْتِخْدَامِ الْقِيمَةِ none، مِمَّا يُعْطِي تَفَاعُلِيَّةً رَائِعَةً عِنْدَ تَحْرِيكِ الْمُؤَشِّرِ.",
+        "caption_text": "شرح استخدام hover لإلغاء الفلتر عند التفاعل مع الصورة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد img كعنصر مستهدف",
+          "تطبيق فلتر grayscale",
+          "استخدام hover للتفاعل",
+          "إعادة الفلتر إلى none"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagefilters.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَشْغِيلِ هَذَا الْكُودِ فِي Web Browser، سَتَظْهَرُ الصُّورَةُ بِأَلْوَانٍ رَمَادِيَّةٍ. وَبِمُجَرَّدِ مُرُورِ الْمُؤَشِّرِ فَوْقَهَا، سَتَعُودُ الْأَلْوَانُ الْأَصْلِيَّةُ لِلصُّورَةِ بِشَكْلٍ انْسِيَابِيٍّ وَجَذَّابٍ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "المعاينة: الصورة تظهر باللون الرمادي وتعود لألوانها الأصلية عند التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <img src=\"nature.jpg\" alt=\"Nature\">\n    <!-- النتيجة: صورة رمادية تتحول للألوان -->\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Grayscale Image -> Color Image on Hover",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagefilters.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دائماً بِاسْتِخْدَامِ transition مَعَ الفلاتر لِجَعْلِ التَّحَوُّلِ أَكْثَرَ نُعُومَةً. تَذَكَّرْ أَنَّ بَعْضَ المتصفحات قَدْ تَحْتَاجُ إِلَى vendor prefixes لِضَمَانِ التَّوَافُقِيَّةِ الْكَامِلَةِ مَعَ جَمِيعِ إصدارات Web Browser.",
+        "caption_text": "استخدام transition يجعل تأثير الفلاتر أكثر احترافية ونعومة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إضافة transition للنعومة",
+          "مراعاة توافق المتصفحات",
+          "اختبار الأداء عند استخدام فلاتر متعددة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagefilters.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا التَّحَدِّي، تَعَلَّمْنَا كَيْفَ نُضِيفُ لَمَسَاتٍ جَمَالِيَّةً لِصُوَرِ الْوِبّ بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ دَوَالٍ أُخْرَى مِثْلَ sepia أَوْ hue-rotate لِاسْتِكْشَافِ مَزِيدٍ مِنَ الْإِمْكَانِيَّاتِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ.",
+        "caption_text": "خلاصة: CSS Filters أداة قوية لتحسين التصميم. جربوا دالات أخرى مثل sepia."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة ما تم تعلمه",
+          "تشجيع على التجربة الذاتية",
+          "رابط التحدي في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagefilters.asp"
+      ]
+    }
+  ]
+}
