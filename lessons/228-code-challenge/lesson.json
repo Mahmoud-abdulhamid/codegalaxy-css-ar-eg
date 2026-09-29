@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "228",
+  "title": "CSS Pagination Design",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء نظام Pagination باستخدام CSS",
+    "تنسيق الروابط داخل عناصر القوائم",
+    "تطبيق تأثيرات Hover على أزرار التنقل",
+    "تحسين تجربة المستخدم في تصفح المحتوى"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_pagination.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Pagination",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةَ بِنَاءِ نِظَامِ Pagination احْتِرَافِيٍّ لِتَنْظِيمِ الْمُحْتَوَى عَلَى صَفْحَةِ الْوِبّ، وَهُوَ أَمْرٌ ضَرُورِيٌّ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ عِنْدَ تَعَدُّدِ الصَّفَحَاتِ.",
+        "caption_text": "مرحبا بكم في درس CSS Pagination لتنظيم المحتوى على صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "نظام Pagination يسهل التنقل بين صفحات الموقع",
+          "يستخدم CSS لتنسيق الروابط كأزرار جذابة",
+          "يعزز من سهولة الوصول للمعلومات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "structure",
+      "title": "الهيكل البرمجي للـ Pagination",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِالْهَيْكَلِ الْأَسَاسِيِّ. نَسْتَخْدِمُ عُنْصُرَ div لِتَغْلِيفِ ال Pagination، وَدَاخِلَهُ نَضَعُ عَنَاصِرَ a لِتَمْثِيلِ أَرْقَامِ الصَّفَحَاتِ. هَذَا التَّرْتِيبُ يَمْنَحُنَا سُهُولَةً فِي التَّحَكُّمِ بِالْمَظْهَرِ عَبْرَ CSS.",
+        "caption_text": "نستخدم عنصر div لتغليف الروابط وعناصر a لتمثيل أرقام الصفحات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"pagination\">\n      <a href=\"#\">&laquo;</a>\n      <a href=\"#\">1</a>\n      <a href=\"#\">2</a>\n      <a href=\"#\">3</a>\n      <a href=\"#\">&raquo;</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "styling",
+      "title": "تنسيق الروابط بـ CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نَقُومُ بِتَنْسِيقِ ال a Tags. نُحَدِّدُ لَهَا padding مُنَاسِباً، وَنُزِيلُ خَطَّ التَّسْطِيرِ بِاسْتِخْدَامِ text-decoration: none. هَذَا يَجْعَلُ الرَّوَابِطَ تَبْدُو كَأَزْرَارٍ مُنَظَّمَةٍ وَجَذَّابَةٍ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "تنسيق الروابط باستخدام padding وإزالة التسطير لجعلها تبدو كأزرار."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pagination a {\n  color: black;\n  float: left;\n  padding: 8px 16px;\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "hover_effect",
+      "title": "إضافة تأثيرات التفاعل",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ لَمْسَةٍ تَفَاعُلِيَّةٍ، نَسْتَخْدِمُ ال pseudo-class التي تُسَمَّى hover. عِنْدَ مُرُورِ مُؤَشِّرِ الْفَأْرَةِ، نُغَيِّرُ لَوْنَ الْخَلْفِيَّةِ لِيَعْرِفَ الْمُسْتَخْدِمُ أَنَّ هَذَا الزِّرَّ قَابِلٌ لِلنَّقْرِ.",
+        "caption_text": "استخدام hover لتغيير لون الخلفية عند مرور الفأرة فوق الزر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pagination a:hover {\n  background-color: #ddd;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "active_state",
+      "title": "تحديد الصفحة النشطة",
+      "narration": {
+        "spoken_text": "مِنَ الْمُهِمِّ أَيْضاً تَمْيِيزُ الصَّفْحَةِ الْحَالِيَّةِ. نُضِيفُ كَلَاساً بِاسْمِ active، وَنُعْطِيهِ لَوْناً مُمَيَّزاً لِلْخَلْفِيَّةِ وَالنَّصِّ، لِيَعْرِفَ الْمُسْتَخْدِمُ أَيَّ صَفْحَةٍ يَتَصَفَّحُ الْآنَ بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "استخدام كلاس active لتمييز الصفحة الحالية بلون مختلف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pagination a.active {\n  background-color: #4CAF50;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "output",
+      "title": "معاينة النتيجة النهائية",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ لَدَيْنَا قَائِمَةُ تَنَقُّلٍ أَنِيقَةٌ. لَاحِظْ كَيْفَ تَتَفَاعَلُ الْأَزْرَارُ مَعَ الْمُسْتَخْدِمِ، وَكَيْفَ يَتَمَيَّزُ الزِّرُّ النَّشِطُ عَنْ بَقِيَّةِ الْأَزْرَارِ بِوُضُوحٍ.",
+        "caption_text": "النتيجة النهائية لنظام Pagination التفاعلي في المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة في المتصفح -->\n    < 1 2 3 >\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "« 1 2 3 »",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَبْنِي Pagination بَسيطاً وَفَعَّالاً. تَذَكَّرْ أَنَّ التَّنْسِيقَ الْجَيِّدَ لِل Elements يُحَسِّنُ مِنْ جَوْدَةِ مَوْقِعِكَ. جَرِّبْ تَغْيِيرَ الْأَلْوَانِ وَال padding لِتَحْصُلَ عَلَى تَصْمِيمٍ خَاصٍّ بِكَ.",
+        "caption_text": "خلاصة: Pagination الفعال يعزز تجربة المستخدم. جرب تعديل الأكواد بنفسك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام div لتنظيم الروابط",
+          "تطبيق hover للتفاعل",
+          "استخدام active لتمييز الحالة",
+          "التجربة هي مفتاح الإتقان"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_pagination.asp"
+      ]
+    }
+  ]
+}
