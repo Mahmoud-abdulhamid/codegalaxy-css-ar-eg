@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "140",
+  "title": "CSS Units Explained",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the purpose of CSS units",
+    "Differentiate between Absolute and Relative units",
+    "Learn when to use px, em, and rem",
+    "Apply units for responsive web design"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_units.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Units",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَحْدِيدِ الْأَحْجَامِ وَالْأَبْعَادِ لِعَنَاصِرِ الْوِبّ بِاسْتِخْدَامِ CSS Units، وَهِيَ جُزْءٌ أَسَاسِيٌّ لِتَحْكِيمِ التَّصْمِيمِ.",
+        "caption_text": "مقدمة حول استخدام CSS Units لتحديد أبعاد العناصر في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم CSS Units لتحديد الطول والحجم",
+          "تؤثر على خصائص مثل font-size و width",
+          "تنقسم إلى نوعين رئيسيين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units.asp"
+      ]
+    },
+    {
+      "id": "absolute-units",
+      "title": "فهم Absolute Units",
+      "narration": {
+        "spoken_text": "تُعَدُّ Absolute Units قِيَمَاً ثَابِتَةً لَا تَتَغَيَّرُ مَعَ تَغَيُّرِ حَجْمِ الشَّاشَةِ. وَأَشْهَرُهَا هِيَ px أَوْ pixels. لَا يُنْصَحُ بِاسْتِخْدَامِهَا فِي تَصْمِيمِ مَوَاقِعِ الْوِبّ، لَكِنَّهَا مُفِيدَةٌ فِي حَالَةِ الطِّبَاعَةِ.",
+        "caption_text": "شرح Absolute Units مثل px التي تتميز بالثبات وعدم التغير مع أحجام الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قيم ثابتة لا تتغير",
+          "px هي الوحدة الأكثر استخداما",
+          "غير مناسبة للتصاميم المتجاوبة",
+          "تستخدم غالبا في تنسيقات الطباعة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units.asp"
+      ]
+    },
+    {
+      "id": "relative-units",
+      "title": "قوة Relative Units",
+      "narration": {
+        "spoken_text": "أَمَّا Relative Units فَهِيَ تَتَغَيَّرُ نِسْبَةً إِلَى عَنَاصِرَ أُخْرَى مِثْلَ parent element أَوْ root element. هَذِهِ الْوَحَدَاتُ هِيَ الْمِفْتَاحُ لِتَصْمِيمِ مَوَاقِعِ وِبّ responsive وَمُتَجَاوِبَةٍ بِشَكْلٍ احْتِرَافِيٍّ.",
+        "caption_text": "تعتمد Relative Units على عناصر أخرى مما يجعلها مثالية للتصميم المتجاوب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعتمد على أبعاد عناصر أخرى",
+          "مثالية للتصميم المتجاوب",
+          "أهم الوحدات هي em و rem"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units.asp"
+      ]
+    },
+    {
+      "id": "code-example",
+      "title": "تطبيق عملي للأكواد",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ هَذَا الْكُودَ. نَسْتَخْدِمُ px لِلْأَحْجَامِ الثَّابِتَةِ، وَنَسْتَخْدِمُ rem لِتَحْقِيقِ التَّجَاوُبِ. لَاحِظْ كَيْفَ نُعَرِّفُ font-size بِاسْتِخْدَامِ هَذِهِ الْوَحَدَاتِ لِضَمَانِ مَظْهَرٍ مُتَنَاسِقٍ.",
+        "caption_text": "مثال برمجي يوضح الفرق في كتابة القيم باستخدام وحدات القياس المختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h1 {\n  font-size: 32px;\n}\np {\n  font-size: 1.5rem;\n  margin: 10px;\n  padding: 2em;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units.asp"
+      ]
+    },
+    {
+      "id": "code-explanation",
+      "title": "تحليل الكود البرمجي",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيدِ font-size لِ h1 بِ 32px كَقِيمَةٍ ثَابِتَةٍ. بَيْنَمَا اسْتَخْدَمْنَا 1.5rem لِ p لِتَكُونَ نِسْبِيَّةً، وَ 2em لِ padding لِتَتَنَاسَبَ مَعَ حَجْمِ الْخَطِّ.",
+        "caption_text": "شرح تفصيلي لكل سطر في الكود وكيفية تأثير الوحدات على العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "32px: حجم ثابت للعنوان",
+          "1.5rem: حجم نسبي للفقرة",
+          "2em: مساحة داخلية نسبية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَظْهَرُ الْعُنْصُرُ h1 بِحَجْمٍ ثَابِتٍ، بَيْنَمَا سَتَتَكَيَّفُ الْفَقَرَاتُ وَالْمَسَافَاتُ مَعَ إِعْدَادَاتِ الْمُتَصَفِّحِ، مِمَّا يَمْنَحُ الْمُسْتَخْدِمَ تَجْرِبَةً مُمَيَّزَةً عَلَى كُلِّ الشَّاشَاتِ.",
+        "caption_text": "النتيجة المتوقعة للعناصر عند استخدام وحدات القياس المختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <h1>عنوان ثابت</h1>\n    <p>نص متجاوب يعتمد على rem</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عنوان ثابت\nنص متجاوب يعتمد على rem",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "نَصِيحَتِي لَكُمْ، اسْتَخْدِمُوا rem لِلْخُطُوطِ وَالْمَسَافَاتِ لِتَضْمَنُوا أَنَّ مَوَاقِعَكُمُ الْوِبّ تَعْمَلُ بِكَفَاءَةٍ عَالِيَةٍ عَلَى كُلِّ الْأَجْهِزَةِ. تَجَنَّبُوا الْاعْتِمَادَ الْكُلِّيَّ عَلَى px لِتَحْقِيقِ التَّجَاوُبِ.",
+        "caption_text": "نصائح هندسية لاستخدام الوحدات بشكل صحيح في مشاريع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فضل استخدام rem للتصميم المتجاوب",
+          "استخدم px فقط للأحجام التي لا يجب أن تتغير",
+          "اختبر التصميم على أحجام شاشات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ أَنَّ CSS Units هِيَ الْأَسَاسُ لِتَحْدِيدِ الْأَحْجَامِ. الْفَرْقُ بَيْنَ Absolute وَ Relative Units جَوْهَرِيٌّ لِكُلِّ مُطَوِّرِ وِبّ. جَرِّبُوا الْأَكْوَادَ بِنَفْسِكُمْ وَشَارِكُونَا النَّتَائِجَ.",
+        "caption_text": "ملخص سريع لما تم تعلمه في درس وحدات القياس في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Absolute units ثابتة",
+          "Relative units مرنة",
+          "استخدم rem لبناء مواقع متجاوبة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_units.asp"
+      ]
+    }
+  ]
+}
