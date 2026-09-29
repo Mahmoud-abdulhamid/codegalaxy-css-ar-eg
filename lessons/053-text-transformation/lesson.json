@@ -3,6 +3,8 @@
   "lesson_id": "53",
   "title": "CSS Text Transformation",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية استخدام خاصية text-transform للتحكم في حالة الأحرف",
     "التعرف على قيم uppercase و lowercase و capitalize",
