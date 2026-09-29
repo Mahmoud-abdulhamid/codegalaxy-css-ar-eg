@@ -1,0 +1,13 @@
+header, footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+nav {
+  float: left;
+  width: 20%;
+}
+main {
+  float: left;
+  width: 80%;
+}
