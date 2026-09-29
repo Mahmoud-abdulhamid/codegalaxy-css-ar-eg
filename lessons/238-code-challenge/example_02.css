@@ -1,0 +1,10 @@
+.container {
+  background-color: var(--main-bg-color);
+  padding: 20px;
+}
+.btn {
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  border: none;
+  padding: 10px 20px;
+}
