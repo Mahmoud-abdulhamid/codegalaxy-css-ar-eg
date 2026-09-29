@@ -1,0 +1,6 @@
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: #3498db;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
