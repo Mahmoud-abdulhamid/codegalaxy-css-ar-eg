@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "194",
+  "title": "CSS Transitions Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية عمل CSS Transitions",
+    "تطبيق خصائص transition-property و transition-duration",
+    "التحكم في توقيت التحولات عبر transition-timing-function",
+    "حل تحديات برمجية باستخدام CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_transitions.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Transitions",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ تَحَوُّلَاتٍ سَلِسَةٍ لِلْعَنَاصِرِ بِاسْتِخْدَامِ CSS Transitions، وَهِيَ مَهَارَةٌ أَسَاسِيَّةٌ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Transitions حيث سنتعلم كيفية إنشاء تحولات سلسة للعناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تسمح CSS Transitions بتغيير قيم الخصائص بسلاسة",
+          "تتحكم في سرعة التغيير عبر الزمن",
+          "تعتبر جزءا أساسيا من التفاعل في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية للتحولات",
+      "narration": {
+        "spoken_text": "لِتَفْعِيلِ هَذِهِ التَّحَوُّلَاتِ، نَحْتَاجُ إِلَى خَصَائِصَ مِثْلَ transition-property لِتَحْدِيدِ الْخَاصِيَّةِ الْمُرَادِ تَغْيِيرُهَا، وَ transition-duration لِتَحْدِيدِ الْمُدَّةِ الزَّمَنِيَّةِ. هَذِهِ الْأَدَوَاتُ تَمْنَحُنَا تَحَكُّماً كَامِلاً فِي حَرَكَةِ الْعَنَاصِرِ.",
+        "caption_text": "تعتمد التحولات على خصائص مثل transition-property و transition-duration للتحكم في التغيير."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "transition-property: تحديد الخاصية المستهدفة",
+          "transition-duration: تحديد زمن التحول",
+          "transition-timing-function: التحكم في تسارع الحركة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كتابة كود CSS Transition",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ مِثَالاً عَمَلِيّاً. نَقُومُ بِتَعْرِيفِ div وَنُضِيفُ لَهُ خَاصِيَّةَ transition. عِنْدَ تَغْيِيرِ الْحَالَةِ مِثْلَ hover، سَتَتَحَوَّلُ الْقِيمَةُ بِسَلَاسَةٍ خِلَالَ الْمُدَّةِ الْمُحَدَّدَةِ، مِمَّا يُعْطِي طَابَعاً احْتِرَافِيّاً لِتَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مثال برمجي يوضح تطبيق transition على عنصر div عند التفاعل معه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 100px;\n  height: 100px;\n  background: red;\n  transition: width 2s;\n}\ndiv:hover {\n  width: 300px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيدِ transition: width 2s. هَذَا يَعْنِي أَنَّ أَيَّ تَغْيِيرٍ فِي خَاصِيَّةِ width سَيَسْتَغْرِقُ ثَانِيَتَيْنِ لِيَكْتَمِلَ. هَذَا الْأُسْلُوبُ يُغْنِينَا عَنْ كِتَابَةِ أَكْوَادٍ مُعَقَّدَةٍ لِتَحْرِيكِ الْعَنَاصِرِ.",
+        "caption_text": "شرح سطر transition: width 2s الذي يحدد الخاصية والمدة الزمنية للتحول."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "width: الخاصية التي سيتم تطبيق التحول عليها",
+          "2s: المدة الزمنية المستغرقة للتحول",
+          "يتم التفعيل تلقائيا عند تغير العرض"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَجْرِبَةِ هَذَا الْكُودِ فِي مُتَصَفِّحِ الْوِبّ، سَتَرَى أَنَّ الْعُنْصَرَ يَتَمَدَّدُ بِبُطْءٍ عِنْدَ وَضْعِ مُؤَشِّرِ الْفَأْرَةِ عَلَيْهِ. هَذِهِ هِيَ الْقُوَّةُ الْحَقِيقِيَّةُ لِ CSS فِي جَعْلِ الْوَاجِهَاتِ أَكْثَرَ تَفَاعُلِيَّةً وَجَذْباً.",
+        "caption_text": "تظهر المعاينة تمدد العنصر بسلاسة عند التفاعل معه بواسطة المؤشر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة: -->\n    <div class=\"box\"></div>\n    <!-- عند الـ hover يتغير العرض -->\n    <!-- من 100px إلى 300px في 2s -->\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Smooth width expansion from 100px to 300px over 2 seconds.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِتَحْدِيدِ transition-timing-function لِتَحْسِينِ شَكْلِ الْحَرَكَةِ، مِثْلَ استخدام ease-in أَوْ ease-out. تَجَنَّبْ تَطْبِيقَ التَّحَوُّلَاتِ عَلَى جَمِيعِ الْخَصَائِصِ بِاسْتِخْدَامِ all إِذَا كَانَ ذَلِكَ يُؤَثِّرُ عَلَى أَدَاءِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "أفضل الممارسات تشمل اختيار timing function مناسب وتجنب استخدام all لضمان الأداء."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم قيم محددة للخصائص بدلا من all",
+          "جرب timing-functions مختلفة لتحسين تجربة المستخدم",
+          "حافظ على بساطة التحولات لضمان سرعة الأداء"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ تَحَوُّلَاتٍ بَسِيطَةٍ وَفَعَّالَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُحَاوَلَةِ حَلِّ التَّحَدِّيَاتِ الْمَوْجُودَةِ فِي رَابِطِ الْمَصْدَرِ لِتَعْزِيزِ مَهَارَاتِكُمْ فِي CSS.",
+        "caption_text": "خلاصة: تعلمت كيفية إنشاء التحولات، أدعوك لتجربة الكود وحل التحديات في الرابط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Transitions أداة قوية للتفاعل",
+          "التطبيق العملي هو مفتاح الإتقان",
+          "راجع الرابط في الأسفل لمزيد من التمارين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transitions.asp"
+      ]
+    }
+  ]
+}
