@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "253",
+  "title": "Responsive Flexbox Layouts",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء تخطيطات مرنة باستخدام Flexbox",
+    "التعرف على دور Media Queries في التجاوب",
+    "تغيير flex-direction بناء على حجم الشاشة",
+    "استخدام خاصية flex للتحكم في عرض العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_flexbox_responsive.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Responsive Flexbox",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ تَخْطِيطَاتٍ مُتَجَاوِبَةٍ بِاسْتِخْدَامِ Flexbox وَ Media Queries لِتَتَنَاسَبَ مَعَ مُخْتَلَفِ أَحْجَامِ الشَّاشَاتِ وَالْأَجْهِزَةِ.",
+        "caption_text": "مرحبا بكم في درس Responsive Flexbox، حيث نتعلم بناء تخطيطات متجاوبة باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Flexbox لبناء هيكل مرن",
+          "تطبيق Media Queries لتغيير التخطيط",
+          "التحكم في flex-direction و flex property",
+          "ضمان تجاوب العناصر مع مختلف الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "تغيير التخطيط باستخدام Media Queries",
+      "narration": {
+        "spoken_text": "لِتَحْوِيلِ التَّخْطِيطِ مِنْ ثَلَاثَةِ أَعْمِدَةٍ إِلَى عَمُودٍ وَاحِدٍ عِنْدَ تَصْغِيرِ الشَّاشَةِ، نَقُومُ بِتَغْيِيرِ قِيمَةِ flex-direction مِنْ row إِلَى column دَاخِلَ Media Query عِنْدَ نُقْطَةِ تَوَقُّفٍ مُحَدَّدَةٍ، مِثْلَ سِتِّمِائَةِ بيكسل.",
+        "caption_text": "نستخدم Media Queries لتغيير flex-direction من row إلى column عند الوصول إلى breakpoint محدد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media (max-width: 600px) {\n  .flex-container {\n    flex-direction: column;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "مثال عملي على التخطيط المرن",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نُعَرِّفُ flex-container بِخَاصِيَّةِ display flex، وَنَضْبِطُ flex-item لِيَأْخُذَ عَرْضاً كَامِلاً. عِنْدَ تَجَاوُزِ الشَّاشَةِ لِعَرْضِ سِتِّمِائَةِ بيكسل، يَتَحَوَّلُ التَّخْطِيطُ تِلْقَائِيّاً لِيُصْبِحَ عَمُودِيّاً.",
+        "caption_text": "مثال يوضح تحويل التخطيط من صف إلى عمود باستخدام Media Queries و flex-direction."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  flex-direction: row;\n}\n.flex-item {\n  width: 100%;\n  padding: 10px;\n}\n@media (max-width: 600px) {\n  .flex-container {\n    flex-direction: column;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "flex_property",
+      "title": "استخدام خاصية flex للتحكم بالعرض",
+      "narration": {
+        "spoken_text": "طَرِيقَةٌ أُخْرَى هِيَ تَعْدِيلُ نِسْبَةِ خَاصِيَّةِ flex لِلْعَنَاصِرِ. لَا تَنْسَ إِضَافَةَ flex-wrap: wrap لِلْحَاوِيَةِ حَتَّى تَنْتَقِلَ الْعَنَاصِرُ إِلَى سَطْرٍ جَدِيدٍ عِنْدَ نَفَادِ الْمَسَاحَةِ الْمُتَاحَةِ.",
+        "caption_text": "استخدام flex property مع flex-wrap: wrap لإنشاء تخطيطات مرنة تتكيف مع أحجام الشاشات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".flex-container {\n  display: flex;\n  flex-wrap: wrap;\n}\n.flex-item {\n  flex: 33.3%;\n}\n@media (max-width: 600px) {\n  .flex-item {\n    flex: 100%;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتُحَافِظُ الْعَنَاصِرُ عَلَى تَنْسِيقِهَا. فِي الشَّاشَاتِ الْكَبِيرَةِ، تَظْهَرُ الْعَنَاصِرُ بِعَرْضِ ثُلُثِ الشَّاشَةِ، وَفِي الشَّاشَاتِ الصَّغِيرَةِ، تَمْتَدُّ لِتَأْخُذَ الْعَرْضَ الْكَامِلَ.",
+        "caption_text": "المخرجات: العناصر تتكيف ديناميكيا مع عرض الشاشة بفضل flex و Media Queries."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Large Screen: [Item 1] [Item 2] [Item 3]\nSmall Screen: [Item 1]\n              [Item 2]\n              [Item 3]",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دائماً بِتَحْدِيدِ breakpoints مُنَاسِبَةٍ لِتَصْمِيمِكَ. اسْتِخْدَامُ flex-wrap يُعَدُّ مُمَارَسَةً جَيِّدَةً لِضَمَانِ عَدَمِ خُرُوجِ الْعَنَاصِرِ عَنْ حُدُودِ الْحَاوِيَةِ فِي الشَّاشَاتِ الضَّيِّقَةِ.",
+        "caption_text": "أفضل الممارسات: استخدم breakpoints مناسبة و flex-wrap لضمان مرونة التصميم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم flex-wrap لتجنب تداخل العناصر",
+          "حدد breakpoints بناء على محتوى الموقع",
+          "اختبر التصميم على أحجام شاشات مختلفة",
+          "حافظ على بساطة التنسيق في الشاشات الصغيرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_responsive.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ جَعْلِ تَخْطِيطِ Flexbox مُتَجَاوِباً. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِ مَهَارَاتِكُمْ فِي تَصْمِيمِ مَوَاقِعِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ.",
+        "caption_text": "خلاصة: تعلمت كيفية بناء تخطيطات متجاوبة. جرب الأكواد بنفسك لتطوير مهاراتك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Flexbox هو أداة قوية للتصميم المتجاوب",
+          "Media Queries تمنحك تحكما كاملا في التخطيط",
+          "التجربة العملية هي مفتاح الإتقان",
+          "راجع الرابط في الوصف للمزيد من التمارين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_flexbox_responsive.asp"
+      ]
+    }
+  ]
+}
