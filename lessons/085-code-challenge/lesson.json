@@ -3,6 +3,8 @@
   "lesson_id": "85",
   "title": "CSS max-width Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية التحكم في عرض العناصر باستخدام max-width",
     "تطبيق خاصية max-width لمنع تمدد العناصر بشكل غير مرغوب",
