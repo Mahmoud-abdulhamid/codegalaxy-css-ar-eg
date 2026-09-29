@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "319",
+  "title": "تصميم Vertical Button Group باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية تجميع الأزرار بشكل عمودي",
+    "استخدام CSS لتنسيق الأزرار داخل مجموعة",
+    "تطبيق تأثيرات التفاعل مثل hover",
+    "إدارة الحواف لمنع تكرار الحدود"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_button_group_vertical.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Vertical Button Groups",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ Vertical Button Group، وَهِيَ تَقْنِيَةٌ رَائِعَةٌ لِتَنْظِيمِ الْأَزْرَارِ بِشَكْلٍ عَمُودِيٍّ مُنَسَّقٍ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تصميم Vertical Button Group باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجميع الأزرار بشكل عمودي",
+          "تحسين تجربة المستخدم في واجهات الويب",
+          "استخدام CSS للتحكم في المظهر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group_vertical.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للمجموعة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكَلَاسِ btn-group لِتَجْمِيعِ الْعَنَاصِرِ، ثُمَّ نَضَعُ دَاخِلَهُ مَجْمُوعَةً مِنَ ال button Elements. هَذَا التَّنْظِيمُ يُسَهِّلُ عَلَيْنَا اسْتِهْدَافَ هَذِهِ الْأَزْرَارِ جَمِيعاً بِكُودٍ وَاحِدٍ.",
+        "caption_text": "استخدام div كحاوية رئيسية ووضع عناصر button بداخلها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"btn-group\">\n      <button>Apple</button>\n      <button>Samsung</button>\n      <button>Sony</button>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group_vertical.asp"
+      ]
+    },
+    {
+      "id": "css_styling_part1",
+      "title": "تنسيق الأزرار بـ CSS",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى CSS. نَقُومُ بِتَحْدِيدِ الْعَرْضِ بِ width، وَنَجْعَلُ الْأَزْرَارَ تَظْهَرُ كَ block لِتَصْطَفَّ عَمُودِيّاً. نُضِيفُ أَيْضاً background-color وَ padding لِتَحْسِينِ الْمَظْهَرِ الْعَامِّ لِلْأَزْرَارِ.",
+        "caption_text": "تنسيق الأزرار باستخدام display: block وتحديد العرض والألوان."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn-group button {\n  background-color: #04AA6D;\n  border: 1px solid green;\n  color: white;\n  padding: 10px 24px;\n  cursor: pointer;\n  width: 50%;\n  display: block;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group_vertical.asp"
+      ]
+    },
+    {
+      "id": "css_styling_part2",
+      "title": "إدارة الحدود والتفاعل",
+      "narration": {
+        "spoken_text": "لِتَجَنُّبِ تَكَرُّرِ الْحُدُودِ بَيْنَ الْأَزْرَارِ، نَسْتَخْدِمُ :not(:last-child) لِإِلْغَاءِ border-bottom. كَمَا نُضِيفُ تَأْثِيرَ hover لِتَغْيِيرِ اللَّوْنِ عِنْدَ مُرُورِ مُؤَشِّرِ الْفَأْرَةِ فَوْقَ الزِّرِّ.",
+        "caption_text": "استخدام :not(:last-child) لإزالة الحدود المزدوجة وإضافة تأثير hover."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn-group button:not(:last-child) {\n  border-bottom: none;\n}\n.btn-group button:hover {\n  background-color: #3e8e41;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group_vertical.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة النهائية",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ الْمُتَوَقَّعَةُ. سَتَظْهَرُ الْأَزْرَارُ مُرَتَّبَةً بِشَكْلٍ عَمُودِيٍّ مُتَلَاصِقٍ، مَعَ حُدُودٍ نَظِيفَةٍ وَتَفَاعُلٍ سَلِسٍ عِنْدَ الْوُقُوفِ بِالْمُؤَشِّرِ عَلَى أَيِّ زِرٍّ.",
+        "caption_text": "النتيجة النهائية: أزرار مرتبة عموديا مع تأثيرات تفاعلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "preview.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة في المتصفح -->\n    [Apple] (Green)\n    [Samsung] (Green)\n    [Sony] (Green)\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Apple\nSamsung\nSony",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group_vertical.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، احْرِصُوا دَائِماً عَلَى اسْتِخْدَامِ الْأَلْوَانِ الْمُتَنَاسِقَةِ وَال padding الْمُنَاسِبِ لِتَحْسِينِ قَابِلِيَّةِ الْقِرَاءَةِ. كَمَا يُمْكِنُكُمْ تَطْوِيرُ هَذَا الْكُودِ بِإِضَافَةِ transitions لِجَعْلِ تَأْثِيرِ hover أَكْثَرَ نَعُومَةً.",
+        "caption_text": "نصائح إضافية لتحسين التصميم وتجربة المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام transitions لتأثيرات أكثر سلاسة",
+          "اختيار ألوان متناسقة مع هوية الموقع",
+          "التأكد من وضوح النصوص داخل الأزرار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group_vertical.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمَ. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو، وَلَا تَتَرَدَّدُوا فِي طَرْحِ أَسْئِلَتِكُمْ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الكود بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا الرابط في الوصف للتطبيق العملي",
+          "استمروا في ممارسة مهارات CSS",
+          "محمود عبدالحميد يتمنى لكم التوفيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group_vertical.asp"
+      ]
+    }
+  ]
+}
