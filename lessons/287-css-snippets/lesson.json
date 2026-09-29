@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "287",
+  "title": "مكتبة CSS Snippets لتطوير الويب",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعريف مفهوم CSS Snippets وأهميتها في مشاريع الويب",
+    "استعراض مكتبات الأكواد الجاهزة مثل Image Text Blocks وAlert Buttons",
+    "التعرف على مكونات Loaders وTop Navigation",
+    "فهم كيفية استخدام Animated Search Form وHover Dropdowns",
+    "تطبيق Fixed Sidebar وأكواد مكتبة How To"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_snippets.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة حول CSS Snippets",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَوْرَةِ CSS. هَلْ رَأَيْتُمْ مَرَّةً مِيزَةً رَائِعَةً عَلَى مَوْقِعِ وِبّ وَتَسَاءَلْتُمْ كَيْفَ تَمَّ بِنَاؤُهَا؟ نَجْمَعُ الْيَوْمَ مَجْمُوعَةً مِنْ CSS Snippets لِتَسْهِيلِ مَشَارِيعِكُمْ.",
+        "caption_text": "مرحبا بكم في درس CSS Snippets لاستعراض أروع الميزات الجاهزة لتطوير الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اكتشاف ميزات الويب المتقدمة",
+          "استخدام CSS Snippets مجانا",
+          "تسهيل بناء واجهات المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_snippets.asp"
+      ]
+    },
+    {
+      "id": "scene_2_image_text",
+      "title": "مكونات Image Text Blocks",
+      "narration": {
+        "spoken_text": "نَبْدَأُ الْيَوْمَ بِاسْتِعْرَاضِ أَوَّلِ عُنْصُرٍ وَهُوَ Image Text Blocks، حَيْثُ نَتَعَلَّمُ كَيْفَ نَدْمُجُ النُّصُوصَ بِاحْتِرَافِيَّةٍ فَوْقَ الصُّوَرِ لِجَذْبِ انْتِبَاحِ الْمُسْتَخْدِمِ فِي مُخْتَلَفِ الصَّفَحَاتِ.",
+        "caption_text": "نتعرف على كيفية تنسيق Image Text Blocks لدمج النصوص والصور باحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دمج النصوص مع الصور بمرونة",
+          "تحسين المظهر البصري لصفحات الويب",
+          "تطبيق تأثيرات بصرية جذابة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_snippets.asp"
+      ]
+    },
+    {
+      "id": "scene_3_alert_buttons",
+      "title": "أزرار التنبيه Alert Buttons",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى قِسْمِ Alert Buttons لِإِنْشَاءِ أَزْرَارِ تَنْبِيهٍ تفاعليَّةٍ تَقُومُ بِجَذْبِ انْتِبَاهِ الزَّائِرِ عِنْدَ وُقُوعِ أَحْدَاثٍ مُهِمَّةٍ أَوْ تَنْبِيهِهِ لِرِسَائِلِ الْخَطَأِ وَالنَّجَاحِ.",
+        "caption_text": "شرح تصميم Alert Buttons للتنبيهات الفورية والتفاعلية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصميم أزرار تنبيه تفاعلية",
+          "عرض رسائل النظام بوضوح",
+          "تخصيص ألوان وحالات التنبيه"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_snippets.asp"
+      ]
+    },
+    {
+      "id": "scene_4_loaders",
+      "title": "عناصر التحميل Loaders",
+      "narration": {
+        "spoken_text": "عِنْدَمَا تَنْتَظِرُ تَحْمِيلَ البَيَانَاتِ تَحْتَاجُ إِلَى Loaders جَمِيلَةٍ. تُمَكِّنُنَا هَذِهِ الأَكْوَادُ مِنْ عَرْضِ حَرَكَاتِ انْتِظَارٍ مُبْتَكَرَةٍ وَسَلِسَةٍ تُحَسِّنُ تَجْرِبَةَ الْمُسْتَخْدِمِ بِشَكْلٍ كَبِيرٍ.",
+        "caption_text": "استخدام Loaders لعرض مؤشرات التحميل الجذابة أثناء جلب البيانات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء مؤشرات تحميل متحركة",
+          "تحسين تجربة المستخدم أثناء الانتظار",
+          "تطبيق حركات دائرية وانتقالية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_snippets.asp"
+      ]
+    },
+    {
+      "id": "scene_5_navigation",
+      "title": "التنقل العلوي Top Navigation",
+      "narration": {
+        "spoken_text": "نَدْرُسُ أَيْضاً Top Navigation لِبِنَاءِ أَشْرِطَةِ تَنَقُّلٍ عُلْيَا مُتَطَوِّرَةٍ. تُسَاعِدُ هَذِهِ الأَشْرِطَةُ الْمُسْتَخْدِمَ عَلَى التَّنَقُّلِ بَيْنَ أَقْسَامِ المَوْقِعِ بِسُهُولَةٍ تِقْنِيَّةٍ عَالِيَةٍ.",
+        "caption_text": "تصميم Top Navigation لتنقل سلس واحترافي عبر صفحات الموقع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء أشرطة تنقل علوية مرنة",
+          "تنظيم روابط الموقع باحترافية",
+          "دعم مختلف أحجام الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_snippets.asp"
+      ]
+    },
+    {
+      "id": "scene_6_search_dropdown",
+      "title": "نماذج البحث والقوائم المنسدلة",
+      "narration": {
+        "spoken_text": "لِنَتَعَرَّفْ عَلَى Animated Search Form وَHover Dropdowns. تَمْنَحُ هَذِهِ الحَرَكَاتُ حَيَوِيَّةً لِلْمَوْقِعِ مَعْ تَفَاعُلِ الْمُسْتَخْدِمِ عِنْدَ مُرُورِ الْمَاوْسِ فَوْقَ القَوَائِمِ.",
+        "caption_text": "استعراض Animated Search Form وHover Dropdowns للتفاعل المتقدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إضافة حركات بحث متحركة وسريعة",
+          "تفعيل قوائم منسدلة عند تمرير الماوس",
+          "رفع مستوى تفاعلية واجهة المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_snippets.asp"
+      ]
+    },
+    {
+      "id": "scene_7_sidebar",
+      "title": "الشريط الجانبي الثابت Fixed Sidebar",
+      "narration": {
+        "spoken_text": "يُعْتَبَرُ Fixed Sidebar خِيَاراً مِثَالِيّاً لِلتَّنَقُّمِ الجَانِبِيِّ الثَّابِتِ. يَبْقَى الشَّرِيطُ فِي مَكَانِهِ أَثْنَاءَ التَّمْرِيرِ لِتَمْكِينِ الْمُسْتَخْدِمِ مِنَ الوُصُولِ السَّرِيعِ إِلَى الخَدَمَاتِ.",
+        "caption_text": "تنفيذ Fixed Sidebar لتثبيت القوائم الجانبية أثناء التمرير."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تثبيت الشريط الجانبي للشاشات الكبيرة",
+          "تسهيل الوصول الدائم للروابط المهمة",
+          "تحسين هيكلية التخطيط العام"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_snippets.asp"
+      ]
+    },
+    {
+      "id": "scene_8_summary",
+      "title": "خلاصة مكتبة How To Snippets",
+      "narration": {
+        "spoken_text": "فِي النِّهَايَةِ يَا أَصْدِقَائِي، تَمْتَلِكُ مَكْتَبَةُ How To مِئَاتِ الأَكْوَادِ لِكُلٍّ مِنْ HTML وCSS وJavaScript. نَدْعُوكُمْ لِزِيَارَةِ مَوَاقِعِ التَّعْلِيمِ وَتَجْرِبَةِ الأَكْوَادِ بِنَفْسِكُم.",
+        "caption_text": "خلاصة درس CSS Snippets ودعوة لاستكشاف مئات الأكواد في مكتبة How To."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استكشاف مئات الأكواد الجاهزة",
+          "دمج HTML وCSS وJavaScript",
+          "متابعة التدريب مع محمود عبدالحميد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_snippets.asp"
+      ]
+    }
+  ]
+}
