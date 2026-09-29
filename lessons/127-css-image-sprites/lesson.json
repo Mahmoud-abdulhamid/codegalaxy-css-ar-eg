@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "127",
+  "title": "تقنية CSS Image Sprites",
+  "course": "CSS",
+  "objectives": [
+    "فهم مفهوم Image Sprites في صفحات الويب",
+    "تعلم كيفية تقليل طلبات السيرفر باستخدام ملف صورة واحد",
+    "تطبيق background-position للتحكم في عرض أجزاء الصورة",
+    "إنشاء تأثيرات تفاعلية مثل hover باستخدام CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_image_sprites.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-f35d8ca468d52fe4.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_image_sprites.asp",
+      "source_url": "https://www.w3schools.com/css/css_image_sprites.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Image Sprites",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى تِقْنِيَةِ Image Sprites، وَهِيَ طَرِيقَه ذَكِيَّه لِتَجْمِيعِ عِدَّه صُوَرٍ صَغِيرَه فِي مِلَفِّ صُورَه وَاحِدٍ كَبِيرٍ، مِمَّا يُسَاعِدُ فِي تَحْسِينِ أَدَاءِ مَوَاقِعِ الْوِبّ.",
+        "caption_text": "تعد تقنية Image Sprites وسيلة فعالة لتجميع صور متعددة في ملف واحد لتقليل عدد طلبات السيرفر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجميع الصور يقلل من وقت تحميل الصفحة",
+          "تقليل عدد طلبات السيرفر يحسن سرعة الموقع",
+          "توفير في استهلاك الـ bandwidth",
+          "تستخدم تقنية Image Sprites في أيقونات التنقل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "كيف تعمل Image Sprites",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ هَذِهِ التِّقْنِيَه عَلَى خَصَائِص CSS مِثْل background-image و background-position. بَدَلاً مِنْ تَحْمِيلِ كُلِّ صُورَه عَلَى حِدَه، يَقُومُ الْمُتَصَفِّحْ بِتَحْمِيلِ مِلَفٍّ وَاحِدٍ، ثُمَّ نَقُومُ بِتَحْدِيدِ جُزْءٍ مُعَيَّنٍ لِعَرْضِهِ بِاسْتِخْدَامِ الْإِحْدَاثِيَّاتِ.",
+        "caption_text": "تعتمد الفكرة على استخدام background-position لتحديد الجزء المراد عرضه من ملف الصورة الكبير."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام background-image لتحديد ملف الصورة",
+          "استخدام background-position لتحديد إحداثيات العرض",
+          "تحديد العرض والارتفاع بدقة لكل عنصر",
+          "تقليل زمن التحميل الكلي للصفحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "تطبيق عملي باستخدام CSS",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيفِ مُعَرِّفَاتٍ مِثْل home و prev و next، وَنُحَدِّدُ لِكُلٍّ مِنْهَا background-position مُخْتَلِفاً لِعَرْضِ الْجُزْءِ الْمَطْلُوبِ مِنَ الصُّورَه الْكَبِيرَه.",
+        "caption_text": "يوضح الكود كيفية ضبط background-position لكل زر تنقل لعرض الأيقونة الصحيحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#home {\n  width: 46px;\n  height: 44px;\n  background-image: url(img_navsprites.gif);\n  background-position: 0 0;\n}\n#prev {\n  width: 43px;\n  height: 44px;\n  background-image: url('img_navsprites.gif');\n  background-position: -47px 0;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "navigation_list",
+      "title": "استخدام Sprites في القوائم",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً دَمْجُ هَذِهِ التِّقْنِيَه دَاخِلَ قَوَائِمِ التَّنَقُّل HTML. نَسْتَخْدِمُ الْعَنَاصِر ul و li مَعَ تَحْدِيدِ الْأَبْعَادِ وَالْمَوْقِعِ لِكُلِّ رَابِطٍ، مِمَّا يَمْنَحُ تَصْمِيماً احْتِرَافِيّاً وَأَدَاءً سَرِيعاً.",
+        "caption_text": "دمج Image Sprites داخل القوائم يوفر تحكما ممتازا في واجهة المستخدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "nav.css",
+        "code": "#navlist li {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  position: absolute;\n}\n#home {\n  left: 0px;\n  width: 46px;\n  background: url('img_navsprites.gif') 0 0;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "hover_effect",
+      "title": "إضافة تأثير Hover",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ تَأْثِير hover، نَقُومُ بِتَغْيِير background-position عِنْدَ تَفَاعُلِ الْمُسْتَخْدِمِ. بِهَذِهِ الطَّرِيقَه، نَعْرِضُ جُزْءاً آخَرَ مِنَ الصُّورَه الْكَبِيرَه، وَلَا يَحْتَاجُ الْمُتَصَفِّحْ لِتَحْمِيلِ صُورَه جَدِيدَه، مِمَّا يَمْنَعُ أَيَّ تَأْخِيرٍ فِي الْعَرْضِ.",
+        "caption_text": "تأثير hover يتم عبر تغيير إحداثيات الخلفية فقط، مما يضمن استجابة فورية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "hover.css",
+        "code": "#home a:hover {\n  background: url('img_navsprites_hover.gif') 0 -45px;\n}\n#prev a:hover {\n  background: url('img_navsprites_hover.gif') -47px -45px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_sprites.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَذَكَّرُوا أَنَّ تِقْنِيَةِ Image Sprites هِيَ أَدَاه قَوِيَّه لِتَحْسِينِ أَدَاءِ مَوَاقِعِ الْوِبّ. جَرِّبُوا تَطْبِيقَ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَلَاحِظُوا الْفَرْقَ فِي سُرْعَةِ التَّحْمِيلِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعد Image Sprites ممارسة هندسية ممتازة لتحسين تجربة المستخدم وسرعة الموقع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Image Sprites تقلل طلبات HTTP",
+          "تحسن سرعة تحميل صفحات الويب",
+          "تسهل إضافة تأثيرات تفاعلية مثل hover",
+          "تعتمد على دقة background-position"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_sprites.asp"
+      ]
+    }
+  ]
+}
