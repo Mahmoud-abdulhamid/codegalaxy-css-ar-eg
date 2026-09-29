@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "167",
+  "title": "CSS Backgrounds Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية التعامل مع خصائص الخلفيات في CSS",
+    "تطبيق مهارات CSS في تحديات برمجية عملية",
+    "التعرف على خصائص مثل background-color و background-image",
+    "تحسين مهارات التنسيق المرئي لعناصر الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_backgrounds.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي الخلفيات",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَقُومُ بِحَلِّ تَحَدِّي CSS Backgrounds لِاخْتِبَارِ مَهَارَاتِكُمْ فِي تَصْمِيمِ وَتَنْسِيقِ خَلْفِيَّاتِ عَنَاصِرِ الْوِبّ بِشَكْلٍ احْتِرَافِيٍّ وَمُبْتَكَرٍ.",
+        "caption_text": "مرحبا بكم في درس تحدي CSS Backgrounds لاختبار مهاراتكم في تنسيق خلفيات عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة خصائص الخلفيات في CSS",
+          "تطبيق تحدي عملي لتعزيز الفهم",
+          "تحسين المظهر البصري لعناصر HTML"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية للخلفيات",
+      "narration": {
+        "spoken_text": "لِتَنْسِيقِ الْخَلْفِيَّاتِ نَسْتَخْدِمُ خَصَائِصَ مِثْلَ background-color لِتَحْدِيدِ اللَّوْنِ، وَ background-image لِإِدْرَاجِ صُورَةٍ. هَذِهِ الْخَصَائِصُ تُعَدُّ حَجَرَ الزَّاوِيَةِ فِي تَصْمِيمِ وَاجِهَاتِ الْوِبّ الْجَذَّابَةِ وَالْمُتَمَيِّزَةِ.",
+        "caption_text": "نستخدم خصائص مثل background-color و background-image للتحكم في مظهر خلفيات العناصر."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة",
+          "مثال"
+        ],
+        "rows": [
+          [
+            "background-color",
+            "تحديد لون الخلفية",
+            "red"
+          ],
+          [
+            "background-image",
+            "إضافة صورة",
+            "url('img.jpg')"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "code_setup",
+      "title": "هيكل الكود الأساسي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْكُودِ. نَحْتَاجُ إِلَى عُنْصُرِ div لِتَطْبِيقِ التَّنْسِيقَاتِ عَلَيْهِ. سَنَقُومُ بِتَحْدِيدِ الْعَرْضِ وَالِارْتِفَاعِ، ثُمَّ نُضِيفُ خَصَائِصَ الْخَلْفِيَّةِ لِنَرَى النَّتِيجَةَ مُبَاشَرَةً فِي الْمُتَصَفِّحِ.",
+        "caption_text": "نبدأ بتجهيز عنصر div وتطبيق تنسيقات CSS الأساسية عليه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  width: 300px;\n  height: 200px;\n  background-color: lightblue;\n  border: 2px solid black;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "advanced_props",
+      "title": "خصائص متقدمة للخلفية",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً التَّحَكُّمُ فِي تَكْرَارِ الصُّورَةِ بِاسْتِخْدَامِ background-repeat، أَوْ مَوْقِعِهَا بِاسْتِخْدَامِ background-position. هَذِهِ الْأَدَوَاتُ تَمْنَحُنَا مَرُونَةً عَالِيَةً فِي تَنْسِيقِ الصَّفْحَةِ وَجَعْلِهَا تَبْدُو أَكْثَرَ احْتِرَافِيَّةً وَتَنَاسُقاً.",
+        "caption_text": "استخدام خصائص متقدمة مثل background-repeat و background-position للتحكم الدقيق في الخلفية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  background-image: url('bg.png');\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ التَّنْسِيقَاتِ، سَيَظْهَرُ الْعُنْصُرُ فِي الْمُتَصَفِّحِ بِخَلْفِيَّةٍ مُنَسَّقَةٍ تَمَاماً. لَاحِظْ كَيْفَ تَتَمَوْضَعُ الصُّورَةُ فِي الْمُنْتَصَفِ دُونَ تَكْرَارٍ، مِمَّا يُعْطِي مَظْهَراً جَمَالِيّاً رَائِعاً لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "معاينة النتيجة النهائية للعنصر بعد تطبيق تنسيقات الخلفية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"box\">\n      <h1>محتوى العنصر</h1>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Box with centered background image and text",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ دائماً التَّأَكُّدُ مِنْ أَنَّ أَلْوَانَ النَّصِّ تَتَبَايَنُ بِشَكْلٍ جَيِّدٍ مَعَ لَوْنِ الْخَلْفِيَّةِ لِضَمَانِ سُهُولَةِ الْقِرَاءَةِ. كَمَا يُفَضَّلُ ضَغْطُ الصُّوَرِ لِتَحْسِينِ سُرْعَةِ تَحْمِيلِ الصَّفْحَةِ لِتَجْرِبَةِ مُسْتَخْدِمٍ أَفْضَلَ.",
+        "caption_text": "أفضل الممارسات تشمل مراعاة التباين بين النص والخلفية وتحسين حجم الصور."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام تباين ألوان مناسب",
+          "تحسين حجم الصور لسرعة التحميل",
+          "اختبار التجاوب مع مختلف الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_backgrounds.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ التَّحَكُّمِ فِي خَلْفِيَّاتِ الْعَنَاصِرِ بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو لِتُتْقِنُوا هَذِهِ الْمَهَارَاتِ.",
+        "caption_text": "خلاصة الدرس: تعلم التحكم في الخلفيات باستخدام CSS. جرب الأكواد بنفسك عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية خصائص الخلفية الأساسية",
+          "تم شرح كيفية تطبيق التنسيقات",
+          "رابط التحدي متاح في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_backgrounds.asp"
+      ]
+    }
+  ]
+}
