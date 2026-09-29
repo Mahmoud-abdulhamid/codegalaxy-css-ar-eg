@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "208",
+  "title": "CSS Centering Images Techniques",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand how to center images horizontally using margin auto",
+    "Learn to use display flex for horizontal centering",
+    "Master true vertical and horizontal centering with flexbox",
+    "Implement centering using CSS grid layout"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_image_center.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في توسيط الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَوَسِيطِ الصُّوَرِ بِاسْتِخْدَامِ طُرُقٍ مُتَعَدِّدَةٍ، سَوَاءً كَانَ التَّوَسِيطُ أُفُقِيّاً أَوْ عَمُودِيّاً أَوْ كِلَيْهِمَا مَعاً لِتَحْقِيقِ تَصْمِيمٍ احْتِرَافِيٍّ لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس توسيط الصور باستخدام CSS. سنتعلم تقنيات التوسيط الأفقي والعمودي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توسيط الصور أفقيا باستخدام margin auto",
+          "استخدام display flex للتوسيط",
+          "تحقيق التوسيط الكامل باستخدام flexbox و grid"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_center.asp"
+      ]
+    },
+    {
+      "id": "margin-auto",
+      "title": "التوسيط الأفقي باستخدام margin auto",
+      "narration": {
+        "spoken_text": "لِتَوَسِيطِ عُنْصُرِ img أُفُقِيّاً، نَسْتَخْدِمُ margin: auto. لَكِنْ لِأَنَّ img عُنْصُرٌ مِنَ النَّوْعِ inline، يَجِبُ تَحْوِيلُهُ إِلَى block بِاسْتِخْدَامِ display: block، مَعَ ضَرُورَةِ تَحْدِيدِ width يَكُونُ أَصْغَرَ مِنْ عَرْضِ الصَّفْحَةِ.",
+        "caption_text": "نستخدم margin: auto لتوسيط الصور أفقيا، مع ضرورة تحويل العنصر إلى block وتحديد عرض مناسب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  display: block;\n  margin: auto;\n  width: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_center.asp"
+      ]
+    },
+    {
+      "id": "flex-horizontal",
+      "title": "التوسيط الأفقي باستخدام display flex",
+      "narration": {
+        "spoken_text": "طَرِيقَةٌ أُخْرَى هِيَ وَضْعُ عُنْصُرِ img دَاخِلَ حاوِيَةِ div، ثُمَّ نُطَبِّقُ display: flex عَلَى ال div مَعَ justify-content: center. هَذِهِ الطَّرِيقَةُ فَعَّالَةٌ جِدّاً وَتُعْطِينَا تَحَكُّماً أَكْبَرَ فِي تَوْزِيعِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "استخدام display: flex على الحاوية الأب لتوسيط الصورة أفقيا بمرونة عالية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  display: flex;\n  justify-content: center;\n}\nimg {\n  width: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_center.asp"
+      ]
+    },
+    {
+      "id": "true-centering-flex",
+      "title": "التوسيط الكامل باستخدام flexbox",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ التَّوَسِيطِ الْكَامِلِ، أَيْ عَمُودِيّاً وَأُفُقِيّاً، نَسْتَخْدِمُ align-items: center مَعَ justify-content: center دَاخِلَ ال div. نَحْتَاجُ أَيْضاً لِتَحْدِيدِ height لِلْحَاوِيَةِ لِتَظْهَرَ النَّتِيجَةُ بِشَكْلٍ وَاضِحٍ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "التوسيط الكامل يتطلب استخدام align-items و justify-content معا داخل حاوية ذات ارتفاع محدد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 600px;\n}\nimg {\n  width: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_center.asp"
+      ]
+    },
+    {
+      "id": "grid-centering",
+      "title": "التوسيط باستخدام CSS grid",
+      "narration": {
+        "spoken_text": "تُعَدُّ طَرِيقَةُ grid مِنْ أَقْوَى الطُّرُقِ لِلتَّوَسِيطِ. نَسْتَخْدِمُ display: grid مَعَ خَاصِّيَّةِ place-items: center لِتَوَسِيطِ الصُّورَةِ دَاخِلَ الْحَاوِيَةِ بِسُهُولَةٍ فَائِقَةٍ وَبِكُودٍ مُخْتَصَرٍ وَمُنَظَّمٍ جِدّاً لِكُلِّ مُطَوِّرِي الْوِبّ.",
+        "caption_text": "تعتبر خاصية place-items: center في CSS grid الطريقة الأسهل والأكثر اختصارا للتوسيط الكامل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  display: grid;\n  place-items: center;\n  height: 600px;\n}\nimg {\n  width: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_center.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ أَنَّ هُنَاكَ طُرُقاً مُتَعَدِّدَةً لِتَوَسِيطِ الصُّوَرِ. اخْتَرْ margin: auto لِلْبَسَاطَةِ، أَوْ flexbox وَ grid لِلتَّصَامِيمِ الْمُعَقَّدَةِ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِنَفْسِكُمْ لِتَتْقِنُوا مَهَارَاتِ التَّنْسِيقِ فِي صَفْحَاتِ الْوِبّ.",
+        "caption_text": "خلاصة: استخدم margin: auto للبساطة، و flexbox أو grid للتصاميم المتقدمة. استمروا في التجربة!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "margin: auto يتطلب display: block",
+          "flexbox يوفر تحكما مرنا في المحاذاة",
+          "grid هو الأفضل للتوسيط السريع والسهل",
+          "دائما حدد عرضا للصورة أصغر من الحاوية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_center.asp"
+      ]
+    }
+  ]
+}
