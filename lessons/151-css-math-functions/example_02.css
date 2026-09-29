@@ -1,0 +1,6 @@
+#div1 {
+  height: 100px;
+  width: max(50%, 300px);
+  border: 1px solid black;
+  padding: 10px;
+}
