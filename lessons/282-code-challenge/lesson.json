@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "282",
+  "title": "CSS Responsive Videos Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand Responsive Videos implementation in CSS",
+    "Complete coding challenge for video responsiveness",
+    "Apply max-width and height properties correctly"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_rwd_videos.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة تحدي الفيديوهات المتجاوبة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ حَلِّ تَحَدِّي الْفيديوهات الْمُتَجَاوِبَةِ أَوْ Responsive Videos بِطَرِيقَةٍ عَمَلِيَّةٍ وَسَلِسَةٍ مَعَ الْمُدَرِّبِ مَحْمُودِ عَبْدِ الْحَمِيدِ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتطبيق تحدي Responsive Videos بشكل عملي واحترافي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مرحبا بكم في دورة CSS",
+          "موضوع الدرس هو Responsive Videos",
+          "تطبيق تحدي برمجي عملي",
+          "شرح مفصل لجميع القواعد التقنية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_videos.asp"
+      ]
+    },
+    {
+      "id": "scene_2_concepts",
+      "title": "القواعد الأساسية للتحكم في الفيديو",
+      "narration": {
+        "spoken_text": "لِجْعَلِ الْفيديوهات مِثْلَ video تَتَجَاوَبُ مَعَ مِسَاحَةِ الشَّاشَةِ بِدِقَّةٍ، نَحْتَاجُ إِلَى تَسْخِيرِ خَوَاصِّ CSS الْمُخْتَصَّةِ، وَأَحَمُّهَا هِيَ الضَّبْطُ التَّامُّ لِخَاصِيَّةِ max-width بِقِيمَةِ 100 لِتَمْنَعَ تَجَاوُزِ الْعُنْصُرِ لِلْحَاوِيَةِ.",
+        "caption_text": "لجعل عناصر video تتجاوب مع الشاشة، نستخدم خاصية max-width بقيمة 100 لمنع تجاوز الحاوية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام خاصية max-width مع العنصر video",
+          "ضبط القيمة على 100 بانتظام",
+          "ضمان التكيف التام مع جميع الأجهزة",
+          "منع ظهور أشرطة التمرير الأفقية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_videos.asp"
+      ]
+    },
+    {
+      "id": "scene_3_code_setup",
+      "title": "الكود الأساسي لتنسيق الفيديو",
+      "narration": {
+        "spoken_text": "لْنَنْظُرْ مَعاً إِلَى هَذَا الْمِثَالِ الْبَرْمَجِيِّ لِكِتَابَةِ تَنْسِيقَاتِ Responsive Videos حَيْثُ نَسْتَخْدِمُ مُحِدِّدَ video لِتَطْبِيقِ الْخَوَاصِّ الْمَطْلُوبَةِ بِدِقَّةٍ تَامَّةٍ عَلَى الْمُسْتَنَدِ.",
+        "caption_text": "نكتب تنسيق CSS الخاص بعنصر video لتحديد العرض الأقصى والارتفاع التلقائي بدقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "video {\n  width: 100%;\n  height: auto;\n  max-width: 100%;\n}",
+        "highlight_lines": [],
+        "output": "يظهر الفيديو متجاوباً مع عرض الشاشة تلقائياً.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_videos.asp"
+      ]
+    },
+    {
+      "id": "scene_4_code_breakdown",
+      "title": "شرح تفصيلي لسطور الكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيدِ width بِقِيمَةِ 100 لِيَمْلَأَ الْفيديوهات الْمِسَاحَةَ الْمُتَاحَةَ، وَجَعَلْنَا height بِقِيمَةِ auto لِلْحِفَاظِ عَلَى أَبْعَادِ النِّسْبَةِ السَّيْنِمَائِيَّةِ لِلْعَرْضِ.",
+        "caption_text": "تحديد العرض 100 والارتفاع auto يحافظ على أبعاد الفيديو الأصلية أثناء التجاوب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد width على 100 للملء الكامل",
+          "ضبط height على auto للمحافظة على الأبعاد",
+          "تأكيد max-width على 100 كحد أقصى",
+          "تجنب تشوه الصورة عند التكبير"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_videos.asp"
+      ]
+    },
+    {
+      "id": "scene_5_output_view",
+      "title": "معاينة المخرجات المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ التَّنْسِيقَاتِ وَفَتْحِ الصَّفْحَةِ دَاخِلَ Web Browser، سَنُلَاحِظُ أَنَّ الْفيديوهات تَتَغَيَّرُ أَحْجَامُهَا بسلاَسَةٍ تَامَّةٍ عِنْدَ تَصْغِيرِ أَوْ تَكْبِيرِ نَافِذَةِ الْمُتَسَفِّحِ.",
+        "caption_text": "تتغير أحجام الفيديو بسلاسة داخل Web Browser عند تغيير حجم النافذة بفضل تنسيق CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div>\n      <video controls>\n        <source src=\"movie.mp4\" type=\"video/mp4\">\n        Your browser does not support video.\n      </video>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "فيديو متجاوب يعمل بسلاسة على الشاشات الكبيرة والصغيرة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_videos.asp"
+      ]
+    },
+    {
+      "id": "scene_6_advanced_tips",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "لِلْحُصُولِ عَلَى أَفْضَلِ نَتِيجَةٍ مُمْكِنَةٍ مَعَ Responsive Videos، يُنْصَحُ دائماً بِاسْتِخْدَامِ حَاوِيَةٍ خَاصَّةٍ مِثْلَ div لِتَحْدِيدِ النِّسْبَةِ الْمِئَاوِيَّةِ لِلْعَرْضِ فِي الشَّاشَاتِ المختلفة.",
+        "caption_text": "استخدام حاوية div إضافية يساعد في التحكم بدقة أكبر في الأبعاد والمرونة العامة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام عناصر div كحاويات رئيسية",
+          "التحكم في العرض الكلي عبر الحاوية",
+          "الحفاظ على نظافة كود CSS",
+          "اختبار التوافقية عبر Chrome و Firefox"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_videos.asp"
+      ]
+    },
+    {
+      "id": "scene_7_summary",
+      "title": "خلاصة الدرس والتحدي",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَرَّفْنَا عَلَى كَيْفِيَّةِ حَلِّ تَحَدِّي Responsive Videos فِي CSS بِاطْمِئْنَانٍ. نَنْتَظِرُ تَجْرِبَتَكُمْ لِلْأَكْوَادِ بأنفسكم مِنْ خِلَالِ الرَّابِطِ الْمَوْجُودِ فِي الوصف.",
+        "caption_text": "تعرفنا على كيفية حل تحدي Responsive Videos وننتظر تجربتكم للأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنهاء تحدي Responsive Videos بنجاح",
+          "إتقان خاصية width و max-width",
+          "تطبيق العملي عبر متصفحات الويب",
+          "تابعونا في الدروس القادمة من CodeGalaxy"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_videos.asp"
+      ]
+    }
+  ]
+}
