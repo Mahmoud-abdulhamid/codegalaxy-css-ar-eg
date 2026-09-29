@@ -1,0 +1,5 @@
+div.ex1 {
+  border: 1px solid black;
+  outline: 4px solid red;
+  outline-offset: 15px;
+}
