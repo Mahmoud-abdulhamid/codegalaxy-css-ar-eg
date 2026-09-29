@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "278",
+  "title": "CSS Media Queries Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية عمل Media Queries في CSS",
+    "تطبيق تقنيات Responsive Web Design",
+    "التعامل مع أحجام الشاشات المختلفة",
+    "إتقان كتابة قواعد CSS الشرطية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_rwd_mediaqueries.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Media Queries",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنُعَزِّزُ مَهَارَاتِنَا فِي Responsive Web Design مِنْ خِلَالِ حَلِّ تَحَدِّي Media Queries، وَهِيَ أَدَاةٌ جَوْهَرِيَّةٌ لِتَكَيُّفِ صَفْحَةِ الْوِبّ مَعَ مُخْتَلَفِ الْأَجْهِزَةِ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS. اليوم سنعزز مهاراتنا في Responsive Web Design من خلال حل تحدي Media Queries، وهي أداة جوهرية لتكيف صفحة الويب مع مختلف الأجهزة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعد Media Queries حجر الأساس في Responsive Web Design",
+          "تسمح بتطبيق أنماط CSS مختلفة بناء على خصائص الجهاز",
+          "تضمن تجربة مستخدم مثالية على الهواتف والحواسيب",
+          "تحدي اليوم يختبر قدرتك على كتابة هذه القواعد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية لـ Media Queries",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ Media Queries عَلَى بِنْيَةٍ بَرْمَجِيَّةٍ بَسِيطَةٍ. نَسْتَخْدِمُ الْكَلِمَةَ الْمَحْجُوزَةَ media ثُمَّ نُحَدِّدُ الشَّرْطَ، مِثْلَ max-width أَوْ min-width، وَدَاخِلَ الْأَقْوَاسِ الْمُتَعَرِّجَةِ نَكْتُبُ كُودَ CSS الَّذِي سَيَتَفَعَّلُ فَقَطْ عِنْدَ تَحَقُّقِ هَذَا الشَّرْطِ.",
+        "caption_text": "تعتمد Media Queries على بنية برمجية بسيطة. نستخدم الكلمة المحجوزة media ثم نحدد الشرط، مثل max-width أو min-width، وداخل الأقواس المتعرجة نكتب كود CSS الذي سيتفعل فقط عند تحقق هذا الشرط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام media للبدء في تعريف الاستعلام",
+          "تحديد نوع الجهاز أو خصائص الشاشة مثل العرض",
+          "كتابة قواعد CSS داخل الأقواس المتعرجة",
+          "تطبيق التغييرات عند مطابقة الشاشة للشرط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كتابة كود Media Query",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ الْعَمَلِيِّ. نَقُومُ بِتَعْرِيفِ التَّنْسِيقِ الْعَامِّ لِلْعُنْصُرِ، ثُمَّ نُضِيفُ Media Query لِتَغْيِيرِ لَوْنِ الْخَلْفِيَّةِ أَوْ حَجْمِ الْخَطِّ عِنْدَمَا يَكُونُ عَرْضُ الشَّاشَةِ أَقَلَّ مِنْ سِتِّمِائَةِ بيكسل، وَهَذَا يُسَاعِدُ فِي تَحْسِينِ الْقِرَاءَةِ.",
+        "caption_text": "لننظر إلى هذا المثال العملي. نقوم بتعريف التنسيق العام للعنصر، ثم نضيف Media Query لتغيير لون الخلفية أو حجم الخط عندما يكون عرض الشاشة أقل من 600px، وهذا يساعد في تحسين القراءة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  background-color: lightblue;\n}\n@media only screen and (max-width: 600px) {\n  body {\n    background-color: lightcoral;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "تحليل الكود البرمجي",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيدِ background-color لِلْعُنْصُرِ body. بَعْدَهَا، اسْتَخْدَمْنَا media مَعَ الشَّرْطِ max-width: 600px. هَذَا يَعْنِي أَنَّ التَّنْسِيقَ الْجَدِيدَ سَيُطَبَّقُ فَقَطْ عِنْدَمَا تَكُونُ الشَّاشَةُ ضَيِّقَةً، وَهِيَ تِقْنِيَةٌ مِعْيَارِيَّةٌ فِي تَطْوِيرِ الْوِبّ.",
+        "caption_text": "في هذا الكود، قمنا بتحديد background-color للعنصر body. بعدها، استخدمنا media مع الشرط max-width: 600px. هذا يعني أن التنسيق الجديد سيطبق فقط عندما تكون الشاشة ضيقة، وهي تقنية معيارية في تطوير الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التنسيق الافتراضي يعمل على جميع الشاشات",
+          "قاعدة media تستهدف الشاشات الصغيرة فقط",
+          "استخدام max-width يحدد الحد الأقصى للعرض",
+          "تغيير الخصائص داخل الاستعلام يغطي التنسيق الأساسي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ فَتْحِ هَذِهِ الصَّفْحَةِ فِي Web Browser، سَتَرَى خَلْفِيَّةً زَرْقَاءَ عَلَى الشَّاشَاتِ الْكَبِيرَةِ. وَلَكِنْ عِنْدَ تَصْغِيرِ نَافِذَةِ الْمُتَصَفِّحِ لِتَصِلَ إِلَى سِتِّمِائَةِ بيكسل أَوْ أَقَلَّ، سَيَتَحَوَّلُ لَوْنُ الْخَلْفِيَّةِ تِلْقَائِيّاً إِلَى اللَّوْنِ الْمُرْجَانِيِّ، وَهَذَا هُوَ سِحْرُ Responsive Web Design.",
+        "caption_text": "عند فتح هذه الصفحة في Web Browser، سترى خلفية زرقاء على الشاشات الكبيرة. ولكن عند تصغير نافذة المتصفح لتصل إلى 600px أو أقل، سيتحول لون الخلفية تلقائيا إلى اللون المرجاني، وهذا هو سحر Responsive Web Design."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Screen > 600px: Background is lightblue\nScreen <= 600px: Background is lightcoral",
+        "highlight_lines": [],
+        "output": "Background color changes dynamically based on viewport width.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، نَصِيحَتِي لَكُمْ هِيَ دَائِماً الْبَدْءُ بِتَصْمِيمِ الْهَوَاتِفِ أَوَّلاً، ثُمَّ التَّدَرُّجُ نَحْوَ الشَّاشَاتِ الْأَكْبَرِ. اسْتَخْدِمُوا min-width لِلْأَجْهِزَةِ الْكَبِيرَةِ، وَتَأَكَّدُوا مِنْ تَنْظِيمِ كُودِ CSS لِيَكُونَ سَهْلَ الْقِرَاءَةِ وَالصِّيَانَةِ دَاخِلَ مَشَارِيعِكُمُ الْبَرْمَجِيَّةِ.",
+        "caption_text": "يا أصدقائي، نصيحتي لكم هي دائما البدء بتصميم الهواتف أولا، ثم التدرج نحو الشاشات الأكبر. استخدموا min-width للأجهزة الكبيرة، وتأكدوا من تنظيم كود CSS ليكون سهل القراءة والصيانة داخل مشاريعكم البرمجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اتباع نهج Mobile-First في التصميم",
+          "استخدام وحدات قياس مرنة مثل أو rem",
+          "اختبار التصميم على أحجام شاشات مختلفة",
+          "الحفاظ على نظافة الكود وتوثيقه"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة وتحدي",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا هَذَا الدَّرْسَ. أَدْعُوكُمْ لِزِيَارَةِ الرَّابِطِ فِي الْوَصْفِ لِتَجْرِبَةِ التَّحَدِّي بِنَفْسِكُمْ. مَعَ تَحِيَّاتِي، مَحْمُود عَبْدِ الْحَمِيد، وَنَلْتَقِي فِي دَرْسٍ قَادِمٍ لِتَعَلُّمِ الْمَزِيدِ عَنْ تَقْنِيَاتِ الْوِبّ الْمُتَطَوِّرَةِ.",
+        "caption_text": "بهذا نكون قد أتممنا هذا الدرس. أدعوكم لزيارة الرابط في الوصف لتجربة التحدي بنفسكم. مع تحياتي، محمود عبد الحميد، ونلتقي في درس قادم لتعلم المزيد عن تقنيات الويب المتطورة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قم بزيارة الرابط في الوصف لحل التحدي",
+          "طبق ما تعلمته على مشاريعك الخاصة",
+          "استمر في ممارسة CSS يوميا",
+          "شكرا لمتابعتكم مع CodeGalaxy"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_mediaqueries.asp"
+      ]
+    }
+  ]
+}
