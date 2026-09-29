@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "188",
+  "title": "CSS3D Transforms - Card Flip",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء تأثير 3D Card Flip باستخدام CSS",
+    "التعرف على خصائص perspective و transform-style",
+    "استخدام backface-visibility لإخفاء الوجه الخلفي",
+    "تطبيق التحويلات الحركية باستخدام transition"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_3dtransforms_cardflip.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-ff3b6b74c68876b3.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css3_3dtransforms_cardflip.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول 3D Card Flip",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ صُنْعِ تَأْثِيرِ 3D Card Flip الْكَلَاسِيكِيِّ، وَهُوَ تَقْنِيَةٌ رَائِعَةٌ لِإِضَافَةِ حَرَكَةٍ تَفَاعُلِيَّةٍ لِعَنَاصِرِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "سنتعلم اليوم كيفية إنشاء تأثير 3D Card Flip التفاعلي باستخدام خصائص CSS المتقدمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم الـ 3D Transforms في CSS",
+          "بناء هيكل HTML المناسب",
+          "استخدام perspective و transform-style",
+          "تفعيل الحركة عند الـ hover"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cardflip.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML للبطاقة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَحْتَاجُ إِلَى container لِتَحْدِيدِ مِسَاحَةِ الْعَمَلِ، وَعُنْصُرِ card لِيَكُونَ هُوَ الْجِسْمَ الَّذِي سَيَدُورُ، دَاخِلَهُ نَضَعُ وَجْهَيْنِ face لِلْأَمَامِ وَالْخَلْفِ.",
+        "caption_text": "هيكل HTML يتكون من حاوية رئيسية وعنصر البطاقة الذي يحتوي على وجهين."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"card\">\n        <div class=\"face front\"><h2>Front</h2></div>\n        <div class=\"face back\"><h2>Back</h2></div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cardflip.asp"
+      ]
+    },
+    {
+      "id": "css_container",
+      "title": "إعداد الحاوية والمنظور",
+      "narration": {
+        "spoken_text": "نُحَدِّدُ الْآنَ خَصَائِصَ container. الْأَهَمُّ هُوَ خَاصِيَّةُ perspective، فَهِيَ الَّتِي تُعْطِي إِحْسَاسَ الْعُمْقِ لِلْعَنَاصِرِ فِي مِسَاحَةِ 3D، بِدُونِهَا سَتَبْدُو الْحَرَكَةُ مُسَطَّحَةً وَغَيْرَ وَاقِعِيَّةٍ.",
+        "caption_text": "خاصية perspective ضرورية لخلق إحساس العمق في الفضاء ثلاثي الأبعاد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  width: 200px;\n  height: 250px;\n  perspective: 600px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cardflip.asp"
+      ]
+    },
+    {
+      "id": "card_transform",
+      "title": "تجهيز عنصر البطاقة",
+      "narration": {
+        "spoken_text": "نَضْبِطُ card بِخَاصِيَّةِ transform-style مَعَ قِيمَةِ preserve-3d، لِضَمَانِ أَنَّ الْعَنَاصِرَ الْأَبْنَاءَ تَبْقَى فِي مِسَاحَةِ 3D. كَمَا نُضِيفُ transition لِتَكُونَ الْحَرَكَةُ سَلِسَةً عِنْدَ الدَّوَرَانِ.",
+        "caption_text": "استخدام transform-style: preserve-3d يضمن بقاء العناصر داخل الفضاء ثلاثي الأبعاد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".card {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  transition: transform 1s;\n  transform-style: preserve-3d;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cardflip.asp"
+      ]
+    },
+    {
+      "id": "face_styling",
+      "title": "تنسيق أوجه البطاقة",
+      "narration": {
+        "spoken_text": "لِتَثْبِيتِ الْأَوْجُهِ، نَسْتَخْدِمُ position: absolute. وَالْأَهَمُّ هُوَ backface-visibility: hidden، لِأَنَّهَا تُخْفِي الْوَجْهَ الْخَلْفِيَّ عِنْدَمَا يَدُورُ الْعُنْصُرُ، مِمَّا يَمْنَعُ ظُهُورَ الْجَانِبِ الْآخَرِ بِشَكْلٍ غَيْرِ مَقْصُودٍ.",
+        "caption_text": "خاصية backface-visibility: hidden تمنع رؤية الوجه الخلفي عند الدوران."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".face {\n  position: absolute;\n  height: 100%;\n  width: 100%;\n  backface-visibility: hidden;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cardflip.asp"
+      ]
+    },
+    {
+      "id": "flip_logic",
+      "title": "تفعيل حركة الدوران",
+      "narration": {
+        "spoken_text": "أَخِيراً، نُحَدِّدُ حَرَكَةَ الدَّوَرَانِ عِنْدَ حَدَثِ hover. نَقُومُ بِتَدْوِيرِ card حَوْلَ الْمِحْوَرِ Y بِزَاوِيَةِ 180 دَرَجَةٍ. هَذَا يُؤَدِّي إِلَى قَلْبِ الْبِطَاقَةِ وَإِظْهَارِ الْوَجْهِ الْخَلْفِيِّ بِشَكْلٍ احْتِرَافِيٍّ.",
+        "caption_text": "تفعيل الدوران عند تمرير الفأرة باستخدام transform: rotateY(180deg)."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".back {\n  transform: rotateY(180deg);\n}\n.container:hover .card {\n  transform: rotateY(180deg);\n}",
+        "highlight_lines": [],
+        "output": "تظهر البطاقة مقلوبة عند تمرير الفأرة فوقها.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cardflip.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ بَطَاقَةٍ تَدُورُ بِتَقْنِيَةِ 3D. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ perspective وَ transform-style لِتَحْقِيقِ هَذِهِ التَّأْثِيرَاتِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ وَتَطْوِيرِهِ. كَانَ مَعَكُمْ مَحْمُودُ عَبْدِ الْحَمِيدِ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الكود بأنفسكم لتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "صورة توضيحية لنتيجة تأثير قلب البطاقة"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms_cardflip.asp"
+      ]
+    }
+  ]
+}
