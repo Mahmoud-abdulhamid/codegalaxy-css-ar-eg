@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "328",
+  "title": "تصميم تأثيرات Image Overlay Slide باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء تأثيرات التراكب على الصور",
+    "استخدام خاصية hover لإظهار المحتوى",
+    "التحكم في اتجاهات الحركة باستخدام CSS",
+    "تطبيق تقنيات التموضع Positioning في الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تأثيرات الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ تَأْثِيرِ Image Overlay Slide، وَهُوَ تَأْثِيرٌ جَمَالِيٌّ يَظْهَرُ عِنْدَ تَحْرِيكِ مُؤَشِّرِ الْفَأْرَةِ فَوْقَ الصُّورَةِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تصميم تأثيرات Image Overlay Slide باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تأثيرات التراكب تعزز تجربة المستخدم",
+          "نستخدم CSS للتحكم في حركة العناصر",
+          "التأثير يعتمد على خاصية hover",
+          "يمكن التحكم في اتجاه الانزلاق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ هَذَا التَّأْثِيرِ، نَحْتَاجُ إِلَى اسْتِخْدَامِ Container لِلصُّورَةِ، مَعَ ضَبْطِ position إِلَى relative. بَعْدَهَا نَضَعُ Overlay Element بِحَالَةِ absolute، وَنُحَدِّدُ لَهُ transition لِضَمَانِ نُعُومَةِ الْحَرَكَةِ عِنْدَ التَّفَاعُلِ.",
+        "caption_text": "نستخدم خاصية position و transition لإنشاء حركة انزلاق سلسة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position: relative للحاوية",
+          "استخدام position: absolute للعنصر المتراكب",
+          "خاصية transition للتحكم في سرعة الحركة",
+          "خاصية overflow: hidden لإخفاء المحتوى الزائد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكلة الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى الْكُودِ. نَقُومُ بِتَعْرِيفِ div بِكَلَاسِ container، وَدَاخِلَهُ نَضَعُ img وَ div آخَرَ بِكَلَاسِ overlay. هَذَا التَّرْتِيبُ هُوَ الْأَسَاسُ لِعَمَلِ التَّأْثِيرِ بِشَكْلٍ صَحِيحٍ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "هيكلة HTML الأساسية للحاوية والعنصر المتراكب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"img.jpg\" alt=\"Avatar\">\n      <div class=\"overlay\">\n        <div class=\"text\">Hello World</div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيقات CSS",
+      "narration": {
+        "spoken_text": "فِي CSS، نُحَدِّدُ لِل overlay مَوْقِعاً خَارِجَ الْحَاوِيَةِ، مِثْلَ top: 0 وَ height: 0. عِنْدَ اسْتِخْدَامِ hover عَلَى الْحَاوِيَةِ، نُغَيِّرُ هَذِهِ الْقِيَمَ لِيَنْزَلِقَ الْعُنْصُرُ إِلَى دَاخِلِ الصُّورَةِ بِسَلَاسَةٍ.",
+        "caption_text": "تنسيق CSS للتحكم في حالة الانزلاق عند التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".overlay {\n  height: 0;\n  width: 100%;\n  position: absolute;\n  top: 0;\n  transition: .5s ease;\n}\n.container:hover .overlay {\n  height: 100%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَتُشَاهِدُ نَصّاً يَنْزَلِقُ فَوْقَ الصُّورَةِ عِنْدَ تَحْرِيكِ الْفَأْرَةِ. هَذَا التَّأْثِيرُ يُعْطِي طَابَعاً احْتِرَافِيّاً لِتَصَامِيمِ مَعَارِضِ الصُّوَرِ فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "النتيجة النهائية: انزلاق النص فوق الصورة عند التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[ الصورة ]\n[ النص يظهر بانزلاق ]\n[ عند تحريك الفأرة ]",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp"
+      ]
+    },
+    {
+      "id": "variations",
+      "title": "تغيير اتجاه الانزلاق",
+      "narration": {
+        "spoken_text": "يُمْكِنُكَ تَغْيِيرُ اتِّجَاهِ الْحَرَكَةِ بِتَغْيِيرِ خَصَائِصِ top أَوْ bottom أَوْ left أَوْ right. عَلَى سَبِيلِ الْمِثَالِ، لِلْحَرَكَةِ مِنَ الْأَسْفَلِ، نَضْبِطُ bottom: 0 وَ height: 0، ثُمَّ نُغَيِّرُ height إِلَى 100 عِنْدَ hover.",
+        "caption_text": "يمكن التحكم في اتجاه الانزلاق بتغيير خصائص الموقع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الانزلاق من الأعلى: top: 0",
+          "الانزلاق من الأسفل: bottom: 0",
+          "الانزلاق من اليمين: right: 0",
+          "الانزلاق من اليسار: left: 0"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "نصائح برمجية",
+      "narration": {
+        "spoken_text": "احْرِصْ دَائِماً عَلَى اسْتِخْدَامِ transition-duration مُنَاسِبٍ لِتَجَنُّبِ الْحَرَكَةِ الْمُفَاجِئَةِ. كَمَا يُفَضَّلُ اخْتِبَارُ التَّأْثِيرِ عَلَى مُتَصَفِّحَاتٍ مُخْتَلِفَةٍ لِضَمَانِ تَوَافُقِيَّةِ الْعَرْضِ لِجَمِيعِ الْمُسْتَخْدِمِينَ.",
+        "caption_text": "أفضل الممارسات لضمان تجربة مستخدم سلسة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم قيم transition مناسبة",
+          "اختبر التوافقية مع المتصفحات",
+          "تأكد من وضوح النص فوق الصورة",
+          "استخدم ألوان تباين عالية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمَ حَوْلَ Image Overlay Slide. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَغْيِيرِ الْخَصَائِصِ لِتَحْقِيقِ نَتَائِجَ مُبْتَكَرَةٍ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلمنا إنشاء تأثير انزلاق للصور",
+          "فهمنا دور CSS في التفاعلية",
+          "استكشفنا طرق تغيير اتجاه الحركة",
+          "شجعنا على التجربة العملية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp"
+      ]
+    }
+  ]
+}
