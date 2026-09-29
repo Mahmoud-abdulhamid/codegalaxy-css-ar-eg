@@ -1,0 +1,5 @@
+.container {
+  --fontsize: 20px;
+  color: var(--primary-bg-color);
+  font-size: var(--fontsize);
+}
