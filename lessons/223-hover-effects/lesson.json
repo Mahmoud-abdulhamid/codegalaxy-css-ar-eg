@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "223",
+  "title": "CSS Button Hover Effects",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية استخدام :hover لتغيير نمط الأزرار",
+    "التحكم في سرعة التأثيرات باستخدام transition-duration",
+    "إضافة ظلال للأزرار باستخدام box-shadow",
+    "تطبيق حالة التعطيل باستخدام opacity و cursor",
+    "تحديد عرض الأزرار باستخدام خاصية width"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_buttons_hover.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تأثيرات الأزرار",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ عَبْرَ إِضَافَةِ تَأْثِيرَاتٍ جَمَالِيَّةٍ لِلْأَزْرَارِ، مِثْلَ تَأْثِيرِ الْحَرَكَةِ عِنْدَ التَّحْوِيمِ، وَإِضَافَةِ الظِّلَالِ، وَتَحْدِيدِ حَالَةِ التَّعْطِيلِ، وَتَنْسِيقِ الْعَرْضِ بِشَكْلٍ احْتِرَافِيٍّ.",
+        "caption_text": "سنتعلم اليوم كيفية تحسين تجربة المستخدم عبر إضافة تأثيرات جمالية للأزرار مثل تأثير الحركة عند التحويم، وإضافة الظلال، وتحديد حالة التعطيل، وتنسيق العرض."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تأثيرات التحويم باستخدام :hover",
+          "إضافة الظلال باستخدام box-shadow",
+          "تنسيق الأزرار المعطلة باستخدام opacity",
+          "التحكم في عرض الأزرار باستخدام width"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_hover.asp"
+      ]
+    },
+    {
+      "id": "hover-effect",
+      "title": "تأثير التحويم باستخدام :hover",
+      "narration": {
+        "spoken_text": "لِتَغْيِيرِ شَكْلِ الزِّرِّ عِنْدَ مُرُورِ مُؤَشِّرِ الْفَأْرَةِ فَوْقَهُ، نَسْتَخْدِمُ pseudo-class الَّتِي تُسَمَّى :hover. وَلِجَعْلِ هَذَا التَّغْيِيرِ سَلِيسًا، نَسْتَخْدِمُ خَاصِيَّةَ transition-duration لِتَحْدِيدِ سُرْعَةِ التَّأْثِيرِ بِالثَّوَانِي.",
+        "caption_text": "نستخدم pseudo-class التي تسمى :hover لتغيير شكل الزر عند مرور مؤشر الفأرة فوقه، ونستخدم transition-duration لتحديد سرعة التأثير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button {\n  transition-duration: 0.4s;\n}\n.button:hover {\n  background-color: #4CAF50;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_hover.asp"
+      ]
+    },
+    {
+      "id": "shadow-effect",
+      "title": "إضافة الظلال للأزرار",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ عُمْقٍ لِلْأَزْرَارِ، نَسْتَخْدِمُ خَاصِيَّةَ box-shadow. يُمْكِنُنَا تَطْبِيقُ الظِّلِّ بِشَكْلٍ دَائِمٍ، أَوْ جَعْلِهِ يَظْهَرُ فَقَطْ عِنْدَ التَّحْوِيمِ لِإِعْطَاءِ انْطِبَاعٍ بِأَنَّ الزِّرَّ يَرْتَفِعُ عَنْ سَطْحِ الصَّفْحَةِ.",
+        "caption_text": "نستخدم خاصية box-shadow لإضافة عمق للأزرار، ويمكن تطبيق الظل بشكل دائم أو عند التحويم لإعطاء انطباع بارتفاع الزر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button1 {\n  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);\n}\n.button2:hover {\n  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_hover.asp"
+      ]
+    },
+    {
+      "id": "disabled-state",
+      "title": "حالة الأزرار المعطلة",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُرِيدُ إِظْهَارَ زِرٍّ كَمُعَطَّلٍ، نَسْتَخْدِمُ خَاصِيَّةَ opacity لِتَقْلِيلِ الشَّفَافِيَّةِ، وَنُضِيفُ خَاصِيَّةَ cursor مَعَ الْقِيمَةِ not-allowed لِتَغْيِيرِ شَكْلِ الْمُؤَشِّرِ، مِمَّا يُعْطِي إِشَارَةً وَاضِحَةً لِلْمُسْتَخْدِمِ بِأَنَّ الزِّرَّ غَيْرُ قَابِلٍ لِلنَّقْرِ.",
+        "caption_text": "نستخدم opacity لتقليل الشفافية و cursor مع القيمة not-allowed لإظهار الزر كمعطل وإعطاء إشارة للمستخدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".disabledbtn {\n  opacity: 0.6;\n  cursor: not-allowed;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_hover.asp"
+      ]
+    },
+    {
+      "id": "button-width",
+      "title": "التحكم في عرض الأزرار",
+      "narration": {
+        "spoken_text": "بِشَكْلٍ افْتِرَاضِيٍّ، يَتَحَدَّدُ عَرْضُ الزِّرِّ بِنَاءً عَلَى النَّصِّ دَاخِلَهُ. وَلَكِنْ يُمْكِنُنَا اسْتِخْدَامُ خَاصِيَّةِ width لِتَحْدِيدِ عَرْضٍ ثَابِتٍ بِالْبِكْسِلْ، أَوْ عَرْضٍ مَرِنٍ بِالنِّسْبَةِ الْمِئَوِيَّةِ لِيَتَنَاسَبَ مَعَ حَجْمِ الْعُنْصُرِ الْأَبِ.",
+        "caption_text": "يحدد عرض الزر افتراضيا بناء على النص، ويمكننا استخدام width لتحديد عرض ثابت بالبكسل أو عرض مرن بالنسبة المئوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button1 {\n  width: 250px;\n}\n.button2 {\n  width: 50%;\n}\n.button3 {\n  width: 100%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_hover.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ جَعْلِ الْأَزْرَارِ أَكْثَرَ تَفَاعُلِيَّةً وَجَمَالِيَّةً. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْخَصَائِصِ بِنَفْسِكُمْ وَتَطْبِيقِهَا فِي مَشَارِيعِكُمُ الْقَادِمَةِ لِتَحْسِينِ تَصْمِيمِ وَاجِهَاتِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا كيفية جعل الأزرار أكثر تفاعلية وجمالية. جربوا هذه الخصائص في مشاريعكم لتحسين تصميم واجهات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام :hover للتفاعل",
+          "تطبيق الظلال بـ box-shadow",
+          "إدارة حالة التعطيل بـ opacity",
+          "التحكم في العرض بـ width"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons_hover.asp"
+      ]
+    }
+  ]
+}
