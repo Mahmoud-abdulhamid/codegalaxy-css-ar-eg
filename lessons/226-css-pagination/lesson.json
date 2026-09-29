@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "226",
+  "title": "تصميم Pagination احترافي باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء هيكل Pagination باستخدام القوائم",
+    "تنسيق الروابط داخل Pagination باستخدام CSS",
+    "تطبيق حالة Active لتمييز الصفحة الحالية",
+    "تعطيل الأزرار باستخدام فئة Disabled"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_pagination.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Pagination",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِ الْيَوْمِ. سَنَتَعَلَّمُ كَيْفِيَّةَ إِنْشَاءِ Pagination رَسْبُونْسِيفْ لِمَوَاقِعِ الْوِبّ. عِنْدَمَا يَكُونُ لَدَيْكَ صَفَحَاتٌ كَثِيرَةٌ، يُسَاعِدُكَ هَذَا الْعُنْصُرُ فِي تَنْظِيمِ التَّنَقُّلِ بَيْنَ الصَّفَحَاتِ بِشَكْلٍ جَذَّابٍ وَمُنَظَّمٍ.",
+        "caption_text": "سنتعلم اليوم كيفية إنشاء Pagination متجاوب لتحسين تجربة التنقل في مواقع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Pagination هو سلسلة من الروابط للتنقل بين الصفحات",
+          "يتم بناؤه عادة باستخدام القوائم غير المرتبة <ul>",
+          "يحتوي على أرقام الصفحات وأزرار السابق والتالي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "الهيكل البرمجي لـ Pagination",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْكُودِ. نَسْتَخْدِمُ display flex لِتَوْسِيطِ الْعَنَاصِرِ، وَنُزِيلُ list style لِتَنْظِيفِ الْقَائِمَةِ. كُلُّ رَابِطٍ دَاخِلَ li يَحْتَاجُ إِلَى تَنْسِيقَاتٍ خَاصَّةٍ لِيَبْدُوَ كَزِرٍّ مُنْفَصِلٍ.",
+        "caption_text": "نستخدم display flex لتوسيط العناصر ونزيل list style الافتراضي للقوائم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pagination {\n  display: flex;\n  justify-content: center;\n  list-style: none;\n  padding: 0px;\n}\n.pagination li a {\n  display: block;\n  padding: 8px 12px;\n  text-decoration: none;\n  border: 1px solid gray;\n  color: black;\n  margin: 0 4px;\n  border-radius: 5px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح الخصائص المستخدمة",
+      "narration": {
+        "spoken_text": "لَاحِظْ أَنَّنا اسْتَخْدَمْنَا padding لِتَوْسِيعِ مَسَاحَةِ الضَّغْطِ، وَ border radius لِإِعْطَاءِ حَوَافَ مُسْتَدِيرَةٍ. كَمَا أَنَّ text decoration none يُزِيلُ خَطَّ الرَّابِطِ التَّقْلِيدِيَّ لِيَبْدُوَ التَّصْمِيمُ أَكْثَرَ احْتِرَافِيَّةً.",
+        "caption_text": "تساعد الخصائص مثل padding و border-radius في تحسين المظهر الجمالي للأزرار."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "display: block يجعل الرابط يملأ مساحة العنصر li",
+          "text-decoration: none لإزالة تسطير الروابط",
+          "border-radius: 5px لإضافة حواف مستديرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "active_class",
+      "title": "إضافة حالة Active",
+      "narration": {
+        "spoken_text": "لِتَحْدِيدِ الصَّفْحَةِ الْحَالِيَّةِ، نُضِيفُ كَلَاسَ active. هَذَا يُسَاعِدُ الْمُسْتَخْدِمَ عَلَى مَعْرِفَةِ مَكَانِهِ. نُغَيِّرُ background color وَ color لِتَمْيِيزِ هَذَا الزِّرِّ عَنْ بَقِيَّةِ الْأَزْرَارِ.",
+        "caption_text": "نستخدم فئة active لتمييز الصفحة الحالية بصريا للمستخدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "active.css",
+        "code": ".pagination li a.active {\n  background-color: #4CAF50;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "disabled_class",
+      "title": "تعطيل الأزرار بـ Disabled",
+      "narration": {
+        "spoken_text": "فِي حَالَةِ الْوُصُولِ لِلصَّفْحَةِ الْأَخِيرَةِ، نَحْتَاجُ لِتَعْطِيلِ زِرِّ التَّالِي. نَسْتَخْدِمُ pointer events none لِمَنْعِ النَّقْرِ، وَ cursor not allowed لِتَنْبِيهِ الْمُسْتَخْدِمِ أَنَّ الزِّرَّ غَيْرُ مُفَعَّلٍ.",
+        "caption_text": "نستخدم pointer-events: none لتعطيل التفاعل مع الزر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "disabled.css",
+        "code": ".pagination li a.disabled {\n  color: #dddddd;\n  cursor: not-allowed;\n  pointer-events: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ التَّنْسِيقَاتِ، سَتَحْصُلُ عَلَى شَرِيطِ تَنَقُّلٍ رَائِعٍ. يُمْكِنُكَ رُؤْيَةُ الْأَزْرَارِ مُصْطَفَّةً بِشَكْلٍ أُفُقِيٍّ، مَعَ تَمْيِيزِ الصَّفْحَةِ الْحَالِيَّةِ وَتَعْطِيلِ الْأَزْرَارِ غَيْرِ الْمُتَاحَةِ.",
+        "caption_text": "هكذا يظهر الـ Pagination بعد تطبيق التنسيقات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "«  1  2  3  4  5  »",
+        "highlight_lines": [],
+        "output": "يظهر شريط تنقل أفقي مع تمييز الصفحة النشطة وتعطيل أزرار التنقل غير المتاحة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَبْنِي Pagination بَاحْتِرَافِيَّةٍ. تَذَكَّرْ دَائِماً أَهَمِّيَّةَ اسْتِخْدَامِ flexbox لِتَنْظِيمِ الْعَنَاصِرِ، وَتَطْبِيقِ الْكَلَاسَاتِ الْمُخْتَلِفَةِ مِثْلَ active وَ disabled لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ. جَرِّبْ هَذِهِ الْأَكْوَادَ بِنَفْسِكَ وَطَوِّرْهَا.",
+        "caption_text": "خلاصة: استخدم flexbox للتنظيم، وطبق فئات active و disabled لتحسين تجربة المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام flexbox يسهل محاذاة العناصر",
+          "فئة active ضرورية لتمييز الصفحة الحالية",
+          "فئة disabled تمنع التفاعل غير المرغوب فيه",
+          "جرب الأكواد بنفسك لتطوير مهاراتك"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination.asp"
+      ]
+    }
+  ]
+}
