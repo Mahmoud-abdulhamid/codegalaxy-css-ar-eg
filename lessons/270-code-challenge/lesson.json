@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "270",
+  "title": "CSS supports Rule Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام supports في CSS",
+    "التحقق من دعم المتصفح لخصائص CSS",
+    "كتابة كود شرطي متوافق مع المتصفحات",
+    "تطبيق التحدي البرمجي الخاص بـ supports"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_supports_rule.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول supports",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةَ اسْتِخْدَامِ قَاعِدَةِ supports لِلتَّحَقُّقِ مِنْ دَعْمِ الْمُتَصَفِّحِ لِخَصَائِصِ CSS مُعَيَّنَةٍ، وَهِيَ أَدَاةٌ قَوِيَّةٌ لِتَحْسِينِ تَوَافُقِيَّةِ مَوَاقِعِ الْوِبّ.",
+        "caption_text": "مقدمة حول استخدام قاعدة supports في CSS للتحقق من دعم المتصفح للخصائص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قاعدة supports تسمح بكتابة كود مشروط",
+          "تساعد في توفير بدائل عند عدم دعم خاصية معينة",
+          "تزيد من استقرار وتوافقية تصميم صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "بنية supports البرمجية",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ بِنْيَةُ supports عَلَى كِتَابَةِ شَرْطٍ بَيْنَ أَقْوَاسٍ، إِذَا تَحَقَّقَ هَذَا الشَّرْطُ، يَتِمُّ تَنْفِيذُ الْأَكْوَادِ دَاخِلَ الْأَقْوَاسِ الْمُجَعَّدَةِ. هَذَا يُسَاعِدُنَا فِي تَجَنُّبِ الْمَشَاكِلِ مَعَ الْمُتَصَفِّحَاتِ الْقَدِيمَةِ.",
+        "caption_text": "شرح البنية البرمجية لقاعدة supports وكيفية كتابة الشروط داخلها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@supports (display: grid) {\n  .container {\n    display: grid;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "logic",
+      "title": "استخدام المعاملات المنطقية",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً اسْتِخْدَامُ الْمُعَامَلَاتِ الْمَنْطِقِيَّةِ مِثْلَ and وَ or وَ not دَاخِلَ supports. هَذَا يَمْنَحُنَا مَرُونَةً كَبِيرَةً فِي التَّحَكُّمِ بِتَنْفِيذِ التَّنْسِيقَاتِ بِنَاءً عَلَى دَعْمِ الْمُتَصَفِّحِ لِعِدَّةِ خَصَائِصَ فِي آنٍ وَاحِدٍ.",
+        "caption_text": "استخدام المعاملات المنطقية مثل and و or و not داخل supports."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@supports (display: grid) and (gap: 20px) {\n  .grid-layout {\n    display: grid;\n    gap: 20px;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "challenge_setup",
+      "title": "تحدي البرمجة",
+      "narration": {
+        "spoken_text": "لِنَقُمْ بِتَحْدِي التَّطْبِيقِ الْعَمَلِيِّ. الْمَطْلُوبُ هُوَ كِتَابَةُ كُودٍ يَسْتَخْدِمُ supports لِلتَّحَقُّقِ مِنْ دَعْمِ خاصية display: flex، وَإِذَا كَانَ مَدْعُوماً، نَقُومُ بِتَنْسِيقِ الْعُنْصُرِ بِشَكْلٍ مُعَيَّنٍ.",
+        "caption_text": "تحدي عملي لاستخدام supports للتحقق من دعم display: flex."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": "/* التحدي: تحقق من دعم flex */\n@supports (display: flex) {\n  .box {\n    display: flex;\n    justify-content: center;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَنْفِيذِ هَذَا الْكُودِ فِي مُتَصَفِّحٍ حَدِيثٍ، سَيَتِمُّ تَطْبِيقُ التَّنْسِيقَاتِ بِنَجَاحٍ. إِذَا كَانَ الْمُتَصَفِّحُ لَا يَدْعَمُ هَذِهِ الْخَاصِّيَّةَ، سَيَتَجَاهَلُ الْمُتَصَفِّحُ الْكُودَ دَاخِلَ supports بِأَمَانٍ.",
+        "caption_text": "معاينة كيفية تعامل المتصفح مع كود supports."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Browser supports flex: Apply styles\nBrowser does not support flex: Skip styles",
+        "highlight_lines": [],
+        "output": "Flexbox layout applied successfully",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنْ أَفْضَلِ الْمُمَارَسَاتِ أَنْ نَضَعَ التَّنْسِيقَاتِ الْأَسَاسِيَّةَ خَارِجَ supports، ثُمَّ نُضِيفَ التَّحْسِينَاتِ الْمُتَقَدِّمَةَ دَاخِلَهَا. هَذَا يَضْمَنُ أَنَّ مَوْقِعَ الْوِبّ يَعْمَلُ بِشَكْلٍ جَيِّدٍ عَلَى جَمِيعِ الْمُتَصَفِّحَاتِ.",
+        "caption_text": "أفضل الممارسات البرمجية عند استخدام supports في مشاريع CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم التنسيقات الأساسية كـ Fallback",
+          "ضع التحسينات المتقدمة داخل supports",
+          "اختبر الكود على متصفحات مختلفة",
+          "لا تبالغ في تعقيد الشروط المنطقية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_supports_rule.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمَ حَوْلَ supports. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا التَّحَدِّي بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدِيُو، وَلَا تَتَرَدَّدُوا فِي طَرْحِ أَسْئِلَتِكُمْ. مَعَ تَحِيَّاتِي، مَحْمُود عَبْد الْحَمِيد.",
+        "caption_text": "خاتمة الدرس ودعوة للممارسة العملية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجع مفاهيم supports بانتظام",
+          "طبق التحدي البرمجي في الرابط",
+          "استمر في تطوير مهاراتك في CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_supports_rule.asp"
+      ]
+    }
+  ]
+}
