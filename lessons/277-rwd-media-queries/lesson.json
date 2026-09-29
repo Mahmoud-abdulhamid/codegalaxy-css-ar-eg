@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "277",
+  "title": "CSS Media Queries and Responsive Web Design",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم CSS Media Queries ودورها الأساسي في Responsive Web Design",
+    "تعلم استخدام قاعدة media لإضافة Breakpoints عند قياسات مختلفة للشاشات",
+    "التعامل مع اتجاهات الشاشة Orientation وخاصيات تفضيلات المستخدم مثل prefers-reduced-motion"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro_media_queries",
+      "title": "مقدمة حول CSS Media Queries",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ عَلَى مَفْهُومِ CSS Media Queries وَكَيْفَ تُسَاعِدُنَا فِي بِنَاءِ Responsive Web Design بَدِيعَةٍ وَمُتَطَوِّرَةٍ تُنَاسِبُ كُلَّ أَجْهِزَةِ الْوِبّ.",
+        "caption_text": "تعرف على مفهوم CSS Media Queries ودورها الأساسي في Responsive Web Design."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تطبيق التنسيقات بناء على خصائص الجهاز والبيئة",
+          "عنصر أساسي لإنشاء صفحات وب متجاوبة Responsive",
+          "استخدام قاعدة media لتضمين الاستعلامات في الملف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "breakpoints_concept",
+      "title": "إضافة Breakpoints عبر Media Queries",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ إِلَى إِضَافَةِ Breakpoints بِاسْتِخْدَامِ Media Queries لِإِعَادَةِ تَرْتِيبِ عَنَاصِرِ Grid Layout عَلَى الشَّاشَاتِ الْأَكْبَرِ سِعَةً لِتَحْسِينِ التَّجْرِبَةِ.",
+        "caption_text": "استخدام Media Queries لإضافة Breakpoints وإعادة ترتيب عناصر Grid Layout."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "@media (min-width: 600px) {\n  .header {\n    grid-area: 1 / span 6;\n  }\n  .menu {\n    grid-area: 2 / span 1;\n  }\n  .content {\n    grid-area: 2 / span 4;\n  }\n  .facts {\n    grid-area: 2 / span 1;\n  }\n  .footer {\n    grid-area: 3 / span 6;\n  }\n}",
+        "highlight_lines": [],
+        "output": "يتم تطبيق التنسيق الشبكي الجديد عندما تكون الشاشة بعرض 600 بكسل أو أكثر.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "multiple_breakpoints",
+      "title": "تعدد Breakpoints للشاشات المختلفة",
+      "narration": {
+        "spoken_text": "يُمْكِنُكَ إِضَافَةُ عَدَدٍ غَيْرِ مَحْدُودٍ مِنَ ال Breakpoints. فِي هَذَا الْمِثَالِ نَسْتَخْدِمُ قَاعِدَتَيْنِ عِنْدَ طُولِ مِيِنْ وِدْثِ سِتِّمِائَةٍ وَسَبْعِ مِائَةٍ وَثَمَانِينَ بِكسل.",
+        "caption_text": "يمكن إضافة عدة Breakpoints لتغطية قياسات شاشات متعددة ودقيقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "@media (min-width: 600px) {\n  .facts {\n    grid-area: 3 / span 6;\n  }\n}\n@media (min-width: 768px) {\n  .facts {\n    grid-area: 2 / span 1;\n  }\n}",
+        "highlight_lines": [],
+        "output": "يتغير توزيع مساحة facts تلقائياً حسب اتساع نافذة المتصفح.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "device_groups",
+      "title": "مجموعات الأجهزة النمطية",
+      "narration": {
+        "spoken_text": "لِتَسْهِيلِ التَّصْمِيمِ عَلَى الْمُطَوِّرِينَ، يُمْكِنُ تَقْسِيمُ الشَّاشَاتِ إِلَى خَمْسِ مَجْمُوعَاتٍ رَئِيسِيَّةٍ تَبْدَأُ مِنَ الهَوَاتِفِ الذَّكِيَّةِ صُعُوداً حَتَّى الْأَجْهِزَةِ الْمَكْتَبِيَّةِ الْكَبِيرَةِ جداً.",
+        "caption_text": "تصنيف الأجهزة إلى خمس مجموعات أساسية لتسهيل كتابة Media Queries."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "@media only screen and (max-width: 600px) {\n  ...\n}\n@media only screen and (min-width: 600px) {\n  ...\n}\n@media only screen and (min-width: 768px) {\n  ...\n}\n@media only screen and (min-width: 992px) {\n  ...\n}\n@media only screen and (min-width: 1200px) {\n  ...\n}",
+        "highlight_lines": [],
+        "output": "تغطية كافة الأجهزة بدءا من الهواتف ووصولا إلى الشاشات العملاقة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "screen_orientation",
+      "title": "استعلامات اتجاه الشاشة Orientation",
+      "narration": {
+        "spoken_text": "تُمَكِّنُنَا Media Queries أَيْضاً مِنْ تَغْيِيرِ التَّصْمِيمِ حَسَبَ اتِّجَاهِ الشَّاشَةِ، سَوَاءٌ أَكَانَتْ فِي وَضْعِ الْعَرْضِ الْأُفُقِي لاندسكيب أَوْ الْوَضْعِ الْعَمُودِيّ.",
+        "caption_text": "تغيير تصميم صفحات الويب اعتمادا على اتجاه الشاشة Landscape أو Portrait."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "@media only screen and (orientation: landscape) {\n  body {\n    background-color: lightblue;\n  }\n}",
+        "highlight_lines": [],
+        "output": "تتغير خلفية الصفحة إلى اللون الأزرق الفاتح عند قلب الجهاز للأفق.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "hide_and_font",
+      "title": "إخفاء العناصر وتعديل الخطوط",
+      "narration": {
+        "spoken_text": "بِإِمْكَانِكَ أَيْضاً إِخْفَاءَ بَعْضِ العناصِرِ تَمَاماً مِثْلَ اسْتِخْدَامِ خَاصِيَّةِ دَيْس نَان، أَوْ تَغْيِيرِ حَجْمِ الخُطُوطِ عَلَى مَقَاسَاتِ الْعَرْضِ الْمُخْتَلِفَةِ.",
+        "caption_text": "إخفاء عناصر معينة أو تعديل حجم الخط بناء على عرض الـ Viewport."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "@media screen and (max-width: 600px) {\n  #div1 {\n    display: none;\n  }\n}\n@media screen and (min-width: 600px) {\n  #div1 {\n    font-size: 80px;\n  }\n}",
+        "highlight_lines": [],
+        "output": "يختفي العنصر في الشاشات الصغيرة ويكبر خطه في الشاشات الواسعة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "user_preferences",
+      "title": "استعلامات تفضيلات المستخدم",
+      "narration": {
+        "spoken_text": "يُوَدُّ بَعْضُ المُسْتَخْدِمِينَ تَعْطِيلَ الْحَرَكَاتِ تَفَادِياً لِحَسَاسِيَّةِ الْحَرَكَةِ. تَتِيحُ لَنا خَاصِيَّةُ prefers-reduced-motion إِيقَافَ الْحَرَكَاتِ بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "احترام تفضيلات المستخدمين عبر ميزة prefers-reduced-motion وإيقاف الحركات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "@media (prefers-reduced-motion: reduce) {\n  * {\n    animation: none !important;\n    transition: none !important;\n  }\n}",
+        "highlight_lines": [],
+        "output": "إيقاف تام لكافة الرسوم المتحركة والانتقالات للمستخدمين الحساسين للحركة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس والممارسة العملية",
+      "narration": {
+        "spoken_text": "بِذَلِكَ نَكُونُ قَدْ تَعَرَّفْنَا عَلَى الكِتَابَةِ السَّلِيمَةِ لِ CSS Media Queries وَأَهَمِّيَّتِهَا فِي تَطْوِيرِ وِبٍّ مُتجاوب وَاحْتِرَافِيّ. نَرَاكُمْ فِي الدَّرْسِ الْقَادِمِ مَعَ مَفَاهِيمَ أَكْثَرَ تَقَدُّمَاً.",
+        "caption_text": "خلاصة استخدام CSS Media Queries لبناء تجارب ويب متجاوبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام media لتخصيص الأنماط حسب قياس الشاشة",
+          "التعامل مع اتجاهات العرض وتفضيلات الحركة",
+          "تجربة الأكواد المذكورة لتطوير مهارات Responsive Design"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+      ]
+    }
+  ]
+}
