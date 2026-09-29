@@ -3,6 +3,8 @@
   "lesson_id": "64",
   "title": "CSS Font Shorthand Property",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية استخدام خاصية font المختصرة",
     "تعلم ترتيب القيم داخل خاصية font",
