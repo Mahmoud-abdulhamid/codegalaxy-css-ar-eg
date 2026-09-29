@@ -3,6 +3,8 @@
   "lesson_id": "87",
   "title": "CSS Fixed and Absolute Positioning",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية عمل position: fixed في صفحات الويب",
     "التعرف على الفرق بين position: absolute و position: relative",
