@@ -3,6 +3,8 @@
   "lesson_id": "56",
   "title": "CSS Text Styling Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية تطبيق خصائص CSS على النصوص",
     "التعامل مع تحديات تنسيق النصوص في صفحات الويب",
