@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "225",
+  "title": "CSS Buttons Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تصميم الأزرار باستخدام CSS",
+    "تطبيق خصائص التنسيق على العناصر التفاعلية",
+    "تحسين مظهر الأزرار عبر استخدام Attributes",
+    "التعامل مع تحديات البرمجة في CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحدي CSS Buttons",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنُكَمِّلُ الْيَوْمَ مَهَارَاتِنَا فِي تَصْمِيمِ الأَزْرَارِ الْجَذَّابَةِ لِصَفْحَةِ الْوِبّ، وَسَنَخُوضُ تَحَدِّياً عَمَلِيّاً لِاخْتِبَارِ فَهْمِنَا لِتَنْسِيقِ الْعَنَاصِرِ التَّفَاعُلِيَّةِ بِشَكْلٍ احْتِرَافِيٍّ وَمُبْتَكَرٍ.",
+        "caption_text": "مرحبا بكم في درس تحدي CSS Buttons لتطوير مهارات تصميم الأزرار في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية الأزرار في تجربة المستخدم",
+          "استخدام CSS لتخصيص مظهر العناصر",
+          "تطبيق تحدي CSS Buttons العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية لتنسيق الأزرار",
+      "narration": {
+        "spoken_text": "لِتَصْمِيمِ زِرٍّ مُمَيَّزٍ، نَحْتَاجُ لِتَحْدِيدِ خَصَائِصِ background-color وَ padding وَ border. هَذِهِ ال Attributes تَجْعَلُ الْعُنْصُرَ يَبْدُو كَزِرٍّ حَقِيقِيٍّ. لَا تَنْسَ أَيْضاً تَأْثِيرَ hover لِإِضَافَةِ تَفَاعُلٍ عِنْدَ مُرُورِ مُؤَشِّرِ الْفَأْرَةِ فَوْقَ الزِّرِّ.",
+        "caption_text": "تعتمد الأزرار في CSS على خصائص مثل background-color وpadding وborder مع تأثيرات hover."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام background-color للون الخلفية",
+          "ضبط padding لتحديد المساحة الداخلية",
+          "تخصيص border لإطار الزر",
+          "إضافة تأثيرات تفاعلية عبر hover"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود البرمجي للأزرار",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيفِ Element مِنْ نَوْعِ button فِي HTML، ثُمَّ نُطَبِّقُ التَّنْسِيقَاتِ فِي CSS. لَاحِظْ كَيْفَ نُحَدِّدُ الْقِيَمَ لِكُلِّ خَاصِيَّةٍ لِضَمَانِ مَظْهَرٍ مُتَنَاسِقٍ وَجَذَّابٍ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "هيكل الكود يتضمن عنصر button في HTML وتنسيقات CSS المقابلة له."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button {\n  background-color: #4CAF50;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  display: inline-block;\n  font-size: 16px;\n}",
+        "highlight_lines": [],
+        "output": "زر أخضر بتنسيق احترافي",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "hover_effect",
+      "title": "إضافة تأثير التفاعل hover",
+      "narration": {
+        "spoken_text": "الآنَ نُضِيفُ تَأْثِيرَ hover. عِنْدَ كِتَابَةِ .button:hover، نُغَيِّرُ بَعْضَ الْخَصَائِصِ مِثْلَ background-color. هَذَا الْإِجْرَاءُ يُعْطِي تَغْذِيَةً رَاجِعَةً بَصَرِيَّةً لِلْمُسْتَخْدِمِ، وَيَجْعَلُ صَفْحَةَ الْوِبّ أَكْثَرَ حَيَوِيَّةً وَتَفَاعُلِيَّةً.",
+        "caption_text": "نستخدم pseudo-class المسماة hover لتغيير مظهر الزر عند مرور الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button:hover {\n  background-color: #45a049;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": "تغير لون الزر عند التمرير",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "browser_preview",
+      "title": "معاينة النتيجة في المتصفح",
+      "narration": {
+        "spoken_text": "عِنْدَ فَتْحِ هَذَا الْكُودِ فِي Web Browser مِثْلَ Chrome أَوْ Edge، سَتَرَى الزِّرَّ بِشَكْلٍ أَنِيقٍ. عِنْدَ تَحْرِيكِ الْفَأْرَةِ، سَيَتَغَيَّرُ اللَّوْنُ بِسَلَاسَةٍ، وَهَذَا هُوَ الْهَدَفُ مِنْ تَحَدِّينَا الْيَوْمَ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ.",
+        "caption_text": "معاينة الزر في المتصفح تظهر التفاعل السلس عند مرور الفأرة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الزر يظهر بلون أخضر ثابت",
+          "تغير اللون عند التفاعل",
+          "سهولة الاستخدام والتفاعل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَحْرِصَ عَلَى كِتَابَةِ كُودٍ نَظِيفٍ وَمُنَظَّمٍ. اسْتَخْدِمْ Classes وَاصِفَةً لِلْعَنَاصِرِ، وَحَاوِلْ دَائِماً تَجْرِبَةَ أَحْجَامٍ مُخْتَلِفَةٍ لِلْأَزْرَارِ لِتَتَنَاسَبَ مَعَ تَصْمِيمِ صَفْحَةِ الْوِبّ الْخَاصَّةِ بِكَ. التَّدْرِيبُ الْمُسْتَمِرُّ هُوَ مِفْتَاحُ الْإِبْدَاعِ.",
+        "caption_text": "أفضل الممارسات تشمل تنظيم الكود واستخدام أسماء فئات واضحة وتجربة أحجام متنوعة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام أسماء Classes معبرة",
+          "الحفاظ على تناسق الألوان",
+          "تجربة التصميم على شاشات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُصَمِّمُ أَزْرَاراً احْتِرَافِيَّةً بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو، وَلَا تَتَرَدَّدُوا فِي طَرْحِ أَسْئِلَتِكُمْ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا تصميم الأزرار بـ CSS. جرب الكود بنفسك عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية أساسيات CSS Buttons",
+          "شرح تأثير hover التفاعلي",
+          "دعوة للتطبيق العملي عبر الرابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_buttons.asp"
+      ]
+    }
+  ]
+}
