@@ -1,0 +1,9 @@
+#div1 {
+  background-color: lightblue; background-clip: border-box;
+}
+#div2 {
+  background-color: lightblue; background-clip: padding-box;
+}
+#div3 {
+  background-color: lightblue; background-clip: content-box;
+}
