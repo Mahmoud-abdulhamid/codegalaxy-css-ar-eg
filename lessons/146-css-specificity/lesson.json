@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "146",
+  "title": "فهم CSS Specificity",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم CSS Specificity كخوارزمية لتحديد الأنماط",
+    "التعرف على ترتيب الأولوية بين Selector و Class و ID",
+    "إدراك تأثير Inline Style على الأولوية",
+    "تطبيق قواعد الأولوية في مشاريع الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_specificity.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Specificity",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ مَفْهُومَ CSS Specificity، وَهُوَ خَوَارِزْمِيَّةٌ تُحَدِّدُ أَيَّ قَاعِدَةٍ مِنَ الْأَنْماطِ سَتُطَبَّقُ عَلَى الْعُنْصُرِ عِنْدَ وُجُودِ تَعَارُضٍ بَيْنَ عِدَّةِ قَوَاعِدَ.",
+        "caption_text": "مفهوم CSS Specificity هو خوارزمية تحدد أي نمط سيتم تطبيقه على العنصر عند وجود تعارض."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Specificity تحدد الأولوية عند تكرار القواعد",
+          "القاعدة ذات الأولوية الأعلى هي التي تفوز",
+          "تؤثر هذه الخوارزمية على مظهر صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity.asp"
+      ]
+    },
+    {
+      "id": "basic_example",
+      "title": "مثال على Selector بسيط",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَذَا الْمِثَالِ الْبَسِيطِ. لَدَيْنَا عُنْصُرُ p وَقُمْنَا بِتَحْدِيدِ لَوْنٍ أَحْمَرَ لَهُ. فِي هَذِهِ الْحَالَةِ، سَيَظْهَرُ النَّصُّ بِاللَّوْنِ الْأَحْمَرِ لِأَنَّهُ التَّعْرِيفُ الْوَحِيدُ الْمَوْجُودُ لِهَذَا الْعُنْصُرِ.",
+        "caption_text": "عند استخدام Selector بسيط مثل p، يتم تطبيق النمط المحدد مباشرة على العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      p {\n        color: red;\n      }\n    </style>\n  </head>\n  <body>\n    <p>Hello World!</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Hello World! (باللون الأحمر)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity.asp"
+      ]
+    },
+    {
+      "id": "class_specificity",
+      "title": "أولوية الـ Class Selector",
+      "narration": {
+        "spoken_text": "مَاذَا لَوْ أَضَفْنَا Class بِاسْمِ test؟ لَاحِظْ أَنَّ ال Class لَهُ أَوْلَوِيَّةٌ أَعْلَى مِنَ ال Element Selector. لِذَلِكَ سَيَتَغَيَّرُ لَوْنُ النَّصِّ إِلَى الْأَخْضَرِ، لِأَنَّهُ يَمْتَلِكُ Specificity أَعْلَى.",
+        "caption_text": "الـ Class Selector يمتلك أولوية أعلى من الـ Element Selector."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      .test {\n        color: green;\n      }\n      p {\n        color: red;\n      }\n    </style>\n  </head>\n  <body>\n    <p class=\"test\">Hello World!</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Hello World! (باللون الأخضر)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity.asp"
+      ]
+    },
+    {
+      "id": "id_specificity",
+      "title": "أولوية الـ ID Selector",
+      "narration": {
+        "spoken_text": "الْآنَ نُضِيفُ ID بِاسْمِ demo. ال ID يَمْتَلِكُ أَوْلَوِيَّةً أَعْلَى حَتَّى مِنَ ال Class. لِذَلِكَ سَيَتَغَيَّرُ لَوْنُ النَّصِّ إِلَى الْأَزْرَقِ، لِأَنَّ مُحَرِّكَ ال Browser يَمْنَحُ ال ID قُوَّةً أَكْبَرَ فِي التَّحَدِيدِ.",
+        "caption_text": "الـ ID Selector يتفوق في الأولوية على الـ Class والـ Element."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      #demo {\n        color: blue;\n      }\n      .test {\n        color: green;\n      }\n      p {\n        color: red;\n      }\n    </style>\n  </head>\n  <body>\n    <p id=\"demo\" class=\"test\">Hello World!</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Hello World! (باللون الأزرق)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity.asp"
+      ]
+    },
+    {
+      "id": "inline_style",
+      "title": "قوة الـ Inline Style",
+      "narration": {
+        "spoken_text": "أَخِيراً، إِذَا اسْتَخْدَمْنَا Inline Style مُبَاشَرَةً دَاخِلَ التَّاجِ، فَإِنَّهُ يَحْصُلُ عَلَى أَعْلَى Specificity عَلَى الْإِطْلَاقِ. سَيَظْهَرُ النَّصُّ بِاللَّوْنِ الْوَرْدِيِّ، مُتَجَاوِزاً كُلَّ قَوَاعِدِ ال CSS الْمَوْجُودَةِ فِي قِسْمِ head.",
+        "caption_text": "الـ Inline Style يمتلك أعلى أولوية ويتجاوز أي قواعد أخرى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      #demo {\n        color: blue;\n      }\n    </style>\n  </head>\n  <body>\n    <p id=\"demo\" style=\"color: pink;\">Hello World!</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Hello World! (باللون الوردي)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَذَكَّرُوا دَائِماً أَنَّ التَّرْتِيبَ يَبْدَأُ مِنَ ال Element، ثُمَّ ال Class، يَلِيهِ ال ID، وَأَعْلَاهُمْ هُوَ ال Inline Style. افْهَمُوا هَذِهِ الْقَوَاعِدَ لِتَتَحَكَّمُوا بِشَكْلٍ دَقِيقٍ فِي تَصَامِيمِ مَوَاقِعِ الْوِبّ.",
+        "caption_text": "ترتيب الأولوية: Element < Class < ID < Inline Style."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Element Selector: أولوية منخفضة",
+          "Class Selector: أولوية متوسطة",
+          "ID Selector: أولوية عالية",
+          "Inline Style: أولوية قصوى"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity.asp"
+      ]
+    }
+  ]
+}
