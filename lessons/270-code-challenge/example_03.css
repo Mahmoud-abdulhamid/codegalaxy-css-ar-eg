@@ -1,0 +1,7 @@
+/* التحدي: تحقق من دعم flex */
+@supports (display: flex) {
+  .box {
+    display: flex;
+    justify-content: center;
+  }
+}
