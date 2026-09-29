@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "292",
+  "title": "التحضير لمقابلات العمل في مجال Front-End",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "التعرف على طبيعة أسئلة المقابلات التقنية",
+    "فهم كيفية بناء هيكل صفحة الويب باستخدام HTML و CSS",
+    "تعلم استراتيجيات التحضير للمقابلات",
+    "استعراض أهمية المشاريع الشخصية في ملف الأعمال"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_interview_prep.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-01fbd03557fe6871.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_interview_prep.asp",
+      "source_url": "https://www.w3schools.com/css/css_interview_prep.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro_scene",
+      "title": "مقدمة في التحضير للمقابلات",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ. سَنَتَعَرَّفُ عَلَى كَيْفِيَّةِ التَّحْضِيرِ لِمُقَابَلَاتِ الْعَمَلِ فِي مَجَالِ Front-End، وَكَيْفَ نَسْتَخْدِمُ الْأَدَوَاتِ التَّفَاعُلِيَّةَ لِتَحْسِينِ أَدَائِنَا وَتَطْوِيرِ مَهَارَاتِنَا الْبَرْمَجِيَّةِ لِتَحْقِيقِ النَّجَاحِ فِي مَسَارِنَا الْمِهْنِيِّ.",
+        "caption_text": "مرحبا بكم في درس التحضير لمقابلات العمل في مجال Front-End."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية التحضير للمقابلات التقنية",
+          "استخدام أدوات AI للتدريب",
+          "تقييم الأداء الشخصي",
+          "تطوير المهارات المطلوبة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_interview_prep.asp"
+      ]
+    },
+    {
+      "id": "interview_expectations",
+      "title": "ماذا تتوقع في المقابلة؟",
+      "narration": {
+        "spoken_text": "فِي مُقَابَلَاتِ Front-End، تَوَقَّعْ أَسْئِلَةً بَرْمَجِيَّةً وَمَهَامَّ عَمَلِيَّةً. قَدْ يُطْلَبُ مِنْكَ بِنَاءُ صَفْحَةِ وِبٍّ بَسِيطَةٍ، لِذَا كُنْ مُسْتَعِدّاً لِإِظْهَارِ مَهَارَاتِكَ فِي HTML وَ CSS، وَلَا تَقْلَقْ إِذَا وَاجَهْتَ صُعُوبَةً، فَهَذَا أَمْرٌ طَبِيعِيٌّ لِلْجَمِيعِ.",
+        "caption_text": "توقع أسئلة برمجية ومهام عملية في مقابلات Front-End."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أسئلة تقنية حول الخبرة",
+          "مهام برمجية عملية",
+          "بناء واجهات المستخدم",
+          "التعامل مع التوتر أثناء الاختبار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_interview_prep.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَبْدَأُ بِقِسْمِ head لِتَحْدِيدِ title، ثُمَّ نَسْتَخْدِمُ Element مِنْ نَوْعِ style لِتَنْسِيقِ body، حَيْثُ نُحَدِّدُ font-family وَ background-color لِتَحْسِينِ مَظْهَرِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "شرح هيكل الكود البرمجي وتنسيقات CSS الأساسية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>Simple Greeting Page</title>\n    <style>\n      body {\n        font-family: Arial, sans-serif;\n        background-color: #f0f0f0;\n        color: #333;\n        padding: 20px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Hello, welcome to our website!</h1>\n  </body>\n</html>",
+        "highlight_lines": [
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_interview_prep.asp"
+      ]
+    },
+    {
+      "id": "body_content",
+      "title": "محتوى الصفحة المرئي",
+      "narration": {
+        "spoken_text": "فِي قِسْمِ body، نَكْتُبُ الْمُحْتَوَى الَّذِي يَظْهَرُ لِلْمُسْتَخْدِمِ. نَسْتَخْدِمُ h1 لِعَرْضِ رِسَالَةِ تَرْحِيبٍ. هَذَا الْعُنْصُرُ هُوَ جُزْءٌ أَسَاسِيٌّ مِنْ أَيِّ صَفْحَةِ وِبٍّ، وَيُسَاعِدُ فِي تَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ.",
+        "caption_text": "إضافة المحتوى المرئي داخل عنصر body."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>Simple Greeting Page</title>\n    <style>\n      body {\n        font-family: Arial, sans-serif;\n        background-color: #f0f0f0;\n        color: #333;\n        padding: 20px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Hello, welcome to our website!</h1>\n  </body>\n</html>",
+        "highlight_lines": [
+          15,
+          16,
+          17
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_interview_prep.asp"
+      ]
+    },
+    {
+      "id": "preview_scene",
+      "title": "معاينة الصفحة",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ الْمَرْئِيَّةُ لِلْكُودِ السَّابِقِ. نَرَى رِسَالَةَ التَّرْحِيبِ بِتَنْسِيقٍ نَظِيفٍ وَمُنَظَّمٍ، وَهَذَا مَا يَتَوَقَّعُهُ الْمُحَاوِرُونَ عِنْدَ طَلَبِ مَهَامَّ بَرْمَجِيَّةٍ بَسِيطَةٍ لِقِيَاسِ مَهَارَاتِكَ فِي التَّنْسِيقِ.",
+        "caption_text": "معاينة النتيجة النهائية للصفحة في المتصفح."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "معاينة صفحة الترحيب"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_interview_prep.asp"
+      ]
+    },
+    {
+      "id": "before_interview",
+      "title": "خطوات ما قبل المقابلة",
+      "narration": {
+        "spoken_text": "قَبْلَ الْمُقَابَلَةِ، ابْحَثْ عَنِ الشَّرِكَةِ لِفَهْمِ قِيَمِهَا. اقْرَأْ وَصْفَ الْوَظِيفَةِ بِدِقَّةٍ، وَدَوِّنْ مُلَاحَظَاتِكَ. تَذَكَّرْ أَنَّكَ تَمْتَلِكُ قِيمَةً مُضَافَةً لِلفَرِيقِ، وَكُنْ وَاثِقاً عِنْدَ مُنَاقَشَةِ مَهَارَاتِكَ.",
+        "caption_text": "نصائح هامة للتحضير قبل الذهاب للمقابلة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "البحث عن قيم الشركة",
+          "فهم وصف الوظيفة جيدا",
+          "التواصل مع مجتمع المطورين",
+          "تحديد القيمة المضافة للفريق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_interview_prep.asp"
+      ]
+    },
+    {
+      "id": "career_outlook",
+      "title": "مستقبل مهنة Front-End",
+      "narration": {
+        "spoken_text": "مَجَالُ Front-End مُمْتِعٌ وَيُتِيحُ لَكَ بِنَاءَ تَطْبِيقَاتٍ دِينَامِيكِيَّةٍ. الطَّلَبُ عَلَى الْمُطَوِّرِينَ عَالٍ جِدّاً، وَالرَّوَاتِبُ مُجْزِيَةٌ. اسْتَعِدَّ جَيِّداً، وَاسْتَمْتِعْ بِرِحْلَةِ التَّطَوُّرِ الْمِهْنِيِّ وَبِالتَّوْفِيقِ لِلْجَمِيعِ.",
+        "caption_text": "نظرة عامة على مستقبل مهنة مطور Front-End."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "طلب مرتفع على المطورين",
+          "رواتب تنافسية",
+          "فرص لبناء تطبيقات ديناميكية",
+          "أهمية الثقة بالنفس"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_interview_prep.asp"
+      ]
+    }
+  ]
+}
