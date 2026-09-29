@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "267",
+  "title": "CSS 12-Column Grid Layout",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم نظام 12-Column Grid",
+    "تطبيق display: grid على الحاويات",
+    "استخدام grid-template-columns لتقسيم الأعمدة",
+    "تصميم واجهات متجاوبة باستخدام Media Queries"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid_12column.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في 12-Column Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِ الْيَوْمِ حَوْلَ نِظَامِ 12-Column Grid. هَذَا النِّظَامُ يُعَدُّ مِنْ أَهَمِّ الطُّرُقِ الْمُرِنَةِ لِتَنْظِيمِ مُحْتَوَى صَفْحَةِ الْوِبّ، وَيُسَاعِدُنَا فِي بِنَاءِ تَصَامِيمَ Responsive Web Design بِدِقَّةٍ عَالِيَةٍ.",
+        "caption_text": "نظام 12-Column Grid هو وسيلة مرنة لتنظيم محتوى صفحات الويب وتصميم واجهات متجاوبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "نظام 12-Column Grid يوفر هيكلا مرنا",
+          "يسمح بتقسيم المساحة الأفقية إلى 12 عمودا متساويا",
+          "يدعم التصميم المتجاوب Responsive Web Design"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "container",
+      "title": "إعداد الحاوية الأساسية",
+      "narration": {
+        "spoken_text": "لِتَفْعِيلِ هَذَا النِّظَامِ، نَقُومُ بِتَطْبِيقِ display: grid عَلَى الْعُنْصُرِ الْحَاوِي. بَعْدَهَا نَسْتَخْدِمُ grid-template-columns مَعَ الدَّالَّةِ repeat لِتَحْدِيدِ 12 عَمُوداً مُتَسَاوِيَةَ الْعَرْضِ بِاسْتِخْدَامِ وَحْدَةِ 1fr.",
+        "caption_text": "نستخدم display: grid لتفعيل الشبكة، وgrid-template-columns لإنشاء 12 عمودا متساويا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-columns: repeat(12, [col-start] 1fr);\n  gap: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "items",
+      "title": "توزيع العناصر داخل الشبكة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَعْرِيفِ الْأَعْمِدَةِ، نَسْتَخْدِمُ الْخَاصِّيَّةَ grid-column لِتَحْدِيدِ مَوْقِعِ وَحَجْمِ كُلِّ عُنْصُرٍ. نُحَدِّدُ نُقْطَةَ الْبِدَايَةِ وَعَدَدَ الْأَعْمِدَةِ الَّتِي يَشْغَلُهَا الْعُنْصُرُ بِاسْتِخْدَامِ كَلِمَةِ span.",
+        "caption_text": "تستخدم الخاصية grid-column لتحديد مكان وحجم العناصر عبر الأعمدة الـ 12."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container > * {\n  grid-column: col-start / span 12;\n  padding: 10px;\n  border: 1px solid green;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "media_queries",
+      "title": "استخدام Media Queries",
+      "narration": {
+        "spoken_text": "نَعْتَمِدُ مَبْدَأَ Mobile First فِي التَّصْمِيمِ. نَسْتَخْدِمُ Media Queries لِتَغْيِيرِ تَخْطِيطِ الْعَنَاصِرِ عِنْدَ وُصُولِ الشَّاشَةِ إِلَى أَحْجَامٍ مُعَيَّنَةٍ، مِثْلَ 576 بيكسل أَوْ 768 بيكسل لِتَحْقِيقِ تَجَاوُبٍ أَفْضَلَ.",
+        "caption_text": "نستخدم Media Queries لتغيير توزيع العناصر بناء على عرض الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media (min-width: 576px) {\n  .sidebar {\n    grid-column: col-start / span 3;\n  }\n  .content {\n    grid-column: col-start 4 / span 9;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "full_example",
+      "title": "مثال متكامل",
+      "narration": {
+        "spoken_text": "هَذَا هُوَ الْكُودُ الْكَامِلُ لِتَطْبِيقِ نِظَامِ 12-Column Grid. لَاحِظْ كَيْفَ نَقُومُ بِتَنْظِيمِ الْعَنَاصِرِ مِثْلَ nav وَ sidebar وَ content لِتَظْهَرَ بِشَكْلٍ مُنَسَّقٍ عَلَى مُخْتَلَفِ أَحْجَامِ الشَّاشَاتِ.",
+        "caption_text": "مثال كامل يوضح كيفية توزيع العناصر في شبكة من 12 عمودا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".nav {\n  grid-column: col-start / span 2;\n}\n.content {\n  grid-column: col-start 3 / span 8;\n}\n.sidebar {\n  grid-column: col-start 11 / span 2;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "output",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَشْغِيلِ هَذَا الْكُودِ، سَتَجِدُ أَنَّ الْعَنَاصِرَ تَتَمَوْضَعُ بِدِقَّةٍ دَاخِلَ الْأَعْمِدَةِ الْمُحَدَّدَةِ. فِي الشَّاشَاتِ الصَّغِيرَةِ تَظْهَرُ الْعَنَاصِرُ بِشَكْلٍ طُولِيٍّ، وَمَعَ اتِّسَاعِ الشَّاشَةِ تَتَوَزَّعُ جَانِبِيّاً.",
+        "caption_text": "تظهر العناصر موزعة بدقة داخل الشبكة، وتتغير أبعادها تلقائيا مع تغير حجم المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.txt",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    Layout: [Nav(2) | Content(8) | Sidebar(2)]\n    Responsive: Stacked on mobile, Grid on desktop.\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Layout: [Nav(2) | Content(8) | Sidebar(2)]\nResponsive: Stacked on mobile, Grid on desktop.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_12column.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ بِنَاءِ نِظَامِ 12-Column Grid. هَذَا النِّظَامُ يُعَدُّ حَجَرَ الزَّاوِيَةِ فِي تَصْمِيمِ مَوَاقِعِ الْوِبّ الْحَدِيثَةِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا قُوَّةَ CSS Grid.",
+        "caption_text": "نظام 12-Column Grid هو أداة قوية لتنظيم التصاميم المتجاوبة. جربوا الأكواد بأنفسكم!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم display: grid للحاويات",
+          "استخدم repeat(12, 1fr) لإنشاء الأعمدة",
+          "استخدم grid-column لتحديد مكان العناصر",
+          "طبق Mobile First مع Media Queries"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_12column.asp"
+      ]
+    }
+  ]
+}
