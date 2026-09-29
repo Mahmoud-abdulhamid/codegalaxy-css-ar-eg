@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "192",
+  "title": "احتراف CSS Transitions وتغيير الخصائص بسلاسة",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم CSS Transitions وكيفية تطبيقها على عناصر الويب",
+    "استخدام خاصية transition لتحديد مدة التأثير الزمني بدقة",
+    "تفعيل الحركات الانتقالية باستخدام Pseudo-classes مثل hover",
+    "تطبيق تأثيرات انتقالية متعددة على خصائص مختلفة في نفس الوقت"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_transitions.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة عن CSS Transitions",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى مِيزَةِ CSS Transitions وَكَيْفَ نُغَيِّرُ قِيَمَ الْخَصَائِصِ بِسَلَاسَةٍ تَامَّةٍ خِلَالَ مُدَّةٍ زَمَنِيَّةٍ مُحَدَّدَةٍ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ عَلَى مَوْقِعِ الْوِبّ.",
+        "caption_text": "تعرف على ميزة CSS Transitions وكيفية تغيير قيم الخصائص بسلاسة عبر الزمن."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تغيير قيم خصائص العناصر بسلاسة تامة",
+          "تحديد مدة زمنية محددة لتنفيذ التأثير",
+          "تحسين التفاعل البصري في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "scene_property",
+      "title": "خصائص CSS Transition الأساسية",
+      "narration": {
+        "spoken_text": "لِإِنْشَاءِ تَأْثِيرِ انْتِقَالٍ، يَجِبُ عَلَيْنَا تَحْدِيدُ خَاصِيَّةِ CSS الْمُرَادِ تَطْبِيقُ التَّأْثِيرِ عَلَيْهَا، إِضَافَةً إِلَى مَدَّةِ الزَّمَنِ. خَاصِيَّةِ transition هِيَ خَاصِيَّةُ اخْتِصَارٍ تُسَهِّلُ كِتَابَةَ هَذِهِ الْقِيَمِ بَدَلًا مِنْ تَفْرِيقِهَا فِي عِدَّةِ أَسْطُرٍ بَرْمَجِيَّةٍ.",
+        "caption_text": "استخدام خاصية transition لتحديد الخاصية المستهدفة ومدة الانتقال الزمني."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد الخاصية المستهدفة بالتأثير الانتقالي",
+          "تحديد مدة الانتقال بدقة بالثواني أو المللي ثانية",
+          "خاصية transition تعتبر shorthand متكاملة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "scene_code_example",
+      "title": "مثال عملي على transition",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ مَعِي إِلَى هَذَا الْمِثَالِ الْعَمَلِيِّ. لَدَيْنَا عُنْصُرُ div بِعَرْضِ مِئَةِ بِيكْسِلْ وَارْتِفَاعِ مِئَةِ بِيكْسِلْ، وَلَوْنِ خَلْفِيَّةٍ أَحْمَرَ. قُمْنَا بِإِضَافَةِ transition لِعَرْضِ الْعُنْصُرِ بِمُدَّةِ ثَانِيَتَيْنِ كَامِلَتَيْنِ لِخَلْقِ حَرَكَةٍ نَاعِمَةٍ.",
+        "caption_text": "تطبيق transition على خاصية width بمدة زمنية قدرها ثانيتان لعنصر div."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "div {\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  transition: width 2s;\n}",
+        "highlight_lines": [],
+        "output": "عنصر مربّع أحمر بأبعاد 100 في 100 بكسل جاهز للحركة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "scene_trigger",
+      "title": "كيفية تفعيل Transition عبر Pseudo-classes",
+      "narration": {
+        "spoken_text": "يَتِمُّ تَفْعِيلُ حَرَكَةِ الِانْتِقَالِ عِنْدَمَا يَحْدُثُ تَغْيِيرٌ فِي خَصَائِصِ الْعُنْصُرِ، وَهَذَا يَقَعُ غَالِبًا دَاخِلَ Pseudo-classes مِثْلَ hover أَوْ active أَوْ focus. سَنَقُومُ بِإِضَافَةِ div hover لِتَغْيِيرِ الْعَرْضِ إِلَى ثَلَاثِ مِئَةِ بِيكْسِلْ عِنْدَ مُرُورِ الْمَاوُسِ.",
+        "caption_text": "تفعيل الانتقال عند تغيير الخصائص باستخدام pseudo-class مثل hover."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "div:hover {\n  width: 300px;\n}",
+        "highlight_lines": [],
+        "output": "عند مرور مؤشر الفأرة يتمدد العنصر بسلاسة إلى عرض 300 بكسل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "scene_multiple",
+      "title": "تغيير قيم خصائص متعددة معا",
+      "narration": {
+        "spoken_text": "هَلْ تَعْلَمُ أَنَّكَ تَسْتَطِيعُ تَغْيِيرَ عِدَّةِ خَصَائِصَ فِي وَقْتٍ وَاحِدٍ؟ كُلُّ مَا عَلَيْكَ فِعْلُهُ هُوَ فَصْلُ بَيْنَهُمَا بِالْفَوَاصِلِ. فِي هَذَا الْمِثَالِ، نُطَبِّقُ حَرَكَاتٍ بِمُدَدٍ زَمَنِيَّةٍ مُخْتَلِفَةٍ لِلْعَرْضِ وَالِارْتِفَاعِ وَلَوْنِ الْخَلْفِيَّةِ.",
+        "caption_text": "يمكن تغيير خصائص متعددة في نفس الوقت بفصلها بالفواصل وتحديد مدة لكل منها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "div {\n  transition: width 2s, height 4s, background-color 3s;\n}",
+        "highlight_lines": [],
+        "output": "تفاعل متزامن وبسرعات مختلفة لكل خاصية برمجية.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس ودعوة للاستمرار",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ CSS Transitions لِإِضَافَةِ حَرَكَاتٍ انْتِقَالِيَّةٍ جَذَّابَةٍ لِعَنَاصِرِ صَفْحَةِ الْوِبّ بِكُلِّ سُهُولَةٍ. شُكْرًا لِمُتَابَعَتِكُمْ، وَانْتَظِرُونَا فِي الدَّرْسِ الْقَادِمِ لِمُتَابَعَةِ المَزِيدِ مِنَ المَهَارَاتِ.",
+        "caption_text": "خلاصة شاملة لمفهوم CSS Transitions وكيفية تطبيقها لاحتراف تصميم الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام transition لتغيير الخصائص بسلاسة",
+          "الاستفادة من hover لتفعيل الحركات التفاعلية",
+          "تطبيق تأثيرات متعددة بمدد زمنية مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_transitions.asp"
+      ]
+    }
+  ]
+}
