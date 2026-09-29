@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "227",
+  "title": "CSS Pagination Styles",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية تصميم Pagination باستخدام CSS",
+    "تطبيق تأثيرات Hover على الروابط",
+    "استخدام خاصية transition لتحسين تجربة المستخدم",
+    "بناء هيكل Breadcrumb احترافي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_pagination_styles.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Pagination",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِ الْيَوْمِ حَوْلَ تَصْمِيمِ Pagination بِاسْتِخْدَامِ CSS. سَنَتَعَلَّمُ كَيْفِيَّةَ تَحْسِينِ شَكْلِ أَدَوَاتِ التَّنَقُّلِ بَيْنَ الصَّفَحَاتِ، وَإِضَافَةِ تَأْثِيرَاتٍ جَمَالِيَّةٍ تَجْعَلُ مَوْقِعَ الْوِبّ أَكْثَرَ تَفَاعُلِيَّةً وَاحْتِرَافِيَّةً لِلْمُسْتَخْدِمِينَ.",
+        "caption_text": "سنتعلم اليوم كيفية تصميم Pagination احترافي باستخدام CSS لتحسين تجربة المستخدم في مواقع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصميم عناصر التنقل بين الصفحات",
+          "إضافة تأثيرات تفاعلية عند التمرير",
+          "استخدام خاصية transition",
+          "بناء نظام Breadcrumb"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination_styles.asp"
+      ]
+    },
+    {
+      "id": "hover-effect",
+      "title": "تأثير Hover على الروابط",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ تَفَاعُلٍ عِنْدَ مُرُورِ الْمُؤَشِّرِ فَوْقَ الرَّوَابِطِ، نَسْتَخْدِمُ Selector الْمَعْرُوفَ بِ hover. هَذَا يُسَاعِدُ فِي تَغْيِيرِ background-color لِكُلِّ رَابِطٍ، مِمَّا يُعْطِي تَنْبِيهاً بَصَرِيّاً وَاضِحاً لِلْمُسْتَخْدِمِ أَنَّ هَذَا الْعُنْصُرَ قَابِلٌ لِلنَّقْرِ.",
+        "caption_text": "نستخدم selector المسمى hover لتغيير background-color عند مرور المؤشر فوق روابط Pagination."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pagination li a:hover:not(.active) {\n  background-color: lightgray;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination_styles.asp"
+      ]
+    },
+    {
+      "id": "transition-effect",
+      "title": "خاصية Transition",
+      "narration": {
+        "spoken_text": "لِجَعْلِ التَّغْيِيرِ بَصَرِيّاً أَكْثَرَ نُعُومَةً، نُضِيفُ خاصية transition إِلَى الرَّوَابِطِ. هَذَا يُؤَدِّي إِلَى تَحَوُّلٍ تَدْرِيجِيٍّ فِي اللَّوْنِ عِنْدَ التَّفَاعُلِ، بَدَلاً مِنَ التَّغْيِيرِ الْمُفَاجِئِ، مِمَّا يَرْفَعُ مِنْ جَوْدَةِ تَصْمِيمِ وَاجِهَةِ الْوِبّ.",
+        "caption_text": "نضيف خاصية transition لجعل التغيير في background-color ناعما وتدريجيا عند التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pagination li a {\n  display: block;\n  padding: 8px 12px;\n  text-decoration: none;\n  border: 1px solid gray;\n  color: black;\n  margin: 0 4px;\n  border-radius: 5px;\n  transition: background-color 1s;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination_styles.asp"
+      ]
+    },
+    {
+      "id": "breadcrumb-concept",
+      "title": "مفهوم Breadcrumb",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى نَوْعٍ آخَرَ مِنَ التَّنَقُّلِ يُسَمَّى Breadcrumb. هَذَا النَّمَطُ يُسَاعِدُ الْمُسْتَخْدِمَ عَلَى مَعْرِفَةِ مَسَارِهِ دَاخِلَ الْمَوْقِعِ، وَيُعْتَبَرُ عُنْصُراً أَسَاسِيّاً فِي تَحْسِينِ قَابِلِيَّةِ الْوُصُولِ وَتَنْظِيمِ الْمُحْتَوَى.",
+        "caption_text": "نظام Breadcrumb يساعد المستخدم في معرفة مساره الحالي داخل الموقع ويسهل التنقل."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "يستخدم لتوضيح التسلسل الهرمي",
+          "يعتمد على قائمة ul و li",
+          "يتم تنسيقه باستخدام display: inline",
+          "يستخدم الرموز للفصل بين الروابط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination_styles.asp"
+      ]
+    },
+    {
+      "id": "breadcrumb-code",
+      "title": "تنسيق Breadcrumb",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، نَقُومُ بِإِزَالَةِ list-style وَتَحْدِيدِ display: inline لِعَنَاصِرِ li. كَمَا نَسْتَخْدِمُ Pseudo-element الْمُسَمَّى before مَعَ خاصية content لِإِضَافَةِ رَمْزِ الْفَصْلِ بَيْنَ كُلِّ رَابِطٍ وَالَّذِي يَلِيهِ.",
+        "caption_text": "تنسيق Breadcrumb باستخدام display: inline و Pseudo-element قبل كل عنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "breadcrumb.css",
+        "code": "ul.breadcrumb {\n  padding: 8px;\n  list-style: none;\n  background-color: #eee;\n}\nul.breadcrumb li {\n  display: inline;\n}\nul.breadcrumb li a {\n  color: green;\n}\nul.breadcrumb li+li:before {\n  padding: 8px;\n  color: black;\n  content: \"/\\00a0\";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination_styles.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَحْصُلُ عَلَى شَرِيطِ تَنَقُّلٍ أَنِيقٍ يَتَفَاعَلُ مَعَ حَرَكَةِ الْمُؤَشِّرِ، وَنِظَامِ مَسَارٍ وَاضِحٍ لِلْمُسْتَخْدِمِ. هَذِهِ التَّقْنِيَاتُ تُعَدُّ مِنْ أَهَمِّ مَهَارَاتِ CSS لِتَحْسِينِ تَجْرِبَةِ الْوِبّ.",
+        "caption_text": "النتيجة النهائية: شريط تنقل تفاعلي ونظام مسار Breadcrumb احترافي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Home / Pictures / Summer 25\n\n[1] [2] [3] [4] [5]",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination_styles.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، تَعَلَّمْنَا كَيْفَ نُضِيفُ حَيَاةً لِعَنَاصِرِ Pagination بِاسْتِخْدَامِ hover وَ transition، وَكَيْفَ نَبْنِي Breadcrumb مُنَظَّماً. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْخَصَائِصِ لِتُنَاسِبَ تَصْمِيمَ مَوْقِعِكُمْ.",
+        "caption_text": "قم بتجربة الأكواد وتعديل الخصائص لتناسب مشروعك الخاص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم hover للتفاعل البصري",
+          "استخدم transition للحركة الناعمة",
+          "نظم المسارات باستخدام Breadcrumb",
+          "جرب الأكواد من الرابط في الوصف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_pagination_styles.asp"
+      ]
+    }
+  ]
+}
