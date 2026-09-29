@@ -3,6 +3,8 @@
   "lesson_id": "62",
   "title": "استخدام Google Fonts في CSS",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "تعلم كيفية ربط Google Fonts بصفحات الويب",
     "استخدام خاصية font-family مع الخطوط الخارجية",
