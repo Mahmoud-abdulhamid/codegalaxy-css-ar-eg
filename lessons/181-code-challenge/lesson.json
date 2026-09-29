@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "181",
+  "title": "CSS Custom Fonts Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام Custom Fonts في CSS",
+    "تطبيق قاعدة font-face في تصميم صفحات الويب",
+    "التعرف على خصائص font-family و font-style",
+    "حل تحديات البرمجة الخاصة بالخطوط المخصصة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_fonts.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Custom Fonts",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ اسْتِخْدَامِ Custom Fonts لِتَحْسِينِ تَصْمِيمِ صَفْحَةِ الْوِبّ، وَسَنَقُومُ بِحَلِّ تَحَدٍّ بَرْمَجِيٍّ لِتَثْبِيتِ هَذِهِ الْمَهَارَةِ.",
+        "caption_text": "مرحبا بكم في درس CSS Custom Fonts. سنتعلم اليوم كيفية استخدام الخطوط المخصصة في تصميم صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية الخطوط المخصصة في تحسين تجربة المستخدم",
+          "استخدام قاعدة font-face في CSS",
+          "تطبيق التحدي البرمجي الخاص بالخطوط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "قاعدة font-face",
+      "narration": {
+        "spoken_text": "لِاسْتِخْدَامِ خَطٍّ خَارِجِيٍّ، نَسْتَخْدِمُ قَاعِدَةَ font-face. هَذِهِ الْقَاعِدَةُ تَسْمَحُ لَنَا بِتَحْدِيدِ اسْمِ الْخَطِّ وَمَسَارِ مِلَفِّهِ، لِيَتَمَكَّنَ Web Browser مِنْ تَحْمِيلِهِ وَعَرْضِهِ بِشَكْلٍ صَحِيحٍ دَاخِلَ الصَّفْحَةِ.",
+        "caption_text": "تسمح قاعدة font-face للمتصفح بتحميل وعرض الخطوط الخارجية المخصصة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@font-face {\n  font-family: 'MyFont';\n  src: url('myfont.woff2');\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "تطبيق الخط على العناصر",
+      "narration": {
+        "spoken_text": "بَعْدَ تَعْرِيفِ الْخَطِّ، نَقُومُ بِتَطْبِيقِهِ عَلَى الْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ font-family. لَاحِظْ كَيْفَ نُحَدِّدُ هَذِهِ الْخَاصِيَّةَ لِ h1 أَوْ p لِتَغْيِيرِ مَظْهَرِ النَّصِّ بِشَكْلٍ جَذَّابٍ وَمُحْتَرَفٍ.",
+        "caption_text": "نستخدم خاصية font-family لتطبيق الخط المخصص على عناصر HTML مثل h1 و p."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  font-family: 'MyFont', sans-serif;\n}\nh1 {\n  font-weight: bold;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "challenge_setup",
+      "title": "هيكل التحدي البرمجي",
+      "narration": {
+        "spoken_text": "فِي هَذَا التَّحَدِّي، سَنَقُومُ بِكِتَابَةِ كُودٍ يَسْتَخْدِمُ خَطّاً مَحَلِيّاً. تَأَكَّدْ مِنْ كِتَابَةِ ال Syntax بِشَكْلٍ سَلِيمٍ، وَالْتَزِمْ بِتَنْسِيقِ ال CSS لِضَمَانِ عَمَلِ الْخَطِّ دَاخِلَ ال Web Browser.",
+        "caption_text": "هيكل التحدي يتطلب كتابة كود CSS سليم لتعريف وتطبيق الخط المخصص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      @font-face {\n        font-family: 'Sansita';\n        src: url('sansita.woff');\n      }\n      h1 {\n        font-family: 'Sansita';\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Hello World</h1>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَنْفِيذِ هَذَا الْكُودِ، سَيَقُومُ ال Web Browser بِتَحْمِيلِ الْخَطِّ وَتَطْبِيقِهِ عَلَى عُنْصُرِ h1. هَذِهِ هِيَ النَّتِيجَةُ الْمُتَوَقَّعَةُ لِظُهُورِ النَّصِّ بِالْخَطِّ الْمُخَصَّصِ.",
+        "caption_text": "تظهر النتيجة في المتصفح بعد تطبيق الخط المخصص على عنصر العنوان."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Hello World (rendered in Sansita font)",
+        "highlight_lines": [],
+        "output": "Hello World",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ عَلَيْكَ دائماً تَوْفِيرُ Fallback Font، وَذَلِكَ لِضَمَانِ ظُهُورِ النَّصِّ بِشَكْلٍ مَقْبُولٍ فِي حَالَةِ تَعَذُّرِ تَحْمِيلِ الْخَطِّ الْمُخَصَّصِ. هَذِهِ مُمَارَسَةٌ هَنْدَسِيَّةٌ ضَرُورِيَّةٌ لِتَجْرِبَةِ مُسْتَخْدِمٍ مُسْتَقِرَّةٍ.",
+        "caption_text": "استخدم دائما خطوط احتياطية (Fallback Fonts) لضمان استقرار التصميم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توفير خطوط احتياطية مثل sans-serif",
+          "استخدام صيغ خطوط حديثة مثل woff2",
+          "تحسين سرعة تحميل الخطوط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_fonts.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ إِدْرَاجِ خُطُوطٍ مُخَصَّصَةٍ بِاسْتِخْدَامِ font-face. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا التَّحَدِّي بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم. جربوا التحدي البرمجي بأنفسكم عبر الرابط المرفق."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية font-face بالكامل",
+          "تم تطبيق الخطوط على العناصر",
+          "تمت مراجعة أفضل الممارسات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_fonts.asp"
+      ]
+    }
+  ]
+}
