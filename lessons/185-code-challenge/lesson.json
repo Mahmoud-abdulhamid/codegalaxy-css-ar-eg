@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "185",
+  "title": "CSS Transforms Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the application of CSS Transforms",
+    "Master 2D and 3D transformation properties",
+    "Apply transform functions like rotate, scale, and skew",
+    "Solve practical coding challenges using CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_transforms.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Transforms",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ حَوْلَ CSS Transforms. سَنَتَعَلَّمُ كَيْفَ نُغَيِّرُ شَكْلَ وَمَوْقِعَ الْعَنَاصِرِ فِي صَفْحَةِ الْوِبّ بِاسْتِخْدَامِ خَصَائِصِ التَّحَوُّلِ الْقَوِيَّةِ وَالْمُتَنَوِّعَةِ.",
+        "caption_text": "مرحبا بكم في درس CSS Transforms حيث سنتعلم التحكم في شكل وموقع العناصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Transforms تسمح بتغيير شكل العناصر",
+          "يمكننا تدوير العناصر أو تغيير حجمها",
+          "تستخدم هذه الخصائص لتحسين تجربة المستخدم",
+          "سنتدرب اليوم على تحدي برمجي عملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transforms.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم التحويل الأساسية",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ CSS Transforms عَلَى خَاصِيَّةِ transform. يُمْكِنُنَا اسْتِخْدَامُ دَوَالٍ مِثْلَ rotate لِلتَّدْوِيرِ، وَ scale لِتَغْيِيرِ الْحَجْمِ، وَ skew لِلْإِمَالَةِ. هَذِهِ الْأَدَوَاتُ تُعْطِي حَيَوِيَّةً لِتَصْمِيمِ الْوِبّ.",
+        "caption_text": "نستخدم خاصية transform مع دوال مثل rotate و scale و skew للتحكم في العناصر."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الدالة",
+          "الوظيفة",
+          "مثال"
+        ],
+        "rows": [
+          [
+            "rotate",
+            "تدوير العنصر",
+            "rotate(45deg)"
+          ],
+          [
+            "scale",
+            "تغيير الحجم",
+            "scale(1.5)"
+          ],
+          [
+            "skew",
+            "إمالة العنصر",
+            "skew(20deg)"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transforms.asp"
+      ]
+    },
+    {
+      "id": "code_setup",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ الْكُودِ. نَحْتَاجُ إِلَى عُنْصُرِ div بِفِئَةٍ مُحَدَّدَةٍ، ثُمَّ نُطَبِّقُ عَلَيْهِ التَّحْوِيلَ فِي قِسْمِ style. لَاحِظْ كَيْفَ نَضْبِطُ الْخَصَائِصَ بِدِقَّةٍ لِتَحْقِيقِ النَّتِيجَةِ الْمَطْلُوبَةِ.",
+        "caption_text": "نبدأ بتحديد العنصر في HTML ثم نطبق التحويلات المطلوبة عبر CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      .box {\n        width: 100px;\n        height: 100px;\n        background: blue;\n        transform: rotate(20deg);\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"box\">\n      Transform Me!\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transforms.asp"
+      ]
+    },
+    {
+      "id": "detailed_explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيدِ أَبْعَادِ الْعُنْصُرِ بِاسْتِخْدَامِ width وَ height. بَعْدَهَا، اسْتَخْدَمْنَا transform: rotate(20deg) لِتَدْوِيرِ الْعُنْصُرِ بِزَاوِيَةِ عِشْرِينَ دَرَجَةً، مِمَّا يُعْطِي مَظْهَراً مُمَيَّزاً لِلْعُنْصُرِ.",
+        "caption_text": "تحديد الأبعاد ضروري قبل تطبيق التحويل، واستخدام rotate يغير زاوية ميل العنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "width و height يحددان مساحة العنصر",
+          "background يحدد لون الخلفية",
+          "transform: rotate(20deg) يقوم بالتدوير",
+          "القيم بالدرجات deg هي المعيار للتدوير"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transforms.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَشْغِيلِ هَذَا الْكُودِ فِي مُتَصَفِّحِ الْوِبّ، سَتَرَى الْعُنْصُرَ وَقَدْ تَمَّ تَدْوِيرُهُ بِمِقْدَارِ عِشْرِينَ دَرَجَةً. هَذِهِ هِيَ الْقُوَّةُ الْحَقِيقِيَّةُ لِ CSS فِي التَّحَكُّمِ بِالْعَنَاصِرِ بِسُهُولَةٍ.",
+        "caption_text": "هكذا يظهر العنصر في المتصفح بعد تطبيق خاصية التدوير."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[ العنصر المربع ]\n      /  /\n     /  /\n    [__]",
+        "highlight_lines": [],
+        "output": "العنصر يظهر مائلاً بزاوية 20 درجة في المتصفح",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transforms.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِاسْتِخْدَامِ vendor prefixes مِثْلَ webkit-transform لِضَمَانِ عَمَلِ الْكُودِ عَلَى جَمِيعِ الْمُتَصَفِّحَاتِ. كَمَا يَنْبَغِي التَّأَكُّدُ مِنْ أَنَّ الْعُنْصُرَ لَهُ أَبْعَادٌ مُنَاسِبَةٌ قَبْلَ التَّحْوِيلِ.",
+        "caption_text": "استخدم vendor prefixes لضمان التوافقية مع كافة المتصفحات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم -webkit-transform للتوافق",
+          "تأكد من تحديد أبعاد العنصر",
+          "جرب دمج أكثر من تحويل معا",
+          "اختبر التصميم على متصفحات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transforms.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُطَبِّقُ CSS Transforms بِبَسَاطَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِأَنْفُسِكُمْ وَمُحَاوَلَةِ حَلِّ التَّحَدِّيَاتِ الْمَوْجُودَةِ فِي الرَّابِطِ الْمُدْرَجِ فِي وَصْفِ الْفِيدْيُو.",
+        "caption_text": "لقد تعلمنا أساسيات CSS Transforms، جربوا التحديات بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Transforms أداة قوية للتصميم",
+          "تطبيق rotate و scale و skew سهل",
+          "التوافقية مهمة جدا في العمل",
+          "مارسوا التحديات لتطوير مهاراتكم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_transforms.asp"
+      ]
+    }
+  ]
+}
