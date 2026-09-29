@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "355",
+  "title": "تصميم الأزرار ذات الحدود الهادفة Outline Buttons باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم أزرار الخط الخارجي Outline Buttons في CSS",
+    "تطبيق خصائص الحدود والحشو والألوان الاحترافية",
+    "استخدام تأثيرات الحومان Hover Effects لكل حالة لونية",
+    "إنشاء زوايا دائرية جذابة باستخدام border-radius"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_outline_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة الدرس وأهمية Outline Buttons",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَصْمِيمِ الأَزْرَارِ ذَاتِ الْحُدُودِ الْخَارِجِيَّةِ أَوْ مَا تُعْرَفُ بِ Outline Buttons وَتَسْخِيرِهَا فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تصميم الأزرار ذات الحدود الخارجية Outline Buttons باستخدام لغة CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم تصميم الأزرار ذات الحدود الخارجية Outline Buttons",
+          "استخدام CSS لإضافة جمالية وتفاعلية لعناصر الويب",
+          "تحسين تجربة المستخدم عبر تصاميم عصرية ونظيفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_outline_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "هيكل عناصر الأزرار في HTML",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوَّلاً بِكِتَابَةِ عَنَاصِرِ HTML لِلأَزْرَارِ. نَسْتَخْدِمُ عُنْصَرَ button مَعَ صِنْفٍ رَئِيسِيٍّ هُوَ btn وَصِنْفٍ فَرْعِيٍّ لِتَحْدِيدِ النَّوْعِ مِثْلَ success أَوْ info أَوْ warning أَوْ danger أَوْ default.",
+        "caption_text": "نكتب عناصر HTML للأزرار مع أصناف مخصصة لتحديد الحالات المختلفة لكل زر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <button class=\"btn success\">Success</button>\n    <button class=\"btn info\">Info</button>\n    <button class=\"btn warning\">Warning</button>\n    <button class=\"btn danger\">Danger</button>\n    <button class=\"btn default\">Default</button>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Success Info Warning Danger Default",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_outline_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق الصنف الأساسي btn في CSS",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ لِتَنْسِيقِ الصِّنْفِ الأَسَاسِيِّ btn. نُحَدِّدُ بَحْمِ الْحُدُودِ بِقِيمَةِ ثِنْيْنِ بيكسل border بِنَوْعِ solid وَلَوْنٍ أَسْوَدَ، مَعَ خَلَفِيَّةٍ بَيْضَاءَ، وَحَشْوٍ دَاخِلِيٍّ padding، وَتَغْيِيرِ شَكْلِ الْمُؤَشِّرِ عِنْدَ الْمُرُورِ بِ cursor pointer.",
+        "caption_text": "نضبط الخصائص الأساسية للصنف btn مثل الحدود والخلفية والحشو ومؤشر الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn {\n  border: 2px solid black;\n  background-color: white;\n  color: black;\n  padding: 14px 28px;\n  font-size: 16px;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_outline_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تنسيق حالة النجاح Success وحالة المعلومات Info",
+      "narration": {
+        "spoken_text": "نُخَصِّصُ الآنَ الأَلْوَانَ لِكُلِّ حَالَةٍ. لِلصِّنْفِ success نَضَعُ لَوْنَ حُدُودٍ أَخْضَرَ وَعِنْدَ الْحَوْمَانِ hover تَتَغَيَّرُ الْخَلَفِيَّةُ لِلأَخْضَرِ وَالنَّصُّ لِلأَبْيَضِ. وَكَذَلِكَ لِلصِّنْفِ info نَسْتَخْدِمُ اللَّوْنَ الأَزْرَقَ.",
+        "caption_text": "نخصص لون الحدود وحالة Hover للأزرار success ذات اللون الأخضر وinfo ذات اللون الأزرق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* Green */\n.success {\n  border-color: #04AA6D;\n  color: green;\n}\n.success:hover {\n  background-color: #04AA6D;\n  color: white;\n}\n/* Blue */\n.info {\n  border-color: #2196F3;\n  color: dodgerblue;\n}\n.info:hover {\n  background: #2196F3;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_outline_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تنسيق حالات التحذير Warning والخطر Danger والافتراضي Default",
+      "narration": {
+        "spoken_text": "نُتَابِعُ مَعَ بَقِيَّةِ الأَصْنَافِ، فَالصِّنْفُ warning يَسْتَخْدِمُ اللَّوْنَ الْبُرْتُقَالِيَّ، وَالصِّنْفُ danger يُمَثِّلُ التَّحْذِيرَ بِاللَّوْنِ الأَحْمَرِ، بَيْنَمَا يَسْتَخْدِمُ الصِّنْفُ default لَوْناً رَمَادِيّاً هَادِئاً لِلطَّبِيعَةِ الْعَادِيَّةِ.",
+        "caption_text": "نطبق أنماط الألوان للصنف warning البرتقالي، وdanger الأحمر، وdefault الرمادي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* Orange */\n.warning {\n  border-color: #ff9800;\n  color: orange;\n}\n.warning:hover {\n  background: #ff9800;\n  color: white;\n}\n/* Red */\n.danger {\n  border-color: #f44336;\n  color: red;\n}\n.danger:hover {\n  background: #f44336;\n  color: white;\n}\n/* Gray */\n.default {\n  border-color: #e7e7e7;\n  color: black;\n}\n.default:hover {\n  background: #e7e7e7;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_outline_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "إضافة الزوايا الدائرية بـ border-radius",
+      "narration": {
+        "spoken_text": "لإِضْفَاءِ لَمْسَةٍ جَمَالِيَّةٍ نَاعِمَةٍ عَلَى الأَزْرَارِ، نَسْتَخْدِمُ خَاصِّيَّةَ border-radius مَعَ قِيمَةِ خَمْسَةِ بيكسل صُمْمَتْ لِجَعْلِ حَوَافِ الأَزْرَارِ مُنْحَنِيَةً وَأَكْثَرَ عَصْرِيَّةً.",
+        "caption_text": "نضيف خاصية border-radius لإنشاء أزرار ذات زوايا دائرية ناعمة وجذابة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn {\n  border-radius: 5px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_outline_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس وتطبيقات عملية",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ تَصْمِيمِ Outline Buttons احْتِرَافِيٍّ بِاسْتِخْدَامِ CSS، وَتَنْسِيقِ حَالَاتِ الْحَوْمَانِ لِجَمِيعِ الأَلْوَانِ. نَتَوَدَّعُكُمْ عَلَى أَمَلِ اللِّقَاءِ فِي دَرْسٍ جَدِيدٍ مَعَ CodeGalaxy.",
+        "caption_text": "خلاصة الدرس: تعلمنا تصميم الأزرار ذات الخطوط الخارجية الملونة وتطبيق تأثيرات Hover الاحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تلخيص مهارات تنسيق الأزرار بـ CSS",
+          "أهمية استخدام تأثيرات hover لتحسين التفاعل",
+          "استمرار الممارسة عبر منصة CodeGalaxy"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_outline_buttons.asp"
+      ]
+    }
+  ]
+}
