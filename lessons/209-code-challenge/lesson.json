@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "209",
+  "title": "CSS Image Centering Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم تقنيات توسيط الصور باستخدام CSS",
+    "تطبيق خاصية margin لتوسيط العناصر",
+    "استخدام display block لتحويل العناصر",
+    "حل تحدي برمجي عملي لتوسيط الصور"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_imagecenter.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول توسيط الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَوَسِيطِ الصُّوَرِ بِاسْتِخْدَامِ خَصَائِصِ CSS، وَهُوَ مَهَارَةٌ أَسَاسِيَّةٌ لِتَحْسِينِ تَصْمِيمِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس اليوم حول تقنيات توسيط الصور باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "توسيط الصور يعزز من جمالية التصميم",
+          "نستخدم CSS للتحكم في تموضع العناصر",
+          "تحدي اليوم يختبر قدرتك على تطبيق هذه المفاهيم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagecenter.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للتوسيط",
+      "narration": {
+        "spoken_text": "لِتَوَسِيطِ صُورَةٍ، نَحْتَاجُ أَوَّلاً إِلَى جَعْلِهَا Element مِنْ نَوْعِ block، لِأَنَّ الصُّوَرَ فِي الْأَصْلِ inline. بَعْدَ ذَلِكَ، نَسْتَخْدِمُ خَاصِيَّةَ margin مَعَ قِيمَةِ auto لِلْجَانِبَيْنِ الْأَيْمَنِ وَالْأَيْسَرِ.",
+        "caption_text": "لتحويل الصورة إلى عنصر block نستخدم خاصية display، ثم نستخدم margin auto للتوسيط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الصورة الافتراضية هي inline",
+          "يجب تغيير display إلى block",
+          "ضبط margin-left و margin-right على auto"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagecenter.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "كود CSS لتوسيط الصورة",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ selector لِلصُّورَةِ، ثُمَّ نُضِيفُ display: block، وَبَعْدَهَا نُحَدِّدُ margin: auto. هَذَا يُؤَدِّي إِلَى تَوَسِيطِ الصُّورَةِ دَاخِلَ الْحَاوِيَةِ الْخَاصَّةِ بِهَا بِشَكْلٍ تِلْقَائِيٍّ.",
+        "caption_text": "هذا هو الكود البرمجي الأساسي لتوسيط الصورة باستخدام CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagecenter.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "خَاصِيَّةُ display: block تَجْعَلُ الصُّورَةَ تَأْخُذُ مَسَاحَةً كَامِلَةً فِي السَّطْرِ. أَمَّا margin: auto فَتَقُومُ بِتَوْزِيعِ الْمَسَاحَةِ الْفَارِغَةِ بِالتَّسَاوِي عَلَى الْجَانِبَيْنِ، مِمَّا يَدْفَعُ الصُّورَةَ إِلَى مُنْتَصَفِ الشَّاشَةِ.",
+        "caption_text": "شرح وظيفة display و margin في عملية التوسيط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "display: block تمنع العناصر المجاورة من الاصطفاف",
+          "margin: auto توزع الهوامش تلقائيا",
+          "width: 50 تحدد عرض الصورة بالنسبة للحاوية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagecenter.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَتَظْهَرُ الصُّورَةُ فِي مُنْتَصَفِ صَفْحَةِ الْوِبّ. هَذِهِ هِيَ الطَّرِيقَةُ الْأَكْثَرُ شُيُوعاً وَبَسَاطَةً لِتَحْقِيقِ هَذَا التَّمَوْضُعِ فِي تَصَامِيمِ الْوِبّ الْحَدِيثَةِ.",
+        "caption_text": "النتيجة النهائية: الصورة تظهر في منتصف الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة المرئية -->\n    <img src=\"image.jpg\" alt=\"Centered Image\">\n    /* النتيجة: الصورة في المنتصف */\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Centered Image (Middle of screen)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagecenter.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِتَحْدِيدِ width لِلصُّورَةِ عِنْدَ اسْتِخْدَامِ margin: auto، لِأَنَّهُ بِدُونِ تَحْدِيدِ الْعَرْضِ، قَدْ تَأْخُذُ الصُّورَةُ كَامِلَ عَرْضِ الْحَاوِيَةِ، وَلَنْ تَلَاحِظَ أَيَّ تَغْيِيرٍ فِي التَّمَوْضُعِ.",
+        "caption_text": "نصيحة: تأكد دائما من تحديد عرض الصورة عند توسيطها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد width ضروري لنجاح التوسيط",
+          "استخدم وحدات قياس مرنة مثل النسبة المئوية",
+          "اختبر التصميم على مختلف أحجام الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagecenter.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ تَوَسِيطِ الصُّوَرِ بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذَا الْكُودِ بِنَفْسِكُمْ وَمُحَاوَلَةِ حَلِّ التَّحَدِّيَاتِ الْمَوْجُودَةِ فِي الرَّابِطِ الْمُدْرَجِ فِي وَصْفِ الْفِيدِيُو.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الكود بأنفسكم عبر الرابط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح تقنية display: block",
+          "تم شرح استخدام margin: auto",
+          "تم توضيح أهمية تحديد العرض",
+          "شجعنا على التطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imagecenter.asp"
+      ]
+    }
+  ]
+}
