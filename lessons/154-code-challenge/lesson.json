@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "154",
+  "title": "CSS Optimization Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم أهمية تحسين أداء CSS في صفحات الويب",
+    "تطبيق تقنيات كتابة CSS نظيفة وفعالة",
+    "التعرف على كيفية تقليل حجم الملفات وزيادة سرعة التحميل",
+    "حل تحديات برمجية عملية لتعزيز مهارات الـ CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_performance.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تحسين أداء CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَحْسِينِ أَدَاءِ مَلَفَّاتِ CSS لِضَمَانِ سُرْعَةِ تَحْمِيلِ صَفْحَةِ الْوِبّ، وَتَحْقِيقِ تَجْرِبَةِ مُسْتَخْدِمٍ مِثَالِيَّةٍ وَسَرِيعَةٍ.",
+        "caption_text": "مرحبا بكم في درس تحسين أداء CSS لضمان سرعة تحميل صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحسين أداء CSS ضروري لسرعة الويب",
+          "كتابة كود نظيف تقلل من وقت التحميل",
+          "تطبيق أفضل الممارسات في CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_performance.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "مفاهيم تحسين الأداء",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ عَمَلِيَّةُ التَّحْسِينِ عَلَى تَقْلِيلِ حَجْمِ ال CSS، وَتَجَنُّبِ ال Selectors الْمُعَقَّدَةِ، وَاسْتِخْدَامِ ال Shorthand Properties بِكِفَايَةٍ، مِمَّا يُسَاعِدُ ال Web Browser عَلَى تَنْفِيذِ الْأَكْوَادِ بِشَكْلٍ أَسْرَعَ وَأَكْثَرَ كَفَاءَةً.",
+        "caption_text": "تعتمد عملية التحسين على تقليل حجم CSS واستخدام Selectors فعالة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تقليل حجم ملفات CSS",
+          "استخدام Selectors بسيطة ومباشرة",
+          "الاستفادة من Shorthand Properties",
+          "تجنب التكرار في الكود"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_performance.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "مثال على كود CSS محسن",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ هُنَا بِتَجْمِيعِ الْخَصَائِصِ فِي سَطْرٍ وَاحِدٍ لِتَقْلِيلِ التَّكْرَارِ، وَهَذَا يُعَدُّ مِنْ أَهَمِّ مُمَارَسَاتِ التَّحْسِينِ لِتَقْلِيلِ حَجْمِ الْمَلَفِّ النِّهَائِيِّ الَّذِي يَقْرَؤُهُ ال Web Browser.",
+        "caption_text": "استخدام Shorthand Properties يقلل من حجم الكود ويحسن الأداء."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* كود محسن */\n.box {\n  margin: 10px 20px;\n  padding: 5px;\n  background: #fff;\n  border: 1px solid #ccc;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_performance.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، اسْتَخْدَمْنَا margin بِقِيمَتَيْنِ لِتَحْدِيدِ الْهَوَامِشِ الْعُلْوِيَّةِ وَالسُّفْلِيَّةِ، وَالْجَانِبِيَّةِ. هَذَا الْأُسْلُوبُ يُقَلِّلُ عَدَدَ الْأَسْطُرِ، وَيُسَهِّلُ عَلَى ال Web Browser عَمَلِيَّةَ الرَّسْمِ وَال Rendering لِلْعَنَاصِرِ.",
+        "caption_text": "استخدام قيم مختصرة في margin يقلل عدد الأسطر ويسهل عملية Rendering."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "margin: 10px 20px يحدد الهوامش بفعالية",
+          "تقليل الأسطر يحسن سرعة قراءة الملف",
+          "تحسين عملية Rendering في المتصفح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_performance.asp"
+      ]
+    },
+    {
+      "id": "output_view",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَيَظْهَرُ الْعُنْصُرُ بِتَنْسِيقٍ مُنَظَّمٍ. هَذِهِ النَّتِيجَةُ هِيَ الْمُسْتَهْدَفَةُ عِنْدَ بِنَاءِ صَفْحَةِ الْوِبّ، حَيْثُ نُوَازِنُ بَيْنَ الْجَمَالِيَّةِ وَالْأَدَاءِ الْعَالِي لِتَحْقِيقِ أَفْضَلِ تَجْرِبَةٍ لِلْمُسْتَخْدِمِ.",
+        "caption_text": "نتيجة تطبيق الكود تظهر عنصرا بتنسيق منظم وأداء عال."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"box\">\n      محتوى الصندوق\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "محتوى الصندوق (داخل إطار بمسافات محددة)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_performance.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ عَلَيْكُمْ دَائِماً تَجَنُّبُ اسْتِخْدَامِ ال !important، وَتَقْلِيلُ عَدَدِ ال HTTP Requests، وَضَغْطُ مَلَفَّاتِ ال CSS. هَذِهِ الْخُطُوَاتُ تُسَاهِمُ بِشَكْلٍ مُبَاشِرٍ فِي تَحْسِينِ سُرْعَةِ تَحْمِيلِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "أفضل الممارسات تشمل تجنب !important وضغط ملفات CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجنب استخدام !important",
+          "تقليل عدد HTTP Requests",
+          "ضغط ملفات CSS لتقليل الحجم",
+          "استخدام أدوات التحليل للأداء"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_performance.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نُؤَكِّدُ أَنَّ تَحْسِينَ أَدَاءِ CSS هُوَ مَهَارَةٌ أَسَاسِيَّةٌ لِكُلِّ مُطَوِّرِ وِبّ. أَدْعُوكُمْ لِتَجْرِبَةِ التَّحَدِّيَاتِ الْمَوْجُودَةِ فِي الرَّابِطِ الْمُدْرَجِ لِتَطْوِيرِ مَهَارَاتِكُمْ الْعَمَلِيَّةِ.",
+        "caption_text": "تحسين أداء CSS مهارة أساسية لكل مطور ويب. جرب التحديات لتعزيز مهاراتك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحسين الأداء يعزز تجربة المستخدم",
+          "الممارسة المستمرة هي مفتاح الاحتراف",
+          "قم بزيارة الرابط لتنفيذ التحدي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_performance.asp"
+      ]
+    }
+  ]
+}
