@@ -3,6 +3,8 @@
   "lesson_id": "60",
   "title": "شرح خصائص الخط في CSS وتنسيق النصوص",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية استخدام font-style لتغيير نمط الخط",
     "التعرف على خصائص font-weight للتحكم بسمك النص",
