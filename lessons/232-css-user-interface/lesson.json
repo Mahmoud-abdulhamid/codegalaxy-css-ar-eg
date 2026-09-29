@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "232",
+  "title": "CSS User Interface Properties",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم خاصية resize للتحكم في تغيير حجم العناصر",
+    "التعرف على قيم resize المختلفة",
+    "تعلم كيفية استخدام outline-offset",
+    "التمييز بين border و outline"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_user_interface.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS User Interface",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَصَائِصِ User Interface الَّتِي تُتِيحُ لَنَا التَّحَكُّمَ فِي تَفَاعُلِ الْمُسْتَخْدِمِ مَعَ الْعَنَاصِرِ، مِثْلَ تَغْيِيرِ الْحَجْمِ وَتَنْسِيقِ الْحُدُودِ الْخَارِجِيَّةِ.",
+        "caption_text": "مرحبا بكم في درس CSS User Interface للتحكم في تفاعل المستخدم مع عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في تغيير حجم العناصر باستخدام resize",
+          "إضافة مسافة بين الحدود و outline باستخدام outline-offset",
+          "تحسين تجربة المستخدم في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_user_interface.asp"
+      ]
+    },
+    {
+      "id": "resize-concept",
+      "title": "خاصية resize",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَةُ resize لِتَحْدِيدِ مَا إِذَا كَانَ بِإِمْكَانِ الْمُسْتَخْدِمِ تَغْيِيرَ حَجْمِ الْعُنْصُرِ. لِتَعْمَلَ هَذِهِ الْخَاصِيَةُ، يَجِبُ أَنْ نَضْبِطَ خَاصِيَةَ overflow عَلَى قِيمَةِ auto أَوْ scroll.",
+        "caption_text": "تسمح خاصية resize للمستخدم بتغيير حجم العنصر، بشرط ضبط overflow على auto أو scroll."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "resize: horizontal (تغيير العرض فقط)",
+          "resize: vertical (تغيير الارتفاع فقط)",
+          "resize: both (تغيير العرض والارتفاع)",
+          "resize: none (تعطيل تغيير الحجم)"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_user_interface.asp"
+      ]
+    },
+    {
+      "id": "resize-code",
+      "title": "أمثلة على خاصية resize",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ هَذِهِ الْأَمْثِلَةَ. عِنْدَ اسْتِخْدَامِ resize: horizontal، نَسْمَحُ بِتَغْيِيرِ الْعَرْضِ فَقَطْ. وَمَعَ resize: vertical، نَسْمَحُ بِتَغْيِيرِ الِارْتِفَاعِ. أَمَّا resize: none فَهِيَ مُفِيدَةٌ لِتَعْطِيلِ تَغْيِيرِ الْحَجْمِ فِي textarea.",
+        "caption_text": "أمثلة برمجية توضح كيفية التحكم في اتجاه تغيير حجم العناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  resize: horizontal; overflow: auto;\n}\ndiv {\n  resize: vertical; overflow: auto;\n}\ntextarea {\n  resize: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_user_interface.asp"
+      ]
+    },
+    {
+      "id": "outline-offset",
+      "title": "خاصية outline-offset",
+      "narration": {
+        "spoken_text": "خَاصِيَةُ outline-offset تُضِيفُ مَسَافَةً شَفَّافَةً بَيْنَ الْحُدُودِ border وَالْخَطِّ الْخَارِجِيِّ outline. لَاحِظْ أَنَّ outline لَيْسَ جُزْءاً مِنْ أَبْعَادِ الْعُنْصُرِ، فَلَا يُؤَثِّرُ عَلَى عَرْضِهِ أَوْ ارْتِفَاعِهِ.",
+        "caption_text": "تضيف outline-offset مسافة شفافة بين border و outline دون التأثير على أبعاد العنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "outline-offset يضيف مساحة شفافة",
+          "outline لا يؤثر على أبعاد العنصر",
+          "يمكن أن يتداخل outline مع المحتوى الآخر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_user_interface.asp"
+      ]
+    },
+    {
+      "id": "outline-code",
+      "title": "كود outline-offset",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، نُحَدِّدُ outline بِسُمْكِ أَرْبَعَةِ بيكسل، وَنَضْبِطُ outline-offset عَلَى خَمْسَةَ عَشَرَ بيكسل لِإِبْعَادِهِ عَنِ الْحُدُودِ. هَذَا يُعْطِي تَصْمِيماً جَمَالِيّاً وَاضِحاً لِلْعُنْصُرِ.",
+        "caption_text": "تطبيق عملي لاستخدام outline-offset مع border و outline."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.ex1 {\n  border: 1px solid black;\n  outline: 4px solid red;\n  outline-offset: 15px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_user_interface.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَرَى الْعُنْصُرَ مَعَ إِمْكَانِيَّةِ سَحْبِ الزَّاوِيَةِ السُّفْلِيَّةِ لِتَغْيِيرِ حَجْمِهِ، وَسَتَرَى الْخَطَّ الْخَارِجِيَّ مُبْتَعِداً عَنِ الْحُدُودِ بِمَسَافَةٍ مُحَدَّدَةٍ.",
+        "caption_text": "نتيجة تنفيذ الكود: عنصر قابل لتغيير الحجم مع مسافة outline واضحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"ex1\">هذا العنصر له حدود و outline</div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عرض العنصر مع حدود سوداء وخط أحمر خارجي بمسافة 15px",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_user_interface.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي تَغْيِيرِ حَجْمِ الْعَنَاصِرِ بِوَاسِطَةِ resize، وَكَيْفِيَّةَ إِضَافَةِ مَسَافَاتٍ بَيْنَ الْحُدُودِ وَالْخُطُوطِ الْخَارِجِيَّةِ بِوَاسِطَةِ outline-offset. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْخَصَائِصِ بِنَفْسِكُمْ.",
+        "caption_text": "خلاصة: استخدم resize للتحكم في الحجم و outline-offset لتنسيق الخطوط الخارجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "resize تتحكم في قابلية تغيير حجم العنصر",
+          "outline-offset تضيف مسافة شفافة بين border و outline",
+          "تذكر دائما ضبط overflow عند استخدام resize"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_user_interface.asp"
+      ]
+    }
+  ]
+}
