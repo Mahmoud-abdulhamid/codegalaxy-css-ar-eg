@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "178",
+  "title": "CSS Text Effects",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية التعامل مع النصوص الفائضة باستخدام text-overflow",
+    "التحكم في تكسير الكلمات الطويلة عبر word-wrap و word-break",
+    "تغيير اتجاه النص باستخدام خاصية writing-mode"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_text_effects.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تأثيرات النصوص",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ التَّحَكُّمِ فِي النُّصُوصِ الَّتِي تَفِيضُ عَنْ حَجْمِ الْحَاوِيَةِ، وَكَيْفَ نُعَالِجُ مَشَاكِلَ الْكَلِمَاتِ الطَّوِيلَةِ، وَتَغْيِيرَ اتِّجَاهِ الْكِتَابَةِ لِتَصْمِيمِ وَاجِهَاتِ وِبٍّ احْتِرَافِيَّةٍ.",
+        "caption_text": "سنتعلم اليوم كيفية التحكم في النصوص الفائضة ومعالجة الكلمات الطويلة وتغيير اتجاه الكتابة في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في overflow النصوص",
+          "تنسيق تكسير الكلمات الطويلة",
+          "تغيير اتجاه النص عبر writing-mode"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_text_effects.asp"
+      ]
+    },
+    {
+      "id": "text-overflow",
+      "title": "خاصية text-overflow",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةُ text-overflow لِتَحْدِيدِ كَيْفِيَّةِ إِظْهَارِ النَّصِّ الْفَائِضِ. لِكَيْ تَعْمَلَ هَذِهِ الْخَاصِيَّةُ، يَجِبُ أَنْ نَضْبِطَ white-space عَلَى nowrap، وَ overflow عَلَى hidden. يُمْكِنُكَ اخْتِيَارُ قِيمَةِ clip لِقَصِّ النَّصِّ، أَوْ ellipsis لِإِظْهَارِ ثَلَاثِ نِقَاطٍ.",
+        "caption_text": "تتطلب خاصية text-overflow ضبط white-space على nowrap و overflow على hidden لتعمل بشكل صحيح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "p.test1 {\n  width: 200px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: clip;\n}\np.test2 {\n  width: 200px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_text_effects.asp"
+      ]
+    },
+    {
+      "id": "hover-effect",
+      "title": "تفاعل النص عند المرور",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَحْسِينُ تَجْرِبَةِ الْمُسْتَخْدِمِ بِإِظْهَارِ النَّصِّ الْكَامِلِ عِنْدَ الْمُرُورِ بِالْفَأْرَةِ فَوْقَ الْعُنْصُرِ. نَقُومُ بِذَلِكَ بِاسْتِخْدَامِ pseudo-class الَّتِي تُسَمَّى hover، وَتَغْيِيرِ قِيمَةِ overflow إِلَى visible لِيَظْهَرَ كُلُّ النَّصِّ الْمَخْفِيِّ.",
+        "caption_text": "يمكن إظهار النص المخفي عند المرور بالفأرة عبر تغيير خاصية overflow إلى visible."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "hover.css",
+        "code": "p:hover {\n  overflow: visible;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_text_effects.asp"
+      ]
+    },
+    {
+      "id": "word-wrap",
+      "title": "خاصية word-wrap",
+      "narration": {
+        "spoken_text": "أَحْيَاناً تَحْتَوِي الصَّفْحَةُ عَلَى كَلِمَاتٍ طَوِيلَةٍ جِدّاً تَخْرُجُ عَنْ حُدُودِ الْحَاوِيَةِ. هُنَا تَأْتِي خَاصِيَّةُ word-wrap مَعَ قِيمَةِ break-word لِتُجْبِرَ الْمُتَصَفِّحَ عَلَى كَسْرِ الْكَلِمَةِ وَنَقْلِهَا إِلَى السَّطْرِ التَّالِي لِضَمَانِ تَنْسِيقٍ مُرِيحٍ لِلْعَيْنِ.",
+        "caption_text": "تسمح خاصية word-wrap بكسر الكلمات الطويلة جدا ونقلها للسطر التالي لمنع خروجها عن الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "wrap.css",
+        "code": "p {\n  word-wrap: break-word;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_text_effects.asp"
+      ]
+    },
+    {
+      "id": "word-break",
+      "title": "خاصية word-break",
+      "narration": {
+        "spoken_text": "تُحَدِّدُ خَاصِيَّةُ word-break كَيْفِيَّةَ كَسْرِ الْكَلِمَاتِ عِنْدَ نِهَايَةِ السَّطْرِ. بِاسْتِخْدَامِ قِيمَةِ break-all، نُجْبِرُ النَّصَّ عَلَى الِانْكِسَارِ عِنْدَ أَيِّ حَرْفٍ، بَيْنَمَا الْقِيمَةُ normal تَعْمَلُ وَفْقَ قَوَاعِدِ اللُّغَةِ الطَّبِيعِيَّةِ لِكَسْرِ الْكَلِمَاتِ.",
+        "caption_text": "تتحكم خاصية word-break في كيفية كسر الكلمات، حيث تتيح break-all الكسر عند أي حرف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "break.css",
+        "code": "p.test1 {\n  word-break: normal;\n}\np.test2 {\n  word-break: break-all;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_text_effects.asp"
+      ]
+    },
+    {
+      "id": "writing-mode",
+      "title": "خاصية writing-mode",
+      "narration": {
+        "spoken_text": "أَخِيراً، نَتَعَرَّفُ عَلَى writing-mode الَّتِي تُغَيِّرُ اتِّجَاهَ النَّصِّ مِنْ أُفُقِيٍّ إِلَى رَأْسِيٍّ. هَذِهِ الْخَاصِيَّةُ مُفِيدَةٌ جِدّاً فِي التَّصَامِيمِ الَّتِي تَعْتَمِدُ عَلَى اللُّغَاتِ الْآسِيَوِيَّةِ أَوْ لِإِضَافَةِ لَمْسَةٍ إِبْدَاعِيَّةٍ فِي تَصْمِيمِ وَاجِهَةِ الْوِبّ.",
+        "caption_text": "تستخدم خاصية writing-mode لتغيير اتجاه النص بين الأفقي والرأسي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "mode.css",
+        "code": "p.test1 {\n  writing-mode: horizontal-tb;\n}\nspan {\n  writing-mode: vertical-rl;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_text_effects.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ غَطَّيْنَا أَهَمَّ خَصَائِصِ تَأْثِيرَاتِ النُّصُوصِ فِي CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا التَّأْثِيرَ الْمُبَاشِرَ عَلَى الْمُتَصَفِّحِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "لقد استعرضنا أهم خصائص تأثيرات النصوص في CSS. جربوا الأكواد بأنفسكم لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "text-overflow للتحكم في النص الفائض",
+          "word-wrap و word-break لتنسيق الكلمات",
+          "writing-mode لتغيير اتجاه الكتابة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_text_effects.asp"
+      ]
+    }
+  ]
+}
