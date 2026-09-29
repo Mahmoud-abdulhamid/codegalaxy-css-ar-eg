@@ -1,0 +1,10 @@
+@media (min-width: 600px) {
+  .facts {
+    grid-area: 3 / span 6;
+  }
+}
+@media (min-width: 768px) {
+  .facts {
+    grid-area: 2 / span 1;
+  }
+}
