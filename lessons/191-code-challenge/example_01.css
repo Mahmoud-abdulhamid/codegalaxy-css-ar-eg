@@ -1,0 +1,6 @@
+.scene {
+  perspective: 1000px;
+}
+.box {
+  transform: rotateX(45deg) rotateY(45deg);
+}
