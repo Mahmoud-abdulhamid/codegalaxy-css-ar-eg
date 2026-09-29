@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "210",
+  "title": "CSS Image Filter Effects",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام خاصية filter في CSS",
+    "التعرف على دوال التأثيرات البصرية مثل blur و brightness",
+    "تطبيق تأثيرات متقدمة مثل drop-shadow و grayscale",
+    "التحكم في ألوان الصور باستخدام hue-rotate و invert"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_image_filters.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Filters",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِضَافَةِ تَأْثِيرَاتٍ بَصَرِيَّةٍ مُذْهِلَةٍ عَلَى الْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ filter. هَذِهِ الْخَاصِيَّةُ تَمْنَحُكُمْ قُدْرَةً هَائِلَةً عَلَى التَّحَكُّمِ فِي مَظْهَرِ الصُّوَرِ وَالْعَنَاصِرِ بِطُرُقٍ احْتِرَافِيَّةٍ.",
+        "caption_text": "تستخدم خاصية filter في CSS لإضافة تأثيرات بصرية متنوعة على عناصر الويب مثل الصور."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية filter تتيح إضافة تأثيرات بصرية",
+          "تستخدم مع الصور والعناصر المختلفة",
+          "تعتمد على دوال برمجية محددة",
+          "تغير مظهر العناصر دون الحاجة لبرامج تعديل صور"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_filters.asp"
+      ]
+    },
+    {
+      "id": "blur_brightness",
+      "title": "دوال blur و brightness",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِدَالَّةِ blur الَّتِي تُضِيفُ تَأْثِيرَ التَّضْبِيبِ، حَيْثُ كُلَّمَا زَادَتِ الْقِيمَةُ زَادَ التَّضْبِيبُ. أَمَّا دَالَّةُ brightness فَهِيَ تَسْمَحُ لَنَا بِتَعْدِيلِ سُطُوعِ الْعُنْصُرِ، سَوَاءً بِجَعْلِهِ أَكْثَرَ سُطُوعاً أَوْ أَكْثَرَ ظُلْمَةً بِاسْتِخْدَامِ النِّسَبِ الْمِئَوِيَّةِ.",
+        "caption_text": "تتحكم دالة blur في درجة التضبيب، بينما تعدل دالة brightness من سطوع العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#img1 {\n  filter: blur(2px);\n}\n#img2 {\n  filter: brightness(150%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_filters.asp"
+      ]
+    },
+    {
+      "id": "contrast_shadow",
+      "title": "تأثيرات Contrast و Drop-shadow",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى دَالَّةِ contrast لِتَعْدِيلِ التَّبَايُنِ، وَدَالَّةِ drop-shadow لِإِضَافَةِ ظِلٍّ خَلْفَ الصُّوَرِ. هَذِهِ التَّأْثِيرَاتُ تُعْطِي عُمْقاً وَجَمَالِيَّةً لِتَصْمِيمِ صَفْحَةِ الْوِبّ، وَيُمْكِنُكُمْ تَحْدِيدُ لَوْنِ الظِّلِّ وَأَبْعَادِهِ بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "تستخدم contrast لضبط التباين، و drop-shadow لإضافة ظلال احترافية للعناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#img1 {\n  filter: contrast(150%);\n}\n#img2 {\n  filter: drop-shadow(8px 8px 10px gray);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_filters.asp"
+      ]
+    },
+    {
+      "id": "grayscale_hue",
+      "title": "تأثيرات Grayscale و Hue-rotate",
+      "narration": {
+        "spoken_text": "دَالَّةُ grayscale تُحَوِّلُ الصُّوَرَ إِلَى الْأَبْيَضِ وَالْأَسْوَدِ، بَيْنَمَا دَالَّةُ hue-rotate تُغَيِّرُ دَرَجَاتِ الْأَلْوَانِ بِاسْتِخْدَامِ الزَّوَايَا. هَذِهِ الْأَدَوَاتُ تُسَاعِدُ فِي خَلْقِ هُوِيَّةٍ بَصَرِيَّةٍ فَرِيدَةٍ لِمَوَاقِعِ الْوِبّ بِأَقَلِّ جُهْدٍ بَرْمَجِيٍّ.",
+        "caption_text": "تحول grayscale الصورة للرمادي، وتغير hue-rotate درجات الألوان بناء على الزاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#img1 {\n  filter: grayscale(1);\n}\n#img2 {\n  filter: hue-rotate(90deg);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_filters.asp"
+      ]
+    },
+    {
+      "id": "invert_opacity",
+      "title": "تأثيرات Invert و Opacity",
+      "narration": {
+        "spoken_text": "دَالَّةُ invert تَقُومُ بِعَكْسِ أَلْوَانِ الصُّورَةِ، وَدَالَّةُ opacity تَتَحَكَّمُ فِي شَفَافِيَّةِ الْعُنْصُرِ. هَذِهِ التَّأْثِيرَاتُ تُعْتَبَرُ ضَرُورِيَّةً عِنْدَ بِنَاءِ وَاجِهَاتِ تَفَاعُلِيَّةٍ تَتَغَيَّرُ عِنْدَ التَّحْوِيمِ بِالْفَأْرَةِ أَوْ عِنْدَ حُدُوثِ حَدَثٍ مُعَيَّنٍ.",
+        "caption_text": "تعكس دالة invert الألوان، بينما تتحكم opacity في مستوى الشفافية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#img1 {\n  filter: invert(100%);\n}\n#img2 {\n  filter: opacity(50%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_filters.asp"
+      ]
+    },
+    {
+      "id": "saturate_sepia",
+      "title": "تأثيرات Saturate و Sepia",
+      "narration": {
+        "spoken_text": "أَخِيراً، دَالَّةُ saturate تَضْبِطُ كَثَافَةَ الْأَلْوَانِ، وَدَالَّةُ sepia تُعْطِي الصُّورَةَ طَابَعاً قَدِيماً بِلَوْنٍ بُنِّيٍّ دَافِئٍ. جَرِّبُوا هَذِهِ التَّأْثِيرَاتِ فِي مَشَارِيعِكُمُ الْقَادِمَةِ لِتُضِيفُوا لَمْسَةً إِبْدَاعِيَّةً لِتَصَامِيمِكُمْ.",
+        "caption_text": "تعدل saturate كثافة الألوان، وتضيف sepia لمسة كلاسيكية دافئة للصور."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#img1 {\n  filter: saturate(200%);\n}\n#img2 {\n  filter: sepia(60%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_filters.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَرَّفْنَا الْيَوْمَ عَلَى مَجْمُوعَةٍ وَاسِعَةٍ مِنْ دَوَالِ filter فِي CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ الْمُبْهِرَةِ عَلَى صَفَحَاتِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعد CSS Filters أداة قوية لتحسين المظهر البصري. جربوا تطبيقها في مشاريعكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام filter يغني عن برامج معالجة الصور",
+          "يمكن دمج أكثر من تأثير في نفس الخاصية",
+          "تأثيرات CSS خفيفة وسريعة الأداء",
+          "راجعوا الرابط في الوصف لمزيد من التفاصيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_filters.asp"
+      ]
+    }
+  ]
+}
