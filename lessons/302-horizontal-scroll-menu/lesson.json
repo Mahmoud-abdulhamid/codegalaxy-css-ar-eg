@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "302",
+  "title": "بناء قائمة تنقل أفقية قابلة للتمرير باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء قائمة تنقل أفقية",
+    "استخدام خاصية overflow للتحكم في التمرير",
+    "تطبيق white-space لمنع التفاف العناصر",
+    "تنسيق الروابط داخل القائمة باستخدام CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول القوائم الأفقية",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ قَائِمَةِ تَنَقُّلٍ أُفُقِيَّةٍ قَابِلَةٍ لِلتَّمْرِيرِ دَاخِلَ صَفْحَةِ الْوِبّ، وَهِيَ مَهَارَةٌ مُهِمَّةٌ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي الْوَاجِهَاتِ الْعَصْرِيَّةِ.",
+        "caption_text": "سنتعلم اليوم كيفية إنشاء قائمة تنقل أفقية قابلة للتمرير باستخدام CSS لتحسين تجربة المستخدم في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء قائمة تنقل أفقية احترافية",
+          "تحسين تجربة المستخدم في صفحات الويب",
+          "استخدام تقنيات CSS الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للتمرير",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الْقَائِمَةِ قَابِلَةً لِلتَّمْرِيرِ، نَحْتَاجُ إِلَى اسْتِخْدَامِ خَاصِيَّتَيْنِ أَسَاسِيَّتَيْنِ. الْأُولَى هِيَ overflow بِقِيمَة auto، وَالثَّانِيَةُ هِيَ white-space بِقِيمَة nowrap، وَهَذَا يَمْنَعُ الْعَنَاصِرَ مِنَ الِانْتِقَالِ إِلَى سَطْرٍ جَدِيدٍ.",
+        "caption_text": "نستخدم خاصية overflow: auto للسماح بالتمرير، وخاصية white-space: nowrap لمنع العناصر من الالتفاف لأسطر جديدة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "overflow: auto لتفعيل شريط التمرير",
+          "white-space: nowrap لمنع التفاف العناصر",
+          "تنسيق العناصر كـ inline-block"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML للقائمة",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِتَجْمِيعِ الرَّوَابِطِ دَاخِلَ div بِكَلَاسٍ يُسَمَّى scrollmenu. هَذَا الْهَيْكَلُ يُعْتَبَرُ الْحَاوِيَةَ الرَّئِيسِيَّةَ لِكُلِّ ال Elements الَّتِي سَنَقُومُ بِتَنْسِيقِهَا لَاحِقاً بِاسْتِخْدَامِ CSS.",
+        "caption_text": "نستخدم عنصر div مع class باسم scrollmenu لاحتواء روابط القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"scrollmenu\">\n      <a href=\"#home\">Home</a>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n      <a href=\"#about\">About</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق القائمة بـ CSS",
+      "narration": {
+        "spoken_text": "الْآنَ نَقُومُ بِتَنْسِيقِ الْحَاوِيَةِ وَالرَّوَابِطِ. نُعْطِي الْحَاوِيَةَ لَوْنَ خَلْفِيَّةٍ دَاكِناً، وَنَضْبِطُ ال padding لِلرَّوَابِطِ لِتَبْدُوَ مُرِيحَةً لِلْعَيْنِ، مَعَ إِضَافَةِ تَأْثِير hover عِنْدَ تَحْرِيكِ الْفَأْرَةِ.",
+        "caption_text": "نطبق التنسيقات اللازمة على div.scrollmenu والروابط بداخلها لضمان المظهر المطلوب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.scrollmenu {\n  background-color: #333;\n  overflow: auto;\n  white-space: nowrap;\n}\ndiv.scrollmenu a {\n  display: inline-block;\n  color: white;\n  padding: 14px;\n  text-decoration: none;\n}\ndiv.scrollmenu a:hover {\n  background-color: #777;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ لَكَ قَائِمَةٌ أُفُقِيَّةٌ أَنِيقَةٌ. إِذَا كَانَ عَدَدُ الْعَنَاصِرِ أَكْبَرَ مِنْ عَرْضِ الشَّاشَةِ، سَيَظْهَرُ شَرِيطُ التَّمْرِيرِ تِلْقَائِيّاً لِتَتَمَكَّنَ مِنَ التَّنَقُّلِ بَيْنَ الْخِيَارَاتِ بِسُهُولَةٍ.",
+        "caption_text": "تظهر القائمة بشكل أفقي مع شريط تمرير تلقائي عند الحاجة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[ Home ] [ News ] [ Contact ] [ About ] [ Support ] [ Blog ] ...",
+        "highlight_lines": [],
+        "output": "قائمة أفقية قابلة للتمرير داخل المتصفح",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً أَنَّ اسْتِخْدَامَ display: inline-block لِلرَّوَابِطِ هُوَ السِّرُّ لِجَعْلِهَا تَصْطَفُّ بِجَانِبِ بَعْضِهَا. كَمَا يُفَضَّلُ اخْتِيَارُ أَلْوَانٍ تَبَايُنُهَا عَالٍ لِتَحْسِينِ إِمْكَانِيَّةِ الْوُصُولِ لِجَمِيعِ الْمُسْتَخْدِمِينَ.",
+        "caption_text": "استخدام display: inline-block ضروري لترتيب العناصر أفقيا، مع مراعاة التباين اللوني."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display: inline-block للروابط",
+          "اختيار ألوان ذات تباين عال",
+          "اختبار القائمة على أحجام شاشات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ قَائِمَةِ التَّنَقُّلِ الْأُفُقِيَّةِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْأَحْجَامِ لِتُنَاسِبَ مَشَارِيعَكُمْ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الكود بأنفسكم وشاركوا نتائجكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قم بتجربة الكود وتعديله",
+          "راجع دروس CSS Navbar لمزيد من التفاصيل",
+          "تابعونا في الدروس القادمة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp"
+      ]
+    }
+  ]
+}
