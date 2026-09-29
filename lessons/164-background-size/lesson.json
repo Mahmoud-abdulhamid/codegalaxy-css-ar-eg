@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "164",
+  "title": "CSS background-size Property",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "Understand the background-size property",
+    "Learn to use auto, contain, and cover values",
+    "Apply multiple background sizes",
+    "Create full-screen background images"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_background_size.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول background-size",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ background-size، وَهِيَ الْأَدَاةُ الْمِثَالِيَّةُ لِلتَّحَكُّمِ فِي أَبْعَادِ صُوَرِ الْخَلْفِيَّةِ دَاخِلَ صَفْحَاتِ الْوِبّ، مِمَّا يَمْنَحُنَا مَرُونَةً كَبِيرَةً فِي التَّصْمِيمِ.",
+        "caption_text": "تسمح خاصية background-size بالتحكم الكامل في أبعاد صور الخلفية داخل صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في أبعاد صور الخلفية",
+          "استخدام القيم الرقمية والنسب المئوية",
+          "استخدام الكلمات المفتاحية auto و contain و cover"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_size.asp"
+      ]
+    },
+    {
+      "id": "basic_usage",
+      "title": "استخدام القيم الرقمية",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَحْدِيدُ أَبْعَادِ الصُّورَةِ بِاسْتِخْدَامِ الْبِكْسِلَاتِ أَوْ النِّسَبِ الْمِئَوِيَّةِ. لَاحِظْ هَذَا الْكُودَ حَيْثُ نُحَدِّدُ الْعَرْضَ بِمِائَةِ بيكسل وَالِارْتِفَاعَ بِثَمَانِينَ بيكسل لِتَصْغِيرِ الصُّورَةِ وَفْقاً لِحَاجَةِ التَّصْمِيمِ.",
+        "caption_text": "يمكن تحديد أبعاد الصورة بدقة باستخدام وحدات القياس مثل px."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  background-image: url(img_flower.jpg);\n  background-position: right top;\n  background-repeat: no-repeat;\n  background-size: 100px 80px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_size.asp"
+      ]
+    },
+    {
+      "id": "keywords",
+      "title": "الكلمات المفتاحية للتحكم",
+      "narration": {
+        "spoken_text": "تُوَفِّرُ لَنَا CSS ثَلَاثَ كَلِمَاتٍ مِفْتَاحِيَّةٍ هَامَّةٍ. الْقِيمَةُ auto تَعْرِضُ الصُّورَةَ بِحَجْمِهَا الْأَصْلِيِّ. أَمَّا contain فَتُحَجِّمُ الصُّورَةَ لِتَظْهَرَ بِالْكَامِلِ دَاخِلَ الْمِسَاحَةِ، بَيْنَمَا cover تَمْلَأُ الْمِسَاحَةَ بِالْكَامِلِ مَعَ الْحِفَاظِ عَلَى نِسْبَةِ الْأَبْعَادِ.",
+        "caption_text": "القيم auto و contain و cover توفر تحكما ذكيا في عرض الصور."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  background-size: contain;\n}\n#div2 {\n  background-size: cover;\n}\n#div3 {\n  background-size: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_size.asp"
+      ]
+    },
+    {
+      "id": "multiple_backgrounds",
+      "title": "صور خلفية متعددة",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَامِ أَكْثَرَ مِنْ صُورَةٍ لِلْخَلْفِيَّةِ، يُمْكِنُنَا تَعْرِيفُ أَحْجَامٍ مُخْتَلِفَةٍ لِكُلِّ صُورَةٍ بِاسْتِخْدَامِ الْفَاصِلَةِ. هَذَا يُعْطِينَا قُدْرَةً هَائِلَةً عَلَى تَرْكِيبِ الْعَنَاصِرِ الْبَصَرِيَّةِ بِشَكْلٍ مُتَقَدِّمٍ وَمُحْتَرِفٍ دَاخِلَ نَفْسِ الْعُنْصُرِ.",
+        "caption_text": "يمكن تعيين أحجام مختلفة لصور خلفية متعددة باستخدام الفواصل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  background-image: url(tree.gif), url(flwr.gif);\n  background-size: contain, 150px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_size.asp"
+      ]
+    },
+    {
+      "id": "full_screen",
+      "title": "خلفية كاملة للشاشة",
+      "narration": {
+        "spoken_text": "لِجَعْلِ صُورَةِ الْخَلْفِيَّةِ تُغَطِّي كَامِلَ نَافِذَةِ الْمُتَصَفِّحِ، نَقُومُ بِتَطْبِيقِ الْخَاصِيَّةِ عَلَى عُنْصُرِ html. نَسْتَخْدِمُ cover مَعَ تَثْبِيتِ الصُّورَةِ لِضَمَانِ تَغْطِيَةٍ كَامِلَةٍ وَمُتَنَاسِقَةٍ مَعَ حَرَكَةِ التَّمْرِيرِ فِي الصَّفْحَةِ.",
+        "caption_text": "استخدام cover مع عنصر html لإنشاء خلفية تغطي كامل الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "html {\n  background: url(img.jpg) no-repeat center fixed;\n  background-size: cover;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_size.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا كَيْفِيَّةَ التَّحَكُّمِ فِي أَبْعَادِ الصُّوَرِ بِطُرُقٍ مُتَعَدِّدَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْخَصَائِصِ فِي مَشَارِيعِكُمُ الْخَاصَّةِ لِتَحْقِيقِ تَصَامِيمَ جَذَّابَةٍ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعد خاصية background-size أداة أساسية لكل مطور ويب محترف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام px للتحكم الدقيق",
+          "استخدام cover لتغطية كامل المساحة",
+          "استخدام contain لاحتواء الصورة",
+          "تطبيق القيم المتعددة للخلفيات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_background_size.asp"
+      ]
+    }
+  ]
+}
