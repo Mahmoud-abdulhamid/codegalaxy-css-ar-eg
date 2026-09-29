@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "363",
+  "title": "تصميم أزرار Pill Buttons باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تحويل الأزرار العادية إلى Pill Buttons",
+    "استخدام خاصية border-radius للتحكم في انحناء الزوايا",
+    "تطبيق التنسيقات الأساسية على عناصر button",
+    "تحسين مظهر واجهة المستخدم عبر CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_pill_button.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Pill Buttons",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَصْمِيمِ أزرارٍ بِشَكْلٍ بِيضَاوِيٍّ جَذَّابٍ يُعْرَفُ بِاسْمِ Pill Buttons، وَذَلِكَ بِاسْتِخْدَامِ خَصَائِصِ CSS الْبَسِيطَةِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تعلم كيفية إنشاء Pill Buttons جذابة باستخدام CSS لتحسين تصميم واجهة المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ما هي Pill Buttons؟",
+          "أهمية التصميم في واجهة المستخدم",
+          "استخدام CSS للتحكم في الأشكال"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_button.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل الزر في HTML",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَحْنُ بِحَاجَةٍ إِلَى عُنْصُرِ button مَعَ إِسْنَادِ class مُعَيَّنٍ لَهُ، وَلْيَكُنْ button، حَتَّى نَتَمَكَّنَ مِنْ اسْتِهْدَافِهِ بِوَاسِطَةِ CSS وَتَطْبِيقِ التَّنْسِيقَاتِ الْمَطْلُوبَةِ عَلَيْهِ بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "نبدأ بإنشاء عنصر button في HTML مع إعطائه class باسم button."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <button class=\"button\">Pill Button</button>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_button.asp"
+      ]
+    },
+    {
+      "id": "css_styling_part1",
+      "title": "تنسيق الزر الأساسي",
+      "narration": {
+        "spoken_text": "الْآنَ نَنْتَقِلُ إِلَى CSS. نَقُومُ بِتَحْدِيدِ background-color لِلْزِّرِّ، وَنَضْبِطُ border عَلَى none لِإِلْغَاءِ الْحُدُودِ الِافْتِرَاضِيَّةِ، كَمَا نُحَدِّدُ لَوْنَ النَّصِّ بِاسْتِخْدَامِ color لِيَظْهَرَ بِشَكْلٍ مُتَنَاسِقٍ.",
+        "caption_text": "تنسيق الخلفية والحدود ولون النص للزر باستخدام CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button {\n  background-color: #ddd;\n  border: none;\n  color: black;\n  padding: 10px 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_button.asp"
+      ]
+    },
+    {
+      "id": "css_styling_part2",
+      "title": "إضافة التباعد والمحاذاة",
+      "narration": {
+        "spoken_text": "نُكْمِلُ التَّنْسِيقَ بِتَحْدِيدِ text-align لِتَوْسِيطِ النَّصِّ، وَنَضْبِطُ display عَلَى inline-block لِيَأْخُذَ الزِّرُّ أَبْعَادَهُ الصَّحِيحَةَ، مَعَ إِضَافَةِ margin لِتَرْكِ مَسَافَاتٍ بَيْنَ الْأَزْرَارِ وَتَحْدِيدِ cursor كَمُؤَشِّرٍ لِلنَّقْرِ.",
+        "caption_text": "ضبط المحاذاة والمسافات الخارجية والداخلية لعنصر الزر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button {\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  margin: 4px 2px;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_button.asp"
+      ]
+    },
+    {
+      "id": "border_radius",
+      "title": "سر الشكل البيضاوي",
+      "narration": {
+        "spoken_text": "الْخُطْوَةُ الْأَهَمُّ لِتَحْوِيلِ الزِّرِّ إِلَى Pill Button هِيَ خَاصِيَّةُ border-radius. عِنْدَمَا نَضْبِطُهَا عَلَى 16px، سَتَتَحَوَّلُ زَوَايَا الزِّرِّ الْحَادَّةُ إِلَى حَوَافَّ مُسْتَدِيرَةٍ تَمَاماً، مِمَّا يَمْنَحُهُ هَذَا الْمَظْهَرَ الْبِيضَاوِيَّ الْمُمَيَّزَ.",
+        "caption_text": "استخدام border-radius بقيمة 16px لإنشاء الحواف المستديرة للزر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button {\n  border-radius: 16px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_button.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ التَّنْسِيقَاتِ، سَيَظْهَرُ الزِّرُّ فِي مُتَصَفِّحِ الْوِبّ بِشَكْلٍ أَنِيقٍ وَمُسْتَدِيرٍ. هَذَا التَّصْمِيمُ يُعْتَبَرُ مِنْ أَفْضَلِ الْمُمَارَسَاتِ لِجَعْلِ الْأَزْرَارِ أَكْثَرَ جَاذِبِيَّةً لِلْمُسْتَخْدِمِ عِنْدَ التَّفَاعُلِ مَعَهَا.",
+        "caption_text": "النتيجة النهائية للزر بعد تطبيق كافة تنسيقات CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "preview.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <button class=\"button\">Pill Button</button>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Pill Button (زر بحواف مستديرة بالكامل)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_button.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "لَقَدْ تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ بِنَاءِ Pill Button بِاسْتِخْدَامِ CSS. نَصِيحَتِي لَكُمْ هِيَ تَجْرِبَةُ قِيَمٍ مُخْتَلِفَةٍ لِ border-radius لِلْحُصُولِ عَلَى أَشْكَالٍ مُتَنَوِّعَةٍ. لَا تَنْسَوْا زِيَارَةَ الرَّابِطِ فِي الْوَصْفِ لِتَجْرِبَةِ الْكُودِ بِنَفْسِكُمْ.",
+        "caption_text": "خلاصة: Pill Buttons تعتمد بشكل أساسي على border-radius. جرب تغيير القيم بنفسك!"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام border-radius للتحكم في الانحناء",
+          "تنسيق الأزرار يعزز تجربة المستخدم",
+          "قم بزيارة الرابط لتجربة الكود مباشرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_button.asp"
+      ]
+    }
+  ]
+}
