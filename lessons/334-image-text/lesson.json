@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "334",
+  "title": "كيفية وضع النصوص فوق الصور باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية وضع النصوص فوق الصور بدقة وسهولة",
+    "فهم دور خاصية position في تحديد التموضع المطلق والنسبي",
+    "تطبيق التنسيقات المختلفة لتوزيع النصوص في الزوايا والمنتصف",
+    "استخدام خاصية transform لضبط توسيط العناصر تماما"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_text.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ وَضْعِ النُّصُوصِ فَوْقَ الصُّوَرِ بِاسْتِخْدَامِ أَدَوَاتِ التَّمْضُوعِ وَالتَّنْسِيقِ الْمُتَقَدِّمَةِ لِتَصْمِيمِ صَفَحَاتِ وِبٍّ رَائِعَةٍ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتعلم كيفية وضع النصوص فوق الصور باحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم كيفية وضع النصوص فوق الصور",
+          "استخدام خصائص CSS Position",
+          "تنسيق العناصر للحصول على مظهر احترافي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text.asp"
+      ]
+    },
+    {
+      "id": "scene_html_structure",
+      "title": "هيكل HTML للصفحة",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوَّلاً بِبِنَاءِ هَيْكَلِ HTML. نُنْشِئُ عُنْصُرَ div يَحْمِلُ class يُسَمَّى container، وَدَاخِلَهُ نَضَعُ صُورَةً ثُمَّ عِدَّةَ عَنَاصِرِ div أُخْرَى تَمُمُّثِلُ النُّصُوصَ الْمُخْتَلِفَةَ فِي الزَّوَايَا وَالْمُنْتَصَفِ.",
+        "caption_text": "نبدأ ببناء هيكل HTML باستخدام container يحوي الصورة وعناصر النصوص المختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"img_snow_wide.jpg\" alt=\"Snow\" style=\"width:100%;\">\n      <div class=\"bottom-left\">Bottom Left</div>\n      <div class=\"top-left\">Top Left</div>\n      <div class=\"top-right\">Top Right</div>\n      <div class=\"bottom-right\">Bottom Right</div>\n      <div class=\"centered\">Centered</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "يتم عرض الصورة مع النصوص موزعة في زواياها المختلفة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text.asp"
+      ]
+    },
+    {
+      "id": "scene_container_css",
+      "title": "تنسيق الحاوية الرئيسية container",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ لِكِتَابَةِ كُودِ CSS. نُعَرِّفُ position بِقِيمَةِ relative لِعُنْصُرِ container، لِيَكُونَ هُوَ الإِطَارَ المَرْجِعِيَّ الَّذِي تَتَحَرَّكُ دَاخِلَهُ العَنَاصِرُ الفَرْعِيَّةُ بِحُرِّيَّةٍ وَدِقَّةٍ.",
+        "caption_text": "نحدد خاصية position بقيمة relative للحاوية لتكون الإطار المرجعي للعناصر الفرعية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  position: relative;\n  text-align: center;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "تصبح الحاوية مرجعاً وتتموضع النصوص بداخلها بلون أبيض.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text.asp"
+      ]
+    },
+    {
+      "id": "scene_corners_css",
+      "title": "تنسيق النصوص في الزوايا",
+      "narration": {
+        "spoken_text": "لِتَوْزِيعِ النُّصُوصِ فِي الزَّوَايَا الأَرْبَعِ، نَسْتَخْدِمُ position بِقِيمَةِ absolute لِكُلِّ عُنْصُرٍ، مَعَ تَحْدِيدِ القِيَمِ الْمُنَاسِبَةِ لِ top أَوْ bottom وَ left أَوْ right لِضَمَانِ مَوْقِعِهَا السَّلِيمِ.",
+        "caption_text": "نستخدم position بقيمة absolute مع خصائص تحديد الإحداثيات لتوزيع النصوص في الزوايا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bottom-left {\n  position: absolute;\n  bottom: 8px;\n  left: 16px;\n}\n.top-left {\n  position: absolute;\n  top: 8px;\n  left: 16px;\n}",
+        "highlight_lines": [],
+        "output": "يظهر النص في الزاوية السفلى اليسرى والعلْمى اليسرى بدقة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text.asp"
+      ]
+    },
+    {
+      "id": "scene_right_corners",
+      "title": "استكمال الزوايا اليمنى",
+      "narration": {
+        "spoken_text": "بِنَفْسِ الطَّرِيقَةِ، نُطَبِّقُ التَّمْضُوعَ المُطْلَقَ على الزَّوَايَا اليُمْنَى. نَضَعُ top أَوْ bottom بَقِيمَةِ ثَمَانِيَةِ بِيكْسِلْ، وَ right بَقِيمَةِ سِتَّةَ عَشَرَ بِيكْسِلْ، لِيَتِمَّ تَمْضُوعُ النُّصُوصِ يَمِيناً بِبَحَةٍ.",
+        "caption_text": "نضبط إحداثيات الزوايا اليمنى باستخدام خاصية right لتوزيع النصوص بشكل متناسق."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".top-right {\n  position: absolute;\n  top: 8px;\n  right: 16px;\n}\n.bottom-right {\n  position: absolute;\n  bottom: 8px;\n  right: 16px;\n}",
+        "highlight_lines": [],
+        "output": "تستقر النصوص في الزوايا اليمنى العليا والسفلى.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text.asp"
+      ]
+    },
+    {
+      "id": "scene_centered_text",
+      "title": "توسيط النص في منتصف الصورة",
+      "narration": {
+        "spoken_text": "لِوَضْعِ النَّصِّ فِي مُنْتَصَفِ الصُّورَةِ تَمَاماً، نَسْتَخْدِمُ top وَ left بَقِيمَةِ خَمْسِينَ بالمِئَةِ، ثُمَّ نَسْتَخْدِمُ دَالَّةَ transform مَعَ translate لِسَحْبِ العُنْصُرِ نَحْوَ المُنْتَصَفِ بِدِقَّةٍ.",
+        "caption_text": "نستخدم top و left بقيمة 50 مع دالة transform لضمان توسيط النص تماما."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".centered {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}",
+        "highlight_lines": [],
+        "output": "يتموضع النص تماماً في مركز الصورة بغض النظر عن أبعادها.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text.asp"
+      ]
+    },
+    {
+      "id": "scene_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "مِنْ أَجْلِ تَصْمِيمٍ أَكْثَرَ احْتِرَافِيَّةً، احْرِصْ دَائِماً عَلَى ضَبْطِ حَجْمِ الصُّوَرِ لِتَتَوَافَقَ مَعَ شَاشَاتِ الهَوَاتِفِ، وَاسْتَخْدِمْ وَحَدَاتِ قِيَاسٍ مَرِنَةً مِثْلَ البِيكْسِلْ أَوِ النِّسَبِ المِئَوِيَّةِ.",
+        "caption_text": "احرص دائما على استخدام وحدات قياس مرنة وضبط الصور لتتلاءم مع كافة الأجهزة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position relative للعنصر الحاضن",
+          "استخدام position absolute للعناصر المتموضعة",
+          "استخدام transform للتوسيط المثالي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ وَضْعِ وَتَمْضُوعِ النُّصُوصِ فَوْقَ الصُّوَرِ بِاسْتِخْدَامِ CSS. نَدْعُوكُمْ لِتَجْرِبَةِ الأَكْوادِ بِمَنْفَعَةٍ وَمْتْعَةٍ مِنْ خِلَالِ الرَّابِطِ فِي الوَصْفِ.",
+        "caption_text": "خلاصة الدرس: تعلم وضع النصوص فوق الصور باحترافية عبر خصائص CSS Position."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم توطين النصوص في الزوايا والمنتصف",
+          "فهم آلية التموضع النسبي والمطلق",
+          "تابعونا للمزيد من دروس CSS الشيقة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text.asp"
+      ]
+    }
+  ]
+}
