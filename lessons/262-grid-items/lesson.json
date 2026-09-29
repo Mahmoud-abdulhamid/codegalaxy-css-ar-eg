@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "262",
+  "title": "شرح مفصل لخصائص CSS Grid Items والتحكم في المساحات",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية التعامل مع العناصر داخل grid container وتوزيعها",
+    "استخدام خصائص grid-column-start و grid-column-end لتحديد أبعاد الأعمدة",
+    "استخدام الاختصار grid-column للتحكم السريع في أعمدة العناصر",
+    "تطبيق خصائص grid-row ودمجها مع الأعمدة لتصميم تخطيطات متقدمة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid_item.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن عناصر Grid Items في CSS Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ التَّحْكُمِ بِعَنَاصِرِ grid container وكَيْفَ تُصْبِحُ عَنَاصِرُ الْوِبّ الْمُبَاشِرَةُ تَحْتَهُ grid items تِلْقَائِيّاً لِتَصْمِيمِ تَخطيطَاتٍ رائعةٍ.",
+        "caption_text": "مرحبا بكم في درس CSS Grid Items سنتعرف على كيفية التحكم بعناصر grid container."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحتوي حاوية grid container على عنصر واحد أو أكثر من grid items",
+          "تتحول جميع العناصر الابنية المباشرة للحاوية تلقائيا إلى عناصر grid items",
+          "يمكننا التحكم بأبعاد ومواقع هذه العناصر بكل سهولة واحترافية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "مفهوم خطوط الأعمدة والصفوف Column and Row Lines",
+      "narration": {
+        "spoken_text": "يَعْتَمِدُ تَقْسِيمُ الشَّبَكَةِ عَلَى خُطُوطٍ وَهْمِيَّةٍ تُسَمَّى column-lines بَيْنَ الْأَعْمِدَةِ، وrow-lines بَيْنَ الصُّفُوفِ. نَسْتَخْدِمُ أَرْقَامَ هَذِهِ الْخُطُوطِ لِتَحْدِيدِ بِدَايَةِ وَنِهَايَةِ كُلِّ عُنْصُرٍ بِدِقَّةٍ تَامَّةٍ.",
+        "caption_text": "يعتمد تقسيم الشبكة على خطوط وهمية تسمى column-lines وrow-lines لتحديد أرقام المواقع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الخطوط الفاصلة بين الأعمدة تسمى column-lines",
+          "الخطوط الفاصلة بين الصفوف تسمى row-lines",
+          "نعتمد على أرقام الخطوط لوضع العناصر بدقة داخل الحاوية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "استخدام خاصيتي grid-column-start و grid-column-end",
+      "narration": {
+        "spoken_text": "لِنَحَدِّدْ مَكَانَ الْعُنْصُرِ أفقياً نَسْتَخْدِمُ خَاصِيَّةَ grid-column-start لِتَعْيِينِ خَطِّ الْبِدَايَةِ، وَخَاصِيَّةَ grid-column-end لِتَعْيِينِ خَطِّ النِّهَايَةِ، مِثْلَ جَعْلِ الْعُنْصُرِ يَمْتَدُّ مِنَ الْخَطِّ الْأَوَّلِ حَتَّى الثَّالِثِ.",
+        "caption_text": "نستخدم grid-column-start وgrid-column-end لتحديد نقطة بداية ونهاية العنصر أفقيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  grid-column-start: 1;\n  grid-column-end: 3;\n}",
+        "highlight_lines": [],
+        "output": "Element spans across 2 columns from line 1 to 3",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "الاختصار السريع grid-column",
+      "narration": {
+        "spoken_text": "لِتَسْهِيلِ كِتَابَةِ الأَكْوَادِ وَتَقْلِيلِ الأَسْطُرِ، تُوَفِّرُ لَنَا لُغَةُ CSS خَاصِيَّةَ grid-column كَاخْتِصَارٍ دَمَجَ الْبِدَايَةَ وَالنِّهَايَةَ مَعاً، مِثْلَ كِتَابَةِ وَاحِدٍ مَعَ كَلِمَةِ span اثْنَانِ.",
+        "caption_text": "تعتبر خاصية grid-column اختصارا يجمع خاصيتي البداية والنهاية مع كلمة span."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  grid-column: 1 / span 2;\n}",
+        "highlight_lines": [],
+        "output": "Element starts at line 1 and spans 2 columns",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "التحكم في الصفوف عبر grid-row-start و grid-row-end",
+      "narration": {
+        "spoken_text": "كَمَا تَعَرَّفْنَا عَلَى الأَعْمِدَةِ، يُمْكِنُنَا أَيْضاً التَّحْكُمُ الرَّأْسِيُّ بِاسْتِخْدَامِ خَاصِيَّةِ grid-row-start لِبِدَايَةِ الصَّفِّ، وَgrid-row-end لِنِهَايَتِهِ، لِيَمْتَدَّ الْعُنْصُرُ عَمُودِيّاً بَيْنَ الصُّفُوفِ الْمُخْتَلِفَةِ.",
+        "caption_text": "نستخدم grid-row-start وgrid-row-end للتحكم في امتداد العنصر عبر صفوف الشبكة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  grid-row-start: 1;\n  grid-row-end: 3;\n}",
+        "highlight_lines": [],
+        "output": "Element spans across rows from line 1 to 3",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "اختصار الصفوف باستخدام grid-row",
+      "narration": {
+        "spoken_text": "وَلِتَسْهِيلِ بِمَاءٍ أُسْلُوبِ الصُّفُوفِ، نَسْتَخْدِمُ خَاصِيَّةَ grid-row الْمُخْتَصَرَةِ، حَيْثُ نُحَدِّدُ خَطَّ الْبِدَايَةِ ثُمَّ كَلِمَةَ span مَتْبُوعَةً بِعَدَدِ الصُّفُوفِ الْمَطْلُوبِ اجْتِيَازُهَا.",
+        "caption_text": "خاصية grid-row هي الاختصار المناسب لتحديد بداية الصفوف وعدد الصفوف الممتدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  grid-row: 1 / span 2;\n}",
+        "highlight_lines": [],
+        "output": "Element starts at row line 1 and spans 2 rows",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "دمج خصائص الأعمدة والصفوف معا",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ النِّهَائِيِّ، نَدْمُجُ بَيْنَ خَاصِيَّةِ grid-column وَgrid-row مَعاً، لِيَقُومَ الْعُنْصُرُ بِالامْتِدَادِ أفقياً وَرَأْسِيّاً فِي آنٍ وَاحِدٍ لِإِنْشَاءِ تَصْمِيمَاتٍ مُمَيِّزَةٍ.",
+        "caption_text": "نستطيع دمج grid-column وgrid-row معا لجعل العنصر يمتد أفقيا ورأسيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".item1 {\n  grid-column: 1 / span 2;\n  grid-row: 1 / span 2;\n}",
+        "highlight_lines": [],
+        "output": "Element spans 2 columns and 2 rows starting from line 1",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة وخاتمة الدرس",
+      "narration": {
+        "spoken_text": "تَعَرَّفْنَا الْيَوْمَ عَلَى كَيْفِيَّةِ التَّحْكُمِ بِعَنَاصِرِ CSS Grid Items، وَاسْتِخْدَامِ خَطوطِ الشَّبَكَةِ لِلإِمْتِدَادِ. نَدْعُوكُمْ لِتَجْرِبَةِ الأَكْوَدِ بِمُفْرَدِكُمْ وَمُتَابَعَةِ الدَّرْسِ الْقَادِمِ لِلمَزِيدِ.",
+        "caption_text": "تعرفنا على كيفية التحكم بعناصر Grid Items وأتمنى لكم التوفيق في تطبيقاتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام grid-column للاختصار الأفقي المتقدم",
+          "استخدام grid-row للاختصار الرأسي المرن",
+          "دمج الخصائص لتصميم تخطيطات ويب احترافية ومتجاوبة",
+          "اشراف وتدريب المدرب محمود عبدالحميد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_item.asp"
+      ]
+    }
+  ]
+}
