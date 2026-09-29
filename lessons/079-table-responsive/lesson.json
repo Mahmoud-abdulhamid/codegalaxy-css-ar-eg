@@ -3,6 +3,8 @@
   "lesson_id": "79",
   "title": "CSS Responsive Tables",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية جعل الجداول متجاوبة مع أحجام الشاشات المختلفة",
     "استخدام خاصية overflow-x للتحكم في التمرير الأفقي",
