@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "129",
+  "title": "شرح CSS Attribute Selectors بالتفصيل",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام CSS Attribute Selectors لاستهداف عناصر HTML بناء على Attributes",
+    "التعرف على ستايل attribute و attribute=\"value\"",
+    "استخدام attribute=\"value\" للبحث عن الكلمات داخل قيم Attributes",
+    "تطبيق attribute=\"value\" لاستهداف القيم المطابقة أو المتبوعة بشرطة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_attribute_selectors.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة عن Attribute Selectors في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى Attribute Selectors وَكَيْفَ نَسْتَخْدِمُهَا لِاسْتِهَادَفِ وَتَنْسِيقِ عَنَاصِر HTML بِدِقَّه عَالِيَه.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS لتعلم استخدام Attribute Selectors."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم Attribute Selectors لاستهداف عناصر HTML حسب Attributes",
+          "يتم وضع هذه المحددات داخل أقواس مربعة",
+          "تتيح لك التحكم الدقيق في التصميم دون الحاجة لإضافات Classes إضافية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "basic_attribute",
+      "title": "شرح محدد attribute",
+      "narration": {
+        "spoken_text": "نَبْدَأُ بِالْمُحَدِّدِ الْأَسَاسِيِّ attribute بَيْنَ أَقْوَاسٍ مُرَبَّعَه. هَذَا الْمُحَدِّدُ يُسْتَخْدَمُ لِاخْتِيَارِ أَيِّ عُنْصُرٍ يَمْتَلِك Attribute الْمَكْتُوبَه دَاخِلَ الْأَقْوَاسِ مَهْمَا كَانَتْ قِيمَتُهَا.",
+        "caption_text": "محدد attribute يستخدم لاختيار العناصر التي تحتوي على Attribute معينة بغض النظر عن قيمتها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a[target] {\n  background-color: yellow;\n}",
+        "highlight_lines": [],
+        "output": "يتم تطبيق خلفية صفراء على جميع روابط a التي تحتوي على سمة target.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "exact_value",
+      "title": "محدد القيمة الدقيقة attribute=\"value\"",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْنَا تَحْدِيدَ عُنْصُرٍ بِقِيمَه دَقِيقَه وَمُحَدَّدَه لِلسِّمَه، نَسْتَخْدِم attribute equals value. هُنَا نَحْنُ نَسْتَهْدِفُ فَقَطِ الْعَنَاصِرَ الَّتِي تُطَابِقُ الْقِيمَه تَمَاماً.",
+        "caption_text": "محدد attribute=\"value\" يستهدف العناصر ذات القيمة المطابقة تماما للقمة المحددة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "a[target=\"_blank\"] {\n  background-color: yellow;\n}",
+        "highlight_lines": [],
+        "output": "يطبق التنسيق حصراً على الروابط التي تحمل target=\"_blank\".",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "attribute_contains",
+      "title": "محدد احتواء الكلمة attribute=\"value\"",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى مُحَدِّدِ ال تايلمد مَعَ يُسَاوِي، أَيْ attribute tilde equals value. هَذَا الْمُحَدِّدُ يُسْتَخْدَمُ لِاخْتِيَارِ الْعَنَاصِرِ الَّتِي تَحْتَوِي قِيمَةِ سِمَتِهَا عَلَى كَلِمَه مُحَدَّدَه ضِمْنَ قَائِمَه كَلِمَاتٍ مَفْصُولَه بِمَسَافَاتٍ.",
+        "caption_text": "محدد attribute=\"value\" يختار العناصر التي تحتوي قيمة سمتها على كلمة معينة ضمن قائمة مفصولة بمسافات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "[title~=\"flower\"] {\n  border: 5px solid yellow;\n}",
+        "highlight_lines": [],
+        "output": "يطابق title=\"flower\" و title=\"summer flower\" ولكن ليس title=\"flowers\".",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "attribute_pipe",
+      "title": "محدد الشرطة العمودية attribute=\"value\"",
+      "narration": {
+        "spoken_text": "أَمَّا مُحَدِّدُ ال بايب مَعَ يُسَاوِي، أَيْ attribute pipe equals value، فَيُسْتَخْدَمُ لِاخْتِيَارِ الْعَنَاصِرِ الَّتِي تَبْدَأُ قِيمَتُهَا بِالْكَلِمَه الْمُحَدَّدَه مَتْبُوعَه مُبَاشَرَه بِشَرْطَه أَوْ تُسَاوِيهَا تَمَاماً.",
+        "caption_text": "محدد attribute=\"value\" يختار العناصر التي تبدأ قيمتها بالكلمة المحددة أو تليها مباشرة شرطة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "[class|=\"top\"] {\n  background: yellow;\n}",
+        "highlight_lines": [],
+        "output": "يطابق class=\"top\" و class=\"top-text\" ولكن لا يطابق class=\"toptext\".",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "case_sensitivity",
+      "title": "حساسية حالة الأحرف في Attribute Selectors",
+      "narration": {
+        "spoken_text": "نُلَاحِظُ أَنَّ مُحَدِّدَات Attributes تَكُونُ حَسَّاسَه لِحَالَةِ الْأَحْرُفِ افْتِرَاضِيّاً. وَلِإِجْرَاءِ مُطَابَقَه غَيْرِ حَسَّاسَه، نَسْتَخْدِمُ حَرْفَ آيْ قَبْلَ إِغْلَاقِ الْأَقْوَاسِ مِثْل attribute equals value مَتْبُوعاً بِحَرْف i.",
+        "caption_text": "المحددات حساسة لحالة الأحرف افتراضيا، ويمكن إضافة الحرف i لجعل المطابق غير حساس."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "المحددات حساسة لحالة الأحرف case-sensitive بشكل افتراضي",
+          "أضف حرف i قبل قوس الإغلاق لإجراء مطابقة غير حساسة لحالة الأحرف",
+          "مثال توضيحي للاستخدام: attribute=\"value\" i"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة وخاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَرَّفْنَا عَلَى أَهْم Attribute Selectors فِي لُغَةِ CSS مِثْل attribute و attribute=\"value\" و attribute=\"value\" و attribute=\"value\". نَسْأَلُكُمُ التَّوْفِيقَ وَنَلْقَاكُمْ فِي الدَّرْسِ الْقَادِمِ مَعَ مَحْمُودِ عَبْدِالْحَمِيدِ.",
+        "caption_text": "خلاصة استخدام Attribute Selectors في تنسيق عناصر صفحات الويب بمرونة واحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمنحك Attribute Selectors مرونة هائلة في استهداف العناصر",
+          "اختر المحدد المناسب حسب شكل وطبيعة قيمة Attributes المطلوبة",
+          "تابع معنا بقية دروس دورة CSS لتطوير مهاراتك التصميمية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors.asp"
+      ]
+    }
+  ]
+}
