@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "361",
+  "title": "تصميم أزرار التحميل التفاعلية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية دمج مكتبات الأيقونات مع عناصر HTML",
+    "استخدام فئات CSS لإنشاء تأثيرات الحركة",
+    "تنسيق الأزرار باستخدام خصائص CSS الأساسية",
+    "تحسين تجربة المستخدم عبر أزرار التحميل"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_loading_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول أزرار التحميل",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ أَزْرَارِ تَحْمِيلٍ تَفَاعُلِيَّةٍ تَمْنَحُ مُسْتَخْدِمِي مَوْقِعِ الْوِبّ تَجْرِبَةً بَصَرِيَّةً مُمَيَّزَةً أَثْنَاءَ انْتِظَارِ الْعَمَلِيَّاتِ.",
+        "caption_text": "تعلم كيفية إنشاء أزرار تحميل تفاعلية باستخدام CSS لتحسين تجربة المستخدم في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية أزرار التحميل في تحسين تجربة المستخدم",
+          "استخدام مكتبات الأيقونات الخارجية",
+          "تطبيق تأثيرات الحركة باستخدام CSS",
+          "تنسيق الأزرار لتناسب تصميم الموقع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_loading_buttons.asp"
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "إعداد مكتبة الأيقونات",
+      "narration": {
+        "spoken_text": "لِتَنْفِيذِ هَذِهِ الْأَزْرَارِ، نَحْتَاجُ إِلَى دَمْجِ مَكْتَبَةِ أَيُقُونَاتٍ مِثْلَ Font Awesome. نَقُومُ بِإِضَافَةِ رَابِطِ ال CSS فِي قِسْمِ head، لِنَتَمَكَّنَ مِنَ اسْتِخْدَامِ الْأَيُقُونَاتِ دَاخِلَ عَنَاصِرِ button بِسُهُولَةٍ.",
+        "caption_text": "نستخدم مكتبة Font Awesome لإضافة أيقونات التحميل إلى عناصر button في صفحة الويب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  </head>\n  <body>\n    <h1>Hello World</h1>\n    <p>Styled Web Page</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_loading_buttons.asp"
+      ]
+    },
+    {
+      "id": "buttons_structure",
+      "title": "هيكلة أزرار التحميل",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ الْآنَ عُنْصُرَ button مَعَ كِلَاسِ buttonload. دَاخِلَ كُلِّ زِرٍّ، نَضَعُ عُنْصُرَ i مَعَ كِلَاسَاتِ الْأَيُقُونَةِ، وَالْأَهَمُّ هُوَ إِضَافَةُ كِلَاسِ fa-spin لِتَدْوِيرِ الْأَيُقُونَةِ بِشَكْلٍ مُسْتَمِرٍّ.",
+        "caption_text": "نستخدم عنصر button مع أيقونات Font Awesome وفئة fa-spin لإنشاء تأثير الدوران."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "buttons.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <button class=\"buttonload\">\n      <i class=\"fa fa-spinner fa-spin\"></i>Loading\n      </button>\n      <button class=\"buttonload\">\n        <i class=\"fa fa-circle-o-notch fa-spin\"></i>Loading\n        </button>\n      </body>\n    </html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_loading_buttons.asp"
+      ]
+    },
+    {
+      "id": "styling",
+      "title": "تنسيق الأزرار بـ CSS",
+      "narration": {
+        "spoken_text": "لِنَجْعَلَ الْأَزْرَارَ تَبْدُو احْتِرَافِيَّةً، نَقُومُ بِتَعْدِيلِ background-color وَإِزَالَةِ ال border. نُضِيفُ أَيْضاً padding مُنَاسِباً وَنُحَدِّدُ font-size لِضَمَانِ تَنَاسُقِ النَّصِّ مَعَ الْأَيُقُونَةِ دَاخِلَ الزِّرِّ.",
+        "caption_text": "تنسيق فئة buttonload باستخدام خصائص CSS للتحكم في الألوان، الحواف، والمسافات الداخلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".buttonload {\n  background-color: #04AA6D;\n  border: none;\n  color: white;\n  padding: 12px 16px;\n  font-size: 16px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_loading_buttons.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَظْهَرُ الْأَزْرَارُ بِاللَّوْنِ الْأَخْضَرِ مَعَ أَيُقُونَةِ تَحْمِيلٍ تَدُورُ بِاسْتِمْرَارٍ. هَذَا التَّأْثِيرُ يُعْطِي انْطِبَاعاً بِأَنَّ الصَّفْحَةَ تَقُومُ بِعَمَلِيَّةٍ مُعَيَّنَةٍ، مِمَّا يُحَسِّنُ مِنْ تَجْرِبَةِ الْمُسْتَخْدِمِ.",
+        "caption_text": "تظهر الأزرار بتصميم عصري مع أيقونات متحركة توضح حالة التحميل للمستخدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "[Loading ↻]  [Loading ↻]  [Loading ↻]",
+        "highlight_lines": [],
+        "output": "يظهر الزر باللون الأخضر مع أيقونة تدور بشكل مستمر بجانب كلمة Loading.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_loading_buttons.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات تقنية",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ يَا صَدِيقِي أَنَّ اسْتِخْدَامَ كِلَاسِ fa-spin هُوَ السِّرُّ فِي حَرَكَةِ الدَّوَرَانِ. إِذَا كُنْتَ تُرِيدُ تَجَنُّبَ مَكْتَبَاتِ الْأَيُقُونَاتِ، يُمْكِنُكَ بِنَاءُ مُحَرِّكِ تَحْمِيلٍ خَاصٍّ بِكَ بِاسْتِخْدَامِ CSS Animations فَقَطْ.",
+        "caption_text": "نصائح إضافية حول استخدام fa-spin وإمكانية بناء محركات تحميل مخصصة باستخدام CSS Animations."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم fa-spin لأي أيقونة من Font Awesome",
+          "يمكنك تخصيص الألوان حسب هوية موقعك",
+          "تأكد من تحميل مكتبة الأيقونات بشكل صحيح",
+          "استكشف CSS Loader لإنشاء تأثيرات بدون مكتبات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_loading_buttons.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمَ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْأَيُقُونَاتِ. لَا تَتَرَدَّدُوا فِي مُرَاجَعَةِ دُرُوسِ CSS Buttons لِتَطْوِيرِ مَهَارَاتِكُمْ أَكْثَرَ. إِلَى اللِّقَاءِ.",
+        "caption_text": "شكرا لمتابعتكم. جربوا الأكواد بأنفسكم وشاركوا نتائجكم في تطوير واجهات المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا دروس CSS Buttons للمزيد من التنسيقات",
+          "جربوا تغيير الأيقونات في Font Awesome",
+          "طبقوا الأكواد في مشاريعكم الخاصة",
+          "تابعوا دورتنا التعليمية للمزيد من التقنيات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_loading_buttons.asp"
+      ]
+    }
+  ]
+}
