@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "343",
+  "title": "تصميم صور دائرية ومستديرة الزوايا باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام property المسمى border-radius في CSS لتعديل حواف الصور.",
+    "تطبيق قيمة محددة مثل 50 percent لجعل الصور دائرية الشكل تماما.",
+    "كتابة وتنسيق العناصر المرئية لاحتراف تصميم الويب."
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_rounded_images.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ تَنْسِيقِ CSS لِتَعَلُّمِ صَفَحَاتِ الْوِبّ. سَنَتَعَرَّفُ الْيَوْمَ عَلَى طَرِيقَةِ جَعْلِ الصُّوَرِ ذَاتَ زَوَايَا مُسْتَدِيرَةٍ أَوْ دَائِرِيَّةٍ بِشَكْلٍ كَامِلٍ لِإِضْفَاءِ لَمْسَةٍ جَمَالِيَّةٍ عَلَى مُصَمَّمَاتِكُمْ.",
+        "caption_text": "مرحبا بكم في درس تصميم صور دائرية ومستديرة الزوايا باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهلا بكم في درس تصميم الصور في CSS",
+          "سنتعلم كيفية تدوير زوايا الصور بطرق احترافية",
+          "تحسين المظهر البصري لصفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_rounded_images.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "المفاهيم والخصائص الأساسية",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ فِي هَذَا التَّوْجِيهِ الْفَنِّيِّ خَاصِّيَّةً هَامَّةً تُسَمَّى border-radius. هَذِهِ الْخَاصِّيَّةُ تُمَكِّنُنَا مِنْ تَحْدِيدِ مَدَى انْحِنَاءِ زَوَايَا العناصر الْمُخْتَلِفَةِ مِثْلَ الصور وَالصَّفَحَاتِ وَالْعَنَاصِرِ الْأُخْرَى بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "نستخدم خاصية border-radius لتحديد مدى انحناء زوايا العناصر والسيادة البصرية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على دور property المسمى border-radius",
+          "تغيير انحناء الزوايا للصور والعناصر",
+          "التحكم الكامل في أبعاد التصميم المرئي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_rounded_images.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كتابة هيكل HTML للصورة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ أَوَّلاً بِكِتَابَةِ عُنْصر img فِي لُغَةِ HTML مَعَ تَحْدِيدِ مَسْرَحِ الصُّورَةِ واسم الملف عبر src مِثْلَ img_avatar.png وَإِضَافَةِ alt لِوَصْفِ الصُّورَةِ بِدِقَّةٍ.",
+        "caption_text": "نكتب عنصر img في لغة HTML مع تحديد مسصر الصورة عبر src وإضافة alt."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <img src=\"img_avatar.png\" alt=\"Avatar\">\n  </body>\n</html>",
+        "highlight_lines": [
+          1
+        ],
+        "output": "Avatar Image Element",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_rounded_images.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "تطبيق زوايا مستديرة باستخدام CSS",
+      "narration": {
+        "spoken_text": "بَعْدَ كِتَابَةِ عنصر HTML، نُنْتَقِلُ إلَى تَنْسِيقِهِ بِواسِطَةِ لُغَةِ CSS. نَسْتَدْعِي عنصر img وَنُطَبِّقُ عَلَيْهِ border-radius مِثْلَ تَبْنِي قِيَمٍ بكسل مُحَدَّدَةٍ لِجَعْلِ الزَّوَايَا مُسْتَدِيرَةً.",
+        "caption_text": "نستدعي عنصر img في CSS ونطبق عليه border-radius لتدوير الحواف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  border-radius: 8px;\n}",
+        "highlight_lines": [
+          2
+        ],
+        "output": "Rounded corners applied",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_rounded_images.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "صنع صورة دائرية كاملة",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْنَا تَحْوِيلَ الصُّورَةِ إِلَى شَكْلٍ دَائِرِيٍّ تَمَاماً، فَإِنَّنَا نَضْبَعُ قِيمَةَ border-radius إلَى خمسين في المائة. هَذِهِ النِّسْبَةُ تَجْعَلُ الصُّورَةَ دَائِرِيَّةً بِمُجَرَّدِ تَطْبِيقِهَا.",
+        "caption_text": "ضبط قيمة border-radius إلى 50 percent سيجعل الصورة دائرية الشكل تماما."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  border-radius: 50%;\n}",
+        "highlight_lines": [
+          2
+        ],
+        "output": "Circular image output",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_rounded_images.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "يَجِبُ الانْتِبَاهُ عِنْدَ تَمْطِيطِ أَو تَنْسِيقِ الصُّوَرِ دَائِرِيّاً أَنْ تَكُونَ الصُّورَةُ مُرَبَّعَةَ الْأَبْعَادِ أَصْلًا. ذَلِكَ يَضْمَنُ عَدَمَ حُدُوثِ تَشَوُّهٍ بَصَرِيٍّ عِنْدَ تَطْبِيقِ خَاصِّيَّةِ border-radius.",
+        "caption_text": "تأكد من أن الصورة أصلا مربعة الأبعاد لضمان ظهورها بشكل دائري مثالي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام أبعاد متساوية للعرض والارتفاع في الصور",
+          "تجنب التشوه البصري عند تطبيق 50 percent",
+          "التحقق من توافق المتصفحات الحديثة مع الخاصية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_rounded_images.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُسْتَخْدِمُ خَاصِّيَّةَ border-radius فِي CSS لِتَعْدِيلِ زَوَايَا الصُّوَرِ وَجَعْلِهَا مُسْتَدِيرَةً أَوْ دَائِرِيَّةً بِكُلِّ بَسَاطَةٍ وَاحْتِرَافِيَّةٍ.",
+        "caption_text": "خلاصة الدرس: كيفية استخدام border-radius لتصميم صور دائرية ومستديرة في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلمنا إنشاء صور مستديرة الزوايا",
+          "تحويل الصور إلى أشكال دائرية باستخدام نسبة 50 percent",
+          "تطبيق الأكواد بكل سهولة واحترافية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_rounded_images.asp"
+      ]
+    }
+  ]
+}
