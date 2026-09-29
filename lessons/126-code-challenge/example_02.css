@@ -1,0 +1,10 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery img {
+  width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+}
