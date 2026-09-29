@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "183",
+  "title": "CSS 2D Transform Scale",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم دالة scale وتأثيرها على أبعاد العناصر",
+    "استخدام scaleX لتغيير العرض فقط",
+    "استخدام scaleY لتغيير الارتفاع فقط",
+    "تطبيق قيم التصغير والتكبير بدقة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_2dtransforms_scale.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة حول تحويلات scale",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ تَغْيِيرِ حَجْمِ العناصر بِاسْتِخْدَامِ تَقْنِيَّةِ scale ضِمْنَ 2D Transforms بِطَرِيقَةٍ احْتِرَافِيَّةٍ وَسَلِسَةٍ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS حول تحويلات scale للأبعاد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على دوال التحويل ثنائي الأبعاد",
+          "فهم دالة scale وتأثيرها على العرض والارتفاع",
+          "تطبيق قيم التكبير والتصغير على عناصر الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_scale.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "دالة scale الأساسية",
+      "narration": {
+        "spoken_text": "تَقُومُ دالة scale بِتَكْبِيرِ أَوْ تَصْغِيرِ حَجْمِ أَيّ عنصر فِيمَا يَتَعَلَّقُ بِالْعَرْضِ وَالِارْتِفَاعِ مَعاً، وَذَلِكَ حَسَبَ الْقِيَمِ أَوْ البرامِتِرَاتِ المُعْطَاةِ دَاخِلَ القوسين لِكُلِّ بُعْدٍ.",
+        "caption_text": "تقوم دالة scale بتكبر أو تصغير حجم العنصر حسب قيم العرض والارتفاع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستقبل دالة scale وسيطين width و height",
+          "تؤثر على أبعاد العنصر النسبية",
+          "تستخدم لتغيير الحجم دون التأثير على التخطيط"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_scale.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "مثال تكبير الأبعاد",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ الْبَرْمَجِيِّ، نَقُومُ بِزِيَادَةِ عَرْضِ عنصر div لِيُصْبِحَ ضِعْفَي الحجم الأصلي، وَزِيَادَةِ ارْتِفَاعِهِ لِيُصْبِحَ ثَلاثَةَ أَضْعَافٍ بِاسْتِخْدَامِ transform scale ب valores اثْنَيْنِ وَثَلاثَةٍ.",
+        "caption_text": "يوضح هذا المثال كيفية مضاعفة العرض مرتين والارتفاع ثلاث مرات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: scale(2, 3);\n}",
+        "highlight_lines": [],
+        "output": "Element width becomes 2x and height becomes 3x original size.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_scale.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "مثال تصغير الأبعاد",
+      "narration": {
+        "spoken_text": "كَمَا نَسْتَطِيعُ أَيْضاً تَصْغِيرَ العناصر بِاسْتِخْدَامِ قِيَمٍ عَشْرِيَّةٍ أقل من واحد. فِي هَذَا الكود، نَجْعَلُ عَرْضَ وَارْتِفَاعِ عنصر div يُسَاوِي نِصْفَ الْحَجْمِ الْأَصْلِيِّ عبر scale zero point five.",
+        "caption_text": "يمكن تصغير العناصر باستخدام قيم عشرية مثل نصف الحجم الأصلي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: scale(0.5, 0.5);\n}",
+        "highlight_lines": [],
+        "output": "Element width and height are reduced to half.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_scale.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "دالة scaleX للعرض فقط",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الآنَ إِلَى دالة أخرى مُهِمَّةٍ وَهِيَ scaleX. تَقُومُ هَذِهِ الدَّالَّةُ بِتَكْبِيرِ أَوْ تَصْغِيرِ عَرْضِ العنصر فَقَطْ دُونَ الْمَسَاسِ بِالِارْتِفَاعِ، كَمَا نَرَى فِي هَذَا الْمِثَالِ حيث يتضاعف العرض مرتين.",
+        "caption_text": "تقوم دالة scaleX بتغيير عرض العنصر فقط دون الارتفاع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: scaleX(2);\n}",
+        "highlight_lines": [],
+        "output": "Element width is doubled while height remains unchanged.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_scale.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "تصغير العرض بـ scaleX",
+      "narration": {
+        "spoken_text": "وَلِتَصْغِيرِ عَرْضِ عنصر div فَقَطْ إِلَى النِّصْفِ، نَسْتَخْدِمُ دالة scaleX مَعَ القيمة zero point five، وَهَذَا يُعْطِينَا تَحَكُّماً دَقِيقاً فِي التَّصْمِيمِ الأفقي.",
+        "caption_text": "نستخدم scaleX بالقيمة zero point five لتصغير عرض العنصر إلى النصف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: scaleX(0.5);\n}",
+        "highlight_lines": [],
+        "output": "Element width is halved while height stays the same.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_scale.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "دالة scaleY للارتفاع فقط",
+      "narration": {
+        "spoken_text": "عَلَى نَفْسِ النَّهْجِ، تَعْمَلُ دالة scaleY عَلَى تَكْبِيرِ أَوْ تَصْغِيرِ ارْتِفَاعِ العنصر فَقَطْ. هُنَا نُضَاعِفُ الارتفاع ثلاث مرات لِيُصْبِحَ الْعُنْصُرُ أطول عمودياً.",
+        "caption_text": "تقوم دالة scaleY بالتحكم في ارتفاع العنصر رأسيا فقط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: scaleY(3);\n}",
+        "highlight_lines": [],
+        "output": "Element height is tripled while width remains normal.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_scale.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة تحويلات scale",
+      "narration": {
+        "spoken_text": "فِي الختام، تُمَكِّنُنَا دوال scale وَ scaleX وَ scaleY مِنْ إجْرَاءِ تَحَوُّلَاتٍ بصرية رائعَةٍ تزيد من تفاعلية صفحات الويب. نلتقي في الدرس القادم لمزيد من إبداعات CSS مع المدرب محمود عبد الحميد.",
+        "caption_text": "خلاصة استخدام دوال scale و scaleX و scaleY في تصميم الويب الحديث."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دالة scale تعدل العرض والارتفاع معا",
+          "scaleX تخص العرض الأفقي فقط",
+          "scaleY تخص الارتفاع الرأسي فقط",
+          "قيم عشرية للتصغير وقيم صحيحة للتكبير"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms_scale.asp"
+      ]
+    }
+  ]
+}
