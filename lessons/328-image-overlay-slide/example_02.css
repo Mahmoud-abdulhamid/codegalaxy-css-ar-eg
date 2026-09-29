@@ -1,0 +1,10 @@
+.overlay {
+  height: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: .5s ease;
+}
+.container:hover .overlay {
+  height: 100%;
+}
