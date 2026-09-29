@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "130",
+  "title": "CSS Advanced Attribute Selectors",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية استخدام Advanced Attribute Selectors في لغة CSS",
+    "تطبيق محددات البدء والانتهاء والاحتواء في العناصر",
+    "تنسيق عناصر النماذج باستخدام Attribute Selectors بفعالية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_attribute_selectors_advanced.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة في Advanced Attribute Selectors",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى Advanced Attribute Selectors وَكَيْفَ نُطَبِّقُهَا لِاخْتِيَارِ الْعَنَاصِرِ بِناءً عَلَى أَمَاكِنِ وُجُودِ الْقِيَمِ الدَّاخِلِيَّه بِاِسْتِخْدَامِ أَهَمِّ Operators الخَاصَّه.",
+        "caption_text": "مرحبا بكم في درس Advanced Attribute Selectors للتعرف على كيفية استهداف العناصر باحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استهداف العناصر باحترافية في CSS",
+          "استخدام أحدث Operators المتقدمة",
+          "تطبيقات عملية على صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "فهم محدد البدء attribute value",
+      "narration": {
+        "spoken_text": "نَبْدَأُ مَعَ أَوَّلِ نَوْعٍ وَهُو Selector الَّذِي يَسْتَخْدِمُ رَمْز Caret. هَذَا النَّوْعُ يُسْتَخْدَمُ لِاِخْتِيَارِ كُلِّ الْعَنَاصِرِ الَّتِي تَبْدَأُ قِيمَةِ attribute فِيهَا بِقِيمَه مُحَدَّدَه بَدَأْنَا بِهَا الكِتَابَه.",
+        "caption_text": "يستخدم محدد البدء لاستهداف العناصر التي تبدأ قيمة Attribute فيها بنص محدد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد العناصر التي تبدأ بقيمة معينة",
+          "استخدام علامة داخل الأقواس",
+          "مفيد لاستهداف الـ classes المترابطة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تطبيق عملي على محدد البدء",
+      "narration": {
+        "spoken_text": "لَاحِظْ مَعِي فِي هَذَا المِثَالِ البَرْمَجِيِّ كَيْفَ نَكْتُبُ كُود CSS. نَحْنُ نَسْتَخْدِم class=\"top\" لِتَحْدِيدِ تْلِكَ العَنَاصِرِ وَتَطْبِيقِ لَوْنِ خَلْفِيَّه أَصْفَرَ عَلَيْهَا بَدْءاً مِنَ الحَرْفِ الأَوَّلِ.",
+        "caption_text": "مثال عملي يوضح تطبيق الـ selector لاستهداف الكلاسات التي تبدأ بكلمة top."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "[class^=\"top\"] {\n  background: yellow;\n}",
+        "highlight_lines": [],
+        "output": "يتم تطبيق خلفية صفراء على العناصر التي تبدأ كلاساتها بـ top",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "فهم محدد النهاية attribute value",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى نَوْعٍ آخَرَ مُهِمٍّ وَهُوَ الَّذِي يَسْتَخْدِمُ رَمْز Dollar sign. هَذَا Selector يُسْتَخْدَمُ لِاِخْتِيَارِ الأَعْمَالِ والعَنَاصِرِ الَّتِي تَنْتَهِي قِيمَةِ attribute فِيهَا بِقِيمَه نَصِّيَّه مُحَدَّدَه.",
+        "caption_text": "يستخدم محدد النهاية لاستهداف العناصر التي تنتهي قيمة Attribute بحرف أو كلمة معينة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد العناصر التي تنتهي بقيمة معينة",
+          "استخدام علامة قبل علامة التساوي",
+          "ممتاز للتحقق من نهايات الـ attributes"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "مثال تطبيقي على محدد النهاية",
+      "narration": {
+        "spoken_text": "شَاهِدْ هَذَا المِثَالَ البَرْمَجِيَّ بَدِيقَه. الكُودُ يَقُول class=\"test\" مِمَّا يَعْنِي أَنَّ أَيَّ عُنْصُرٍ يَنْتَهِي اسْمُ الكِلَاسِ الخَاصِّ بِهِ بِكَلِمَةِ test سَيْتِمُّ تَسْطِيرُهُ أَوْ تَلْوِينُ خَلْفِيَّتِهِ بِالأَصْفَرِ.",
+        "caption_text": "مثال تطبيقي لاستهداف الكلاسات التي تنتهي بكلمة test."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "[class$=\"test\"] {\n  background: yellow;\n}",
+        "highlight_lines": [],
+        "output": "تلوين العناصر التي تنتهي بكلمة test باللون الأصفر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "محدد الاحتواء attribute value",
+      "narration": {
+        "spoken_text": "نَصِلُ الآنَ إِلَى النَّوْعِ الثَّالِثِ وَهُوَ الَّذِي يَسْتَخْدِمُ رَمْز Asterisk. هَذَا Selector يُسْتَخْدَمُ لِاِخْتِيَارِ العَنَاصِرِ الَّتِي تَحْتَوِي قِيمَةِ attribute فِيهَا عَلَى نَصٍّ مُعَيَّنٍ فِي أَيِّ مَكَانٍ كَانَ.",
+        "caption_text": "يستخدم محدد الاحتواء لاستهداف العناصر التي تحتوي قيمتها على نص محدد في أي جزء منها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "[class*=\"te\"] {\n  background: yellow;\n}",
+        "highlight_lines": [],
+        "output": "تلوين العناصر التي تحتوي على الحرفين te في أي مكان داخل الكلاس",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "تنسيق عناصر النماذج باحترافية",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ تِلْكَ المَحَدِّدَاتِ أَيْضاً لِتَنْسِيقِ عَنَاصِرِ النَّمَاذِجِ بَدَأً مِنْ حُقُولِ الإِدْخَالِ. نَسْتَطِيعُ التَّمْيِيزَ بَيْنَ حَقْلِ النَّصِّ وَحَقْلِ الزِّرِّ بِوُضُوحٍ تَامٍّ.",
+        "caption_text": "استخدام محددات Attributes لتنسيق حقول النماذج وأزرار الإدخال."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "forms.css",
+        "code": "input[type=\"text\"] {\n  width: 150px;\n  padding: 6px;\n  margin-bottom: 10px;\n  background-color: pink;\n}\ninput[type=\"button\"] {\n  width: 100px;\n  padding: 6px;\n  background-color: lightgreen;\n}",
+        "highlight_lines": [],
+        "output": "تنسيق حقول النصوص بلون وردي والأزرار بلون أخضر فاتح",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors_advanced.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس والدعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي الخِتَامِ يَا أَصْدِقَائِي، تَعَلَّمْنَا كَيْفَ نُوَظِّف Advanced Attribute Selectors مِثْلَ البَدْءِ وَالنِّهَايَه وَالاِحْتِوَاءِ لِتَصْمِيمِ صَفْحَاتِ وِبٍّ رَائِعَه. نَنْصَحُكُمْ بِزِيَارَةِ الرَّابِطِ فِي الوَصْفِ لِلتَّجْرِبَه العَمَلِيَّه مَعَ تَحِيَّاتِ مُحْمُودِ عَبْدِالحَمِيدِ.",
+        "caption_text": "خلاصة درس محددات Attributes المتقدمة في CSS ودعوة للتطبيق العملي المستمر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مراجعة محددات البدء والانتهاء",
+          "تنسيق النماذج بدقة عالية",
+          "التطبيق العملي المستمر للأكواد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_attribute_selectors_advanced.asp"
+      ]
+    }
+  ]
+}
