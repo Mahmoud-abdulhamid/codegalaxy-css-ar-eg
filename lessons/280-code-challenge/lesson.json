@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "280",
+  "title": "CSS Responsive Images Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار الفهم العملي لمفاهيم Responsive Images في لغة CSS",
+    "تطبيق خصائص CSS لجعل الصور تتكيف مع مختلف أحجام الشاشات",
+    "فهم أهمية استخدام max-width بنسبة مئوية مع خاصية height التلقائية",
+    "كتابة واختبار أكواد CSS نظيفة وفعالة لصور الويب المتجاوبة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_rwd_images.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة تحدي الصور المتجاوبة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي العَمَلِيِّ مِنْ دَوْرَةِ CSS، سَنَتَحَدَّى أَنْفُسَنَا اليوم فِي تَطْبِيقِ مَفَاهِيمِ Responsive Images بِكُفَاءَةٍ عَالِيَةٍ لِضَمَانِ ظُهُورِ الصُّوَرِ بِشَكْلٍ مِثَالِيٍّ عَلَى كُلِّ الأَجْهِزَةِ وَالشَّاشَاتِ.",
+        "caption_text": "مرحبا بكم في تحدي الصور المتجاوبة Responsive Images ضمن دورة CSS لتطوير الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبار المهارات العملية في Responsive Images",
+          "ضمان توافق الصور مع الشاشات المختلفة",
+          "تطبيق أفضل الممارسات في تصميم الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_images.asp"
+      ]
+    },
+    {
+      "id": "scene_2_concepts",
+      "title": "القواعد الأساسية للصور المتجاوبة",
+      "narration": {
+        "spoken_text": "لِكَيْ نَجْعَلَ أيَّ صُورَةٍ تَتَجَاوَبُ مَعَ حَجْمِ الشَّاشَةِ، نَسْتَخْدِمُ خَاصِيَّةَ max-width مَعَ قِيمَةِ 100، وَنَضْبِطُ خَاصِيَّةَ height عَلَى auto، هَذَا يَجْعَلُ الصُّورَةَ تَتَمَدَّدُ أَوْ تَنْكمِشُ بِسَلاسَةٍ دَاخِلَ الحَاوِيَةِ.",
+        "caption_text": "استخدام max-width بقيمة 100 مع height بقيمة auto يجعل الصور مرنة ومتجاوبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "خاصية max-width: 100 تمنع خروج الصورة عن حدود الحاوية",
+          "خاصية height: auto تحافظ على أبعاد الصورة الأصلية",
+          "تجنب تشوه الصور عند تغير مقاسات المتصفح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_images.asp"
+      ]
+    },
+    {
+      "id": "scene_3_code_setup",
+      "title": "كتابة هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى كِتَابَةِ كُودِ CSS الفِعْلِيِّ لِهَذَا التَّحَدِّي، حَيْثُ نَسْتَهْدِفُ عُنْصَرَ img المَوْجُودَ دَاخِلَ صَفْحَةِ HTML لِتَبْدِيقِ قَوَاعِدِ التَّجَاوُبِ عَلَيْهِ بِدِقَّةٍ وَسُهُولَةٍ.",
+        "caption_text": "كتابة كود CSS لاستهداف عناصر الصور وتطبيق قواعد Responsive Images."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "challenge.css",
+        "code": "img {\n  max-width: 100%;\n  height: auto;\n  display: block;\n}",
+        "highlight_lines": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "output": "تم تطبيق التجاوب بنجاح على الصورة داخل المتصفح",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_images.asp"
+      ]
+    },
+    {
+      "id": "scene_4_code_breakdown",
+      "title": "شرح تفصيلي لأسطر الكود",
+      "narration": {
+        "spoken_text": "لِنُحَلِّلِ الأَسْطَرَ التَّالِيَةَ، خَاصِيَّةُ max-width بِنِسْبَةِ مِئَةٍ فِي المِئَةِ تَعْنِي أَلَّا تَتَجَاوَزَ عَرْضَ حَاوِيَتِهَا، وَ height ب auto تَضْمَنُ الحِفَاظَ عَلَى نِسْبَةِ الأَبْعَادِ، أَمَّا display ب block فَتُزِيلُ الفَرَاغَاتِ السُّفْلِيَّةِ.",
+        "caption_text": "تحليل أسطر كود CSS ووظيفة كل خاصية في تحقيق تجاوب مثالي للصورة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "max-width: 100 تحدد أقصى عرض بنسبة مئوية دقيقة",
+          "height: auto تحافظ على التناسق الهندسي للصورة",
+          "display: block تلغي الفراغات غير المۆرغوبة تحت الصور"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_images.asp"
+      ]
+    },
+    {
+      "id": "scene_5_output_preview",
+      "title": "معاينة المخرجات المرئية",
+      "narration": {
+        "spoken_text": "عِنْدَ تَصْغِيرِ نَافِذَةِ مَتْصَفِحِ الوِبّ، تُرَى الصُّورَةُ كَيْفَ تَتَقَلَّصُ بِشَكْلٍ مِثَالِيٍّ دُونَ أَنْ تَحْدُثَ أَيُّ مَشَاكِلَ فِي العَرْضِ أَوْ خُرُوجِ العَنَاصِرِ عَنِ الشَّاشَةِ.",
+        "caption_text": "معاينة تفاعلية تظهر استجابة الصورة لتغيرات حجم الشاشة والمتصفح بسلاسة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "preview.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"landscape.jpg\" alt=\"Nature\">\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Container width scales -> Image scales automatically maintaining aspect ratio.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_images.asp"
+      ]
+    },
+    {
+      "id": "scene_6_advanced_tips",
+      "title": "أفضل الممارسات والنصائح المتقدمة",
+      "narration": {
+        "spoken_text": "مِنْ أَجْضَلِ المُمَارَسَاتِ أَيْضاً استِخْدَامُ العُنْصَرِ picture العَرَبِيِّ أَوْ الإِنْجِلِيزِيِّ المَعْرُوفِ ب picture element مَعَ media queries لِتَوْفِيرِ أَحْجَامِ صُوَرٍ مُخْتَلِفَةٍ تَبَعاً لِعَرْضِ الجِهَازِ لِتَحْسِينِ الأَدَاءِ.",
+        "caption_text": "استخدام عناصر متقدمة مثل picture لتحسين أداء تحميل صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام عنصر picture لتحميل صور مخصصة حسب الشاشة",
+          "تحسين سرعة تحميل مواقع الويب للأجهزة الذكية",
+          "تقليل استهلاك بيانات الإنترنت للمستخدمين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_images.asp"
+      ]
+    },
+    {
+      "id": "scene_7_summary",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "هَكَذَا نَكُونُ قَدْ أَتْمَمْنَا تَحَدِّي Responsive Images بنَجَاحٍ كَامِلٍ، أَدْعُوكُمْ لِتَجْرِبَةِ الأَكْوادِ بِمَنْفَصِلٍ وَزِيَارَةِ الرَّابِطِ فِي الوَصْفِ لِلْمَزِيدِ مِنَ التَّدْرِيبَاتِ المُتَقَدِّمَةِ مَعَ المُدَرِّبِ مَحْمُودِ عَبْدِالحَمِيدِ.",
+        "caption_text": "خلاصة تحدي الصور المتجاوبة مع دعوة لتطبيق الأكواد وزيارة روابط المصدر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنجاز تحدي Responsive Images في لغة CSS",
+          "فهم خصائص max-width و height المتجاوبة",
+          "تابعونا للمزيد من الدروس العملية مع محمود عبدالحميد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_rwd_images.asp"
+      ]
+    }
+  ]
+}
