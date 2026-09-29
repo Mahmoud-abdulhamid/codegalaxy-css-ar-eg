@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "318",
+  "title": "تصميم Button Group باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تجميع العناصر باستخدام div",
+    "تطبيق خصائص CSS لإنشاء Button Group",
+    "التحكم في التنسيق باستخدام float و border",
+    "إضافة تأثيرات تفاعلية باستخدام hover"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_button_group.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Button Group",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ Button Group احْتِرَافِيٍّ لِتَجْمِيعِ الْأَزْرَارِ فِي صَفْحَةِ الْوِبّ، وَتَنْسِيقِهَا بِشَكْلٍ مُتَّصِلٍ وَجَذَّابٍ.",
+        "caption_text": "مرحبا بكم في درس تصميم Button Group باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجميع الأزرار في صف واحد",
+          "استخدام CSS للتحكم في المظهر",
+          "تحسين تجربة المستخدم في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للـ Button Group",
+      "narration": {
+        "spoken_text": "لِتَنْفِيذِ هَذِهِ الْفِكْرَةِ، نَحْتَاجُ إِلَى اسْتِخْدَامِ Element مِنْ نَوْعِ div مَعَ Attribute يُسَمَّى class بِقِيمَةِ btn-group، وَدَاخِلَهُ نَضَعُ مَجْمُوعَةً مِنَ ال button Elements لِتَشْكِيلِ الْأَزْرَارِ.",
+        "caption_text": "الهيكل البرمجي يعتمد على div حاوية ومجموعة من عناصر button."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"btn-group\">\n      <button>Apple</button>\n      <button>Samsung</button>\n      <button>Sony</button>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق الأزرار باستخدام CSS",
+      "narration": {
+        "spoken_text": "نَقُومُ الْآنَ بِتَنْسِيقِ ال button دَاخِلَ ال btn-group. نَسْتَخْدِمُ float لِجَعْلِ الْأَزْرَارِ بِجَانِبِ بَعْضِهَا، وَنُحَدِّدُ background-color وَ border لِإِعْطَائِهَا مَظْهَراً مُتَّصِلاً وَمُنَسَّقاً.",
+        "caption_text": "تنسيق الأزرار باستخدام float وخصائص CSS الأساسية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn-group button {\n  background-color: #04AA6D;\n  border: 1px solid green;\n  color: white;\n  padding: 10px 24px;\n  cursor: pointer;\n  float: left;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group.asp"
+      ]
+    },
+    {
+      "id": "advanced_css",
+      "title": "تحسين التنسيق ومنع تكرار الحدود",
+      "narration": {
+        "spoken_text": "لِمَنْعِ ظُهُورِ حُدُودٍ مُزْدَوِجَةٍ بَيْنَ الْأَزْرَارِ، نَسْتَخْدِمُ ال selector الْمُسَمَّى not(:last-child) لِإِلْغَاءِ ال border-right عَنِ الْأَزْرَارِ غَيْرِ الْأَخِيرَةِ، مِمَّا يَمْنَحُهَا مَظْهَراً مُتَّصِلاً تَمَاماً.",
+        "caption_text": "استخدام not(:last-child) لإزالة الحدود المتداخلة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn-group button:not(:last-child) {\n  border-right: none;\n}\n.btn-group:after {\n  content: \"\";\n  clear: both;\n  display: table;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group.asp"
+      ]
+    },
+    {
+      "id": "hover_effect",
+      "title": "إضافة تأثيرات التفاعل",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الصَّفْحَةِ أَكْثَرَ تَفَاعُلِيَّةً، نُضِيفُ تَأْثِيرَ hover لِتَغْيِيرِ لَوْنِ الْخَلْفِيَّةِ عِنْدَ مُرُورِ مُؤَشِّرِ الْفَأْرَةِ فَوْقَ الزِّرِّ، وَهَذَا يُعَزِّزُ مِنْ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي التَّعَامُلِ مَعَ الْأَزْرَارِ.",
+        "caption_text": "إضافة تأثير hover لتحسين التفاعل البصري."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn-group button:hover {\n  background-color: #3e8e41;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group.asp"
+      ]
+    },
+    {
+      "id": "responsive_design",
+      "title": "جعل الأزرار متجاوبة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَحْدِيدُ عَرْضِ الْأَزْرَارِ بِاسْتِخْدَامِ النِّسَبِ الْمِئَوِيَّةِ لِتَكُونَ مُتَجَاوِبَةً مَعَ أَحْجَامِ الشَّاشَاتِ الْمُخْتَلِفَةِ، كَمَا نَرَى فِي هَذَا الْمِثَالِ حَيْثُ نُقَسِّمُ الْعَرْضَ عَلَى ثَلَاثَةِ أَوْ أَرْبَعَةِ أَزْرَارٍ.",
+        "caption_text": "استخدام النسب المئوية لجعل الأزرار متجاوبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"btn-group\" style=\"width:100%\">\n      <button style=\"width:33.3%\">Apple</button>\n      <button style=\"width:33.3%\">Samsung</button>\n      <button style=\"width:33.3%\">Sony</button>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ Button Group احْتِرَافِيٍّ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْأَحْجَامِ لِتَتَنَاسَبَ مَعَ مَشَارِيعِكُمُ الْخَاصَّةِ. شُكْراً لِمُتَابَعَتِكُمْ وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خاتمة الدرس ودعوة للتطبيق العملي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجع الأكواد البرمجية",
+          "جرب تغيير الألوان والقياسات",
+          "استمر في ممارسة مهارات CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_button_group.asp"
+      ]
+    }
+  ]
+}
