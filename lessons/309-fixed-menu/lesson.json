@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "309",
+  "title": "تصميم قائمة تنقل ثابتة باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام position: fixed لإنشاء قائمة تنقل ثابتة",
+    "التحكم في موضع القائمة باستخدام top و bottom",
+    "معالجة تداخل العناصر باستخدام margin",
+    "تطبيق التنسيقات الأساسية على الروابط داخل القائمة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_fixed_menu.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول القوائم الثابتة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ قَائِمَةِ تَنَقُّلٍ ثَابِتَةٍ، تُعْرَفُ بِ Fixed Menu، وَهِيَ تَبْقَى ظَاهِرَةً فِي أَعْلَى أَوْ أَسْفَلِ صَفْحَةِ الْوِبّ أَثْنَاءَ التَّمْرِيرِ.",
+        "caption_text": "سنتعلم اليوم كيفية بناء قائمة تنقل ثابتة Fixed Menu تبقى ظاهرة أثناء التمرير في صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "القائمة الثابتة تبقى في مكانها أثناء التمرير",
+          "تستخدم خاصية position: fixed",
+          "تعتبر عنصرا أساسيا في تصميم تجربة المستخدم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_menu.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد البرمجية الأساسية",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ هَذَا التَّأْثِيرِ، نَسْتَخْدِمُ خَاصِيَّةَ position بِقِيمَةِ fixed. هَذَا يَجْعَلُ الْعُنْصُرَ خَارِجَ تَدَفُّقِ الصَّفْحَةِ الطَّبِيعِيِّ. كَمَا نَحْتَاجُ لِتَحْدِيدِ top أَوْ bottom لِتَثْبِيتِ الْمَوْقِعِ بِدِقَّةٍ، وَضَبْطِ width إِلَى مِئَةٍ بِالْمِئَةِ.",
+        "caption_text": "نستخدم خاصية position بقيمة fixed لجعل العنصر ثابتا، مع تحديد top أو bottom لضبط موقعه."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "position: fixed يثبت العنصر في الشاشة",
+          "top: 0 يثبت القائمة في الأعلى",
+          "bottom: 0 يثبت القائمة في الأسفل",
+          "width: 100 لضمان تغطية العرض بالكامل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_menu.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML للقائمة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكَلَاسِ navbar لِاحْتِوَاءِ الرَّوَابِطِ، وَ div آخَرَ بِكَلَاسِ main لِلْمُحْتَوَى. هَذَا التَّقْسِيمُ يُسَاعِدُنَا فِي تَطْبِيقِ التَّنْسِيقَاتِ بِشَكْلٍ مُنْفَصِلٍ وَمُنَظَّمٍ لِكُلِّ قِسْمٍ.",
+        "caption_text": "نستخدم div بكلاس navbar للروابط و div بكلاس main للمحتوى الرئيسي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"navbar\">\n      <a href=\"#home\">Home</a>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n    </div>\n    <div class=\"main\">\n      <p>Some text here..</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_menu.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق القائمة الثابتة",
+      "narration": {
+        "spoken_text": "فِي CSS، نَقُومُ بِتَنْسِيقِ navbar. نَضْبِطُ background-color وَنُحَدِّدُ position بِ fixed. لَا تَنْسَوْا أَنَّ الْعُنْصُرَ الثَّابِتَ قَدْ يُغَطِّي الْمُحْتَوَى، لِذَا نُضِيفُ margin-top لِقِسْمِ main لِتَجَنُّبِ هَذَا التَّدَاخُلِ.",
+        "caption_text": "نقوم بتنسيق navbar وتحديد position: fixed، مع إضافة margin-top للمحتوى لتجنب التداخل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar {\n  background-color: #333;\n  position: fixed;\n  top: 0;\n  width: 100%;\n}\n.main {\n  margin-top: 30px;\n}\n.navbar a {\n  float: left;\n  padding: 14px 16px;\n  text-decoration: none;\n  color: #f2f2f2;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_menu.asp"
+      ]
+    },
+    {
+      "id": "bottom_menu",
+      "title": "إنشاء قائمة سفلية",
+      "narration": {
+        "spoken_text": "لِإِنْشَاءِ قَائِمَةٍ ثَابِتَةٍ فِي أَسْفَلِ الصَّفْحَةِ، نُغَيِّرُ top إِلَى bottom بِقِيمَةِ صِفْرٍ. وَبَدَلًا مِنْ margin-top، نُضِيفُ margin-bottom لِقِسْمِ main لِضَمَانِ عَدَمِ اخْتِفَاءِ أَيِّ جُزْءٍ مِنَ الْمُحْتَوَى خَلْفَ الْقَائِمَةِ.",
+        "caption_text": "للقائمة السفلية نستخدم bottom: 0 ونضيف margin-bottom للمحتوى."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar {\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n.main {\n  margin-bottom: 30px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_menu.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ التَّحَكُّمِ فِي مَوْقِعِ الْعَنَاصِرِ بِاسْتِخْدَامِ position. تَذَكَّرُوا دَائِماً أَنَّ التَّخْطِيطَ الْجَيِّدَ يَتَطَلَّبُ انْتِبَاهَكُمْ لِ margin لِتَجَنُّبِ التَّدَاخُلِ. جَرِّبُوا هَذِهِ الْأَكْوَادَ بِنَفْسِكُمْ لِتَرَوْا النَّتَائِجَ الرَّائِعَةَ.",
+        "caption_text": "تعلمنا التحكم في مواقع العناصر باستخدام position وتجنب التداخل باستخدام margin."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position: fixed للتثبيت",
+          "ضبط top أو bottom للموقع",
+          "استخدام margin لتجنب تداخل المحتوى",
+          "تجربة الأكواد هي مفتاح الإتقان"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_fixed_menu.asp"
+      ]
+    }
+  ]
+}
