@@ -3,6 +3,8 @@
   "lesson_id": "51",
   "title": "CSS Text Decoration",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم خاصية text-decoration للتحكم في خطوط النصوص",
     "استخدام text-decoration-line لتحديد نوع الخط",
