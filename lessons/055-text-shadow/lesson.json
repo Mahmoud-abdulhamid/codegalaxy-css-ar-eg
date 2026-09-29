@@ -3,6 +3,8 @@
   "lesson_id": "55",
   "title": "CSS Text Shadow",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم خاصية text-shadow في CSS",
     "التحكم في الإزاحة الأفقية والعمودية للظل",
