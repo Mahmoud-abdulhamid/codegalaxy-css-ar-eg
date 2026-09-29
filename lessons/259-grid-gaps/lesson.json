@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "259",
+  "title": "CSS Grid Gap",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعريف مفهوم gaps أو gutters في CSS Grid",
+    "استخدام خاصية column-gap للتحكم بالفراغات بين الأعمدة",
+    "استخدام خاصية row-gap للتحكم بالفراغات بين الصفوف",
+    "استخدام خاصية gap المختصرة بقيمة واحدة أو قيمتين"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid_gap.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة عن CSS Grid Gaps",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِضَافَةِ الْمَسَافَاتِ وَالْفَرَاغَاتِ بَيْنَ العناصر بَاسْتِخْدَامِ مَفْهُومِ CSS Grid Gaps فِي صَفَحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Grid Gaps للتعرف على طريقة إضافة المسافات والفراغات بين العناصر في الشبكة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم التحكم بالمسافات في CSS Grid",
+          "فهم مفهوم gaps أو gutters",
+          "تحسين المظهر البصري لتصميم صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_gap.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "ما هي الفراغات في Grid",
+      "narration": {
+        "spoken_text": "تُسَمَّى الْمَسَافَاتُ بَيْنَ الصُّفُوفِ وَالْأَعْمِدَةِ فِي عُنْصَرِ الْحَاوِيَةِ ب gaps أَوْ gutters. هَذِهِ الْفَرَاغَاتُ تُنْشَأُ بَيْنَ عَنَاصِرِ الشَّبَكَةِ فَقَطْ وَلَيْسَ عَلَى الْحُوَافِ الْخَارِجِيَّةِ لِلْحَاوِيَةِ بِمَا يُعْرَفُ بِ container.",
+        "caption_text": "تسمى المسافات بين الصفوف والأعمدة في الحاوية بـ gaps وتنشأ حصرا بين عناصر الشبكة وليس على الحواف الخارجية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "المسافات تسمى gaps أو gutters",
+          "تنشأ بين الصفوف والأعمدة داخل الشبكة",
+          "الحجم الافتراضي للفاصل هو صفر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_gap.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "خاصية column-gap",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ لِدِرَاسَةِ خَاسِّيَةِ column-gap. تُحَدِّدُ هَذِهِ الْخَاصِيَةُ الْمَسَافَةَ الْفَاصِلَةَ بَيْنَ الْأَعْمِدَةِ فِي الشَّبَكَةِ، مِمَّا يُسَاعِدُ فِي تَنْظِيمِ التَّصْمِيمِ بُدِقَّةٍ عَالِيَةٍ دَاخِلَ الْوِبّ.",
+        "caption_text": "تحدد خاصية column-gap المسافة الفاصلة بين الأعمدة في الشبكة بدقة وسهولة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  column-gap: 50px;\n}",
+        "highlight_lines": [],
+        "output": "يتم إنشاء فراغ بقوة 50 بكسل بين أعمدة الشبكة فقط دون الصفوف.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_gap.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "خاصية row-gap",
+      "narration": {
+        "spoken_text": "وَبِالطَّرِيقَةِ نَفْسِهَا، نَسْتَخْدِمُ خَاصِيَةَ row-gap لِتَحْدِيدِ الْمَسَافَةِ بَيْنَ الصُّفُوفِ فِي الشَّبَكَةِ. هَذَا يَمْنَحُنَا تَحَكُّماً كَامِلاً فِي التَّبَاعُدِ الرَّأْسِيِّ لِلْعَنَاصِرِ بَدُونِ تَحْرِيكِ حُوَافِ الْحَاوِيَةِ الرَّئِيسِيَّةِ.",
+        "caption_text": "تستخدم خاصية row-gap لتحديد المسافة الفاصلة بين الصفوف في الشبكة بشكل مستقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  row-gap: 50px;\n}",
+        "highlight_lines": [],
+        "output": "يتم تطبيق مسافة 50 بكسل بين صفوف الشبكة رأسياً.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_gap.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "خاصية gap المختصرة بقيمة واحدة",
+      "narration": {
+        "spoken_text": "تُعَدُّ خَاصِيَةُ gap خَاصِيَةً مُخْتَصَرَةً لِكُلٍّ مِنْ row-gap وَ column-gap. عِنْدَ إِعْطَاءِ قِيمَةٍ وَاحِدَةٍ فَقَطْ لَهَا، فَإِنَّهَا تُطَبِّقُ الْمَسَافَةَ نَفْسَهَا عَلَى الصُّفُوفِ وَالْأَعْمِدَةِ مَعاً بِكُفَاءَةٍ عَالِيَةٍ.",
+        "caption_text": "تعتبر خاصية gap اختصارا لخاصيتي row-gap و column-gap وعند إعطاء قيمة واحدة تطبق على الصفوف والأعمدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  gap: 50px;\n}",
+        "highlight_lines": [],
+        "output": "تطبق مسافة 50 بكسل على جميع الصفوف والأعمدة في نفس الوقت.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_gap.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "خاصية gap بقيمتين مختلفتين",
+      "narration": {
+        "spoken_text": "إِذَا قَمْنَا بِتَمْوِيلِ خَاصِيَةِ gap بِقِيمَتَيْنِ، فَالْقِيمَةُ الْأُولَى تُحَدِّدُ row-gap بَيْنَمَا تُحَدِّدُ الْقِيمَةُ الثَّانِيَةُ column-gap. هَذَا يُعْطِينَا مُرُونَةً كَبِيرَةً فِي تَمْصِيمِ التَّخْطِيطَاتِ.",
+        "caption_text": "إذا تم توفير قيمتين لخاصية gap، فالأولى للصفوف والثانية للأعمدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  gap: 30px 100px;\n}",
+        "highlight_lines": [],
+        "output": "مسافة الصفوف 30 بكسل ومسافة الأعمدة 100 بكسل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_gap.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "خلاصة وخاتمة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ gaps لِتَنْظِيمِ الشَّبَكَاتِ بِوَاسِطَةِ column-gap وَ row-gap وَالصِّيغَةِ الْمُخْتَصَرَةِ gap. نَنْصَحُكُمْ بِتَجْرِبَةِ هَذِهِ الْأَكْوادِ بِنَفْسِكُمْ لِإِتْقَانِهَا.",
+        "caption_text": "خلاصة الدرس: استخدام properties المختلفة للتحكم بالفراغات في CSS Grid بمرونة تامة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام column-gap للفراغات الأفقية",
+          "استخدام row-gap للفراغات الرأسية",
+          "استخدام gap كخاصية مختصرة بقيمة أو قيمتين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid_gap.asp"
+      ]
+    }
+  ]
+}
