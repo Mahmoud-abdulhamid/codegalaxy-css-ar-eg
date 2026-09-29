@@ -1,0 +1,9 @@
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: myAnimation;
+  animation-duration: 4s;
+  animation-direction: reverse;
+}
