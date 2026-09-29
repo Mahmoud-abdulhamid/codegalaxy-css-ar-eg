@@ -1,0 +1,12 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip::after {
+  content: "Tooltip Text";
+  visibility: hidden;
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
