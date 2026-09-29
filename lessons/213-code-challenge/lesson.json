@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "213",
+  "title": "CSS Image Shapes Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار الفهم العملي لخصائص CSS Image Shapes",
+    "استخدام border-radius لإنشاء أشكال هندسية",
+    "تطبيق clip-path لقص الصور بأشكال مخصصة",
+    "تنسيق الصور باحترافية في صفحات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_imageshapes.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro_challenge",
+      "title": "مقدمة تحدي تشكيل الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ مِنْ دَوْرَةِ CSS، حَيْثُ سَنَخُوضُ تَحَدِّيَ CSS Image Shapes لِاخْتِبَارِ مَهَارَاتِنَا فِي تَشكِيلِ الصُّوَرِ بِطُرُقٍ مُبْتَكَرَةٍ عَلَى الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس اليوم لاختبار مهارات تشكيل الصور باستخدام CSS Image Shapes."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مرحبا بكم في تحدي CSS Image Shapes",
+          "اختبار المهارات العملية في تشكيل الصور",
+          "تطبيق خصائص CSS المتقدمة على عناصر الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imageshapes.asp"
+      ]
+    },
+    {
+      "id": "challenge_concept",
+      "title": "مفاهيم تشكيل الصور الأساسية",
+      "narration": {
+        "spoken_text": "يَهْدِفُ هَذَا التَّحَدِّي إِلَى تَقْيِيمِ فَهْمِنَا لِكَيْفِيَّةِ تَعْدِيلِ مَظْهَرِ الصُّوَرِ، وَاسْتِخْدَامِ الْخَصَائِصِ الْمُتَقَدِّمَةِ لِتَحْوِيلِ الصُّوَرِ الْمُرَبَّعَةِ إِلَى دَوَائِرَ أَوْ أَشْكَالٍ هَنْدِسِيَّةٍ مُتَنَوِّعَةٍ.",
+        "caption_text": "يهدف التحدي إلى تقييم فهمنا لكيفية تعديل مظهر الصور وتحويلها إلى أشكال هندسية متنوعة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تقييم فهم مظهر وتشكيل الصور في CSS",
+          "تحويل الصور المربعة إلى دوائر وأشكال هندسية",
+          "تطبيق الخصائص البرمجية بدقة عالية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imageshapes.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل كود CSS لتشكيل الصور",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ لِدِرَاسَةِ كُودِ CSS الْمُسْتَخْدَمِ لِتَحْقِيقِ هَذِهِ الأَشْكَالِ، حَيْثُ نَكْتُبُ قَوَاعِدَ تَنْتَسِبُ إِلَى عَنصرِ img لِتَحْدِيدِ الأَبْعَادِ وَخَصَائِصِ التَّشْكِيلِ بِدِقَّةٍ كَامِلَةٍ.",
+        "caption_text": "ندرس الآن كود CSS المستخدم لتحديد أبعاد وعناصر الصور وتشكيلها بدقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}",
+        "highlight_lines": [],
+        "output": "يتم ضبط أبعاد الصورة إلى 200 بكسل وتغطية المساحة المخصصة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imageshapes.asp"
+      ]
+    },
+    {
+      "id": "border_radius_detail",
+      "title": "شرح خاصية border-radius",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ خَاصِيَّةَ border-radius بِقِيمَةِ خمسين بالمائة أي خمسين بالمائة، لِتَحْوِيلِ الصُّوَرِ إِلَى دَوَائِرَ كَامِلَةٍ، حَيْثُ تَضْمَنُ النِّسْبَةُ الْمِئَوِيَّةُ الدِّقَّةَ فِي تَدْوِيرِ الزَّوَايَا.",
+        "caption_text": "نستخدم خاصية border-radius بالقيمة 50 لتحويل الصور إلى دوائر كاملة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img.rounded {\n  border-radius: 50%;\n}",
+        "highlight_lines": [],
+        "output": "تتحول الصورة المربعة إلى شكل دائري مثالي.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imageshapes.asp"
+      ]
+    },
+    {
+      "id": "clip_path_detail",
+      "title": "شرح خاصية clip-path",
+      "narration": {
+        "spoken_text": "لِصُنْعِ أَشْكَالٍ أَكْثَرَ تَقَدُّم، نَسْتَخْدِمُ خَاصِيَّةَ clip-path مَعَ دَالَّةِ circle وبقيمة خمسين بالمائة داخل القوس هكذا circle(50) لِقَصِّ الصُّوَرِ بِشَكْلٍ دِرَامِيٍّ جَذَّابٍ.",
+        "caption_text": "نستخدم خاصية clip-path مع دالة circle(50) لقص الصور بأشكال متقدمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img.clipped {\n  clip-path: circle(50%);\n}",
+        "highlight_lines": [],
+        "output": "يتم قص الصورة بدقة حسب مسار الدائرة المحددة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imageshapes.asp"
+      ]
+    },
+    {
+      "id": "visual_output_review",
+      "title": "معاينة المخرجات المرئية في المتصفح",
+      "narration": {
+        "spoken_text": "تُنَفِّذُ مَتَاجِرُ الْوِبّ وَالْمُتَصَفِّحَاتُ هَذِهِ الأَكْوَدَ لِتَعْرِضَ لَنَا النَّتِيجَةَ الْمِرْئِيَّةَ الْمِثَالِيَّةَ، حَيْثُ تَظْهَرُ الصُّوَرُ مُشَكَّلَةً بِدِقَّةٍ عَالِيَةٍ تُعَزِّزُ جَمَالِيَّةَ الصَّفْحَةِ.",
+        "caption_text": "تعرض المتصفحات النتيجة المرئية لتظهر الصور مشكلة بدقة عالية تعزز جمالية الصفحة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "معاينة النتيجة المرئية في متصفحات الويب",
+          "التحقق من توافق خصائص CSS مع المعايير",
+          "ظهور الأشكال الهندسية بوضوح تام للمستخدمين"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imageshapes.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات البرمجية في تشكيل الصور",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ الأَشْكَالِ عَلَى الصُّوَرِ، احْرِصْ دَائِماً عَلَى اسْتِخْدَامِ خَاصِيَّةِ object-fit مَعَ وِحْدَاتِ قِيَاسٍ دَقِيقَةٍ، لِتَفَادِي تَشْوِهِ النَّسَبِ الْبَنْيَوِيَّةِ لِلصُّوَرِ.",
+        "caption_text": "احرص دائما على استخدام object-fit ووحدات قياس دقيقة لتفادي تشوه الصور."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام object-fit للحفاظ على تناسق الصور",
+          "الالتزام بوحدات القياس الصحيحة والنسب المئوية",
+          "اختبار التوافقية عبر مختلف أحجام الشاشات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imageshapes.asp"
+      ]
+    },
+    {
+      "id": "summary_and_outro",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اجْتِيَازِ تَحَدِّي CSS Image Shapes بِنَجَاحٍ، نَنْتَظِرُ تَجَارِبَكُمْ وَنَلْقَاكُمْ فِي الدَّرْسِ الْقَادِمِ مَعَ مُحَمَّدِ عَبْدِالْحَمِيد.",
+        "caption_text": "تعرفنا على كيفية اجتياز تحدي CSS Image Shapes بنجاح وننتظر تجاربكم في الدرس القادم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص شامل لمهارات تشكيل الصور في CSS",
+          "أهمية تطبيق التحديات العملية لترسيخ المعرفة",
+          "تابعوا الدورة معنا للمزيد من المهارات المتقدمة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_imageshapes.asp"
+      ]
+    }
+  ]
+}
