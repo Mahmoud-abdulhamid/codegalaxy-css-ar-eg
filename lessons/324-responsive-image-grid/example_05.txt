@@ -1,0 +1,3 @@
+Desktop: 4 Columns
+Tablet: 2 Columns
+Mobile: 1 Column (Full Width)
