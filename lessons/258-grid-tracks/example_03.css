@@ -1,0 +1,6 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* أو */
+  grid-template-columns: minmax(80px, 1fr) 150px 150px;
+}
