@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "118",
+  "title": "CSS Navigation Bars",
+  "course": "CSS",
+  "objectives": [
+    "فهم أهمية Navigation Bars في تصميم الويب",
+    "استخدام HTML Elements مثل ul و li لبناء القوائم",
+    "تطبيق CSS لتنسيق القوائم وإزالة التنسيقات الافتراضية",
+    "التعرف على الأساس البرمجي للقوائم الأفقية والعمودية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_navbar.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-aa904b18c8065859.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_navbar.asp",
+      "source_url": "https://www.w3schools.com/css/css_navbar.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Navigation Bars",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ بِنَاء Navigation Bars، وَهِيَ عُنْصُرٌ أَسَاسِيٌّ فِي تَصْمِيمِ مَوَاقِعِ الْوِبّ، تُسَاعِدُ الْمُسْتَخْدِمِينَ عَلَى التَّنَقُّلِ بَيْنَ أَقْسَامِ الْمَوْقِعِ بِسُهُولَه وَيُسْرٍ.",
+        "caption_text": "تعد Navigation Bars عنصرا حيويا في تصميم الويب لتسهيل التنقل بين صفحات الموقع."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Navigation Bars تسهل تجربة المستخدم",
+          "توضع عادة في أعلى أو جانب صفحة الويب",
+          "تعتمد على HTML Elements مثل ul و li"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للقائمة",
+      "narration": {
+        "spoken_text": "تُبْنَى القائمَه بِاسْتِخْدَام HTML List Elements. نَسْتَخْدِم ul لِتَحْدِيدِ الْقَائِمَه غَيْرِ الْمُرَتَّبَه، و li لِكُلِّ رَابِطٍ دَاخِلَهَا. هَذَا الْهَيْكَلُ هُوَ الْأَسَاسُ الْمِعْيَارِيُّ لِأَيِّ Navigation Bar نَقُومُ بِتَصْمِيمِهَا.",
+        "caption_text": "نستخدم عناصر ul و li لإنشاء هيكل القائمة الأساسي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <ul>\n      <li><a href=\"default.asp\">Home</a></li>\n      <li><a href=\"news.asp\">News</a></li>\n      <li><a href=\"contact.asp\">Contact</a></li>\n      <li><a href=\"about.asp\">About</a></li>\n    </ul>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق القائمة باستخدام CSS",
+      "narration": {
+        "spoken_text": "لِتَحْوِيلِ هَذِهِ الْقَائِمَه إِلَى Navigation Bar احْتِرَافِيَّه، نَحْتَاجُ لِإِزَالَةِ التَّنْسِيقَاتِ الافتراضيَه. نَسْتَخْدِم list-style-type بِقِيمَةِ none لِحَذْفِ النِّقَاطِ، وَنَضْبِط margin و padding عَلَى صِفْرٍ لِلتَّحَكُّمِ الْكَامِلِ فِي الْمَسَافَاتِ.",
+        "caption_text": "نستخدم CSS لإزالة التنسيقات الافتراضية للقوائم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "ul {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح الخصائص المستخدمة",
+      "narration": {
+        "spoken_text": "لَاحِظْ أَنَّ list-style-type: none تُزِيلُ الرُّمُوزَ الْجَانِبِيَّه. أَمَّا margin: 0 و padding: 0 فَهُمَا ضَرُورِيَّانِ لِإِلْغَاءِ الْمَسَافَاتِ الْبَادِئَه الَّتِي يُضِيفُهَا الْمُتَصَفِّحْ تِلْقَائِيّاً لِعَنَاصِر ul، مِمَّا يَمْنَحُنَا تَحَكُّماً دَقِيقاً فِي التَّصْمِيمِ.",
+        "caption_text": "تساعد هذه الخصائص في تهيئة القائمة للتنسيق اللاحق."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "list-style-type",
+            "إزالة رموز القائمة"
+          ],
+          [
+            "margin",
+            "ضبط الهوامش الخارجية"
+          ],
+          [
+            "padding",
+            "ضبط الهوامش الداخلية"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar.asp"
+      ]
+    },
+    {
+      "id": "visual_output",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَخْتَفِي النِّقَاطُ وَالْمَسَافَاتُ غَيْرُ الْمَرْغُوبِ فِيهَا. هَذَا هُوَ الْكُودُ الْأَسَاسِيُّ الَّذِي سَنَبْنِي عَلَيْهِ لَاحِقاً لِتَصْمِيم Navigation Bars أُفُقِيَّه أَوْ عَمُودِيَّه بِشَكْلٍ جَذَّابٍ.",
+        "caption_text": "هكذا تظهر القائمة بعد إزالة التنسيقات الافتراضية."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "Navigation bar example"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ يَا صَدِيقِي أَنَّ هَذَا الْكُودَ هُوَ نُقْطَةِ الْبِدَايَه. يُمْكِنُكَ إِضَافَةِ خَصَائِص CSS أُخْرَى مِثْل background-color أَوْ display: block لِتَحْوِيلِ هَذِهِ الْقَائِمَه إِلَى شَرِيطِ تَنَقُّلٍ مُتَفَاعِلٍ وَمُتَمَيِّزٍ.",
+        "caption_text": "استخدم هذا الكود كقاعدة أساسية لتطوير تصميمات أكثر تعقيدا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم دائما ul و li للقوائم",
+          "ابدأ دائما بتصفير margin و padding",
+          "هذا الكود هو الأساس لكل من Vertical و Horizontal Navbars"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةِ بِنَاءِ هَيْكَل Navigation Bar بِاسْتِخْدَام HTML، وَكَيْفِيَّةِ تَنْظِيفِ التَّنْسِيقَاتِ بِوَاسِطَةِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو.",
+        "caption_text": "تعلمنا اليوم أساسيات بناء وتنسيق Navigation Bars."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم شرح هيكل HTML",
+          "تم شرح تنسيق CSS الأساسي",
+          "تم توضيح أهمية إزالة التنسيقات الافتراضية",
+          "جاهزون للدروس القادمة حول القوائم الأفقية والعمودية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_navbar.asp"
+      ]
+    }
+  ]
+}
