@@ -1,0 +1,2 @@
+Screen > 600px: Background is lightblue
+Screen <= 600px: Background is lightcoral
