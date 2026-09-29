@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "182",
+  "title": "شرح CSS 2D Transforms وتطبيق الدوال الأساسية",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم CSS 2D Transforms وكيفية استخدام خاصية transform",
+    "تطبيق دالة translate لتحريك العناصر على محوري X و Y",
+    "استخدام دالة rotate لتدوير العناصر بدرجات موجبة وسالبة",
+    "التعرف على جدول خصائص الـ 2D transforms والدوال التابعة لها"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_2dtransforms.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة حول CSS 2D Transforms",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِيَّةِ transform وَكَيْفَ نُطَبِّقُ التَّحَوُّلَاتِ ثُنَائِيَّةَ الْأُبْعَادِ عَلَى عناصر الويب بِسُهُولَةٍ تَامَّةٍ.",
+        "caption_text": "مرحبا بكم في درس CSS 2D Transforms وكيفية تطبيق التحولات على عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم خاصية transform لتطبيق تحولات 2D أو 3D",
+          "تتيح الخاصية تدوير وتحريك وتغيير حجم العناصر",
+          "تدعم لغة CSS العديد من دوال التحويل الأساسية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "التعرف على دوال التحويل 2D Transforms Functions",
+      "narration": {
+        "spoken_text": "تَتَحِي لَنَا خَاصِيَّةُ transform اِسْتِخْدَامَ عِدَّةِ دُوَّالٍ تَقْنِيَّةٍ لِلتَّحَكُّمِ التَّامِّ فِي مَوْقِعِ وَهَيْئَةِ العناصر. سَنَدْرُسُ الْآنَ دَالَّتَيْ translate وَ rotate بالتَّفْصِيلِ.",
+        "caption_text": "تتيح خاصية transform استخدام عدة دوال للتحكم في هيئة وموقع عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دالة translate لتحريك العناصر من موضعها الحالي",
+          "دالة rotate لتدوير العناصر حسب الدرجات المحددة",
+          "دوال إضافية مثل scale و skew لتغيير الحجم والميل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "دالة التحريك translate() Function",
+      "narration": {
+        "spoken_text": "تَقُومُ دَالَّةُ translate بِنَقْلِ الْعُنْصِرِ مِنْ مَوْقِعِهِ الْحَالِيِّ بِحَسَبِ القِيَمِ الْمُعْطَاةِ لِمِحْوَرَيْ X وَ Y لِتَحْدِيدِ الاتِّجَاهِ بدِقَّةٍ كَبِيرَةٍ.",
+        "caption_text": "تقوم دالة translate بنقل العنصر من موضعها الحالي حسب محوري X و Y."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تتحكم القيمة الأولى في الحركة على محور X الأفقي",
+          "تتحكم القيمة الثانية في الحركة على محور Y العمودي",
+          "يمكن استخدام وحدات قياس مختلفة مثل pixels"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "مثال برمجي على دالة translate",
+      "narration": {
+        "spoken_text": "لَاحِظْ مَعِي فِي هَذَا الْمِثَالِ الْبَرْمَجِيِّ كَيْفَ نُحَرِّكُ عنصر div بمقدار خمسين بكسل إلى اليمين ومائة بكسل إلى الأسفل باستخدام transform و translate.",
+        "caption_text": "مثال برمجي لتحريك عنصر div بمقدار 50px أفقيا و 100px عموديا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: translate(50px, 100px);\n}",
+        "highlight_lines": [],
+        "output": "يتحرك العنصر 50 بكسل لليمين و100 بكسل لأسفل",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "دالة التدوير rotate() Function",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الآنَ إِلَى دَالَّةِ rotate وَهِيَ تَقُومُ بِتَدْوِيرِ الْعُنْصِرِ اِتِّجَاهَ عَقَارِبِ السَّاعَةِ أَوْ عَكْسَهَا بِدَرَجَاتِ زَاوِيَةٍ مُحَدَّدَةٍ بِمُصْطَلَحِ deg.",
+        "caption_text": "دالة rotate تقوم بتدوير العنصر اتجاه عقارب الساعة أو عكسها بزوايا محددة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تدوير العناصر باتجاه عقارب الساعة باستخدام قيم موجبة",
+          "استخدام وحدة deg للإشارة إلى الدرجات الزاوية",
+          "تطبيق تأثيرات بصرية جذابة على عناصر صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "مثال تدوير العنصر باتجاه عقارب الساعة",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَدْوِيرِ عنصر div بِمِقْدَارِ عِشْرِينَ دَرَجَةً مَوْجِبَةً مِمَّا يَعْنِي الدَّرَنَانَ مع اتجاه عقارب الساعة.",
+        "caption_text": "تدوير عنصر div بمقدار 20 درجة مع اتجاه عقارب الساعة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: rotate(20deg);\n}",
+        "highlight_lines": [],
+        "output": "يدور العنصر 20 درجة مع اتجاه عقارب الساعة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "استخدام القيم السالبة في دالة rotate",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً اِسْتِخْدَامُ قِيَمٍ سَالِبَةٍ فِي دَالَّةِ rotate لِتَدْوِيرِ الْعُنْصِرِ عَكْسَ اتِّجَاهِ عَقَارِبِ السَّاعَةِ بِسُهُولَةٍ تَامَّةٍ.",
+        "caption_text": "استخدام القيم السالبة لتدوير العنصر عكس اتجاه عقارب الساعة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  transform: rotate(-20deg);\n}",
+        "highlight_lines": [],
+        "output": "يدور العنصر 20 درجة عكس اتجاه عقارب الساعة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "جدول خصائص التحويل 2D Transform Properties",
+      "narration": {
+        "spoken_text": "تَتَضَمَّنُ لُغَةُ CSS مَجْمُوعَةً شَامِلَةً مِنْ خَصَائِصِ التَّحْوِيلِ وَالدَّوَّالِ مِثْلِ scale و skew ومصفوفة transform لتلبية كافة الاحتياجات التصميمية.",
+        "caption_text": "مجموعة شاملة من خصائص التحويل والدوال المتعددة في لغة CSS."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوصف",
+          "مثال الاستخدام"
+        ],
+        "rows": [
+          [
+            "transform",
+            "تطبيق تحويل 2D أو 3D",
+            "transform: rotate(20deg)"
+          ],
+          [
+            "translate()",
+            "تحريك العنصر أفقيا وعموديا",
+            "translate(50px, 100px)"
+          ],
+          [
+            "rotate()",
+            "تدوير العنصر بزاوية معينة",
+            "rotate(45deg)"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_9",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اِسْتِخْدَامِ خَصَائِصِ CSS 2D Transforms ودالَّتَيْ translate و rotate. نُشَجِّعُكُمْ عَلَى تَجْرِبَةِ الْأَكْوَدِ بَأَنْفُسِكُمْ.",
+        "caption_text": "خلاصة درس CSS 2D Transforms ودعوة لتجربة الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهمنا تطبيق خاصية transform على عناصر الويب",
+          "طبقنا دالة translate لتحريك العناصر بدقة",
+          "استخدمنا دالة rotate بالقيم الموجبة والسالبة",
+          "نلتقي في الدرس القادم لمتابعة دوال scale و skew"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_2dtransforms.asp"
+      ]
+    }
+  ]
+}
