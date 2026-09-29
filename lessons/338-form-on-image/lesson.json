@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "338",
+  "title": "تصميم نموذج تسجيل دخول فوق صورة باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية وضع نموذج فوق صورة كاملة العرض",
+    "استخدام خاصية position للتحكم في تموضع العناصر",
+    "تنسيق حقول الإدخال والأزرار داخل النموذج",
+    "تطبيق تقنيات background-size و background-position"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_form_on_image.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول دمج النماذج مع الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِضَافَةِ Form فَوْقَ صُورَةٍ بِعَرْضٍ كَامِلٍ لِلصَّفْحَةِ، وَهِيَ تَقْنِيَةٌ جَمَالِيَّةٌ تُعْطِي مَوْقِعَ الْوِبّ مَظْهَراً احْتِرَافِيّاً وَمُمَيَّزاً.",
+        "caption_text": "تعلم كيفية إضافة Form فوق صورة بعرض كامل للصفحة باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS للتحكم في خلفية الصفحة",
+          "وضع النموذج فوق الصورة باستخدام position",
+          "تحسين تجربة المستخدم عبر التنسيق المرئي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_form_on_image.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكلة الـ HTML للنموذج",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكَلَاسِ bg-img لِوَضْعِ الصُّورَةِ، وَدَاخِلَهُ نَضَعُ Form بِكَلَاسِ container. نُضِيفُ حُقُولَ input لِلْبَرِيدِ الْإِلِكْتُرُونِيِّ وَكَلِمَةِ الْمُرُورِ، مَعَ زِرِّ submit لِإِرْسَالِ الْبَيَانَاتِ.",
+        "caption_text": "هيكلة HTML تتضمن div للحاوية وForm للبيانات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"bg-img\">\n      <form action=\"/action_page.php\" class=\"container\">\n        <h1>Login</h1>\n        <label for=\"email\"><b>Email</b></label>\n        <input type=\"text\" name=\"email\" required>\n        <label for=\"psw\"><b>Password</b></label>\n        <input type=\"password\" name=\"psw\" required>\n        <button type=\"submit\" class=\"btn\">Login</button>\n      </form>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_form_on_image.asp"
+      ]
+    },
+    {
+      "id": "css_container",
+      "title": "تنسيق الحاوية والصورة",
+      "narration": {
+        "spoken_text": "فِي CSS، نَضْبُطُ height لِ html وَ body عَلَى مِئَةٍ بِالْمِئَةِ. نَسْتَخْدِمُ background-image لِتَحْدِيدِ الصُّورَةِ، وَنَضْبُطُ background-size عَلَى cover لِتَغْطِيَةِ الْمَسَاحَةِ، مَعَ position relative لِلْحَاوِيَةِ.",
+        "caption_text": "تنسيق الصورة الخلفية باستخدام background-size وposition."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bg-img {\n  background-image: url(\"img_nature.jpg\");\n  min-height: 380px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  position: relative;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_form_on_image.asp"
+      ]
+    },
+    {
+      "id": "form_positioning",
+      "title": "تموضع النموذج فوق الصورة",
+      "narration": {
+        "spoken_text": "لِجَعْلِ النَّمُوذَجِ فَوْقَ الصُّورَةِ، نَسْتَخْدِمُ position absolute مَعَ right صِفْر. هَذَا يَجْعَلُ container يَتَمَوْضَعُ فِي الْجَانِبِ الْأَيْمَنِ، مَعَ إِضَافَةِ padding وَ background-color لِتَكُونَ الْخَلْفِيَّةُ بَيْضَاءَ وَوَاضِحَةً.",
+        "caption_text": "استخدام position absolute لتموضع النموذج فوق الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  position: absolute;\n  right: 0;\n  margin: 20px;\n  max-width: 300px;\n  padding: 16px;\n  background-color: white;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_form_on_image.asp"
+      ]
+    },
+    {
+      "id": "input_styling",
+      "title": "تنسيق حقول الإدخال",
+      "narration": {
+        "spoken_text": "نُعْطِي حُقُولَ input عَرْضاً كَامِلًا بِقِيمَةِ مِئَةٍ بِالْمِئَةِ. نُضِيفُ padding لِلْمَسَافَاتِ الدَّاخِلِيَّةِ، وَنُزِيلُ border لِتَكُونَ الْحُقُولُ عَصْرِيَّةً. نَسْتَخْدِمُ أَيْضاً pseudo-class لِتَغْيِيرِ background عِنْدَ الْحُصُولِ عَلَى focus.",
+        "caption_text": "تنسيق حقول الإدخال لتكون بعرض كامل وتفاعلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text], input[type=password] {\n  width: 100%;\n  padding: 15px;\n  border: none;\n  background: #f1f1f1;\n}\ninput:focus {\n  background-color: #ddd;\n  outline: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_form_on_image.asp"
+      ]
+    },
+    {
+      "id": "button_styling",
+      "title": "تنسيق زر الإرسال",
+      "narration": {
+        "spoken_text": "أَخِيراً، نُصَمِّمُ زِرَّ btn بِخَلْفِيَّةٍ خَضْرَاءَ وَنَصٍّ أَبْيَضَ. نَضْبُطُ opacity لِتَكُونَ تِسْعَةً مِنْ عَشَرَةٍ، وَنَجْعَلُهَا وَاحِداً صَحِيحاً عِنْدَ hover، مِمَّا يُعْطِي تَفَاعُلًا بَصَرِيّاً رَائِعاً عِنْدَ مُرُورِ فَأْرَةِ الْحَاسُوبِ.",
+        "caption_text": "تنسيق زر الإرسال مع تأثير hover."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn {\n  background-color: #04AA6D;\n  color: white;\n  padding: 16px 20px;\n  border: none;\n  cursor: pointer;\n  width: 100%;\n  opacity: 0.9;\n}\n.btn:hover {\n  opacity: 1;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_form_on_image.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَدْمُجُ بَيْنَ الصُّورِ وَالْ Form بِاسْتِخْدَامِ CSS. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ position وَ background-size فِي تَصْمِيمِ وَاجِهَاتِ الْوِبّ. جَرِّبُوا هَذَا الْكُودَ بِنَفْسِكُمْ وَطَوِّرُوا مَهَارَاتِكُمْ.",
+        "caption_text": "خلاصة: استخدام CSS لدمج النماذج مع الصور بشكل احترافي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position absolute للتموضع",
+          "تنسيق الحقول بـ width 100",
+          "إضافة تفاعل hover للأزرار",
+          "تطبيق background-size cover للصور"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_form_on_image.asp"
+      ]
+    }
+  ]
+}
