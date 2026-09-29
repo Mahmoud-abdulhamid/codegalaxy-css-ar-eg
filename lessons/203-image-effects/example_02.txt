@@ -1,0 +1,3 @@
+Image appearance: 50% transparency
+Visual effect: Semi-transparent image
+Browser rendering: Applied to all img elements
