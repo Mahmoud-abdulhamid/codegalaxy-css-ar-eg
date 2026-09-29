@@ -3,6 +3,8 @@
   "lesson_id": "50",
   "title": "CSS Text Alignment and Direction",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية التحكم في محاذاة النصوص أفقيا باستخدام text-align",
     "التعرف على خاصية text-align-last للتحكم في السطر الأخير",
