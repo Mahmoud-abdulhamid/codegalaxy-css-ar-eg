@@ -3,6 +3,8 @@
   "lesson_id": "74",
   "title": "CSS Lists Code Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية تنسيق القوائم باستخدام CSS",
     "تطبيق خصائص list-style-type و list-style-image",
