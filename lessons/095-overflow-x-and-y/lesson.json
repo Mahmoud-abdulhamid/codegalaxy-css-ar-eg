@@ -3,6 +3,8 @@
   "lesson_id": "95",
   "title": "التحكم في overflow-x و overflow-y في CSS",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية التحكم في تدفق المحتوى بشكل مستقل",
     "استخدام overflow-x للتحكم في التدفق الأفقي",
