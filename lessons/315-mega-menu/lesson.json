@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "315",
+  "title": "تصميم Mega Menu احترافي باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم هيكلية Mega Menu في صفحات الويب",
+    "استخدام CSS للتحكم في ظهور القوائم المنسدلة",
+    "تطبيق تقنيات Grid و Columns داخل القوائم",
+    "جعل القائمة متجاوبة مع مختلف الشاشات"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_mega_menu.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Mega Menu",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ Mega Menu، وَهِيَ قَائِمَةٌ مُنْسَدِلَةٌ بِعَرْضِ الصَّفْحَةِ الْكَامِلِ، تُسَاعِدُ فِي تَنْظِيمِ الْمُحْتَوَى الضَّخْمِ دَاخِلَ شَرِيطِ التَّنَقُّلِ فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "تعلم كيفية إنشاء Mega Menu احترافية لتنظيم المحتوى في شريط التنقل."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Mega Menu توفر تجربة مستخدم ممتازة",
+          "تعتمد على HTML للهيكلة و CSS للتنسيق",
+          "تظهر عند تمرير الفأرة فوق العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_mega_menu.asp"
+      ]
+    },
+    {
+      "id": "html-structure",
+      "title": "هيكلة HTML للقائمة",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكْلَاسِ navbar لِاحْتِوَاءِ الرَّوَابِطِ، ثُمَّ نُضِيفُ div بِكْلَاسِ dropdown لِتَضْمِينَ زِرِّ التَّفَاعُلِ وَمُحْتَوَى الْقَائِمَةِ الَّذِي يَحْتَوِي عَلَى صُفُوفٍ وَأَعْمِدَةٍ لِتَنْظِيمِ الرَّوَابِطِ بِشَكْلٍ مُنَسَّقٍ.",
+        "caption_text": "هيكلة HTML تعتمد على حاويات div لتنظيم القائمة والأعمدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"navbar\">\n      <a href=\"#home\">Home</a>\n      <div class=\"dropdown\">\n        <button class=\"dropbtn\">Dropdown</button>\n        <div class=\"dropdown-content\">\n          <div class=\"row\">\n            <div class=\"column\">\n              <h3>Category 1</h3>\n              <a href=\"#\">Link 1</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_mega_menu.asp"
+      ]
+    },
+    {
+      "id": "css-navbar",
+      "title": "تنسيق شريط التنقل",
+      "narration": {
+        "spoken_text": "فِي CSS، نَقُومُ بِتَنْسِيقِ navbar بِخَاصِيَّةِ overflow: hidden لِضَمَانِ التَّحَكُّمِ فِي الْعَنَاصِرِ. نُعْطِي الرَّوَابِطَ float: left لِتَصْطَفَّ بِجَانِبِ بَعْضِهَا، مَعَ ضَبْطِ الْأَلْوَانِ وَالْهَوَامِشِ لِتَبْدُوَ بِمَظْهَرٍ احْتِرَافِيٍّ وَمُرِيحٍ لِلْعَيْنِ.",
+        "caption_text": "تنسيق شريط التنقل باستخدام CSS لضمان محاذاة العناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".navbar {\n  overflow: hidden;\n  background-color: #333;\n}\n.navbar a {\n  float: left;\n  padding: 14px 16px;\n  color: white;\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_mega_menu.asp"
+      ]
+    },
+    {
+      "id": "dropdown-logic",
+      "title": "منطق القائمة المنسدلة",
+      "narration": {
+        "spoken_text": "الْجُزْءُ الْأَهَمُّ هُوَ إِخْفَاءُ dropdown-content بِاسْتِخْدَامِ display: none، ثُمَّ إِظْهَارُهَا عِنْدَ التَّحْوِيمِ بِاسْتِخْدَامِ hover. نَسْتَخْدِمُ position: absolute لِتَثْبِيتِ الْقَائِمَةِ تَحْتَ الزِّرِّ، وَنَجْعَلُ الْعَرْضَ 100 لِتَغْطِيَةِ كَامِلِ الشَّاشَةِ.",
+        "caption_text": "استخدام hover لإظهار القائمة المنسدلة وتحديد موقعها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropdown-content {\n  display: none;\n  position: absolute;\n  width: 100%;\n  left: 0;\n  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);\n}\n.dropdown:hover .dropdown-content {\n  display: block;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_mega_menu.asp"
+      ]
+    },
+    {
+      "id": "grid-layout",
+      "title": "تقسيم الأعمدة",
+      "narration": {
+        "spoken_text": "لِتَقْسِيمِ الْمُحْتَوَى، نَسْتَخْدِمُ كْلَاسَ column بِخَاصِيَّةِ float: left وَعَرْضِ 33.33 لِتَكُونَ الْأَعْمِدَةُ مُتَسَاوِيَةً. لَا تَنْسَوْا إِضَافَةَ row:after لِتَنْظِيفِ الْعَنَاصِرِ الْمُعَوَّمَةِ وَضَمَانِ عَدَمِ تَدَاخُلِ التَّصْمِيمِ.",
+        "caption_text": "تقسيم القائمة إلى أعمدة متساوية باستخدام float."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".column {\n  float: left;\n  width: 33.33%;\n  padding: 10px;\n}\n.row:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_mega_menu.asp"
+      ]
+    },
+    {
+      "id": "responsive-design",
+      "title": "التجاوب مع الشاشات",
+      "narration": {
+        "spoken_text": "أَخِيراً، نُضِيفُ Media Query لِجَعْلِ الْقَائِمَةِ مُتَجَاوِبَةً. عِنْدَمَا يَكُونُ عَرْضُ الشَّاشَةِ أَقَلَّ مِنْ 600 بيكسل، نُغَيِّرُ عَرْضَ الْأَعْمِدَةِ إِلَى 100 لِتَصْطَفَّ فَوْقَ بَعْضِهَا بَدَلاً مِنَ التَّجَاوُرِ، مِمَّا يُحَسِّنُ التَّصَفُّحَ عَلَى الْهَوَاتِفِ.",
+        "caption_text": "جعل القائمة متجاوبة باستخدام Media Query."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (max-width: 600px) {\n  .column {\n    width: 100%;\n    height: auto;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_mega_menu.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ Mega Menu احْتِرَافِيَّةٍ. تَعَلَّمْنَا التَّحَكُّمَ فِي الْعَنَاصِرِ، تَنْظِيمَ الْأَعْمِدَةِ، وَتَفْعِيلَ التَّجَاوُبِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِهَا لِتُنَاسِبَ مَشَارِيعَكُمُ الْخَاصَّةَ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: تم بناء Mega Menu متجاوبة واحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام hover للتفاعل",
+          "تطبيق Grid بسيط بالأعمدة",
+          "دعم الهواتف بـ Media Query"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_mega_menu.asp"
+      ]
+    }
+  ]
+}
