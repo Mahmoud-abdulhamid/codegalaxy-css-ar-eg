@@ -1,0 +1,10 @@
+.container {
+  display: table;
+  width: 90%;
+}
+@supports (display: grid) {
+  .container {
+    display: grid;
+    grid-gap: 10px;
+  }
+}
