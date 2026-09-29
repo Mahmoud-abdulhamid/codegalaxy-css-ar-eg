@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "222",
+  "title": "CSS Styling Buttons",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام CSS لتنسيق عناصر HTML كأزرار",
+    "التحكم في ألوان الخلفية والنصوص داخل الأزرار",
+    "تعديل أحجام الأزرار باستخدام padding و font-size",
+    "إضافة زوايا دائرية وحدود متنوعة للأزرار"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تنسيق الأزرار",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَحْوِيلِ عَنَاصِرِ HTML إِلَى أزرارٍ جَذَّابَةٍ وَمُتَنَوِّعَةٍ بِاسْتِخْدَامِ خَصَائِصِ CSS الْمُخْتَلِفَةِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس تنسيق الأزرار باستخدام CSS. سنتعلم اليوم كيفية تحويل عناصر HTML إلى أزرار جذابة لتحسين تجربة المستخدم في صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS لتنسيق عناصر button و input و a",
+          "التحكم الكامل في المظهر المرئي للأزرار",
+          "تحسين تفاعل المستخدم مع عناصر الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "basic-styling",
+      "title": "تنسيق الأزرار الأساسي",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِتَصْمِيمِ زِرٍّ بَسِيطٍ. نَسْتَخْدِمُ background-color لِلَّوْنِ، وَ border لِإِلْغَاءِ الْحُدُودِ، وَ padding لِتَحْدِيدِ الْمَسَافَاتِ الدَّاخِلِيَّةِ، مَعَ cursor: pointer لِتَغْيِيرِ شَكْلِ الْمُؤَشِّرِ عِنْدَ الْمُرُورِ فَوْقَ الزِّرِّ.",
+        "caption_text": "نستخدم خصائص CSS مثل background-color و border و padding لتصميم زر أساسي، مع ضبط cursor ليكون pointer عند التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".button {\n  background-color: red;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n  cursor: pointer;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "colors",
+      "title": "ألوان الأزرار",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا تَنْوِيعُ أَلْوَانِ الْأَزْرَارِ بِاسْتِخْدَامِ خَاصِيَّةِ background-color. لَاحِظْ كَيْفَ نُحَدِّدُ أَلْوَانَاً مُخْتَلِفَةً لِكُلِّ صِنْفٍ، مَعَ إِمْكَانِيَّةِ تَغْيِيرِ لَوْنِ النَّصِّ بِاسْتِخْدَامِ خَاصِيَّةِ color لِضَمَانِ التَّبَايُنِ الْبَصَرِيِّ.",
+        "caption_text": "استخدام خاصية background-color لتغيير ألوان الأزرار، وخاصية color لتغيير لون النص داخل الزر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "colors.css",
+        "code": ".button1 {\n  background-color: #04AA6D;\n}\n.button2 {\n  background-color: #008CBA;\n}\n.button3 {\n  background-color: #f44336;\n}\n.button4 {\n  background-color: #e7e7e7; color: black;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "sizes",
+      "title": "أحجام الأزرار",
+      "narration": {
+        "spoken_text": "لِتَحَكُّمٍ أَفْضَلَ فِي حَجْمِ الزِّرِّ، نَسْتَخْدِمُ font-size لِحَجْمِ الْخَطِّ، وَ padding لِتَوْسِيعِ الْمَسَافَةِ بَيْنَ النَّصِّ وَحُدُودِ الزِّرِّ. هَذَا يَمْنَحُ الزِّرَّ مَظْهَرَاً مُتَنَاسِقَاً وَمُرِيحَاً لِلْعَيْنِ.",
+        "caption_text": "التحكم في حجم الزر باستخدام font-size للنص، و padding لضبط المساحة الداخلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "sizes.css",
+        "code": ".button1 {\n  font-size: 10px; padding: 10px 24px;\n}\n.button3 {\n  font-size: 16px; padding: 14px 40px;\n}\n.button5 {\n  font-size: 24px; padding: 16px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "rounded",
+      "title": "الأزرار الدائرية",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ زَوَايَا دَائِرِيَّةٍ لِلْأَزْرَارِ، نَسْتَخْدِمُ خَاصِيَّةَ border-radius. يُمْكِنُكَ اسْتِخْدَامُ قِيَمٍ بِال pixels أَوْ نِسَبٍ مِئَوِيَّةٍ مِثْلَ خَمْسِينَ بِالْمِئَةِ لِتَحْوِيلِ الزِّرِّ إِلَى شَكْلٍ بَيْضَاوِيٍّ كَامِلٍ.",
+        "caption_text": "استخدام خاصية border-radius لإضافة زوايا دائرية للأزرار، مع إمكانية استخدام 50 للحصول على شكل بيضاوي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "rounded.css",
+        "code": ".button3 {\n  border-radius: 8px;\n}\n.button5 {\n  border-radius: 50%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "borders",
+      "title": "حدود الأزرار",
+      "narration": {
+        "spoken_text": "أَخِيرَاً، نَسْتَخْدِمُ خَاصِيَّةَ border لِتَحْدِيدِ سُمْكِ وَنَوْعِ حُدُودِ الزِّرِّ. يُمْكِنُكَ اخْتِيَارُ solid أَوْ dotted أَوْ dashed لِإِعْطَاءِ لَمْسَةٍ إِبْدَاعِيَّةٍ لِتَصْمِيمِكَ.",
+        "caption_text": "استخدام خاصية border لتحديد نمط وسمك حدود الزر، مثل solid أو dotted أو dashed."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "borders.css",
+        "code": ".button1 {\n  border: 2px solid #04AA6D;\n}\n.button2 {\n  border: 2px dotted #008CBA;\n}\n.button3 {\n  border: 2px dashed #f44336;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نُصَمِّمُ أزراراً احْتِرَافِيَّةً بِاسْتِخْدَامِ CSS. جَرِّبُوا هَذِهِ الْخَصَائِصَ فِي مَشَارِيعِكُمُ الْخَاصَّةِ، وَلَا تَتَرَدَّدُوا فِي زِيَارَةِ الرَّابِطِ فِي الْوَصْفِ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: تعلمنا تصميم أزرار احترافية باستخدام CSS. جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام background-color و color للألوان",
+          "ضبط الحجم عبر font-size و padding",
+          "تجميل الزوايا بـ border-radius",
+          "تخصيص الحدود باستخدام border"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_buttons.asp"
+      ]
+    }
+  ]
+}
