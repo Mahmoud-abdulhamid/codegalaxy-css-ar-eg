@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "204",
+  "title": "CSS Image Hover Effects and Responsive Galleries",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء تأثيرات Overlay عند تمرير الفأرة",
+    "تعلم استخدام transform لقلب الصور أفقيا",
+    "تطبيق Responsive Web Design باستخدام media queries",
+    "التحكم في عرض العناصر بناء على أحجام الشاشات"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_images_hover.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في تأثيرات الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِضَافَةِ تَأْثِيرَاتٍ جَمَالِيَّةٍ عَلَى الصُّوَرِ عِنْدَ تَمْرِيرِ الْفَأْرَةِ، وَكَيْفَ نَبْنِي مَعَارِضَ صُوَرٍ مُتَجَاوِبَةٍ مَعَ مُخْتَلَفِ أَحْجَامِ الشَّاشَاتِ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS. سنتعلم اليوم كيفية إضافة تأثيرات جمالية على الصور عند تمرير الفأرة، وكيف نبني معارض صور متجاوبة مع مختلف أحجام الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء تأثيرات Overlay احترافية",
+          "استخدام CSS لتحويل الصور",
+          "بناء معارض صور متجاوبة Responsive"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images_hover.asp"
+      ]
+    },
+    {
+      "id": "hover-concept",
+      "title": "مفهوم الـ Hover Overlay",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ فِكْرَةُ ال Overlay عَلَى إِظْهَارِ مُحْتَوَى إِضَافِيٍّ فَوْقَ الصُّورَةِ عِنْدَ حُدُوثِ حَدَثِ ال hover. يُمْكِنُنَا اسْتِخْدَامُ خَصَائِصِ CSS مِثْلَ opacity أَوْ transform لِخَلْقِ تَجْرِبَةِ مُسْتَخْدِمٍ تَفَاعُلِيَّةٍ وَمُمَيَّزَةٍ.",
+        "caption_text": "تعتمد فكرة الـ Overlay على إظهار محتوى إضافي فوق الصورة عند حدوث حدث الـ hover. يمكننا استخدام خصائص CSS مثل opacity أو transform لخلق تجربة مستخدم تفاعلية ومميزة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام pseudo-class المسمى :hover",
+          "التحكم في الشفافية عبر opacity",
+          "استخدام الانتقالات عبر transition"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images_hover.asp"
+      ]
+    },
+    {
+      "id": "flip-image",
+      "title": "قلب الصور باستخدام transform",
+      "narration": {
+        "spoken_text": "لِقَلْبِ الصُّورَةِ أُفُقِيّاً، نَسْتَخْدِمُ خَاصِّيَّةَ transform مَعَ الدَّالَّةِ scaleX. عِنْدَ ضَبْطِ الْقِيمَةِ عَلَى سَالِبِ وَاحِدٍ، تَنْعَكِسُ الصُّورَةُ تِلْقَائِيّاً عِنْدَ تَمْرِيرِ الْفَأْرَةِ عَلَيْهَا.",
+        "caption_text": "لقلب الصورة أفقيا، نستخدم خاصية transform مع الدالة scaleX. عند ضبط القيمة على سالب واحد، تنعكس الصورة تلقائيا عند تمرير الفأرة عليها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img:hover {\n  transform: scaleX(-1);\n}",
+        "highlight_lines": [],
+        "output": "تنعكس الصورة أفقياً عند تمرير الفأرة فوقها.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images_hover.asp"
+      ]
+    },
+    {
+      "id": "responsive-gallery",
+      "title": "بناء معرض صور متجاوب",
+      "narration": {
+        "spoken_text": "لِجَعْلِ مَعْرِضِ الصُّوَرِ مُتَجَاوِباً، نَسْتَخْدِمُ media queries. هَذِهِ التَّقْنِيَةُ تَسْمَحُ لَنَا بِتَغْيِيرِ عَرْضِ الْعَنَاصِرِ بِناءً عَلَى عَرْضِ الشَّاشَةِ، مِمَّا يَضْمَنُ ظُهُورَ الصُّوَرِ بِشَكْلٍ مُنَاسِبٍ عَلَى الْهَوَاتِفِ وَالْحَوَاسِيبِ.",
+        "caption_text": "لجعل معرض الصور متجاوبا، نستخدم media queries. هذه التقنية تسمح لنا بتغيير عرض العناصر بناء على عرض الشاشة، مما يضمن ظهور الصور بشكل مناسب على الهواتف والحواسيب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media only screen and (max-width: 768px) {\n  div.gallery-item {\n    width: calc(50% - 20px);\n  }\n}",
+        "highlight_lines": [],
+        "output": "يصبح عرض العناصر 50% للشاشات المتوسطة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images_hover.asp"
+      ]
+    },
+    {
+      "id": "responsive-mobile",
+      "title": "تخصيص العرض للشاشات الصغيرة",
+      "narration": {
+        "spoken_text": "عِنْدَمَا تَصِلُ الشَّاشَةُ إِلَى عَرْضِ أَرْبَعِمِائَةٍ وَثَمَانِينَ بِيكْسِل، نَقُومُ بِتَعْدِيلِ الْعَرْضِ لِيُصْبِحَ مِائَةً بِالْمِائَةِ. هَذَا يَعْنِي أَنَّ كُلَّ صُورَةٍ سَتَأْخُذُ سَطْراً كَامِلاً لِتَسْهِيلِ التَّصَفُّحِ عَلَى الْهَوَاتِفِ.",
+        "caption_text": "عندما تصل الشاشة إلى عرض 480px، نقوم بتعديل العرض ليصبح 100. هذا يعني أن كل صورة ستأخذ سطرا كاملا لتسهيل التصفح على الهواتف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media only screen and (max-width: 480px) {\n  div.gallery-item {\n    width: calc(100% - 20px);\n  }\n}",
+        "highlight_lines": [],
+        "output": "يصبح عرض العناصر 100% للشاشات الصغيرة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images_hover.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ دائماً اسْتِخْدَامُ transition مَعَ تَأْثِيرَاتِ ال hover لِجَعْلِ الْحَرَكَةِ سَلِسَةً وَغَيْرَ مُفَاجِئَةٍ. كَمَا يُفَضَّلُ اخْتِبَارُ الْمَعْرِضِ عَلَى مُتَصَفِّحَاتٍ مُخْتَلِفَةٍ لِضَمَانِ تَوَافُقِ الْأَكْوَادِ.",
+        "caption_text": "يجب دائما استخدام transition مع تأثيرات الـ hover لجعل الحركة سلسة وغير مفاجئة. كما يفضل اختبار المعرض على متصفحات مختلفة لضمان توافق الأكواد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام transition لضمان سلاسة الحركة",
+          "اختبار التجاوب عبر أدوات المطورين",
+          "الحفاظ على تنظيم ملفات CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images_hover.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نُضِيفُ حَيَاةً لِلصُّوَرِ بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِ مَعَارِضِ صُوَرٍ خَاصَّةٍ بِكُمْ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تعلمنا اليوم كيف نضيف حياة للصور باستخدام CSS. أدعوكم لتجربة هذه الأكواد بأنفسكم وتطوير معارض صور خاصة بكم. شكرا لمتابعتكم، وإلى اللقاء في درس قادم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية تأثيرات Hover",
+          "تم شرح تقنيات Responsive Design",
+          "استخدام transform و media queries"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_images_hover.asp"
+      ]
+    }
+  ]
+}
