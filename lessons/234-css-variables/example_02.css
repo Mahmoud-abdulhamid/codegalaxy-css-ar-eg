@@ -1,0 +1,2 @@
+/* الصيغة العامة */
+property: var(--name, fallback-value);
