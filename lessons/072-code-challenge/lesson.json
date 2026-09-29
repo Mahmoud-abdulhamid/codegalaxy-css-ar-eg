@@ -3,6 +3,8 @@
   "lesson_id": "72",
   "title": "CSS Links Code Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية تنسيق الروابط باستخدام CSS",
     "تطبيق Pseudo-classes على عناصر a",
