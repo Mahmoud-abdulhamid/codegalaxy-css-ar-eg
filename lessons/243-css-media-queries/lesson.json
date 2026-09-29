@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "243",
+  "title": "CSS Media Queries",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم Media Queries في CSS",
+    "التعرف على بنية Syntax الخاصة بـ Media Queries",
+    "استخدام Media Types و Media Features",
+    "تطبيق التنسيقات بناء على عرض الشاشة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_mediaqueries.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Media Queries",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفَ نَجْعَلُ صَفَحَاتِ الْوِبّ تَسْتَجِيبُ لِأَحْجَامِ الشَّاشَاتِ الْمُخْتَلِفَةِ بِاسْتِخْدَامِ Media Queries، وَهِيَ أَدَاةٌ أَسَاسِيَّةٌ لِتَصْمِيمِ مَوَاقِعَ Responsive.",
+        "caption_text": "تعد Media Queries أداة أساسية في CSS لإنشاء صفحات ويب متجاوبة مع مختلف الأجهزة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تسمح Media Queries بتطبيق تنسيقات بناء على خصائص الجهاز",
+          "تعد جزءا حيويا من تصميم الويب المتجاوب Responsive Web Design",
+          "نستخدم القاعدة media لإضافة هذه الاستعلامات إلى ملفات CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "بنية Media Queries",
+      "narration": {
+        "spoken_text": "تَتَكَوَّنُ Media Query مِنْ Media Type وَ Media Features. يُمْكِنُنَا اسْتِخْدَامُ كَلِمَاتٍ مِثْلَ not لِعَكْسِ الْمَعْنَى، أَوْ and لِلرَّبْطِ بَيْنَ الشُّرُوطِ. إِذَا تَحَقَّقَ الشَّرْطُ، تُطَبَّقُ التَّنْسِيقَاتُ دَاخِلَ الْأَقْوَاسِ.",
+        "caption_text": "تتكون Media Query من نوع الوسائط وخصائص الوسائط التي تعطي نتيجة صحيحة أو خاطئة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media [not] media-type and (media-feature: value) {\n  /* CSS rules to apply */\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "types_features",
+      "title": "شرح Media Types و Media Features",
+      "narration": {
+        "spoken_text": "تُحَدِّدُ Media Type نَوْعَ الْجِهَازِ، وَإِذَا تَمَّ حَذْفُهَا تُعْتَبَرُ all. أَمَّا Media Features فَتُحَدِّدُ خَصَائِصَ دَقِيقَةً مِثْلَ width، وَهِيَ جُزْءٌ لَا يَتَجَزَّأُ مِنْ بِنَاءِ التَّصْمِيمِ الْمُتَجَاوِبِ.",
+        "caption_text": "تحدد Media Type نوع الوسائط، بينما تصف Media Features خصائص الجهاز مثل العرض."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Media Type: تحدد نوع الجهاز (مثل screen أو print)",
+          "إذا لم تحدد Media Type تضبط تلقائيا على all",
+          "Media Features: تحدد خصائص مثل min-width أو max-width"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "example1",
+      "title": "تطبيق عملي بسيط",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَغْيِيرِ لَوْنِ خَلْفِيَّةِ body إِلَى lightgreen عِنْدَمَا يَكُونُ عَرْضُ الشَّاشَةِ 480 بيكسل أَوْ أَكْثَرَ. نَسْتَخْدِمُ screen كَنَوْعٍ لِلْوَسَائِطِ.",
+        "caption_text": "مثال يغير لون الخلفية عند وصول عرض الشاشة إلى 480 بيكسل أو أكثر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (min-width: 480px) {\n  body {\n    background-color: lightgreen;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "example2",
+      "title": "استخدام نطاق عرض محدد",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَحْدِيدُ نِطَاقٍ مُعَيَّنٍ. هُنَا نَقُومُ بِتَغْيِيرِ اللَّوْنِ فَقَطْ إِذَا كَانَ عَرْضُ الشَّاشَةِ بَيْنَ 480 وَ 768 بيكسل، وَذَلِكَ بِاسْتِخْدَامِ min-width وَ max-width مَعاً.",
+        "caption_text": "تطبيق تنسيق ضمن نطاق عرض محدد بين 480 و 768 بيكسل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (min-width: 480px)\nand (max-width: 768px) {\n  body {\n    background-color: lightgreen;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَقُومُ الْمُتَصَفِّحُ بِمُرَاقَبَةِ عَرْضِ الشَّاشَةِ. إِذَا تَحَقَّقَ الشَّرْطُ، سَيَتَغَيَّرُ لَوْنُ الْخَلْفِيَّةِ تِلْقَائِيّاً دُونَ حَاجَةٍ لِإِعَادَةِ تَحْمِيلِ الصَّفْحَةِ.",
+        "caption_text": "تتغير خلفية الصفحة فور استيفاء شروط العرض المحددة في Media Query."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Viewport width >= 480px: Background becomes lightgreen\nViewport width < 480px: Default background color",
+        "highlight_lines": [],
+        "output": "Background-color: lightgreen (if condition met)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِتَجْرِبَةِ الْأَكْوَادِ فِي مُتَصَفِّحَاتٍ مُخْتَلِفَةٍ. تَذَكَّرْ أَنَّ التَّرْتِيبَ فِي CSS مُهِمٌّ، لِذَا ضَعْ Media Queries فِي مَكَانٍ مُنَاسِبٍ دَاخِلَ مَلَفِّ التَّنْسِيقَاتِ.",
+        "caption_text": "نصائح برمجية: اختبر تصميمك على أجهزة مختلفة وتأكد من ترتيب قواعد CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "اختبر دائما على أحجام شاشات مختلفة",
+          "استخدم Mobile-first approach في التصميم",
+          "نظم ملفات CSS لسهولة الصيانة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نَسْتَخْدِمُ Media Queries لِجَعْلِ مَوَاقِعِنَا أَكْثَرَ مَرُونَةً. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمُوَفَّرِ فِي وَصْفِ الْفِيدْيُو. شُكْراً لِمُتَابَعَتِكُمْ.",
+        "caption_text": "خلاصة: Media Queries هي مفتاحك لتصميم ويب متجاوب واحترافي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Media Queries هي جوهر التصميم المتجاوب",
+          "استخدام media يمنحك تحكما كاملا في العرض",
+          "جرب الأكواد بنفسك عبر رابط Try it Yourself"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_mediaqueries.asp"
+      ]
+    }
+  ]
+}
