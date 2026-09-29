@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "151",
+  "title": "دورة CSS - دوال الحسابات الرياضية CSS Math Functions",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام دوال الحسابات الرياضية في CSS",
+    "تطبيق دالة calc لحساب القياسات المختلفة",
+    "استخدام دالة max و min لتحديد القيم القصوى والدنيا",
+    "التحكم المتجاوب بالعناصر باستخدام دالة clamp"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_math_functions.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة حول الدوال الرياضية في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى CSS Math Functions وَكَيْفَ تُمَكِّنُنَا مِنَ اسْتِخْدَامِ التَّعَابِيرِ الرِّيَاضِيَّةِ كَقِيَمٍ لِلخصَائِصِ.",
+        "caption_text": "تسمح دوال الحسابات الرياضية في CSS باستخدامهاتعابير رياضية كقيم للخصائص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "فهم الدوال الرياضية في CSS",
+          "استخدام التعبيرات الرياضية كقيم للخصائص",
+          "التعرف على دوال calc و max و min و clamp"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_math_functions.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "دالة calc الحسابية",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ لِدَالَةِ calc وَهِيَ تَقُومُ بِإِجْرَاءِ حِسَابَاتٍ رِيَاضِيَّةٍ لِتُسْتَخْدَمَ كَقِيمَةٍ لِلْخَاصِّيَّةِ. تَدْعَمُ دَالَةُ calc الْجَمْعَ وَالطَّرْحَ وَالضَّرْبَ وَالْقِسْمَةَ مَعَ دَمْجِ وَحَدَاتٍ مُخْتَلِفَةٍ كَالْبِكْسِلَاتِ وَالنِّسَبِ الْمِئَوِيَّةِ.",
+        "caption_text": "دالة calc تقوم بإجراء العمليات الرياضية ودعم دمج الوحدات المختلفة مثل pixels و percentages."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إجراء حسابات رياضية معقدة",
+          "دعم عمليات الجمع والطرح والضرب والقسمة",
+          "دمج وحدات قياس مختلفة مثل pixels و percentages"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_math_functions.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "مثال عملي على دالة calc",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْمِثَالِ الْعَمَلِيِّ لِتَحْدِيدِ عَرْضِ وَارْتِفَاعِ عُنْصِرِ div. نَسْتَخْدِمُ calc لِطَرْحِ مِئَةِ بِكْسِلٍ مِنَ النِّسْبَةِ الْكَامِلَةِ لِلْعَرْضِ وَجَمْعِ الْوِحَدَاتِ.",
+        "caption_text": "استخدام calc لتحديد عرض وارتفاع العنصر div مع دمج الوحدات المختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  margin: auto;\n  width: calc(100% - 100px);\n  height: calc(30vh + 50px);\n  border: 1px solid black;\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": "يتم حساب العرض والارتفاع ديناميكياً داخل المتصفح",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_math_functions.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "دالة max ودالة min",
+      "narration": {
+        "spoken_text": "تَأْخُذُ دَالَةُ max قَائِمَةً مِنَ الْقِيَمِ الْمَفْصُولَةِ بِفَوَاصِلَ وَتَسْتَخْدِمُ الْقِيمَةَ الأكْبَرَ كَقِيمَةٍ لِلْخَاصِّيَّةِ. وَبِالْمُقَابِلِ، تَقُومُ دَالَةُ min بِاخْتِيَارِ الْقِيمَةِ الأَصْغَرِ مِنَ الْقَائِمَةِ الْمُعْطَاةِ.",
+        "caption_text": "دالة max تختار القيمة الأكبر بينما دالة min تختار القيمة الأصغر من قائمة القيم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دالة max لاختيار القيمة الأكبر من بين عدة قيم",
+          "دالة min لاختيار القيمة الأصغر من بين عدة قيم",
+          "استخدام القيم المفصولة بفواصل داخل الدوال"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_math_functions.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "مثال على دالة max",
+      "narration": {
+        "spoken_text": "في هَذَا الْمِثَالِ نَسْتَخْدِمُ دَالَةَ max لِتَحْدِيدِ عَرْضِ الْعُنْصِرِ لِيَكُونَ الأكْبَرَ بَيْنَ خَمْسِينَ بالمائة أَوْ ثَلَاثِ مِئَةِ بِكْسِلٍ.",
+        "caption_text": "استخدام دالة max لتعيين العرض إلى القيمة الأكبر بين 50 أو 300px."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#div1 {\n  height: 100px;\n  width: max(50%, 300px);\n  border: 1px solid black;\n  padding: 10px;\n}",
+        "highlight_lines": [],
+        "output": "يصبح عرض العنصر 300px أو 50% أيهما أكبر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_math_functions.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "دالة clamp المتجاوبة",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ دَالَةُ clamp لِضَبْطِ قِيمَةٍ تَتَكَیَّفُ بِمُرُونَةٍ بَيْنَ حَدٍّ أَدْنَى وَقِيمَةٍ مُفَضَّلَةٍ وَحَدٍّ أَقْصَى بِنَاءً عَلَى حَجْمِ الشَّاشَةِ أو ال viewport.",
+        "caption_text": "دالة clamp تستخدم لضبط قيمة متجاوبة بين حد أدنى وقيمة مفضلة وحد أقصى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ضبط قيمة متجاوبة تتكيف مع حجم الشاشة",
+          "تحتوي على ثلاثة معاملات: الحد الأدنى والمفضل والأقصى",
+          "تحسين تجربة التصميم المتجاوب Responsive Design"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_math_functions.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "مثال شامل على دالة clamp",
+      "narration": {
+        "spoken_text": "نُشَاهِدُ فِي هَذَا الْمِثَالِ كَيْفَ نُطَبِّقُ clamp عَلَى حَجْمِ خَطِّ عُنْصِرِ h2 وَعُنْصِرِ div مَعَ التَّحْكُمِ فِي الْعَرْضِ بَيْنَ مِئَتَيْ بِكْسِلٍ وَسِتِّمِئَةِ بِكْسِلٍ.",
+        "caption_text": "تطبيق دالة clamp على حجم الخط وعرض العناصر لضمان تجاوب مثالي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "h2 {\n  font-size: clamp(1.5rem, 5vw, 3rem);\n}\ndiv {\n  border: 1px solid green;\n  padding: 10px;\n  font-size: clamp(1rem, 2.5vw, 2rem);\n  width: clamp(200px, 50%, 600px);\n}",
+        "highlight_lines": [],
+        "output": "يتم تحجيم النصوص والعناصر بسلاسة حسب الشاشة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_math_functions.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا الْيَوْمَ، تَعَرَّفْنَا عَلَى دُوِّلِ الْحِسَابَاتِ الرِّيَاضِيَّةِ فِي CSS مِثْلَ calc و max و min و clamp، وَكَيْفَ تُسَاعِدُنَا فِي بِنَاءِ تَصْمِيمَاتٍ مَرِنَةٍ وَمُتَجَاوِبَةٍ. نَتَمَنَّى أَنْ تَكُونُوا قَدِ اسْتَفَدْتُمْ كَثِيراً.",
+        "caption_text": "ملخص الدوال الرياضية في CSS وكيفية استخدامها لبناء تصميمات مرنة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام calc للعمليات الحسابية المباشرة",
+          "استخدام max و min لاختيار القيم القصوى والدنيا",
+          "استخدام clamp للتحكم المتجاوب بالقياسات والنصوص",
+          "مراجعة المرجع الشامل لدوال CSS للمزيد من التفاصيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_math_functions.asp"
+      ]
+    }
+  ]
+}
