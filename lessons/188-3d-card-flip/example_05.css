@@ -1,0 +1,6 @@
+.back {
+  transform: rotateY(180deg);
+}
+.container:hover .card {
+  transform: rotateY(180deg);
+}
