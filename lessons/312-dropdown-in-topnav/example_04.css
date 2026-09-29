@@ -1,0 +1,6 @@
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
