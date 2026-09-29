@@ -3,6 +3,8 @@
   "lesson_id": "93",
   "title": "CSS z-index Code Challenge",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية التحكم في ترتيب العناصر المتراكبة باستخدام z-index",
     "تطبيق خاصية position مع z-index",
