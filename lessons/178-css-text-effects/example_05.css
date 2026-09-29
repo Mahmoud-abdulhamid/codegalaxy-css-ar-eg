@@ -1,0 +1,6 @@
+p.test1 {
+  writing-mode: horizontal-tb;
+}
+span {
+  writing-mode: vertical-rl;
+}
