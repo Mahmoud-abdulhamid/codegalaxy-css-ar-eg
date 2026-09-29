@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "134",
+  "title": "CSS Form Focus and Icons",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية التحكم في مظهر حقول الإدخال عند التركيز",
+    "إزالة الإطار الافتراضي باستخدام outline",
+    "إضافة أيقونات داخل حقول الإدخال",
+    "تطبيق تأثيرات الحركة باستخدام transition"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_form_focus.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Form Focus",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ عِنْدَ التَّفَاعُلِ مَعَ حُقُولِ الْإِدْخَالِ، وَكَيْفَ نُضِيفُ لَمَسَاتٍ جَمَالِيَّةً بِاسْتِخْدَامِ الْأَيْقُونَاتِ وَالْحَرَكَةِ.",
+        "caption_text": "مرحبا بكم في درس CSS Form Focus لتحسين تجربة المستخدم في حقول الإدخال."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم في مظهر حقول الإدخال عند التركيز",
+          "إضافة أيقونات داخل حقول الإدخال",
+          "تطبيق تأثيرات الحركة باستخدام CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_focus.asp"
+      ]
+    },
+    {
+      "id": "focus_basics",
+      "title": "التحكم في حالة focus",
+      "narration": {
+        "spoken_text": "عِنْدَ النَّقْرِ عَلَى حَقْلِ الْإِدْخَالِ، تُضِيفُ بَعْضُ الْمُتَصَفِّحَاتِ إِطَاراً أَزْرَقَ افْتِرَاضِيّاً. يُمْكِنُنَا إِزَالَةُ هَذَا السُّلُوكِ بِاسْتِخْدَامِ خَاصِّيَّةِ outline: none، وَاسْتِخْدَامِ مُحَدِّدِ focus لِتَغْيِيرِ مَظْهَرِ الْحَقْلِ عِنْدَ التَّفَاعُلِ مَعَهُ.",
+        "caption_text": "إزالة الإطار الافتراضي باستخدام outline: none واستخدام محدد :focus."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text]:focus {\n  outline: none;\n  background-color: lightblue;\n  border: 3px solid #555;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_focus.asp"
+      ]
+    },
+    {
+      "id": "icons_in_input",
+      "title": "إضافة أيقونات لحقول الإدخال",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ أَيْقُونَةٍ دَاخِلَ الْحَقْلِ، نَسْتَخْدِمُ خَاصِّيَّةَ background-image، مَعَ ضَبْطِ الْمَوْقِعِ بِوَاسِطَةِ background-position. لَا تَنْسَ إِضَافَةَ padding-left كَبِيرٍ لِتَرْكِ مَسَاحَةٍ كَافِيَةٍ لِلْأَيْقُونَةِ دَاخِلَ الْحَقْلِ.",
+        "caption_text": "استخدام background-image و padding-left لإضافة أيقونة داخل حقل الإدخال."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text] {\n  background-image: url('searchicon.png');\n  background-position: 10px 10px;\n  background-repeat: no-repeat;\n  padding-left: 40px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_focus.asp"
+      ]
+    },
+    {
+      "id": "animated_input",
+      "title": "تأثيرات الحركة مع transition",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا جَعْلُ حَقْلِ الْبَحْثِ أَكْثَرَ تَفَاعُلِيَّةً بِاسْتِخْدَامِ خَاصِّيَّةِ transition. عِنْدَ حُدُوثِ focus، نَقُومُ بِتَغْيِيرِ الْعَرْضِ لِيَصِلَ إِلَى مِئَةٍ بِالْمِئَةِ بِسَلَاسَةٍ، مِمَّا يُعْطِي تَجْرِبَةً بَصَرِيَّةً رَائِعَةً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "استخدام transition لتغيير عرض حقل الإدخال عند التركيز بسلاسة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "input[type=text] {\n  transition: width 0.4s ease-in-out;\n}\ninput[type=text]:focus {\n  width: 100%;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_focus.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتائج",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ الْمُتَوَقَّعَةُ عِنْدَ تَطْبِيقِ الْأَكْوَادِ السَّابِقَةِ. سَتُلَاحِظُ تَغَيُّرَ لَوْنِ الْخَلْفِيَّةِ، ظُهُورَ الْأَيْقُونَةِ، وَتَمَدُّدَ الْحَقْلِ بِسَلَاسَةٍ عِنْدَ النَّقْرِ عَلَيْهِ فِي الْمُتَصَفِّحِ.",
+        "caption_text": "معاينة تفاعلية لحقل الإدخال مع الأيقونة وتأثير الحركة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <input type='text' placeholder='Search..'>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "حقل إدخال يتمدد عند النقر مع أيقونة بحث جانبية",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_focus.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "يَجِبُ التَّأَكُّدُ مِنْ أَنَّ الْأَيْقُونَاتِ لَا تُعِيقُ النَّصَّ الْمَكْتُوبَ دَاخِلَ الْحَقْلِ. كَمَا يُفَضَّلُ دَائِماً اخْتِبَارُ التَّأْثِيرَاتِ عَلَى مُتَصَفِّحَاتٍ مُخْتَلِفَةٍ لِضَمَانِ تَوَافُقِيَّةِ الْأَدَاءِ.",
+        "caption_text": "أفضل الممارسات: تأكد من وضوح النص وتوافقية المتصفحات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم padding كاف للأيقونات",
+          "اختبر التوافق عبر المتصفحات",
+          "حافظ على بساطة تأثيرات transition"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_focus.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا كَيْفَ نُسَيْطِرُ عَلَى حَالَةِ focus، وَنُضِيفُ أَيْقُونَاتٍ، وَنُطَبِّقُ حَرَكَةً سَلِسَةً. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَطْوِيرِ مَهَارَاتِكُمْ فِي تَصْمِيمِ نَمَاذِجِ الْوِبّ.",
+        "caption_text": "خلاصة: التحكم في focus، إضافة الأيقونات، وتطبيق الحركة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام :focus للتحكم في التفاعل",
+          "دمج الصور كأيقونات داخل الحقول",
+          "تحسين تجربة المستخدم بـ transition"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_form_focus.asp"
+      ]
+    }
+  ]
+}
