@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "117",
+  "title": "CSS Opacity Code Challenge",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية التحكم في شفافية العناصر باستخدام خاصية opacity",
+    "تطبيق قيم الشفافية على الصور والعناصر المختلفة",
+    "حل تحديات برمجية عملية لتعزيز مهارات CSS",
+    "التعرف على تأثير الشفافية على تجربة المستخدم في الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_image_transparency.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول خاصية Opacity",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ التَّحَكُّمِ فِي شَفَّافِيَّةِ الْعَنَاصِرِ بِاسْتِخْدَامِ خَاصِيَّةِ opacity، وَهِيَ أَدَاه قَوِيَّه لِتَحْسِينِ التَّصْمِيمِ الْبَصَرِيِّ فِي صَفَحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس جديد من دورة CSS. سنتعلم اليوم كيفية التحكم في شفافية العناصر باستخدام خاصية opacity."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم خاصية opacity لتحديد مستوى شفافية العنصر",
+          "تتراوح القيم من 0.0 كشفافية كاملة إلى 1.0 كظهور كامل",
+          "تؤثر هذه الخاصية على العنصر بالكامل بما في ذلك المحتوى"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "قواعد استخدام Opacity",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَام opacity، نُحَدِّدُ قِيمَه رَقْمِيَّه. الْقِيمَه 1 تَعْنِي أَنَّ الْعُنْصُرَ ظَاهِرٌ تَمَاماً، بَيْنَمَا الْقِيمَه 0.5 تَجْعَلُهُ نِصْفَ شَفَّافٍ، وَهَذَا يُسَاعِدُ فِي خَلْقِ تَأْثِيرَاتٍ جَمَالِيَّه رَائِعَه فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "عند استخدام opacity، نحدد قيمة رقمية. القيمة 1 تعني أن العنصر ظاهر تماما، بينما القيمة 0.5 تجعله نصف شفاف."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "القيمة",
+          "التأثير",
+          "الحالة"
+        ],
+        "rows": [
+          [
+            "1.0",
+            "ظهور كامل",
+            "افتراضي"
+          ],
+          [
+            "0.5",
+            "نصف شفاف",
+            "تأثير بصري"
+          ],
+          [
+            "0.0",
+            "شفاف تماما",
+            "مخفي"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود تطبيق الشفافية",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيد selector لِلصُّورَه، ثُمَّ نَضْبُطُ خَاصِيَّةِ opacity عَلَى 0.5. هَذَا يَجْعَلُ الصُّورَه تَبْدُو شَفَّافَه عِنْدَ عَرْضِهَا فِي مُتَصَفِّحْ الْوِبّ.",
+        "caption_text": "لننظر إلى هذا الكود. نقوم بتحديد selector للصورة، ثم نضبط خاصية opacity على 0.5."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للكود",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَطْبِيق opacity عَلَى كُلِّ Elements مِنْ نَوْع img. السَّطْرُ الثَّانِي يَعْمَلُ كَمُعَوِّضٍ لِلْمُتَصَفِّحَاتِ الْقَدِيمَه لِضَمَانِ عَمَلِ التَّأْثِيرِ بِشَكْلٍ صَحِيحٍ فِي جَمِيعِ بِيئَاتِ الْوِبّ.",
+        "caption_text": "في هذا الكود، قمنا بتطبيق opacity على كل Elements من نوع img. السطر الثاني يعمل كمعوض للمتصفحات القديمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "img: هو selector يستهدف جميع عناصر الصور",
+          "opacity: 0.5: يحدد درجة الشفافية بـ 50 بالمئة",
+          "filter: يستخدم لدعم المتصفحات القديمة جدا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "output",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَشْغِيلِ هَذَا الْكُودِ، سَتُشَاهِدُ الصُّورَه فِي مُتَصَفِّحْ الْوِبّ بِشَفَّافِيَه مُنْخَفِضَه. هَذَا التَّأْثِيرُ يُسْتَخْدَمُ كَثِيراً فِي مَعَارِضِ الصُّوَرِ عِنْدَ تَحْرِيكِ فَأْرَةِ الْحَاسُوبِ فَوْقَ الْعُنْصُرِ.",
+        "caption_text": "عند تشغيل هذا الكود، ستشاهد الصورة في متصفح الويب بشفافية منخفضة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <img src=\"image.jpg\" alt=\"Example\">\n    <!-- النتيجة: صورة بشفافية 50% -->\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Image appears with 50% opacity",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَكُونَ حَذِرِينَ عِنْدَ اسْتِخْدَام opacity، لِأَنَّهَا تُؤَثِّرُ عَلَى كُلِّ مَا بِدَاخِلِ الْعُنْصُرِ. إِذَا أَرَدْتَ شَفَّافِيَّةِ الْخَلْفِيَّه فَقَطْ، فَاسْتَخْدِمْ rgba بَدَلاً مِنْهَا لِتَحْقِيقِ نَتَائِجَ أَفْضَلَ.",
+        "caption_text": "يجب أن نكون حذرين عند استخدام opacity، لأنها تؤثر على كل ما بداخل العنصر. استخدم rgba لخلفية شفافة فقط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم opacity للتحكم في شفافية العنصر بالكامل",
+          "استخدم rgba للتحكم في شفافية الخلفية فقط",
+          "اختبر دائما التباين لضمان سهولة قراءة النصوص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_transparency.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا التَّحَدِّي، تَعَلَّمْنَا كَيْفِيَّةِ التَّحَكُّمِ فِي opacity لِتَحْسِينِ تَصْمِيمِ الْوِبّ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ فِي مُتَصَفِّحْ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ مَعَ مَحْمُود عَبْدِ الْحَمِيد.",
+        "caption_text": "في ختام هذا التحدي، تعلمنا كيفية التحكم في opacity لتحسين تصميم الويب. شكرا لمتابعتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية خاصية opacity",
+          "تم شرح كيفية تطبيقها على الصور",
+          "تمت مناقشة الفرق بين opacity و rgba",
+          "نوصي بممارسة التحديات البرمجية بانتظام"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_image_transparency.asp"
+      ]
+    }
+  ]
+}
