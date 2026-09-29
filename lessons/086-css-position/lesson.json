@@ -3,6 +3,8 @@
   "lesson_id": "86",
   "title": "CSS position Property",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية التحكم في مواضع العناصر باستخدام CSS",
     "التعرف على قيمة static الافتراضية",
