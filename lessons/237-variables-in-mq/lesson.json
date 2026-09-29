@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "237",
+  "title": "CSS Variables in Media Queries",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام CSS Variables داخل Media Queries",
+    "التحكم في قيم المتغيرات بناء على عرض الشاشة",
+    "تطبيق مفاهيم Responsive Design باستخدام المتغيرات",
+    "تعلم تحديث قيم المتغيرات داخل media rule"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Variables في Media Queries",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ دَمْجِ CSS Variables مَعَ Media Queries لِتَحْقِيقِ تَصْمِيمٍ مُتَجَاوِبٍ وَمَرِنٍ لِصَفْحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Variables داخل Media Queries لبناء صفحات ويب متجاوبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS Variables لتخزين القيم",
+          "تغيير قيم المتغيرات بناء على عرض الشاشة",
+          "تحسين مرونة التصميم باستخدام Media Queries"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "مفهوم المتغيرات في التصميم المتجاوب",
+      "narration": {
+        "spoken_text": "تُسَاعِدُنَا Media Queries فِي تَعْرِيفِ قَوَاعِدِ CSS مُخْتَلِفَةٍ لِأَجْهِزَةٍ مُتَنَوِّعَةٍ. عِنْدَمَا نَسْتَخْدِمُ CSS Variables، نَسْتَطِيعُ تَعْدِيلَ قِيمَةِ الْمُتَغَيِّرِ دَاخِلَ media rule بَدَلًا مِنْ إِعَادَةِ كِتَابَةِ الْخَصَائِصِ بِالْكَامِلِ.",
+        "caption_text": "تسمح Media Queries بتغيير قيم CSS Variables ديناميكيا حسب عرض الشاشة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد قيم مختلفة للمتغيرات حسب عرض الشاشة",
+          "استخدام media rule لتحديث المتغيرات",
+          "تقليل تكرار الكود البرمجي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "code_setup",
+      "title": "تعريف المتغيرات الأساسية",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِتَعْرِيفِ الْمُتَغَيِّرَاتِ فِي :root. نَقُومُ بِتَعْرِيفِ --primary-bg-color وَ --primary-color. هَذِهِ الْمُتَغَيِّرَاتُ سَتَكُونُ مُتَاحَةً فِي كَامِلِ صَفْحَةِ الْوِبّ لِضَمَانِ اتِّسَاقِ الْأَلْوَانِ.",
+        "caption_text": "تعريف المتغيرات العامة في :root لضمان اتساق الألوان في كامل الصفحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ":root {\n  --primary-bg-color: #1e90ff;\n  --primary-color: #ffffff;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "local_vars",
+      "title": "استخدام المتغيرات المحلية",
+      "narration": {
+        "spoken_text": "دَاخِلَ .container، نَقُومُ بِتَعْرِيفِ --fontsize كَمُتَغَيِّرٍ مَحَلِّيٍّ بِقِيمَةِ 20px. نَسْتَخْدِمُ دَالَّةَ var() لِتَطْبِيقِ هَذِهِ الْقِيمَةِ عَلَى خَاصِيَّةِ font-size وَالْأَلْوَانِ.",
+        "caption_text": "تعريف واستخدام متغير محلي --fontsize داخل عنصر .container."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  --fontsize: 20px;\n  color: var(--primary-bg-color);\n  font-size: var(--fontsize);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "media_query_logic",
+      "title": "تحديث المتغيرات في Media Queries",
+      "narration": {
+        "spoken_text": "الْآنَ نَسْتَخْدِمُ media rule لِتَغْيِيرِ قِيمَةِ --fontsize إِلَى 40px عِنْدَمَا يَكُونُ عَرْضُ الشَّاشَةِ 450px أَوْ أَكْثَرَ. هَذَا يَمْنَحُنَا تَحَكُّمًا دِينَامِيكِيًّا رَائِعًا.",
+        "caption_text": "تحديث قيمة المتغير --fontsize داخل media rule عند عرض 450px فأكثر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (min-width: 450px) {\n  .container {\n    --fontsize: 40px;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "full_example",
+      "title": "مثال متكامل",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ الشَّامِلِ، نُغَيِّرُ أَيْضًا --primary-bg-color دَاخِلَ media rule. لَاحِظْ كَيْفَ يَتَغَيَّرُ لَوْنُ الْخَلْفِيَّةِ وَحَجْمُ الْخَطِّ تِلْقَائِيًّا مَعَ تَغَيُّرِ عَرْضِ الشَّاشَةِ.",
+        "caption_text": "مثال متكامل يوضح تغيير المتغيرات العامة والمحلية داخل Media Queries."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@media screen and (min-width: 450px) {\n  .container {\n    --fontsize: 40px;\n  }\n  :root {\n    --primary-bg-color: lightblue;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة المخرجات",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَتَرَى أَنَّ الْعُنْصُرَ .container يَتَكَيَّفُ مَعَ الشَّاشَاتِ. فِي الشَّاشَاتِ الصَّغِيرَةِ يَكُونُ الْخَطُّ 20px، وَفِي الشَّاشَاتِ الْكَبِيرَةِ يَتَحَوَّلُ إِلَى 40px.",
+        "caption_text": "تغير حجم الخط ولون الخلفية ديناميكيا بناء على عرض المتصفح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "Screen < 450px: Font size 20px, Blue background\nScreen >= 450px: Font size 40px, Lightblue background",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِمًا بِتَعْرِيفِ الْمُتَغَيِّرَاتِ فِي :root لِلْقِيَمِ الْعَامَّةِ، وَاسْتِخْدَامِ الْمُتَغَيِّرَاتِ الْمَحَلِّيَّةِ لِلْعَنَاصِرِ الْمُحَدَّدَةِ لِتَجَنُّبِ التَّدَاخُلِ وَتَسْهِيلِ صِيَانَةِ الْكُودِ فِي مَشَارِيعِ الْوِبّ الْكَبِيرَةِ.",
+        "caption_text": "أفضل الممارسات: استخدم :root للمتغيرات العامة والمتغيرات المحلية للعناصر الخاصة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم :root للمتغيرات العامة",
+          "استخدم المتغيرات المحلية للعناصر المحددة",
+          "حافظ على تنظيم الكود لسهولة الصيانة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ اسْتِخْدَامِ CSS Variables مَعَ Media Queries. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي وَصْفِ الْفِيدْيُو. شُكْرًا لِمُتَابَعَتِكُمْ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم عبر الرابط في الوصف."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية دمج المتغيرات مع Media Queries",
+          "تم شرح كيفية تحديث القيم ديناميكيا",
+          "رابط المصدر متاح في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_mediaqueries.asp"
+      ]
+    }
+  ]
+}
