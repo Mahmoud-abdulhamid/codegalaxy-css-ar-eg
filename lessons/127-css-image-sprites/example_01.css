@@ -1,0 +1,12 @@
+#home {
+  width: 46px;
+  height: 44px;
+  background-image: url(img_navsprites.gif);
+  background-position: 0 0;
+}
+#prev {
+  width: 43px;
+  height: 44px;
+  background-image: url('img_navsprites.gif');
+  background-position: -47px 0;
+}
