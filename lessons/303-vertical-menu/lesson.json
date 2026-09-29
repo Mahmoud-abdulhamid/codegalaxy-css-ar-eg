@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "303",
+  "title": "بناء Vertical Menu باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم تصميم Vertical Menu احترافي باستخدام CSS",
+    "استخدام HTML div و anchor tags لهيكل القائمة",
+    "تطبيق خصائص display block و padding و background color",
+    "إضافة تأثيرات التفاعل hover و active و scroll menu"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_vertical_menu.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة الدرس وأهمية Vertical Menu",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ Vertical Menu اِعْتِمَاداً عَلَى أُسْسِ التَّصْمِيمِ الْحَدِيثَةِ لِتَنْظِيمِ الْمُحْتَوَى بِشَكْلٍ عَمُودِيٍّ جَذَّابٍ.",
+        "caption_text": "مرحبا بكم في درس بناء Vertical Menu باستخدام CSS لتنظيم الروابط بشكل عمودي احترافي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم تصميم Vertical Menu احترافي",
+          "استخدام لغة CSS لتنسيق الروابط",
+          "تنظيم محتوى صفحات الوب بعمود أنيق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_vertical_menu.asp"
+      ]
+    },
+    {
+      "id": "scene_2_html_structure",
+      "title": "هيكل HTML الخاص بالقائمة العمودية",
+      "narration": {
+        "spoken_text": "نَبْدَأُ اَلْآنَ بِبِنَاءِ هَيْكَلِ HTML لِلْقَائِمَةِ. نَسْتَخْدِمُ عُنْصَرَ div مَعَ class يُمَثِّلُ الْحَاوِيَةَ الرَّئِيسِيَّةَ، وَنَضَعُ دَاخِلَهُ مَجْمُوعَةً مِنْ عَنَاصِرَ anchor tags تُمَثِّلُ رَوَابِطَ التَّنَقُّلِ الْمُخْتَلِفَةَ بِكُلِّ يُسْرٍ.",
+        "caption_text": "نستخدم عنصر div كحاوية رئيسية وبداخلها مجموعة من anchor tags لروابط التنقل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"vertical-menu\">\n      <a href=\"#\" class=\"active\">Home</a>\n      <a href=\"#\">Link 1</a>\n      <a href=\"#\">Link 2</a>\n      <a href=\"#\">Link 3</a>\n      <a href=\"#\">Link 4</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home Link 1 Link 2 Link 3 Link 4",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_vertical_menu.asp"
+      ]
+    },
+    {
+      "id": "scene_3_container_styling",
+      "title": "تنسيق الحاوية الرئيسية في CSS",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ اَلْآنَ لِكِتَابَةِ كود CSS. نُحَدِّدُ أُسُسَ التَّنْسِيقِ لِلْحَاوِيَةِ الرَّئِيسِيَّةِ vertical-menu بِضَبْطِ خَاصِيَّةِ width لِتَكُونَ مِئَتَيْ بكسل، مِمَّا يُعْطِي لِلْقَائِمَةِ حَجْماً مُتَناسِقاً وَمُسْتَقِرّاً عَلَى الشاشَةِ.",
+        "caption_text": "نحدد عرض الحاوية الرئيسية vertical-menu بقيمة 200px لضمان تناسق القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".vertical-menu {\n  width: 200px;\n}",
+        "highlight_lines": [],
+        "output": "Container width set to 200px",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_vertical_menu.asp"
+      ]
+    },
+    {
+      "id": "scene_4_links_styling",
+      "title": "تنسيق الروابط داخل القائمة العمودية",
+      "narration": {
+        "spoken_text": "لِجَعْلِ الرَّوَابِطِ تَبْدُو كَمِرْبَعَاتٍ عَمُودِيَّةٍ، نُطَبِّقُ خَاصِيَّةَ display بَقِيمَةِ block، مَعَ إِضَافَةِ background-color رَمَادِيٍّ فَاتِحٍ، وcolor لِلنَّصِّ بِاللَّوْنِ الْأَسْوَدِ، وَتَطْبِيقِ padding مُنَاسِبٍ، وَإِزَالَةِ الْخَطِّ السُّفْلِيِّ عَبْرَ text-decoration.",
+        "caption_text": "نحول الروابط إلى كتل عبر display block ونضيف الألوان والهوامش المناسبة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".vertical-menu a {\n  background-color: #eee;\n  color: black;\n  display: block;\n  padding: 12px;\n  text-decoration: none;\n}",
+        "highlight_lines": [],
+        "output": "Block links with padding and grey background",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_vertical_menu.asp"
+      ]
+    },
+    {
+      "id": "scene_5_hover_effects",
+      "title": "إضافة تأثيرات التفاعل hover و active",
+      "narration": {
+        "spoken_text": "لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ، نُضيف تَأْثِيرَ hover لِتَغْيِيرِ background-color إِلَى رَمَادِيٍّ أَدْاكَنَ عِنْدَ الْمُرُورِ بِالْمَاوِسِ. كَمَا نَسْتَخْدِمُ صَفْحَةَ active لِتَمْيِيزِ الرَّابِطِ الْحَالِيِّ بِلَوْنٍ أَخْضَرَ يُمَيِّزُهُ بِوُضُوحٍ.",
+        "caption_text": "نضيف تأثير hover لتغيير لون الخلفية وتنسيق active للرابط الحالي باللون الأخضر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".vertical-menu a:hover {\n  background-color: #ccc;\n}\n.vertical-menu a.active {\n  background-color: #04AA6D;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "Hover effect and active green link styling",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_vertical_menu.asp"
+      ]
+    },
+    {
+      "id": "scene_6_scroll_menu",
+      "title": "إنشاء قائمة عمودية قابلة للتمرير scroll menu",
+      "narration": {
+        "spoken_text": "إِذَا كَانَتِ الْقَائِمَةُ طَوِيلَةً وَتُرِيدُ تَحْدِيدَ ارْتِفَاعٍ ثَابِتٍ، يُمْكِنُكَ اِسْتِخْدَامُ خَاصِيَّةِ height بَقِيمَةِ مِئَةٍ وَخَمْسِينَ بكسل، مَعَ إِضَافَةِ خَاصِيَّةِ overflow-y بَقِيمَةِ auto لِفُرُوضِ التَّمْرِيرِ الْعَمُودِيِّ بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "نحدد ارتفاع محدد ونضيف overflow-y بقيمة auto لإنشاء قائمة تمرير عمودية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".vertical-menu {\n  width: 200px;\n  height: 150px;\n  overflow-y: auto;\n}",
+        "highlight_lines": [],
+        "output": "Vertical scrollable menu enabled",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_vertical_menu.asp"
+      ]
+    },
+    {
+      "id": "scene_7_best_practices",
+      "title": "أفضل الممارسات البرمجية والخلاصة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ Vertical Menu اِعْتِمَاداً عَلَى CSS وَتَحْسِينِ تَفَاعُلِهَا بِاستخدام hover و active. نَنْصَحُ دائماً بِتَجْرِبَةِ الْأَكْوَادِ بِأَنْفُسِكُمْ وَمُرَاجَعَةِ دُرُوسِ Side Navigation لِمَزيدٍ مِنَ الِاحْتِرَافِيَّةِ.",
+        "caption_text": "ملخص شامل لتعلم تصميم القوائم العمودية وتطبيقاتها العملية في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display block لترتيب الروابط عموديا",
+          "تفعيل تأثيرات hover لزيادة تفاعل المستخدم",
+          "تطبيق overflow لإنشاء قوائم تمرير مرنة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_vertical_menu.asp"
+      ]
+    }
+  ]
+}
