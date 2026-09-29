@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "221",
+  "title": "CSS Masking Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم تقنية Masking في CSS",
+    "تطبيق خصائص mask-image و mask-size",
+    "التعامل مع الصور والعناصر باستخدام Masking",
+    "حل تحديات برمجية متقدمة في CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_masking.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Masking",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى تَقْنِيَةِ Masking، وَهِيَ طَرِيقَةٌ قَوِيَّةٌ لِإِخْفَاءِ أَجْزَاءٍ مِنَ الْعَنَاصِرِ وَإِظْهَارِ أَجْزَاءٍ أُخْرَى بِاسْتِخْدَامِ صُوَرٍ أَوْ أَلْوَانٍ.",
+        "caption_text": "مرحبا بكم في درس CSS Masking. سنتعرف على كيفية استخدام تقنية Masking لإخفاء وإظهار أجزاء من عناصر الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تقنية Masking تسمح بالتحكم في شفافية العناصر",
+          "تستخدم mask-image لتحديد قناع للعنصر",
+          "تعتبر أداة قوية للتصميم الإبداعي في الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_masking.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية لـ Masking",
+      "narration": {
+        "spoken_text": "لِتَفْعِيلِ هَذِهِ التَّقْنِيَةِ، نَسْتَخْدِمُ خَاصِّيَّةَ mask-image. يُمْكِنُكَ تَعْيِينُ مَسَارِ صُورَةٍ، وَسَيَقُومُ الْمُتَصَفِّرُ بِتَطْبِيقِ الشَّفَافِيَّةِ بِنَاءً عَلَى هَذِهِ الصُّورَةِ. هَذَا يُعْطِي تَأْثِيرَاتٍ بَصَرِيَّةً مُذْهِلَةً لِعَنَاصِرِ الويب.",
+        "caption_text": "تعتمد تقنية Masking على خاصية mask-image التي تحدد صورة القناع التي ستطبق على العنصر."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "mask-image: تحدد الصورة المستخدمة كقناع",
+          "mask-size: تتحكم في حجم القناع",
+          "mask-repeat: تتحكم في تكرار القناع"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_masking.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كود تطبيق Masking",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَطْبِيقِ mask-image عَلَى عنصر div. نُحَدِّدُ مَسَارَ الصُّورَةِ، وَنَضْبِطُ mask-repeat عَلَى no-repeat لِضَمَانِ عَدَمِ تَكْرَارِ الْقِنَاعِ دَاخِلَ الْعُنْصُرِ.",
+        "caption_text": "مثال برمجي يوضح كيفية تطبيق mask-image على عنصر div مع ضبط خصائص التكرار."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".masked-element {\n  width: 300px;\n  height: 300px;\n  background-color: blue;\n  mask-image: url('mask.png');\n  mask-repeat: no-repeat;\n  mask-size: contain;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_masking.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيدِ mask-size بِقِيمَةِ contain. هَذَا يَضْمَنُ أَنْ يَظْهَرَ الْقِنَاعُ بِالْكَامِلِ دَاخِلَ الْعُنْصُرِ. هَذِهِ الْخَصَائِصُ تُشْبِهُ تَمَاماً خَصَائِصَ background فِي CSS.",
+        "caption_text": "شرح تفصيلي لخاصية mask-size وكيفية ضمان ظهور القناع بشكل كامل داخل العنصر."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "mask-image",
+            "تحديد صورة القناع"
+          ],
+          [
+            "mask-size",
+            "تحديد حجم القناع"
+          ],
+          [
+            "mask-repeat",
+            "تحديد تكرار القناع"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_masking.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَطْبِيقِ هَذَا الْكُودِ، سَيَظْهَرُ الْعُنْصُرُ بِشَكْلٍ مَقْصُوصٍ وَفْقاً لِلصُّورَةِ الْمُسْتَخْدَمَةِ. هَذَا يُحَوِّلُ الْعَنَاصِرَ الْمُرَبَّعَةَ التَّقْلِيدِيَّةَ إِلَى أَشْكَالٍ إِبْدَاعِيَّةٍ جَذَّابَةٍ فِي صَفْحَةِ الويب.",
+        "caption_text": "تظهر النتيجة النهائية للعنصر بعد تطبيق القناع، حيث يتم قص العنصر وفقا لشكل الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"masked-element\"></div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Element clipped by mask.png",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_masking.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ بِاسْتِخْدَامِ صُوَرِ PNG بِخَلْفِيَّةٍ شَفَّافَةٍ لِتَحْقِيقِ أَفْضَلِ نَتَائِجِ Masking. تَأَكَّدْ أَيْضاً مِنْ تَجْرِبَةِ الْأَكْوَادِ عَلَى مُتَصَفِّرَاتٍ حَدِيثَةٍ لِضَمَانِ دَعْمِ هَذِهِ الْخَصَائِصِ بِشَكْلٍ كَامِلٍ.",
+        "caption_text": "أفضل الممارسات تشمل استخدام صور PNG شفافة والتأكد من توافق المتصفحات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم صور PNG ذات شفافية عالية",
+          "اختبر التصميم على متصفحات Chrome و Edge",
+          "استخدم vendor prefixes إذا لزم الأمر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_masking.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ اسْتِخْدَامِ CSS Masking لِإِضَافَةِ لَمَسَاتٍ جَمَالِيَّةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة الدرس: تعلم تقنية Masking وتطبيقها عمليا. ندعوكم لتجربة الأكواد وتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية أساسيات mask-image",
+          "تم شرح كيفية التحكم في حجم وتكرار القناع",
+          "شجعنا على التجربة العملية للأكواد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_masking.asp"
+      ]
+    }
+  ]
+}
