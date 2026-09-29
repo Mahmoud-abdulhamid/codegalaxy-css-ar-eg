@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "329",
+  "title": "CSS Image Overlay Zoom Effect",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء تأثير Overlay على الصور",
+    "استخدام خاصية transform و scale للتحكم في التكبير",
+    "تطبيق transition للحصول على حركة انسيابية",
+    "تنسيق العناصر داخل الـ container باستخدام position"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_overlay_zoom.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول تأثير Overlay Zoom",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ تَأْثِيرِ Image Overlay Zoom، وَهُوَ تَأْثِيرٌ جَمَالِيٌّ يَجْعَلُ النَّصَّ يَظْهَرُ بِحَرَكَةِ تَكْبِيرٍ سَلِسَةٍ عِنْدَ تَحْرِيكِ مُؤَشِّرِ الْفَأْرَةِ فَوْقَ الصُّورَةِ.",
+        "caption_text": "سنتعلم اليوم كيفية إنشاء تأثير Image Overlay Zoom الجمالي باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تأثير بصري تفاعلي عند Hover",
+          "يعتمد على خاصية transform و scale",
+          "يستخدم في معارض الصور والمواقع الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_zoom.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "الهيكل البرمجي للـ Overlay",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَحْتَاجُ إِلَى Element رَئِيسِيٍّ بِكَلَاسِ container، يَحْتَوِي عَلَى ال img، وَمِنْطَقَةِ overlay الَّتِي تَضُمُّ النَّصَّ. هَذَا التَّرْتِيبُ يَسْمَحُ لَنَا بِتَجْمِيعِ الْعَنَاصِرِ وَتَحْدِيدِ مَوَاقِعِهَا بِدِقَّةٍ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "نستخدم حاوية container تضم الصورة وعنصر overlay الذي يحتوي على النص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"img_avatar.png\" alt=\"Avatar\" class=\"image\">\n      <div class=\"overlay\">\n        <div class=\"text\">Hello World</div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_zoom.asp"
+      ]
+    },
+    {
+      "id": "css_container",
+      "title": "تنسيق الـ Container والـ Image",
+      "narration": {
+        "spoken_text": "فِي CSS، نَضْبُطُ container عَلَى position: relative لِيَكُونَ مَرْجِعاً لِلْعَنَاصِرِ دَاخِلَهُ. أَمَّا الصُّورَةُ فَنَجْعَلُهَا responsive بِتَحْدِيدِ width بِمِائَةٍ بِالْمِائَةِ، لِتَتَنَاسَبَ مَعَ حَجْمِ الْحَاوِيَةِ وَتُحَافِظَ عَلَى أَبْعَادِهَا بِاسْتِخْدَامِ height: auto.",
+        "caption_text": "نضبط الحاوية كمرجع نسبي ونجعل الصورة متجاوبة مع حجم الحاوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  position: relative;\n  width: 50%;\n}\n.image {\n  width: 100%;\n  height: auto;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_zoom.asp"
+      ]
+    },
+    {
+      "id": "css_overlay",
+      "title": "إعداد الـ Overlay وتأثير التكبير",
+      "narration": {
+        "spoken_text": "الْآنَ نُعِدُّ ال overlay بِ position: absolute لِيَغْطِيَ الصُّورَةَ بِالْكَامِلِ. نَضْبُطُ transform: scale(0) لِإِخْفَائِهِ، وَنُضِيفُ transition لِجَعْلِ الْحَرَكَةِ سَلِسَةً. عِنْدَ حَدَثِ hover، نُغَيِّرُ scale إِلَى 1 لِيَظْهَرَ التَّأْثِيرُ بِشَكْلٍ جَذَّابٍ.",
+        "caption_text": "نستخدم transform: scale(0) لإخفاء الـ overlay ثم نغيره إلى 1 عند الـ hover."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".overlay {\n  position: absolute;\n  top: 0; left: 0; right: 0; bottom: 0;\n  background-color: #008CBA;\n  transform: scale(0);\n  transition: .3s ease;\n}\n.container:hover .overlay {\n  transform: scale(1);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_zoom.asp"
+      ]
+    },
+    {
+      "id": "css_text",
+      "title": "تنسيق النص داخل الـ Overlay",
+      "narration": {
+        "spoken_text": "لِتَوْسِيطِ النَّصِّ دَاخِلَ ال overlay، نَسْتَخْدِمُ position: absolute مَعَ top وَ left بِخَمْسِينَ بِالْمِائَةِ، ثُمَّ نُطَبِّقُ transform: translate(-50, -50) لِضَمَانِ وُجُودِهِ فِي الْمُنْتَصَفِ تَمَاماً، مَعَ ضَبْطِ لَوْنِ النَّصِّ وَحَجْمِ الْخَطِّ.",
+        "caption_text": "نستخدم تقنية التوسيط المطلق لتمركز النص داخل الـ overlay."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".text {\n  color: white;\n  font-size: 20px;\n  position: absolute;\n  top: 50%; left: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_zoom.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا بِنَاءَ تَأْثِيرِ Zoom الرَّائِعِ. تَعَلَّمْنَا كَيْفَ نُوَظِّفُ CSS لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْحَرَكَاتِ لِتُطَابِقَ تَصَامِيمَكُمْ الْخَاصَّةَ. إِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "قم بتجربة الكود وتعديل الخصائص لتناسب مشروعك الخاص."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position للتحكم في المواقع",
+          "تطبيق transform للتحجيم والتوسيط",
+          "استخدام transition للحركة الانسيابية",
+          "راجع CSS Images Tutorial للمزيد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_zoom.asp"
+      ]
+    }
+  ]
+}
