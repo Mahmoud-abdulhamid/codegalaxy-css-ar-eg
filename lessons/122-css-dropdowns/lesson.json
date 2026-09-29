@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "122",
+  "title": "CSS Dropdowns",
+  "course": "CSS",
+  "objectives": [
+    "فهم آلية عمل CSS Dropdowns",
+    "استخدام position relative و absolute للتحكم في العناصر",
+    "تطبيق خاصية display للتحكم في ظهور القوائم",
+    "إنشاء قائمة منسدلة تفاعلية باستخدام hover"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_dropdowns.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-cb4740309bfb1202.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css_dropdowns.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Dropdowns",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ فِي دَرْسِ الْيَوْمِ حَوْل CSS Dropdowns. هَذِهِ الْقَوَائِمُ تُسْتَخْدَمُ لِعَرْضِ مَجْمُوعَه مِنَ الْخِيَارَاتِ عِنْدَ النَّقْرِ أَوْ تَحْرِيكِ الْمَاوُسِ فَوْقَ عُنْصُرٍ مُعَيَّنٍ، وَهِيَ أَدَاه حَيَوِيَّه فِي تَصْمِيمِ وَتَفَاعُلِيَّةِ صَفْحَاتِ الْوِبّ.",
+        "caption_text": "تستخدم CSS Dropdowns لعرض قائمة خيارات عند التفاعل مع عنصر معين مثل الزر أو الرابط."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تستخدم CSS Dropdowns لتحسين تجربة المستخدم",
+          "تعتمد على عنصر محفز Trigger Element",
+          "تظهر المحتوى المخفي عند التفاعل",
+          "تعتبر جزءا أساسيا من واجهات الويب الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية",
+      "narration": {
+        "spoken_text": "لِتَنْفِيذ Dropdown نَحْتَاجُ إِلَى عُنْصُرٍ حَاوٍ لِلْمُحْتَوَى، وَعُنْصُرٍ مُحَفِّزٍ. نَسْتَخْدِم position relative لِلْحَاوِيَه الْأُمّ، و position absolute لِلْمُحْتَوَى الْمُنْسَدِلِ لِضَمَانِ ظُهُورِهِ فِي الْمَكَانِ الصَّحِيحِ فَوْقَ بَقِيَّةِ الْعَنَاصِرِ.",
+        "caption_text": "تعتمد القوائم المنسدلة على خصائص position للتحكم في تموضع العناصر داخل الصفحة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "position: relative للعنصر الأب",
+          "position: absolute للعنصر المنسدل",
+          "display: none لإخفاء المحتوى افتراضيا",
+          "display: block لإظهار المحتوى عند hover"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "كود CSS Dropdown بسيط",
+      "narration": {
+        "spoken_text": "لِنُشَاهِدْ هَذَا الْكُودَ. نَقُومُ بِتَعْرِيفِ .dropdown مَع position relative، ثُمَّ نَضْبُطُ .dropdown-content بَةِ display none. عِنْدَ حُدُوث hover عَلَى .dropdown، نُغَيِّر display إِلَى block لِيَظْهَرَ الْمُحْتَوَى.",
+        "caption_text": "مثال برمجي بسيط لإنشاء قائمة منسدلة تظهر عند تمرير الماوس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".dropdown {\n  position: relative;\n}\n.dropdown-content {\n  display: none;\n  position: absolute;\n  background-color: #f9f9f9;\n  min-width: 130px;\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n  padding: 12px 16px;\n}\n.dropdown:hover .dropdown-content {\n  display: block;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML للقائمة",
+      "narration": {
+        "spoken_text": "هَذَا هُوَ هَيْكَل HTML. نَضَعُ النَّصَّ وَالْمُحْتَوَى الْمُنْسَدِلَ دَاخِل div وَاحِدٍ يَحْمِلُ الْكَلَاس dropdown. عِنْدَ تَحْرِيكِ الْمَاوُسِ فَوْقَ هَذَا div، سَيَتَفَعَّل CSS وَيَظْهَرُ الْمُحْتَوَى الْمَكْتُوبُ دَاخِلَ .dropdown-content.",
+        "caption_text": "هيكل HTML يتكون من حاوية رئيسية تحتوي على المحتوى المرئي والمحتوى المخفي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"dropdown\">\n      <span>Mouse over me!</span>\n      <div class=\"dropdown-content\">\n        <p>Hello World!</p>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "menu_example",
+      "title": "إنشاء قائمة منسدلة متقدمة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَحْوِيلُ الْقَائِمَه إِلَى مِينُيو حَقِيقِيَّه بِإِضَافَةِ button وَرَوَابِط a. نَقُومُ بِتَنْسِيقِ الرَّوَابِطِ لِتَبْدُوَ كَأَنَّهَا قَائِمَه مُنْسَدِلَه، مَعَ تَغْيِيرِ لَوْنِ الْخَلْفِيَّه عِنْدَ الْوُقُوفِ بِالْمَاوُسِ عَلَى كُلِّ رَابِطٍ.",
+        "caption_text": "يمكن تطوير القائمة المنسدلة لتشمل أزرارا وروابط تفاعلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "menu.css",
+        "code": ".dropbtn {\n  background-color: #4CAF50;\n  color: white;\n  padding: 16px;\n  cursor: pointer;\n}\n.dropdown-content a {\n  display: block;\n  padding: 12px 16px;\n  text-decoration: none;\n}\n.dropdown-content a:hover {\n  background-color: #f1f1f1;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "تَذَكَّرْ دَائِماً ضَبْط box-shadow لِإِعْطَاءِ عُمْقٍ لِلْقَائِمَه، وَتَحْدِيد min-width مُنَاسِبٍ لِضَمَانِ تَناسُقِ الْعَرْضِ. كَمَا يُفَضَّلُ اسْتِخْدَام cursor pointer لِلْأَزْرَارِ لِتَنْبِيهِ الْمُسْتَخْدِمِ أَنَّ الْعُنْصُرَ قَابِلٌ لِلنَّقْرِ.",
+        "caption_text": "استخدام الظلال وتحديد العرض الأدنى يعزز من جمالية القائمة المنسدلة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم box-shadow لإضافة عمق بصري",
+          "حدد min-width لضمان استقرار العرض",
+          "استخدم cursor: pointer للأزرار التفاعلية",
+          "تأكد من وضوح الروابط داخل القائمة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةِ بِنَاء CSS Dropdowns بِكُلِّ سُهُولَه. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ التَّنْسِيقَاتِ لِتُنَاسِبَ مَشَارِيعَكُمُ الْخَاصَّه. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم لتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية مفاهيم position و display",
+          "تم إنشاء قائمة منسدلة بسيطة وأخرى متقدمة",
+          "تم توضيح أهمية التفاعل عبر hover",
+          "راجع الرابط في الوصف لمزيد من التفاصيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_dropdowns.asp"
+      ]
+    }
+  ]
+}
