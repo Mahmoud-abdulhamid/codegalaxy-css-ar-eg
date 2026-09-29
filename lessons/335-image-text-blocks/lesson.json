@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "335",
+  "title": "وضع كتل النص فوق الصور باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء تصميم لوضع نصوص فوق الصور في صفحات الويب",
+    "استخدام خاصية position مع قيمة relative للعنصر الحاوي",
+    "تطبيق خاصية position مع قيمة absolute لتحديد مكان النص فوق الصورة",
+    "تنسيق الألوان والخلفيات والهوامش لكتل النص باحترافية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_text_blocks.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة عن كتل النص فوق الصور",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ وَضْعِ كتل النص فَوْقَ الصُّوَرِ بِاسْتِخْدَامِ تَقْنِيَاتِ التَّمْوِضُعِ فِي لُغَةِ CSS.",
+        "caption_text": "مرحبا بكم في درس وضع كتل النص فوق الصور باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم كيفية وضع نصوص فوق الصور",
+          "استخدام HTML و CSS لتصميم جذاب",
+          "التحكم في تمركز العناصر بدقة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text_blocks.asp"
+      ]
+    },
+    {
+      "id": "scene_2_concepts",
+      "title": "المفاهيم الأساسية للوضع والتمركز",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ هَذَا التَّصْمِيمِ، نَسْتَخْدِمُ حَاوِيَةً رَئِيسِيَّةً Container تَحْمِلُ الصُّورَةَ وَالنَّصَّ مَعاً، وَنُطَبِّقُ عَلَيْهَا خَاصِيَّةَ position بَقِيمَةِ relative.",
+        "caption_text": "نستخدم حاوية رئيسية تحمل الصورة والنص معا بقيمة position لـ relative."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "العنصر الحاوي container يحمل الصورة والنص",
+          "استخدام position بمقدار relative للحاوية",
+          "استخدام position بمقدار absolute للنص"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text_blocks.asp"
+      ]
+    },
+    {
+      "id": "scene_3_html_code",
+      "title": "كتابة هيكل HTML للصورة والنص",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِكِتَابَةِ كود HTML. نُنْشِئُ عنصر div يحمل class باسم container، وَبِدَاخِلِهِ نَضَعُ الصُّورَةَ ثُمَّ عنصر div ثَانِيًا يحمل class باسم text-block لِكِتَابَةِ العُنْوَانِ وَالفَقْرَةِ.",
+        "caption_text": "نكتب هيكل HTML عبر إنشاء حاوية تحتوي على الصورة وعنصر النص."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"nature.jpg\" alt=\"Norway\" style=\"width:100%;\">\n      <div class=\"text-block\">\n        <h4>Nature</h4>\n        <p>What a beautiful sunrise</p>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text_blocks.asp"
+      ]
+    },
+    {
+      "id": "scene_4_css_container",
+      "title": "تنسيق الحاوية في CSS",
+      "narration": {
+        "spoken_text": "الآن ننتقل إلى تنسيق CSS. نضبط الحاوية container بخاصية position بَقِيمَةِ relative، لكي تكون الإطار المرجعي لعنصر النص الذي سيتحرك بداخلها.",
+        "caption_text": "نضبط الحاوية بخاصية position بقيمة relative لتعمل كإطار مرجعي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* Container holding the image and the text */\n.container {\n  position: relative;\n}",
+        "highlight_lines": [
+          2,
+          3,
+          4
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text_blocks.asp"
+      ]
+    },
+    {
+      "id": "scene_5_css_text_block",
+      "title": "تنسيق وتمركز كتلة النص",
+      "narration": {
+        "spoken_text": "نعطي كتلَةَ النص text-block خَاصِيَّةَ position بَقِيمَةِ absolute، مع تحديد المسافة من الأسفل bottom ومن اليمين right بِمِقْدَارِ عشْرِينَ بيكسل.",
+        "caption_text": "نحدد موقع كتلة النص باستخدام position بقيمة absolute مع تحديد الإحداثيات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* Bottom right text */\n.text-block {\n  position: absolute;\n  bottom: 20px;\n  right: 20px;\n  background-color: black;\n  color: white;\n  padding-left: 20px;\n  padding-right: 20px;\n}",
+        "highlight_lines": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text_blocks.asp"
+      ]
+    },
+    {
+      "id": "scene_6_colors_padding",
+      "title": "ضبط الألوان والهوامش الداخلية",
+      "narration": {
+        "spoken_text": "نضيف خلفية سوداء background-color بلون black، ولون نص أبيض color بلون white، مع إضافة حواشٍ داخلية padding من اليمين واليسار لضمان مظهر احترافي.",
+        "caption_text": "نضيف خلفية سوداء ونصا أبيض مع هوامش داخلية لتنسيق الكتلة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تطبيق لون خلفية أسود خلف النص",
+          "استخدام نص أبيض لضمان التباين العالي",
+          "ضبط padding لتباعد النصوص عن الحواف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text_blocks.asp"
+      ]
+    },
+    {
+      "id": "scene_7_output_preview",
+      "title": "معاينة المخرجات المرئية في المتصفح",
+      "narration": {
+        "spoken_text": "هكذا يظهر التصميم نهائياً في المتصفح. الصورة تملأ العرض بنسبة مئة بالمئة، وكتلَةُ النص تظهر بوضوح فوق الزاوية السفلية اليمنى للصورة.",
+        "caption_text": "شكل المخرجات النهائي في المتصفح مع ظهور النص فوق الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.txt",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    +---------------------------------------+\n    | Nature |\n    | What a beautiful sunrise |\n    +---------------------------------------+\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Nature\nWhat a beautiful sunrise",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text_blocks.asp"
+      ]
+    },
+    {
+      "id": "scene_8_summary",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "تَعَرَّفْنَا فِي هَذَا الدَّرْسِ عَلَى كَيْفِيَّةِ دَمْجِ الصُّوَرِ مع النُّصُوصِ بَاسْتِخْدَامِ position بَقِيَمَيْ relative وَ absolute. نُنْصِحُكُمْ بِتَجْرِيبِ الْكُودِ بأنفسكم.",
+        "caption_text": "خلاصة الدرس: استخدام تقنيات التموضع لوضع النصوص فوق الصور."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position relative للحاويات",
+          "استخدام position absolute للعناصر المتداخلة",
+          "التحكم في المظهر باستخدام background و padding"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_text_blocks.asp"
+      ]
+    }
+  ]
+}
