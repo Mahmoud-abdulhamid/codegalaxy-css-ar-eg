@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "255",
+  "title": "CSS Grid Layout Module",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم نظام CSS Grid Layout",
+    "الفرق بين CSS Grid و Flexbox",
+    "إنشاء Grid Container و Grid Items",
+    "تطبيق الخصائص الأساسية لتنسيق الصفوف والأعمدة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_grid.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-31bc05400566f02b.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_grid.asp",
+      "source_url": "https://www.w3schools.com/css/css_grid.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Grid",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسِ الْيَوْمِ. سَنَتَعَرَّفُ عَلَى CSS Grid Layout، وَهُوَ نِظَامٌ قَوِيٌّ لِتَصْمِيمِ هَيْكَلِ صَفْحَاتِ الْوِبّ بِاعْتِمَادِ الصُّفُوفِ وَالْأَعْمِدَةِ، مِمَّا يُسَهِّلُ بِنَاءَ تَصْمِيمَاتٍ مُعَقَّدَةٍ بِكُلِّ سُهُولَةٍ وَدُونَ الْحَاجَةِ لِاسْتِخْدَامِ float أَوْ positioning.",
+        "caption_text": "نظام CSS Grid يوفر طريقة مرنة لبناء تخطيطات صفحات الويب باستخدام الصفوف والأعمدة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "نظام تخطيط ثنائي الأبعاد",
+          "يعتمد على الصفوف والأعمدة",
+          "بديل عصري لتقنيات float و positioning",
+          "يسهل تصميم واجهات متجاوبة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid.asp"
+      ]
+    },
+    {
+      "id": "grid_vs_flexbox",
+      "title": "الفرق بين CSS Grid و Flexbox",
+      "narration": {
+        "spoken_text": "مِنَ الْمُهِمِّ أَنْ نُفَرِّقَ بَيْنَ CSS Grid وَ Flexbox. ال Grid يُسْتَخْدَمُ لِلتَّخْطِيطِ ثُنَائِيِّ الْأَبْعَادِ، أَيْ يَتَعَامَلُ مَعَ الصُّفُوفِ وَالْأَعْمِدَةِ مَعاً، بَيْنَمَا Flexbox مُخَصَّصٌ لِلتَّخْطِيطِ أُحَادِيِّ الْبُعْدِ، إِمَّا صُفُوفٍ أَوْ أَعْمِدَةٍ فَقَطْ.",
+        "caption_text": "الفرق الجوهري هو أن CSS Grid ثنائي الأبعاد بينما Flexbox أحادي البعد."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الميزة",
+          "CSS Grid",
+          "Flexbox"
+        ],
+        "rows": [
+          [
+            "الأبعاد",
+            "ثنائي الأبعاد",
+            "أحادي البعد"
+          ],
+          [
+            "التركيز",
+            "صفوف وأعمدة",
+            "صفوف أو أعمدة"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكل الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَحْدِيدِ display: grid لِلْحَاوِيَةِ، ثُمَّ نَسْتَخْدِمُ grid-template-columns لِتَقْسِيمِ الْأَعْمِدَةِ. لَاحِظْ كَيْفَ نُحَدِّدُ الْخَصَائِصَ لِ container وَلِلْعَنَاصِرِ دَاخِلَهَا لِتَنْظِيمِ الْمُحْتَوَى بِشَكْلٍ جَمَالِيٍّ.",
+        "caption_text": "تحديد display: grid على الحاوية هو الخطوة الأولى لتفعيل نظام الشبكة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  display: grid;\n  grid-template-columns: auto auto auto;\n  background-color: dodgerblue;\n  padding: 10px;\n}\n.container div {\n  background-color: #f1f1f1;\n  border: 1px solid black;\n  padding: 10px;\n  font-size: 30px;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid.asp"
+      ]
+    },
+    {
+      "id": "html_markup",
+      "title": "تطبيق عناصر HTML",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْجُزْءِ، نَقُومُ بِإِنْشَاءِ div بِكَلَاس container، وَنَضَعُ دَاخِلَهُ خَمْسَةَ عَنَاصِرَ. سَيَقُومُ الْمُتَصَفِّحُ بِتَوْزِيعِهَا تِلْقَائِيّاً حَسَبَ الْقَوَاعِدِ الَّتِي حَدَّدْنَاهَا فِي ال CSS، لِتَظْهَرَ فِي شَكْلِ شَبَكَةٍ مُنَظَّمَةٍ.",
+        "caption_text": "عناصر div داخل الـ container تصبح تلقائيا Grid Items."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <div>1</div>\n      <div>2</div>\n      <div>3</div>\n      <div>4</div>\n      <div>5</div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ الْمَرْئِيَّةُ لِلْكُودِ. نَرَى الْحَاوِيَةَ بِاللَّوْنِ الْأَزْرَقِ، وَبِدَاخِلَهَا الْعَنَاصِرُ مُوَزَّعَةٌ فِي ثَلَاثَةِ أَعْمِدَةٍ كَمَا حَدَّدْنَا. هَذَا النِّظَامُ يَمْنَحُكَ تَحَكُّماً كَامِلاً فِي تَرْتِيبِ الْعَنَاصِرِ دَاخِلَ صَفْحَةِ الْوِبّ.",
+        "caption_text": "تظهر العناصر مرتبة في شبكة بفضل خصائص CSS Grid."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "معاينة تخطيط CSS Grid"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "عِنْدَ اسْتِخْدَامِ CSS Grid، تَذَكَّرْ أَنَّ الْحَاوِيَةَ هِيَ ال Grid Container، وَالْعَنَاصِرُ الْمُبَاشِرَةُ هِيَ ال Grid Items. يُمْكِنُكَ التَّحَكُّمُ فِي الْمَسَافَاتِ بَيْنَ الْأَعْمِدَةِ وَالصُّفُوفِ بِاسْتِخْدَامِ خَصَائِصَ مِثْلَ gap، وَهِيَ مُمَارَسَةٌ بَرْمَجِيَّةٌ مُمْتَازَةٌ.",
+        "caption_text": "استخدام gap يسهل التحكم في المسافات بين العناصر دون تعقيد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التمييز بين Grid Container و Grid Items",
+          "استخدام خاصية gap للتحكم في المسافات",
+          "تجنب استخدام float مع Grid",
+          "التخطيط المسبق للأعمدة والصفوف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَلَّمْنَا أَنَّ CSS Grid هُوَ أَدَاةٌ ثَوْرِيَّةٌ لِتَصْمِيمِ الْوِبّ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّوَابِطِ الْمُوَفَّرَةِ فِي وَصْفِ الْفِيدْيُو، وَلَا تَتَرَدَّدُوا فِي اسْتِكْشَافِ الْخَصَائِصِ الْأُخْرَى لِتَطْوِيرِ مَهَارَاتِكُمْ.",
+        "caption_text": "CSS Grid أداة أساسية لكل مطور ويب عصري."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Grid يسهل التخطيط ثنائي الأبعاد",
+          "يغني عن الطرق القديمة في التنسيق",
+          "جرب الأكواد بنفسك عبر الرابط",
+          "تابع الدروس القادمة للمزيد من التفاصيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_grid.asp"
+      ]
+    }
+  ]
+}
