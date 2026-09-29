@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "219",
+  "title": "CSS Gradient Mask Layers",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام CSS Gradients كطبقات قناع",
+    "تطبيق Linear Gradient Masking على الصور",
+    "التحكم في شفافية العناصر باستخدام Radial Gradients",
+    "استخدام Conic Gradients لإنشاء تأثيرات قناع متقدمة",
+    "التعرف على الخصائص الأساسية لـ CSS Masking"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_masking_gradients.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Gradient Mask Layers",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ اسْتِخْدَامِ CSS Gradients كَطَبَقَةِ قِنَاعٍ لِلصُّوَرِ، وَهِيَ تِقْنِيَّةٌ رَائِعَةٌ لِإِضَافَةِ تَأْثِيرَاتٍ بَصَرِيَّةٍ احْتِرَافِيَّةٍ عَلَى مَوَاقِعِ الْوِبّ.",
+        "caption_text": "سنتعلم اليوم كيفية استخدام CSS Gradients كطبقة قناع للصور لإضافة تأثيرات بصرية احترافية على مواقع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS Gradients كطبقة قناع",
+          "تحسين المظهر البصري للعناصر",
+          "التحكم في شفافية الصور برمجيا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_gradients.asp"
+      ]
+    },
+    {
+      "id": "linear-gradient",
+      "title": "تطبيق Linear Gradient Mask",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِ Linear Gradient Mask. نَسْتَخْدِمُ هَذَا النَّوْعَ لِتَدْرِيجِ الشَّفَافِيَّةِ مِنَ الْأَعْلَى إِلَى الْأَسْفَلِ. نَحْتَاجُ لِتَحْدِيدِ mask-image مَعَ خَاصِيَّةِ linear-gradient لِتَحْقِيقِ هَذَا التَّأْثِيرِ الْجَمَالِيِّ عَلَى الصُّورَةِ.",
+        "caption_text": "نستخدم Linear Gradient Mask لتدرج الشفافية من الأعلى إلى الأسفل باستخدام خاصية mask-image."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".mask1 {\n  -webkit-mask-image: linear-gradient(black, transparent);\n  mask-image: linear-gradient(black, transparent);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_gradients.asp"
+      ]
+    },
+    {
+      "id": "full-example",
+      "title": "مثال عملي متكامل",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَطْبِيقِ الْقِنَاعِ عَلَى صُورَةٍ مَعَ تَحْدِيدِ الْأَبْعَادِ. لَاحِظْ كَيْفَ نَسْتَخْدِمُ background مَعَ url لِتَحْدِيدِ مَصْدَرِ الصُّورَةِ، ثُمَّ نُطَبِّقُ الْقِنَاعَ لِجَعْلِ الْجُزْءِ السُّفْلِيِّ شَفَّافاً.",
+        "caption_text": "تطبيق القناع على صورة مع تحديد الأبعاد واستخدام خاصية background لتعيين الصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".mask1 {\n  max-width: 600px;\n  height: 400px;\n  background: url(img_5terre.jpg) no-repeat;\n  -webkit-mask-image: linear-gradient(black, transparent);\n  mask-image: linear-gradient(black, transparent);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_gradients.asp"
+      ]
+    },
+    {
+      "id": "radial-circle",
+      "title": "استخدام Radial Gradient كدائرة",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً اسْتِخْدَامُ Radial Gradient لِإِنْشَاءِ قِنَاعٍ دَائِرِيٍّ. نُحَدِّدُ الْقِيمَةَ circle، وَنَضْبِطُ نِقَاطَ التَّوَقُّفِ لِلشَّفَافِيَّةِ بِاسْتِخْدَامِ rgba لِتَحْقِيقِ تَأْثِيرٍ نَاعِمٍ وَمُتَدَرِّجٍ حَوْلَ مَرْكَزِ الصُّورَةِ.",
+        "caption_text": "استخدام Radial Gradient لإنشاء قناع دائري مع التحكم في نقاط التوقف والشفافية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".mask2 {\n  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);\n  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_gradients.asp"
+      ]
+    },
+    {
+      "id": "radial-ellipse",
+      "title": "استخدام Radial Gradient كشكل بيضاوي",
+      "narration": {
+        "spoken_text": "بِالْمِثْلِ، نَسْتَطِيعُ اسْتِخْدَامَ ellipse لِتَشْكِيلِ الْقِنَاعِ بِشَكْلٍ بَيْضَاوِيٍّ. هَذَا يُعْطِينَا مَرُونَةً أَكْبَرَ فِي التَّحَكُّمِ بِتَوَزُّعِ الْقِنَاعِ عَلَى مَسَاحَةِ الْعُنْصُرِ، مِمَّا يُضِيفُ لَمْسَةً فَنِّيَّةً مُمَيَّزَةً لِتَصْمِيمِكَ.",
+        "caption_text": "استخدام ellipse لتشكيل القناع بشكل بيضاوي يمنح مرونة أكبر في توزيع القناع."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".mask3 {\n  -webkit-mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);\n  mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_gradients.asp"
+      ]
+    },
+    {
+      "id": "conic-gradient",
+      "title": "استخدام Conic Gradient",
+      "narration": {
+        "spoken_text": "أَخِيراً، نَسْتَخْدِمُ Conic Gradient لِإِنْشَاءِ قِنَاعٍ دَوَرَانِيٍّ. نُحَدِّدُ الزَّوَايَا بِ deg، وَنُحَدِّدُ مَنَاطِقَ الشَّفَافِيَّةِ. هَذَا التَّأْثِيرُ يُسْتَخْدَمُ لِإِنْشَاءِ تَأْثِيرَاتٍ دَائِرِيَّةٍ مُعَقَّدَةٍ وَمُبْهِرَةٍ فِي مَوَاقِعِ الْوِبّ.",
+        "caption_text": "استخدام Conic Gradient لإنشاء قناع دوراني وتأثيرات دائرية معقدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".mask3 {\n  -webkit-mask-image: conic-gradient(black 0deg, transparent 360deg);\n  mask-image: conic-gradient(black 0deg, transparent 360deg);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_gradients.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ اسْتِخْدَامِ أَنْوَاعٍ مُخْتَلِفَةٍ مِنَ ال Gradients كَأَقْنِعَةٍ لِلصُّوَرِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ الْمُذْهِلَةِ. لَا تَنْسَوْا مُرَاجَعَةَ التَّوْثِيقِ الرَّسْمِيِّ لِتَعَلُّمِ الْمَزِيدِ عَنْ خَصَائِصِ Masking.",
+        "caption_text": "تعلمنا استخدام أنواع مختلفة من Gradients كأقنعة للصور. جربوا الأكواد بأنفسكم وراجعوا التوثيق الرسمي للمزيد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Linear Gradient للقناع الخطي",
+          "Radial Gradient للقناع الدائري والبيضاوي",
+          "Conic Gradient للقناع الدوراني",
+          "استخدام -webkit-mask-image للتوافق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_masking_gradients.asp"
+      ]
+    }
+  ]
+}
