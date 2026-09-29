@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "137",
+  "title": "CSS Counters",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم آلية عمل CSS Counters كمتغيرات برمجية",
+    "التعرف على خصائص counter-reset و counter-increment",
+    "استخدام دالة counter() لعرض الترقيم التلقائي",
+    "التحكم في قيم الترقيم بالزيادة أو النقصان"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_counters.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة عن CSS Counters",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى CSS Counters، وَهِيَ أَدَاةٌ قَوِيَّةٌ لِإِنْشَاءِ تَرْقِيمٍ دِينَامِيكِيٍّ لِلْعَنَاصِرِ دُونَ الْحَاجَةِ إِلَى JavaScript. تَعْمَلُ هَذِهِ الْعَنَاصِرُ كَمُتَغَيِّرَاتٍ يَدْعَمُهَا مُتَصَفِّحُ الْوِبّ.",
+        "caption_text": "تتيح CSS Counters إنشاء ترقيم ديناميكي للعناصر مثل العناوين أو القوائم دون استخدام JavaScript."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Counters هي متغيرات يتم التحكم بها عبر CSS",
+          "تستخدم لترقيم العناوين والأقسام تلقائيا",
+          "تغني عن استخدام JavaScript في عمليات الترقيم",
+          "تعتمد على خصائص CSS محددة للتحكم في القيم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "الخصائص الأساسية للترقيم",
+      "narration": {
+        "spoken_text": "لِلْعَمَلِ مَعَ CSS Counters، نَحْتَاجُ إِلَى ثَلَاثِ خَصَائِصَ رَئِيسِيَّةٍ. أَوَّلاً counter-reset لِتَهْيِئَةِ الْمُتَغَيِّرِ، ثَانِياً counter-increment لِزِيَادَةِ أَوْ نُقْصَانِ الْقِيمَةِ، وَثَالِثاً دَالَّةُ counter() لِعَرْضِ الْقِيمَةِ دَاخِلَ خَاصِيَّةِ content فِي Pseudo-elements مِثْلَ before.",
+        "caption_text": "تعتمد CSS Counters على counter-reset لإنشاء المتغير، وcounter-increment لتعديل قيمته، ودالة counter() لعرضه."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "counter-reset: لإنشاء أو إعادة ضبط قيمة العداد",
+          "counter-increment: لزيادة أو نقصان قيمة العداد",
+          "counter(): دالة تستخدم داخل content لعرض القيمة",
+          "Pseudo-elements مثل ::before تستخدم لإظهار الترقيم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "مثال عملي للترقيم التلقائي",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَهْيِئَةِ الْعَدَّادِ section دَاخِلَ body. ثُمَّ نَسْتَخْدِمُ h2::before لِزِيَادَةِ الْقِيمَةِ بِمِقْدَارِ وَاحِدٍ مَعَ كُلِّ عُنْصُرِ h2، وَنَعْرِضُ النَّصَّ الْمَطْلُوبَ بِاسْتِخْدَامِ دَالَّةِ counter().",
+        "caption_text": "مثال يوضح كيفية تهيئة العداد وزيادته تلقائيا مع كل عنصر h2."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  counter-reset: section;\n}\nh2::before {\n  counter-increment: section;\n  content: \"Section \" counter(section) \": \";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters.asp"
+      ]
+    },
+    {
+      "id": "decrement",
+      "title": "نقصان قيمة العداد",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَقْلِيلُ قِيمَةِ الْعَدَّادِ بِاسْتِخْدَامِ قِيمَةٍ سَالِبَةٍ فِي counter-increment. الْقِيمَةُ الِافْتِرَاضِيَّةُ هِيَ وَاحِدٌ، لَكِنْ بِوَضْعِ -1 نَجْعَلُ الْعَدَّادَ يَتَنَاقَصُ تِلْقَائِيّاً مَعَ ظُهُورِ كُلِّ عُنْصُرٍ مُحَدَّدٍ.",
+        "caption_text": "يمكن تقليل قيمة العداد عبر تمرير قيمة سالبة إلى خاصية counter-increment."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  counter-reset: section;\n}\nh2::before {\n  counter-increment: section -1;\n  content: \"Section \" counter(section) \": \";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters.asp"
+      ]
+    },
+    {
+      "id": "custom_increment",
+      "title": "الزيادة بقيم مخصصة",
+      "narration": {
+        "spoken_text": "لَا يَقْتَصِرُ الْعَدَّادُ عَلَى الزِّيَادَةِ بِوَاحِدٍ فَقَطْ. يُمْكِنُكَ تَحْدِيدُ أَيِّ قِيمَةٍ تُرِيدُهَا لِلزِّيَادَةِ. فِي هَذَا الْمِثَالِ، نَقُومُ بِزِيَادَةِ الْعَدَّادِ بِمِقْدَارِ اثْنَيْنِ مَعَ كُلِّ عُنْصُرِ h2، وَهَذَا يُعْطِي مَرُونَةً كَبِيرَةً فِي التَّصْمِيمِ.",
+        "caption_text": "يمكن تخصيص مقدار الزيادة في العداد عبر تمرير رقم محدد لخاصية counter-increment."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "body {\n  counter-reset: section;\n}\nh2::before {\n  counter-increment: section 2;\n  content: \"Section \" counter(section) \": \";\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "خِتَاماً، تُعَدُّ CSS Counters طَرِيقَةً رَائِعَةً لِإِضَافَةِ التَّرْقِيمِ بِشَكْلٍ احْتِرَافِيٍّ وَنَظِيفٍ. تَمَكَّنَّا الْيَوْمَ مِنْ فَهْمِ كَيْفِيَّةِ التَّحَكُّمِ فِي هَذِهِ الْمُتَغَيِّرَاتِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ لِتَرَوْا النَّتَائِجَ الرَّائِعَةَ.",
+        "caption_text": "تعد CSS Counters أداة احترافية وفعالة لإدارة الترقيم التلقائي في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام counter-reset للبدء",
+          "استخدام counter-increment للتعديل",
+          "استخدام counter() للعرض",
+          "تجربة القيم المختلفة للزيادة والنقصان"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_counters.asp"
+      ]
+    }
+  ]
+}
