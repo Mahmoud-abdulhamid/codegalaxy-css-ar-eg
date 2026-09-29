@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "229",
+  "title": "CSS Multi-column Layout",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تقسيم النصوص إلى أعمدة باستخدام CSS",
+    "التعرف على خاصية column-count لتحديد عدد الأعمدة",
+    "التحكم في المسافات بين الأعمدة عبر خاصية column-gap",
+    "تطبيق التنسيقات المتقدمة على تخطيطات الويب"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_multiple_columns.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في Multi-column Layout",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ تَخْطِيطِ Multi-column Layout، وَهُوَ أُسْلُوبٌ رَائِعٌ لِتَنْظِيمِ النُّصُوصِ فِي صَفْحَاتِ الْوِبّ، تَمَاماً كَمَا نَرَى فِي الصُّحُفِ وَالْمَجَلَّاتِ الْمَطْبُوعَةِ.",
+        "caption_text": "يسمح CSS Multi-column Layout Module بتقسيم النصوص إلى أعمدة متعددة لتنظيم المحتوى بشكل احترافي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنظيم النصوص في أعمدة متعددة",
+          "محاكاة تنسيق الصحف والمجلات",
+          "تحسين تجربة القراءة في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns.asp"
+      ]
+    },
+    {
+      "id": "column-count",
+      "title": "استخدام خاصية column-count",
+      "narration": {
+        "spoken_text": "لِتَقْسِيمِ أَيِّ Element إِلَى أَعْمِدَةٍ، نَسْتَخْدِمُ خَاصِيَّةَ column-count. هَذِهِ الْخَاصِيَّةُ تُحَدِّدُ عَدَدَ الْأَعْمِدَةِ الْمَطْلُوبِ تَوَزِيعُ النَّصِّ عَلَيْهَا، وَيَقُومُ الْمُتَصَفِّحُ بِتَوْزِيعِ الْمُحْتَوَى تِلْقَائِيّاً بَيْنَ هَذِهِ الْأَعْمِدَةِ بِشَكْلٍ مُتَوَازِنٍ.",
+        "caption_text": "تحدد خاصية column-count عدد الأعمدة التي سيتم تقسيم العنصر إليها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  column-count: 3;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns.asp"
+      ]
+    },
+    {
+      "id": "column-gap",
+      "title": "التحكم في المسافات عبر column-gap",
+      "narration": {
+        "spoken_text": "بَعْدَ تَقْسِيمِ النَّصِّ، قَدْ نَحْتَاجُ إِلَى تَحْدِيدِ الْمَسَافَةِ الْفَاصِلَةِ بَيْنَ كُلِّ عَمُودٍ وَالْآخَرِ. هُنَا تَأْتِي وَظِيفَةُ خَاصِيَّةِ column-gap، حَيْثُ نُحَدِّدُ قِيمَةً بِوَحْدَاتِ الْقِيَاسِ مِثْلَ pixels لِضَمَانِ مَسَافَةٍ مُرِيحَةٍ لِلْعَيْنِ بَيْنَ الْأَعْمِدَةِ.",
+        "caption_text": "تستخدم خاصية column-gap لتحديد المساحة الفارغة بين الأعمدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  column-count: 3;\n  column-gap: 40px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "لِنُلَاحِظْ كَيْفَ يَتَغَيَّرُ شَكْلُ الْمُحْتَوَى دَاخِلَ ال div. بَعْدَ تَطْبِيقِ هَذِهِ الْخَصَائِصِ، سَيَظْهَرُ النَّصُّ مُوَزَّعاً عَلَى ثَلَاثَةِ أَعْمِدَةٍ مُتَسَاوِيَةٍ، مَعَ وُجُودِ فَرَاغٍ بِمِقْدَارِ أَرْبَعِينَ pixels بَيْنَ كُلِّ عَمُودٍ، مِمَّا يُعْطِي تَصْمِيماً نَظِيفاً وَمُنَظَّماً.",
+        "caption_text": "يظهر النص موزعا على 3 أعمدة مع مسافة 40px بينها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div style=\"column-count: 3; column-gap: 40px;\">\n      هذا نص تجريبي يتم توزيعه تلقائياً على الأعمدة.\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Column 1 | Column 2 | Column 3",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "ملاحظات هندسية",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَتَذَكَّرَ أَنَّ هَذِهِ الْخَصَائِصَ جُزْءٌ مِنْ CSS Multi-column Layout Module. يُمْكِنُكُمْ أَيْضاً اسْتِخْدَامُ خَصَائِصَ أُخْرَى مِثْلَ column-rule لِإِضَافَةِ خُطُوطٍ فَاصِلَةٍ بَيْنَ الْأَعْمِدَةِ لِتَحْسِينِ التَّصْمِيمِ الْبَصَرِيِّ لِصَفْحَةِ الْوِبّ.",
+        "caption_text": "يمكن إضافة خصائص إضافية مثل column-rule لإضافة خطوط فاصلة بين الأعمدة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام column-rule لإضافة خطوط فاصلة",
+          "التأكد من توافق المتصفحات",
+          "اختبار التخطيط على شاشات مختلفة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ التَّحَكُّمِ فِي تَخْطِيطِ النُّصُوصِ بِسُهُولَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ النَّتَائِجِ. لَا تَتَرَدَّدُوا فِي زِيَارَةِ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ لِلتَّعَمُّقِ أَكْثَرَ فِي خَصَائِصِ CSS.",
+        "caption_text": "شكرا لمتابعتكم، جربوا الأكواد بأنفسكم لتطوير مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية column-count و column-gap",
+          "تعلمنا كيفية تقسيم المحتوى بمرونة",
+          "راجعوا الروابط في الوصف للمزيد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_multiple_columns.asp"
+      ]
+    }
+  ]
+}
