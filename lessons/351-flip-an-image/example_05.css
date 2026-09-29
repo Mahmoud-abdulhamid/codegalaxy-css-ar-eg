@@ -1,0 +1,4 @@
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
