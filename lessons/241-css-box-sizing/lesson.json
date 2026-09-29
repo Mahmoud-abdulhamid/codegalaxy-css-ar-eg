@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "241",
+  "title": "CSS Box Sizing",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية حساب أبعاد العناصر في CSS",
+    "التعرف على مشكلة نموذج الصندوق الافتراضي",
+    "استخدام خاصية box-sizing لحل مشاكل الأبعاد",
+    "تطبيق border-box بشكل عام على جميع العناصر"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_box-sizing.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_introduction",
+      "title": "شرح Introduction to CSS Box Sizing",
+      "narration": {
+        "spoken_text": "مَرْحَبًا بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدْ. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَاصِّيَّةِ box-sizing فِي لُغَةِ CSS، وَكَيْفَ تُؤَثِّرُ عَلَى حِسَابِ أَبْعَادِ الْعَنَاصِرِ مِثْلِ width وَ height بِشَكْلٍ دَقِيقٍ وَسَلِيمْ.",
+        "caption_text": "سنتعرف اليوم على خاصية box-sizing في CSS وكيفية تأثيرها على حساب أبعاد العناصر بدقة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم CSS Box Sizing الأساسي",
+          "طريقة حساب العرض والارتفاع للعناصر",
+          "أهمية التحكم في حجم الصندوق البرمجي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "scene_2_default_behavior",
+      "title": "شرح The Default Box Model Problem",
+      "narration": {
+        "spoken_text": "فِي الْحَالَةِ الِافْتِرَاضِيَّهْ، عِنْدَمَا نُحَدِّدُ width لِعُنْصُرٍ مَا، ثُمَّ نُضِيفُ padding أَوْ border، فَإِنَّ الْمُتَصَفِّحَ يَجْمَعُ هَذِهِ الْقِيَمَ مَعًا، مِمَّا يَجْعَلُ الْعُنْصُرَ يَظْهَرُ بِحَجْمٍ أَكْبَرَ مِنَ الْمَطْلُوبْ.",
+        "caption_text": "افتراضيا، يضيف المتصفح قيم padding و border إلى العرض والارتفاع المحدد للعنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".div1 {\n  width: 300px;\n  height: 100px;\n  border: 1px solid blue;\n}\n.div2 {\n  width: 300px;\n  height: 100px;\n  padding: 50px;\n  border: 1px solid red;\n}",
+        "highlight_lines": [
+          7,
+          8
+        ],
+        "output": "div1 actual width: 302px\ndiv2 actual width: 402px",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "scene_3_comparison_table",
+      "title": "شرح Comparing Element Dimensions",
+      "narration": {
+        "spoken_text": "لَاحِظُوا مَعِي هَذَا الْكُودْ. لَدَيْنَا عُنْصُرَانِ div1 وَ div2 بِنَفْسِ الْعَرْضِ وَالِارْتِفَاعِ، لَكِنَّ div2 يَحْتَوِي عَلَى padding كَبِيرٍ، مِمَّا يَجْعَلُهُ يَظْهَرُ عَلَى الشَّاشَةِ بِحَجْمٍ أَكْبَرَ كَثِيرًا.",
+        "caption_text": "مقارنة بين حجم العنصرين يوضح كيف يؤثر padding على الحجم النهائي الفعلي."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "Element",
+          "Specified Width",
+          "Actual Rendered Width"
+        ],
+        "rows": [
+          [
+            "div1",
+            "300px",
+            "302px (300 + 2 border)"
+          ],
+          [
+            "div2",
+            "300px",
+            "402px (300 + 100 padding + 2 border)"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "scene_4_box_sizing_solution",
+      "title": "شرح The box-sizing: border-box Solution",
+      "narration": {
+        "spoken_text": "لِحَلِّ هَذِهِ الْمُشْكِلَهْ، نَسْتَخْدِمُ خَاصِّيَّةَ box-sizing مَعَ الْقِيمَةِ border-box. هَذِهِ الْقِيمَةُ الذَّكِيَّةُ تَجْعَلُ الْمُتَصَفِّحَ يَحْسِبُ كُلًّا مِنَ padding وَ border ضِمْنَ الْعَرْضِ وَالِارْتِفَاعِ الْإِجْمَالِيِّ لِلْعُنْصُرِ دُونَ زِيَادَهْ.",
+        "caption_text": "تسمح لنا قيمة border-box بتضمين padding و border داخل العرض والارتفاع الكلي المحدد."
+      },
+      "visual": {
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "content",
+            "label": "Content Area",
+            "active": false
+          },
+          {
+            "id": "padding",
+            "label": "Padding",
+            "active": false
+          },
+          {
+            "id": "border",
+            "label": "Border",
+            "active": false
+          },
+          {
+            "id": "border_box",
+            "label": "box-sizing: border-box",
+            "active": true
+          }
+        ],
+        "edges": [
+          {
+            "source": "border_box",
+            "target": "content",
+            "label": ""
+          },
+          {
+            "source": "border_box",
+            "target": "padding",
+            "label": ""
+          },
+          {
+            "source": "border_box",
+            "target": "border",
+            "label": ""
+          }
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "scene_5_applying_solution",
+      "title": "شرح Code with border-box Applied",
+      "narration": {
+        "spoken_text": "عِنْدَمَا نُضِيفُ أَمْرَ box-sizing: border-box لِكِلَا الْعُنْصُرَيْنِ، سَيُصْبِحُ لَهُمَا نَفْسُ الْحَجْمِ تَمَامًا عَلَى الشَّاشَهْ، حَيْثُ يَتِمُّ تِلْقَائِيًّا اسْتِقْطَاعُ مَسَاحَةِ padding وَ border مِنَ الْعَرْضِ الْأَصْلِيِّ الْمُحَدَّدْ.",
+        "caption_text": "عند تطبيق border-box، يتساوى حجم العنصرين تماما على الشاشة رغم اختلاف padding."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style-fixed.css",
+        "code": ".div1 {\n  width: 300px;\n  height: 100px;\n  border: 1px solid blue;\n  box-sizing: border-box;\n}\n.div2 {\n  width: 300px;\n  height: 100px;\n  padding: 50px;\n  border: 1px solid red;\n  box-sizing: border-box;\n}",
+        "highlight_lines": [
+          5,
+          13
+        ],
+        "output": "div1 actual width: 300px\ndiv2 actual width: 300px",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "scene_6_global_application",
+      "title": "شرح Global Box Sizing Reset",
+      "narration": {
+        "spoken_text": "لِأَنَّ هَذِهِ الطَّرِيقَهْ أَكْثَرُ سُهُولَهْ وَوُضُوحًا، يُفَضِّلُ مُطَوِّرُو الْوِبِّ تَطْبِيقَهَا عَلَى جَمِيعِ الْعَنَاصِرِ فِي الصَّفْحَهْ بِاسْتِخْدَامِ الْمُحَدِّدِ الْعَامِّ universal selector كَمَا نَرَى فِي هَذَا الْمِثَالِ الْعَمَلِيِّ الْآنْ.",
+        "caption_text": "تطبيق border-box بشكل عام على جميع العناصر يعتبر ممارسة آمنة وذكية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "reset.css",
+        "code": "* {\n  box-sizing: border-box;\n}",
+        "highlight_lines": [
+          1,
+          2
+        ],
+        "output": "All elements now use border-box sizing model",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_box-sizing.asp"
+      ]
+    },
+    {
+      "id": "scene_7_summary",
+      "title": "شرح Best Practices & Summary",
+      "narration": {
+        "spoken_text": "فِي الْخِتَامِ يَا أَصْدِقَائِي، نَنْصَحُ دَائِمًا بِجَعْلِ box-sizing: border-box هُوَ الْإِعْدَادَ الِافْتِرَاضِيَّ لِجَمِيعِ مَشَارِيعِكُمْ. هَذَا يَضْمَنُ تَصْمِيمًا مُتَنَاسِقًا وَيَمْنَعُ حُدُوثَ أَيِّ مَشَاكِلَ غَيْرِ مُتَوَقَّعَةٍ فِي أَبْعَادِ الْعَنَاصِرْ.",
+        "caption_text": "اجعل border-box خيارك الافتراضي دائما لتجنب مشاكل التصميم غير المتوقعة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تسهيل حسابات أبعاد العناصر وتصميم الصفحات",
+          "تجنب تمدد العناصر بسبب padding أو border",
+          "استخدام المحدد العام لتصفير وتوحيد سلوك المتصفحات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_box-sizing.asp"
+      ]
+    }
+  ]
+}
