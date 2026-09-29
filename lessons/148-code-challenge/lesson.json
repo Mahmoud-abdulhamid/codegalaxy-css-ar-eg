@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "148",
+  "title": "CSS Specificity Code Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "اختبار فهم قواعد Specificity في CSS",
+    "فهم النظام الصحيح لحساب الأولوية (A, B, C)",
+    "تجنب الأخطاء الشائعة في تكرار الـ Classes",
+    "تطبيق التحديات العملية بكفاءة عالية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_specificity.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة تحدي Specificity",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا التَّحَدِّي الْعَمَلِيِّ لِلُغَةِ CSS. سَنَخْتَبِرُ فَهْمَكَ الْعَمِيقَ لِقَوَاعِدِ Specificity وَكَيْفِيَّةِ تَطْبِيقِهَا بَدِقَّةٍ عَلَى الْعَنَاصِرِ.",
+        "caption_text": "مرحبا بكم يا أصدقائي في هذا التحدي العملي لغة CSS لاختبار فهم قواعد Specificity."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مرحبا بك في تحدي Specificity العملي",
+          "اختبار الفهم الحقيقي لأولوية CSS",
+          "تجنب التداخل والنزاعات بين الـ Selectors"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_specificity.asp"
+      ]
+    },
+    {
+      "id": "scene_2_rules",
+      "title": "القواعد الأساسية للحساب الدقيق",
+      "narration": {
+        "spoken_text": "عِلْمِيّاً، تُحْسَبُ Specificity بِنِظَامِ (A, B, C). الْحَرْفُ الْأَوَّلُ A يُمثِّل ال ID، وَالثَّانِي B يُمثِّل ال Classes وَAttributes وَPseudo-classes، وَالثَّالِثُ C يُمثِّل ال Elements وَPseudo-elements.",
+        "caption_text": "تحسب Specificity بنظام (A, B, C) للـ IDs والـ Classes والـ Elements بدقة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "نظام الحساب الثلاثي (A, B, C)",
+          "A يمثل عدد الـ ID Selectors",
+          "B يمثل الـ Classes والـ Attributes",
+          "C يمثل الـ Elements والـ Pseudo-elements"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_specificity.asp"
+      ]
+    },
+    {
+      "id": "scene_3_inline_vs_id",
+      "title": "أولوية Inline Styles والـ IDs",
+      "narration": {
+        "spoken_text": "اعْلَمْ يَا صَدِيقِي أَنَّ Inline Styles تَمْتَلِكُ أَعْلَى أُولَوِيَّةٍ مُطْلَقَةٍ تَتَفَوَّقُ عَلَى أَيِّ Selector عَادِيٍ. كَمَا أَنَّ أَيَّ ID يَتَفَوَّقُ دائماً عَلَى أَيِّ عَدَدٍ مِنَ ال Classes مهماً تَكَرَّرَ.",
+        "caption_text": "تملك Inline Styles أعلى أولوية، والـ ID يتفوق دائما على أي عدد من الـ Classes."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Inline Styles تتفوق على جميع الـ Selectors",
+          "ID واحد يتفوق على أي عدد من الـ Classes",
+          "لا يمكن لـ 11 Class هزيمة ID واحد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_specificity.asp"
+      ]
+    },
+    {
+      "id": "scene_4_code_example",
+      "title": "كتابة كود التحدي العملي",
+      "narration": {
+        "spoken_text": "لِنَنْتَقِلْ مَعاً إِلَى كِتَابَةِ التَّحَدِّي الْعَمَلِيِّ. لَاحِظْ هَذَا الْكَوْدَ الَّذِي يُوَضِّحُ تَنَافُسَ ال Selectors الْمُخْتَلِفَةِ عَلَى عُنْصُرِ الْفَقْرَةِ p دَاخِلَ مِلَفِّ HTML.",
+        "caption_text": "ننتقل إلى كتابة كود التحدي العملي لتطبيق قواعد Specificity بوضوح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "challenge.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      p {\n        color: red;\n      }\n      .text {\n        color: blue;\n      }\n      #main {\n        color: green;\n      }\n    </style>\n  </head>\n  <body>\n    <p id=\"main\" class=\"text\">Test Paragraph</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Test Paragraph (لونه أخضر)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_specificity.asp"
+      ]
+    },
+    {
+      "id": "scene_5_code_analysis",
+      "title": "تحليل الأكواد وتحديد الفائز",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، يَمْتَلِكُ ال ID الْمُسَمَّى main أُولَوِيَّةً أَعْلَى مِنَ ال Class الْمُسَمَّى text وَمِنْ عُنْصُرِ p الْبَسِيطِ، لِذَا سَيَظْهَرُ النَّصُ بِاللَّوْنِ الْأَخْضَرِ بِفَضْلِ قَاعِدَةِ Specificity.",
+        "caption_text": "يفوز الـ ID في هذا التحدي وتظهر الفقرة باللون الأخضر متفوقة على البقية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "عنصر p وزنه (0,0,1)",
+          "الـ Class وزنه (0,1,0)",
+          "الـ ID وزنه (1,0,0) وهو الفائز"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_specificity.asp"
+      ]
+    },
+    {
+      "id": "scene_6_best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "تَجَنَّبْ دَائِماً الإسرافَ فِي اسْتِخْدَامِ ال IDs دَاخِلَ مِلَفَّاتِ CSS، وَاعْتَمِدْ عَلَى ال Classes لِلْحِفَاظِ عَلَى مُرُونَةِ وَسُهُولَةِ صِيَانَةِ التَّصْمِيمِ عَلَى الْمَدَى الطَّوِيلِ.",
+        "caption_text": "تجنب الإسراف في استخدام الـ IDs واعتمد على الـ Classes لمرونة التصميم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجنب الإفراط في استخدام الـ IDs",
+          "استخدم الـ Classes لإعادة الاستخدام",
+          "حافظ على هيكل Specificity بسيط ومنظم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_specificity.asp"
+      ]
+    },
+    {
+      "id": "scene_7_summary",
+      "title": "خلاصة تحدي Specificity",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا، تَعَرَّفْنَا عَلَى النِّظَامِ السَّلِيمِ لِحِسَابِ Specificity وَفَهْمِ أَوْلَوِيَّةِ ال Selectors بِدِقَّةٍ تَامَّةٍ. أَدْعُوكَ لِتَجْرِبَةِ التَّحَدِّي بِنَفْسِكَ مِنَ الرَّابِطِ فِي الْوَصْفِ.",
+        "caption_text": "تعرفنا على نظام الحساب السليم لـ Specificity ونلتقي في التحدي القادم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ملخص حساب A, B, C للأولويات",
+          "تفوق الـ IDs والأحكام المطلقة",
+          "قم بزيارة الرابط لتطبيق التحدي بنفسك"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_specificity.asp"
+      ]
+    }
+  ]
+}
