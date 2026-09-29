@@ -1,0 +1,4 @@
+/* When you move the mouse over the icon, change color */
+.fa-user:hover {
+  color: #eee;
+}
