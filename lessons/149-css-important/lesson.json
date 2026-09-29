@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "149",
+  "title": "قاعدة المهم في لغة CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعريف دور الأهمية القصوى في تنسيق عناصر الويب",
+    "فهم بناء الصيغة الصحيحة لقاعدة important",
+    "التعرف على المشاكل الناتجة عن الإفراط في الاستخدام",
+    "دراسة حالات الاستخدام العادل والمبرر في المشاريع"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_important.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-abdd4f58d34aa323.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools",
+      "source_url": "https://www.w3schools.com/css/css_important.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة حول الأهمية القصوى",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى دَوْرِ قاعدة important وكَيْفَ تُعْطِي قِيمَةَ خاصية معينة الأولوية القصوى.",
+        "caption_text": "مرحبا بكم في درس قاعدة important في لغة CSS وكيفية منح القيمة الأولوية القصوى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "منح الأولوية القصوى لخصائص CSS",
+          "تجاوز جميع قواعد التنسيق السابقة",
+          "فهم تأثير الأولوية على عناصر الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_important.asp"
+      ]
+    },
+    {
+      "id": "scene_syntax",
+      "title": "الصيغة البرمجية لقاعدة important",
+      "narration": {
+        "spoken_text": "تُضاف الكلمة المفتاحية important فِي نِهَايَةِ إعلان CSS، قَبْلَ الفاصلة المنقوطة مباشرة، لِتَضْمَنَ تفعيل هذه القيمة وتجاوز أي قواعد أخرى متعارضة.",
+        "caption_text": "تضاف الكلمة المفتاحية important قبل الفاصلة المنقوطة في إعلان CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "selector {\n  property: value !important;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_important.asp"
+      ]
+    },
+    {
+      "id": "scene_example",
+      "title": "مثال عملي وتجاوز التنسيقات",
+      "narration": {
+        "spoken_text": "فِي هَذَا المثال، سَتَحْصُلُ جَمِيعُ الفقرات على لون خلفية أصفر رغم وجود محددات بمعاملات تحديد أقوى، وذلك بسبب استخدام الأداة في لغة CSS.",
+        "caption_text": "تتجاوز القاعدة جميع محددات التحديد الأخرى لتطبيق اللون المطلوب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    p {\n    background-color: yellow !important;\n    }\n    #myid {\n    background-color: blue;\n    }\n    .myclass {\n    background-color: gray;\n    }\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_important.asp"
+      ]
+    },
+    {
+      "id": "scene_warning",
+      "title": "مخاطر الإفراط في الاستخدام",
+      "narration": {
+        "spoken_text": "يَجِبُ الحذر عند استخدام هذه الأداة، لأنها تَجْعَلُ ملفات التنسيق معقدة للغاية وتَجْعَلُ عملية تتبع الأخطاء صعبة، خصوصاً في المشاريع البرمجية الكبيرة.",
+        "caption_text": "استخدم القاعدة بحذر لتجنب تعقيد ملفات التنسيق وصعوبة تتبع الأخطاء."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجعل تتبع الأخطاء أمرا صعبا",
+          "تزيد من تعقيد ملفات التنسيق الضخمة",
+          "تصعب تجاوز التنسيقات لاحقا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_important.asp"
+      ]
+    },
+    {
+      "id": "scene_uses",
+      "title": "حالات الاستخدام العادل والمبرر",
+      "narration": {
+        "spoken_text": "تُعتبر هذه الأداة مفيدة جداً فِي حالات معينة، مِثْلَ تعديل تنسيق داخل نظام إدارة محتوى CMS لا يمكنك تعديل ملفاته الأساسية بشكل مباشر.",
+        "caption_text": "تكون القاعدة مفيدة في تجاوز تنسيقات أنظمة إدارة المحتوى."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجاوز تنسيق لا يمكن تعديله بطريقة أخرى",
+          "التعامل مع ملفات أنظمة إدارة المحتوى CMS",
+          "احترام تفضيلات المستخدم وتقليل الحركات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_important.asp"
+      ]
+    },
+    {
+      "id": "scene_media",
+      "title": "احترام تفضيلات المستخدم",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ الأداة أَيْضاً مَعَ خاصية media لتعطيل الحركات والانتقالات للمستخدمين الذين يُفَضِّلُونَ تقليل الحركة في متصفحاتهم حماية لراحتهم.",
+        "caption_text": "استخدام القاعدة لتعطيل الحركات للمستخدمين الذين يعانون من حساسية الحركة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "motion.css",
+        "code": "@media (prefers-reduced-motion: reduce) {\n  * {\n    animation: none !important;\n    transition: none !important;\n  }\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_important.asp"
+      ]
+    },
+    {
+      "id": "scene_buttons",
+      "title": "تنسيق أزرار الروابط",
+      "narration": {
+        "spoken_text": "عندما نقوم بتصميم أزرار الروابط ونريد فرض مظهر موحد وثابت مهما كانت عناصر الحاوية، نَلْجَأُ إلى تفعيل الأولوية على كافة خصائص الزر البرمجية.",
+        "caption_text": "فرض مظهر موحد وثابت لجميع أزرار الروابط بغض النظر عن الحاويات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "buttons.css",
+        "code": "a.button {\n  background-color: #8c8c8c !important;\n  color: white !important;\n  padding: 5px !important;\n  border: 1px solid black !important;\n  text-decoration: none !important;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_important.asp"
+      ]
+    },
+    {
+      "id": "scene_conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي ختام هذا الدرس، تَعرَّفنا على كيفية استخدام الأداة بحكمة لتجنب التعارض البرمجي، ونَنْتَظِرُكُمْ في الدرس القادم لاستكمال دورة لغة CSS.",
+        "caption_text": "خلاصة استخدام قاعدة الأهمية في CSS ودعوة لمتابعة الدروس القادمة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم الأداة بحكمة ودون إفراط",
+          "احرص على تنظيم هيكل ملفات التنسيق",
+          "تابع معنا الدروس القادمة في دورة CSS"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_important.asp"
+      ]
+    }
+  ]
+}
