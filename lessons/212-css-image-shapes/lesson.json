@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "212",
+  "title": "CSS Image Shapes",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم قص الصور بأشكال هندسية باستخدام clip-path",
+    "فهم كيفية استخدام الدالة circle() وتحديد مركز الدائرة",
+    "استخدام الدالة ellipse() لإنشاء أشكال بيضاوية دقيقة",
+    "تطبيق الدالة polygon() لإنشاء أشكال مضلعة مخصصة",
+    "دمج خاصية shape-outside لتوجيه النصوص حول الصور"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_image_shapes.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة قص الصور في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفَيَّةِ تَشْكِيلِ وَقَصِّ الصُّوَرِ إِلَى دَوَائِرَ وَأَشْكَالٍ مُخْتَلِفَةٍ بِاحْتِرَافِيَّةٍ عَالِيَةٍ.",
+        "caption_text": "مرحبا بكم في درس تشكيل وقص الصور باستخدام CSS وصياغة الأشكال الهندسية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قص الصور إلى دوائر وأشكال بيضاوية",
+          "استخدام خواص الديكور الهندسي الحديثة",
+          "التحكم الكامل في مظهر عناصر الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_shapes.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "خاصية clip-path والدالة circle()",
+      "narration": {
+        "spoken_text": "تُمَكِّنُنَا خَاصِيَّةُ clip-path مِنْ قَصِّ أَيِّ عُنْصُرٍ إِلَى شَكْلٍ هَنْدَسِيٍّ أَسَاسِيٍّ. عِنْدَ اسْتِخْدَامِ دَالَّةِ circle نُحَدِّدُ نِصْفَ الْقُطْرِ لِتَحويل الصُّورَةِ إِلَى دَائِرَةٍ مِثَالِيَّةٍ.",
+        "caption_text": "تتيح خاصية clip-path قص العناصر، وتحدد الدالة circle() نصف القطر للدائرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  clip-path: circle(50%);\n}",
+        "highlight_lines": [],
+        "output": "يتم قص الصورة إلى دائرة نصف قطرها خمسون بالمئة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_shapes.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تحديد مركز الدائرة ومركز القص",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَحْدِيدُ مَرْكِزِ الدَّائِرَةِ بِاسْتِخْدَامِ كَلِمَاتِ مِثْلِ right أَوْ left أَوْ قِيَمٍ رَقْمِيَّةٍ لِضْبَطِ مَوْقِعِ الْقَصِّ بِدِقَّةٍ تَامَّةٍ حَسَبَ تَصْمِيمِ الصَّفْحَةِ.",
+        "caption_text": "يمكن تحديد مركز الدائرة باستخدام القيم أو الكلمات مثل right وleft."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  clip-path: circle(50% at right);\n}",
+        "highlight_lines": [],
+        "output": "يتم قص الصورة بدائرة مركزها في الجانب الأيمن",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_shapes.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "استخدام clip-path مع ellipse()",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْنَا شَكْلاً بَيْضَاوِيّاً، نَسْتَخْدِمُ دَالَّةَ ellipse الَّتِي تَطْلُبُ نِصْفَيْ قُطْرٍ مُخْتَلِفَيْنِ لِلْمِحْوَرَيْنِ الأفقي والعمودي لِتَحْقِيقِ التَّصْمِيمِ الْمَطْلُوبِ.",
+        "caption_text": "تستخدم الدالة ellipse() لإنشاء شكل بيضاوي بنصف قطري المحورين x وy."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  clip-path: ellipse(50% 35%);\n}",
+        "highlight_lines": [],
+        "output": "يتم قص الصورة إلى شكل بيضاوي بعرض خمسون بالمئة وارتفاع خمس وثلاثين بالمئة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_shapes.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تحديد مركز الشكل البيضاوي",
+      "narration": {
+        "spoken_text": "كَمَا هُوَ الْحَالُ فِي الدَّائِرَةِ، نَسْتَطِيعُ إِضَافَةَ كَلِمَةِ at مَتْبُوعَةً بِالْمَوْقِعِ لِتَحْدِيدِ مَرْكِزِ الشَّكْلِ الْبَيْضَاوِيِّ نَحْوَ الْيَمِينِ أَوْ الْيَسَارِ أَوْ الأَعْلَى أَوْ الأَسْفَلِ.",
+        "caption_text": "يمكن تحديد مركز الشكل البيضاوي باتجاه اليمين باستخدام تعبير at right."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  clip-path: ellipse(50% 35% at right);\n}",
+        "highlight_lines": [],
+        "output": "يتم إزاحة مركز الشكل البيضاوي إلى يمين العنصر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_shapes.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "التعامل مع الدالة polygon()",
+      "narration": {
+        "spoken_text": "تُتِيحُ لَنَا دَالَّةُ polygon رَسْمَ أَشْكَالٍ مُضَلَّعَةٍ مُعَقَّدَةٍ بِتَحْدِيدِ إِحْدَاثِيَّاتِ النِّقَاطِ سِيْنِيّاً وَصَادِيّاً، حَيْثُ تَبْدَأُ النُّقْطَةُ الصِّفْرِيَّةُ مِنْ الزَّاوِيَةِ الْيُسْرَى الْعُلْيَا.",
+        "caption_text": "تسمح الدالة polygon() بإنشاء أشكال مضلعة عبر تحديد إحداثيات النقاط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);\n}",
+        "highlight_lines": [],
+        "output": "يتم قص الصورة على شكل مضلع معين أو معين هندسي",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_shapes.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "توجيه النصوص مع shape-outside",
+      "narration": {
+        "spoken_text": "تُسْتَخْدَمُ خَاصِيَّةُ shape-outside تَمَاماً مَعَ clip-path لِجَعْلِ نُصُوصِ الْوِبّ تَتَدَفَّقُ وَتَتَفَفْلَفُ حَوْلَ حُدُودِ الصُّوَرِ الْمَقْصُوصَةِ بِشَكْلٍ جَمَالِيٍّ رَائِعٍ وَمُنْتَظِمٍ.",
+        "caption_text": "تستخدم خاصية shape-outside لتلتف النصوص حول الشكل الهندسي للصورة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "img {\n  float: left;\n  clip-path: circle(40%);\n  shape-outside: circle(45%);\n}",
+        "highlight_lines": [],
+        "output": "تلتف الفقرات النصية بجانب الصورة الدائرية المنسقة",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_shapes.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس والدعوة للتجربة",
+      "narration": {
+        "spoken_text": "رَائِعٌ جِدّاً! تَعَلَّمْنَا الْيَوْمَ كَيْفَيَّةَ قَصِّ الصُّوَرِ بِدَوَائِرَ وَأَشْكَالٍ بَيْضَاوِيَّةٍ وَمُمَضَّلَعَاتٍ. نَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوادِ بِنُفُوسِكُمْ وَمُتَابَعَةِ الدَّوْرَةِ لِلْمَزِيدِ مِنْ الإِبْدَاعِ.",
+        "caption_text": "بهذا نكون قد أتمنا دراسة قص الصور الهندسية وتشكيل النصوص بنجاح تام."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام clip-path لأنماط القص المختلفة",
+          "تطبيق circle و ellipse و polygon",
+          "تنسيق التفاف النصوص بـ shape-outside"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_image_shapes.asp"
+      ]
+    }
+  ]
+}
