@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "125",
+  "title": "CSS Image Gallery",
+  "course": "CSS",
+  "objectives": [
+    "فهم كيفية بناء معرض صور منظم باستخدام CSS",
+    "التعرف على استخدام display: flex في ترتيب العناصر",
+    "تطبيق التنسيقات الأساسية على الصور والعناصر",
+    "تعلم كيفية تحسين تجربة المستخدم باستخدام hover"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_image_gallery.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-d90755c0ded29e0f.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_image_gallery.asp",
+      "source_url": "https://www.w3schools.com/css/css_image_gallery.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول CSS Image Gallery",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةِ إِنْشَاء Image Gallery احْتِرَافِيَّه وَمُنَظَّمَه لِعَرْضِ الصُّوَرِ بِشَكْلٍ جَذَّابٍ عَلَى صَفْحَةِ الْوِبّ، مَعَ الِاعْتِمَادِ عَلَى تَقْنِيَاتِ التَّنْسِيقِ الْحَدِيثَه.",
+        "caption_text": "مرحبا بكم في درس CSS Image Gallery. سنتعلم اليوم كيفية إنشاء معرض صور احترافي ومنظم لعرض الصور بشكل جذاب على صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "معرض الصور هو مجموعة من الصور المنظمة",
+          "يستخدم CSS لتحسين المظهر والتفاعل",
+          "يعتمد الدرس على تقنيات Flexbox الحديثة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للمعرض",
+      "narration": {
+        "spoken_text": "لِتَصْمِيمِ هَذَا الْمَعْرِضِ، نَسْتَخْدِمُ خَاصِّيَّةِ display: flex عَلَى الْحَاوِيَه الرَّئِيسِيَّه. هَذِهِ الْخَاصِّيَّه تُسَاعِدُنَا فِي تَرْتِيبِ الْعَنَاصِرِ بِسُهُولَه فِي صُفُوفٍ أَوْ أَعْمِدَه، وَتُعَدُّ أَدَاه قَوِيَّه لِجَعْلِ التَّصْمِيمِ مُتَجَاوِبَاً وَمُنَظَّمَاً بِشَكْلٍ تِلْقَائِيٍّ.",
+        "caption_text": "نستخدم خاصية display: flex على الحاوية الرئيسية لترتيب العناصر بسهولة في صفوف أو أعمدة، مما يجعل التصميم متجاوبا ومنظما."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام display: flex للحاوية",
+          "تفعيل flex-wrap: wrap للتحكم في الالتفاف",
+          "استخدام justify-content لتوزيع العناصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكلة الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيف div بِكَلَاس gallery لِتَضُمَّ جَمِيعَ الْعَنَاصِرِ. دَاخِلَهَا، نَضَعُ كُلَّ صُورَه ضِمْن div بِكَلَاس gallery-item، مَعَ رَابِط a لِتَفْتِيحِ الصُّورَه فِي نَافِذَه جَدِيدَه عِنْدَ النَّقْرِ عَلَيْهَا.",
+        "caption_text": "نقوم بتعريف div بكلاس gallery لتضم جميع العناصر. داخلها، نضع كل صورة ضمن div بكلاس gallery-item، مع رابط a لفتح الصورة في نافذة جديدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"gallery\">\n      <div class=\"gallery-item\">\n        <a target=\"_blank\" href=\"img_5terre.jpg\">\n          <img src=\"img_5terre.jpg\" alt=\"Cinque Terre\">\n        </a>\n        <div class=\"desc\">Cinque Terre</div>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "css_styling",
+      "title": "تنسيق العناصر بـ CSS",
+      "narration": {
+        "spoken_text": "نَقُومُ الْآنَ بِتَنْسِيقِ الْعَنَاصِرِ. نُحَدِّدُ عَرْض gallery-item بَةِ 180 بيكسل، وَنُضِيفُ حُدُودَاً border لِتَحْسِينِ الْمَظْهَرِ. كَمَا نَسْتَخْدِمُ خَاصِّيَّةِ hover لِتَغْيِيرِ لَوْنِ الْحُدُودِ عِنْدَ تَحْرِيكِ مُؤَشِّرِ الْفَأْرَه فَوْقَ الصُّورَه.",
+        "caption_text": "نقوم بتنسيق العناصر، نحدد عرض gallery-item بـ 180 بيكسل، ونضيف حدود border. كما نستخدم خاصية hover لتغيير لون الحدود عند تمرير الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.gallery-item {\n  margin: 5px;\n  border: 1px solid #ccc;\n  width: 180px;\n}\ndiv.gallery-item:hover {\n  border: 1px solid #777;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "image_responsive",
+      "title": "جعل الصور متجاوبة",
+      "narration": {
+        "spoken_text": "لِضَمَانِ أَنْ تَظْهَرَ الصُّوَرُ بِشَكْلٍ مُتَنَاسِقٍ دَاخِلَ الْإِطَارِ، نَضْبِطُ عَرْض img عَلَى 100 بِالْمِئَه، وَنَجْعَلُ الارتفاع height أوتوماتيكياً. هَذَا يَضْمَنُ أَنَّ الصُّورَه تَأْخُذُ مَسَاحَةِ الْحَاوِيَه دُونَ تَشَوُّهٍ فِي أَبْعَادِهَا.",
+        "caption_text": "لضمان ظهور الصور بشكل متناسق، نضبط عرض img على 100، ونجعل الارتفاع auto. هذا يضمن أن الصورة تأخذ مساحة الحاوية دون تشوه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div.gallery-item img {\n  width: 100%;\n  height: auto;\n}\ndiv.gallery-item div.desc {\n  padding: 15px;\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَه النِّهَائِيَّه لِلْمَعْرِضِ. الصُّوَرُ مُرَتَّبَه بِجَانِبِ بَعْضِهَا، وَعِنْدَ التَّمْرِيرِ فَوْقَهَا تَتَغَيَّرُ الْحُدُودُ، مِمَّا يُعْطِي تَفَاعُلِيَّه مُمْتِعَه لِلْمُسْتَخْدِمِ. يُمْكِنُكُمْ تَجْرِبَةِ هَذَا الْكُودِ بِنَفْسِكُمْ لِفَهْمِ التَّأْثِيرَاتِ بِشَكْلٍ أَعْمَقَ.",
+        "caption_text": "هذه هي النتيجة النهائية للمعرض. الصور مرتبة بجانب بعضها، وعند التمرير فوقها تتغير الحدود، مما يعطي تفاعلية ممتعة للمستخدم."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "معاينة معرض الصور"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_gallery.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةِ بِنَاءِ معرض صُوَرٍ بَسِيطٍ وَفَعَّالٍ. لَا تَنْسَوْا أَنَّ تَقْنِيَةِ Flexbox هِيَ الْمُسْتَقْبَلُ فِي تَرْتِيبِ الْعَنَاصِرِ. جَرِّبُوا تَغْيِيرَ الْقِيَمِ فِي الْكُودِ وَشَاهِدُوا كَيْفَ يَتَغَيَّرُ التَّصْمِيمُ.",
+        "caption_text": "بهذا نكون قد تعلمنا كيفية بناء معرض صور بسيط وفعال. لا تنسوا أن تقنية Flexbox هي المستقبل في ترتيب العناصر. جربوا تغيير القيم في الكود وشاهدوا كيف يتغير التصميم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدموا Flexbox للمشاريع القادمة",
+          "جربوا إضافة Media Queries للتجاوب",
+          "راجعوا الرابط في الوصف للتطبيق العملي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_image_gallery.asp"
+      ]
+    }
+  ]
+}
