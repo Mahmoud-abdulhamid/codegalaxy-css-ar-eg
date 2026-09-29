@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "186",
+  "title": "دورة CSS3D Transforms",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم مفهوم الـ 3D Transforms وأهمية الـ perspective في الفضاء الثلاثي الأبعاد",
+    "استخدام دالة rotateX لتعديل زاوية العنصر حول المحور الأفقي",
+    "استخدام دالة rotateY لتعديل زاوية العنصر حول المحور الرأسي",
+    "استخدام دالة rotateZ وتطبيق الـ translateZ للتحكم في العمق والمسافة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_3dtransforms.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_intro",
+      "title": "مقدمة حول 3D Transforms",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ تَحَوُّلَاتٍ ثُلَاثِيَّةِ الْأَبْعَادِ بِاسْتِخْدَامِ 3D Transforms وَخَاصِّيَّةِ transform بِشَكْلٍ عَمَلِيٍّ.",
+        "caption_text": "مرحبا بكم في درس التحولات ثلاثية الأبعاد باستخدام CSS3D Transforms."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التعرف على مفهوم التحولات ثلاثية الأبعاد في CSS",
+          "استخدام خاصية transform لتطبيق تأثيرات 3D",
+          "أهمية الفضاء الثلاثي الأبعاد في تصميم الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_perspective",
+      "title": "أهمية الـ perspective",
+      "narration": {
+        "spoken_text": "لِتَفْعِيلِ فَضَاءٍ ثُلَاثِيِّ الْأَبْعَادِ، يَحْتَاجُ الْعُنْصُرُ إِلَى خَاصِّيَّةِ perspective. هَذِهِ الْخَاصِّيَّةُ تُحَدِّدُ الْمَسَافَةَ بَيْنَ نُقْطَةِ نَظَرِ الْمُسْتَخْدِمِ وَالْعُنْصُرِ، وَدُونَهَا سَتَبْدُو جَمِيعُ التَّحَوُّلَاتِ مُسَطَّحَةً وَثُنَائِيَّةَ الْأَبْعَادِ.",
+        "caption_text": "تفعيل الفضاء ثلاثي الأبعاد يتطلب استخدام خاصية perspective لتحديد المسافة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "دور خاصية perspective في تحديد المسافة والرؤية",
+          "تجنب ظهور العناصر بشكل مسطح وثنائي الأبعاد",
+          "التحضير للتعمق في المنظور في الدرس القادم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_rotatex",
+      "title": "دالة rotateX",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى دَالَةِ rotateX. هَذِهِ الدَّالَةُ تَقُومُ بِدَوْرَةِ الْعُنْصُرِ حَوْلَ مِحْوَرِ x بِدَرَجَةٍ مُحَدَّدَةٍ، مِمَّا يَعْنِي أَنَّهَا تُمِيلُ الْعُنْصُرَ إِلَى الْأَمَامِ أَوْ إِلَى الْخَلْفِ بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "دالة rotateX تقوم بتدوير العنصر حول المحور الأفقي x."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  transform: rotateX(45deg);\n}",
+        "highlight_lines": [],
+        "output": "يتم إمالة العنصر للأمام أو الخلف بزاوية 45 درجة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_rotatey",
+      "title": "دالة rotateY",
+      "narration": {
+        "spoken_text": "ثُمَّ لَدَيْنَا دَالَةُ rotateY. تَقُومُ هَذِهِ الدَّالَةُ بِتَدْوِيرِ الْعُنْصُرِ حَوْلَ مِحْوَرِ y بِدَرَجَةٍ مُحَدَّدَةٍ، وَهَذَا يَعْنِي أَنَّهَا تُحَرِّكُ الْعُنْصُرَ يَمِيناً أَوْ يَسَاراً مِثْلَ الْبَابِ الْمُتَحَرِّكِ.",
+        "caption_text": "دالة rotateY تقوم بتدوير العنصر حول المحور الرأسي y."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  transform: rotateY(45deg);\n}",
+        "highlight_lines": [],
+        "output": "يتحرك العنصر يميناً أو يساراً مثل باب متحرك.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_rotatez",
+      "title": "دالة rotateZ",
+      "narration": {
+        "spoken_text": "أَمَّا دَالَةُ rotateZ فَإِنَّهَا تَقُومُ بِتَدْوِيرِ الْعُنْصُرِ حَوْلَ مِحْوَرِ z، وَهَذَا يَعْنِي أَنَّهَا تُدِيرُ الْعُنْصُرَ بِشَكْلٍ مُسَطَّحٍ عَلَى الشَّاشَةِ بِالدَّرَجَةِ الْمَطْلُوبَةِ.",
+        "caption_text": "دالة rotateZ تدور العنصر حول المحور z بشكل مسطح على الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  transform: rotateZ(45deg);\n}",
+        "highlight_lines": [],
+        "output": "يتم تدوير العنصر بشكل مسطح على الشاشة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_translatez",
+      "title": "دالة translateZ",
+      "narration": {
+        "spoken_text": "وَنَنْتَقِلُ إِلَى دَالَةِ translateZ. تَقُومُ هَذِهِ الدَّالَةُ بِإِعَادَةِ تَرْكِيزِ الْعُنْصُرِ عَلَى مِحْوَرِ z. الْقِيَمُ الْمُوجِبَةُ تُقَرِّبُ الْعُنْصُرَ مِنَ الْمُشَاهِدِ، وَالسَّالِبَةُ تُبْعِدُهُ عَنْهُ.",
+        "caption_text": "دالة translateZ تعيد وضع العنصر على محور z للتقريب أو الإبعاد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".box {\n  transform: translateZ(-100px);\n}",
+        "highlight_lines": [],
+        "output": "يتحرك العنصر بعيداً عن المشاهد بمقدار مئة بيكسل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms.asp"
+      ]
+    },
+    {
+      "id": "scene_summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا الْيَوْمَ، تَعَرَّفْنَا عَلَى كَيْفِيَّةِ اسْتِخْدَامِ تَهيِئَاتِ 3D Transforms وَالدَّوَالِ الْمُخْتَلِفَةِ مِثْلَ rotateX وَ rotateY وَ rotateZ وَ translateZ لِإِنْشَاءِ تَصَمِيمَاتٍ حَيَّةٍ وَابْتِكَارِيَّةٍ.",
+        "caption_text": "خلاصة شاملة لدوال التحولات ثلاثية الأبعاد وتطبيقاتها العملية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية دوال rotateX و rotateY و rotateZ",
+          "التحكم في العمق باستخدام translateZ",
+          "تطبيق الخصائص لبناء صفحات ويب تفاعلية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_3dtransforms.asp"
+      ]
+    }
+  ]
+}
