@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "231",
+  "title": "CSS Multiple Columns Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية تقسيم المحتوى إلى أعمدة متعددة باستخدام CSS",
+    "التعرف على الخصائص الأساسية مثل column-count و column-gap",
+    "تطبيق التحديات البرمجية لتحسين مهارات التنسيق",
+    "التعامل مع النصوص الطويلة وتوزيعها بشكل احترافي"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_columns.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Multiple Columns",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةَ تَقْسِيمِ النُّصُوصِ إِلَى أَعْمِدَةٍ مُتَعَدِّدَةٍ بِاسْتِخْدَامِ خَصَائِصِ Multiple Columns، وَهِيَ تَقْنِيَةٌ رَائِعَةٌ لِتَحْسِينِ قِرَاءَةِ الْمُحْتَوَى فِي صَفْحَاتِ الْوِبّ.",
+        "caption_text": "مرحبا بكم في درس CSS Multiple Columns حيث سنتعلم تقسيم النصوص إلى أعمدة متعددة لتحسين تجربة المستخدم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تنسيق النصوص في أعمدة متعددة",
+          "تحسين قابلية القراءة في صفحات الويب",
+          "استخدام خصائص CSS الحديثة",
+          "تطبيق تحديات برمجية عملية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_columns.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "الخصائص الأساسية للأعمدة",
+      "narration": {
+        "spoken_text": "لِتَحْقِيقِ هَذَا التَّقْسِيمِ، نَسْتَخْدِمُ خَاصِيَّةَ column-count لِتَحْدِيدِ عَدَدِ الْأَعْمِدَةِ، وَخَاصِيَّةَ column-gap لِتَحْدِيدِ الْمَسَافَةِ بَيْنَ كُلِّ عَمُودٍ وَآخَرَ. هَذِهِ الْأَدَوَاتُ تُعْطِي تَصْمِيماً مُشَابِهاً لِلصُّحُفِ وَالْمَجَلَّاتِ.",
+        "caption_text": "نستخدم خاصية column-count لتحديد عدد الأعمدة و column-gap للتحكم في المسافة الفاصلة بينها."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "الخاصية",
+          "الوظيفة"
+        ],
+        "rows": [
+          [
+            "column-count",
+            "تحديد عدد الأعمدة"
+          ],
+          [
+            "column-gap",
+            "تحديد المسافة بين الأعمدة"
+          ],
+          [
+            "column-rule",
+            "إضافة خط فاصل بين الأعمدة"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_columns.asp"
+      ]
+    },
+    {
+      "id": "code_example",
+      "title": "كتابة كود الأعمدة",
+      "narration": {
+        "spoken_text": "لِنَكْتُبِ الْكُودَ الْآنَ. نَقُومُ بِتَطْبِيقِ هَذِهِ الْخَصَائِصِ عَلَى Element مِنْ نَوْع div. نُحَدِّدُ column-count بِقِيمَةِ 3، وَنَضْبِطُ column-gap لِيَكُونَ 40 بكسل، لِنَرَى كَيْفَ يَتَوَزَّعُ النَّصُّ بِشَكْلٍ تِلْقَائِيٍّ.",
+        "caption_text": "نطبق خصائص الأعمدة على عنصر div مع تحديد عدد الأعمدة والمسافة الفاصلة بينها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".newspaper {\n  column-count: 3;\n  column-gap: 40px;\n  column-rule: 1px solid lightblue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_columns.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل HTML المرتبط",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ يَكُونَ لَدَيْنَا مُحْتَوَى دَاخِلَ ال div لِيَظْهَرَ التَّأْثِيرُ. نَسْتَخْدِمُ Element مِنْ نَوْع p لِكِتَابَةِ نَصٍّ طَوِيلٍ، وَبِفَضْلِ CSS، سَيَتَوَزَّعُ هَذَا النَّصُّ عَلَى الْأَعْمِدَةِ الثَّلَاثَةِ الَّتِي حَدَّدْنَاهَا سَابِقاً.",
+        "caption_text": "نضع النص داخل عنصر div ليتم توزيعه تلقائيا على الأعمدة المحددة في ملف CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"newspaper\">\n      <p>هذا نص طويل سيتم توزيعه\n        على ثلاثة أعمدة بفضل CSS\n        Multiple Columns.</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_columns.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "عِنْدَ فَتْحِ هَذَا الْكُودِ فِي Web Browser، سَتُلاحِظُونَ أَنَّ النَّصَّ قَدِ انْقَسَمَ إِلَى ثَلَاثَةِ أَعْمِدَةٍ مُتَسَاوِيَةٍ مَعَ وُجُودِ فَاصِلٍ بَيْنَهَا. هَذَا هُوَ الْجَمَالُ فِي اسْتِخْدَامِ CSS لِتَنْظِيمِ الْمُحْتَوَى.",
+        "caption_text": "تظهر النتيجة في المتصفح كنص مقسم إلى ثلاثة أعمدة متناسقة مع مسافات فاصلة واضحة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "text",
+        "filename": "output.txt",
+        "code": "عمود 1 | عمود 2 | عمود 3\nنص طويل | نص طويل | نص طويل\nموزع بدقة | موزع بدقة | موزع بدقة",
+        "highlight_lines": [],
+        "output": "illustrative",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_columns.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "مِنْ أَهَمِّ النَّصَائِحِ هِيَ التَّأَكُّدُ مِنْ أَنَّ عَدَدَ الْأَعْمِدَةِ مُنَاسِبٌ لِعَرْضِ الشَّاشَةِ. يُمْكِنُكُمْ أَيْضاً اسْتِخْدَامُ Media Queries لِتَغْيِيرِ عَدَدِ الْأَعْمِدَةِ حَسَبَ حَجْمِ الشَّاشَةِ لِضَمَانِ تَجْرِبَةِ مُسْتَخْدِمٍ مِثَالِيَّةٍ.",
+        "caption_text": "استخدم Media Queries لضبط عدد الأعمدة بما يتناسب مع أحجام الشاشات المختلفة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام Media Queries للتجاوب",
+          "اختيار عرض مناسب للـ column-gap",
+          "اختبار التصميم على متصفحات مختلفة",
+          "تجنب كثرة الأعمدة في الشاشات الصغيرة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_columns.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ أَعْمِدَةٍ مُتَعَدِّدَةٍ بِسُهُولَةٍ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ، وَمُحَاوَلَةِ حَلِّ التَّحَدِّيَاتِ لِتَطْوِيرِ مَهَارَاتِكُمْ. شُكْراً لِمُتَابَعَتِكُمْ.",
+        "caption_text": "تعلمنا اليوم أساسيات CSS Multiple Columns. جربوا الأكواد بأنفسكم عبر الرابط في الوصف لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "1",
+            "label": "CSS Columns",
+            "active": false
+          },
+          {
+            "id": "2",
+            "label": "column-count",
+            "active": false
+          },
+          {
+            "id": "3",
+            "label": "column-gap",
+            "active": false
+          }
+        ],
+        "edges": [
+          {
+            "source": "1",
+            "target": "2",
+            "label": ""
+          },
+          {
+            "source": "1",
+            "target": "3",
+            "label": ""
+          }
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_columns.asp"
+      ]
+    }
+  ]
+}
