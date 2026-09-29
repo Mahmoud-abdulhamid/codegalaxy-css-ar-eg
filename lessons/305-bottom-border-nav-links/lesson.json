@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "305",
+  "title": "تصميم شريط تنقل بحد سفلي باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء شريط تنقل أفقي باستخدام CSS",
+    "تطبيق تأثير الحدود السفلية عند التفاعل مع الروابط",
+    "استخدام الخصائص float و overflow للتحكم في التخطيط",
+    "تفعيل حالة active للروابط لتمييز الصفحة الحالية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_navbar_border.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في أشرطة التنقل",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ إِنْشَاءِ شَرِيطِ تَنَقُّلٍ احْتِرَافِيٍّ لِصَفْحَةِ الْوِبّ، مَعَ إِضَافَةِ تَأْثِيرِ حُدُودٍ سُفْلِيَّةٍ تَتَفَاعَلُ مَعَ مُؤَشِّرِ الْفَأْرَةِ بِشَكْلٍ جَذَّابٍ وَأَنِيقٍ.",
+        "caption_text": "مرحبا بكم في درس تصميم شريط تنقل احترافي باستخدام CSS مع تأثير الحدود السفلية التفاعلية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إنشاء شريط تنقل أفقي باستخدام HTML",
+          "تنسيق الروابط باستخدام خصائص CSS",
+          "إضافة تأثير border-bottom عند التفاعل",
+          "تمييز الرابط النشط باستخدام class active"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_border.asp"
+      ]
+    },
+    {
+      "id": "html_structure",
+      "title": "هيكل شريط التنقل",
+      "narration": {
+        "spoken_text": "لِنَبْدَأْ بِهَيْكَلِ HTML. نَسْتَخْدِمُ div بِكَلَاسِ topnav لِاحْتِوَاءِ الرَّوَابِطِ. نُضِيفُ ثَلَاثَةَ Elements مِنْ نَوْعِ a، وَنُعْطِي الرَّابِطَ الْأَوَّلَ كَلَاسَ active لِتَحْدِيدِ أَنَّهُ الصَّفْحَةُ الْحَالِيَّةُ الَّتِي يَتَوَاجَدُ فِيهَا الْمُسْتَخْدِمُ.",
+        "caption_text": "هيكل HTML يستخدم div كحاوية رئيسية وعناصر a للروابط مع تحديد الرابط النشط عبر class."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"topnav\">\n      <a href=\"#home\" class=\"active\">Home</a>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_border.asp"
+      ]
+    },
+    {
+      "id": "css_container",
+      "title": "تنسيق الحاوية الرئيسية",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ إِلَى CSS. نَقُومُ بِتَعْيِينِ background-color بِاللَّوْنِ الرَّمَادِيِّ الدَّاكِنِ لِ topnav، وَنَسْتَخْدِمُ overflow بِقِيمَةِ hidden لِضَمَانِ احْتِوَاءِ الْعَنَاصِرِ بِدَاخِلِهِ، مِمَّا يَمْنَعُ أَيَّ تَسَرُّبٍ لِلْمُحْتَوَى خَارِجَ حُدُودِ الشَّرِيطِ.",
+        "caption_text": "تنسيق الحاوية topnav باستخدام background-color و overflow لضمان احتواء العناصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav {\n  background-color: #333;\n  overflow: hidden;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_border.asp"
+      ]
+    },
+    {
+      "id": "css_links",
+      "title": "تنسيق الروابط",
+      "narration": {
+        "spoken_text": "الْآنَ نُسَقِّقُ الرَّوَابِطَ دَاخِلَ topnav. نَجْعَلُهَا تَتَرَتَّبُ جَانِبِيّاً بِاسْتِخْدَامِ float، وَنُضِيفُ padding مُنَاسِباً. الْأَهَمُّ هُوَ border-bottom بِقِيمَةِ 3px solid transparent، لِتَهْيِئَةِ مَكَانِ الْحُدُودِ دُونَ أَنْ تَظْهَرَ فِي الْوَضْعِ الْعَادِيِّ.",
+        "caption_text": "تنسيق الروابط داخل شريط التنقل مع إعداد الحدود السفلية الشفافة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav a {\n  float: left;\n  display: block;\n  color: #f2f2f2;\n  text-align: center;\n  padding: 14px 16px;\n  text-decoration: none;\n  font-size: 17px;\n  border-bottom: 3px solid transparent;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_border.asp"
+      ]
+    },
+    {
+      "id": "css_interaction",
+      "title": "تأثير التفاعل والنشاط",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ التَّفَاعُلِ، نَسْتَخْدِمُ hover لِتَغْيِيرِ لَوْنِ border-bottom إِلَى الْأَحْمَرِ عِنْدَ مُرُورِ الْفَأْرَةِ. كَذَلِكَ نُطَبِّقُ نَفْسَ التَّأْثِيرِ عَلَى a.active لِيَبْقَى الرَّابِطُ مُمَيَّزاً بِشَكْلٍ دَائِمٍ عِنْدَمَا نَكُونُ فِي تِلْكَ الصَّفْحَةِ.",
+        "caption_text": "استخدام hover و active لإضافة تأثير الحدود السفلية الحمراء عند التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".topnav a:hover {\n  border-bottom: 3px solid red;\n}\n.topnav a.active {\n  border-bottom: 3px solid red;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_border.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَيَظْهَرُ لَدَيْنَا شَرِيطُ تَنَقُّلٍ أُفُقِيٍّ بِخَلْفِيَّةٍ رَمَادِيَّةٍ. عِنْدَ تَحْرِيكِ الْفَأْرَةِ فَوْقَ الرَّوَابِطِ، سَيَظْهَرُ خَطٌّ أَحْمَرُ سُفْلِيٌّ، وَسَيَظَلُّ هَذَا الْخَطُّ ظَاهِراً عَلَى الرَّابِطِ النَّشِطِ، مِمَّا يُعْطِي تَجْرِبَةَ مُسْتَخْدِمٍ مُمَيَّزَةً.",
+        "caption_text": "معاينة شريط التنقل مع تأثير الحدود السفلية التفاعلية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- شريط تنقل بحدود سفلية -->\n    [Home] [News] [Contact]\n    (عند التمرير يظهر خط أحمر تحت الرابط)\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home (active) | News | Contact\n(Border bottom appears on hover)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_border.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفَ نُصَمِّمُ شَرِيطَ تَنَقُّلٍ بِاسْتِخْدَامِ CSS. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ border-bottom فِي تَحْسِينِ التَّفَاعُلِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِهَا لِتُنَاسِبَ تَصَامِيمَكُمْ الْخَاصَّةَ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "خلاصة: استخدام CSS لإنشاء أشرطة تنقل تفاعلية. جربوا الأكواد بأنفسكم لتطوير مهاراتكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام CSS للتحكم في مظهر الروابط",
+          "أهمية border-bottom في التفاعل",
+          "تطبيق class active للروابط النشطة",
+          "شجعناكم على تجربة الأكواد وتطويرها"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_navbar_border.asp"
+      ]
+    }
+  ]
+}
