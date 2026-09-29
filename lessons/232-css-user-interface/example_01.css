@@ -1,0 +1,9 @@
+div {
+  resize: horizontal; overflow: auto;
+}
+div {
+  resize: vertical; overflow: auto;
+}
+textarea {
+  resize: none;
+}
