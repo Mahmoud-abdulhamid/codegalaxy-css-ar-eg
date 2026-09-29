@@ -1,0 +1,4 @@
+.mask3 {
+  -webkit-mask-image: conic-gradient(black 0deg, transparent 360deg);
+  mask-image: conic-gradient(black 0deg, transparent 360deg);
+}
