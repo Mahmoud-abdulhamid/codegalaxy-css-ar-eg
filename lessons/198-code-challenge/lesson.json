@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "198",
+  "title": "CSS Animations Challenge",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء CSS Animations",
+    "التعرف على خصائص keyframes",
+    "تطبيق Animation Properties",
+    "حل تحديات البرمجة في CSS"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css3_animations.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة في CSS Animations",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ حَرَكَاتٍ تَفَاعُلِيَّةٍ بِاسْتِخْدَامِ CSS Animations لِجَعْلِ تَصَامِيمِ الْوِبّ أَكْثَرَ حَيَوِيَّةً وَجَاذِبِيَّةً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "مرحبا بكم في درس CSS Animations. سنتعلم اليوم كيفية إضافة الحركات التفاعلية إلى صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Animations تسمح بتحريك العناصر",
+          "تعتمد على keyframes و Animation Properties",
+          "تحسين تجربة المستخدم في صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_animations.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "القواعد الأساسية للتحريك",
+      "narration": {
+        "spoken_text": "لِتَنْفِيذِ حَرَكَةٍ نَحْتَاجُ إِلَى keyframes لِتَحْدِيدِ مَرَاحِلِ الْحَرَكَةِ، ثُمَّ نَرْبِطُهَا بِالْعُنْصُرِ عَبْرَ خَصَائِصِ animation. هَذِهِ الْخَصَائِصُ تَشْمَلُ animation-name وَ animation-duration وَغَيْرَهَا لِتَحْكُمَ فِي سُلُوكِ الْحَرَكَةِ.",
+        "caption_text": "تعتمد الحركات على keyframes لتحديد المراحل وخصائص animation للتحكم في التوقيت والسلوك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "keyframes يحدد مراحل الحركة",
+          "animation-name يربط الحركة بالعنصر",
+          "animation-duration يحدد زمن الحركة",
+          "animation-iteration-count للتكرار"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_animations.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "كتابة كود CSS Animations",
+      "narration": {
+        "spoken_text": "لِنَكْتُبِ الْآنَ كُوداً بَسِيطاً. نُعَرِّفُ keyframes بِاسْمِ example، ثُمَّ نُحَدِّدُ تَغَيُّرَ الْخَصَائِصِ مِنْ 0 إِلَى 100. بَعْدَهَا نُطَبِّقُ هَذِهِ الْحَرَكَةَ عَلَى div بِاسْتِخْدَامِ خَاصِيَّةِ animation.",
+        "caption_text": "هيكل كود CSS Animations يتضمن تعريف keyframes وتطبيقه على العنصر المستهدف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "@keyframes example {\n  from {\n    background-color: red;\n  }\n  to {\n    background-color: yellow;\n  }\n}\ndiv {\n  width: 100px;\n  height: 100px;\n  animation: example 4s infinite;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_animations.asp"
+      ]
+    },
+    {
+      "id": "explanation",
+      "title": "شرح تفصيلي للخصائص",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْكُودِ، قُمْنَا بِتَحْدِيدِ animation-name ك example، وَجَعَلْنَا animation-duration أَرْبَعَ ثَوَانٍ. كَلِمَةُ infinite تَجْعَلُ الْحَرَكَةَ تَتَكَرَّرُ بِشَكْلٍ مُسْتَمِرٍّ دُونَ تَوَقُّفٍ، مِمَّا يُعْطِي تَأْثِيراً بَصَرِيّاً مُسْتَمِرّاً.",
+        "caption_text": "شرح الخصائص: animation-name يحدد الاسم، duration يحدد الزمن، و infinite تجعل الحركة مستمرة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "animation-name: يربط الـ keyframes",
+          "animation-duration: زمن تنفيذ الدورة",
+          "infinite: تكرار الحركة بلا نهاية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_animations.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة الحركة",
+      "narration": {
+        "spoken_text": "عِنْدَ تَشْغِيلِ هَذَا الْكُودِ فِي مُتَصَفِّحِ الْوِبّ، سَيَتَغَيَّرُ لَوْنُ الْخَلْفِيَّةِ لِلْعُنْصُرِ تَدْرِيجِيّاً مِنَ الْأَحْمَرِ إِلَى الْأَصْفَرِ خِلَالَ أَرْبَعِ ثَوَانٍ، وَيَتَكَرَّرُ هَذَا التَّغْيِيرُ بِشَكْلٍ لَا نِهَائِيٍّ.",
+        "caption_text": "نتيجة الكود: يتغير لون العنصر من الأحمر إلى الأصفر بشكل دوري ومستمر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div style=\"background-color: red; width: 100px; height: 100px;\">\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "تغير اللون من الأحمر للأصفر خلال 4 ثوانٍ بشكل متكرر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_animations.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يُنْصَحُ دَائِماً بِاسْتِخْدَامِ vendor prefixes لِضَمَانِ عَمَلِ الْحَرَكَاتِ عَلَى جَمِيعِ الْمُتَصَفِّحَاتِ. كَمَا يَجِبُ الْحِذْرُ مِنْ كَثْرَةِ الْحَرَكَاتِ لِتَجَنُّبِ تَشْتِيتِ انْتِبَاهِ الْمُسْتَخْدِمِ أَوْ التَّأْثِيرِ عَلَى أَدَاءِ الصَّفْحَةِ.",
+        "caption_text": "أفضل الممارسات: استخدم vendor prefixes وتجنب الإفراط في الحركات للحفاظ على الأداء."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام vendor prefixes للتوافق",
+          "الحفاظ على بساطة الحركة",
+          "مراعاة أداء المتصفح"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_animations.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ CSS Animations بَدْءاً مِنَ التَّعْرِيفِ بِ keyframes وَصُولاً إِلَى تَطْبِيقِ الْخَصَائِصِ. أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَطْوِيرِ مَهَارَاتِكُمْ فِي التَّصْمِيمِ.",
+        "caption_text": "خلاصة: تعلمنا بناء الحركات باستخدام keyframes والخصائص الأساسية. جربوا الأكواد بأنفسكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تم تغطية keyframes",
+          "تم شرح خصائص animation",
+          "تم توضيح كيفية التكرار",
+          "استمروا في الممارسة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css3_animations.asp"
+      ]
+    }
+  ]
+}
