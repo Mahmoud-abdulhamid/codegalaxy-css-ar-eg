@@ -3,6 +3,8 @@
   "lesson_id": "75",
   "title": "CSS Tables Styling",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "تنسيق جداول الويب باستخدام CSS",
     "إضافة الحدود لـ table و th و td",
