@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      #demo {
+        color: blue;
+      } /* weight: 1-0-0 */
+      p#demo {
+        color: orange;
+      } /* weight: 1-0-1 WINS! */
+      .test {
+        color: green;
+      } /* weight: 0-1-0 */
+      p {
+        color: red;
+      } /* weight: 0-0-1 */
+    </style>
+  </head>
+  <body>
+    <p id="demo" class="test">Hello World!</p>
+  </body>
+</html>
