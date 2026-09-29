@@ -3,6 +3,8 @@
   "lesson_id": "70",
   "title": "CSS Styling Links",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم كيفية تنسيق الروابط باستخدام CSS",
     "التعرف على حالات الروابط الأربع",
