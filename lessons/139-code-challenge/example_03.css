@@ -1,0 +1,9 @@
+.custom-counter {
+  counter-reset: my-counter 0;
+}
+.step-item {
+  counter-increment: my-counter 2;
+}
+.step-item::before {
+  content: counter(my-counter) " - ";
+}
