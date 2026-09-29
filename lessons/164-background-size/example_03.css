@@ -1,0 +1,4 @@
+#div1 {
+  background-image: url(tree.gif), url(flwr.gif);
+  background-size: contain, 150px;
+}
