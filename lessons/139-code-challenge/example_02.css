@@ -1,0 +1,9 @@
+.my-list {
+  counter-reset: list-counter;
+}
+.my-list li {
+  counter-increment: list-counter;
+}
+.my-list li::before {
+  content: counter(list-counter) ". ";
+}
