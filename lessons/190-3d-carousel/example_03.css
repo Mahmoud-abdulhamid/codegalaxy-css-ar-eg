@@ -1,0 +1,13 @@
+.container {
+  width: var(--card-width);
+  height: var(--card-height);
+  margin: 80px auto;
+  perspective: 1000px;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 20s infinite linear;
+}
