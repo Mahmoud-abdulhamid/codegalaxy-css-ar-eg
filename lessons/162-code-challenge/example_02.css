@@ -1,0 +1,5 @@
+.border-example {
+  border: 10px solid transparent;
+  padding: 20px;
+  border-image: url('border.png') 30 round;
+}
