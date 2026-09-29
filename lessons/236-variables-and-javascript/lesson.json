@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "236",
+  "title": "التحكم في CSS Variables باستخدام JavaScript",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية الوصول إلى CSS Variables عبر DOM",
+    "تعلم قراءة قيم المتغيرات باستخدام JavaScript",
+    "تعديل قيم المتغيرات ديناميكيا في وقت التشغيل",
+    "استخدام getComputedStyle و setProperty بفعالية"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_variables_javascript.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-a9ba747226ea2c69.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css3_variables_javascript.asp",
+      "source_url": "https://www.w3schools.com/css/css3_variables_javascript.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول التفاعل بين CSS و JavaScript",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةَ التَّحَكُّمِ فِي CSS Variables بِاسْتِخْدَامِ JavaScript. هَذِهِ الْمِيزَةُ تَمْنَحُ صَفْحَةَ الْوِبّ قُدْرَةً هَائِلَةً عَلَى التَّغَيُّرِ دِينَامِيكِيّاً بِنَاءً عَلَى تَفَاعُلِ الْمُسْتَخْدِمِ.",
+        "caption_text": "تسمح CSS Variables بالوصول إلى DOM، مما يتيح لنا تعديل قيمها برمجيا باستخدام JavaScript لجعل صفحات الويب أكثر تفاعلية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "CSS Variables جزء من DOM",
+          "إمكانية القراءة والتعديل عبر JavaScript",
+          "تغيير التصميم ديناميكيا دون إعادة تحميل الصفحة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_javascript.asp"
+      ]
+    },
+    {
+      "id": "root_element",
+      "title": "الوصول إلى Root Element",
+      "narration": {
+        "spoken_text": "لِتَعْدِيلِ الْمُتَغَيِّرَاتِ، نَحْتَاجُ أَوَّلاً لِلْوُصُولِ إِلَى الْعُنْصُرِ الَّذِي تَمَّ تَعْرِيفُ الْمُتَغَيِّرَاتِ فِيهِ. عَادَةً مَا نَسْتَخْدِمُ :root لِتَعْرِيفِ الْمُتَغَيِّرَاتِ الْعَامَّةِ. نَسْتَخْدِمُ دَالَّةَ querySelector لِجَلْبِ هَذَا الْعُنْصُرِ إِلَى مُتَغَيِّرٍ فِي JavaScript.",
+        "caption_text": "نستخدم document.querySelector(':root') للوصول إلى المتغيرات المعرفة على مستوى المستند بالكامل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "javascript",
+        "filename": "script.js",
+        "code": "var r = document.querySelector(':root');",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_javascript.asp"
+      ]
+    },
+    {
+      "id": "get_variable",
+      "title": "قراءة قيم المتغيرات",
+      "narration": {
+        "spoken_text": "لِقِرَاءَةِ قِيمَةِ مُتَغَيِّرٍ، نَسْتَخْدِمُ دَالَّةَ getComputedStyle الَّتِي تُعِيدُ لَنَا كَافَّةَ الْخَصَائِصِ الْمُطَبَّقَةِ عَلَى الْعُنْصُرِ. بَعْدَ ذَلِكَ، نَسْتَخْدِمُ getPropertyValue مَعَ اسْمِ الْمُتَغَيِّرِ لِاسْتِخْرَاجِ الْقِيمَةِ الْحَالِيَّةِ بِدِقَّةٍ.",
+        "caption_text": "تستخدم getComputedStyle لجلب الأنماط الحالية، ثم getPropertyValue لاستخراج قيمة المتغير المحدد."
+      },
+      "visual": {
+        "type": "code",
+        "language": "javascript",
+        "filename": "script.js",
+        "code": "function myFunction_get() {\n  var rs = getComputedStyle(r);\n  alert(\"Value: \" + rs.getPropertyValue('--primary-bg-color'));\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_javascript.asp"
+      ]
+    },
+    {
+      "id": "set_variable",
+      "title": "تعديل قيم المتغيرات",
+      "narration": {
+        "spoken_text": "أَمَّا لِتَغْيِيرِ قِيمَةِ الْمُتَغَيِّرِ، فَنَسْتَخْدِمُ دَالَّةَ setProperty عَلَى كَائِنِ style الْخَاصِّ بِالْعُنْصُرِ. هَذِهِ الطَّرِيقَةُ تُحَدِّثُ قِيمَةَ الْمُتَغَيِّرِ فَوْرِيّاً، وَيَنْعَكِسُ ذَلِكَ مُبَاشَرَةً عَلَى كُلِّ الْعَنَاصِرِ الَّتِي تَسْتَخْدِمُ هَذَا الْمُتَغَيِّرَ فِي صَفْحَةِ الْوِبّ.",
+        "caption_text": "تعديل قيمة المتغير ديناميكيا باستخدام setProperty يؤدي إلى تحديث فوري في التصميم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "javascript",
+        "filename": "script.js",
+        "code": "function myFunction_set() {\n  r.style.setProperty('--primary-bg-color', 'green');\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_javascript.asp"
+      ]
+    },
+    {
+      "id": "visual_output",
+      "title": "معاينة النتائج",
+      "narration": {
+        "spoken_text": "عِنْدَ تَنْفِيذِ هَذِهِ الْأَكْوَادِ، سَتُلَاحِظُ أَنَّ الْمُتَصَفِّحَ يَقُومُ بِتَحْدِيثِ الْأَلْوَانِ أَوْ الْخَصَائِصِ الْمَرْبُوطَةِ بِالْمُتَغَيِّرِ. هَذَا يُمَكِّنُكَ مِنْ بِنَاءِ ثِيمَاتٍ لَيْلِيَّةٍ أَوْ تَغْيِيرِ أَلْوَانِ الْوَاجِهَةِ بِسُهُولَةٍ تَامَّةٍ.",
+        "caption_text": "تظهر الصورة كيف يتم تحديث المتغيرات وتأثيرها المباشر على عناصر الصفحة."
+      },
+      "visual": {
+        "type": "image",
+        "asset_id": "html_example_1",
+        "alt": "مثال توضيحي لتغيير المتغيرات عبر JavaScript"
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_javascript.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات",
+      "narration": {
+        "spoken_text": "يَجِبُ أَنْ نَتَذَكَّرَ أَنَّ التَّعَامُلَ مَعَ DOM يَحْتَاجُ إِلَى حَذَرٍ لِتَجَنُّبِ مَشَاكِلِ الْأَدَاءِ. اسْتَخْدِمْ :root لِتَعْرِيفِ الْمُتَغَيِّرَاتِ الْعَالَمِيَّةِ، وَتَأَكَّدْ مِنْ أَنَّ أَسْمَاءَ الْمُتَغَيِّرَاتِ تَبْدَأُ بِشُرْطَتَيْنِ كَمَا هُوَ مُتَعَارَفٌ عَلَيْهِ فِي CSS.",
+        "caption_text": "نصائح برمجية: استخدم :root للمتغيرات العامة، والتزم بالبادئة -- لضمان عمل المتغيرات بشكل صحيح."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم :root للمتغيرات العامة",
+          "تأكد من كتابة -- قبل اسم المتغير",
+          "تحقق من توافق المتصفحات",
+          "حافظ على نظافة الكود البرمجي"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_javascript.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نَرْبِطُ بَيْنَ قُوَّةِ CSS Variables وَمَرُونَةِ JavaScript. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَمُشَاهَدَةِ التَّأْثِيرَاتِ الْمُبَاشِرَةِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "لقد تعلمنا اليوم كيفية الربط بين CSS و JavaScript للتحكم في المتغيرات ديناميكيا. جرب الكود بنفسك لتطوير مهاراتك."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تمت تغطية الوصول إلى DOM",
+          "شرحنا قراءة المتغيرات بـ getComputedStyle",
+          "شرحنا تعديل المتغيرات بـ setProperty",
+          "نوصي بممارسة الكود عبر الرابط المرفق"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_variables_javascript.asp"
+      ]
+    }
+  ]
+}
