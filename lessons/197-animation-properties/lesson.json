@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "197",
+  "title": "CSS Animation Properties Direction and Fill Mode",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم خصائص CSS animation-direction لتحديد اتجاه الحركة",
+    "استخدام قيم reverse و alternate و alternate-reverse",
+    "التحكم في حالة العناصر قبل وبعد الحركة باستخدام animation-fill-mode",
+    "اختصار كتابة الحركات باستخدام خاصية animation المختصرة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_animations_properties.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة خصائص الحركة",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ لُغَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى خَصَاصِ حَرَكَاتِ العُنْصُرِ مِثْلِ animation-direction وَ animation-fill-mode وَالْخَاصِّيَّةِ المُخْتَصَرَةِ animation لِتَحْسِينِ تَمْشِيَةِ الصَّفْحَةِ بِشَكْلٍ احْتِرَافِيٍّ ومميز.",
+        "caption_text": "تعرف على خصائص CSS animation direction و fill mode والمختصرة لتصميم حركات احترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تغطية خصائص اتجاه وحالة الحركات",
+          "استخدام animation-direction للتحكم بالمسار",
+          "ضبط القيم النهائية والمبدئية عبر animation-fill-mode",
+          "كتابة أكواد أقصر باستخدام الكود المختصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_properties.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "خاصية animation-direction",
+      "narration": {
+        "spoken_text": "تَتَحَكَّمُ خَاصِّيَّةُ animation-direction فِي اتِّجَاهِ تَنْفِيذِ الحَرَكَةِ لِلْعُنْصُرِ. هَلْ تَتَحَرَّكُ لِلْأَمَامِ أَمِ الخَلْفِ أَمْ بِالْتِفَافَاتٍ مُتَبَادَلَةٍ؟ تَمْنَحُكَ هَذِهِ الْخَاصِّيَّةُ مُرُونَةً كَبِيرَةً فِي تَمْشِيَةِ العَنَاصِرِ وَجَعْلِهَا تَتَحَرَّكُ بِاتِّجَاهَاتٍ مُخْتَلِفَةٍ بِكُلِّ سُهُولَةٍ.",
+        "caption_text": "تحدد خاصية animation-direction ما إذا كان يجب تشغيل الحركة للأمام أو للخلف أو بشكل تبادلي."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تحديد اتجاه تشغيل الحركة للأمام أو للخلف",
+          "دعم دورات تبادلية سلسة وجذابة",
+          "توجيه العناصر بدقة حسب الحاجة التصميمية",
+          "التحكم الكامل في مسار الأنميشن"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_properties.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "كود استخدام alternate",
+      "narration": {
+        "spoken_text": "نُرِيكمْ فِي هَذَا الْمِثَالِ كَيْفَ نَسْتَخْدِمُ القِيمَةَ alternate مِنْ خِلَالِ خَاصِّيَّةِ animation-direction. هَذِهِ القِيمَةُ تَجْعَلُ الحَرَكَةَ تَتَحَرَّكُ لِلْأَمَامِ أَوَّلاً ثُمَّ تَعُودُ لِلْخَلْفِ فِي الدَّوْرَةِ التَّالِيَةِ لِإِعْطَاءِ تَأْثِيرٍ حَيَوِيٍّ رَائِعٍ عَلَى الشَّاشَةِ.",
+        "caption_text": "مثال عملي لاستخدام القيمة alternate لجعل الحركة تعمل للأمام أولا ثم للخلف."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 100px;\n  height: 100px;\n  position: relative;\n  background-color: red;\n  animation-name: myAnimation;\n  animation-duration: 4s;\n  animation-direction: reverse;\n}",
+        "highlight_lines": [],
+        "output": "يتحرك العنصر بشكل عكسي في الشاشة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_properties.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "استخدام alternate-reverse",
+      "narration": {
+        "spoken_text": "لَنَنْتَقِلْ الْآنَ إِلَى قِيمَةٍ أُخْرَى هِيَ alternate-reverse. تَعْمَلُ هَذِهِ القِيمَةُ عَلَى تَشْغِيلِ الحَرَكَةِ نَحْوَ الخَلْفِ أَوَّلاً ثُمَّ تَتَحَرَّكُ لِلْأَمَامِ فِي الدَّوْرَةِ الثَّانِيَةِ، مِمَّا يُتِيحُ لَكَ تَصَمِيمَ حَرَكَاتٍ مُتَقَدِّمَةٍ تَبْدَأُ بِشَكْلٍ مَعْكُوسٍ تَمَاماً.",
+        "caption_text": "تشغيل الحركة للخلف أولا ثم للأمام باستخدام alternate-reverse."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 100px;\n  height: 100px;\n  position: relative;\n  background-color: red;\n  animation-name: myAnimation;\n  animation-duration: 4s;\n  animation-iteration-count: 2;\n  animation-direction: alternate-reverse;\n}",
+        "highlight_lines": [],
+        "output": "الحركة تبدأ بالعكس ثم تتقدم للأمام.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_properties.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "خاصية animation-fill-mode",
+      "narration": {
+        "spoken_text": "عِنْدَمَا تَنْتَهِي الحَرَكَةُ أَوْ قَبْلَ أَنْ تَبْدَأَ، فَلَا تُؤَثِّرُ حَرَكَاتُ CSS عَلَى العُنْصُرِ تِلْقَائِيّاً. وَلَكِنْ مَعَ خَاصِّيَّةِ animation-fill-mode نَتَغَلَّبُ عَلَى هَذَا الأَمْرِ وَنُحَدِّدُ التَّنْسِيقَ المَطْلُوبَ لِلْعُنْصُرِ قَبْلَ البِدْءِ أَوْ بَعْدَ الِانْتِهَاءِ.",
+        "caption_text": "تحدد خاصية animation-fill-mode تنسيق العنصر قبل بدء الحركة أو بعد نهايتها."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تجاوز السلوك الافتراضي قبل وبعد الحركة",
+          "الاحتفاظ بقيم الإطار الرئيسي الأخير",
+          "تطبيق قيم الإطار الأول أثناء فترة التأخير",
+          "دمج الحالتين معا باستخدام قيمة both"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_properties.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "قيم animation-fill-mode",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ القِيمَةَ forwards لِيُحَافِظَ العُنْصُرُ عَلَى قِيَمِ التَّنْسِيقِ مِنَ الإِطَارِ الرَّئِيسِيِّ الأَخِيرِ بَعْدَ انْتِهَاءِ الحَرَكَةِ. أَمَّا القِيمَةُ backwards فَتَجْعَلُ العُنْصُرَ يَحْصُلُ عَلَى قِيَمِ الإِطَارِ الأَوَّلِ خِلَالَ فَتْرَةِ التَّأْخِيرِ animation-delay.",
+        "caption_text": "استخدام قيم forwards و backwards للتحكم بحالة العنصر قبل وبعد تنفيذ الحركة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  width: 100px;\n  height: 100px;\n  background: red;\n  position: relative;\n  animation-name: myAnimation;\n  animation-duration: 3s;\n  animation-delay: 2s;\n  animation-fill-mode: both;\n}",
+        "highlight_lines": [],
+        "output": "العنصر يحافظ على التنسيقات قبل وبعد الحركة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_properties.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "الخاصية المختصرة animation",
+      "narration": {
+        "spoken_text": "لِتَسْهِيلِ كِتَابَةِ الأَكْوَادِ وَجَعْلِهَا أَكْثَرَ اخْتِصَاراً، تَتَحْدُ خَاصِّيَّةُ animation المُخْتَصَرَةُ جَمِيعَ خَصَائصِ الحَرَكَةِ فِي سَطْرٍ وَاحِدٍ فَقَطْ مِثْلِ الِاسْمِ وَالمُدَّةِ وَدَالَّةِ التَّوْقِيتِ والتَّأْخِيرِ والاتِّجَاهِ.",
+        "caption_text": "يمكن اختصار جميع خصائص الحركة في سطر برمجي واحد باستخدام خاصية animation."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "div {\n  animation: myAnimation 5s linear 2s infinite alternate;\n}",
+        "highlight_lines": [],
+        "output": "تطبيق كافة خصائص الحركة باختصار سطر واحد.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_properties.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ دَرْسِنَا اليَوْمِ، تَعَرَّفْنَا عَلَى كيفية استخدام animation-direction لتوجيه الحركات، وَ animation-fill-mode لِضَبْتِ تَنْسِيقَاتِ العَنَاصِرِ، بالإضافة إلى اختصار السطور عبر animation. تَدَرَّبُوا عَلَيْهَا بِمُلَحَقَاتِ المَصْدَرِ وَكُونُوا مُمْتَازِينَ.",
+        "caption_text": "خلاصة خصائص الحركات في CSS وكيفية استخدامها باحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التحكم الكامل باتجاه الحركات عبر animation-direction",
+          "ضبط الحالات قبل وبعد الحركة باستخدام animation-fill-mode",
+          "كتابة أكواد نظيفة وسريعة بالخاصية المختصرة animation",
+          "متابعة دورة CSS لتطوير مهاراتكم البرمجية مع محمود عبدالحميد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_animations_properties.asp"
+      ]
+    }
+  ]
+}
