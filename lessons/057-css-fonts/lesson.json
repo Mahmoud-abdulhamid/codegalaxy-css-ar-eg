@@ -3,6 +3,8 @@
   "lesson_id": "57",
   "title": "CSS Fonts",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
   "objectives": [
     "فهم أهمية اختيار الخطوط في تصميم الويب",
     "التعرف على خاصية font-family",
