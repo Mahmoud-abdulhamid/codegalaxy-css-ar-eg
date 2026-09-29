@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "201",
+  "title": "CSS Tooltips Implementation",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء الـ Tooltips باستخدام CSS",
+    "التعرف على استخدام الـ Pseudo-elements مثل ::after",
+    "تطبيق خاصية الـ position للتحكم في ظهور الـ Tooltip",
+    "إتقان التعامل مع الـ visibility والـ opacity للتحكم في التفاعل"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_challenges_css_tooltip.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول الـ Tooltips",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. الْيَوْمَ سَنَتَعَلَّمُ كَيْفِيَّةَ إِنْشَاءِ ال Tooltips الْجَذَّابَةِ لِتَحْسِينِ تَجْرِبَةِ الْمُسْتَخْدِمِ فِي صَفْحَاتِ الْوِبّ، وَهِيَ عِبَارَةٌ عَنْ نَصٍّ تَفْسِيرِيٍّ يَظْهَرُ عِنْدَ تَحْرِيكِ الْمُؤَشِّرِ فَوْقَ عُنْصُرٍ مُعَيَّنٍ.",
+        "caption_text": "تعد الـ Tooltips وسيلة فعالة لعرض معلومات إضافية للمستخدم عند التفاعل مع عناصر صفحة الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الـ Tooltips تعزز من تجربة المستخدم التفاعلية",
+          "تعتمد بشكل أساسي على CSS و Pseudo-elements",
+          "تظهر المعلومات عند التفاعل مع العنصر"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": "المفاهيم الأساسية للـ Tooltips",
+      "narration": {
+        "spoken_text": "لِتَنْفِيذِ ال Tooltip، نَحْتَاجُ إِلَى ضَبْطِ الْعُنْصُرِ الْأَبِ عَلَى position: relative، ثُمَّ نَسْتَخْدِمُ ال Pseudo-element الْمُسَمَّى ::after لِإِنْشَاءِ صُنْدُوقِ النَّصِّ، مَعَ ضَبْطِ position: absolute لِتَحْدِيدِ مَوْقِعِهِ بِدِقَّةٍ بِالنِّسْبَةِ لِلْعُنْصُرِ.",
+        "caption_text": "نستخدم position: relative للأب و position: absolute للـ Tooltip لضمان التموضع الصحيح."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position: relative في الحاوية",
+          "استخدام ::after لإنشاء محتوى الـ Tooltip",
+          "تحديد الموقع باستخدام top و left و transform"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "code_structure",
+      "title": "هيكلة الكود البرمجي",
+      "narration": {
+        "spoken_text": "لِنَنْظُرْ إِلَى هَذَا الْكُودِ. نَقُومُ بِتَعْرِيفِ كَلَاسٍ يُسَمَّى tooltip، وَنَضْبِطُ الْخَصَائِصَ الْأَسَاسِيَّةَ لَهُ. لَاحِظْ كَيْفَ نَسْتَخْدِمُ visibility: hidden فِي الْبِدَايَةِ لِإِخْفَاءِ النَّصِّ حَتَّى يَتِمَّ التَّفَاعُلُ مَعَهُ.",
+        "caption_text": "هيكل CSS الأساسي لإنشاء الـ Tooltip مع إخفاء العنصر افتراضيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".tooltip {\n  position: relative;\n  display: inline-block;\n}\n.tooltip::after {\n  content: \"Tooltip Text\";\n  visibility: hidden;\n  position: absolute;\n  background-color: black;\n  color: white;\n  padding: 5px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "interaction",
+      "title": "تفعيل الـ Tooltip عند الـ Hover",
+      "narration": {
+        "spoken_text": "الْآنَ نَأْتِي لِلْجُزْءِ الْأَهَمِّ، وَهُوَ إِظْهَارُ ال Tooltip عِنْدَ حَدَثِ ال hover. نَسْتَخْدِمُ الْمُحَدِّدَ .tooltip:hover::after لِتَغْيِيرِ قِيمَةِ visibility إِلَى visible، مِمَّا يَجْعَلُ النَّصَّ يَظْهَرُ أَمَامَ الْمُسْتَخْدِمِ مُبَاشَرَةً.",
+        "caption_text": "استخدام pseudo-class المسمى hover لإظهار الـ Tooltip عند تمرير الفأرة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".tooltip:hover::after {\n  visibility: visible;\n  opacity: 1;\n  transition: opacity 0.3s;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "output_preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "بَعْدَ تَطْبِيقِ هَذِهِ الْأَكْوَادِ، سَتَرَى أَنَّ الْعُنْصُرَ يَعْرِضُ النَّصَّ الْمَطْلُوبَ عِنْدَ تَحْرِيكِ الْمُؤَشِّرِ. هَذِهِ الطَّرِيقَةُ نَظِيفَةٌ وَتَعْتَمِدُ عَلَى CSS فَقَطْ دُونَ الْحَاجَةِ إِلَى JavaScript، مِمَّا يُحَسِّنُ مِنْ أَدَاءِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "النتيجة النهائية: ظهور الـ Tooltip بسلاسة عند تمرير الفأرة فوق العنصر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"tooltip\">\n      Hover over me\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Hover over me [Tooltip Text]",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "best_practices",
+      "title": "أفضل الممارسات البرمجية",
+      "narration": {
+        "spoken_text": "يَا أَصْدِقَائِي، احْرِصُوا دَائِماً عَلَى اسْتِخْدَامِ z-index لِضَمَانِ ظُهُورِ ال Tooltip فَوْقَ كُلِّ الْعَنَاصِرِ الْأُخْرَى، وَأَيْضاً اسْتَخْدِمُوا transition لِجَعْلِ ظُهُورِ النَّصِّ أَكْثَرَ نَعُومَةً وَجَمَالاً لِلْمُسْتَخْدِمِ.",
+        "caption_text": "نصائح تقنية: استخدام z-index و transition لتحسين جودة وتجربة الـ Tooltip."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام z-index لضمان الترتيب الطبقي",
+          "إضافة transition لتأثيرات بصرية ناعمة",
+          "التأكد من التباين اللوني بين النص والخلفية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css_tooltip.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَتْمَمْنَا دَرْسَ الْيَوْمَ حَوْلَ ال Tooltips. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِ الْأَلْوَانِ وَالْمَوَاقِعِ. لَا تَنْسَوْا مُتَابَعَةَ دَوْرَةِ CSS لِلْمَزِيدِ مِنَ التَّحَدِّيَاتِ وَالْمَهَارَاتِ الْبَرْمَجِيَّةِ.",
+        "caption_text": "شكرا لمتابعتكم! جربوا الأكواد بأنفسكم وطوروا مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا الكود المكتوب في الدرس",
+          "جربوا إضافة خصائص CSS جديدة",
+          "استمروا في ممارسة التحديات البرمجية"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_challenges_css_tooltip.asp"
+      ]
+    }
+  ]
+}
