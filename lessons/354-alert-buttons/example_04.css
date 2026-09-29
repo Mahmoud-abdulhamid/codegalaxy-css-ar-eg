@@ -1,0 +1,15 @@
+.success:hover {
+  background-color: #46a049;
+}
+.info:hover {
+  background: #0b7dda;
+}
+.warning:hover {
+  background: #e68a00;
+}
+.danger:hover {
+  background: #da190b;
+}
+.default:hover {
+  background: #ddd;
+}
