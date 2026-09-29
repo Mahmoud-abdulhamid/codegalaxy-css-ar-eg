@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "147",
+  "title": "فهم تدرج الأولوية في CSS Specificity Hierarchy",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم نظام التدرج والأولوية Specificity Hierarchy في CSS",
+    "حساب قيم الأوزان باستخدام تدوينات الأرقام الثلاثية X-Y-Z",
+    "التمييز بين أولوية ID selectors و Class selectors و Element selectors",
+    "التعامل مع الحالات الخاصة مثل Equal specificity والـ Inline styles"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+  ],
+  "assets": [
+    {
+      "id": "html_example_1",
+      "path": "assets/html-5084858a7921d7e9.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_specificity_hierarchy.asp",
+      "source_url": "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+    },
+    {
+      "id": "html_example_2",
+      "path": "assets/html-af135c1d174a6ad9.png",
+      "kind": "image",
+      "license": "Source example rendered for educational explanation",
+      "attribution": "W3Schools · https://www.w3schools.com/css/css_specificity_hierarchy.asp",
+      "source_url": "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro_specificity",
+      "title": "مقدمة حول تدرج الأولوية في CSS",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْمُمَهَّدِ لِفَهْمِ تَدَرُّجِ الْأَوْلُوِيَّةِ في CSS Specificity Hierarchy. سَنَتَعَرَّفُ عَلَى طَرِيقَةِ اتِّخَاذِ الْقَرَارِ لِتَطْبِيقِ التَّسْنِيمَاتِ الصَّحِيحَةِ.",
+        "caption_text": "مرحبا بكم في درس جديد حول تدرج الأولوية Specificity Hierarchy وكيفية تطبيق التنسيقات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تتعدد محددات CSS وتختلف أوزانها",
+          "يحدد نظام Specificity الأولوية لأي عنصر",
+          "فهم الأوزان يحل مشاكل تعارض التنسيقات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+      ]
+    },
+    {
+      "id": "weight_notation",
+      "title": "فهم تدوينة الأوزان X-Y-Z",
+      "narration": {
+        "spoken_text": "تَعْتَمِدُ نَوْعِيَّةُ الْأَوْزَانِ عَلَى ثَلَاثَةِ أَرْقَامِ X Y Z؛ حَيْثُ يُمَثِّلُ الرَّقْمُ الْأَيْسَرُ الْقِيمَةَ الْأَعْلَى ل ID selectors، ثُمَّ يَلِيهِ فِي الْوَسَطِ Class selectors و Pseudo-classes وَ Attributes، ثُمَّ Elements العادية.",
+        "caption_text": "تستخدم تدوينة الأوزان ثلاثة أرقام X-Y-Z حيث يمثل الرقم الأيسر القيمة الأعلى ويقارن اليسار أولا."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "الرقم الأول X يخص ID selectors",
+          "الرقم الأوسط Y يخص Classes و Attributes و Pseudo-classes",
+          "الرقم الأيمن Z يخص Element selectors و Pseudo-elements"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+      ]
+    },
+    {
+      "id": "code_example_1",
+      "title": "مثال عملي على حساب الأوزان",
+      "narration": {
+        "spoken_text": "لَاحِظْ مَعِي فِي هَذَا الْمِثَالِ كَيْفَ تَتَفَاوَقُ المحددات. عِنْدَمَا نُطَبِّقُ p demo مَعَ demo، تَفُوزُ p demo لِأَنَّ وَزْنَهَا أَعْلَى فِي حِسَابَاتِ المحددات.",
+        "caption_text": "دراسة مثال عملي يوضح تدرج الأوزان بين محددات ID والعناصر المختلفة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "specificity.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      #demo {\n        color: blue;\n      } /* weight: 1-0-0 */\n      p#demo {\n        color: orange;\n      } /* weight: 1-0-1 WINS! */\n      .test {\n        color: green;\n      } /* weight: 0-1-0 */\n      p {\n        color: red;\n      } /* weight: 0-0-1 */\n    </style>\n  </head>\n  <body>\n    <p id=\"demo\" class=\"test\">Hello World!</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Hello World! (displayed in orange color due to higher weight 1-0-1)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+      ]
+    },
+    {
+      "id": "equal_specificity",
+      "title": "تساوي الأولوية والقاعدة الأخيرة",
+      "narration": {
+        "spoken_text": "إِذَا تَسَاوَتِ الأَوْلُوِيَّةُ بَيْنَ قَاعِدَتَيْنِ فِي نَفْسِ الْمَلَفِّ، فَإِنَّ الْقَاعِدَةَ الْأَخِيرَةَ أَوْ الأَحْدَثَ هِيَ الَّتِي تَفُوزُ وَيَتِمُّ تَطْبِيقُهَا.",
+        "caption_text": "في حالة تساوي الأولوية بين قاعدتين، فإن القاعدة الأحدث أو المكتوبة لاحقا هي التي تفوز."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "equal.css",
+        "code": "h1 {\n  background-color: yellow;\n}\nh1 {\n  background-color: red;\n}",
+        "highlight_lines": [],
+        "output": "Background color will be red",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+      ]
+    },
+    {
+      "id": "id_vs_attribute",
+      "title": "مقارنة بين ID selectors و Attribute selectors",
+      "narration": {
+        "spoken_text": "تَتَفَوَّقُ محددات ID تماماً عَلَى Attribute selectors؛ إِذْ إِنَّ القاعدة الأولى التِي تَسْتَخْدِمُ ال ID تَحْمِلُ وَزْناً أَعْلَى وتُطْبَقُ مُبَاشَرَةً.",
+        "caption_text": "محددات ID تتفوق دائما على محددات الخصائص Attribute selectors نظرا لقوتها."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "id-attr.css",
+        "code": "#myDiv {\n  background-color: yellow;\n}\ndiv[id=myDiv] {\n  background-color: blue;\n}",
+        "highlight_lines": [],
+        "output": "Background color will be yellow",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+      ]
+    },
+    {
+      "id": "class_vs_element",
+      "title": "تفوق Class selectors على Element selectors",
+      "narration": {
+        "spoken_text": "أَيْضاً، يَتَفَوَّقُ Class selector مِثْلِ نُقْطَة intro عَلَى مُحَدَّدَاتِ الْعَنَاصِرِ مِثْلِ h1 و p وَغَيْرِهَا، لِأَنَّ لِل Classes وَزْناً أَعْلَى فِي الْفِئَةِ الْوُسْطَى.",
+        "caption_text": "محددات الفئات Class selectors تتفوق على محددات العناصر الفردية مثل h1 و p."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "class-elem.css",
+        "code": ".intro {\n  background-color: yellow;\n}\nh1 {\n  background-color: red;\n}",
+        "highlight_lines": [],
+        "output": "Background color will be yellow for elements with class intro",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+      ]
+    },
+    {
+      "id": "universal_and_inline",
+      "title": "المحدد العام والمحددات المضمنة Inline styles",
+      "narration": {
+        "spoken_text": "لَا تَمْلِكُ الْمُحَدَّدَاتُ الْعَامَّةُ النَّجْمَة أيَّةِ أَوْزَانٍ تُذْكَرُ، فِي حِينِ أَنَّ الأنماط المضمنة Inline styles دَاخِلَ الْعُنْصُرِ نَفْسِهِ تَمْتَلِكُ أَعْلَى أَوْلُوِيَّةٍ عَلى الْإِطْلَاقِ مَقَارَنَةً بِجَمِيعِ أَنْمَاطِ CSS الْأُخْرَى.",
+        "caption_text": "المحدد العام ليس له وزن، بينما الأنماط المضمنة Inline styles تمتلك أعلى أولوية مطلقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "universal.css",
+        "code": "* {\n  background-color: yellow;\n}\nh1 {\n  background-color: red;\n}",
+        "highlight_lines": [],
+        "output": "Background color respects element or inline styles over universal",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+      ]
+    },
+    {
+      "id": "summary_and_conclusion",
+      "title": "خلاصة قواعد أولوية CSS",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَذَكَّرْ دَائِماً أَنَّ فَهْمَ أَوْزَانِ المحددات يَجْعَلُ تَعَارُضَاتِ التصميم أَمْراً سَهْلَ الْحَلِّ. تَرَقَّبُونَا فِي الدَّرْسِ الْقَادِمِ وَتَجْرِبَةِ الْأَكْوَادِ مِنْ الرَّابِطِ فِي الْوَصْفِ.",
+        "caption_text": "خلاصة شاملة لفهم تدرج الأولوية وكيفية تجنب تعارض التنسيقات في مشاريع الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "Inline styles لها الأولوية القصوى",
+          "ID selectors تأتي في المرتبة التالية",
+          "Classes و Attributes تأتي ثالثا",
+          "Elements والعلامة النجمية تأتي أخيرا"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_specificity_hierarchy.asp"
+      ]
+    }
+  ]
+}
