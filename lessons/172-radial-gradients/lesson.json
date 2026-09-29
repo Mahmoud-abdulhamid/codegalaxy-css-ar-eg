@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "172",
+  "title": "CSS Radial Gradients",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام دالة radial-gradient في CSS",
+    "التحكم في شكل وحجم التدرج اللوني الشعاعي",
+    "تطبيق تدرجات لونية متباعدة بمسافات مختلفة",
+    "استخدام دالة repeating-radial-gradient للتكرار"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css3_gradients_radial.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Radial Gradients",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى radial-gradient، وَهِيَ دَالَّةٌ تُنْشِئُ تَدَرُّجاً لَوْنِيّاً شُعَاعِيّاً يَنْتَشِرُ مِنَ النُّقْطَةِ الْمَرْكَزِيَّةِ لِلْعُنْصُرِ، سَوَاءٌ كَانَ شَكْلُهُ دَائِرَةً أَوْ بَيْضَاوِيّاً.",
+        "caption_text": "تستخدم دالة radial-gradient لإنشاء تدرج لوني شعاعي ينتشر من المركز."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "التدرج الشعاعي ينتشر من نقطة المركز",
+          "يمكن أن يكون الشكل ellipse أو circle",
+          "يتطلب التدرج لونين على الأقل كـ color stops"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_radial.asp"
+      ]
+    },
+    {
+      "id": "syntax",
+      "title": "بنية دالة radial-gradient",
+      "narration": {
+        "spoken_text": "تَتَطَلَّبُ هَذِهِ الدَّالَّةُ تَحْدِيدَ الْخَصَائِصِ مِثْلَ shape وَ size وَ position. بِشَكْلٍ افْتِرَاضِيٍّ، يَكُونُ الشَّكْلُ ellipse، وَالْحَجْمُ farthest-corner، وَالْمَوْقِعُ center، مَعَ إِمْكَانِيَّةِ إِضَافَةِ أَلْوَانٍ مُتَعَدِّدَةٍ لِتَحْقِيقِ تَدَرُّجٍ سَلِسٍ.",
+        "caption_text": "البنية الأساسية لدالة radial-gradient مع المعاملات الافتراضية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "background-image: radial-gradient(shape size at position, start-color, ..., last-color);",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_radial.asp"
+      ]
+    },
+    {
+      "id": "basic_example",
+      "title": "مثال على التدرج الافتراضي",
+      "narration": {
+        "spoken_text": "فِي هَذَا الْمِثَالِ، نَقُومُ بِتَطْبِيقِ تَدَرُّجٍ لَوْنِيٍّ بَسِيطٍ بَيْنَ الْأَلْوَانِ red وَ yellow وَ green. هَذِهِ الْأَلْوَانُ تَتَوَزَّعُ بِشَكْلٍ مُتَسَاوٍ تِلْقَائِيّاً دَاخِلَ الْعُنْصُرِ الَّذِي يَحْمِلُ الْ ID الْمُسَمَّى grad.",
+        "caption_text": "تدرج لوني شعاعي بسيط مع توزيع ألوان متساو."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: radial-gradient(red, yellow, green);\n}",
+        "highlight_lines": [],
+        "output": "تدرج دائري يبدأ بالأحمر في المركز ثم الأصفر ثم الأخضر",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_radial.asp"
+      ]
+    },
+    {
+      "id": "spaced_example",
+      "title": "تخصيص مسافات الألوان",
+      "narration": {
+        "spoken_text": "يُمْكِنُنَا أَيْضاً تَحْدِيدُ نِسَبٍ مِئَوِيَّةٍ لِكُلِّ لَوْنٍ لِتَحْكُمَ فِي مَسَافَةِ انْتِشَارِهِ. فِي هَذَا الْكُودِ، نُحَدِّدُ red عِنْدَ 5 وَ yellow عِنْدَ 15 وَ green عِنْدَ 60، مِمَّا يَمْنَحُنَا تَحَكُّماً دَقِيقاً فِي مَظْهَرِ التَّدَرُّجِ.",
+        "caption_text": "تخصيص مسافات الألوان باستخدام النسب المئوية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: radial-gradient(red 5%, yellow 15%, green 60%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_radial.asp"
+      ]
+    },
+    {
+      "id": "shape_example",
+      "title": "تحديد شكل التدرج",
+      "narration": {
+        "spoken_text": "لِتَغْيِيرِ الشَّكْلِ مِنَ الْبَيْضَاوِيِّ إِلَى الدَّائِرِيِّ، نَسْتَخْدِمُ الْقِيمَةَ circle. هَذَا يُجْبِرُ التَّدَرُّجَ عَلَى اتِّخَاذِ هَيْئَةِ دَائِرَةٍ مُنْتَظِمَةٍ بَدَلاً مِنَ الْقِيمَةِ الِافْتِرَاضِيَّةِ ellipse، وَهُوَ خِيَارٌ مُفِيدٌ لِتَصَامِيمَ مُعَيَّنَةٍ.",
+        "caption_text": "استخدام القيمة circle لتغيير شكل التدرج الشعاعي."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: radial-gradient(circle, red, yellow, green);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_radial.asp"
+      ]
+    },
+    {
+      "id": "size_parameter",
+      "title": "التحكم في حجم التدرج",
+      "narration": {
+        "spoken_text": "يُسَاعِدُنَا مُعَامِلُ size فِي تَحْدِيدِ حَجْمِ شَكْلِ النِّهَايَةِ لِلتَّدَرُّجِ. يُمْكِنُنَا اسْتِخْدَامُ قِيَمٍ مِثْلَ closest-side أَوْ farthest-side مَعَ تَحْدِيدِ الْمَوْقِعِ بِاسْتِخْدَامِ at، لِتَحْقِيقِ تَأْثِيرَاتٍ بَصَرِيَّةٍ مُتَقَدِّمَةٍ وَمُخْتَلِفَةٍ.",
+        "caption_text": "استخدام معاملات الحجم والموقع للتحكم في التدرج."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad1 {\n  background-image: radial-gradient(closest-side at 70% 60%, red, yellow, black);\n}\n#grad2 {\n  background-image: radial-gradient(farthest-side at 70% 60%, red, yellow, black);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_radial.asp"
+      ]
+    },
+    {
+      "id": "repeating_gradient",
+      "title": "تكرار التدرج الشعاعي",
+      "narration": {
+        "spoken_text": "أَخِيراً، نَسْتَخْدِمُ دَالَّةَ repeating-radial-gradient لِتَكْرَارِ التَّدَرُّجِ الشُّعَاعِيِّ. هَذِهِ الدَّالَّةُ تُعِيدُ نَمَطَ التَّدَرُّجِ بِشَكْلٍ مُتَكَرِّرٍ حَتَّى يَمْلَأَ الْعُنْصُرَ بِالْكَامِلِ، وَهِيَ أَدَاةٌ رَائِعَةٌ لِخَلْقِ خَلْفِيَّاتٍ فَنِّيَّةٍ مُتَكَرِّرَةٍ.",
+        "caption_text": "استخدام دالة repeating-radial-gradient لتكرار النمط."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#grad {\n  background-image: repeating-radial-gradient(red, yellow 10%, green 15%);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_radial.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "تَعَلَّمْنَا الْيَوْمَ كَيْفِيَّةَ بِنَاءِ التَّدَرُّجَاتِ الشُّعَاعِيَّةِ بِاسْتِخْدَامِ CSS. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَغْيِيرِ الْقِيَمِ لِمُشَاهَدَةِ النَّتَائِجِ الْمُبْهِرَةِ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي دَرْسٍ قَادِمٍ.",
+        "caption_text": "تجربة الأكواد هي أفضل وسيلة لإتقان CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام radial-gradient للتدرجات الشعاعية",
+          "التحكم في الشكل والحجم والموقع",
+          "استخدام repeating-radial-gradient للتكرار",
+          "قم بزيارة الرابط في الوصف لتجربة الأكواد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css3_gradients_radial.asp"
+      ]
+    }
+  ]
+}
