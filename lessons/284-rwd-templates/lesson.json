@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "284",
+  "title": "Responsive Web Design Templates",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية استخدام قوالب Responsive Web Design الجاهزة",
+    "التعرف على مزايا إطار العمل W3.CSS في تصميم المواقع",
+    "تعلم كيفية استضافة المواقع مجانا باستخدام W3Schools Spaces"
+  ],
+  "sources": [
+    "https://www.w3schools.com/css/css_rwd_templates.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة إلى قوالب التصميم المتجاوب",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ الْجَدِيدِ. سَنَتَعَرَّفُ الْيَوْمَ بِالتَّفْصِيلِ عَلَى قَوَالِبِ Responsive Web Design الْمَبْنِيَّةِ بِاسْتِخْدَامِ إِطَارِ الْعَمَلِ W3.CSS لِتَسْهِيلِ بِنَاءِ مَوَاقِعِ الْوِبّ الْمُتَجَاوِبَهْ.",
+        "caption_text": "سنتعرف اليوم بالتفصيل على قوالب Responsive Web Design المبنية باستخدام إطار العمل W3.CSS لتسهيل بناء مواقع الويب المتجاوبة."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "قوالب جاهزة ومتجاوبة بالكامل",
+          "مبنية باستخدام إطار العمل W3.CSS",
+          "تسهل عملية بناء وتصميم مواقع الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "ما هو إطار العمل W3.CSS؟",
+      "narration": {
+        "spoken_text": "يُعْتَبَرُ W3.CSS إِطَارَ عَمَلٍ حَدِيثاً، سَرِيعاً، وَمُتَجَاوِباً تَمَاماً. يُسَاعِدُكُمْ هَذَا الْإِطَارُ فِي تَصْمِيمِ صَفَحَاتِ الْوِبّ لِتَعْمَلَ بِكِفَاءَةٍ عَلَى الْهَوَاتِفِ وَالْحَوَاسِيبِ دُونَ تَعْقِيدٍ.",
+        "caption_text": "يعتبر W3.CSS إطار عمل حديثا وسريعا ومتجاوبا تماما، يساعد في تصميم صفحات الويب لتعمل بكفاءة على جميع الشاشات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "إطار عمل CSS حديث ومتجاوب",
+          "يسهل تصميم الصفحات لجميع الشاشات",
+          "يوفر الوقت والجهد في كتابة الأكواد"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "مميزات قوالب W3.CSS",
+      "narration": {
+        "spoken_text": "تَتَمَيَّزُ هَذِهِ الْقَوَالِبُ بِأَنَّهَا مَجَّانِيَّةٌ بِالْكَامِلِ. حَيْثُ يُمْكِنُكُمْ تَعْدِيلُهَا، حِفْظُهَا، مُشَارَكَتُهَا، وَاسْتِخْدَامُهَا فِي جَمِيعِ مَشَارِيعِكُمُ التِّجَارِيَّةِ وَالشَّخْصِيَّهْ بِكُلِّ سُهُولَهْ.",
+        "caption_text": "تتميز هذه القوالب بأنها مجانية بالكامل، حيث يمكنكم تعديلها، حفظها، مشاركتها، واستخدامها في جميع مشاريعكم."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مجانية بالكامل ومفتوحة المصدر",
+          "قابلة للتعديل والحفظ والمشاركة",
+          "صالحة للاستخدام الشخصي والتجاري"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "هيكل الكود البرمجي للقالب",
+      "narration": {
+        "spoken_text": "لِنُلْقِ نَظْرَةً عَلَى كَيْفِيَّةِ رَبْطِ الْقَالَبِ. نَبْدَأُ بِمُسْتَنَدِ دُوكْ تَايْبْ HTML، ثُمَّ نَقُومُ بِإِدْرَاجِ رَابِطِ مَلَفِّ W3.CSS دَاخِلَ قِسْمِ head، وَنَكْتُبُ الْمُحْتَوَى دَاخِلَ body.",
+        "caption_text": "نبدأ بمستند HTML، ثم نقوم بإدراج رابط ملف W3.CSS داخل قسم head، ونكتب المحتوى داخل body."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>W3.CSS Template</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  </head>\n  <body>\n    <!-- المحتوى يكتب هنا -->\n    <div class=\"w3-container w3-teal\">\n      <h1>My Responsive Website</h1>\n      <p>Built with W3.CSS framework.</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [
+          6
+        ],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تطبيق عملي على الكود",
+      "narration": {
+        "spoken_text": "لَاحِظُوا مَعِي هَذَا الْكُودَ الْبَسِيطَ. نَسْتَخْدِمُ فِيهِ كِلَاسَاتٍ مِثْلَ w3-container وَ w3-teal لِتَنْسِيقِ الْعَنَاوِينِ وَالْفَقَرَاتِ بِشَكْلٍ جَمِيلٍ وَمُتَجَاوِبٍ تِلْقَائِيّاً.",
+        "caption_text": "نستخدم كلاسات مثل w3-container و w3-teal لتنسيق العناوين والفقرات بشكل جميل ومتجاوب تلقائيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>W3.CSS Template</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n  </head>\n  <body>\n    <!-- المحتوى يكتب هنا -->\n    <div class=\"w3-container w3-teal\">\n      <h1>My Responsive Website</h1>\n      <p>Built with W3.CSS framework.</p>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [
+          1
+        ],
+        "output": "My Responsive Website\nBuilt with W3.CSS framework.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "استضافة القوالب بسهولة",
+      "narration": {
+        "spoken_text": "نُقَدِّمُ لَكُمْ نَصِيحَةً ذَهَبِيَّهْ: جَمِيعُ هَذِهِ الْقَوَالِبِ يُمْكِنُ اسْتِضَافَتُهَا وَتَشْغِيلُهَا مَجَّاناً بِاسْتِخْدَامِ خِدْمَةِ W3Schools Spaces لِنَشْرِ مَشَارِيعِكُمْ عَلَى الْإِنْتَرْنِتِ بِسُرْعَهْ.",
+        "caption_text": "جميع هذه القوالب يمكن استضافتها وتشغيلها مجانا باستخدام خدمة W3Schools Spaces لنشر مشاريعكم على الإنترنت بسرعة."
+      },
+      "visual": {
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "template",
+            "label": "W3.CSS Template",
+            "active": false
+          },
+          {
+            "id": "spaces",
+            "label": "W3Schools Spaces",
+            "active": false
+          },
+          {
+            "id": "live",
+            "label": "Live Website",
+            "active": false
+          }
+        ],
+        "edges": [
+          {
+            "source": "template",
+            "target": "spaces",
+            "label": "Host"
+          },
+          {
+            "source": "spaces",
+            "target": "live",
+            "label": "Publish"
+          }
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "أمثلة متنوعة للقوالب",
+      "narration": {
+        "spoken_text": "تَتَنَوَّعُ الْقَوَالِبُ لِتُلَبِّيَ كَافَّةَ الِاحْتِيَاجَاتِ، مِثْلَ قَوَالِبِ الْفِرَقِ الْمُوسِيقِيَّهْ Band، وَالْمُدَوَّنَاتِ Blog، وَمَعَارِضِ الْأَعْمَالِ Portfolio، وَالَّتِي تَعْمَلُ بِشَكْلٍ مِثَالِيٍّ عَلَى الشَّاشَاتِ.",
+        "caption_text": "تتنوع القوالب لتلبي كافة الاحتياجات، مثل قوالب الفرق الموسيقية Band، والمدونات Blog، ومعارض الأعمال Portfolio."
+      },
+      "visual": {
+        "type": "table",
+        "columns": [
+          "Template Name",
+          "Category",
+          "Demo Link"
+        ],
+        "rows": [
+          [
+            "Band",
+            "Music & Events",
+            "tryw3css_templates_band.htm"
+          ],
+          [
+            "Blog",
+            "Personal & Writing",
+            "tryw3css_templates_blog.htm"
+          ],
+          [
+            "Portfolio",
+            "Professional CV",
+            "tryw3css_templates_portfolio.htm"
+          ]
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_templates.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "الخلاصة والخطوة التالية",
+      "narration": {
+        "spoken_text": "فِي النِّهَايَهْ، نَنْصَحُكُمْ بِتَجْرِبَةِ هَذِهِ الْقَوَالِبِ الْعَمَلِيَّةِ لِتَسْرِيعِ مَشَارِيعِكُمْ. حَمِّلُوا الْأَكْوَادَ الْآنَ، وَشَارِكُونَا آرَاءَكُمْ فِي التَّعْلِيقَاتِ، وَلَا تَنْسَوْا الِاشْتِرَاكَ فِي الْقَنَاهْ.",
+        "caption_text": "ننصحكم بتجربة هذه القوالب العملية لتسريع مشاريعكم. حملوا الأكواد الآن، وشاركونا آراءكم في التعليقات."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "ابدأ بتعديل القوالب الجاهزة الآن",
+          "استضف موقعك مجانا عبر W3Schools Spaces",
+          "شاركنا رأيك واستفسارك في التعليقات"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/css_rwd_templates.asp"
+      ]
+    }
+  ]
+}
