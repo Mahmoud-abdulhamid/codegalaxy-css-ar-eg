@@ -1,0 +1,5 @@
+/* مخرجات تنفيذ التحدي الثلاثي الأبعاد */
+.box-rendered {
+  transform-style: preserve-3d;
+  transform: translateZ(50px);
+}
