@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "362",
+  "title": "تصميم أزرار التحميل الاحترافية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية إنشاء أزرار تحميل جذابة باستخدام CSS",
+    "دمج مكتبات الأيقونات مثل Font Awesome",
+    "التحكم في عرض الأزرار وتنسيقها",
+    "إضافة تأثيرات تفاعلية عند تمرير الفأرة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_download_button.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول أزرار التحميل",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ تَصْمِيمِ أَزْرَارِ التَّحْمِيلِ بِشَكْلٍ احْتِرَافِيٍّ، وَكَيْفَ نَجْعَلُهَا تَتَفَاعَلُ مَعَ مُسْتَخْدِمِ صَفْحَةِ الْوِبّ بِسُهُولَةٍ وَأَنَاقَةٍ.",
+        "caption_text": "تعلم كيفية تصميم أزرار التحميل الاحترافية باستخدام CSS لتحسين تجربة المستخدم في صفحات الويب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "أهمية أزرار التحميل في واجهات المستخدم",
+          "استخدام CSS للتحكم في المظهر",
+          "إضافة أيقونات لتعزيز الوظائف"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_download_button.asp"
+      ]
+    },
+    {
+      "id": "icon-library",
+      "title": "دمج مكتبة الأيقونات",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ أَيْقُونَةِ التَّحْمِيلِ، نَحْتَاجُ إِلَى رَبْطِ مَكْتَبَةِ Font Awesome دَاخِلَ قِسْمِ head فِي مِلَفِّ HTML. هَذَا يُمَكِّنُنَا مِنَ اسْتِخْدَامِ التَّاج i مَعَ الكلاسات الْمُنَاسِبَةِ لِعَرْضِ الْأَيْقُونَةِ.",
+        "caption_text": "نستخدم مكتبة Font Awesome لإضافة أيقونات احترافية إلى أزرار التحميل عبر Tag link."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  </head>\n  <body>\n    <h1>Hello World</h1>\n    <p>Styled Web Page</p>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_download_button.asp"
+      ]
+    },
+    {
+      "id": "html-structure",
+      "title": "هيكلة أزرار التحميل",
+      "narration": {
+        "spoken_text": "نَسْتَخْدِمُ التَّاج button مَعَ الكلاس btn. يُمْكِنُنَا تَنْسِيقُ الزِّرِّ لِيَأْخُذَ عَرْضاً تِلْقَائِيّاً، أَوْ نُحَدِّدُ لَهُ عَرْضاً كَامِلاً بِاسْتِخْدَامِ السَّمَةِ style مَعَ قِيمَةِ width مِئَةٍ بِالْمِئَةِ.",
+        "caption_text": "هيكلة أزرار التحميل باستخدام Tag button مع إمكانية التحكم في العرض عبر CSS."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- Auto width -->\n    <button class=\"btn\">\n      <i class=\"fa fa-download\"></i> Download\n      </button>\n      <!-- Full width -->\n      <button class=\"btn\" style=\"width:100%\">\n        <i class=\"fa fa-download\"></i> Download\n        </button>\n      </body>\n    </html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_download_button.asp"
+      ]
+    },
+    {
+      "id": "css-styling",
+      "title": "تنسيق الأزرار بـ CSS",
+      "narration": {
+        "spoken_text": "نَقُومُ الْآنَ بِتَنْسِيقِ الكلاس btn. نُحَدِّدُ لَوْنَ الْخَلْفِيَّةِ DodgerBlue، وَنُزِيلُ الْحُدُودَ border، وَنُضِيفُ padding مُنَاسِباً، مَعَ ضَبْطِ cursor إِلَى pointer لِتَحْسِينِ التَّفَاعُلِ.",
+        "caption_text": "تطبيق التنسيقات الأساسية على الكلاس btn لجعل الزر يبدو احترافيا."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn {\n  background-color: DodgerBlue;\n  border: none;\n  color: white;\n  padding: 12px 30px;\n  cursor: pointer;\n  font-size: 20px;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_download_button.asp"
+      ]
+    },
+    {
+      "id": "hover-effect",
+      "title": "تأثير التفاعل عند التمرير",
+      "narration": {
+        "spoken_text": "لِإِضَافَةِ لَمْسَةٍ جَمَالِيَّةٍ، نَسْتَخْدِمُ Pseudo-class الَّتِي تُسَمَّى hover. عِنْدَ تَحْرِيكِ الْفَأْرَةِ فَوْقَ الزِّرِّ، سَنُغَيِّرُ لَوْنَ الْخَلْفِيَّةِ إِلَى RoyalBlue لِتَوْضِيحِ أَنَّ الزِّرَّ قَابِلٌ لِلنَّقْرِ.",
+        "caption_text": "استخدام hover لتغيير لون الزر عند تمرير الفأرة فوقه."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".btn:hover {\n  background-color: RoyalBlue;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_download_button.asp"
+      ]
+    },
+    {
+      "id": "output-preview",
+      "title": "معاينة النتيجة",
+      "narration": {
+        "spoken_text": "هَذِهِ هِيَ النَّتِيجَةُ النِّهَائِيَّةُ. سَتَظْهَرُ الْأَزْرَارُ بِتَصْمِيمٍ عَصْرِيٍّ مَعَ أَيْقُونَةِ التَّحْمِيلِ، وَتَتَغَيَّرُ أَلْوَانُهَا بِسَلَاسَةٍ عِنْدَ التَّفَاعُلِ مَعَهَا، مِمَّا يُعْطِي انْطِبَاعاً احْتِرَافِيّاً لِمُسْتَخْدِمِي مَوْقِعِكُمُ الْإِلِكْتُرُونِيِّ.",
+        "caption_text": "شكل الأزرار النهائي في المتصفح مع تأثيرات التفاعل."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "output.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <!-- النتيجة في المتصفح -->\n    [ Download ]\n    [ Full Width Download ]\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Download (Blue button with icon)\nFull Width Download (Stretched blue button)",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_download_button.asp"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "title": "نصائح برمجية",
+      "narration": {
+        "spoken_text": "تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ تَجْرِبَةِ الْأَزْرَارِ عَلَى مُخْتَلِفِ الشَّاشَاتِ. اسْتِخْدَامُ الْوَحَدَاتِ النِّسْبِيَّةِ مِثْلَ مِئَةٍ بِالْمِئَةِ يَضْمَنُ تَجَاوُبَ التَّصْمِيمِ مَعَ الْهَوَاتِفِ وَالْأَجْهِزَةِ الْمَحْمُولَةِ بِكُلِّ كَفَاءَةٍ.",
+        "caption_text": "أفضل الممارسات: تأكد من تجربة التصميم على مختلف الشاشات لضمان التجاوب."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدم وحدات قياس مرنة",
+          "اختبر التجاوب على الهواتف",
+          "حافظ على تباين الألوان"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_download_button.asp"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "خاتمة الدرس",
+      "narration": {
+        "spoken_text": "كَانَ هَذَا دَرْسَنَا الْيَوْمَ حَوْلَ أَزْرَارِ التَّحْمِيلِ. أَدْعُوكُمْ لِتَجْرِبَةِ هَذِهِ الْأَكْوَادِ بِنَفْسِكُمْ وَتَعْدِيلِهَا لِتُنَاسِبَ مَشَارِيعَكُمْ. لَا تَنْسَوْا مُتَابَعَةَ دُرُوسِنَا الْقَادِمَةِ لِتَطْوِيرِ مَهَارَاتِكُمُ الْبَرْمَجِيَّةِ.",
+        "caption_text": "شكرا لمتابعتكم. جربوا الأكواد بأنفسكم وطوروا مهاراتكم في CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "راجعوا دروس الأيقونات",
+          "طبقوا التنسيقات في مشاريعكم",
+          "استمروا في التعلم"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_download_button.asp"
+      ]
+    }
+  ]
+}
