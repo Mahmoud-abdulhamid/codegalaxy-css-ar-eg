@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "300",
+  "title": "انشاء أزرار تنقل جانبية تفاعلية باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء هيكل HTML لعنصر sidenav",
+    "تطبيق خصائص CSS لتحديد الموقع خارج الشاشة",
+    "استخدام تأثيرات transition و hover للتفاعل",
+    "تنسيق الأزرار المتعددة بألوان مختلفة ومواقع مميزة"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة الدرس وأهمية Sidenav",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ أَزْرَارِ تَنَقُّلٍ جَانِبِيَّةٍ تَفَاعُلِيَّةٍ تَعْمَلُ عِنْدَ التَّمَرُّرِ بِالْفَأْرَةِ.",
+        "caption_text": "مرحبا بكم في درس إنشاء أزرار تنقل جانبية تفاعلية باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم بناء أزرار تظهر عند المرور بالعربية والإنجليزية",
+          "استخدام خصائص position و transition المتقدمة",
+          "تنظيم الهيكل البرمجي داخل صفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_2_html_structure",
+      "title": "هيكل HTML الخاص بعنصر Sidenav",
+      "narration": {
+        "spoken_text": "نَبْدأُ أَوْلاً بِبِنَاءِ هَيْكَلِ HTML. نَسْتَخْدِمُ حَاوِيَةً بِرَمْزِ div تَمْلِكُ id يَحْمِلُ اسْمَ mySidenav ثُمَّ نُضِيفُ دَاخِلَهَا عُدَّةَ رَوَابِطَ a تُمَثِّلُ خِيَارَاتِ التَّنَقُّلِ مِثْلَ About وَ Blog وَ Projects وَ Contact.",
+        "caption_text": "نبدأ بإنشاء حاوية div مع روابط a لتشكيل عناصر القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div id=\"mySidenav\" class=\"sidenav\">\n      <a href=\"#\" id=\"about\">About</a>\n      <a href=\"#\" id=\"blog\">Blog</a>\n      <a href=\"#\" id=\"projects\">Projects</a>\n      <a href=\"#\" id=\"contact\">Contact</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "عنصر sidenav يحتوي على أربعة روابط للتنقل.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_3_css_base_styling",
+      "title": "التنسيق الأساسي للروابط داخل Sidenav",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى لُغَةِ CSS لِتَنْسِيقِ الرَّوَابِطِ. نَجْعَلُ الْمَوْضِعَ absolute لِتَكُونَ نَسْبِيَّةً لِمُتَصَفِّحِ الْوِبّ، وَنَضَعُ left بِقِيمَةِ سَالِبِ ثَمَانِينَ بِيكْسِل لِإِخْفَائِهَا خَارِجَ الشَّاشَةِ، مَعَ إِضَافَةِ transition بِزَمَنِ ثَلَاثَةِ أَعْشَارِ الثَّانِيَةِ.",
+        "caption_text": "نستخدم position absolute وإزاحة left سالبة لإخفاء الروابط خارج الشاشة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#mySidenav a {\n  position: absolute;\n  left: -80px;\n  transition: 0.3s;\n  padding: 15px;\n  width: 100px;\n  text-decoration: none;\n  font-size: 20px;\n  color: white;\n  border-radius: 0 5px 5px 0;\n}",
+        "highlight_lines": [],
+        "output": "تظهر الروابط مخفية جزئياً خارج إطار الشاشة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_4_hover_effect",
+      "title": "تفعيل تأثير Hover وعرض العناصر",
+      "narration": {
+        "spoken_text": "عِنْدَ تَمَرُّرِ مُؤَشِّرِ الْفَأْرَةِ فَوْقَ الرَّابِطِ، أَيْ عِنْدَ اسْتِخْدَامِ a:hover، نُعَدِّلُ قِيمَةَ left إِلَى الصِّفْرِ لِكَيْ تَظْهَرَ الْعَنَاصِرُ بِالشَّكْلِ الْمَطْلُوبِ بِسِلَاسَةٍ تَامَّةٍ.",
+        "caption_text": "عند استخدام a:hover تتغير قيمة left إلى الصفر لتظهر العناصر بوضوح."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#mySidenav a:hover {\n  left: 0;\n}",
+        "highlight_lines": [],
+        "output": "ينزلق الزر بسلاسة ليظهر كاملاً على الشاشة عند المرور فوقه.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_5_individual_buttons",
+      "title": "تخصيص مواقع وألوان كل زر على حدة",
+      "narration": {
+        "spoken_text": "نَحْتَاجُ الْآنَ إِلَى تَمْيِيزِ كُلِّ زِرٍّ بِتَحْدِيدِ قِيمَةِ top مُخْتَلِفَةٍ لِكَيْ تَتَتَابَعَ الْأَزْرَارُ بِانْتِظَامٍ، مَعَ إِضَافَةِ أَلْوَانِ خَلْفِيَّةٍ مُمَيِّزَةٍ مِثْلَ الأَخْضَرِ وَالْأَزْرَقِ وَالْأَحْمَرِ وَاللَّوْنِ الدَّاكِنِ.",
+        "caption_text": "نحدد موقع top وخلفية background-color لكل رابط على حدة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "#about {\n  top: 20px;\n  background-color: #04AA6D;\n}\n#blog {\n  top: 80px;\n  background-color: #2196F3;\n}\n#projects {\n  top: 140px;\n  background-color: #f44336;\n}\n#contact {\n  top: 200px;\n  background-color: #555;\n}",
+        "highlight_lines": [],
+        "output": "تظهر الأزرار مترتبة رأسياً وكل منها بلون مميز ومسافة محددة.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_6_best_practices",
+      "title": "أفضل الممارسات والنصائح الهندسية",
+      "narration": {
+        "spoken_text": "مِنْ أَجْلِ تَحْسِينِ أَدَاءِ صَفْحَةِ الْوِبّ، احْرِصْ دَائِماً عَلَى اسْتِخْدَامِ قِيَمِ transition دَقِيقَةٍ، وَتَأَكَّدْ مِنْ أَنَّ خِيَارَاتِ border-radius تُضْفِي طَابَعاً جَمَالِيّاً فَقَطْ عَلَى الزَّوَايَا الْيُمْنَى.",
+        "caption_text": "احرص على استخدام قيم transition دقيقة وتنسيق الزوايا بعناية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام transition بسلاسة لضمان تجربة مستخدم ممتازة",
+          "ضبط تدرج الألوان ليتناسب مع هوية الموقع الإلكتروني",
+          "التأكد من التوافقية مع مختلف متصفحات الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp"
+      ]
+    },
+    {
+      "id": "scene_7_summary",
+      "title": "خلاصة الدرس ودعوة للتجربة",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفَ نُنْشِئُ أَزْرَارَ تَنَقُّلٍ جَانِبِيَّةً احْتِرَافِيَّةً بِاسْتِخْدَامِ CSS فَقَطْ. نَنْصَحُكُمْ بِتَجْرِيبِ الْكُودِ بِمُفْرَدِكُمْ وَتَعْدِيلِ الْأَلْوَانِ.",
+        "caption_text": "تعلمنا إنشاء أزرار تنقل جانبية تفاعلية باستخدام CSS وننصح بالتجربة العملية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء هيكل القائمة الجانبية sidenav بنجاح",
+          "تطبيق التفاعل الحركي بواسطة hover و transition",
+          "راجع الرابط في الوصف للاطلاع على المزيد من الأمثلة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp"
+      ]
+    }
+  ]
+}
