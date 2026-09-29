@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "331",
+  "title": "إنشاء تأثير الأيقونة المتراكبة على الصور باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية إنشاء تأثير تراكب الصور أو ما يسمى Image Overlay Effect.",
+    "تطبيق خصائص position و opacity و transition في CSS.",
+    "توسيط الأيقونات بدقة باستخدام transform و translate.",
+    "إضافة مكتبات الأيقونات الخارجية مثل Font Awesome."
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "مقدمة الدرس",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ تَأْثِيرِ أَيْقُونَةٍ مُتَرَاكِبَةٍ عَلَى الصُّوَرِ عِنْدَ تَجَاوُزِ الْمُؤَشِّرِ أَوْ مَا يُسَمَّى Hover Effect بِطَرِيقَةٍ احْتِرَافِيَّةٍ.",
+        "caption_text": "مرحبا بكم في درس جديد حول إنشاء تأثير الأيقونة المتراكبة على الصور عند تمرير المؤشر باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تعلم تصميم تأثيرات تفاعلية لجذاب انتباه مستخدمي الوب",
+          "استخدام تأثيرات hover المتقدمة على الصور",
+          "فهم آلية تراكب العناصر فوق بعضها البعض"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "title": "هيكل HTML ومكتبة الأيقونات",
+      "narration": {
+        "spoken_text": "نَبْدَأُ أَوَّلاً بِبِنَاءِ هَيْكَلِ HTML. نَقُمْ بِرَبْطِ مَكْتَبَةِ Font Awesome الْخَارِجِيَّةِ لِاسْتِخْدَامِ الأَيْقُونَاتِ، ثُمَّ نُنْشِئُ عُنْصر container يَحْتَوي عَلَى الصُّوَرَةِ وَعُنْصُرِ overlay الْمُتَرَاكِبِ وَدَاخِلَهُ أَيْقُونَةُ الْمُسْتَخْدِمِ.",
+        "caption_text": "نربط مكتبة Font Awesome ونبني هيكل HTML الأساسي الذي يتضمن الحاوية والصورة وعنصر التراكب."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  </head>\n  <body>\n    <div class=\"container\">\n      <img src=\"img_avatar.png\" alt=\"Avatar\" class=\"image\">\n      <div class=\"overlay\">\n        <a href=\"#\" class=\"icon\" title=\"User Profile\">\n          <i class=\"fa fa-user\"></i>\n        </a>\n      </div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "HTML structure with image and overlay container ready.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp"
+      ]
+    },
+    {
+      "id": "scene_3",
+      "title": "تنسيق الحاوية والصورة المتجاوبة",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى لُغَةِ CSS. نُعَرِّفُ عُنْصُرَ container بِوَصْفِ position relative لِيَكُونَ مَرْجِعاً لِتَوَبُّلِ العَنَاصِرِ دَاخِلِهِ، وَنَجْعَلُ صُورَةَ image مُتَجَاوِبَةً بِعَرْضِ مِئَةِ بِالْمِئَةِ وَارْتِفَاعٍ تِلْقَائِيٍّ.",
+        "caption_text": "نحدد موقع الحاوية كمرجع ونضبط الصورة لتكون متجاوبة مع مختلف أحجام الشاشات."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container {\n  position: relative;\n  width: 100%;\n  max-width: 400px;\n}\n.image {\n  width: 100%;\n  height: auto;\n}",
+        "highlight_lines": [],
+        "output": "Container and responsive image styled successfully.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp"
+      ]
+    },
+    {
+      "id": "scene_4",
+      "title": "إعداد طبقة التراكب وتأثير الشفافية",
+      "narration": {
+        "spoken_text": "نُعَرِّفُ الآنَ عُنْصُرَ overlay بِوَصْفِ position absolute لِيَغْطِيَ الصُّوَرَةَ بِالْكَامِلِ. نَجْعَلُ الشَّفَافِيَّةَ opacity مُسَاوِيَةً لِلصِّفْرِ فِي الْحَالَةِ الْعَادِيَّةِ، مَعَ إِضَافَةِ transition لِتَحَقُّقِ التَّأْدِيَةِ بِسِلْسَةٍ عِنْدَ التَّغَيُّرِ.",
+        "caption_text": "ننشئ طبقة التراكب ونحدد شفافيتها بصفر مع إضافة تأثير انتقال سلس transition."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".overlay {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 100%;\n  width: 100%;\n  opacity: 0;\n  transition: .3s ease;\n  background-color: red;\n}",
+        "highlight_lines": [],
+        "output": "Overlay layer positioned with zero opacity.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp"
+      ]
+    },
+    {
+      "id": "scene_5",
+      "title": "تفعيل التأثير عند تمرير المؤشر",
+      "narration": {
+        "spoken_text": "عِنْدَ تَجَاوُزِ الْمُؤَشِّرِ لِلْحَاوِيَةِ container:hover، نَقُومُ بِتَغْيِيرِ شَفَافِيَّةِ العُنْصُرِ overlay إِلَى وَاحِدٍ لِيَظْهَرَ بِشَكْلٍ فَوْريٍّ وَسَلِسٍ عَلَى الصُّوَرَةِ، مِمَّا يُعْطِي تَأْثِيرَاً بَصْرِيّاً رَائِعاً.",
+        "caption_text": "نستخدم المحدد container:hover لزيادة شفافية طبقة التراكب إلى واحد عند تمرير المؤشر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".container:hover .overlay {\n  opacity: 1;\n}",
+        "highlight_lines": [],
+        "output": "Overlay fades in smoothly on mouse hover.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "توسيط الأيقونة داخل طبقة التراكب",
+      "narration": {
+        "spoken_text": "لِتَوْسِيطِ الأَيْقُونَةِ فِي وَسَطِ طَبَقَةِ التَّرَاكُبِ عَمُودِيّاً وَأُفُقِيّاً، نَسْتَخْدِمُ الخَصَائِصَ top وَ left بِخَمْسِينَ بِالْمِئَةِ، مَعَ خَاصِيَّةِ transform وَ translate لِضَمَانِ التَّوْسِيقِ الدَّقِيقِ.",
+        "caption_text": "نستخدم خصائص التوضضع وميزة transform translate لتوسيط الأيقونة في منتصف الطبقة بدقة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".icon {\n  color: white;\n  font-size: 100px;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n}",
+        "highlight_lines": [],
+        "output": "Icon perfectly centered horizontally and vertically.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "تأثير تفاعلي على الأيقونة وتغيير اللون",
+      "narration": {
+        "spoken_text": "أَخِرياً، نُضِيفُ تَأْثِيرًا بَسِيطاً عَلَى الأَيْقُونَةِ عِنْدَ تَمَرِيرِ الْمُؤَشِّرِ عَلَيْهَا بَاسْتِخْدَامِ fa-user:hover، لِتَغْيِيرِ لَوْنِهَا إِلَى دَرَجَةٍ أَفْتَحَ، مِمَّا يَزِيدُ مِنْ تَفَاعُلِيَّةِ صَفْحَةِ الْوِبّ.",
+        "caption_text": "نضيف تأثير تفاعلي لتغيير لون الأيقونة عند تمرير المؤشر فوقها لتحسين تجربة المستخدم."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": "/* When you move the mouse over the icon, change color */\n.fa-user:hover {\n  color: #eee;\n}",
+        "highlight_lines": [],
+        "output": "Icon color changes smoothly on hover.",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "خلاصة الدرس والممارسة",
+      "narration": {
+        "spoken_text": "إِلَى هُنَا يَا أَصْدِقَائِي نَكُونُ قَدْ تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ تَأْثِيرِ الأَيْقُونَةِ الْمُتَرَاكِبَةِ عَلَى الصُّوَرِ بِاسْتِخْدَامِ مَهَارَاتِ position وَ transition فِي CSS. نُشَجِّعُكُمْ عَلَى تَجْرِبَةِ الأَكْوَدِ بِنَفْسِكُمْ.",
+        "caption_text": "خلاصة الدرس: تعلمنا تطبيق تأثيرات تراكب الصور والأيقونات الاحترافية باستخدام CSS مع المدرب محمود عبدالحميد."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام position absolute لتراكب العناصر",
+          "التحكم بالشفافية والتحولات عبر opacity و transition",
+          "توسيط العناصر بدقة تامة باستخدام transform"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp"
+      ]
+    }
+  ]
+}
