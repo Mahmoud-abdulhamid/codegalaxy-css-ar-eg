@@ -1,0 +1,7 @@
+.flip-box {
+  perspective: 1000px;
+}
+.flip-box-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
