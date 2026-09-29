@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "294",
+  "title": "تصميم Menu Icon تفاعلي باستخدام CSS و JavaScript",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "فهم كيفية بناء أيقونة القائمة باستخدام div Elements",
+    "تطبيق خصائص CSS للتحكم في أبعاد وشكل الأشرطة",
+    "استخدام JavaScript لإضافة وتغيير Classes ديناميكيا",
+    "تنفيذ تأثيرات حركية باستخدام transition و transform"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_menu_icon.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "مقدمة حول Menu Icon",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَرْسٍ جَدِيدٍ مِنْ دَوْرَةِ CSS. سَنَتَعَلَّمُ الْيَوْمَ كَيْفِيَّةَ بِنَاءِ Menu Icon احْتِرَافِيٍّ لِمَوَاقِعِ الْوِبّ، وَذَلِكَ بِاسْتِخْدَامِ عَنَاصِرِ HTML بَسِيطَةٍ مَعَ تَأْثِيرَاتٍ حَرَكِيَّةٍ جَذَّابَةٍ بِوَاسِطَةِ CSS وَ JavaScript.",
+        "caption_text": "سنتعلم اليوم كيفية بناء Menu Icon احترافي لمواقع الويب باستخدام CSS و JavaScript."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "بناء أيقونة القائمة بدون مكتبات خارجية",
+          "استخدام CSS للتحكم في المظهر والأبعاد",
+          "إضافة تفاعلية عند النقر باستخدام JavaScript",
+          "تحويل الأيقونة إلى شكل X عند التفعيل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_icon.asp"
+      ]
+    },
+    {
+      "id": "structure",
+      "title": "الهيكل البرمجي للأيقونة",
+      "narration": {
+        "spoken_text": "لِتَصْمِيمِ هَذِهِ الْأَيْقُونَةِ، نَحْتَاجُ إِلَى ثَلَاثَةِ عَنَاصِرِ div دَاخِلَ حاويةٍ رَئِيسِيَّةٍ. كُلُّ div يُمَثِّلُ شَرِيطاً أُفُقِيّاً، وَنَقُومُ بِتَحْدِيدِ Classes خَاصَّةٍ بِكُلِّ شَرِيطٍ لِتَحْكُمٍ دَقِيقٍ فِي التَّصْمِيمِ وَالتَّحَوُّلَاتِ الْحَرَكِيَّةِ.",
+        "caption_text": "نستخدم ثلاثة عناصر div لتمثيل الأشرطة الأفقية داخل حاوية رئيسية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"container\" onclick=\"myFunction(this)\">\n      <div class=\"bar1\"></div>\n      <div class=\"bar2\"></div>\n      <div class=\"bar3\"></div>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_icon.asp"
+      ]
+    },
+    {
+      "id": "styling",
+      "title": "تنسيق الأشرطة باستخدام CSS",
+      "narration": {
+        "spoken_text": "نَقُومُ الْآنَ بِتَنْسِيقِ الْأَشْرِطَةِ بِاسْتِخْدَامِ CSS. نُحَدِّدُ الْعَرْضَ وَالِارْتِفَاعَ، وَنُضِيفُ خَاصِّيَّةَ transition لِضَمَانِ نَعُومَةِ الْحَرَكَةِ عِنْدَ النَّقْرِ. كَمَا نُحَدِّدُ الْهَوَامِشَ لِتَوْفِيرِ مَسَافَةٍ مُنَاسِبَةٍ بَيْنَ كُلِّ شَرِيطٍ وَالْآخَرِ.",
+        "caption_text": "نستخدم CSS لتحديد أبعاد الأشرطة وإضافة تأثير الانتقال السلس."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".bar1, .bar2, .bar3 {\n  width: 35px;\n  height: 5px;\n  background-color: #333;\n  margin: 6px 0;\n  transition: 0.4s;\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_icon.asp"
+      ]
+    },
+    {
+      "id": "animation",
+      "title": "تطبيق التحويلات الحركية",
+      "narration": {
+        "spoken_text": "عِنْدَ إِضَافَةِ Class تَسْمَى change، نَقُومُ بِتَدْوِيرِ الشَّرِيطِ الْأَوَّلِ وَالْأَخِيرِ بِزَاوِيَةِ خَمْسٍ وَأَرْبَعِينَ دَرَجَةً، مَعَ إِزَاحَتِهِمَا لِيَلْتَقِيَا فِي الْمُنْتَصَفِ، بَيْنَمَا نَجْعَلُ الشَّرِيطَ الْأَوْسَطَ يَخْتَفِي تَمَاماً بِاسْتِخْدَامِ خَاصِّيَّةِ opacity.",
+        "caption_text": "نستخدم transform و opacity لإنشاء تأثير التحول إلى شكل X."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".change .bar1 {\n  transform: translate(0, 11px) rotate(-45deg);\n}\n.change .bar2 {\n  opacity: 0;\n}\n.change .bar3 {\n  transform: translate(0, -11px) rotate(45deg);\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_icon.asp"
+      ]
+    },
+    {
+      "id": "javascript",
+      "title": "التفاعل البرمجي",
+      "narration": {
+        "spoken_text": "لِإِتْمَامِ التَّفَاعُلِ، نَسْتَخْدِمُ دَالَّةً بَسِيطَةً بِ JavaScript تَقُومُ بِتَبْدِيلِ Class تَسْمَى change عِنْدَ النَّقْرِ عَلَى الْحَاوِيَةِ. هَذَا التَّبْدِيلُ يُؤَدِّي إِلَى تَفْعِيلِ التَّنْسِيقَاتِ الْحَرَكِيَّةِ الَّتِي كَتَبْنَاهَا سَابِقاً فِي CSS.",
+        "caption_text": "نستخدم JavaScript لتبديل الـ Class عند النقر."
+      },
+      "visual": {
+        "type": "code",
+        "language": "javascript",
+        "filename": "script.js",
+        "code": "function myFunction(x) {\n  x.classList.toggle(\"change\");\n}",
+        "highlight_lines": [],
+        "output": null,
+        "output_status": "not_applicable",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_icon.asp"
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "بِهَذَا نَكُونُ قَدْ أَنْشَأْنَا أَيْقُونَةَ قَائِمَةٍ تَفَاعُلِيَّةً بِكُلِّ سُهُولَةٍ. تَذَكَّرُوا دَائِماً أَهَمِّيَّةَ خَاصِّيَّةِ transition لِجَعْلِ التَّحَوُّلَاتِ بَيْنَ الْحَالَاتِ سَلِسَةً وَمُحْتَرِفَةً. جَرِّبُوا هَذَا الْكُودَ فِي مَشَارِيعِكُمُ الْقَادِمَةِ وَلَا تَتَرَدَّدُوا فِي تَطْوِيرِهِ.",
+        "caption_text": "استخدموا transition لجعل التحولات سلسة واحترافية."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "استخدام div Elements كأشرطة",
+          "تطبيق transform للتدوير والإزاحة",
+          "استخدام opacity للإخفاء",
+          "استخدام classList.toggle للتبديل"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_menu_icon.asp"
+      ]
+    }
+  ]
+}
