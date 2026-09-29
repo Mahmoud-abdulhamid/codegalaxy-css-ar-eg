@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "321",
+  "title": "إنشاء قائمة تنقل بتصميم Pill Navigation باستخدام CSS",
+  "course": "CSS",
+  "language": "ar",
+  "dialect": "fusha",
+  "objectives": [
+    "تعلم كيفية بناء هيكل HTML لعنصر Pill Navigation باستخدام div و a tags",
+    "تنسيق الروابط بخصائص CSS مثل display و padding و border-radius",
+    "تطبيق تأثيرات التفاعل باستخدام hover و active states",
+    "تحويل قائمة التنقل من الشكل الأفقي إلى العمودي باستخدام display block"
+  ],
+  "sources": [
+    "https://www.w3schools.com/howto/howto_css_pill_nav.asp"
+  ],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "scene_1_intro",
+      "title": "مقدمة حول Pill Navigation",
+      "narration": {
+        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي هَذَا الدَّرْسِ مِنْ دَوْرَةِ CSS. سَنَتَعَرَّفُ الْيَوْمَ عَلَى كَيْفِيَّةِ إِنْشَاءِ قَائِمَةِ تَنَقُّلٍ بِمُصْطَلَحِ Pill Navigation بِاسْتِخْدَامِ لُغَةِ CSS لِتَمْكِينِ الْمُسْتَخْدِمِ مِنَ التَّنَقُّلِ بِسُهُولَةٍ بَيْنَ صَفَحَاتِ الْمَوْقِعِ.",
+        "caption_text": "تعلم كيفية إنشاء قائمة تنقل بتصميم Pill Navigation باستخدام CSS."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصميم قوائم تنقل عصرية وجميلة",
+          "استخدام CSS لتنسيق الروابط والأزرار",
+          "تحسين تجربة المستخدم في تصفح الويب"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_2_html_structure",
+      "title": "هيكل HTML لقائمة التنقل",
+      "narration": {
+        "spoken_text": "نَبْدأُ أولاً بِبِنَاءِ هَيْكَلِ HTML الْخَاصِّ بِالْقَائِمَةِ. نَسْتَخْدِمُ عُنْصَرَ div يَحْمِلُ class بِاسْمِ pill-nav، وَدَاخِلَهُ نَضَعُ مَجْمُوعَةً مِنْ a tags تُمَثِّلُ رَوَابِطَ التَّنَقُّلِ مِثْلَ home وَ news وَ contact وَ about.",
+        "caption_text": "بناء هيكل HTML باستخدام div و a tags لإنشاء عناصر القائمة."
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n  </head>\n  <body>\n    <div class=\"pill-nav\">\n      <a class=\"active\" href=\"#home\">Home</a>\n      <a href=\"#news\">News</a>\n      <a href=\"#contact\">Contact</a>\n      <a href=\"#about\">About</a>\n    </div>\n  </body>\n</html>",
+        "highlight_lines": [],
+        "output": "Home  News  Contact  About",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_3_css_links",
+      "title": "تنسيق الروابط الأساسية",
+      "narration": {
+        "spoken_text": "نَنْتَقِلُ الْآنَ إِلَى لُغَةِ CSS لِتَنْسِيقِ الرَّوَابِطِ دَاخِلَ pill-nav. نَضْبُطُ display عَلَى قيمَةِ inline-block، وَاللون الأسود للخط، وتوسيط النص، وإضافة padding بحجم أربعة عشر بيكسلاً، وإلغاء الخط السفلي، وتدوير الحواف عبر border-radius.",
+        "caption_text": "تنسيق روابط الـ Pill Navigation عبر خصائص CSS الأساسية."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pill-nav a {\n  display: inline-block;\n  color: black;\n  text-align: center;\n  padding: 14px;\n  text-decoration: none;\n  font-size: 17px;\n  border-radius: 5px;\n}",
+        "highlight_lines": [],
+        "output": "Pill-shaped links styled correctly",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_4_hover_effect",
+      "title": "تأثير المرور بالموءشر hover",
+      "narration": {
+        "spoken_text": "لِتَحْسِينِ التَّفَاعُلِ، نُضيفُ تَأْثِيرَ hover عَلَى الرَّوَابِطِ. عِنْدَمَا يُمَرِّرُ الْمُسْتَخْدِمُ الموءشر فَوقَ أَيِّ رَابِطٍ، يَتَغَيَّرُ لون الخلفية إلى رمادي فاتح لِتَوَفُّرِ تَجْرِبَةِ مُسْتَخْدِمٍ دِينَامِيكِيَّةٍ وَسَلِسَةٍ.",
+        "caption_text": "تغيير لون خلفية الرابط عند المرور فوقه باستخدام hover state."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pill-nav a:hover {\n  background-color: #ddd;\n  color: black;\n}",
+        "highlight_lines": [],
+        "output": "Hover background changes to light gray",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_5_active_state",
+      "title": "تنسيق الرابط النشط active",
+      "narration": {
+        "spoken_text": "لِلتَّعْرِيفِ بِالصَّفْحَةِ الْحَالِيَّةِ الَّتِي يَتَوَاجَدُ فِيهَا الْمُسْتَخْدِمُ، نُخَصِّصُ صِفَةَ active لِلرَّبْطِ. نَعْطِيهَا لَوْنَ خَلْفِيَّةٍ أَزْرَقَ مميزاً يسمى dodgerblue مَعَ لَوْنِ نَصٍّ أَبْيَضَ لِيَظْهَرَ بِوُضُوحٍ.",
+        "caption_text": "تمييز الرابط الحالي أو النشط باستخدام class active."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pill-nav a.active {\n  background-color: dodgerblue;\n  color: white;\n}",
+        "highlight_lines": [],
+        "output": "Active link has blue background and white text",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_6_vertical_nav",
+      "title": "إنشاء قائمة تنقل عمودية Vertical Pill Navigation",
+      "narration": {
+        "spoken_text": "إِذَا أَرَدْنَا تَحْوِيلَ هَذِهِ الْقَائِمَةِ مِنْ الشَّكْلِ الأُفُقِيِّ إِلَى الشَّكْلِ الْعَمُودِيِّ، فَكُلُّ مَا عَلَيْنَا فِعْلُهُ هُوَ تَغْيِيرُ صِفَةِ display إِلَى block لِتَظْهَرَ الرَّوَابِطُ فَوْقَ بَعْضِهَا البَعْضِ بَدَلاً مِنَ الاصطفاف بجانب بعضها.",
+        "caption_text": "تحويل قائمة التنقل إلى الشكل العمودي باستخدام display block."
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "style.css",
+        "code": ".pill-nav-vertical a {\n  display: block;\n  /* باقي التنسيقات السابقة */\n}",
+        "highlight_lines": [],
+        "output": "Links stack vertically",
+        "output_status": "illustrative",
+        "verification_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_nav.asp"
+      ]
+    },
+    {
+      "id": "scene_7_conclusion",
+      "title": "خلاصة الدرس",
+      "narration": {
+        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، تَعَلَّمْنَا كَيْفِيَّةَ بِنَاءِ قَائِمَةِ تَنَقُّلٍ أنيقة باستخدام Pill Navigation وتنسيقها بأفضل الممارسات عبر CSS. نَسْتَوْدِعُكُم اللَّهَ وَنْرَاكُمْ فِي الدَّرْسِ الْقَادِمِ.",
+        "caption_text": "خلاصة درس تصميم قوائم التنقل بتصميم Pill Navigation."
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "تصميم قوائم أفقية وعمودية مرنة",
+          "استخدام تأثيرات hover و active باحترافية",
+          "تطبيق خصائص CSS لبناء واجهات ويب جذابة"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/howto/howto_css_pill_nav.asp"
+      ]
+    }
+  ]
+}
