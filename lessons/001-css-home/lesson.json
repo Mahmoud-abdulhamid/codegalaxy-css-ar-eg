@@ -1,13 +1,15 @@
 {
   "schema_version": "1.0",
   "lesson_id": "1",
-  "title": "مقدمة في CSS",
+  "title": "CSS Introduction and Styling Basics",
   "course": "CSS",
+  "language": "ar",
+  "dialect": "egyptian",
   "objectives": [
-    "فهم دور CSS في تصميم صفحات الويب",
-    "التعرف على كيفية تنسيق HTML Elements",
-    "تطبيق التنسيقات الأساسية باستخدام CSS",
-    "استخدام المحرر التفاعلي لتجربة الأكواد"
+    "Understand what CSS is and its role in styling HTML documents",
+    "Learn basic CSS syntax selectors properties and values",
+    "Apply background colors text alignment and font styling to web elements",
+    "Explore practical code examples and browser rendering behavior"
   ],
   "sources": [
     "https://www.w3schools.com/css/default.asp"
@@ -15,19 +17,18 @@
   "assets": [],
   "scenes": [
     {
-      "id": "intro",
-      "title": "ما هي CSS؟",
+      "id": "scene_1",
+      "title": "شرح Introduction to CSS and The Why",
       "narration": {
-        "spoken_text": "مَرْحَباً بِكُمْ يَا أَصْدِقَائِي فِي دَوْرَةِ CSS. تُعَدُّ CSS اللُّغَه الْأَسَاسِيَّه لِتَصْمِيمِ وَتَنْسِيقِ مُسْتَنَدَات HTML. هِيَ الَّتِي تَصِفُ كَيْفَ يَجِبُ أَنْ تَظْهَر Elements عَلَى مُتَصَفِّحْ الْوِبّ، لِتُحَوِّلَ الصَّفَحَاتِ مِنْ نُصُوصٍ جَامِدَه إِلَى تَصَامِيمَ جَذَّابَه.",
-        "caption_text": "تستخدم لغة CSS لتصميم وتنسيق مستندات HTML وتحديد كيفية عرض العناصر على متصفح الويب."
+        "spoken_text": "أهلاً بيكم يا شباب في درسنا النهاردة عن CSS. بص معايا كده، لو إنت صَمَّمْت صفحة HTML لوحدها، هتلاقي شَكْلُهَا بَدَائِي ومش جذاب خالص، ومن هنا جه الدور الأساسي ل CSS كِلغَة تصميم ومسؤولة عن تنسيق وعرض ال HTML Elements بشكل احترافي. الفكرة هنا هي الفصل التام بين هيكل الصفحة وتصميمها، عشان تقدر تِغَيِّر شكل الموقع بالكامل في ثواني بدون ما تلمس كود ال HTML الأساسي.",
+        "caption_text": "شرح وتوضيح HTML builds the structure while CSS controls the visual presentation."
       },
       "visual": {
         "type": "bullets",
         "items": [
-          "CSS هي لغة تصميم صفحات الويب",
-          "تتحكم في مظهر HTML Elements",
-          "تضيف الألوان والخطوط والتخطيطات",
-          "تضمن تجربة مستخدم احترافية"
+          "مفهوم HTML builds the structure while CSS controls the visual presentation",
+          "مفهوم Separation of concerns between structure and design",
+          "مفهوم Styling HTML elements across different screen sizes"
         ]
       },
       "source_refs": [
@@ -35,19 +36,56 @@
       ]
     },
     {
-      "id": "concepts",
-      "title": "كيف تعمل CSS؟",
+      "id": "scene_2",
+      "title": "شرح CSS Structure and DOM Tree Mapping",
       "narration": {
-        "spoken_text": "تَعْمَل CSS مِنْ خِلَالِ اسْتِهْدَاف Elements وَتَطْبِيقِ خَصَائِصَ مُعَيَّنَه عَلَيْهَا. نَحْنُ نُحَدِّدُ الْخَصَائِصَ مِثْلَ الْأَلْوَانِ، وَأَحْجَامِ الْخُطُوطِ، وَالْمَسَافَاتِ، لِنُعْطِيَ الصَّفْحَه شَكْلَهَا النِّهَائِيَّ. هَذَا التَّنْظِيمُ يَجْعَلُ الْكُودَ أَكْثَرَ قَابِلِيَّه لِلصِّيَانَه وَالتَّطْوِيرِ.",
-        "caption_text": "تعتمد CSS على استهداف العناصر وتطبيق خصائص تنسيقية عليها للتحكم في مظهرها النهائي."
+        "spoken_text": "تعالوا دلوقتي نفهم إزاي ال CSS بِيِرْبِط القواعد بتاعته بال HTML Elements جوه ال DOM Tree. المتصفح بيبني شجرة العناصر بتبدأ من ال body وتنزل لحد ال h1 وال p، ولما بنكتب كود CSS، إحنا بنستهدف العناصر دي بناءً على ال Selectors عشان نطبق عليها الخصائص المطلوبة. ال Inheritance بيخلي العناصر الفرعية تورث بعض التنسيق من العناصر الابنة والأب لتوفير الكود وتسهيل التعديل.",
+        "caption_text": "شرح وتوضيح Mapping CSS selectors to DOM elements like body, h1, and p."
       },
       "visual": {
-        "type": "bullets",
-        "items": [
-          "استهداف العناصر عبر Selectors",
-          "تطبيق الخصائص والقيم",
-          "فصل التصميم عن هيكل HTML",
-          "تحسين تجربة المستخدم"
+        "type": "diagram",
+        "nodes": [
+          {
+            "id": "doc",
+            "label": "HTML Document",
+            "active": false,
+            "icon": null
+          },
+          {
+            "id": "body",
+            "label": "body element",
+            "active": true,
+            "icon": null
+          },
+          {
+            "id": "h1",
+            "label": "h1 element",
+            "active": true,
+            "icon": null
+          },
+          {
+            "id": "p",
+            "label": "p element",
+            "active": true,
+            "icon": null
+          }
+        ],
+        "edges": [
+          {
+            "source": "doc",
+            "target": "body",
+            "label": "root"
+          },
+          {
+            "source": "body",
+            "target": "h1",
+            "label": "child"
+          },
+          {
+            "source": "body",
+            "target": "p",
+            "label": "child"
+          }
         ]
       },
       "source_refs": [
@@ -55,61 +93,63 @@
       ]
     },
     {
-      "id": "code_part1",
-      "title": "مثال عملي على CSS",
+      "id": "scene_3",
+      "title": "شرح Basic CSS Syntax and Selectors",
       "narration": {
-        "spoken_text": "لِنُلْقِ نَظْرَه عَلَى هَذَا الْكُودِ. نَقُومُ هُنَا بِتَنْسِيق body بِتَغْيِيرِ لَوْنِ الْخَلْفِيَّه إِلَى lightblue. بَعْدَهَا نَقُومُ بِتَنْسِيقِ الْعُنْصُر h1 لِيَكُونَ لَوْنُ النَّصِّ أَبْيَضَ وَمُحَاذَاتُهُ فِي الْمُنْتَصَفِ.",
-        "caption_text": "تنسيق خلفية الصفحة وعنوان المستوى الأول باستخدام CSS."
+        "spoken_text": "دلوقتي جه وَئْت التطبيق العملي ونشوف ال Syntax الحقيقي لكود ال CSS. زي ما إنت شايف في الكود ده، استخدمت Selector لل body عشان نغير ال background-color ل lightblue، واستهدافنا لل h1 عشان نخلي اللون white وال text-align في ال center، وأخيراً ال p عشان نظبط ال font-family ل verdana وال font-size ل 20px.",
+        "caption_text": "شرح وتوضيح Writing fundamental CSS rules with selectors and declarations."
       },
       "visual": {
         "type": "code",
         "language": "css",
-        "filename": "style.css",
-        "code": "body {\n  background-color: lightblue;\n}\nh1 {\n  color: white;\n  text-align: center;\n}",
-        "highlight_lines": [],
-        "output": null,
-        "output_status": "not_applicable",
-        "verification_ref": null
+        "filename": "styles.css",
+        "code": "body {\n  background-color: lightblue;\n}\nh1 {\n  color: white;\n  text-align: center;\n}\np {\n  font-family: verdana;\n  font-size: 20px;\n}",
+        "highlight_lines": [
+          2,
+          6,
+          10
+        ],
+        "output": "Rendered styled web page with lightblue background, centered white h1, and verdana paragraphs.",
+        "output_status": "illustrative",
+        "verification_ref": null,
+        "secondary_code": null,
+        "secondary_filename": null,
+        "secondary_language": null
       },
       "source_refs": [
         "https://www.w3schools.com/css/default.asp"
       ]
     },
     {
-      "id": "code_part2",
-      "title": "تنسيق الفقرات",
+      "id": "scene_4",
+      "title": "شرح Comparative Analysis of CSS Properties",
       "narration": {
-        "spoken_text": "نُكْمِلُ مَعَ الْعُنْصُر p، حَيْثُ نُحَدِّدُ نَوْعَ الْخَطِّ بِاسْتِخْدَام verdana، وَنَضْبِطُ حَجْمَ الْخَطِّ عَلَى 20px. هَذِهِ الْخَصَائِصُ تُسَاعِدُ فِي جَعْلِ النُّصُوصِ أَكْثَرَ قِرَاءَه وَتَنَاسُقاً لِلْمُسْتَخْدِمِ.",
-        "caption_text": "تنسيق الفقرات النصية بتحديد نوع الخط وحجمه."
+        "spoken_text": "عشان نقارن بين القيم الافتراضية للمتصفح والقيم اللي بنضيفها ب CSS، بص على الجدول ده. القيم زي background-color الافتراضية بتكون بيضاء، لكن بنقدر نخليها lightblue. وال text-align الافتراضي بيكون left، لكن باستخدام CSS بنقدر نحركه ل center. وال font-size الافتراضي للنصوص العادية بيكون 16px، وقدرنا نكبره ل 20px بكل سهولة.",
+        "caption_text": "شرح وتوضيح Comparing default browser values vs custom CSS properties."
       },
       "visual": {
-        "type": "code",
-        "language": "css",
-        "filename": "style.css",
-        "code": "p {\n  font-family: verdana;\n  font-size: 20px;\n}",
-        "highlight_lines": [],
-        "output": null,
-        "output_status": "not_applicable",
-        "verification_ref": null
-      },
-      "source_refs": [
-        "https://www.w3schools.com/css/default.asp"
-      ]
-    },
-    {
-      "id": "learning_resources",
-      "title": "مصادر التعلم",
-      "narration": {
-        "spoken_text": "يُوَفِّرُ مَوْقِع W3Schools أَكْثَرَ مِنْ 700 مِثَالٍ تَعْلِيمِيٍّ لِتَطْبِيق CSS. يُمْكِنُكُمْ تَجْرِبَةِ الْأَكْوَادِ مُبَاشَرَه عَبْرَ الْمُحَرِّر الْإِلِكْتِرُونِيِّ وَمُشَاهَدَةِ النَّتَائِجِ، مِمَّا يُعَزِّزُ مِنْ مَهَارَاتِكُمُ الْبَرْمَجِيَّه بِشَكْلٍ عَمَلِيٍّ وَمُبَاشِرٍ.",
-        "caption_text": "استفد من أكثر من 700 مثال تعليمي ومحرر الأكواد التفاعلي لتطوير مهاراتك."
-      },
-      "visual": {
-        "type": "bullets",
-        "items": [
-          "أكثر من 700 مثال عملي",
-          "محرر أكواد تفاعلي",
-          "تمارين دورية للتقييم",
-          "شهادات معتمدة"
+        "type": "table",
+        "columns": [
+          "Property",
+          "Default Browser Value",
+          "Custom CSS Value"
+        ],
+        "rows": [
+          [
+            "background-color",
+            "white / transparent",
+            "lightblue"
+          ],
+          [
+            "text-align",
+            "left",
+            "center"
+          ],
+          [
+            "font-size",
+            "16px",
+            "20px"
+          ]
         ]
       },
       "source_refs": [
@@ -117,19 +157,230 @@
       ]
     },
     {
-      "id": "conclusion",
-      "title": "خاتمة الدورة",
+      "id": "scene_5",
+      "title": "شرح Advanced Selectors and Rule Combinations",
       "narration": {
-        "spoken_text": "فِي خِتَامِ هَذَا الدَّرْسِ، أَدْعُوكُمْ لِتَجْرِبَةِ الْأَكْوَادِ بِنَفْسِكُمْ عَبْرَ الرَّابِطِ الْمَوْجُودِ فِي الْوَصْفِ. اسْتَمِرُّوا فِي التَّدَرُّبِ وَمُتَابَعَةِ التَّمَارِينِ لِتَصِلُوا إِلَى الِاحْتِرَافِ فِي تَصْمِيمِ الْوِبّ. شُكْراً لِمُتَابَعَتِكُمْ، وَإِلَى اللِّقَاءِ فِي الدَّرْسِ الْقَادِمِ.",
-        "caption_text": "ابدأ رحلتك في تعلم CSS الآن وجرب الأكواد بنفسك عبر الرابط في الوصف."
+        "spoken_text": "دلوقتي يا شباب هنتعلم إزاي نِكْتِب قواعد متقدمة ونجمع أكتر من Tag مع بعض في كود ال CSS عشان نِضْمَن تنسيق احترافي. بص معايا على الكود ده، استخدمت مجموعة Selectors مع بعض زي body وh1 وp عشان نطبق Margin موحد، وبعدين خصصنا ال font-size للعنصر h1 لوحده بقيمة 32px. النُئْطَة الجوهرية هنا إنك بتوفر في كتابة الكود وتمنع التكرار، ودي ممارسة هندسية ممتازة بتسهل صيانة ملفات ال Stylesheets بتاعتك مستقبلاً بكل سهولة.",
+        "caption_text": "شرح وتوضيح Advanced Selectors and Rule Combinations"
+      },
+      "visual": {
+        "type": "code",
+        "language": "css",
+        "filename": "styles.css",
+        "code": "body, h1, p {\n  margin: 0;\n  padding: 10px;\n}\nh1 {\n  font-size: 32px;\n}",
+        "highlight_lines": [
+          6
+        ],
+        "output": "Elements styled with shared margins and custom header size 32px",
+        "output_status": "illustrative",
+        "verification_ref": null,
+        "secondary_code": null,
+        "secondary_filename": null,
+        "secondary_language": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/default.asp"
+      ]
+    },
+    {
+      "id": "scene_6",
+      "title": "شرح Under the Hood: Browser Rendering and Parsing",
+      "narration": {
+        "spoken_text": "تعالوا نفهم مع بعض كواليس اللي بيحصل جوه ال Web Browser لما الصفحة بتشتغل. ال Browser بيقرا ملف ال HTML ويعمل بناء لل DOM Tree، وفي نفس الوقت بيقرا ملف ال CSS ويبني ال CSSOM Tree. بعد كده بيحصل دمج بين التنين عشان يطلع لنا ال Render Tree اللي بيحدد بالضبط إزاي ال Elements هتتعرض على الشاشة وال Viewport. الفهم العميق للعملية دي بيخليك تدرك ليه ترتيب ال Stylesheets في ال head مهم جداً لأداء وتجربة المستخدم.",
+        "caption_text": "شرح وتوضيح Under the Hood: Browser Rendering and Parsing"
+      },
+      "visual": {
+        "type": "flowchart",
+        "nodes": [
+          {
+            "id": "node1",
+            "label": "HTML Parser",
+            "kind": "process",
+            "icon": null,
+            "active": true
+          },
+          {
+            "id": "node2",
+            "label": "CSS Parser",
+            "kind": "process",
+            "icon": null,
+            "active": true
+          },
+          {
+            "id": "node3",
+            "label": "DOM Tree",
+            "kind": "process",
+            "icon": null,
+            "active": false
+          },
+          {
+            "id": "node4",
+            "label": "CSSOM Tree",
+            "kind": "process",
+            "icon": null,
+            "active": false
+          },
+          {
+            "id": "node5",
+            "label": "Render Tree",
+            "kind": "decision",
+            "icon": null,
+            "active": true
+          },
+          {
+            "id": "node6",
+            "label": "Paint Pixels",
+            "kind": "end",
+            "icon": null,
+            "active": false
+          }
+        ],
+        "edges": [
+          {
+            "source": "node1",
+            "target": "node3",
+            "label": "Builds",
+            "direction": null
+          },
+          {
+            "source": "node2",
+            "target": "node4",
+            "label": "Builds",
+            "direction": null
+          },
+          {
+            "source": "node3",
+            "target": "node5",
+            "label": "Combines",
+            "direction": null
+          },
+          {
+            "source": "node4",
+            "target": "node5",
+            "label": "Combines",
+            "direction": null
+          },
+          {
+            "source": "node5",
+            "target": "node6",
+            "label": "Renders",
+            "direction": null
+          }
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/default.asp"
+      ]
+    },
+    {
+      "id": "scene_7",
+      "title": "شرح Performance Impact and Over 700 Examples",
+      "narration": {
+        "spoken_text": "لو بصينا على حجم ال Stylesheets وتأثيرها على الأداء، هنلاقي إن المنصات التعليمية الكبيرة زي W3Schools بتوفر أكتر من 700 مثال عملي عشان تختبر كود ال CSS وتشوف نتيجته الفورية. لكن كمهندس برمجيات شاطر، لازم تاخد بالك من حجم الكود وتجنب القواعد المتكررة اللي بتبطئ سرعة تحميل الصفحة. تحليل أوقات التحميل وتقليل حجم ال CSS بيساعد جداً في تحسين سرعة الاستجابة ورفع كفاءة التطبيق على الموبايل وجميع الأجهزة المختلفة.",
+        "caption_text": "شرح وتوضيح Performance Impact and Over 700 Examples"
+      },
+      "visual": {
+        "type": "chart",
+        "unit": "ms",
+        "data": [
+          {
+            "label": "Small CSS",
+            "value": 45.0
+          },
+          {
+            "label": "Medium CSS",
+            "value": 120.0
+          },
+          {
+            "label": "Large CSS (700+ Examples)",
+            "value": 280.0
+          }
+        ],
+        "data_status": "illustrative",
+        "evidence_ref": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/default.asp"
+      ]
+    },
+    {
+      "id": "scene_8",
+      "title": "شرح Accessibility and Responsive Design",
+      "narration": {
+        "spoken_text": "في خريطة تصميم أي موقع ناجح، لازم نركز بقوة على ال Accessibility وال Responsive Design. استخدام وحدات قياس مناسبة وأحجام خطوط واضحة زي 20px بيخلي النص مريح للعين، مع الحفاظ على تباين عالي بين لون النص وخلفية ال Element عشان يسهل قراءته لكل المستخدمين بما فيهم ذوو الاحتياجات الخاصة. وبكده يا شباب نكون غطينا الأساسيات القوية لل CSS وبقينا جاهزين لبناء صفحات ويب احترافية ومتجاوبة بالكامل.",
+        "caption_text": "شرح وتوضيح Accessibility and Responsive Design"
       },
       "visual": {
         "type": "bullets",
         "items": [
-          "جرب الأكواد عبر الرابط",
-          "تابع التمارين بانتظام",
-          "احصل على شهادتك",
-          "استعد للدرس القادم"
+          "مفهوم Using relative units and readable font sizes like 20px",
+          "مفهوم Maintaining high contrast between text and background color",
+          "مفهوم Supporting screen readers and responsive viewports"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/default.asp"
+      ]
+    },
+    {
+      "id": "scene_9",
+      "title": "شرح Production Gotchas and Best Practices",
+      "narration": {
+        "spoken_text": "تعالوا يا شباب نتكلم عن شوية أخطاء قاتلة وممارسات ذكية عشان تِفَادَى مشاكل الكود في الشغل الحقيقي. أولاً مِش مستحب أبداً إننا نكتب Selectors معقدة وطويلة زيادة عن اللزوم لأنها بتعمل Bloat للأداء وتصعب صيانة الملفات مع مرور الوقت. ثانياً، رَتَّبْت ملفاتك بطريقة منطقية وامشي على نظام Menu واضح زي ما بنشوف في التطبيقات الكبيرة. وأخيراً، استغلت ال Templates وال Exercises عشان تثبت كل معلومة وتِتَأكَد إن مستواك بيتطور باستمرار من غير أي أخطاء خفية.",
+        "caption_text": "شرح وتوضيح Avoiding common CSS pitfalls and following best practices"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم Avoid overly specific selectors that bloat maintenance",
+          "مفهوم Organize stylesheets logically following menu structures",
+          "مفهوم Leverage templates and exercises for skill verification"
+        ]
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/default.asp"
+      ]
+    },
+    {
+      "id": "scene_10",
+      "title": "شرح Complete Integrated CSS Project Code",
+      "narration": {
+        "spoken_text": "دلوقتي بقى يا شباب هنجمع كل اللي شرحناه في كود واحد متكامل وشغال قدامكم. زي ما إنتو شايفين في الكود ده، استخدمت Tag style جوه ال head عشان نربط ال CSS ب HTML بطريقة صحيحة. ظَبَطْنَا ال background-color لل body وخليناها lightblue، وخلينا عنوان ال h1 لونه white مع text-align بنظام center، ونسقنا ال p ب font-family verdana وحجم 20px عشان الصفحة تطلع شَكْلُه تحفة.",
+        "caption_text": "شرح وتوضيح Putting HTML and CSS together in a complete executable file"
+      },
+      "visual": {
+        "type": "code",
+        "language": "html",
+        "filename": "index.html",
+        "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <style>\n      body {\n        background-color: lightblue;\n      }\n      h1 {\n        color: white;\n        text-align: center;\n      }\n      p {\n        font-family: verdana;\n        font-size: 20px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Hello World</h1>\n    <p>This is a styled paragraph.</p>\n  </body>\n</html>",
+        "highlight_lines": [
+          7,
+          11
+        ],
+        "output": "Browser renders lightblue background with centered white h1 and verdana p text.",
+        "output_status": "illustrative",
+        "verification_ref": null,
+        "secondary_code": null,
+        "secondary_filename": null,
+        "secondary_language": null
+      },
+      "source_refs": [
+        "https://www.w3schools.com/css/default.asp"
+      ]
+    },
+    {
+      "id": "scene_11",
+      "title": "شرح Summary Roadmap and Challenge Exercise",
+      "narration": {
+        "spoken_text": "عشان نختم درس النهاردة يا شباب، خلينا نعمل سريعاً ريڤيو لكل الحاجات اللي اتعلمناها. رَاجَعْنَا مع بعض أساسيات ال CSS وال Selectors والخاصة بالألوان وتنسيق النصوص. وعشان تتأكد إنك فهمت بنسبة 100 في المية، جَرَّبْت بنفسك تحل ال Quizzes وال Exercises المتاحة عشان تختبر معلوماتك. استعدوا كويس عشان الدروس الجاية هتكون أقوى بكتير وهتدخل بينا في مستويات متقدمة جداً.",
+        "caption_text": "شرح وتوضيح Wrapping up core concepts and assigning practice tasks"
+      },
+      "visual": {
+        "type": "bullets",
+        "items": [
+          "مفهوم Reviewing CSS syntax selectors and color properties",
+          "مفهوم Encouraging practice with interactive quizzes and exercises",
+          "مفهوم Preparing for advanced CSS modules and certifications"
         ]
       },
       "source_refs": [
