@@ -1,28 +1,22 @@
-# مقدمة في CSS
+# CSS Introduction and Styling Basics
 
 المصدر: https://www.w3schools.com/css/default.asp
 
-## ما هي CSS؟
+## شرح Introduction to CSS and The Why
 
-تستخدم لغة CSS لتصميم وتنسيق مستندات HTML وتحديد كيفية عرض العناصر على متصفح الويب.
+شرح وتوضيح HTML builds the structure while CSS controls the visual presentation.
 
-- CSS هي لغة تصميم صفحات الويب
-- تتحكم في مظهر HTML Elements
-- تضيف الألوان والخطوط والتخطيطات
-- تضمن تجربة مستخدم احترافية
+- مفهوم HTML builds the structure while CSS controls the visual presentation
+- مفهوم Separation of concerns between structure and design
+- مفهوم Styling HTML elements across different screen sizes
 
-## كيف تعمل CSS؟
+## شرح CSS Structure and DOM Tree Mapping
 
-تعتمد CSS على استهداف العناصر وتطبيق خصائص تنسيقية عليها للتحكم في مظهرها النهائي.
+شرح وتوضيح Mapping CSS selectors to DOM elements like body, h1, and p.
 
-- استهداف العناصر عبر Selectors
-- تطبيق الخصائص والقيم
-- فصل التصميم عن هيكل HTML
-- تحسين تجربة المستخدم
+## شرح Basic CSS Syntax and Selectors
 
-## مثال عملي على CSS
-
-تنسيق خلفية الصفحة وعنوان المستوى الأول باستخدام CSS.
+شرح وتوضيح Writing fundamental CSS rules with selectors and declarations.
 
 ```css
 body {
@@ -32,33 +26,88 @@ h1 {
   color: white;
   text-align: center;
 }
-```
-
-## تنسيق الفقرات
-
-تنسيق الفقرات النصية بتحديد نوع الخط وحجمه.
-
-```css
 p {
   font-family: verdana;
   font-size: 20px;
 }
 ```
 
-## مصادر التعلم
+## شرح Comparative Analysis of CSS Properties
 
-استفد من أكثر من 700 مثال تعليمي ومحرر الأكواد التفاعلي لتطوير مهاراتك.
+شرح وتوضيح Comparing default browser values vs custom CSS properties.
 
-- أكثر من 700 مثال عملي
-- محرر أكواد تفاعلي
-- تمارين دورية للتقييم
-- شهادات معتمدة
+## شرح Advanced Selectors and Rule Combinations
 
-## خاتمة الدورة
+شرح وتوضيح Advanced Selectors and Rule Combinations
 
-ابدأ رحلتك في تعلم CSS الآن وجرب الأكواد بنفسك عبر الرابط في الوصف.
+```css
+body, h1, p {
+  margin: 0;
+  padding: 10px;
+}
+h1 {
+  font-size: 32px;
+}
+```
 
-- جرب الأكواد عبر الرابط
-- تابع التمارين بانتظام
-- احصل على شهادتك
-- استعد للدرس القادم
+## شرح Under the Hood: Browser Rendering and Parsing
+
+شرح وتوضيح Under the Hood: Browser Rendering and Parsing
+
+## شرح Performance Impact and Over 700 Examples
+
+شرح وتوضيح Performance Impact and Over 700 Examples
+
+## شرح Accessibility and Responsive Design
+
+شرح وتوضيح Accessibility and Responsive Design
+
+- مفهوم Using relative units and readable font sizes like 20px
+- مفهوم Maintaining high contrast between text and background color
+- مفهوم Supporting screen readers and responsive viewports
+
+## شرح Production Gotchas and Best Practices
+
+شرح وتوضيح Avoiding common CSS pitfalls and following best practices
+
+- مفهوم Avoid overly specific selectors that bloat maintenance
+- مفهوم Organize stylesheets logically following menu structures
+- مفهوم Leverage templates and exercises for skill verification
+
+## شرح Complete Integrated CSS Project Code
+
+شرح وتوضيح Putting HTML and CSS together in a complete executable file
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      body {
+        background-color: lightblue;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+      }
+      p {
+        font-family: verdana;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>This is a styled paragraph.</p>
+  </body>
+</html>
+```
+
+## شرح Summary Roadmap and Challenge Exercise
+
+شرح وتوضيح Wrapping up core concepts and assigning practice tasks
+
+- مفهوم Reviewing CSS syntax selectors and color properties
+- مفهوم Encouraging practice with interactive quizzes and exercises
+- مفهوم Preparing for advanced CSS modules and certifications
